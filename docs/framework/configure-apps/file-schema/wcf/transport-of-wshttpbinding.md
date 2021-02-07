@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <transport> de <wsHttpBinding>'
 title: <transport> de <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 1afeed62fcbf3b083d69a7cedb7eb80b81f5c17b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7801148d76aaa9c074eeb7a83c1dd2fa152d871c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732740"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749304"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<transport> de \<wsHttpBinding>
 
@@ -90,7 +91,7 @@ Ninguno.
 |-------------|-----------------|
 |[\<security>](security-of-wshttpbinding.md)|Representa las capacidades de seguridad de [\<wsHttpBinding>](wshttpbinding.md) .|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>

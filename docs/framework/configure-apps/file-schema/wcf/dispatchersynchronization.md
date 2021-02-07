@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <dispatcherSynchronization>'
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: b95f25217c2a3558846cc7a0ef43e21aacd2ee2a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 93664dec3648ed58df7e3e5c0760f1694c60ba7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398003"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749612"
 ---
 # \<dispatcherSynchronization>
   
@@ -52,7 +53,7 @@ Ninguno.
 | ------- | ----------- |  
 | [\<behavior>](behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión. |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.DispatcherSynchronizationElement>
 - <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>

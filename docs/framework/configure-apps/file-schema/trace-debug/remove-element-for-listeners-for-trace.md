@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <remove> elemento para <listeners> para <trace>'
 title: <remove> (Elemento <listeners> ) para <trace>
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 01b797e1fb62d32e9f0d44c54b803dd969615361
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8b863cb535c28f090374e284717d5bf38f22e881
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750603"
 ---
 # <a name="remove-element-for-listeners-for-trace"></a>\<remove> (Elemento \<listeners> ) para \<trace>
 
@@ -74,10 +75,10 @@ Quita un agente de escucha de la colección **Listeners** .
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)

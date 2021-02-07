@@ -1,12 +1,14 @@
 ---
+description: 'Más información acerca de: @ServiceHost'
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: d16fda68bdc753121f02f6332dabedf236fac257
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051368"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750317"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -34,9 +36,9 @@ El nombre del tipo de CLR del servicio hospedado. Esto debería ser un nombre co
 
 El nombre de tipo de CLR del generador de host de servicio usado para crear instancias del host del servicio. Este atributo es opcional. Si no se especifica, se usa el valor predeterminado <xref:System.ServiceModel.Activation.ServiceHostFactory> que devuelve una instancia de <xref:System.ServiceModel.ServiceHost>.
 
-### <a name="debug"></a>Depuración
+### <a name="debug"></a>Depurar
 
-Indica si el servicio Windows Communication Foundation (WCF) se debe compilar con símbolos de depuración. `true`Si el servicio WCF se debe compilar con símbolos de depuración; en caso contrario, `false` .
+Indica si el servicio Windows Communication Foundation (WCF) se debe compilar con símbolos de depuración. `true` Si el servicio WCF se debe compilar con símbolos de depuración; en caso contrario, `false` .
 
 ### <a name="language"></a>Lenguaje
 

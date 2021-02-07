@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <messageSenderAuthentication>'
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: e7888d01838312aa51397ca39133edb9318fac80
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e98388eafce24b0f19647364b6bbec94ee6ba135
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749328"
 ---
 # \<messageSenderAuthentication>
 
@@ -58,14 +59,14 @@ Especifica los valores de autenticación para el certificado del mismo nivel uti
 
  Se debe configurar este elemento si se elige la autenticación de mensajes. En el caso de los canales de salida, cada mensaje se firma con el certificado proporcionado por [\<certificate>](certificate-element.md) . Todos los mensajes, antes de ser entregados a la aplicación, se comprueban con la credencial de mensaje utilizando el validador especificado por el atributo `customCertificateValidatorType` de este elemento. El validador puede aceptar o rechazar la credencial.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>
 - [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Conexión de redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [Autenticación del mensaje del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [Autenticación personalizada de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protección de las aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md)

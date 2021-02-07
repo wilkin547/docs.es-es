@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <sources> elemento'
 title: <sources> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 670fb359f892d83feac56c849361c4b980d9a922
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8e5bf2af74d80cf7766de0992623d4792f17bf37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173814"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750551"
 ---
 # <a name="sources-element"></a>\<sources> (Elemento)
 
@@ -84,7 +85,7 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -92,5 +93,5 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)
 - [\<source>](source-element.md)

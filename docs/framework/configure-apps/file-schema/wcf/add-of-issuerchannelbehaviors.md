@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> de <issuerChannelBehaviors>'
 title: <add> de <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ccd8ba015b7a6837c74ce2c051a794d36ce8ceaa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398330"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750304"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<add> de \<issuerChannelBehaviors>
 
@@ -54,11 +55,11 @@ Ninguno.
 |-------------|-----------------|
 |[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|Contiene una colección de comportamientos de extremo de cliente de Windows Communication Foundation (WCF) que se usarán al comunicarse con los servicios de token de servicio especificados.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`issuerAddress` contiene el URI del Servicio de token de seguridad con el que el cliente desea comunicarse. `behaviorConfiguration`apunta a un comportamiento del extremo que la aplicación utiliza en los canales creados por Windows Communication Foundation (WCF) para obtener los tokens emitidos a partir de los servicios de token de seguridad.
+`issuerAddress` contiene el URI del Servicio de token de seguridad con el que el cliente desea comunicarse. `behaviorConfiguration` apunta a un comportamiento del extremo que la aplicación utiliza en los canales creados por Windows Communication Foundation (WCF) para obtener los tokens emitidos a partir de los servicios de token de seguridad.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>

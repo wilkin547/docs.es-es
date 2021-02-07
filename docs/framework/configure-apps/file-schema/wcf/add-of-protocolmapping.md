@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> de <protocolMapping>'
 title: <add> de <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 46ba21b65f524f88bfce81739f0cd73040a2ad45
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 530ef6b2893eb55a979aba2ef7ec21efffc3070a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205014"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750252"
 ---
 # <a name="add-of-protocolmapping"></a>\<add> de \<protocolMapping>
 
@@ -67,7 +68,7 @@ Representa una asignación de protocolo predeterminada entre un esquema de proto
 </protocolMapping>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

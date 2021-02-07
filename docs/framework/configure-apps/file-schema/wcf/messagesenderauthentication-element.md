@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <messageSenderAuthentication> elemento'
 title: <messageSenderAuthentication> (elemento)
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: e7e636571c0dbb1845438c22f7e7509dfc7987f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 03c1cd626e7c3ad71026c076df3d757419810d74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749342"
 ---
 # <a name="messagesenderauthentication-element"></a>Elemento \<messageSenderAuthentication>
 
@@ -56,19 +57,19 @@ Especifica las opciones de autenticación para los remitentes del mensaje punto 
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Opcional. Uno de los siguientes valores: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. El valor predeterminado es `ChainTrust`. El valor predeterminado es `ChainTrust`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
+|Enumeración|Opcional. Uno de los siguientes valores: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. De manera predeterminada, es `ChainTrust`. De manera predeterminada, es `ChainTrust`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>Atributo revocationMode  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Uno de los siguientes valores: `NoCheck`, `Online`, `Offline`. El valor predeterminado es `Online`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
+|Enumeración|Uno de los siguientes valores: `NoCheck`, `Online`, `Offline`. De manera predeterminada, es `Online`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>Atributo trustedStoreLocation  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Puede ser uno de los siguientes valores: `LocalMachine` o `CurrentUser`. El valor predeterminado es `CurrentUser`. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`. El valor predeterminado es `CurrentUser`.|  
+|Enumeración|Puede ser uno de los siguientes valores: `LocalMachine` o `CurrentUser`. De manera predeterminada, es `CurrentUser`. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`. De manera predeterminada, es `CurrentUser`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
 
@@ -106,14 +107,14 @@ Especifica las opciones de autenticación para los remitentes del mensaje punto 
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Conexión de redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [Autenticación del mensaje del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [Autenticación personalizada de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protección de las aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md)

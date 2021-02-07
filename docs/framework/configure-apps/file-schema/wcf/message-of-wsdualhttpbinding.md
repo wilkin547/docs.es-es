@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <message> de <wsDualHttpBinding>'
 title: <message> de <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-ms.openlocfilehash: 41cd555fb60cf42819b21a23456802acbe8dab1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7924d29235b17fa9de61293d031ebb05d49a2cc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204825"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749563"
 ---
 # <a name="message-of-wsdualhttpbinding"></a>\<message> de \<wsDualHttpBinding>
 
@@ -21,7 +22,7 @@ Define la seguridad del nivel de mensaje para [\<wsDualHttpBinding>](wsdualhttpb
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsdualhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```xml  
 <message clientCredentialType="None/Windows/UserName/Certificate/CardSpace"
@@ -43,8 +44,8 @@ Define la seguridad del nivel de mensaje para [\<wsDualHttpBinding>](wsdualhttpb
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |algorithmSuite|Opcional. Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave. Estos algoritmos se asignan a los que se indican en la especificación Security Policy Language (WS-SecurityPolicy).<br /><br /> Consulte a continuación los valores posibles. El valor predeterminado es `Basic256`.|  
-|clientCredentialType|Opcional. Especifica que el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante el modo de seguridad es `Message`. Consulte a continuación los valores posibles. El valor predeterminado es `Windows`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.MessageCredentialType>.|  
-|negotiateServiceCredential|Opcional. Un valor booleano que especifica si la credencial de servicio se proporciona en el cliente fuera de banda o se obtiene del servicio al cliente a través de un proceso de negociación. Este tipo de negociación es un precursor del intercambio de mensajes usual.<br /><br /> Si el `clientCredentialType` atributo es igual a ninguno, nombre de usuario o certificado, establecer este atributo en `false` implica que el certificado de servicio está disponible en el cliente fuera de banda y que el cliente necesita especificar el certificado de servicio (mediante [\<serviceCertificate>](servicecertificate-of-servicecredentials.md) ) en el [\<serviceCredentials>](servicecredentials.md) comportamiento del servicio. Este modo es interoperable con pilas SOAP que implementan WS-Trust y WS-SecureConversation.<br /><br /> Si el atributo `ClientCredentialType` está establecido en `Windows`, establecer este atributo en `false` especifica la autenticación basada en Kerberos. Esto significa que el cliente y el servicio deben formar parte del mismo dominio Kerberos. Este modo es interoperable con pilas SOAP que implementan el perfil de token de Kerberos (tal y como se define en OASIS WSS TC), así como WS-Trust y WS-SecureConversation. Cuando este atributo es `true`, produce una negociación .NET SOAP que tuneliza el intercambio de SPNego mediante mensajes SOAP.<br /><br /> El valor predeterminado es `true`.|  
+|clientCredentialType|Opcional. Especifica que el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante el modo de seguridad es `Message`. Consulte a continuación los valores posibles. De manera predeterminada, es `Windows`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.MessageCredentialType>.|  
+|negotiateServiceCredential|Opcional. Un valor booleano que especifica si la credencial de servicio se proporciona en el cliente fuera de banda o se obtiene del servicio al cliente a través de un proceso de negociación. Este tipo de negociación es un precursor del intercambio de mensajes usual.<br /><br /> Si el `clientCredentialType` atributo es igual a ninguno, nombre de usuario o certificado, establecer este atributo en `false` implica que el certificado de servicio está disponible en el cliente fuera de banda y que el cliente necesita especificar el certificado de servicio (mediante [\<serviceCertificate>](servicecertificate-of-servicecredentials.md) ) en el [\<serviceCredentials>](servicecredentials.md) comportamiento del servicio. Este modo es interoperable con pilas SOAP que implementan WS-Trust y WS-SecureConversation.<br /><br /> Si el atributo `ClientCredentialType` está establecido en `Windows`, establecer este atributo en `false` especifica la autenticación basada en Kerberos. Esto significa que el cliente y el servicio deben formar parte del mismo dominio Kerberos. Este modo es interoperable con pilas SOAP que implementan el perfil de token de Kerberos (tal y como se define en OASIS WSS TC), así como WS-Trust y WS-SecureConversation. Cuando este atributo es `true`, produce una negociación .NET SOAP que tuneliza el intercambio de SPNego mediante mensajes SOAP.<br /><br /> De manera predeterminada, es `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>atributo algorithmSuite  
   
@@ -87,7 +88,7 @@ Define la seguridad del nivel de mensaje para [\<wsDualHttpBinding>](wsdualhttpb
 |-------------|-----------------|  
 |[\<security>](security-of-wsdualhttpbinding.md)|Define las capacidades de seguridad de [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <trace> elemento'
 title: <trace> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 617b42a0be2be272a78b33be997cce632d1c6dcb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 470bc300911656a9c9951e52e3883ba5c8b01c59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198930"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750330"
 ---
 # <a name="trace-element"></a>\<trace> (Elemento)
 
@@ -88,10 +89,10 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)

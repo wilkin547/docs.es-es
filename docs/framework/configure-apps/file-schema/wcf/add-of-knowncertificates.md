@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> de <knownCertificates>'
 title: <add> de <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 453593918de15613edb801cca8a16c9dbf71aa90
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1669495e6119a35543e39230fc5dcc986ee2dec5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176089"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750291"
 ---
 # <a name="add-of-knowncertificates"></a>\<add> de \<knownCertificates>
 
@@ -42,7 +43,7 @@ Agrega un certificado X.509 a la colección de certificados conocidos.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|findValue|Cadena Valor que se va a buscar.|  
+|findValue|String. Valor que se va a buscar.|  
 |storeLocation|Enumeración. Una de las dos ubicaciones de almacén en que buscar.|  
 |storeName|Enumeración. Uno de los almacenes del sistema en que buscar.|  
 |x509FindType|Enumeración. Uno de los campos de certificado en que buscar.|  
@@ -123,7 +124,7 @@ Agrega un certificado X.509 a la colección de certificados conocidos.
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>

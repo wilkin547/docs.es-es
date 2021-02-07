@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> del <scopedCertificates> elemento'
 title: <add> del <scopedCertificates> elemento
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 28777ecac130295a8ba82a8e4d67cc519d088d8a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4c267164ccf065edee79a6aaaa9aaddc14d95909
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195147"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750278"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<add> del \<scopedCertificates> elemento
 
@@ -41,8 +42,8 @@ Agrega un certificado X.509 a la colección de certificados con ámbito.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|targetUri|Cadena Especifica el URI del servicio asociado al certificado.|  
-|findValue|Cadena Valor que se va a buscar.|  
+|targetUri|String. Especifica el URI del servicio asociado al certificado.|  
+|findValue|String. Valor que se va a buscar.|  
 |x509FindType|Enumeración. Uno de los campos de certificado en que buscar.|  
 |storeLocation|Enumeración. Una de las dos ubicaciones de almacén en que buscar.|  
 |storeName|Enumeración. Uno de los almacenes del sistema en que buscar.|  
@@ -113,7 +114,7 @@ Agrega un certificado X.509 a la colección de certificados con ámbito.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>

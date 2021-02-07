@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <authentication> del <clientCertificate> elemento'
 title: <authentication> del <clientCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 13296dbc2b3bc8836770197a1549586c841b4635
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 346e1012fd9d799b093be15381aebbc026ea2591
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749901"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<authentication> del \<clientCertificate> elemento
 
@@ -45,8 +46,8 @@ Especifica los comportamientos de autenticación para los certificados de client
 |certificateValidationMode|Enumeración opcional. Especifica uno de los modos usados para validar las credenciales. Este atributo es del tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Si se establece en <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, también debe proporcionarse un `customCertificateValidator`. De manera predeterminada, es <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.|  
 |includeWindowsGroups|Opcional booleano. Especifica si los grupos de Windows están incluidos en el contexto de seguridad. Al establecer este atributo en `true`, se tiene un impacto de rendimiento y tiene como resultado una expansión de grupo completa. Establezca este atributo en `false` si no necesita establecer la lista de grupos a los que un usuario pertenece.|  
 |mapClientCertificateToWindowsAccount|booleano. Especifica si el cliente puede estar asignado a una identidad de Windows utilizando el certificado. Active Directory debe estar habilitado para ello.|  
-|revocationMode|Enumeración opcional. Uno de los modos utilizados para comprobar listas de certificados revocadas (RCL). El valor predeterminado es `Online`. Se omite este valor al usar la seguridad de transporte HTTP.|  
-|trustedStoreLocation|Enumeración opcional. Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`. Se utiliza este valor cuando un certificado del servicio se negocia al cliente. La validación se realiza en el almacén de **personas de confianza** en la ubicación de almacén especificada. El valor predeterminado es `CurrentUser`.|  
+|revocationMode|Enumeración opcional. Uno de los modos utilizados para comprobar listas de certificados revocadas (RCL). De manera predeterminada, es `Online`. Se omite este valor al usar la seguridad de transporte HTTP.|  
+|trustedStoreLocation|Enumeración opcional. Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`. Se utiliza este valor cuando un certificado del servicio se negocia al cliente. La validación se realiza en el almacén de **personas de confianza** en la ubicación de almacén especificada. De manera predeterminada, es `CurrentUser`.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>Atributo customCertificateValidatorType  
   
@@ -70,7 +71,7 @@ Especifica los comportamientos de autenticación para los certificados de client
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Puede ser uno de los siguientes valores: `LocalMachine` o `CurrentUser`. El valor predeterminado es `CurrentUser`. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.|  
+|Enumeración|Puede ser uno de los siguientes valores: `LocalMachine` o `CurrentUser`. De manera predeterminada, es `CurrentUser`. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
 
@@ -110,7 +111,7 @@ Especifica los comportamientos de autenticación para los certificados de client
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>
 - <xref:System.ServiceModel.Security.X509CertificateValidationMode>

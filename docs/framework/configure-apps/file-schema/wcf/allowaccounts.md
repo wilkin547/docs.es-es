@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <allowAccounts>'
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 3432d33c0cd65af03d2b1ac1302ca2c8ff3e0f43
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5211d694e5318faf0cfc31b404764acb405bd096
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749992"
 ---
 # \<allowAccounts>
 
@@ -46,7 +47,7 @@ Contiene una colección de elementos de configuración que especifican las cuent
 |-------------|-----------------|  
 |[\<net.pipe>](net-pipe.md) o [\<net.tcp>](net-tcp.md)|Especifica la configuración para la Canalización de Red o servicios de uso compartido de TCP.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>

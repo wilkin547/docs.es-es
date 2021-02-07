@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <backupLists>'
 title: <backupLists>
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-ms.openlocfilehash: 940bf28958251e7257b2cc19a9c5ff0059411bcd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9647c507f85eba6bfd001b34dbf617bc881d3f2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201556"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749706"
 ---
 # \<backupLists>
 
@@ -50,6 +51,6 @@ Representa una sección de configuración para definir un conjunto de servicios 
 |-------------|-----------------|  
 |[\<routing>](routing.md)|Representa una sección de configuración para definir un conjunto de filtros de enrutamiento, que determinan el tipo de Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> que se va a usar al evaluar los mensajes entrantes, así como las tablas de enrutamiento que definen los extremos de destino a los que enviar mensajes cuando coincida un filtro.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

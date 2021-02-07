@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <authentication> del <serviceCertificate> elemento'
 title: <authentication> del <serviceCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: c6f2578d85971740e5bd3d75151305a475187492
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35a94f4f9c089f86aef38e7e9a1115a7cd22a325
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749888"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<authentication> del \<serviceCertificate> elemento
 
@@ -39,10 +40,10 @@ Especifica la configuración utilizada por el proxy del cliente para autenticar 
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|customCertificateValidatorType|Cadena Tipo y ensamblado utilizados para validar un tipo personalizado.|  
-|certificateValidationMode|Especifica uno de los tres modos utilizados para validar las credenciales. Si se establece en `Custom`, también debe proporcionarse un customCertificateValidator. El valor predeterminado es `ChainTrust`.|  
-|revocationMode|Uno de los modos utilizados para comprobar listas de certificados revocadas (CRL). El valor predeterminado es `Online`.|  
-|trustedStoreLocation|Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`. Se utiliza este valor cuando un certificado del servicio se negocia al cliente. La validación se realiza en el almacén de **personas de confianza** en la ubicación de almacén especificada. El valor predeterminado es `CurrentUser`.|  
+|customCertificateValidatorType|String. Tipo y ensamblado utilizados para validar un tipo personalizado.|  
+|certificateValidationMode|Especifica uno de los tres modos utilizados para validar las credenciales. Si se establece en `Custom`, también debe proporcionarse un customCertificateValidator. De manera predeterminada, es `ChainTrust`.|  
+|revocationMode|Uno de los modos utilizados para comprobar listas de certificados revocadas (CRL). De manera predeterminada, es `Online`.|  
+|trustedStoreLocation|Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`. Se utiliza este valor cuando un certificado del servicio se negocia al cliente. La validación se realiza en el almacén de **personas de confianza** en la ubicación de almacén especificada. De manera predeterminada, es `CurrentUser`.|  
   
 ## <a name="customcertificatevalidator-attribute"></a>Atributo customCertificateValidator  
   
@@ -106,7 +107,7 @@ Especifica la configuración utilizada por el proxy del cliente para autenticar 
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>

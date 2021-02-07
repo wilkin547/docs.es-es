@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <message> de <netHttpBinding>'
 title: <message> de <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: b37d6b1bd8f5372c230acbc2ada299415b2e40b3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 508e58e58dbb298081a075588ddda87289c1a3d1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204858"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749623"
 ---
 # <a name="message-of-nethttpbinding"></a>\<message> de \<netHttpBinding>
 
@@ -37,7 +38,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<netHttpBind
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. Este atributo es de tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, que especifica los algoritmos y los tamaños clave. Estos algoritmos se asignan a los que se indican en la especificación Security Policy Language (WS-SecurityPolicy).<br /><br /> El valor predeterminado es `Basic256`.|  
-|clientCredentialType|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje. El valor predeterminado es `UserName`.|  
+|clientCredentialType|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje. De manera predeterminada, es `UserName`.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
@@ -124,7 +125,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<netHttpBind
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Enlaces](../../../wcf/bindings.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> de <services>'
 title: <add> de <services>
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: 31a4d2a5a3baf3d53cf18ab6e37edfaf7acb8540
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 868a4ef9fafcc42ca4620880b2c6f1cb499cab4a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204988"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750031"
 ---
 # <a name="add-of-services"></a>\<add> de \<services>
 
@@ -40,7 +41,7 @@ Especifica la configuración de una instancia de <xref:System.Workflow.Runtime.W
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|type|Una cadena que especifica el nombre de tipo calificado con el nombre de ensamblado del servicio que se va a inicializar. El servicio especificado debe seguir ciertas reglas sobre las firmas de sus constructores. Vea <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.|  
+|type|Una cadena que especifica el nombre de tipo calificado con el nombre de ensamblado del servicio que se va a inicializar. El servicio especificado debe seguir ciertas reglas sobre las firmas de sus constructores. Consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
 
@@ -50,11 +51,11 @@ Especifica la configuración de una instancia de <xref:System.Workflow.Runtime.W
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<services>](services-of-workflowruntime.md)|Una colección de servicios que se agregará al motor <xref:System.Workflow.Runtime.WorkflowRuntime>. Los elementos son de tipo <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  El motor en tiempo de ejecución del flujo de trabajo inicializará y agregará los servicios especificados en la colección a sus servicios cuando se llame al constructor <xref:System.Workflow.Runtime.WorkflowRuntime> adecuado. Por consiguiente los servicios especificados en la colección deben seguir ciertas reglas sobre las firmas de sus constructores. Vea <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.|  
+|[\<services>](services-of-workflowruntime.md)|Una colección de servicios que se agregará al motor <xref:System.Workflow.Runtime.WorkflowRuntime>. Los elementos son de tipo <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  El motor en tiempo de ejecución del flujo de trabajo inicializará y agregará los servicios especificados en la colección a sus servicios cuando se llame al constructor <xref:System.Workflow.Runtime.WorkflowRuntime> adecuado. Por consiguiente los servicios especificados en la colección deben seguir ciertas reglas sobre las firmas de sus constructores. Consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.|  
   
 ## <a name="remarks"></a>Observaciones  
 
- El motor en tiempo de ejecución del flujo de trabajo inicializará y agregará el servicio especificado a sus servicios cuando se llame al constructor <xref:System.Workflow.Runtime.WorkflowRuntime> adecuado. Por consiguiente, el servicio especificado debe seguir ciertas reglas sobre las firmas de sus constructores. Vea <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.  
+ El motor en tiempo de ejecución del flujo de trabajo inicializará y agregará el servicio especificado a sus servicios cuando se llame al constructor <xref:System.Workflow.Runtime.WorkflowRuntime> adecuado. Por consiguiente, el servicio especificado debe seguir ciertas reglas sobre las firmas de sus constructores. Consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obtener más información.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -72,7 +73,7 @@ Especifica la configuración de una instancia de <xref:System.Workflow.Runtime.W
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
