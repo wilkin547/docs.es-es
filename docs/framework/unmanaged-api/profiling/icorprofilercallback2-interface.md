@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback2 (interfaz)'
 title: ICorProfilerCallback2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a261dba-450d-4f1f-8d98-865b58bfc992
 topic_type:
 - apiref
-ms.openlocfilehash: 597a3dfecd42e206c98974093fa2417eba570f6a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6a6fa62d8d1b119ce1a52b06cb562c6da32b1a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705530"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 (Interfaz)
 
@@ -41,7 +42,7 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
 |[Método SurvivingReferences](icorprofilercallback2-survivingreferences-method.md)|Notifica al generador de perfiles sobre las referencias a objetos que han sobrevivido a una recolección de elementos no utilizados.|  
 |[Método ThreadNameChanged](icorprofilercallback2-threadnamechanged-method.md)|Notifica al generador de perfiles de código que el nombre de un subproceso ha cambiado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR llama a un método en la `ICorProfilerCallback` interfaz (o `ICorProfilerCallback2` ) para notificar al generador de perfiles cuando se produce un evento, al que se ha suscrito el generador de perfiles. Esta es la interfaz de devolución de llamada principal a través de la cual el CLR se comunica con el generador de perfiles de código.  
   
@@ -62,7 +63,7 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

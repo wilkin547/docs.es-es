@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo elegir un filtro
 title: Elegir un filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f783b6416f2330d272c4c756a3ca0cd332f3c6e7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7fa484775f0a08ccef28da358cd057465c49f390
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705283"
 ---
 # <a name="choosing-a-filter"></a>Elegir un filtro
 
@@ -85,7 +86,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 
 Se debería utilizar este filtro al tener que combinar la lógica de varios filtros para determinar cuándo se debería realizar una coincidencia. Por ejemplo, si tiene varios destinos que solo deben recibir ciertas combinaciones de acciones y mensajes en determinadas direcciones, puede utilizar un filtro AND para combinar los filtros de acción y dirección necesarios.
 
-### <a name="custom"></a>Personalizados
+### <a name="custom"></a>Personalizada
 
 Al seleccionar el tipo de filtro personalizado, debe proporcionar un valor de customType que contenga el tipo del ensamblado que contiene la implementación de **MessageFilter** que se va a usar para este filtro. Además, filterData debe contener cualquier valor que el filtro personalizado pueda requerir en su evaluación de mensajes. En el siguiente ejemplo, se define un `FilterElement` que utiliza la implementación `CustomAssembly.MyCustomMsgFilter` MessageFilter.
 

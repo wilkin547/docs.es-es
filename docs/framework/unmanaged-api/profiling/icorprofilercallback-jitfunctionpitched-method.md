@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback:: Jitfunctionpitched ((método)'
 title: ICorProfilerCallback::JITFunctionPitched (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-ms.openlocfilehash: 51fec26837b3c7f0a0328a7b64ff4a02148283da
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 11729de2188fe2f2cec7ec16ff7a5d1928cbd75d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705725"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched (Método)
 
@@ -38,7 +39,7 @@ HRESULT JITFunctionPitched(
  `functionId`  
  de IDENTIFICADOR de la función que se ha quitado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se llama a la función que se quita, el generador de perfiles recibirá nuevos eventos de compilación JIT cuando se vuelva a compilar la función. Actualmente, el compilador JIT de Common Language Runtime (CLR) no quita funciones de la memoria, por lo que esta devolución de llamada no se utiliza actualmente y el generador de perfiles no las recibirá.  
   
@@ -54,6 +55,6 @@ HRESULT JITFunctionPitched(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

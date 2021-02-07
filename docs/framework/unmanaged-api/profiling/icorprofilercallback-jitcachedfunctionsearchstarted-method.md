@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback:: Jitcachedfunctionsearchstarted ((método)'
 title: ICorProfilerCallback::JITCachedFunctionSearchStarted (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 938da4e3b7cc45c24dcac872ab504755116197a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1faaf8fbc1e0fee9ce76850cfedcd4e8cf934371
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684036"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705777"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted (Método)
 
@@ -44,7 +45,7 @@ HRESULT JITCachedFunctionSearchStarted(
 
   \[out] `true` si el motor de ejecución debe utilizar la versión almacenada en caché de una función (si está disponible); en caso contrario, `false` . Si el valor es `false` , el motor de ejecución compila la función JIT en lugar de usar una versión que no está compilada JIT.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En la versión .NET Framework 2,0, `JITCachedFunctionSearchStarted` no se realizarán las devoluciones de llamada de [método y ICorProfilerCallback:: JITCachedFunctionSearchFinished (](icorprofilercallback-jitcachedfunctionsearchfinished-method.md) para todas las funciones de las imágenes Ngen normales. Solo las imágenes de NGen optimizadas para un perfil generarán devoluciones de llamada para todas las funciones de la imagen. Sin embargo, debido a la sobrecarga adicional, un generador de perfiles debe solicitar imágenes NGen optimizadas para el generador de perfiles solo si pretende utilizar estas devoluciones de llamada para forzar que una función se compile Just-in-Time (JIT). De lo contrario, el generador de perfiles debe usar una estrategia diferida para recopilar información de la función.  
   
@@ -64,6 +65,6 @@ HRESULT JITCachedFunctionSearchStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

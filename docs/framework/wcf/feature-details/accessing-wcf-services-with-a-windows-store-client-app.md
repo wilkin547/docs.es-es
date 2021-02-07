@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: acceso a servicios WCF con una aplicación cliente de la tienda Windows'
 title: Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: ab57adbe0effa2b74541053aa0fcc5b572a6b7fd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6586b07e72749b0c136072474c27c264568ed3f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293941"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705413"
 ---
 # <a name="access-wcf-services-with-a-windows-store-client-app"></a>Acceder a servicios WCF con una aplicación cliente de la tienda Windows
 
@@ -125,7 +126,7 @@ En las aplicaciones de la tienda Windows se admiten los siguientes modos de segu
   
 En las aplicaciones de la tienda Windows se admiten los siguientes tipos de credenciales de cliente:
   
-1. None  
+1. Ninguno  
   
 2. Básico  
   

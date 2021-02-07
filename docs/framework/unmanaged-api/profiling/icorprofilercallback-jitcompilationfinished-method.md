@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback:: JITCompilationFinished ((método)'
 title: ICorProfilerCallback::JITCompilationFinished (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: 98e81d2d02a9495b678d49fb916f99068dd604f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f0308bfb5f81d7305ab36acbb9144142232ef8c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705790"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished (Método)
 
@@ -61,7 +62,7 @@ HRESULT JITCompilationFinished(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)

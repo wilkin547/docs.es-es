@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo agregar una referencia de servicio en una solución de flujo de trabajo
 title: Agregar una referencia de servicio en una solución de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 83574cf3-9803-49bc-837f-432936dc9c76
-ms.openlocfilehash: 1b4cc16d3bd85c28ac7267e88ae0a714620c9861
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ff54235ce2925bd2596bae68333ce98dc7a2f009
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705322"
 ---
 # <a name="add-a-service-reference-in-a-workflow-solution"></a>Agregar una referencia de servicio en una solución de flujo de trabajo
 

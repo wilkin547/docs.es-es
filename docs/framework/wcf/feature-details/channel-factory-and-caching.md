@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: generador de canales y almacenamiento en caché'
 title: Generador de canales y almacenamiento en memoria caché
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 5b8348a98b484ca08e3dbeba141dc49825c8c071
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6922191c2b99dea516d0e85aac9ed7bc12a67b81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587370"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705205"
 ---
 # <a name="channel-factory-and-caching"></a>Generador de canales y almacenamiento en memoria caché
 
@@ -26,7 +27,7 @@ Para ayudar a reducir esta sobrecarga, WCF puede almacenar en caché los generad
 > [!TIP]
 > Tiene el control directo sobre la creación del generador de canales cuando usa la clase <xref:System.ServiceModel.ChannelFactory%601> directamente.
 
-Los proxies de cliente de WCF generados con la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) se derivan de <xref:System.ServiceModel.ClientBase%601> . <xref:System.ServiceModel.ClientBase%601> define una propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> estática que define el comportamiento de almacenamiento en memoria caché del generador de canales. Los valores de la memoria caché se crean para un tipo específico. Por ejemplo, si `ClientBase<ITest>.CacheSettings` se establece en uno de los valores que se definen a continuación, solo afectará a esos proxy o ClientBase de tipo `ITest` . La configuración de almacenamiento en memoria caché para un <xref:System.ServiceModel.ClientBase%601> determinado es inmutable en cuanto se crea la primera instancia de proxy/ClientBase.
+Los proxies de cliente de WCF generados con la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) se derivan de <xref:System.ServiceModel.ClientBase%601> . <xref:System.ServiceModel.ClientBase%601> define una propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> estática que define el comportamiento de almacenamiento en memoria caché del generador de canales. Los valores de la memoria caché se crean para un tipo específico. Por ejemplo, si  `ClientBase<ITest>.CacheSettings` se establece en uno de los valores que se definen a continuación, solo afectará a esos proxy o ClientBase de tipo `ITest` . La configuración de almacenamiento en memoria caché para un <xref:System.ServiceModel.ClientBase%601> determinado es inmutable en cuanto se crea la primera instancia de proxy/ClientBase.
 
 ## <a name="specifying-caching-behavior"></a>Especificar el comportamiento de almacenamiento en memoria caché
 
