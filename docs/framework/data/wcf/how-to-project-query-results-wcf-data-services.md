@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: proyectar los resultados de una consulta (Servicios de datos de WCF)'
 title: 'Cómo: Proyectar los resultados de la consulta (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
@@ -10,18 +11,20 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: 8a3a278a8459da073b7ad3cbf8d1fff1d435a18c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a851176e5f97e31d2e8d9ac62c720d04df4ddc37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175192"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765118"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Cómo: Proyectar los resultados de la consulta (Data Services de WCF)
 
-La proyección proporciona un mecanismo para reducir la cantidad de datos devueltos por una consulta mediante la especificación de que solo se devuelven algunas propiedades de una entidad en la respuesta. Puede realizar proyecciones en los resultados de una consulta de WCF Data Services mediante la `$select` opción de consulta o mediante la cláusula [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) en Visual Basic) en una consulta LINQ. Para obtener más información, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+La proyección proporciona un mecanismo para reducir la cantidad de datos devueltos por una consulta mediante la especificación de que solo se devuelven algunas propiedades de una entidad en la respuesta. Puede realizar proyecciones en los resultados de una consulta de Servicios de datos de WCF mediante la `$select` opción de consulta o mediante la cláusula [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) en Visual Basic) en una consulta LINQ. Para obtener más información, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de servicios de datos de WCF](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  
 

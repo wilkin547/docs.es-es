@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo actualizar el servicio de datos (Servicios de datos de WCF)
 title: Actualizar el servicio de datos (Servicios de datos de WCF)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 3e2bd3f4ca5402abe4a7f8ec8f5410effaee6700
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3223207b310c28d8e586a537b5c76b7e1b7ca17c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764897"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Actualizar el servicio de datos (Servicios de datos de WCF)
 
-Cuando se usa la biblioteca de cliente de WCF Data Services para consumir una fuente de Open Data Protocol (OData), la biblioteca traduce las entradas de la fuente en instancias de las clases del servicio de datos de cliente. La instancia de <xref:System.Data.Services.Client.DataServiceContext> a la que pertenece la instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> realiza el seguimiento de estas clases del servicio de datos. El cliente realiza el seguimiento de los cambios en las entidades que se notifican utilizando métodos de <xref:System.Data.Services.Client.DataServiceContext>. Estos métodos permiten al cliente realizar el seguimiento de las entidades agregadas y eliminadas y también de los cambios que se realizan en los valores de propiedad o en las relaciones entre instancias de entidad. Estos cambios se devuelven al servicio de datos como operaciones basadas en REST al llamar al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Cuando se usa la biblioteca de cliente de Servicios de datos de WCF para consumir una fuente de Open Data Protocol (OData), la biblioteca traduce las entradas de la fuente en instancias de las clases del servicio de datos de cliente. La instancia de <xref:System.Data.Services.Client.DataServiceContext> a la que pertenece la instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> realiza el seguimiento de estas clases del servicio de datos. El cliente realiza el seguimiento de los cambios en las entidades que se notifican utilizando métodos de <xref:System.Data.Services.Client.DataServiceContext>. Estos métodos permiten al cliente realizar el seguimiento de las entidades agregadas y eliminadas y también de los cambios que se realizan en los valores de propiedad o en las relaciones entre instancias de entidad. Estos cambios se devuelven al servicio de datos como operaciones basadas en REST al llamar al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
   
 > [!NOTE]
 > Al utilizar una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> para enlazar los datos a los controles, los cambios realizados en los datos del control enlazado se notifican automáticamente a <xref:System.Data.Services.Client.DataServiceContext>. Para obtener más información, consulte [enlazar datos a controles](binding-data-to-controls-wcf-data-services.md).  
@@ -71,7 +74,7 @@ Cuando se usa la biblioteca de cliente de WCF Data Services para consumir una fu
 
  Cuando se agrega una nueva entidad mediante el <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> método o el método *AddTo* adecuado de la <xref:System.Data.Services.Client.DataServiceContext> clase que genera el cuadro de diálogo de **Agregar referencia de servicio** , las relaciones entre la nueva entidad y las entidades relacionadas no se definen automáticamente.  
   
- Puede crear y cambiar las relaciones entre las instancias de las entidades y hacer que la biblioteca de cliente refleje esos cambios en el servicio de datos. Las relaciones entre las entidades se definen como asociaciones en el modelo y la clase <xref:System.Data.Services.Client.DataServiceContext> realiza el seguimiento de cada relación como objeto de vínculo en el contexto. WCF Data Services proporciona los métodos siguientes en la <xref:System.Data.Services.Client.DataServiceContext> clase para crear, modificar y eliminar estos vínculos:  
+ Puede crear y cambiar las relaciones entre las instancias de las entidades y hacer que la biblioteca de cliente refleje esos cambios en el servicio de datos. Las relaciones entre las entidades se definen como asociaciones en el modelo y la clase <xref:System.Data.Services.Client.DataServiceContext> realiza el seguimiento de cada relación como objeto de vínculo en el contexto. Servicios de datos de WCF proporciona los métodos siguientes en la <xref:System.Data.Services.Client.DataServiceContext> clase para crear, modificar y eliminar estos vínculos:  
   
 |Método|Descripción|  
 |------------|-----------------|  
@@ -98,7 +101,7 @@ Cuando se usa la biblioteca de cliente de WCF Data Services para consumir una fu
 
  El seguimiento de los cambios se realiza en la instancia de la clase <xref:System.Data.Services.Client.DataServiceContext>, pero los cambios no se envían al servidor inmediatamente. Una vez que haya efectuado los cambios necesarios de una actividad determinada, llame al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> para enviar todos los cambios al servicio de datos. Para obtener más información, vea [administrar el contexto del servicio de datos](managing-the-data-service-context-wcf-data-services.md). También puede guardar cambios de forma asincrónica utilizando los métodos <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> y <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)
 - [Consultar el servicio de datos](querying-the-data-service-wcf-data-services.md)

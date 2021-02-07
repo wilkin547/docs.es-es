@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: consideraciones sobre LINQ (Servicios de datos de WCF)'
 title: Consideraciones sobre LINQ (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,16 +10,18 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 2523aac510516fdf19087425b10ab3f2296eb726
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4205fc5c67c5939377e2a964d5a82d8855b03fce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764970"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Consideraciones sobre LINQ (WCF Data Services)
 
-En este tema se proporciona información sobre la forma en que las consultas LINQ se componen y se ejecutan cuando se usa el cliente de WCF Data Services y las limitaciones del uso de LINQ para consultar un servicio de datos que implementa el Open Data Protocol (OData). Para obtener más información acerca de la creación y ejecución de consultas en un servicio de datos basado en OData, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+En este tema se proporciona información sobre la forma en que las consultas LINQ se componen y se ejecutan cuando se usa el cliente de Servicios de datos de WCF y las limitaciones del uso de LINQ para consultar un servicio de datos que implementa el Open Data Protocol (OData). Para obtener más información acerca de la creación y ejecución de consultas en un servicio de datos basado en OData, consulte [consultar el servicio de datos](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Redactar consultas LINQ  
 
@@ -45,7 +48,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqexpressionspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqExpressionSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqexpressionspecific)]
   
- El cliente WCF Data Services es capaz de traducir ambos tipos de consultas compuestas en un URI de consulta, y puede extender una consulta LINQ anexando métodos de consulta a una expresión de consulta. Cuando redacte consultas LINQ anexando la sintaxis del método a una expresión de consulta o a una clase <xref:System.Data.Services.Client.DataServiceQuery%601>, las operaciones se agregan al URI de la consulta en el orden en el que se llama a los métodos. Esto es equivalente a llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para agregar cada opción de consulta al URI de la consulta.  
+ El cliente Servicios de datos de WCF es capaz de traducir ambos tipos de consultas compuestas en un URI de consulta, y puede extender una consulta LINQ anexando métodos de consulta a una expresión de consulta. Cuando redacte consultas LINQ anexando la sintaxis del método a una expresión de consulta o a una clase <xref:System.Data.Services.Client.DataServiceQuery%601>, las operaciones se agregan al URI de la consulta en el orden en el que se llama a los métodos. Esto es equivalente a llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para agregar cada opción de consulta al URI de la consulta.  
   
 ## <a name="executing-linq-queries"></a>Ejecutar consultas LINQ  
 
@@ -61,7 +64,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="filtering"></a>
 
-### <a name="filtering"></a>Filtros  
+### <a name="filtering"></a>Filtrado  
 
  Los ejemplos de consultas LINQ de esta sección filtran los datos de la fuente devuelta por el servicio.  
   
@@ -86,7 +89,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="sorting"></a>
 
-### <a name="sorting"></a>Ordenar  
+### <a name="sorting"></a>Ordenación  
 
  Los siguientes ejemplos muestran consultas equivalentes que ordenan ascendentemente los datos tanto por nombre de compañía como por código postal:  
   
@@ -228,7 +231,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  Además, el cliente quizá pueda evaluar las funciones CLR adicionales en el cliente. Se produce una excepción <xref:System.NotSupportedException> para cualquier expresión que no se pueda evaluar en el cliente y que no se pueda traducir en un URI de solicitud válido para su evaluación en el servidor.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Consultar el servicio de datos](querying-the-data-service-wcf-data-services.md)
 - [Proyecciones de consultas](query-projections-wcf-data-services.md)

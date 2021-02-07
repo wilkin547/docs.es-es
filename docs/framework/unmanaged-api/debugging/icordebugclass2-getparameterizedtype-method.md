@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugClass2:: GetParameterizedType ((método)'
 title: ICorDebugClass2::GetParameterizedType (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 94b591c4-9302-4af2-a510-089496afb036
 topic_type:
 - apiref
-ms.openlocfilehash: 139181975d16c2cdacec10ed646cfc2b8fb31a20
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4810e10e88af9256a466579ee607c0ef314d984b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765044"
 ---
 # <a name="icordebugclass2getparameterizedtype-method"></a>ICorDebugClass2::GetParameterizedType (Método)
 
@@ -51,7 +52,7 @@ HRESULT GetParameterizedType (
  `ppType`  
  enuncia Puntero a la dirección de un `ICorDebugType` objeto que representa la declaración de tipos. Este objeto es equivalente a un <xref:System.Type> objeto en código administrado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si la clase no es genérica, es decir, si no tiene parámetros de tipo, `GetParameterizedType` simplemente obtiene el objeto de tipo en tiempo de ejecución correspondiente a la clase. El `elementType` parámetro debe establecerse en el tipo de elemento correcto para la clase: ELEMENT_TYPE_VALUETYPE si la clase es un tipo de valor; de lo contrario, ELEMENT_TYPE_CLASS.  
   

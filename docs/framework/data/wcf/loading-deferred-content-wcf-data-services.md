@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo cargar contenido diferido (Servicios de datos de WCF)
 title: Cargar contenido diferido (Servicios de datos de WCF)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,16 +10,18 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 6eff454bf4f79f7fe215828956ffe79d0c1f6757
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e14796ba003cbad721160ed4a0e2be3e8d148660
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194328"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764923"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Cargar contenido diferido (Servicios de datos de WCF)
 
-De forma predeterminada, WCF Data Services limita la cantidad de datos que devuelve una consulta. Sin embargo, es posible cargar explícitamente datos adicionales, incluidos los datos de la respuesta paginados, las entidades relacionadas y los flujos de datos binarios, del servicio de datos cuando sea necesario. En este tema se describe cómo cargar dicho contenido aplazado en una aplicación.  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+De forma predeterminada, Servicios de datos de WCF limita la cantidad de datos que devuelve una consulta. Sin embargo, es posible cargar explícitamente datos adicionales, incluidos los datos de la respuesta paginados, las entidades relacionadas y los flujos de datos binarios, del servicio de datos cuando sea necesario. En este tema se describe cómo cargar dicho contenido aplazado en una aplicación.  
   
 ## <a name="related-entities"></a>Entidades relacionadas  
 
@@ -29,7 +32,7 @@ De forma predeterminada, WCF Data Services limita la cantidad de datos que devue
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
-     WCF Data Services limita a 12 el número de conjuntos de entidades que se pueden incluir en una sola consulta mediante la `$expand` opción de consulta.  
+     Servicios de datos de WCF limita a 12 el número de conjuntos de entidades que se pueden incluir en una sola consulta mediante la `$expand` opción de consulta.  
   
 - **Carga explícita**: puede llamar al <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método en la <xref:System.Data.Services.Client.DataServiceContext> instancia para cargar explícitamente las entidades relacionadas. Cada llamada al método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crea una solicitud independiente al servicio de datos. En el ejemplo siguiente se carga explícitamente `Order_Details` para una entidad `Orders`:  
   
@@ -59,9 +62,9 @@ De forma predeterminada, WCF Data Services limita la cantidad de datos que devue
   
 ## <a name="binary-data-streams"></a>Flujos de datos binarios  
 
- WCF Data Services permite tener acceso a datos de objetos binarios grandes (BLOB) como un flujo de datos. La transmisión por secuencias aplaza la carga de datos binarios hasta que se necesita, y el cliente puede procesar estos datos más eficazmente. Para aprovecharse de esta funcionalidad, el servicio de datos debe implementar el proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Para obtener más información, consulte [proveedor de streaming](streaming-provider-wcf-data-services.md). Cuando está habilitada la transmisión por secuencias, los tipos de entidad se devuelven sin los datos binarios relacionados. En este caso, debe utilizar el <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> método de la <xref:System.Data.Services.Client.DataServiceContext> clase para tener acceso al flujo de datos para los datos binarios del servicio. De igual forma, use el método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> para agregar o cambiar los datos binarios de una entidad como un flujo. Para obtener más información, vea [trabajar con datos binarios](working-with-binary-data-wcf-data-services.md).  
+ Servicios de datos de WCF permite tener acceso a datos de objetos binarios grandes (BLOB) como un flujo de datos. La transmisión por secuencias aplaza la carga de datos binarios hasta que se necesita, y el cliente puede procesar estos datos más eficazmente. Para aprovecharse de esta funcionalidad, el servicio de datos debe implementar el proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Para obtener más información, consulte [proveedor de streaming](streaming-provider-wcf-data-services.md). Cuando está habilitada la transmisión por secuencias, los tipos de entidad se devuelven sin los datos binarios relacionados. En este caso, debe utilizar el <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> método de la <xref:System.Data.Services.Client.DataServiceContext> clase para tener acceso al flujo de datos para los datos binarios del servicio. De igual forma, use el método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> para agregar o cambiar los datos binarios de una entidad como un flujo. Para obtener más información, vea [trabajar con datos binarios](working-with-binary-data-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)
 - [Consultar el servicio de datos](querying-the-data-service-wcf-data-services.md)

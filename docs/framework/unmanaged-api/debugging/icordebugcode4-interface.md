@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz interfaces icordebugcode4'
 title: Interfaz ICorDebugCode4
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 8a373afdf41590ec44a7cbac7360719a12faa82e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1276db5c55c3d98e5ffa379f6126f700d93c1670
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720729"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764728"
 ---
 # <a name="icordebugcode4-interface"></a>Interfaz ICorDebugCode4
 
@@ -31,7 +32,7 @@ Proporciona un método que permite a un depurador enumerar las variables locales
 |------------|-----------------|  
 |[Método EnumerateVariableHomes](icordebugcode4-enumeratevariablehomes-method.md)|Obtiene un enumerador para las variables locales y los argumentos de una función.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -46,7 +47,7 @@ Proporciona un método que permite a un depurador enumerar las variables locales
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugCode3 (Interfaz)](icordebugcode3-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

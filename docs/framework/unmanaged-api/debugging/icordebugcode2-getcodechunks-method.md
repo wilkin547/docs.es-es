@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugCode2:: Getcodechunks ((método)'
 title: ICorDebugCode2::GetCodeChunks (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 210a2f02-2678-4555-bc4a-78a0408764c8
 topic_type:
 - apiref
-ms.openlocfilehash: e419ebb6ffd404368baf32e591e08c4a70645127
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 371d077466ff2390293d9d4e320d4c95a992fe54
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121121"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764975"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks (Método)
 
@@ -40,15 +41,15 @@ HRESULT GetCodeChunks (
 ## <a name="parameters"></a>Parámetros
 
 `cbufSize`  
-de Tamaño de la matriz de `chunks`.
+de Tamaño de la `chunks` matriz.
 
 `pcnumChunks`  
-enuncia El número de fragmentos devueltos en la matriz de `chunks`.
+enuncia El número de fragmentos devueltos en la `chunks` matriz.
 
 `chunks`  
 enuncia Una matriz de estructuras "CodeChunkInfo (", cada una de las cuales representa un único fragmento de código. Si el valor de `cbufSize` es 0, este parámetro puede ser null.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los fragmentos de código nunca se superpondrán y seguirán el orden en el que se habrían concatenado mediante [ICorDebugCode:: getCode](icordebugcode-getcode-method.md). Un objeto de código de lenguaje intermedio de Microsoft (MSIL) de la .NET Framework versión 2,0 incluirá un único fragmento de código.
 
@@ -60,4 +61,4 @@ Los fragmentos de código nunca se superpondrán y seguirán el orden en el que 
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

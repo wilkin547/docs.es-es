@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugController:: HasQueuedCallbacks ((método)'
 title: ICorDebugController::HasQueuedCallbacks (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-ms.openlocfilehash: bd623f8bee2feafebe80c0c7513bcfb33d6ad367
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bdc22831b912d3bad565b6abf5c73591d07ffe11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764676"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks (Método)
 
@@ -45,7 +46,7 @@ HRESULT HasQueuedCallbacks (
   
  Si se especifica null para el `pThread` parámetro, `HasQueuedCallbacks` devolverá `true` si hay devoluciones de llamada actualmente administradas en cola para cualquier subproceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Las devoluciones de llamada se enviarán de una en una, cada vez que se llame a [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) . El depurador puede comprobar esta marca si desea notificar varios eventos de depuración que se producen simultáneamente.  
   
@@ -61,4 +62,4 @@ HRESULT HasQueuedCallbacks (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también

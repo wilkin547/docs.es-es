@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: agregar, modificar y eliminar entidades (Servicios de datos de WCF)'
 title: 'Cómo: Agregar, modificar y eliminar entidades (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,18 +8,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 3d147f05e2911cdaa05c5fc2374e14c539235fda
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 300ec4d710b376979b77c02b2831bb6b64393709
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765742"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Cómo: Agregar, modificar y eliminar entidades (Data Services de WCF)
 
-Con las bibliotecas de cliente de WCF Data Services, puede crear, actualizar y eliminar datos de entidad en un servicio de datos realizando acciones equivalentes en los objetos de <xref:System.Data.Services.Client.DataServiceContext> . Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Con las bibliotecas de cliente de Servicios de datos de WCF, puede crear, actualizar y eliminar datos de entidad en un servicio de datos realizando acciones equivalentes en los objetos de <xref:System.Data.Services.Client.DataServiceContext> . Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de servicios de datos de WCF](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  
 
@@ -48,7 +51,7 @@ Con las bibliotecas de cliente de WCF Data Services, puede crear, actualizar y e
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderauto)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderauto)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)
 - [Procedimiento para adjuntar una entidad existente a DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)

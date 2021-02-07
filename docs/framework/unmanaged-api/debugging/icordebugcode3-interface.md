@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugCode3'
 title: ICorDebugCode3 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70f07c9e-0614-4bee-ac34-09fe6c51c5a9
 topic_type:
 - apiref
-ms.openlocfilehash: 609cd557db71fac53aadf613534a23e988b14bde
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 378141395ab4d23e3e33a84c3b14ca4a75d847dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720764"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764845"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 (Interfaz)
 
@@ -31,7 +32,7 @@ Proporciona un método que extiende "ICorDebugCode" y "ICorDebugCode2" para prop
 |------------|-----------------|  
 |[Método GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md)|Para un desplazamiento de IL especificado, obtiene los desplazamientos nativos donde se debe colocar un punto de interrupción de modo que el depurador pueda obtener el valor devuelto de una función.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -46,7 +47,7 @@ Proporciona un método que extiende "ICorDebugCode" y "ICorDebugCode2" para prop
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugILFrame3 (Interfaz)](icordebugilframe3-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

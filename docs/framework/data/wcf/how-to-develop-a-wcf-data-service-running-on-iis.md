@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: desarrollar un servicio de datos de WCF que se ejecuta en IIS'
 title: Procedimiento para desarrollar un servicio de datos WCF que se ejecuta en IIS
 ms.date: 03/30/2017
 dev_langs:
@@ -9,16 +10,18 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 75dc18f3ee91ec077ed48c68ec62cb47910d9ddd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b4d7b322a00e3c9c43005a416c608e1b98f1ce51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543490"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765482"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Cómo: desarrollar un servicio de datos de WCF que se ejecuta en IIS
 
-En este artículo se muestra cómo usar WCF Data Services para crear un servicio de datos basado en la base de datos de ejemplo Northwind hospedada por una aplicación Web de ASP.NET que se ejecuta en Internet Information Services (IIS). Para ver un ejemplo de cómo crear el mismo servicio de datos de Northwind como una aplicación Web de ASP.NET que se ejecuta en el Servidor de desarrollo de ASP.NET, consulte la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+En este artículo se muestra cómo usar Servicios de datos de WCF para crear un servicio de datos basado en la base de datos de ejemplo Northwind hospedada por una aplicación Web de ASP.NET que se ejecuta en Internet Information Services (IIS). Para ver un ejemplo de cómo crear el mismo servicio de datos de Northwind como una aplicación Web de ASP.NET que se ejecuta en el Servidor de desarrollo de ASP.NET, consulte la guía de [Inicio rápido de servicios de datos de WCF](quickstart-wcf-data-services.md).
 
 > [!NOTE]
 > Para crear el servicio de datos de Northwind, instale primero la base de datos de ejemplo Northwind en el equipo local. Para instalar la base de datos, ejecute el script Transact-SQL desde las bases de datos de [ejemplo Northwind y pubs para Microsoft SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).
@@ -37,7 +40,7 @@ Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio
 
 4. Escriba `NorthwindService` como nombre del proyecto.
 
-5. Haga clic en **OK**.
+5. Haga clic en **Aceptar**.
 
 6. En el menú **proyecto** , seleccione **propiedades de NorthwindService**.
 
@@ -128,7 +131,7 @@ Una vez creado el servicio, debe proporcionar acceso a los recursos del servicio
 
 3. Como nombre del modelo de datos, escriba `Northwind.edmx` .
 
-4. En el Asistente para Entity Data Model, seleccione **generar desde la base de datos**y, a continuación, haga clic en **siguiente**.
+4. En el Asistente para Entity Data Model, seleccione **generar desde la base de datos** y, a continuación, haga clic en **siguiente**.
 
 5. Conecte el modelo de datos a la base de datos mediante uno de los pasos siguientes y, a continuación, haga clic en **siguiente**:
 

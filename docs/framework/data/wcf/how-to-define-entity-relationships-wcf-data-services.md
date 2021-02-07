@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: definir relaciones de entidades (Servicios de datos de WCF)'
 title: 'Cómo: Definir relaciones de entidades (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,18 +8,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
-ms.openlocfilehash: dec22f2f1e1d259e341100bce2b99d71540797db
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 08add639fe333d4892737c64b12ca370129d0bf7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765521"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>Cómo: Definir relaciones de entidades (Data Services de WCF)
 
-Al agregar una nueva entidad en WCF Data Services, las relaciones entre la nueva entidad y las entidades relacionadas no se definen automáticamente. Puede crear y cambiar las relaciones entre las instancias de las entidades y hacer que la biblioteca de cliente refleje esos cambios en el servicio de datos. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Al agregar una nueva entidad en Servicios de datos de WCF, las relaciones entre la nueva entidad y las entidades relacionadas no se definen automáticamente. Puede crear y cambiar las relaciones entre las instancias de las entidades y hacer que la biblioteca de cliente refleje esos cambios en el servicio de datos. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de servicios de datos de WCF](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  
 

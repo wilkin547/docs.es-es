@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugCode:: GetVersionNumber ((método)'
 title: ICorDebugCode::GetVersionNumber (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8e02518-679f-4e9f-8a28-ba4a89a3876f
 topic_type:
 - apiref
-ms.openlocfilehash: 646c20ca1b78ff0ce513b8a3c9b578c3b1b9a696
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 901342333bea3d455407602dde78bdccd0140d77
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764910"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetVersionNumber (
  `nVersion`  
  enuncia Puntero al número de versión del código.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
  El número de versión se incrementa cada vez que se realiza una operación de edición y continuación (EnC) en el código.
 
@@ -51,4 +52,4 @@ HRESULT GetVersionNumber (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
