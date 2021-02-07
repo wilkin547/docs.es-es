@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: ServiceCredentials'
 title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-ms.openlocfilehash: d7e89acedc8fc1004b0198172e58813944df85f3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bfd025a8f671a3c5aea537059cde0e751cfa9bb9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715553"
 ---
-# <a name="servicecredentials"></a><span data-ttu-id="bdb3c-102">ServiceCredentials</span><span class="sxs-lookup"><span data-stu-id="bdb3c-102">ServiceCredentials</span></span>
+# <a name="servicecredentials"></a><span data-ttu-id="11bde-103">ServiceCredentials</span><span class="sxs-lookup"><span data-stu-id="11bde-103">ServiceCredentials</span></span>
 
-<span data-ttu-id="bdb3c-103">ServiceCredentials</span><span class="sxs-lookup"><span data-stu-id="bdb3c-103">ServiceCredentials</span></span>  
+<span data-ttu-id="11bde-104">ServiceCredentials</span><span class="sxs-lookup"><span data-stu-id="11bde-104">ServiceCredentials</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bdb3c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bdb3c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11bde-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="11bde-105">Syntax</span></span>  
   
 ```csharp
 class ServiceCredentials : Behavior  
@@ -28,76 +29,76 @@ class ServiceCredentials : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="bdb3c-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="bdb3c-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="11bde-106">Métodos</span><span class="sxs-lookup"><span data-stu-id="11bde-106">Methods</span></span>  
 
- <span data-ttu-id="bdb3c-106">La clase ServiceCredentials no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-106">The ServiceCredentials class does not define any methods.</span></span>  
+ <span data-ttu-id="11bde-107">La clase ServiceCredentials no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="11bde-107">The ServiceCredentials class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="bdb3c-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="bdb3c-107">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="11bde-108">Propiedades</span><span class="sxs-lookup"><span data-stu-id="11bde-108">Properties</span></span>  
 
- <span data-ttu-id="bdb3c-108">La clase ServiceCredentials posee las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="bdb3c-108">The ServiceCredentials class has the following properties:</span></span>  
+ <span data-ttu-id="11bde-109">La clase ServiceCredentials posee las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="11bde-109">The ServiceCredentials class has the following properties:</span></span>  
   
-### <a name="clientcertificate"></a><span data-ttu-id="bdb3c-109">ClientCertificate</span><span class="sxs-lookup"><span data-stu-id="bdb3c-109">ClientCertificate</span></span>  
+### <a name="clientcertificate"></a><span data-ttu-id="11bde-110">ClientCertificate</span><span class="sxs-lookup"><span data-stu-id="11bde-110">ClientCertificate</span></span>  
 
- <span data-ttu-id="bdb3c-110">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="bdb3c-110">Data type: string</span></span>  
+ <span data-ttu-id="11bde-111">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="11bde-111">Data type: string</span></span>  
   
- <span data-ttu-id="bdb3c-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="bdb3c-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="11bde-112">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="11bde-112">Access type: Read-only</span></span>  
   
- <span data-ttu-id="bdb3c-112">La autenticación del certificado de cliente y la configuración de aprovisionamiento para este servicio.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-112">The client certificate authentication and provisioning settings for this service.</span></span>  
+ <span data-ttu-id="11bde-113">La autenticación del certificado de cliente y la configuración de aprovisionamiento para este servicio.</span><span class="sxs-lookup"><span data-stu-id="11bde-113">The client certificate authentication and provisioning settings for this service.</span></span>  
   
-### <a name="issuedtokenauthentication"></a><span data-ttu-id="bdb3c-113">IssuedTokenAuthentication</span><span class="sxs-lookup"><span data-stu-id="bdb3c-113">IssuedTokenAuthentication</span></span>  
+### <a name="issuedtokenauthentication"></a><span data-ttu-id="11bde-114">IssuedTokenAuthentication</span><span class="sxs-lookup"><span data-stu-id="11bde-114">IssuedTokenAuthentication</span></span>  
 
- <span data-ttu-id="bdb3c-114">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="bdb3c-114">Data type: string</span></span>  
+ <span data-ttu-id="11bde-115">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="11bde-115">Data type: string</span></span>  
   
- <span data-ttu-id="bdb3c-115">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="bdb3c-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="11bde-116">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="11bde-116">Access type: Read-only</span></span>  
   
- <span data-ttu-id="bdb3c-116">Los valores actuales de autenticación de token emitido para este servicio.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-116">The current issued token authentication settings for this service.</span></span>  
+ <span data-ttu-id="11bde-117">Los valores actuales de autenticación de token emitido para este servicio.</span><span class="sxs-lookup"><span data-stu-id="11bde-117">The current issued token authentication settings for this service.</span></span>  
   
-### <a name="peer"></a><span data-ttu-id="bdb3c-117">Del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="bdb3c-117">Peer</span></span>  
+### <a name="peer"></a><span data-ttu-id="11bde-118">Del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="11bde-118">Peer</span></span>  
 
- <span data-ttu-id="bdb3c-118">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="bdb3c-118">Data type: string</span></span>  
+ <span data-ttu-id="11bde-119">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="11bde-119">Data type: string</span></span>  
   
- <span data-ttu-id="bdb3c-119">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="bdb3c-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="11bde-120">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="11bde-120">Access type: Read-only</span></span>  
   
- <span data-ttu-id="bdb3c-120">La autenticación de la credencial actual y la configuración de aprovisionamiento que van a utilizar los puntos de conexión de transporte del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-120">The current credential authentication and provisioning settings to be used by peer transport endpoints.</span></span>  
+ <span data-ttu-id="11bde-121">La autenticación de la credencial actual y la configuración de aprovisionamiento que van a utilizar los puntos de conexión de transporte del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="11bde-121">The current credential authentication and provisioning settings to be used by peer transport endpoints.</span></span>  
   
-### <a name="secureconversationauthentication"></a><span data-ttu-id="bdb3c-121">SecureConversationAuthentication</span><span class="sxs-lookup"><span data-stu-id="bdb3c-121">SecureConversationAuthentication</span></span>  
+### <a name="secureconversationauthentication"></a><span data-ttu-id="11bde-122">SecureConversationAuthentication</span><span class="sxs-lookup"><span data-stu-id="11bde-122">SecureConversationAuthentication</span></span>  
 
- <span data-ttu-id="bdb3c-122">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="bdb3c-122">Data type: string</span></span>  
+ <span data-ttu-id="11bde-123">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="11bde-123">Data type: string</span></span>  
   
- <span data-ttu-id="bdb3c-123">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="bdb3c-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="11bde-124">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="11bde-124">Access type: Read-only</span></span>  
   
- <span data-ttu-id="bdb3c-124">Especifica los valores de conversación seguros actuales.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-124">Specifies the current secure conversation settings.</span></span>  
+ <span data-ttu-id="11bde-125">Especifica los valores de conversación seguros actuales.</span><span class="sxs-lookup"><span data-stu-id="11bde-125">Specifies the current secure conversation settings.</span></span>  
   
-### <a name="servicecertificate"></a><span data-ttu-id="bdb3c-125">ServiceCertificate</span><span class="sxs-lookup"><span data-stu-id="bdb3c-125">ServiceCertificate</span></span>  
+### <a name="servicecertificate"></a><span data-ttu-id="11bde-126">ServiceCertificate</span><span class="sxs-lookup"><span data-stu-id="11bde-126">ServiceCertificate</span></span>  
 
- <span data-ttu-id="bdb3c-126">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="bdb3c-126">Data type: string</span></span>  
+ <span data-ttu-id="11bde-127">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="11bde-127">Data type: string</span></span>  
   
- <span data-ttu-id="bdb3c-127">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="bdb3c-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="11bde-128">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="11bde-128">Access type: Read-only</span></span>  
   
- <span data-ttu-id="bdb3c-128">El certificado asociado a este servicio.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-128">The certificate associated with this service.</span></span>  
+ <span data-ttu-id="11bde-129">El certificado asociado a este servicio.</span><span class="sxs-lookup"><span data-stu-id="11bde-129">The certificate associated with this service.</span></span>  
   
-### <a name="usernameauthentication"></a><span data-ttu-id="bdb3c-129">UserNameAuthentication</span><span class="sxs-lookup"><span data-stu-id="bdb3c-129">UserNameAuthentication</span></span>  
+### <a name="usernameauthentication"></a><span data-ttu-id="11bde-130">UserNameAuthentication</span><span class="sxs-lookup"><span data-stu-id="11bde-130">UserNameAuthentication</span></span>  
 
- <span data-ttu-id="bdb3c-130">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="bdb3c-130">Data type: string</span></span>  
+ <span data-ttu-id="11bde-131">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="11bde-131">Data type: string</span></span>  
   
- <span data-ttu-id="bdb3c-131">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="bdb3c-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="11bde-132">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="11bde-132">Access type: Read-only</span></span>  
   
- <span data-ttu-id="bdb3c-132">Los valores de nombre de usuario/contraseña para este servicio.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-132">The username/password settings for this service.</span></span>  
+ <span data-ttu-id="11bde-133">Los valores de nombre de usuario/contraseña para este servicio.</span><span class="sxs-lookup"><span data-stu-id="11bde-133">The username/password settings for this service.</span></span>  
   
-### <a name="windowsauthentication"></a><span data-ttu-id="bdb3c-133">WindowsAuthentication</span><span class="sxs-lookup"><span data-stu-id="bdb3c-133">WindowsAuthentication</span></span>  
+### <a name="windowsauthentication"></a><span data-ttu-id="11bde-134">WindowsAuthentication</span><span class="sxs-lookup"><span data-stu-id="11bde-134">WindowsAuthentication</span></span>  
 
- <span data-ttu-id="bdb3c-134">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="bdb3c-134">Data type: string</span></span>  
+ <span data-ttu-id="11bde-135">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="11bde-135">Data type: string</span></span>  
   
- <span data-ttu-id="bdb3c-135">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="bdb3c-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="11bde-136">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="11bde-136">Access type: Read-only</span></span>  
   
- <span data-ttu-id="bdb3c-136">Los valores de autenticación de Windows para este servicio.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-136">The Windows authentication settings for this service.</span></span>  
+ <span data-ttu-id="11bde-137">Los valores de autenticación de Windows para este servicio.</span><span class="sxs-lookup"><span data-stu-id="11bde-137">The Windows authentication settings for this service.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bdb3c-137">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bdb3c-137">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11bde-138">Requisitos</span><span class="sxs-lookup"><span data-stu-id="11bde-138">Requirements</span></span>  
   
-|<span data-ttu-id="bdb3c-138">MOF</span><span class="sxs-lookup"><span data-stu-id="bdb3c-138">MOF</span></span>|<span data-ttu-id="bdb3c-139">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="bdb3c-139">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="11bde-139">MOF</span><span class="sxs-lookup"><span data-stu-id="11bde-139">MOF</span></span>|<span data-ttu-id="11bde-140">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="11bde-140">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="bdb3c-140">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="bdb3c-140">Namespace</span></span>|<span data-ttu-id="bdb3c-141">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="bdb3c-141">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="11bde-141">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="11bde-141">Namespace</span></span>|<span data-ttu-id="11bde-142">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="11bde-142">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="bdb3c-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="bdb3c-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11bde-143">Vea también</span><span class="sxs-lookup"><span data-stu-id="11bde-143">See also</span></span>
 
 - <xref:System.ServiceModel.Description.ServiceCredentials>
