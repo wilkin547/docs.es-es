@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataEmit2::D efineGenericParam (método)'
 title: IMetaDataEmit2::DefineGenericParam (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: c9ff918121e7bb4ee972e674207810358b3f36f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 813661adca162f47a864b19c9754b49072bb4c7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712916"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745793"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam (Método)
 
@@ -73,7 +74,7 @@ HRESULT DefineGenericParam (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)

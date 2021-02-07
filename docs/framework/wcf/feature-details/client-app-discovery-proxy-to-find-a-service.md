@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: implementar una aplicación cliente que usa el proxy de detección para buscar un servicio'
 title: Procedimiento para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 7316b080809f0298ae5f19eaf4160d9bca2b3ad0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 316e7f446e497cb1d3de806043c7ba4f9a8659d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743633"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedimiento para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio
 

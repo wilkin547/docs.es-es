@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Getcustomattributeprops ((método)'
 title: IMetaDataImport::GetCustomAttributeProps (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-ms.openlocfilehash: b92e9ab714e2d8d2c66ed5546deba16352e8e390
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bd8e83301252d7ead225146e562d3a58feb244a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711148"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745390"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps (Método)
 
@@ -55,7 +56,7 @@ HRESULT GetCustomAttributeProps (
  `pcbSize`  
  [out, optional] Tamaño en bytes de los datos devueltos en *`ppBlob`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un atributo personalizado se almacena como una matriz de datos, que es el formato que reconoce el motor de metadatos.  
   
@@ -69,7 +70,7 @@ HRESULT GetCustomAttributeProps (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

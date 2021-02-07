@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback:: ModuleLoadFinished (método)'
 title: ICorProfilerCallback::ModuleLoadFinished (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-ms.openlocfilehash: 5a29507ca56cac4ab800845e3a88706dc7a25379
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 960eb9edd036055069ef3f9ab3a93602ce4ef9bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745351"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished (Método)
 
@@ -42,7 +43,7 @@ HRESULT ModuleLoadFinished(
  `hrStatus`  
  de HRESULT que indica si el módulo se cargó correctamente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor de `moduleId` no es válido para una solicitud de información hasta que `ModuleLoadFinished` se llama al método.  
   
@@ -58,7 +59,7 @@ HRESULT ModuleLoadFinished(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método ModuleLoadStarted](icorprofilercallback-moduleloadstarted-method.md)

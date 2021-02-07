@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: crear un comprobador de identidad de cliente personalizado'
 title: Procedimiento para crear un comprobador de identidad de cliente personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 84982aca06bacb5718855602872fe4dab2376a9d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee0cff59d877fbb6cd636f831cfccf4f51a3ab40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256071"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743699"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Procedimiento para crear un comprobador de identidad de cliente personalizado
 
@@ -34,7 +35,7 @@ La característica de *identidad* de Windows Communication Foundation (WCF) perm
      [!code-csharp[c_HowToSetCustomClientIdentity#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#7)]
      [!code-vb[c_HowToSetCustomClientIdentity#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#7)]  
   
-2. Invalide el método <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A>. El método determina si la comprobación de la identidad tuvo éxito o fue fallida.  
+2. Invalide el método <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A> . El método determina si la comprobación de la identidad tuvo éxito o fue fallida.  
   
 3. El método `CheckAccess` posee dos parámetros. El primero es una instancia de la clase <xref:System.ServiceModel.EndpointIdentity>. El segundo es una instancia de la clase <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   

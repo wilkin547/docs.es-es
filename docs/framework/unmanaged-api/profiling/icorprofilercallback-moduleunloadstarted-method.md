@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback:: ModuleUnloadStarted ((método)'
 title: ICorProfilerCallback::ModuleUnloadStarted (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: 12d5f7e073337af6034b8f313a2e0161620a65ea
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3d10654e23481fe6f8956129a0aef7ed4206bba9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720963"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745234"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted (Método)
 
@@ -38,7 +39,7 @@ HRESULT ModuleUnloadStarted(
  `moduleId`  
  de IDENTIFICADOR del módulo que se está descargando.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor de `moduleId` no es válido para una solicitud de información después de que se `ModuleUnloadStarted` devuelva el método; esta es la última oportunidad del generador de perfiles para obtener información acerca de este módulo.  
   
@@ -52,7 +53,7 @@ HRESULT ModuleUnloadStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método ModuleUnloadFinished](icorprofilercallback-moduleunloadfinished-method.md)

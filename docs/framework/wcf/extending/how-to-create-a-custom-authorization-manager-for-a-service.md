@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo crear un administrador de autorización personalizado para un servicio
 title: Procedimiento para crear un administrador de autorización personalizado para un servicio
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 9c28cb81b78f80505cfcf5f7e4dfdba083bd0793
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e5b5655bb8cd087e2c5140f45e80f8b079cf06c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743725"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procedimiento para crear un administrador de autorización personalizado para un servicio
 
@@ -58,17 +59,17 @@ El registro del administrador de autorización personalizado para un servicio se
 
 1. Abra el archivo de configuración para el servicio.
 
-2. Agregue un [ \<](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) [ >serviceAuthorizational>Behaviors.\<](../../configure-apps/file-schema/wcf/behaviors.md)
+2. Agregue [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) a [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) .
 
-    En el [ \<> serviceAuthorization](../../configure-apps/file-schema/wcf/serviceauthorization-element.md), agregue un `serviceAuthorizationManagerType` atributo y establezca su valor en el tipo que representa el administrador de autorización personalizado.
+    Para [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) , agregue un `serviceAuthorizationManagerType` atributo y establezca su valor en el tipo que representa el administrador de autorización personalizado.
 
 3. Agregue un enlace que proteja la comunicación entre el cliente y el servicio.
 
     El enlace que se elige para esta comunicación determina las demandas que se agregan al <xref:System.IdentityModel.Policy.AuthorizationContext>, que el administrador de autorización personalizado utiliza para tomar las decisiones de autorización. Para obtener más información acerca de los enlaces proporcionados por el sistema, consulte [enlaces proporcionados](../system-provided-bindings.md)por el sistema.
 
-4. Asocie el comportamiento a un punto de conexión de servicio agregando un `behaviorConfiguration` [ \<](../../configure-apps/file-schema/wcf/service.md) elemento de > de servicio y establezca el valor del atributo en el valor del atributo de nombre para el [ \<elemento de comportamiento >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) .
+4. Asocie el comportamiento a un punto de conexión de servicio; para ello, agregue un [\<service>](../../configure-apps/file-schema/wcf/service.md) elemento y establezca el valor del `behaviorConfiguration` atributo en el valor del atributo name del [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento.
 
-    Para obtener más información acerca de cómo configurar un punto [de conexión de servicio, consulte Cómo: Cree un punto de conexión de](../feature-details/how-to-create-a-service-endpoint-in-configuration.md)servicio en la configuración.
+    Para obtener más información acerca de cómo configurar un punto de conexión de servicio, consulte [Cómo: crear un punto de conexión de servicio en la configuración](../feature-details/how-to-create-a-service-endpoint-in-configuration.md).
 
     El ejemplo de código siguiente registra el administrador de autorización personalizado `Samples.MyServiceAuthorizationManager`.
 
@@ -114,7 +115,7 @@ El registro del administrador de autorización personalizado para un servicio se
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo de código siguiente muestra una implementación básica de una clase <xref:System.ServiceModel.ServiceAuthorizationManager> que incluye la invalidación del método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. El código de ejemplo examina <xref:System.IdentityModel.Policy.AuthorizationContext> para una demanda personalizada y devuelve `true` cuando el recurso para esa demanda de la costumbre coincide con el valor de la acción de <xref:System.ServiceModel.OperationContext>. Para obtener una implementación más completa de <xref:System.ServiceModel.ServiceAuthorizationManager> una clase, vea [Directiva de autorización](../samples/authorization-policy.md).
+El ejemplo de código siguiente muestra una implementación básica de una clase <xref:System.ServiceModel.ServiceAuthorizationManager> que incluye la invalidación del método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. El código de ejemplo examina <xref:System.IdentityModel.Policy.AuthorizationContext> para una demanda personalizada y devuelve `true` cuando el recurso para esa demanda de la costumbre coincide con el valor de la acción de <xref:System.ServiceModel.OperationContext>. Para obtener una implementación más completa de una <xref:System.ServiceModel.ServiceAuthorizationManager> clase, vea [Directiva de autorización](../samples/authorization-policy.md).
 
 [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
 [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]

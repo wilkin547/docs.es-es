@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataEmit:: Mergeend ((método)'
 title: IMetaDataEmit::MergeEnd (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-ms.openlocfilehash: feb81b86190f953b50f43f244f4e58a0a482f86e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: aac48b9bafb60cee4e3d73232d9f9c00cca7f796
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745884"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd (Método)
 
@@ -36,7 +37,7 @@ HRESULT MergeEnd ();
 
 Este método no toma ningún parámetro.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta rutina desencadena la combinación real de metadatos, de todos los ámbitos de importación especificados por las llamadas anteriores a `IMetaDataEmit::Merge` , en el ámbito de salida actual.
 
@@ -48,7 +49,7 @@ Las condiciones especiales siguientes se aplican a la combinación:
 
   Si ya se han establecido las propiedades del módulo para el ámbito actual, no se importa ninguna propiedad del módulo. Sin embargo, si no se han establecido las propiedades del módulo en el ámbito actual, se importan solo una vez, cuando se encuentran por primera vez. Si las propiedades del módulo se encuentran de nuevo, son duplicados. Si se comparan los valores de todas las propiedades del módulo (excepto MVID) y no se encuentra ningún duplicado, se produce un error.
 
-- En las definiciones de tipo ( `TypeDef` ), no se combina ningún duplicado en el ámbito actual. `TypeDef`los objetos se comprueban en busca de duplicados en cada número de versión del GUID del *nombre de objeto completo*  +  *GUID*  +  *version number*. Si hay una coincidencia en el nombre o el GUID, y cualquiera de los otros dos elementos es diferente, se genera un error. De lo contrario, si los tres elementos coinciden, `MergeEnd` realiza una comprobación de cursor para asegurarse de que las entradas son realmente duplicados; si no es así, se produce un error. Esta comprobación de cursor busca:
+- En las definiciones de tipo ( `TypeDef` ), no se combina ningún duplicado en el ámbito actual. `TypeDef`los objetos se comprueban en busca de duplicados en cada número de versión del GUID del *nombre de objeto completo*  +    +  . Si hay una coincidencia en el nombre o el GUID, y cualquiera de los otros dos elementos es diferente, se genera un error. De lo contrario, si los tres elementos coinciden, `MergeEnd` realiza una comprobación de cursor para asegurarse de que las entradas son realmente duplicados; si no es así, se produce un error. Esta comprobación de cursor busca:
 
   - Las mismas declaraciones de miembros, que se producen en el mismo orden. Los miembros que se marcan como `mdPrivateScope` (vea la enumeración [cormethodattr (](cormethodattr-enumeration.md) ) no se incluyen en esta comprobación; se combinan de forma especial.
 
@@ -68,11 +69,11 @@ Las condiciones especiales siguientes se aplican a la combinación:
 
 **Encabezado:** Cor. h
 
-**Biblioteca:** Se utiliza como recurso en MSCorEE. dll
+**Biblioteca:** Se usa como un recurso en MSCorEE.dll
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

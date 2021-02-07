@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRGCManager:: collect (método)'
 title: ICLRGCManager::Collect (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-ms.openlocfilehash: 90ce4e888ddb3a10dd0dfd7e68463311db86742f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c2649f7ce3472c504c1e48a203cf89d4b8508e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746066"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect (Método)
 
@@ -50,7 +51,7 @@ HRESULT Collect (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `Collect` método obliga al recolector de elementos no utilizados de CLR a realizar una recolección, independientemente de su estado actual.  
   
@@ -64,7 +65,7 @@ HRESULT Collect (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
 - [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)

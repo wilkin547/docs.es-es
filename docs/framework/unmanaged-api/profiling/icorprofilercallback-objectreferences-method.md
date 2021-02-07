@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerCallback:: ObjectReferences (método)'
 title: ICorProfilerCallback::ObjectReferences (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-ms.openlocfilehash: 9485e3ca657ab108d2bcc9d00b1c475f8ee3c086
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 55ea6fae87ecb6534af322fc9d5055c8a247f37a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745117"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences (Método)
 
@@ -50,7 +51,7 @@ HRESULT ObjectReferences(
  `objectRefIds`  
  de Matriz de identificadores de objetos a los que hace referencia `objectId` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `ObjectReferences`Se llama al método para cada objeto restante en el montón después de que se haya completado una recolección de elementos no utilizados. Si el generador de perfiles devuelve un error de esta devolución de llamada, los servicios de generación de perfiles interrumpirán la invocación de esta devolución de llamada hasta la siguiente recolección de elementos no utilizados.  
   
@@ -70,6 +71,6 @@ HRESULT ObjectReferences(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

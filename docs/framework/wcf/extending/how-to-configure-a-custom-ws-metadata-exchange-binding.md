@@ -1,20 +1,21 @@
 ---
+description: Más información acerca de cómo configurar un enlace de intercambio de WS-Metadata personalizado
 title: Procedimiento para configurar un enlace de WS-Metadata Exchange personalizado
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ae9d1932e7539d25c117a98bd130d1def8e691fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635785"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743738"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Procedimiento para configurar un enlace de WS-Metadata Exchange personalizado
 
-En este artículo se explica cómo configurar un enlace de intercambio WS-Metadata personalizado. Windows Communication Foundation (WCF) incluye cuatro enlaces de metadatos definidos por el sistema, pero puede publicar metadatos mediante cualquier enlace que desee. En este artículo se muestra `wsHttpBinding`cómo publicar metadatos mediante el archivo . Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en [introducción](../samples/getting-started-sample.md).  
+En este artículo se explica cómo configurar un enlace personalizado de intercambio de WS-Metadata. Windows Communication Foundation (WCF) incluye cuatro enlaces de metadatos definidos por el sistema, pero puede publicar metadatos con cualquier enlace que desee. En este artículo se muestra cómo publicar metadatos mediante `wsHttpBinding` . Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en el [Introducción](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>El uso de un archivo de configuración  
   
@@ -45,7 +46,7 @@ En este artículo se explica cómo configurar un enlace de intercambio WS-Metada
               contract="IMetadataExchange" />  
     ```  
   
-4. Para comprobar que el punto de conexión de intercambio de metadatos funciona correctamente, agregue una etiqueta de punto final en el archivo de configuración del cliente:  
+4. Para comprobar que el extremo de intercambio de metadatos funciona correctamente, agregue una etiqueta de extremo en el archivo de configuración del cliente:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  

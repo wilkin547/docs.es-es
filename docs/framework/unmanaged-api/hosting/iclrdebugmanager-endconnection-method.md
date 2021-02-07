@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRDebugManager:: EndConnection (método)'
 title: ICLRDebugManager::EndConnection (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-ms.openlocfilehash: d6f22d6185f4063078463043a6ffd46e56289267
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 06dc9e20ec02c3e3040090babcc443a2ae59848b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719858"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746059"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection (Método)
 
@@ -51,7 +52,7 @@ HRESULT EndConnection (
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|No se ha llamado a [BeginConnection](iclrdebugmanager-beginconnection-method.md) nunca mediante `dwConnectionId` o `dwConnectionId` era cero.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  [ICLRDebugManager](iclrdebugmanager-interface.md) proporciona tres métodos, `BeginConnection` , [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)y `EndConnection` , para asociar listas de tareas con identificadores y nombres descriptivos.  
   
@@ -68,7 +69,7 @@ HRESULT EndConnection (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)
 - [ICLRDebugManager (Interfaz)](iclrdebugmanager-interface.md)

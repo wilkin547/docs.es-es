@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerCallback:: ObjectAllocated (método)'
 title: ICorProfilerCallback::ObjectAllocated (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-ms.openlocfilehash: fda234a6a280aeea1f497ad195d6d41efb6aa951
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 58b58aeb4bb88d0df32cebc32440317a4d23632d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674351"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745169"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated (Método)
 
@@ -42,7 +43,7 @@ HRESULT ObjectAllocated(
  `classId`  
  de IDENTIFICADOR de la clase de la que el objeto es una instancia de.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `ObjectedAllocated`No se llama al método para las asignaciones de la pila o la memoria no administrada. El `classId` parámetro puede hacer referencia a una clase de código administrado que todavía no se ha cargado. El generador de perfiles recibirá una devolución de llamada de carga de clase para esa clase inmediatamente después de la `ObjectAllocated` devolución de llamada.  
   
@@ -56,7 +57,7 @@ HRESULT ObjectAllocated(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método ClassLoadStarted](icorprofilercallback-classloadstarted-method.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRDebugManager:: BeginConnection (método)'
 title: ICLRDebugManager::BeginConnection (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdd98146-ff4d-4150-a264-a4c1a32d31f3
 topic_type:
 - apiref
-ms.openlocfilehash: c5b41e4209141c0396ec8a1da766b80043be8807
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9b4ee64ad96bddfd5d7d650b657c6691b27d8c69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726163"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746144"
 ---
 # <a name="iclrdebugmanagerbeginconnection-method"></a>ICLRDebugManager::BeginConnection (Método)
 
@@ -56,7 +57,7 @@ HRESULT BeginConnection (
 |E_INVALIDARG|`dwConnectionId` era cero o `BeginConnection` ya se llamó con este `dwConnectionId` valor, o `szConnectionName` era null.|  
 |E_OUTOFMEMORY|No se pudo asignar memoria suficiente para contener la lista de tareas asociadas a esta conexión.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  [ICLRDebugManager](iclrdebugmanager-interface.md) proporciona tres métodos, `BeginConnection` , [SetConnectionTasks](iclrdebugmanager-setconnectiontasks-method.md)y [EndConnection](iclrdebugmanager-endconnection-method.md), para asociar listas de tareas con identificadores y nombres descriptivos.  
   
@@ -73,7 +74,7 @@ HRESULT BeginConnection (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)
 - [ICLRDebugManager (Interfaz)](iclrdebugmanager-interface.md)

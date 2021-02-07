@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3425-WebSocketAsyncReadStop'
 title: 3425 - WebSocketAsyncReadStop
 ms.date: 03/30/2017
 ms.assetid: 6d86fd8f-d430-45c0-94ee-827f4fa5881a
-ms.openlocfilehash: b0479dc867f61539b5f7397319954dfb2c05ca9f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3cbc7629428ecb878f06155283339eca7a3a76e4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99744700"
 ---
 # <a name="3425---websocketasyncreadstop"></a>3425 - WebSocketAsyncReadStop
 
@@ -15,7 +16,7 @@ ms.locfileid: "96263066"
   
 |||  
 |-|-|  
-|ID|3425|  
+|Id.|3425|  
 |Palabras clave|HTTP|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
