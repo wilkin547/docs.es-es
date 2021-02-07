@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: funciones de cadena'
 title: Funciones de cadena
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: f5c9696da51591b7a44de14838313112bbc46c06
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1287d81075fd87fa730020b44dfd134a59827f8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156529"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673120"
 ---
 # <a name="string-functions"></a>Funciones de cadena
 

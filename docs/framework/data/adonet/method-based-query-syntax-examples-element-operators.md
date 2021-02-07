@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Method-Based ejemplos de sintaxis de consultas: operadores de elementos (LINQ to DataSet)'
 title: 'Ejemplos de sintaxis de consulta basada en métodos: operadores de elementos (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
-ms.openlocfilehash: 669c6a34d1179caf4ec40eb8db559bdfdc9fc7f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b6e9832832198927f7913b0f93b1347ae353461b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672730"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Ejemplos de sintaxis de consulta basada en métodos: operadores de elementos (LINQ to DataSet)
 
@@ -45,7 +46,7 @@ Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enu
 [!code-csharp[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#firstsimple)]
 [!code-vb[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#firstsimple)]
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cargar datos en un conjunto de datos](loading-data-into-a-dataset.md)
 - [Ejemplos de LINQ to DataSet](linq-to-dataset-examples.md)

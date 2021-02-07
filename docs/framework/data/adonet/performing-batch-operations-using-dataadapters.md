@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo realizar operaciones por lotes mediante DataAdapters
 title: Realizar operaciones por lotes utilizando objetos DataAdapter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: 9dd6abb91b3549e3bc8b4ae84cbb227171512ecb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d0472761a0a3893872f073cfe25921066a0f96bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177428"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672340"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Realizar operaciones por lotes utilizando objetos DataAdapter
 
@@ -26,7 +27,7 @@ La compatibilidad con las operaciones por lotes en ADO.NET permite que un <xref:
 
  Al habilitar las actualizaciones por lotes, el valor de propiedad <xref:System.Data.IDbCommand.UpdatedRowSource%2A> de `UpdateCommand`, `InsertCommand` y `DeleteCommand` del DataAdapter debe establecerse en <xref:System.Data.UpdateRowSource.None> o <xref:System.Data.UpdateRowSource.OutputParameters>. Al realizar una actualización por lotes, el valor <xref:System.Data.IDbCommand.UpdatedRowSource%2A> o <xref:System.Data.UpdateRowSource.FirstReturnedRecord> de la propiedad <xref:System.Data.UpdateRowSource.Both> del comando no es válido.  
   
- En el siguiente procedimiento se muestra cómo se utiliza la propiedad `UpdateBatchSize`. El procedimiento toma dos argumentos, un <xref:System.Data.DataSet> objeto que tiene columnas que representan los campos **ProductCategoryID** y **Name** de la tabla **Production. ProductCategory** y un entero que representa el tamaño del lote (el número de filas del lote). El código crea un objeto <xref:System.Data.SqlClient.SqlDataAdapter> nuevo y se establecen las propiedades <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> y <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. En el código se supone que el objeto <xref:System.Data.DataSet> tiene filas modificadas. Se establece la propiedad `UpdateBatchSize` y se ejecuta la actualización.  
+ En el siguiente procedimiento se muestra cómo se utiliza la propiedad `UpdateBatchSize`. En el procedimiento se toman dos argumentos, un objeto <xref:System.Data.DataSet> con columnas que representan los campos **ProductCategoryID** y **Name** de la tabla **Production.ProductCategory**, y un entero que representa el tamaño del lote (el número de filas). El código crea un objeto <xref:System.Data.SqlClient.SqlDataAdapter> nuevo y se establecen las propiedades <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> y <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. En el código se supone que el objeto <xref:System.Data.DataSet> tiene filas modificadas. Se establece la propiedad `UpdateBatchSize` y se ejecuta la actualización.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -129,7 +130,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Controlar errores y eventos relacionados con la actualización por lotes  
 
- El **DataAdapter** tiene dos eventos relacionados con la actualización: **RowUpdating** y **RowUpdated**. En las versiones anteriores de ADO.NET, cuando se deshabilita el procesamiento por lotes, cada uno de estos eventos se genera una vez para cada fila procesada. **RowUpdating** se genera antes de que se produzca la actualización y se genera **RowUpdated** una vez completada la actualización de la base de datos.  
+ **DataAdapter** tiene dos eventos relacionados con la actualización: **RowUpdating** y **RowUpdated**. En las versiones anteriores de ADO.NET, cuando se deshabilita el procesamiento por lotes, cada uno de estos eventos se genera una vez para cada fila procesada. **RowUpdating** se genera antes de que se produzca la actualización y se genera **RowUpdated** una vez completada la actualización de la base de datos.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Cambios en el comportamiento de eventos con actualizaciones por lotes  
 

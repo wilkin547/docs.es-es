@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Method-Based ejemplos de sintaxis de consultas: operadores de conversión (LINQ to DataSet)'
 title: 'Ejemplos de sintaxis de consulta basada en métodos: operadores de conversión (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a084c16b-9b55-4690-aefd-f8e0810a92c3
-ms.openlocfilehash: b3c746f715f40f4c134185fa0cf8e6e115e0067b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 958e5c0ac1d1d8a98e6099ffcad055e78f07b23e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164654"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672743"
 ---
 # <a name="method-based-query-syntax-examples-conversion-operators-linq-to-dataset"></a>Ejemplos de sintaxis de consulta basada en métodos: operadores de conversión (LINQ to DataSet)
 
@@ -54,7 +55,7 @@ Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enu
  [!code-csharp[DP LINQ to DataSet Examples#ToList](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#tolist)]
  [!code-vb[DP LINQ to DataSet Examples#ToList](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#tolist)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cargar datos en un conjunto de datos](loading-data-into-a-dataset.md)
 - [Ejemplos de LINQ to DataSet](linq-to-dataset-examples.md)

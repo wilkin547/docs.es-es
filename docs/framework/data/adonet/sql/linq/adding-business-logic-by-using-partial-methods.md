@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo agregar lógica de negocios mediante métodos parciales
 title: Agregar lógica de negocios utilizando métodos parciales
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: 9ad3329c621b8bf8eaa0fd5f986ac7e8cff97d9e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c34d0d25fa9dba074f1c7ff2abe2e9e24c931a8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156165"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672275"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Agregar lógica de negocios utilizando métodos parciales
 

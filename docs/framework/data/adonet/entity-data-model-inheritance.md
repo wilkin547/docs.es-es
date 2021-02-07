@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Entity Data Model: herencia'
 title: 'Entity Data Model: Herencia'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: 057040eee411988c46adc9c4cabcfe5f5a185e1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 69d05800f397c122243fbaa497c67634fa78d4b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672860"
 ---
 # <a name="entity-data-model-inheritance"></a>Entity Data Model: Herencia
 
@@ -27,7 +28,7 @@ En el diagrama siguiente se muestra un modelo conceptual con cuatro tipos de ent
   
  [!code-xml[EDM_Example_Model#DerivedType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books5.edmx#derivedtype)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

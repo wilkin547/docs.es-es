@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ejemplos de LINQ to DataSet'
 title: Ejemplos de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 48511dc7ae249e35b9bd76e0d6d3d9f1ef39dde0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 65977210fb160439231ea723134c94eb56ca8930
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672756"
 ---
 # <a name="linq-to-dataset-examples"></a>Ejemplos de LINQ to DataSet
 
@@ -54,7 +55,7 @@ En esta sección se proporciona LINQ to DataSet ejemplos de programación que ut
  [Ejemplos de operadores específicos de conjuntos de datos](dataset-specific-operator-examples-linq-to-dataset.md)  
  Contiene ejemplos que demuestran cómo usar el método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> y la clase <xref:System.Data.DataRowComparer>.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Guía de programación](programming-guide-linq-to-dataset.md)
 - [Cargar datos en un conjunto de datos](loading-data-into-a-dataset.md)

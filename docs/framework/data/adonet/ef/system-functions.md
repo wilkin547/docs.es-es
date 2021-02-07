@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: funciones del sistema'
 title: Funciones del sistema
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 0d46429ac958e6f5db4d51947669784303af783b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2346f92cb74a21e34f1413f64c2e392961b931be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156503"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673094"
 ---
 # <a name="system-functions"></a>Funciones del sistema
 

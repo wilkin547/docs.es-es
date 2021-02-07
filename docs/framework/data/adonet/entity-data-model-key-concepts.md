@@ -1,17 +1,18 @@
 ---
+description: 'Más información acerca de: Entity Data Model conceptos clave'
 title: Conceptos clave de Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: d020de65ff64d93c0ea925b71e5f1546eb4402aa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4b97a39a5989689662db7be92b259b9a08d84cc7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191767"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672803"
 ---
 # <a name="entity-data-model-key-concepts"></a>Conceptos clave de Entity Data Model
 
-El Entity Data Model (EDM) usa tres conceptos clave para describir la estructura de los datos: el *tipo de entidad*, el *tipo de asociación*y la *propiedad*. Estos son los conceptos más importantes para describir la estructura de datos en cualquier implementación de EDM.  
+El Entity Data Model (EDM) usa tres conceptos clave para describir la estructura de los datos: el *tipo de entidad*, el *tipo de asociación* y la *propiedad*. Estos son los conceptos más importantes para describir la estructura de datos en cualquier implementación de EDM.  
   
 ## <a name="entity-type"></a>Tipo de entidad  
 
@@ -43,6 +44,6 @@ El Entity Data Model (EDM) usa tres conceptos clave para describir la estructura
   
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Entity Data Model](entity-data-model.md)

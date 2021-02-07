@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: CURSOres REF CURSOR de Oracle'
 title: Parámetros REF CURSOR de Oracle
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: cbf330ba381a825c2d16038c01d7bdc52bc8f482
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a9c5e95a9f0d2da74fd6a3db19f15699a3e2787
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180886"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672457"
 ---
 # <a name="oracle-ref-cursors"></a>Parámetros REF CURSOR de Oracle
 
@@ -44,7 +45,7 @@ El proveedor de datos de .NET Framework para Oracle admite el tipo de datos **re
  [Rellenar un conjunto de datos utilizando uno o varios parámetros REF CURSOR](filling-a-dataset-using-one-or-more-ref-cursors.md)  
  Muestra cómo ejecutar un procedimiento almacenado PL/SQL que devuelve dos parámetros REF CURSOR y llena un <xref:System.Data.DataSet> con las filas que se devuelven.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Oracle y ADO.NET](oracle-and-adonet.md)
 - [Información general de ADO.NET](ado-net-overview.md)

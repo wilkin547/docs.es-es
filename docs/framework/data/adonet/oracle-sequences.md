@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: secuencias de Oracle'
 title: Secuencias de Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 5e979a0a6750a654a69522d1fb10cdfa7242b893
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dea0a0ba0e39410a92b293186a5bd12477113d60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189167"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672431"
 ---
 # <a name="oracle-sequences"></a>Secuencias de Oracle
 
@@ -100,7 +101,7 @@ public void OracleSequence(String connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Oracle y ADO.NET](oracle-and-adonet.md)
 - [Información general de ADO.NET](ado-net-overview.md)

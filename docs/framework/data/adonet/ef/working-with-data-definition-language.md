@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo trabajar con lenguaje de definición de datos
 title: Trabajar con lenguaje de definición de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c30cbbc1eae6d4cbcadb9bfe8d267fb428764971
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2f924087d12b519e6086289a91dedce3a88199f5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200893"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673029"
 ---
 # <a name="working-with-data-definition-language"></a>Trabajar con lenguaje de definición de datos
 

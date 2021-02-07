@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Oracle objetos BFILE'
 title: Objetos BFILE de Oracle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: d43dfccd9735ce1ab822d7b14de2abaa0940c77b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1fda4ad4acb225dc9a70c92b2c4f2b1d61ab1d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672496"
 ---
 # <a name="oracle-bfiles"></a>Objetos BFILE de Oracle
 
@@ -88,7 +89,7 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Oracle y ADO.NET](oracle-and-adonet.md)
 - [Información general de ADO.NET](ado-net-overview.md)

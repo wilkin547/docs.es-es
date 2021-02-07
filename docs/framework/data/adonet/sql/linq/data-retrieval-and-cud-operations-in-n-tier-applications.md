@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de las operaciones de recuperación de datos y CUD en aplicaciones de N niveles (LINQ to SQL)
 title: Recuperación de datos y operaciones CUD en aplicaciones de n niveles (LINQ to SQL)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 1bc97504b4dd053ce9ef747460a79865cbe836ee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dbad65e1bd29227f434166dca364946a68256177
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197422"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672171"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperación de datos y operaciones CUD en aplicaciones de n niveles (LINQ to SQL)
 
@@ -400,7 +401,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
  Si falta cualquiera de estos miembros necesarios, se producirá una excepción <xref:System.Data.Linq.ChangeConflictException> durante <xref:System.Data.Linq.DataContext.SubmitChanges%2A> ("Fila no encontrada o cambiada").  
   
-### <a name="state"></a>State  
+### <a name="state"></a>Estado  
 
  Una vez que un objeto entidad se asocia a la instancia <xref:System.Data.Linq.DataContext>, el objeto se considerará en el estado `PossiblyModified`. Existen tres maneras de obligar a que un objeto asociado se considere `Modified`.  
   
@@ -416,7 +417,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
  Al asociar con un conjunto de objetos `IEnumerable`, se producirá una excepción <xref:System.Data.Linq.DuplicateKeyException> cuando esté presente una clave existente. Los objetos restantes no se asociarán.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Aplicaciones de N niveles y remotas con LINQ to SQL](n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Información general](background-information.md)

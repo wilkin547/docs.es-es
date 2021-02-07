@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: SqlClient para el Entity Framework'
 title: SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 7f3a1d4bbd18977bbb1dc9ce65140428ea6fe2f8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eba5602c13f66d1ee4404bbc27035304e34c1cd0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156542"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673133"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient para Entity Framework
 
@@ -42,7 +43,7 @@ En esta sección se describe el Proveedor de datos de .NET Framework para SQL Se
 
  El proveedor SqlCliente para Entity Framework proporciona información de asignación entre los tipos del modelo conceptual y los tipos de SQL Server. Para obtener más información, vea [SqlClient para Entity Framework](sqlclient-for-ef-types.md).  
   
-## <a name="functions"></a>Funciones  
+## <a name="functions"></a>Functions  
 
  El proveedor de SqlClient para Entity Framework define la lista de funciones admitidas por el proveedor. Para obtener una lista de las funciones admitidas, vea [SqlClient para funciones de Entity Framework](sqlclient-for-ef-functions.md).  
   
