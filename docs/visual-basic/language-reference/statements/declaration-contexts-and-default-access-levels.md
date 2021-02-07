@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: contextos de declaración y niveles de acceso predeterminados (Visual Basic)'
 title: Contextos de declaración y niveles de acceso predeterminados
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: a659481b34b8b44f1f387b464d5d9656ed98ab3f
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: c550db39862fbe9f69e5651b6e9fc7fdfcc88513
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700343"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Contextos de declaración y niveles de acceso predeterminados (Visual Basic)
 
@@ -53,7 +54,7 @@ En este tema se describe qué tipos de Visual Basic se pueden declarar dentro de
   
  Para obtener más información, consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Friend](../modifiers/friend.md)
 - [Privado](../modifiers/private.md)

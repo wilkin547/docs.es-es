@@ -1,15 +1,16 @@
 ---
+description: "Más información sobre: el argumento ' <argumentname> ' debe ser mayor o igual que cero"
 title: El valor del argumento '<argumentname>' debe ser mayor o igual que cero
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_ArgGEZero1
 ms.assetid: 7b901c2a-3447-4afc-91f8-8fa5f6f961d7
-ms.openlocfilehash: be1ddcf8bc233251d335ead1372078b0506fd933
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fa3a37588e0fcfab75d26bdde98fa787902afb92
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699888"
 ---
 # <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>El valor del argumento '\<argumentname>' debe ser mayor o igual que cero
 

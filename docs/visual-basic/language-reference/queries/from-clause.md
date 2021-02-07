@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: cláusula FROM (Visual Basic)'
 title: Cláusula From
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 120ba6da11bffc3a0e81873d1fd606633724723d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e35188412deb7fd9f2d8306c85057d050a60d030
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700564"
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
 
@@ -34,9 +35,9 @@ From element [ As type ] In collection [ _ ]
 |---|---|  
 |`element`|Obligatorio. Una *variable de rango* que se usa para recorrer en iteración los elementos de la colección. Una variable de rango se utiliza para hacer referencia a cada miembro de `collection` , ya que la consulta recorre en iteración la `collection` . Debe ser un tipo Enumerable.|  
 |`type`|Opcional. Tipo de `element`. Si no `type` se especifica, el tipo de `element` se deduce de `collection` .|  
-|`collection`|Obligatorio. Hace referencia a la colección que se va a consultar. Debe ser un tipo Enumerable.|  
+|`collection`|Necesario. Hace referencia a la colección que se va a consultar. Debe ser un tipo Enumerable.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `From` cláusula se utiliza para identificar los datos de origen de una consulta y las variables que se usan para hacer referencia a un elemento de la colección de origen. Estas variables se denominan *variables de rango*. La `From` cláusula es necesaria para una consulta, excepto cuando `Aggregate` se usa la cláusula para identificar una consulta que devuelve solo resultados agregados. Para obtener más información, vea [cláusula Aggregate](aggregate-clause.md).  
   
@@ -72,7 +73,7 @@ From element [ As type ] In collection [ _ ]
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Consultas](index.md)
 - [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
@@ -82,10 +83,10 @@ From element [ As type ] In collection [ _ ]
 - [Cláusula WHERE](where-clause.md)
 - [Aggregate Clause](aggregate-clause.md)
 - [Cláusula Distinct](distinct-clause.md)
-- [Join (cláusula)](join-clause.md)
+- [Cláusula Join](join-clause.md)
 - [Cláusula Group Join](group-join-clause.md)
 - [Cláusula order by](order-by-clause.md)
-- [Let (cláusula)](let-clause.md)
+- [Cláusula Let](let-clause.md)
 - [Cláusula Skip](skip-clause.md)
 - [Cláusula Take](take-clause.md)
 - [Cláusula Skip While](skip-while-clause.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ampliación (Visual Basic)'
 title: Widening
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 14e0b026f4fc3b0bf202ea643a28d6f1a7df2b7c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: de290296ba2b7716ba992c6bed46443053048282
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700707"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
 
@@ -35,7 +36,7 @@ Indica que un operador de conversión ( `CType` ) convierte una clase o estructu
   
  Para obtener definiciones de ejemplo de operadores de conversión de ampliación y de restricción, vea [Cómo: definir un operador de conversión](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operator Statement](../statements/operator-statement.md)
 - [Narrowing](narrowing.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: cláusula join (Visual Basic)'
 title: Cláusula Join
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: f73dc31bbbb9014a8a1a315de406c53fa58d1c65
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 69d808e68a32b3f8799dabbbc8abc53acae42b57
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700447"
 ---
 # <a name="join-clause-visual-basic"></a>Join (Cláusula, Visual Basic)
 
@@ -44,7 +45,7 @@ Opcional. Una o más `Join` cláusulas adicionales para restringir aún más la 
 Opcional. Una o más `Group Join` cláusulas adicionales para restringir aún más la consulta.
 
 `key1` `Equals` `key2`  
-Necesario. Identifica las claves para las colecciones que se están combinando. Debe utilizar el `Equals` operador para comparar las claves de las colecciones que se están combinando. Puede combinar condiciones de combinación mediante el `And` operador para identificar varias claves. `key1`debe ser de la colección en el lado izquierdo del `Join` operador. `key2`debe ser de la colección del lado derecho del `Join` operador.
+Necesario. Identifica las claves para las colecciones que se están combinando. Debe utilizar el `Equals` operador para comparar las claves de las colecciones que se están combinando. Puede combinar condiciones de combinación mediante el `And` operador para identificar varias claves. `key1` debe ser de la colección en el lado izquierdo del `Join` operador. `key2` debe ser de la colección del lado derecho del `Join` operador.
 
 Las claves utilizadas en la condición de combinación pueden ser expresiones que incluyen más de un elemento de la colección. Sin embargo, cada expresión clave solo puede contener elementos de su colección respectiva.
 
@@ -92,11 +93,11 @@ En el ejemplo se producirá una salida similar a la siguiente:
 
 `explorer (2424), File Explorer, Priority = 8`
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [Consultas](index.md)
 - [Select (cláusula)](select-clause.md)
-- [Cláusula FROM](from-clause.md)
+- [Cláusula From](from-clause.md)
 - [Cláusula Group Join](group-join-clause.md)
 - [Cláusula WHERE](where-clause.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: cláusula Aggregate (Visual Basic)'
 title: Aggregate Clause
 ms.date: 08/28/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: be2e401c7931b2637c14a3ea3b742a2c09917939
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 404cb4091bc11132450cf0d8d001ce426439ece7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869989"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700668"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate (Cláusula, Visual Basic)
 
@@ -36,11 +37,11 @@ Aggregate element [As type] In collection _
 |---|---|  
 |`element`|Obligatorio. Variable usada para recorrer en iteración los elementos de la colección.|  
 |`type`|Opcional. Tipo de `element`. Si no se especifica ningún tipo, el tipo de `element` se deduce de `collection` .|  
-|`collection`|Obligatorio. Hace referencia a la colección en la que se va a operar.|  
+|`collection`|Necesario. Hace referencia a la colección en la que se va a operar.|  
 |`clause`|Opcional. Una o varias cláusulas de consulta, como una `Where` cláusula, para refinar el resultado de la consulta a fin de aplicar la cláusula o cláusulas de agregado a.|  
-|`expressionList`|Obligatorio. Una o más expresiones delimitadas por comas que identifican una función de agregado que se va a aplicar a la colección. Puede aplicar un alias a una función de agregado para especificar un nombre de miembro para el resultado de la consulta. Si no se proporciona ningún alias, se utiliza el nombre de la función de agregado. Para obtener ejemplos, vea la sección acerca de las funciones de agregado más adelante en este tema.|  
+|`expressionList`|Necesario. Una o más expresiones delimitadas por comas que identifican una función de agregado que se va a aplicar a la colección. Puede aplicar un alias a una función de agregado para especificar un nombre de miembro para el resultado de la consulta. Si no se proporciona ningún alias, se utiliza el nombre de la función de agregado. Para obtener ejemplos, vea la sección acerca de las funciones de agregado más adelante en este tema.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `Aggregate` cláusula se puede utilizar para incluir funciones de agregado en las consultas. Las funciones de agregado realizan comprobaciones y cálculos sobre un conjunto de valores y devuelven un valor único. Puede tener acceso al valor calculado mediante el uso de un miembro del tipo de resultado de la consulta. Las funciones de agregado estándar que se pueden usar son las `All` funciones,,,,,, `Any` `Average` `Count` `LongCount` `Max` `Min` y `Sum` . Estas funciones resultan familiares a los desarrolladores que están familiarizados con los agregados de SQL. Se describen en la sección siguiente de este tema.  
   
@@ -54,25 +55,25 @@ A continuación se enumeran las funciones de agregado estándar que se pueden us
   
 ### <a name="all"></a>Todo
 
-Devuelve `true` si todos los elementos de la colección satisfacen una condición especificada; de lo contrario, devuelve `false` . Este es un ejemplo:
+Devuelve `true` si todos los elementos de la colección satisfacen una condición especificada; de lo contrario, devuelve `false` . A continuación se muestra un ejemplo:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
-### <a name="any"></a>Any
+### <a name="any"></a>Cualquiera
 
-Devuelve `true` si algún elemento de la colección satisface una condición especificada; de lo contrario, devuelve `false` . Este es un ejemplo:
+Devuelve `true` si algún elemento de la colección satisface una condición especificada; de lo contrario, devuelve `false` . A continuación se muestra un ejemplo:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
-### <a name="average"></a>Media
+### <a name="average"></a>Promedio
 
-Calcula el promedio de todos los elementos de la colección o calcula una expresión proporcionada para todos los elementos de la colección. Este es un ejemplo:
+Calcula el promedio de todos los elementos de la colección o calcula una expresión proporcionada para todos los elementos de la colección. A continuación se muestra un ejemplo:
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Count
 
-Cuenta el número de elementos de la colección. Puede proporcionar una expresión opcional `Boolean` para contar solo el número de elementos de la colección que satisfacen una condición. Este es un ejemplo:
+Cuenta el número de elementos de la colección. Puede proporcionar una expresión opcional `Boolean` para contar solo el número de elementos de la colección que satisfacen una condición. A continuación se muestra un ejemplo:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
@@ -86,19 +87,19 @@ Cuenta el número de elementos de la colección. Puede proporcionar una expresi�
 
 ### <a name="max"></a>Max
 
-Calcula el valor máximo de la colección o calcula una expresión proporcionada para todos los elementos de la colección. Este es un ejemplo:
+Calcula el valor máximo de la colección o calcula una expresión proporcionada para todos los elementos de la colección. A continuación se muestra un ejemplo:
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Min
 
-Calcula el valor mínimo de la colección o calcula una expresión proporcionada para todos los elementos de la colección. Este es un ejemplo:
+Calcula el valor mínimo de la colección o calcula una expresión proporcionada para todos los elementos de la colección. A continuación se muestra un ejemplo:
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Sum
 
-Calcula la suma de todos los elementos de la colección o calcula una expresión proporcionada para todos los elementos de la colección. Este es un ejemplo:
+Calcula la suma de todos los elementos de la colección o calcula una expresión proporcionada para todos los elementos de la colección. A continuación se muestra un ejemplo:
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
@@ -108,7 +109,7 @@ En el ejemplo siguiente se muestra cómo utilizar la `Aggregate` cláusula para 
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
-## <a name="creating-user-defined-aggregate-functions"></a>Crear funciones de agregado definidas por el usuario
+## <a name="creating-user-defined-aggregate-functions"></a>Crear User-Defined funciones de agregado
 
  Puede incluir sus propias funciones de agregado personalizadas en una expresión de consulta agregando métodos de extensión al <xref:System.Collections.Generic.IEnumerable%601> tipo. Después, el método personalizado puede realizar un cálculo o una operación en la colección Enumerable que ha hecho referencia a la función de agregado. Para obtener más información sobre los métodos de extensión, vea [Métodos de extensión](../../programming-guide/language-features/procedures/extension-methods.md).  
   
@@ -120,11 +121,11 @@ En el ejemplo siguiente se muestra cómo utilizar la `Aggregate` cláusula para 
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [Consultas](index.md)
 - [Select (cláusula)](select-clause.md)
-- [Cláusula FROM](from-clause.md)
+- [Cláusula From](from-clause.md)
 - [Cláusula WHERE](where-clause.md)
-- [Cláusula Group By](group-by-clause.md)
+- [Group by (cláusula)](group-by-clause.md)

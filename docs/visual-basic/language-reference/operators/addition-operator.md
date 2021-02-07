@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador + (Visual Basic)'
 title: + Operator
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: bc31e4c66c64d891e3fffd809b7ae99b9c9a0520
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9a6517847945cb2edcbd97adac6a013498dde174
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873457"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700694"
 ---
 # <a name="-operator-visual-basic"></a>+ (Operador, Visual Basic)
 
@@ -54,7 +55,7 @@ o
 
  Todos los tipos numéricos, incluidos los tipos de punto flotante y sin signo y `Decimal` , y `String` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En general, `+` realiza la suma aritmética siempre que sea posible y concatena solo cuando ambas expresiones son cadenas.  
   
@@ -118,7 +119,7 @@ o
   
  Para eliminar la ambigüedad, debe usar el `&` operador en lugar de `+` para la concatenación.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [& (operador)](concatenation-operator.md)
 - [Operadores de concatenación](concatenation-operators.md)

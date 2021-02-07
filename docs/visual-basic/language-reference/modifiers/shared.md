@@ -1,5 +1,6 @@
 ---
-title: Compartido
+description: 'Más información acerca de: Shared (Visual Basic)'
+title: Shared
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shared
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 0cc671c67486d01026f2283837448db7b00c1a0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990189"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700759"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -46,7 +47,7 @@ El uso compartido no modifica el nivel de acceso de un miembro. Por ejemplo, un 
 
 ## <a name="behavior"></a>Comportamiento
 
-- **Discos.** Una variable o evento compartido se almacena en la memoria solo una vez, independientemente del número de instancias que cree de su clase o estructura. De forma similar, un procedimiento compartido o una propiedad solo contiene un conjunto de variables locales.
+- **Almacenamiento**. Una variable o evento compartido se almacena en la memoria solo una vez, independientemente del número de instancias que cree de su clase o estructura. De forma similar, un procedimiento compartido o una propiedad solo contiene un conjunto de variables locales.
 
 - **Obtener acceso a través de una variable de instancia.** Es posible obtener acceso a un elemento compartido si se califica con el nombre de una variable que contiene una instancia específica de su clase o estructura. Aunque esto suele funcionar según lo esperado, el compilador genera un mensaje de advertencia y hace que el acceso se realice a través del nombre de la clase o la estructura en lugar de la variable.
 
@@ -93,7 +94,7 @@ El modificador `Shared` se puede utilizar en los contextos siguientes:
 - [Property Statement](../statements/property-statement.md)
 - [Instrucción Sub](../statements/sub-statement.md)
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Shadows](shadows.md)
 - [Estática](static.md)

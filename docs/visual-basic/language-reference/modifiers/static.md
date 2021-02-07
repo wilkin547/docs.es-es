@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Static (Visual Basic)'
 title: estática
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: 2b7113424969b0b18c981b0c8932aeef3795ca4a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 03c2e3f64ac9052a0c604b8bc34782af16edbf34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700746"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 
 Especifica que una o varias variables locales declaradas deben seguir existiendo y conservar sus valores más recientes después de la finalización del procedimiento en el que se declaran.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Normalmente, una variable local de un procedimiento deja de existir en cuanto se detiene el procedimiento. Una variable estática sigue existiendo y conserva su valor más reciente. La próxima vez que el código llame al procedimiento, no se reinicializará la variable y se conservará el valor más reciente que le haya asignado. Una variable estática sigue existiendo mientras dure la clase o el módulo en el que se define.  
   
@@ -50,7 +51,7 @@ Especifica que una o varias variables locales declaradas deben seguir existiendo
   
  [Instrucción Dim](../statements/dim-statement.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Shadows](shadows.md)
 - [Compartido](shared.md)

@@ -1,15 +1,16 @@
 ---
+description: "Más información sobre: el argumento ' <argumentname> ' debe ser mayor que 0 o igual a-1"
 title: El valor del argumento '<argumentname>' debe ser mayor que 0 o igual a -1
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
-ms.openlocfilehash: 3e557af8d04a4fae2bf7f056e993f9d4e1f16ed8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f17241169f979042bada536350cc071b227cbe59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079989"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699940"
 ---
 # <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>El valor del argumento '\<argumentname>' debe ser mayor que 0 o igual a -1
 
