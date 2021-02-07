@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRDataTarget2:: Allocvirtual ((método)'
 title: ICLRDataTarget2::AllocVirtual (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-ms.openlocfilehash: 6d3985919ea7e766db7d07e4ed81484851156ca5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d81474e4067599178285b6fa876919298617919d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723676"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729346"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual (Método)
 
@@ -55,7 +56,7 @@ HRESULT AllocVirtual(
  `virt`  
  enuncia Un puntero a un `CLRDATA_ADDRESS` valor que especifica la dirección inicial real de la memoria asignada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `AllocVirtual` método actúa como contenedor lógico de la función de Win32 `VirtualAlloc` .  
   
@@ -71,7 +72,7 @@ HRESULT AllocVirtual(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget2 (Interfaz)](iclrdatatarget2-interface.md)
 - [Método FreeVirtual](iclrdatatarget2-freevirtual-method.md)

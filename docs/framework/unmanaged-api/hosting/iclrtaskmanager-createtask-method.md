@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRTaskManager:: CreateTask (método)'
 title: ICLRTaskManager::CreateTask (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-ms.openlocfilehash: c8d18b78cf0185271eae763892610d13f76e42ab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 98a287f10a84b18579ebf2a4294cbb8a67cabc9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734002"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728618"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask (Método)
 
@@ -51,7 +52,7 @@ HRESULT CreateTask (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para asignar el recurso solicitado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR crea una nueva tarea automáticamente durante la inicialización, cuando el código de usuario crea un subproceso mediante los tipos del <xref:System.Threading> espacio de nombres o cuando aumenta el tamaño del grupo de subprocesos. También crea tareas cuando el código no administrado realiza una llamada a una función administrada.  
   
@@ -70,7 +71,7 @@ HRESULT CreateTask (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRDebugManager:: SetConnectionTasks (método)'
 title: ICLRDebugManager::SetConnectionTasks (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: 5df01ac929874d00a5fddda83f532927dc46d67b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 851b3f54cc5599781596314dfb70296a3d86491a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728748"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks (Método)
 
@@ -59,7 +60,7 @@ HRESULT SetConnectionTasks (
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|No se ha llamado a [BeginConnection](iclrdebugmanager-beginconnection-method.md) con este valor de `id` , o `dwCount` o `id` es cero, o uno de los elementos de `ppCLRTask` es NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  [ICLRDebugManager](iclrdebugmanager-interface.md) proporciona tres métodos, `BeginConnection` , `SetConnectionTasks` y [EndConnection](iclrdebugmanager-endconnection-method.md), para asociar listas de tareas con identificadores y nombres descriptivos.  
   
@@ -76,7 +77,7 @@ HRESULT SetConnectionTasks (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)
 - [ICLRDebugManager (Interfaz)](iclrdebugmanager-interface.md)

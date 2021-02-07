@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICoreClrDebugTarget'
 title: ICoreClrDebugTarget (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-ms.openlocfilehash: 791bd2754a96b97a38e2509c0c61a644324857cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f0ed4dd75cd1daca6e83617433b29bbaecb1dd36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728761"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget (Interfaz)
 
@@ -56,7 +57,7 @@ class ICoreClrDebugTarget {
 |[ICoreClrDebugTarget::EnumRuntimes (Método)](icoreclrdebugtarget-enumruntimes-method.md)|Enumera Common Language Runtime (CLR) en el proceso especificado de un equipo remoto.|  
 |[ICoreClrDebugTarget::FreeMemory (Método)](icoreclrdebugtarget-freememory-method.md)|Libera la memoria asignada por los métodos de enumeración de esta clase.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Actualmente, esta funcionalidad solo se admite para depurar un destino de aplicación basado en Silverlight que se ejecute en un equipo remoto de Macintosh.  
   
@@ -70,7 +71,7 @@ class ICoreClrDebugTarget {
   
  **.NET Framework versiones:** 3,5 SP1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugRemoteTarget (Interfaz)](icordebugremotetarget-interface.md)
 - [ICorDebug (Interfaz)](icordebug-interface.md)

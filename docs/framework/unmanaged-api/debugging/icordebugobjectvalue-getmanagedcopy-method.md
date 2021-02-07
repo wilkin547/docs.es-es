@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugObjectValue:: GetManagedCopy ((método)'
 title: ICorDebugObjectValue::GetManagedCopy (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 300af43f-b3eb-4ce5-9ead-30dbfc5fbcc3
 topic_type:
 - apiref
-ms.openlocfilehash: b749223de90b751676cd82c740f55c0bfe976a71
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f2947721103ff75c2a1133ac59968996505b0416
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724655"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728969"
 ---
 # <a name="icordebugobjectvaluegetmanagedcopy-method"></a>ICorDebugObjectValue::GetManagedCopy (Método)
 
@@ -38,4 +39,4 @@ HRESULT GetManagedCopy (
 
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también

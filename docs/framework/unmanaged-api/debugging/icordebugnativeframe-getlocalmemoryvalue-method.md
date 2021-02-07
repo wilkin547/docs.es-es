@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugNativeFrame:: GetLocalMemoryValue ((método)'
 title: ICorDebugNativeFrame::GetLocalMemoryValue (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b600b3a2-9908-42d8-8093-ab6f39e9a2c9
 topic_type:
 - apiref
-ms.openlocfilehash: 92a4ee2007760024b5802208d77ca3abc81e3cf3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5fbdf9474ca8c5849b7d917ecddff491b329113b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729246"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue (Método)
 
@@ -61,4 +62,4 @@ HRESULT GetLocalMemoryValue (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también

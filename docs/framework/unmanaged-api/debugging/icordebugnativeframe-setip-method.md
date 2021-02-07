@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugNativeFrame:: SetIP (método)'
 title: ICorDebugNativeFrame::SetIP (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57784a51-c76d-48f8-9392-584d0e1946d9
 topic_type:
 - apiref
-ms.openlocfilehash: 65de42a0b86e4b4593b7880e9dc290ce00007a40
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb55b35eb4bd107a7273fd80ba83baac96610fb8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709263"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729177"
 ---
 # <a name="icordebugnativeframesetip-method"></a>ICorDebugNativeFrame::SetIP (Método)
 
@@ -39,7 +40,7 @@ HRESULT SetIP (
  `nOffset`  
  de Ubicación de desplazamiento en el código nativo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Llama a para `SetIP` invalidar inmediatamente todos los marcos y cadenas del subproceso actual. Si el depurador necesita información de fotogramas después de una llamada a `SetIP` , debe realizar un nuevo seguimiento de la pila.  
   
@@ -57,4 +58,4 @@ HRESULT SetIP (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también

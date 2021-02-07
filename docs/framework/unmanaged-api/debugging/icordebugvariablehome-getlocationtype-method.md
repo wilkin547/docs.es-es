@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugVariableHome:: GetLocationType (método)'
 title: 'ICorDebugVariableHome:: GetLocationType (método)'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-ms.openlocfilehash: 3979ed19f8a61ac1fc045b83c52e23d7255ac364
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6efe9c045641d162be820961ca75c21a2b8fc14b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711876"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728800"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>ICorDebugVariableHome:: GetLocationType (método)
 
@@ -49,7 +50,7 @@ HRESULT GetLocationType(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)
 - [Enumeración VariableLocationType](variablelocationtype-enumeration.md)
