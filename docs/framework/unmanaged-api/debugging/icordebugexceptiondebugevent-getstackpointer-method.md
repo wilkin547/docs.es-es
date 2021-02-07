@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugExceptionDebugEvent:: GetStackPointer (método)'
 title: ICorDebugExceptionDebugEvent::GetNativeIP (método)
 ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
-ms.openlocfilehash: 46906e7d3ce7f257eb776e50dc6097946eb77d1f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a62a5eb54fff1e94beebc222e3f18cc4655040f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693452"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>ICorDebugExceptionDebugEvent::GetNativeIP (método)
 
@@ -26,7 +27,7 @@ HRESULT GetStackPointer(
  `pStackPointer`  
  [out] Puntero a la dirección del puntero de pila para este evento de depuración de la excepción. Vea la sección Comentarios para obtener más información.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El significado de este puntero de pila depende del tipo de evento, como se muestra en la tabla siguiente.  
   
@@ -52,7 +53,7 @@ HRESULT GetStackPointer(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugExceptionDebugEvent](icordebugexceptiondebugevent-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

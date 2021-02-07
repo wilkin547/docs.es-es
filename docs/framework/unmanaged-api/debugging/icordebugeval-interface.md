@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugEval (interfaz)'
 title: Interfaz ICorDebugEval
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a5c9815-832d-47e1-b7f7-bbba135d7cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 5d8fd79b242f2b88b82c5c3d78dfe45d80f1194f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6eda0f63b377399cad391346dc6bedfa860e4b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729790"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694115"
 ---
 # <a name="icordebugeval-interface"></a>Interfaz ICorDebugEval
 
@@ -40,7 +41,7 @@ Proporciona métodos que permiten al depurador ejecutar código en el contexto d
 |[Método NewObjectNoConstructor](icordebugeval-newobjectnoconstructor-method.md)|Asigna una nueva instancia de objeto del tipo especificado, sin intentar llamar a un método de constructor. (Obsoleto en el .NET Framework 2,0; use [ICorDebugEval2:: newparameterizedobjectnoconstructor (](icordebugeval2-newparameterizedobjectnoconstructor-method.md) en su lugar).|  
 |[Método NewString](icordebugeval-newstring-method.md)|Asigna un nuevo objeto de cadena con el contenido especificado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un `ICorDebugEval` objeto se crea en el contexto de un subproceso concreto que se utiliza para realizar las evaluaciones. Todos los objetos y tipos utilizados en una evaluación determinada deben residir en el mismo dominio de aplicación. Dicho dominio de aplicación no debe ser el mismo que el dominio de aplicación actual del subproceso. Las evaluaciones se pueden anidar.  
   
@@ -63,6 +64,6 @@ Proporciona métodos que permiten al depurador ejecutar código en el contexto d
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

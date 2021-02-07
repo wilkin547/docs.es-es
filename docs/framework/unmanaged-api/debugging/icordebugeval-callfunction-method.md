@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugEval:: CallFunction (método)'
 title: ICorDebugEval::CallFunction (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf0080945ad78565fae3fedb454ceba7825cb4a
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: c0978ab3bdffc83e3eb5e3a6553e7f374ab6d5da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976244"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694193"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction (Método)
 
@@ -63,6 +64,6 @@ Si la función es virtual, `CallFunction` realizará el envío virtual. Si la fu
 
 **.NET Framework versiones:** 1,1, 1,0
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md)
