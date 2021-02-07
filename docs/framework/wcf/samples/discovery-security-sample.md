@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ejemplo de seguridad de detección'
 title: Ejemplo de seguridad de la detección
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 0957e8ddaee99e60b205c92319dc2c61e2ab007a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ddbe961a4e1d47288774e2472087107a6e344a7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292641"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726655"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 
@@ -15,7 +16,7 @@ La especificación de la detección no requiere que los puntos de conexión que 
   
  El canal personalizado se aplica encima de la pila del canal existente para los puntos de conexión de anuncio y detección. De esta manera, se aplica un encabezado de firma para cada mensaje enviado. La firma se comprueba en los mensajes recibidos, y cuando no coincide o cuando los mensajes no tienen una firma, los mensajes se quitan. Para firmar y comprobar los mensajes, el ejemplo utiliza los certificados.  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  WCF es extensible y permite a los usuarios personalizar los canales según sea necesario. En el ejemplo se implementa un elemento de enlace seguro de detección que crea canales seguros. Los canales seguros aplican y comprueban las firmas de los mensajes, y se aplican encima de la pila actual.  
   

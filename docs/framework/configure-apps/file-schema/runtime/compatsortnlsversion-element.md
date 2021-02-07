@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <CompatSortNLSVersion> elemento'
 title: <CompatSortNLSVersion> (Elemento)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: 27d532633f08a5a560da61e904917c1faa35126c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a064c849e53167c5f7cf16b934dfb377f3d07644
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151368"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726187"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion> (Elemento)
 
@@ -42,7 +43,7 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |4096|El identificador de configuración regional que representa un criterio de ordenación alternativo. En este caso, 4096 representa el criterio de ordenación de los .NET Framework 3,5 y versiones anteriores.|  
   
@@ -57,7 +58,7 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Dado que las operaciones de comparación de cadenas, ordenación y uso de mayúsculas y minúsculas realizadas por la <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> clase en el .NET Framework 4 se ajustan al estándar Unicode 5,1, los resultados de los métodos de comparación de cadenas como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> pueden diferir de las versiones anteriores de la .NET Framework. Si su aplicación depende del comportamiento heredado, puede restaurar las reglas de comparación y ordenación de cadenas usadas en el .NET Framework 3,5 y versiones anteriores incluyendo el `<CompatSortNLSVersion>` elemento en el archivo de configuración de la aplicación.  
   

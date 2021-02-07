@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <issuerMetadata>'
 title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
-ms.openlocfilehash: 10a6d2aaad7d63d00b3a57032d0d218f756454d8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 86671b6b704f5753cf4bd45c2dfd90a368070b22
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725537"
 ---
 # \<issuerMetadata>
 
@@ -66,7 +67,7 @@ ms.locfileid: "91175959"
 |-------------|-----------------|  
 |[\<message>](message-element-of-wsfederationhttpbinding.md)|Define la configuración para la seguridad del nivel de mensaje para el [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) elemento.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>

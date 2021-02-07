@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: seguridad de mensajes con certificados mutuos'
 title: Seguridad de mensajes con certificados mutuos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 521b2a887792d41dd28342ca4bfe7be71ceba4b7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c894f457dcd0fdc449c2f94eaee15004300df5fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237383"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726993"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Seguridad de mensajes con certificados mutuos
 
@@ -28,14 +29,14 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
 |Modo de seguridad|Message|  
 |Interoperabilidad|Sí, clientes y servicios compatibles con WS-Security y el perfil de token de certificado X.509.|  
 |Authentication|Autenticación mutua del servidor y el cliente.|  
-|Integridad|Yes|  
+|Integridad|Sí|  
 |Confidencialidad|Sí|  
 |Transporte|HTTP|  
-|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
+|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Servicio  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -96,7 +97,7 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
   
 ## <a name="client"></a>Cliente  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   

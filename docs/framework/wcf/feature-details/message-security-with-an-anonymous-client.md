@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: seguridad de mensajes con un cliente anónimo'
 title: Seguridad de mensajes con clientes anónimos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: aed56be359f094db483ab1d012bd77a1096433b6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 921ddd9e8e7d2a860f3516c452870bc2bb150911
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553771"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726980"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Seguridad de mensajes con clientes anónimos
 
@@ -22,7 +23,7 @@ Para obtener una aplicación de ejemplo, vea [seguridad de mensajes anónima](..
 
 |Característica|Descripción|
 |--------------------|-----------------|
-|Modo de seguridad|Mensaje|
+|Modo de seguridad|Message|
 |Interoperabilidad|Solo WCF|
 |Autenticación (servidor)|La negociación inicial requiere la autenticación del servidor, pero no la autenticación del cliente|
 |Autenticación (cliente)|None|

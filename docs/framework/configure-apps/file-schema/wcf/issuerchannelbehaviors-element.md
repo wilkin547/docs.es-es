@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <issuerChannelBehaviors> elemento'
 title: <issuerChannelBehaviors> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
@@ -11,25 +12,25 @@ no-loc:
 - <issuedToken>
 - <issuerChannelBehaviors>
 - <dataContractSerializer>
-ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6be79f2ee6afb442a7a399ce49df4ad59dff2db5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70893161"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725550"
 ---
-# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors> (Elemento)
+# <a name="issuerchannelbehaviors-element"></a>\::: no-LOC ( <issuerChannelBehaviors> )::: Element
 
-Contiene una colección de comportamientos de extremo de cliente de Windows Communication Foundation (WCF) (definidos en la configuración) que se usarán al comunicarse con los servicios de token de servicio especificados. Los comportamientos definidos no pueden incluir [\<clientCredentials>](clientcredentials.md) elementos.
+Contiene una colección de comportamientos de extremo de cliente de Windows Communication Foundation (WCF) (definidos en la configuración) que se usarán al comunicarse con los servicios de token de servicio especificados. Los comportamientos definidos no pueden incluir los elementos [ \: :: no-LOC ( <clientCredentials> )::](clientcredentials.md) :.
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<system.serviceModel>](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<behaviors>](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors>](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<behavior>](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials>](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken>](issuedtoken.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors>
+&nbsp;&nbsp;[\::: no-LOC (<System. serviceModel>):::](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\::: no-LOC ( <behaviors> ):::](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: no-LOC ( <endpointBehaviors> ):::](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: no-LOC ( <behavior> ):::](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: no-LOC ( <clientCredentials> ):::](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: no-LOC ( <issuedToken> ):::](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\::: no-LOC ( <issuerChannelBehaviors> ):::
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -58,13 +59,13 @@ Ninguno.
 
 |Elemento|Descripción|
 |-------------|-----------------|
-|[\<issuedToken>](issuedtoken.md)|Especifica un token personalizado usado para autenticar un cliente en un servicio.|
+|[\::: no-LOC ( <issuedToken> ):::](issuedtoken.md)|Especifica un token personalizado usado para autenticar un cliente en un servicio.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Use este elemento cuando se deba utilizar un comportamiento (excepto los comportamientos que incluyen elementos `<clientCredentials>`) para comunicar con un servicio. Por ejemplo, si [\<dataContractSerializer>](datacontractserializer-element.md) se debe incluir un elemento de comportamiento.
+Use este elemento cuando se deba utilizar un comportamiento (excepto los comportamientos que incluyen elementos `<clientCredentials>`) para comunicar con un servicio. Por ejemplo, si se debe incluir un elemento [ \: :: no-LOC ( <dataContractSerializer> ):::](datacontractserializer-element.md) Behavior.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>

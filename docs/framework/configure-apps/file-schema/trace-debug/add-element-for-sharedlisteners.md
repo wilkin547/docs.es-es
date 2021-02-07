@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <add> elemento para <sharedListeners>'
 title: Elemento <add> para <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: f0ede5f9dc19e9589afc888e7fcd01785bc1840c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df3348fa0cbb357b2ceeb5d9db940a1ae3ae102c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174035"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726083"
 ---
 # <a name="add-element-for-sharedlisteners"></a>Elemento \<add> para \<sharedListeners>
 
@@ -113,9 +114,9 @@ Agrega un agente de escucha a la colección `sharedListeners`. `sharedListeners`
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)
 - [Agentes de escucha de seguimiento](../../../debug-trace-profile/trace-listeners.md)

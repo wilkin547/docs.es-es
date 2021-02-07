@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: JSONP'
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 9e27d4e73f43f004ac1de078db6a73cd42b24bbc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 83236f3d40a9dfeaf2ab0e521a227fb6dfc461f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237669"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726343"
 ---
 # <a name="jsonp"></a>JSONP
 
@@ -17,7 +18,7 @@ En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servici
 
  Scripting a través de dominios con JSONP.
 
-## <a name="discussion"></a>Discusión
+## <a name="discussion"></a>Debate
 
  El ejemplo incluye una página web que agrega dinámicamente un bloque de script una vez representada la página en el explorador. Este bloque de script llama a un servicio REST de WCF que tiene una sola operación: `GetCustomer`. El servicio REST de WCF devuelve el nombre y la dirección de un cliente ajustados en un nombre de función de devolución de llamada. Cuando el servicio REST de WCF responde, se invoca la función de devolución de llamada en la página web con los datos del cliente y la función muestra los datos en la página web. El control ScriptManager de ASP.NET AJAX administra automáticamente la inyección de la etiqueta de script y la ejecución de la función de devolución de llamada. El patrón de uso es igual que el de todos los servidores proxy AJAX de ASP.NET, aunque incorpora una línea para habilitar JSONP, como se muestra en el siguiente código:
 

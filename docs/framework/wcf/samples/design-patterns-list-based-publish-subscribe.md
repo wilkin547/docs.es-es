@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: patrones de diseño: List-Based Publish-Subscribe'
 title: 'Modelos de diseño: suscripción-publicación basada en la lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 4e679980df8a720eb4aa22741bbdd067940c7723
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b615da2afa4e6452b62eacae2cc6b61e4c4363dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292680"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726746"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelos de diseño: suscripción-publicación basada en la lista
 

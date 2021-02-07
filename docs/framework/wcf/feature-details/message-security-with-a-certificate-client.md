@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: seguridad de mensajes con un cliente de certificado'
 title: Seguridad de mensajes con un cliente de certificado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 4a1cb6d804d313f438fc8e7a92946d55f73b9ee5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f1924510c5860b377568da204bbd9154e4970c24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727069"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Seguridad de mensajes con un cliente de certificado
 
@@ -26,14 +27,14 @@ El siguiente escenario muestra un cliente y un servicio de Windows Communication
 |Interoperabilidad|Solo WCF|  
 |Autenticación (servidor)|Con el certificado del servicio|  
 |Autenticación (cliente)|Con el certificado del cliente|  
-|Integridad|Yes|  
+|Integridad|Sí|  
 |Confidencialidad|Sí|  
 |Transporte|HTTP|  
-|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
+|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Servicio  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -90,7 +91,7 @@ El siguiente escenario muestra un cliente y un servicio de Windows Communication
   
 ## <a name="client"></a>Cliente  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   

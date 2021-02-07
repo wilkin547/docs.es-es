@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: interoperar con servicios web ASMX'
 title: Interoperabilidad con servicios web ASMX
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 5e1a84d6dc70a26dd91f9ddce644c69689019690
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dd21cf74cf4ee49cae5b9bcfa55e099636c84e1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237682"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726395"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperabilidad con servicios web ASMX
 

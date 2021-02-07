@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. Channels. MsmqMessageLockedUnderTheTransaction'
 title: System.ServiceModel.Channels.MsmqMessageLockedUnderTheTransaction
 ms.date: 03/30/2017
 ms.assetid: 5b236bdd-38e8-4c42-9ea5-ac7e5575ebf8
-ms.openlocfilehash: a7e1acd2226f8eab9e51a3b7303027daeba42ec9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3cd44698ea9c069dd7efcb7cdcb3cefad1214143
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243825"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727578"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagelockedunderthetransaction"></a>System.ServiceModel.Channels.MsmqMessageLockedUnderTheTransaction
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <issuedTokenParameters>'
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: c90024a0629f39d160967ca00434e48f682d8933
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 92c8f5aa25ddb71561eb702ba3eb0396456008a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725667"
 ---
 # \<issuedTokenParameters>
 
@@ -21,7 +22,7 @@ Especifica los parámetros para un token de seguridad emitido en un escenario de
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuedTokenParameters>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```xml  
 <issuedTokenParameters defaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"
@@ -55,7 +56,7 @@ Especifica los parámetros para un token de seguridad emitido en un escenario de
 |defaultMessageSecurityVersion|Especifica las versiones de las especificaciones de seguridad, (WS-Security, WS-Trust, WS-Secure Conversation y WS-Security Policy) que debe admitir el enlace. Este valor es del tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |inclusionMode|Especifica los requisitos de inclusión del token. Este atributo es del tipo <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.|  
 |keySize|Un entero que especifica el tamaño de la clave del token. El valor predeterminado es 256.|  
-|keyType|Una valor válido de <xref:System.IdentityModel.Tokens.SecurityKeyType> que especifica el tipo de clave. El valor predeterminado es `SymmetricKey`.|  
+|keyType|Una valor válido de <xref:System.IdentityModel.Tokens.SecurityKeyType> que especifica el tipo de clave. De manera predeterminada, es `SymmetricKey`.|  
 |tokenType|Una cadena que representa el tipo de token. El valor predeterminado es "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML".|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

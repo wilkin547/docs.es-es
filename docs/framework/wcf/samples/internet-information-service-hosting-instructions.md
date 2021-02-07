@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: instrucciones de hospedaje de Internet Information Services'
 title: Instrucciones de hospedaje Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: 151c5ba8dd79e8554e7d79fb5b8182740b0be18e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 51f5230ecbb8eaf4a909c5c09366680b8c555165
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726382"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instrucciones de hospedaje Internet Information Services
 
@@ -23,7 +24,7 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
   
 4. Active la casilla **servidor Web (IIS)** . Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar características necesarias**. Haga clic en **siguiente** dos veces para mostrar el cuadro de diálogo **seleccionar servicios de rol** para el rol servidor Web (IIS).  
   
-5. Expanda **herramientas de administración** y, a continuación, compatibilidad con la **Administración de IIS 6**. Seleccione **herramientas de scripting de IIS 6**. Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar servicios de rol requeridos**. Haga clic en **Next**.  
+5. Expanda **herramientas de administración** y, a continuación, compatibilidad con la **Administración de IIS 6**. Seleccione **herramientas de scripting de IIS 6**. Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar servicios de rol requeridos**. Haga clic en **Siguiente**.  
   
 6. Si el Resumen de selecciones es correcto, haga clic en **instalar**.  
   
@@ -37,7 +38,7 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
   
 3. En **programas y características**, haga clic en **activar o desactivar las características de Windows**.  
   
-4. Se muestra el cuadro de diálogo **control de cuentas de usuario** . Haga clic en **Continuar**.  
+4. Se muestra el cuadro de diálogo **control de cuentas de usuario** . Haga clic en **Continue**.  
   
 5. Se muestra el cuadro de diálogo **características de Windows** . Expanda el elemento con la etiqueta **Internet Information Services**.  
   
@@ -69,7 +70,7 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
   
 15. En el directorio **Internet Information Services** , expanda el elemento con la etiqueta **Microsoft .NET Framework 3.5.1** y, a continuación, seleccione **Windows Communication Foundation activación http**.  
   
-16. Haga clic en **OK**.  
+16. Haga clic en **Aceptar**.  
   
 ### <a name="to-install-iis-version-70-on-windows-server-2008"></a>Para instalar la versión de IIS 7.0 en Windows Server 2008  
   
@@ -81,7 +82,7 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
   
 4. Active la casilla **servidor Web (IIS)** . Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar características necesarias**. Haga clic en **siguiente** dos veces para mostrar el cuadro de diálogo **seleccionar servicios de rol** para el rol servidor Web (IIS).  
   
-5. Expanda **herramientas de administración** y, a continuación, compatibilidad con la **Administración de IIS 6**. Seleccione **herramientas de scripting de IIS 6**. Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar servicios de rol requeridos**. Haga clic en **Next**.  
+5. Expanda **herramientas de administración** y, a continuación, compatibilidad con la **Administración de IIS 6**. Seleccione **herramientas de scripting de IIS 6**. Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar servicios de rol requeridos**. Haga clic en **Siguiente**.  
   
 6. Si el Resumen de selecciones es correcto, haga clic en **instalar**.  
   
@@ -95,7 +96,7 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
   
 3. En **programas y características**, haga clic en **activar o desactivar las características de Windows**.  
   
-4. Se muestra el cuadro de diálogo **control de cuentas de usuario** . Haga clic en **Continuar**.  
+4. Se muestra el cuadro de diálogo **control de cuentas de usuario** . Haga clic en **Continue**.  
   
 5. Se muestra el cuadro de diálogo **características de Windows** . Expanda el elemento con la etiqueta **Internet Information Services**.  
   
@@ -127,7 +128,7 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
   
 15. Expanda el elemento con la etiqueta **Microsoft .NET Framework 3,0** y, a continuación, seleccione **Windows Communication Foundation activación http**.  
   
-16. Haga clic en **OK**.  
+16. Haga clic en **Aceptar**.  
   
 ### <a name="to-install-iis-version-60-on-windows-server-2003"></a>Instalar la versión 6.0 de IIS en Windows Server 2003  
   

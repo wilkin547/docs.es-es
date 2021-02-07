@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <clear> elemento para <listeners> para <trace>'
 title: <clear> (Elemento <listeners> ) para <trace>
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 2d301d588e33b0eea4164a6bf62dedd7b0c450ec
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3c1b3816f4ccd0ceb9e9bc0fc6acfd9b6e8ade85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725979"
 ---
 # <a name="clear-element-for-listeners-for-trace"></a>\<clear> (Elemento \<listeners> ) para \<trace>
 
@@ -51,7 +52,7 @@ Borra la colección `Listeners` de un seguimiento.
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
 |`listeners`|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes. Los agentes de escucha dirigen los resultados del seguimiento a un destino adecuado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `<clear>` elemento quita todos los agentes de escucha de la `Listeners` colección para el seguimiento. Puede usar el `<clear>` elemento antes de usar el `<add>` elemento para estar seguro de que no hay ningún otro agente de escucha activo en la colección.  
   
@@ -89,6 +90,6 @@ Borra la colección `Listeners` de un seguimiento.
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.TraceSource>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)
 - [\<remove>](remove-element-for-listeners-for-trace.md)
 - [Agentes de escucha de seguimiento](../../../debug-trace-profile/trace-listeners.md)

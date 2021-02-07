@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: esquema de configuración de inicio'
 title: Esquema de configuración del inicio
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - schema startup settings
 - configuration schema [.NET Framework], startup settings
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
-ms.openlocfilehash: e5f9c9af64ff38e7c0f1f26ccab039261b052e30
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 268b8d8dc2598add61435dd6b07031aa06831737
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "61701520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726096"
 ---
 # <a name="startup-settings-schema"></a>Esquema de configuración del inicio
 
@@ -26,4 +27,4 @@ La configuración de inicio especifica la versión de Common Language Runtime qu
 ## <a name="see-also"></a>Vea también
 
 - [Esquema de los archivos de configuración](../index.md)
-- [Cómo: Configurar una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Cómo: Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

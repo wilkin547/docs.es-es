@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: seguridad de mensajes con un cliente de Windows sin negociación de credenciales'
 title: Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 3e5838c474a4f13136ed29baab440dc1559b95f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e9edd63c80d868024d8a4b664c42456bb454cb69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551098"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727019"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
 
@@ -25,7 +26,7 @@ Tanto el servicio como el cliente están en el mismo dominio, o dominios, de con
 
 |Característica|Descripción|
 |--------------------|-----------------|
-|Modo de seguridad|Mensaje|
+|Modo de seguridad|Message|
 |Interoperabilidad|Sí, WS-Security con clientes Kerberos compatibles con el perfil del token|
 |Autenticación (servidor)|Autenticación mutua del servidor y el cliente|
 |Autenticación (cliente)|Autenticación mutua del servidor y el cliente|

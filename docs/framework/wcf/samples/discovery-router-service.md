@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: servicio de enrutador de detección'
 title: Servicio de enrutador de detección
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: f3ea32d10e27eceb3edcee8b6aeacbf9c5ebc6f1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f5fa4cd19758bef0b867fafc5af4b9cf6df27028
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292654"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726720"
 ---
 # <a name="discovery-router-service"></a>Servicio de enrutador de detección
 
@@ -17,7 +18,7 @@ En este ejemplo se muestra cómo reenviar los mensajes de detección a otro punt
 
  Enrutamiento de la detección  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  El enrutamiento de la detección es útil en un escenario en el que un cliente busca un servicio mediante un proxy y el proxy no conoce dicho servicio, pero conoce otro proxy. Este proxy puede reenviar el paquete de detección desde este cliente al segundo proxy. El segundo proxy puede buscar el servicio y devolver las respuestas al cliente original.  
   

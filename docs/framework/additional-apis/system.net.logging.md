@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: clase de registro'
 title: Clase de registro (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -16,14 +17,14 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: ad85fdd41252ed147eb5fe1a9db029db046d720c
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 1ae3079ab21502ee3f5bf71db57f0695da9a8571
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990512"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726213"
 ---
-# <a name="logging-class"></a>Clase de registro
+# <a name="logging-class"></a>Clase Logging
 
 Proporciona la funcionalidad de registro de seguimiento.
 
