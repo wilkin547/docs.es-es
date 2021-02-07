@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de las colecciones de esquemas comunes
 title: Colecciones de esquemas comunes
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 63aaf66fa3122f7d40e54ea47d3e9b1908b37ba9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91203818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663957"
 ---
 # <a name="common-schema-collections"></a>Colecciones de esquemas comunes
 
@@ -15,7 +16,7 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
   
  Si un proveedor no puede determinar el valor de una columna necesaria, se devolverá NULL.  
   
- Para obtener más información sobre el uso de los métodos **GetSchema** , vea [GetSchema y colecciones de esquemas](getschema-and-schema-collections.md).  
+ Para obtener más información sobre el uso de los métodos **GetSchema**, vea [Colecciones GetSchema y Schema](getschema-and-schema-collections.md).  
   
 ## <a name="metadatacollections"></a>MetaDataCollections  
 
@@ -23,7 +24,7 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
   
 |ColumnName|DataType|Descripción|  
 |----------------|--------------|-----------------|  
-|CollectionName|string|Nombre de la colección que se va a pasar al método **GetSchema** para devolver la colección.|  
+|CollectionName|string|Nombre de la colección que se pasa al método **GetSchema** para devolver la colección.|  
 |NumberOfRestrictions|int|El número de restricciones que se pueden especificar para la colección.|  
 |NumberOfIdentifierParts|int|El número de partes del identificador compuesto y nombre del objeto de base de datos. Por ejemplo, en SQL Server, sería 3 para las tablas y 4 para las columnas. En Oracle, sería 2 para las tablas y 3 para las columnas.|  
   
@@ -33,7 +34,7 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
   
 |ColumnName|DataType|Descripción|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|La expresión regular que va a hacer corresponder los separadores compuestos en un identificador compuesto. Por ejemplo, "\\". (por SQL Server) o " \@&#124;\\ ". (en Oracle).<br /><br /> Normalmente, un identificador compuesto es lo que se usa para el nombre de un objeto de base de datos, por ejemplo: pubs. DBO. Authors o pubs \@ dbo. authors.<br /><br /> Por SQL Server, utilice la expresión regular " \\ .". Para OracleClient, use " \@&#124;\\ .".<br /><br /> En ODBC, utilice Catalog_name_seperator.<br /><br /> En OLE DB, use DBLITERAL_CATALOG_SEPARATOR o DBLITERAL_SCHEMA_SEPARATOR.|  
+|CompositeIdentifierSeparatorPattern|string|La expresión regular que va a hacer corresponder los separadores compuestos en un identificador compuesto. Por ejemplo, "\\". (por SQL Server) o " \@&#124;\\ ". (en Oracle).<br /><br /> Se suele usar un identificador compuesto para un nombre de objeto de base de datos, por ejemplo, pubs.dbo.authors o pubs\@dbo.authors.<br /><br /> Para SQL Server, use la expresión regular "\\.". Para OracleClient, use " \@&#124;\\ .".<br /><br /> En ODBC, utilice Catalog_name_seperator.<br /><br /> En OLE DB, use DBLITERAL_CATALOG_SEPARATOR o DBLITERAL_SCHEMA_SEPARATOR.|  
 |DataSourceProductName|string|El nombre del producto al que tiene acceso el proveedor, por ejemplo, "Oracle" o "SQLServer".|  
 |DataSourceProductVersion|string|Indica la versión del producto al que tiene acceso el proveedor, en el formato nativo de los orígenes de datos y no en el formato de Microsoft.<br /><br /> En algunos casos, DataSourceProductVersion y DataSourceProductVersionNormalized tendrán el mismo valor. En el caso de OLE DB y ODBC, serán siempre iguales dado que se asignan a la misma llamada de función en la API nativa subyacente.|  
 |DataSourceProductVersionNormalized|string|Una versión normalizada del origen de datos, de forma que se puede comparar con `String.Compare()`. Su formato es coherente con todas las versiones del proveedor para evitar que la versión 10 se clasifique entre la versión 1 y la versión 2.<br /><br /> Por ejemplo, el proveedor de Oracle usa un formato de "NN. NN. NN. NN. NN" para su versión normalizada, lo que hace que un origen de datos Oracle 8i devuelva "08.01.07.04.01". SQL Server usa el formato típico de Microsoft "NN. NN. nnnn".<br /><br /> En algunos casos, DataSourceProductVersion y DataSourceProductVersionNormalized tendrán el mismo valor. En el caso de OLE DB y ODBC, serán siempre iguales dado que se asignan a la misma llamada de función en la API nativa subyacente.|  
@@ -41,14 +42,14 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
 |IdentifierPattern|string|Expresión regular que crea una correspondencia con un identificador y con un valor de coincidencia del identificador. Por ejemplo, "[A-Za-z0-9_#$]".|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indica si los identificadores que no se incluyen entre comillas se usan con distinción de mayúsculas y minúsculas o no.|  
 |OrderByColumnsInSelect|bool|Especifica si las columnas de una cláusula ORDER BY deben estar en la lista de selección. Un valor de true indica que es necesario que estén en la lista de selección; un valor de false indica que no es necesario que estén en la lista de selección.|  
-|ParameterMarkerFormat|string|Una cadena de formato que representa cómo dar formato a un parámetro.<br /><br /> Si el origen de datos admite parámetros con nombre, el primer marcador de posición de esta cadena debe estar donde se debe dar formato al nombre del parámetro.<br /><br /> Por ejemplo, si el origen de datos espera que los parámetros tengan un nombre y tienen el prefijo ":", esto sería ": {0} ". Cuando se formatea con un nombre de parámetro de "p1", la cadena resultante es ":p1".<br /><br /> Si el origen de datos espera que los parámetros tengan como prefijo ' \@ ', pero los nombres ya los incluyen, esto sería ' {0} ' y el resultado de dar formato a un parámetro denominado " \@ P1" sería simplemente " \@ P1".<br /><br /> En el caso de los orígenes de datos que no esperan parámetros con nombre y esperan el uso del carácter '? ', la cadena de formato se puede especificar simplemente como '? ', lo que omitiría el nombre del parámetro. Por OLE DB, devolvemos '? '.|  
-|ParameterMarkerPattern|string|Una expresión regular que crea una correspondencia con un marcador de parámetro. Tendrá un valor de correspondencia del nombre del parámetro, si lo hay.<br /><br /> Por ejemplo, si se admiten parámetros con nombre con un \@ carácter de cliente ' ' que se incluirá en el nombre del parámetro, esto sería: " \@ ([a-Za-z0-9_ $ #] *)".<br /><br /> Sin embargo, si se admiten parámetros con nombre con ': ' como carácter de inicialización y no forman parte del nombre del parámetro, esto sería: ":([A-Za-z0-9_ $ #] \* )".<br /><br /> Por supuesto, si el origen de datos no admite parámetros con nombre, esto sería simplemente "?".|  
+|ParameterMarkerFormat|string|Una cadena de formato que representa cómo dar formato a un parámetro.<br /><br /> Si el origen de datos admite parámetros con nombre, el primer marcador de posición de esta cadena debe estar donde se debe dar formato al nombre del parámetro.<br /><br /> Por ejemplo, si el origen de datos espera que se asigne un nombre a los parámetros y que ":" los preceda, el resultado sería ":{0}". Cuando se formatea con un nombre de parámetro de "p1", la cadena resultante es ":p1".<br /><br /> Si el origen de datos espera que el carácter "\@" preceda a los parámetros, pero los nombres ya lo incluyen, el resultado sería "{0}" y el resultado de aplicar formato un parámetro denominado "\@p1" sería simplemente "\@p1".<br /><br /> Para los orígenes de datos que no esperan parámetros con nombre y sí el uso del carácter "?", la cadena de formato se puede especificar como "?", lo que ignoraría el nombre del parámetro. Por OLE DB, devolvemos '? '.|  
+|ParameterMarkerPattern|string|Una expresión regular que crea una correspondencia con un marcador de parámetro. Tendrá un valor de correspondencia del nombre del parámetro, si lo hay.<br /><br /> Por ejemplo, si se admiten parámetros con nombre con un carácter de introducción "\@" que se incluirá en el nombre del parámetro, el resultado sería "(\@[A-Za-z0-9_$#]*)".<br /><br /> Pero si se admiten parámetros con nombre con ":" como carácter de introducción y no forma parte del nombre del parámetro, el resultado sería ":([A-Za-z0-9_$#]\*)".<br /><br /> Naturalmente, si el origen de datos no admite parámetros con nombre, esto sería simplemente "?".|  
 |ParameterNameMaxLength|int|La longitud máxima del nombre del parámetro en caracteres. Visual Studio espera que si se admiten nombres de parámetros, el valor mínimo de la longitud máxima sea 30 caracteres.<br /><br /> Si el origen de datos no admite parámetros con nombre, esta propiedad devuelve cero.|  
 |ParameterNamePattern|string|Una expresión regular que crea una correspondencia con los nombres de parámetros válidos. Según el origen de datos, existen diferentes reglas respecto a los caracteres que se pueden utilizar en los nombres de parámetros.<br /><br /> Visual Studio espera que si se admiten nombres de parámetros, los caracteres "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" son el juego mínimo de caracteres admitidos que son válidos en nombres de parámetros.|  
-|QuotedIdentifierPattern|string|Una expresión regular que crea una correspondencia con un identificador incluido entre comillas y que tiene un valor de correspondencia del propio identificador sin las comillas. Por ejemplo, si el origen de datos utilizó comillas dobles para identificar identificadores entre comillas, sería: "(([^ \\ "] &#124;\\ " \\ ") *) ".|  
+|QuotedIdentifierPattern|string|Una expresión regular que crea una correspondencia con un identificador incluido entre comillas y que tiene un valor de correspondencia del propio identificador sin las comillas. Por ejemplo, si el origen de datos ha usado comillas dobles para identificar identificadores entre comillas, sería "(([^\\"]&#124;\\"\\")*)".|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indica si los identificadores incluidos entre comillas se tratan o no como con diferenciación entre mayúsculas y minúsculas.|  
 |StatementSeparatorPattern|string|Una expresión regular que crea una correspondencia con el separador de instrucciones.|  
-|StringLiteralPattern|string|Una expresión regular que crea una correspondencia con un literal de cadena y que tiene un valor de correspondencia del propio literal. Por ejemplo, si el origen de datos utilizó comillas simples para identificar cadenas, sería: "(' ([^ '] &#124; ' ') * ')" '|  
+|StringLiteralPattern|string|Una expresión regular que crea una correspondencia con un literal de cadena y que tiene un valor de correspondencia del propio literal. Por ejemplo, si el origen de datos ha usado comillas sencillas para identificar cadenas, sería "('([^']&#124;'')*')"'.|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|Especifica los tipos de instrucciones de unión SQL que admite el origen de datos.|  
   
 ## <a name="datatypes"></a>DataTypes  
@@ -60,8 +61,8 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
 |TypeName|string|El nombre del tipo de datos específico del proveedor.|  
 |ProviderDbType|int|Valor de tipo específico del proveedor que se debe usar al especificar el tipo de un parámetro. Por ejemplo, SqlDbType.Money u OracleType.Blob.|  
 |ColumnSize|long|La longitud de una columna o parámetro no numérico hace referencia a la longitud máxima o a la longitud que ha definido el proveedor para este tipo.<br /><br /> En datos de caracteres, es la longitud máxima o definida en unidades por el origen de datos. Oracle tiene el concepto de especificar una longitud y, a continuación, el tamaño de almacenamiento real en algunos tipos de datos de caracteres. Esto solo define la longitud en unidades en Oracle.<br /><br /> En los tipos de datos de fecha y hora, es la longitud de la representación de cadena (suponiendo la precisión máxima permitida del componente de segundos decimales).<br /><br /> Si el tipo de datos es numérico, se corresponde al límite superior de la precisión máxima del tipo de datos.|  
-|CreateFormat|string|La cadena de formato que representa cómo agregar esta columna a una instrucción de definición de datos, como CREATE TABLE. Cada elemento de la matriz CreateParameter se debe representar con un "marcador de parámetro" en la cadena de formato.<br /><br /> Por ejemplo, el tipo de datos SQL DECIMAL necesita una precisión y una escala. En este caso, la cadena de formato sería "DECIMAL ( {0} , {1} )".|  
-|CreateParameters|string|Los parámetros de creación que se deben especificar al crear una columna de este tipo de datos. Cada parámetro de creación se muestra en la cadena, separado por una coma en el orden en que se suministran.<br /><br /> Por ejemplo, el tipo de datos SQL DECIMAL necesita una precisión y una escala. En este caso, los parámetros de creación deben contener la cadena "precisión, escala".<br /><br /> En un comando de texto para crear una columna DECIMAL con una precisión de 10 y una escala de 2, el valor de la columna CreateFormat podría ser DECIMAL ( {0} , {1} ) "y la especificación de tipo completa sería decimal (10, 2).|  
+|CreateFormat|string|La cadena de formato que representa cómo agregar esta columna a una instrucción de definición de datos, como CREATE TABLE. Cada elemento de la matriz CreateParameter se debe representar con un "marcador de parámetro" en la cadena de formato.<br /><br /> Por ejemplo, el tipo de datos SQL DECIMAL necesita una precisión y una escala. En este caso, la cadena de formato sería "DECIMAL({0},{1})".|  
+|CreateParameters|string|Los parámetros de creación que se deben especificar al crear una columna de este tipo de datos. Cada parámetro de creación se muestra en la cadena, separado por una coma en el orden en que se suministran.<br /><br /> Por ejemplo, el tipo de datos SQL DECIMAL necesita una precisión y una escala. En este caso, los parámetros de creación deben contener la cadena "precisión, escala".<br /><br /> En un comando de texto para crear una columna DECIMAL con una precisión de 10 y una escala de 2, el valor de la columna CreateFormat podría ser DECIMAL({0},{1})" y la especificación completa del tipo sería DECIMAL(10,2).|  
 |DataType|string|El nombre del tipo de datos de .NET Framework.|  
 |IsAutoincrementable|bool|true: los valores de este tipo de datos pueden ser de incremento automático.<br /><br /> false: los valores de este tipo de datos podrían no ser de incremento automático.<br /><br /> Tenga en cuenta que esto simplemente indica si una columna de este tipo de datos podría ser de incremento automático, no que todas las columnas de este tipo lo sean.|  
 |IsBestMatch|bool|true: el tipo de datos es la mejor coincidencia entre todos los tipos de datos del almacén de datos y el tipo de datos de .NET Framework que indica el valor de la columna DataType.<br /><br /> false: el tipo de datos no es la mejor coincidencia.<br /><br /> En cada conjunto de filas en las que el valor de la columna DataType sea el mismo, la columna IsBestMatch solo se establece en true en una fila.|  
@@ -102,6 +103,6 @@ Las colecciones de esquemas comunes son las colecciones de esquemas que implemen
   
 ## <a name="see-also"></a>Consulte también
 
-- [Recuperar información del esquema de la base de datos](retrieving-database-schema-information.md)
-- [GetSchema y colecciones de esquema](getschema-and-schema-collections.md)
+- [Recuperación de la información del esquema de la base de datos](retrieving-database-schema-information.md)
+- [Colecciones GetSchema y Schema](getschema-and-schema-collections.md)
 - [Información general de ADO.NET](ado-net-overview.md)

@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <nameClaimType>'
 title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 4ffc19366d91e4a14ee0f931d7009ede390cc097
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d5bc2f96c2753febdb61c3495b7067c0e31e52d5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664059"
 ---
 # \<nameClaimType>
 
@@ -47,7 +48,7 @@ Establece el tipo de demanda que especifica la <xref:System.Security.Principal.I
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|value|Una cadena que especifica el URI que representa el tipo de demanda de la demanda que se va a usar para la <xref:System.Security.Principal.IIdentity.Name%2A> propiedad. Obligatorio.|  
+|value|Una cadena que especifica el URI que representa el tipo de demanda de la demanda que se va a usar para la <xref:System.Security.Principal.IIdentity.Name%2A> propiedad. Necesario.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
 
@@ -73,6 +74,6 @@ Establece el tipo de demanda que especifica la <xref:System.Security.Principal.I
 </add>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

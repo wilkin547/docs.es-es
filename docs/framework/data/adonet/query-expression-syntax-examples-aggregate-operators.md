@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: ejemplos de sintaxis de expresiones de consulta: operadores de agregado (LINQ to DataSet)'
 title: 'Ejemplos de sintaxis de expresiones de consulta: operadores de agregado (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
-ms.openlocfilehash: 2277058c4dad4632f4f47a39e32463eaf77dcd5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9076f81a21892f467355c86871e49ae3e1a793e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164576"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663643"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>Ejemplos de sintaxis de expresiones de consulta: operadores de agregado (LINQ to DataSet)
 
@@ -27,7 +28,7 @@ Los ejemplos de este tema muestran cómo utilizar los métodos <xref:System.Linq
   
  Para obtener más información, vea [Cómo: crear un proyecto de LINQ to DataSet en Visual Studio](how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
-## <a name="average"></a>Average  
+## <a name="average"></a>Promedio  
   
 ### <a name="example"></a>Ejemplo  
 
@@ -107,7 +108,7 @@ Los ejemplos de este tema muestran cómo utilizar los métodos <xref:System.Linq
  [!code-csharp[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cargar datos en un conjunto de datos](loading-data-into-a-dataset.md)
 - [Ejemplos de LINQ to DataSet](linq-to-dataset-examples.md)

@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo consultar conjuntos de valores (LINQ to DataSet)
 title: Consultar conjuntos de datos (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-ms.openlocfilehash: f42cd792772a4e2b9f24ea8f76ea588da10d9c51
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 609de99069d39317d8d372cb2a7f43ea301ada2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184981"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663461"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>Consultar conjuntos de datos (LINQ to DataSet)
 
@@ -26,7 +27,7 @@ Después de rellenar un objeto <xref:System.Data.DataSet> con datos se puede emp
  [Consultar objetos DataSet con tipo](querying-typed-datasets.md)  
  Describe cómo consultar objetos <xref:System.Data.DataSet> con tipo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Ejemplos de LINQ to DataSet](linq-to-dataset-examples.md)
 - [Cargar datos en un conjunto de datos](loading-data-into-a-dataset.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <webHttpBinding>'
 title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 26e0c707422518fbdaf289faa64bb73875f62a58
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6b1208ea962dd5cfab50c5bfabaffb3791a4cbfa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664345"
 ---
 # \<webHttpBinding>
 
@@ -60,7 +61,7 @@ Define un elemento de enlace que se utiliza para configurar los extremos de los 
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |allowCookies|Valor de tipo booleano que indica si el cliente acepta las cookies y las propaga en solicitudes futuras. El valor predeterminado es false.<br /><br /> Puede utilizar esta propiedad al interactuar con los servicios Web ASMX que utilizan cookies. De esta manera, puede estar seguro de que las cookies devueltas del servidor se copian automáticamente en todas las solicitudes de cliente futuras para ese servicio.|  
-|bypassProxyOnLocal|Valor de tipo booleano que indica si se omitirá el servidor proxy para las direcciones locales. El valor predeterminado es `false`.|  
+|bypassProxyOnLocal|Valor de tipo booleano que indica si se omitirá el servidor proxy para las direcciones locales. De manera predeterminada, es `false`.|  
 |closeTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |hostnameComparisonMode|Especifica el modo de comparación de nombres de host HTTP usado para analizar los URI. Este atributo es del tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica si se va a utilizar el nombre del host para llegar al servicio cuando coincida en el URI. El valor predeterminado es <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que omite el nombre del host en la coincidencia.|  
 |maxBufferPoolSize|Entero que especifica el tamaño máximo del grupo de búferes para este enlace. El valor predeterminado es 524.288 bytes (512x1024). En muchas partes de Windows Communication Foundation (WCF) se utilizan búferes. Crear y destruir búferes cada vez que se usan es caro, y la recolección de elementos no utilizados para los búferes también es cara. Con grupos de búferes, puede tomar un búfer del grupo, usarlo y devolverlo al grupo una vez haya terminado. Así se evita la sobrecarga al crear y destruir búferes.|  
@@ -68,11 +69,11 @@ Define un elemento de enlace que se utiliza para configurar los extremos de los 
 |maxReceivedMessageSize|Entero positivo que especifica el tamaño máximo del mensaje, en bytes, incluidos los encabezados, que se puede recibir en un canal configurado con este enlace. El remitente de un mensaje que supere este límite recibirá un error. El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento. El valor predeterminado es 65536. **Nota:**  Aumentar este valor por sí solo no es suficiente en el modo compatible con ASP.NET. También debe aumentar el valor de `httpRuntime` (vea [Elemento httpRuntime (esquema de configuración de ASP.net)](/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))).|  
 |name|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|proxyAddress|Un URI que especifica la dirección del proxy HTTP. Si `useSystemWebProxy` es `true`, este valor debe ser `null`. El valor predeterminado es `null`.|  
+|proxyAddress|Un URI que especifica la dirección del proxy HTTP. Si `useSystemWebProxy` es `true`, este valor debe ser `null`. De manera predeterminada, es `null`.|  
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|transferMode.|Un valor <xref:System.ServiceModel.TransferMode> que indica si el servicio configurado con el enlace utiliza modos de transmisión o de almacenamiento en búfer (o ambos) de transferencia de mensaje. El valor predeterminado es `Buffered`.|  
-|useDefaultWebProxy|Valor de tipo booleano que especifica si se utiliza el proxy HTTP del sistema configurado automáticamente. El valor predeterminado es `true`.|  
+|transferMode.|Un valor <xref:System.ServiceModel.TransferMode> que indica si el servicio configurado con el enlace utiliza modos de transmisión o de almacenamiento en búfer (o ambos) de transferencia de mensaje. De manera predeterminada, es `Buffered`.|  
+|useDefaultWebProxy|Valor de tipo booleano que especifica si se utiliza el proxy HTTP del sistema configurado automáticamente. De manera predeterminada, es `true`.|  
 |writeEncoding|Especifica la codificación de caracteres que se usa para el texto del mensaje. Los valores válidos incluyen los siguientes:<br /><br /> UnicodeFffeTextEncoding: codificación de BigEndian de Unicode.<br /><br /> Utf16TextEncoding: codificación de 16 bits.<br /><br /> Utf8TextEncoding: codificación de 8 bits.<br /><br /> El valor predeterminado es Utf8TextEncoding.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -94,7 +95,7 @@ Define un elemento de enlace que se utiliza para configurar los extremos de los 
   
  Compatibilidad en WCF para la distribución y ASP. La integración de AJAX se basa en el modelo de programación web. Para obtener más información sobre el modelo, consulte el [modelo de programación web http de WCF](../../../wcf/feature-details/wcf-web-http-programming-model.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>

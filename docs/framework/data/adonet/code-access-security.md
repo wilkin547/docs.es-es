@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: seguridad de acceso del código y ADO.NET'
 title: Seguridad de acceso del código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: c4c18e8026dc230db896103d29d40426dbd11f16
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e7a6054cd7c222c700f5a83e46f5b44bfee23248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203844"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664007"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 
@@ -211,7 +212,7 @@ Failed, as expected: Request failed.
   
  .NET Framework también es compatible con versiones anteriores de componentes COM existentes mediante el acceso a través de la interoperabilidad COM. Se pueden incluir componentes COM en una aplicación de .NET Framework usando las herramientas de la interoperabilidad COM para importar los tipos COM necesarios. Una vez que se han importado, los tipos COM están listos para su uso. La interoperabilidad COM también permite que los clientes COM tengan acceso a código administrado mediante la exportación de metadatos de ensamblado a una biblioteca de tipos y mediante el registro del componente administrado como un componente COM. Para obtener más información, consulte [interoperabilidad com avanzada](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Seguridad del código nativo y del código de .NET Framework](/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))

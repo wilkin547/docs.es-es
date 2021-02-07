@@ -1,28 +1,29 @@
 ---
+description: Más información acerca de cómo recuperar datos binarios
 title: Recuperar datos binarios
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 11f7a81bc0d4b0e2a8d66387410d9a24503c7519
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4304dd19b8a861baf936686edb858d7cf4da5757
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663448"
 ---
 # <a name="retrieving-binary-data"></a>Recuperar datos binarios
 
-De forma predeterminada, **DataReader** carga los datos entrantes como una fila en cuanto una fila completa de datos está disponible. Sin embargo, los objetos binarios grandes (BLOB) se deben tratar de otra forma, ya que pueden llegar a contener grandes cantidades de datos (del orden de gigabytes) que no pueden almacenarse en una sola fila. El método **Command.ExecuteReader** tiene una sobrecarga que tomará un <xref:System.Data.CommandBehavior> argumento para modificar el comportamiento predeterminado de **DataReader**. Puede pasar <xref:System.Data.CommandBehavior.SequentialAccess> al método **ExecuteReader** para modificar el comportamiento predeterminado de **DataReader** de modo que, en lugar de cargar filas de datos, cargue los datos secuencialmente a medida que se reciben. Este sistema es idóneo para cargar BLOB y otras estructuras de datos grandes. Tenga en cuenta que este comportamiento puede depender del origen de datos. Por ejemplo, si se devuelve un BLOB desde Microsoft Access, el BLOB completo se cargará en memoria, en lugar de hacerlo secuencialmente a medida que se recibe.  
+El objeto **DataReader** carga de forma predeterminada los datos que recibe en una fila, siempre que hay disponibles suficientes datos para llenarla. Sin embargo, los objetos binarios grandes (BLOB) se deben tratar de otra forma, ya que pueden llegar a contener grandes cantidades de datos (del orden de gigabytes) que no pueden almacenarse en una sola fila. El método **Command.ExecuteReader** se puede sobrecargar para aceptar un argumento <xref:System.Data.CommandBehavior> y modificar el comportamiento predeterminado de **DataReader**. Puede pasar <xref:System.Data.CommandBehavior.SequentialAccess> al método **ExecuteReader** para modificar el comportamiento predeterminado de **DataReader** de forma que en lugar de cargar los datos por filas, los vaya cargando secuencialmente a medida que los vaya recibiendo. Este sistema es idóneo para cargar BLOB y otras estructuras de datos grandes. Tenga en cuenta que este comportamiento puede depender del origen de datos. Por ejemplo, si se devuelve un BLOB desde Microsoft Access, el BLOB completo se cargará en memoria, en lugar de hacerlo secuencialmente a medida que se recibe.  
   
- Al establecer **DataReader** para usar **SequentialAccess**, es importante tener en cuenta la secuencia en la que se tiene acceso a los campos devueltos. El comportamiento predeterminado de **DataReader**, que carga una fila completa en cuanto está disponible, permite tener acceso a los campos devueltos en cualquier orden hasta que se lee la siguiente fila. Sin embargo, al usar **SequentialAccess** , debe tener acceso a los campos devueltos por **DataReader** en orden. Por ejemplo, si la consulta devuelve tres columnas y la tercera es un BLOB, debe devolver los valores de los campos primero y segundo antes de tener acceso a los datos BLOB del tercer campo. Si trata de tener acceso al tercer campo antes que al primero o el segundo, puede que éstos dejen de estar disponibles. Esto se debe a que **SequentialAccess** ha modificado **DataReader** para devolver datos en secuencia y los datos no están disponibles después de que **DataReader los haya leído** .  
+ Al configurar **DataReader** para que utilice **SequentialAccess** debe tener en cuenta la secuencia en que va a tener acceso a los campos devueltos. El comportamiento predeterminado de **DataReader**, consistente en cargar una fila completa de datos en cuanto hay datos suficientes, permite tener acceso a los campos devueltos en cualquier orden hasta que se lee la fila siguiente. Sin embargo, al utilizar **SequentialAccess** es necesario tener acceso a los campos que devuelve **DataReader** en el orden adecuado. Por ejemplo, si la consulta devuelve tres columnas y la tercera es un BLOB, debe devolver los valores de los campos primero y segundo antes de tener acceso a los datos BLOB del tercer campo. Si trata de tener acceso al tercer campo antes que al primero o el segundo, puede que éstos dejen de estar disponibles. Esto se debe a que **SequentialAccess** cambia la forma en que el **DataReader** devuelve los datos, haciendo que lo haga de forma secuencial con lo que los datos dejan de estar disponibles en el momento en que el **DataReader** lee datos posteriores.  
   
- Al acceder a los datos en el campo BLOB, use los descriptores de acceso con tipo **GetBytes** o **GetChars** de **DataReader**, que rellenan una matriz con datos. También puede usar **GetString** para los datos de caracteres; sin. si desea conservar los recursos del sistema, es mejor que no cargue un valor BLOB completo en una sola variable de cadena. En lugar de ello, puede especificar un tamaño determinado de búfer para los datos que se van a devolver, así como la ubicación de comienzo para leer el primer byte o carácter de los datos devueltos. **GetBytes** y **GetChars** devolverán un `long` valor, que representa el número de bytes o caracteres devueltos. Si pasa una matriz null a **GetBytes** o **GetChars**, el valor Long devuelto será el número total de bytes o caracteres del BLOB. También puede especificar un índice de la matriz como posición de comienzo para la lectura de datos.  
+ Cuando intente obtener acceso a los datos del campo BLOB, utilice los descriptores de acceso con información de tipos **GetBytes** o **GetChars** del **DataReader**, que llenan una matriz con los datos. También puede usar **GetString** para los datos de caracteres; sin. si desea conservar los recursos del sistema, es mejor que no cargue un valor BLOB completo en una sola variable de cadena. En lugar de ello, puede especificar un tamaño determinado de búfer para los datos que se van a devolver, así como la ubicación de comienzo para leer el primer byte o carácter de los datos devueltos. **GetBytes** y **GetChars** devuelven un valor de tipo `long` que representa el número de bytes o caracteres devueltos. Si pasa una matriz con valores null a **GetBytes** o **GetChars**, el valor de tipo long devuelto contiene el número total de bytes o caracteres del BLOB. También puede especificar un índice de la matriz como posición de comienzo para la lectura de datos.  
   
 ## <a name="example"></a>Ejemplo  
 
- En el ejemplo siguiente se devuelve el identificador y el logotipo del publicador de la base de datos de ejemplo **pubs** en Microsoft SQL Server. El identificador del publicador (`pub_id`) es un campo de caracteres, mientras que el logotipo es una imagen de BLOB. Dado que el campo **logo** es un mapa de bits, el ejemplo devuelve datos binarios mediante **GetBytes**. Tenga en cuenta que la necesidad de tener acceso a los datos de forma secuencial hace que en la fila actual de datos se tenga acceso al identificador de publicador antes que al logotipo.  
+ En el ejemplo siguiente se devuelve el identificador y el logotipo del publicador de la base de datos de ejemplo **pubs** en Microsoft SQL Server. El identificador del publicador (`pub_id`) es un campo de caracteres, mientras que el logotipo es una imagen de BLOB. Como el campo **logo** es un mapa de bits, el ejemplo devuelve datos binarios mediante **GetBytes**. Tenga en cuenta que la necesidad de tener acceso a los datos de forma secuencial hace que en la fila actual de datos se tenga acceso al identificador de publicador antes que al logotipo.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -155,7 +156,7 @@ reader.Close();
 connection.Close();  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [SQL Server datos binarios y de valores grandes](./sql/sql-server-binary-and-large-value-data.md)
+- [Datos binarios y datos de valores grandes de SQL Server](./sql/sql-server-binary-and-large-value-data.md)
 - [Información general de ADO.NET](ado-net-overview.md)
