@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Getnativecallconvfromsig ((método)'
 title: IMetaDataImport::GetNativeCallConvFromSig (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-ms.openlocfilehash: d44ad493a786aaa35150515b7c254965490bd714
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2fb5c347098f860f9ad32eab20c8b5bd6278f838
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701710"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677579"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig (Método)
 
@@ -57,7 +58,7 @@ HRESULT GetNativeCallConvFromSig (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.CallingConvention>
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)

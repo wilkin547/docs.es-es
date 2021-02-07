@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataEmit::D método efineMethod'
 title: IMetaDataEmit::DefineMethod (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: a32a1eb850943b84a0d368f883e44fd4ccf32ee9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b0ba2bb68f1d4387229767f6f2550d64b9008898
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677971"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod (Método)
 
@@ -67,7 +68,7 @@ HRESULT DefineMethod (
  `pmd`  
  enuncia El token de miembro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La API de metadatos garantiza la persistencia de los métodos en el mismo orden que el llamador los emite para una clase o interfaz envolvente determinada, que se especifica en el `td` parámetro.  
   
@@ -118,7 +119,7 @@ HRESULT DefineMethod (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

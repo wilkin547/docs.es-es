@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataAssemblyEmit:: SetAssemblyRefProps ((método)'
 title: IMetaDataAssemblyEmit::SetAssemblyRefProps (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: e28659f3c6912489775dd09951610f19e4400942
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 704fff656b705bb246e2742ce991d41fcadcdfcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678177"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps (Método)
 
@@ -67,7 +68,7 @@ HRESULT SetAssemblyRefProps (
  `dwAssemblyRefFlags`  
  de Combinación bit a bit de valores de [AssemblyRefFlags (](assemblyrefflags-enumeration.md) que especifican los atributos del ensamblado al que se hace referencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para crear una `AssemblyRef` estructura de metadatos, use el método [IMetaDataAssemblyEmit::D efineassemblyref](imetadataassemblyemit-defineassemblyref-method.md) .  
   
@@ -81,6 +82,6 @@ HRESULT SetAssemblyRefProps (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)

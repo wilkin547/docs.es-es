@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataAssemblyImport:: Findexportedtypebyname ((método)'
 title: IMetaDataAssemblyImport::FindExportedTypeByName (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: b1672d98d76241e5af4b6b60a38785f1278e15a8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4a2dc2b65b7f7fe6d5f2e120c635214d457991bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677995"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName (Método)
 
@@ -47,7 +48,7 @@ HRESULT FindExportedTypeByName (
  `ptkExportedType`  
  enuncia Puntero al `mdExportedType` token que representa el tipo exportado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `FindExportedTypeByName` método utiliza las reglas estándar empleadas por el Common Language Runtime para resolver las referencias.  
   
@@ -61,7 +62,7 @@ HRESULT FindExportedTypeByName (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataAssemblyImport (Interfaz)](imetadataassemblyimport-interface.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../deployment/how-the-runtime-locates-assemblies.md)

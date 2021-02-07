@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Resolvetyperef ((método)'
 title: IMetaDataImport::ResolveTypeRef (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-ms.openlocfilehash: 76c5519a6cd1b8994e2f869281f13d8269e89fde
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0634bac77f457432948d0c2887d676e95430d05d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677568"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef (Método)
 
@@ -51,7 +52,7 @@ HRESULT ResolveTypeRef (
  `ptd`  
  enuncia Un puntero a un token de TypeDef que representa el tipo al que se hace referencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]
 > No use este método si se cargan varios dominios de aplicación. El método no respeta los límites del dominio de aplicación. Si se cargan varias versiones de un ensamblado y contienen el mismo tipo con el mismo espacio de nombres, el método devuelve el ámbito del módulo del primer tipo que encuentra.  
@@ -70,7 +71,7 @@ HRESULT ResolveTypeRef (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

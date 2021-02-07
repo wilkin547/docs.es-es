@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Countenum ((método)'
 title: IMetaDataImport::CountEnum (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: f2470cd7112adff35ef49c21a155072fcd4008be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c579ef7ce440e3552ab28572fc6c96ad12d66400
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677696"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum (Método)
 
@@ -43,7 +44,7 @@ HRESULT CountEnum (
  `pulCount`  
  enuncia Número de elementos enumerados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El identificador especificado por `hEnum` se obtiene a partir de una llamada de `Enum` *nombre* anterior (por ejemplo, [IMetaDataImport:: enumtypedefs (](imetadataimport-enumtypedefs-method.md)).  
   
@@ -57,7 +58,7 @@ HRESULT CountEnum (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)
