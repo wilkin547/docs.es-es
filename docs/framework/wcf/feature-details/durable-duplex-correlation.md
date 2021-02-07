@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: correlación dúplex duradera'
 title: Correlación dúplex duradera
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: eb879c583b4454cd0062396d86e157a90db4652f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e30356e03ccb6f8fae7ca735d2ad674bbe2a191d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704958"
 ---
 # <a name="durable-duplex-correlation"></a>Correlación dúplex duradera
 

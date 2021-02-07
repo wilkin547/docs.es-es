@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo crear aplicaciones de multidifusión mediante el transporte UDP
 title: Crear aplicaciones de multidifusión mediante el transporte UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: fd2fdc812f5fe06b3b89605b9478325932199a96
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cea76bc1256d52dabebe525b0fdd8b64c08f9e7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239203"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705166"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Crear aplicaciones de multidifusión mediante el transporte UDP
 
@@ -116,7 +117,7 @@ else
   
  Este código comprueba el primer byte de la dirección From para ver si contiene 0xE0, lo que significa que la dirección es una dirección de multidifusión.  
   
-### <a name="security-considerations"></a>Consideraciones de seguridad  
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad  
 
  Al escuchar mensajes de multidifusión se envía un paquete ICMP al enrutador para notificarle que está escuchando en la dirección de multidifusión. Cualquier usuario de la subred local que tenga permisos podría escuchar estos tipos de paquetes y determinar en qué dirección de multidifusión y puerto se está escuchando.  
   

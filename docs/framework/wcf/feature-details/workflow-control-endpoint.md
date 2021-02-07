@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: punto de conexión de control de flujo de trabajo'
 title: Extremo de control de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: ecc0946833db578c524ce7e4579024bd4cd46fd0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 235d7ce3552bb3452fc3ace52249311a7605a519
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266901"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704412"
 ---
 # <a name="workflow-control-endpoint"></a>Extremo de control de flujo de trabajo
 
@@ -37,7 +38,7 @@ El punto de conexión de control de flujo de trabajo permite a los desarrollador
   
 |Operación de control|Descripción|  
 |-----------------------|-----------------|  
-|Anulación|Detiene de forma obligatoria la ejecución de la instancia de flujo de trabajo.|  
+|Abort|Detiene de forma obligatoria la ejecución de la instancia de flujo de trabajo.|  
 |Cancelar|Realiza una transición de una instancia de flujo de trabajo del estado activo o suspendido al estado completado.|  
 |Ejecutar|Ofrece a una instancia de flujo de trabajo la oportunidad de ejecutarse.|  
 |Suspender|Realiza una transición de una instancia de flujo de trabajo del estado activo al estado suspendido.|  

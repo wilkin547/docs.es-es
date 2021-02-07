@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo crear los ejemplos de Windows Communication Foundation
 title: Compilación de los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: ee1c8101e31464fa203341d53137525433782c18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a53073ac92369574b204dbce998bebb8844fce8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704191"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Compilación de los ejemplos de Windows Communication Foundation
 

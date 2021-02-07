@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: cliente y servicio de intranet no protegidos'
 title: Cliente y servicio de intranet no protegidos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: f9cd297b479a07f2330eabbaaf81605a3874ec25
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a03abc5b8eb0317c4d5d19347b3974d615570069
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257226"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704529"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente y servicio de intranet no protegidos
 
@@ -22,7 +23,7 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
 |--------------------|-----------------|  
 |Modo de seguridad|None|  
 |Transporte|TCP|  
-|Enlaces|<xref:System.ServiceModel.NetTcpBinding>|  
+|Enlace|<xref:System.ServiceModel.NetTcpBinding>|  
 |Interoperabilidad|Solo WCF|  
 |Authentication|Ninguno|  
 |Integridad|None|  
@@ -30,7 +31,7 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
   
 ## <a name="service"></a>Servicio  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -76,7 +77,7 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
   
 ## <a name="client"></a>Cliente  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   

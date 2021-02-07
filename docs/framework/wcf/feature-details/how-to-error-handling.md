@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: controlar errores'
 title: Cómo Control de errores
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 3b8e48a74ff7671b942b5499fb3a0b5d0f389d61
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1d385070e4cc0d55bc3327114baf4e4ff543171f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704659"
 ---
 # <a name="how-to-error-handling"></a>Cómo Control de errores
 

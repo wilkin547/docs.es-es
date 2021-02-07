@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: WSDL y Policy'
 title: WSDL y directivas
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 123a878e90ee9099b009985a5e79155e8b1cd097
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e7d0ca81fbac1a746fa7c10efb8e8d32f1ee3240
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238345"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704152"
 ---
 # <a name="wsdl-and-policy"></a>WSDL y directivas
 

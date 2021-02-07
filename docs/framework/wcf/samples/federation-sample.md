@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ejemplo de Federación'
 title: Ejemplo de federación
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 22d405620a77285ebe7a68fc151a8e8611df9b4d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a85a290988b6cbb4b30a1098f3558ec34ead1d50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283281"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704087"
 ---
 # <a name="federation-sample"></a>Ejemplo de federación
 

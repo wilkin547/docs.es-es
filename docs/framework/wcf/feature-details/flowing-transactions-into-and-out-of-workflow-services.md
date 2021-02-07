@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: flujo de transacciones dentro y fuera de los servicios de flujo de trabajo'
 title: Flujo de las transacciones en los servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 8764f3c88fc978bc71ff993252b04fe58da4bbc9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f39740c45dd70fbc06963b8e842f9a01a0393f7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704971"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Flujo de las transacciones en los servicios de flujo de trabajo
 
@@ -100,7 +101,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 6. Arrastre y coloque una <xref:System.ServiceModel.Activities.Receive> actividad dentro de la sección **solicitud** de la <xref:System.ServiceModel.Activities.TransactedReceiveScope> actividad. Establezca las siguientes propiedades:  
   
-    |Propiedad|Valor|  
+    |Propiedad|Value|  
     |--------------|-----------|  
     |CanCreateInstance|True (activar la casilla)|  
     |OperationName|StartSample|  
@@ -116,7 +117,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 8. Arrastre y coloque una actividad de <xref:System.Activities.Statements.Sequence> en la sección Cuerpo de <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Dentro de la actividad de <xref:System.Activities.Statements.Sequence>, arrastre las dos actividades de <xref:System.Activities.Statements.WriteLine> y establezca las propiedades <xref:System.Activities.Statements.WriteLine.Text%2A> como se muestra en la siguiente tabla.  
   
-    |Actividad|Valor|  
+    |Actividad|Value|  
     |--------------|-----------|  
     |Primera propiedad WriteLine|"Servicio: recepción completada"|  
     |Segunda propiedad WriteLine|"Servicio: recibido = " + requestMessage|  
@@ -131,10 +132,10 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 10. Arrastre y coloque una actividad de <xref:System.Activities.Statements.Assign> después de la actividad de `PrintTransactionInfo` y establezca sus propiedades según la siguiente tabla.  
   
-    |Propiedad|Valor|  
+    |Propiedad|Value|  
     |--------------|-----------|  
     |En|replyMessage|  
-    |Valor|"Servicio: enviando respuesta."|  
+    |Value|"Servicio: enviando respuesta."|  
   
 11. Arrastre y coloque una actividad de <xref:System.Activities.Statements.WriteLine> después de la actividad de <xref:System.Activities.Statements.Assign> y establezca su propiedad <xref:System.Activities.Statements.WriteLine.Text%2A> en "Servicio: iniciar respuesta".  
   
@@ -180,7 +181,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 8. Arrastre y coloque una actividad de <xref:System.ServiceModel.Activities.Send> después de la actividad de <xref:System.Activities.Statements.Assign> y establezca las siguientes propiedades:  
   
-    |Propiedad|Valor|  
+    |Propiedad|Value|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
     |OperationName|StartSample|  

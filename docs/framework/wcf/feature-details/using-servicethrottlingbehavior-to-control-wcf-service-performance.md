@@ -1,15 +1,16 @@
 ---
+description: Más información acerca de cómo usar ServiceThrottlingBehavior para controlar el rendimiento del servicio WCF
 title: Utilización de ServiceThrottlingBehavior para controlar el rendimiento de los servicios WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
-ms.openlocfilehash: 44cc924de0c3079bb2f8125a7ac63fa494d4aca1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4a53c89c6b17402b7dd32120d049426052e4f9e0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289417"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704425"
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>Utilización de ServiceThrottlingBehavior para controlar el rendimiento de los servicios WCF
 
