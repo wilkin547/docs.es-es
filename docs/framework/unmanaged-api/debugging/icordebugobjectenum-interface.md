@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugObjectEnum ('
 title: Interfaz ICorDebugObjectEnum
 ms.date: 03/30/2017
 api_name:
@@ -14,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: 9400c4fa3ddcefef923d7bcfaae80e2cef62dc7d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d5cd8580bfa81af7d644c2fb11524a43a9062ddf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722248"
 ---
-# <a name="icordebugobjectenum-interface"></a><span data-ttu-id="c6d8a-102">Interfaz ICorDebugObjectEnum</span><span class="sxs-lookup"><span data-stu-id="c6d8a-102">ICorDebugObjectEnum Interface</span></span>
+# <a name="icordebugobjectenum-interface"></a><span data-ttu-id="2ff76-103">Interfaz ICorDebugObjectEnum</span><span class="sxs-lookup"><span data-stu-id="2ff76-103">ICorDebugObjectEnum Interface</span></span>
 
-<span data-ttu-id="c6d8a-103">Implementa los métodos ICorDebugEnum y enumera las matrices de objetos por sus direcciones virtuales relativas (RVA).</span><span class="sxs-lookup"><span data-stu-id="c6d8a-103">Implements ICorDebugEnum methods, and enumerates arrays of objects by their relative virtual addresses (RVAs).</span></span>  
+<span data-ttu-id="2ff76-104">Implementa los métodos ICorDebugEnum y enumera las matrices de objetos por sus direcciones virtuales relativas (RVA).</span><span class="sxs-lookup"><span data-stu-id="2ff76-104">Implements ICorDebugEnum methods, and enumerates arrays of objects by their relative virtual addresses (RVAs).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c6d8a-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="c6d8a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2ff76-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="2ff76-105">Methods</span></span>  
   
-|<span data-ttu-id="c6d8a-105">Método</span><span class="sxs-lookup"><span data-stu-id="c6d8a-105">Method</span></span>|<span data-ttu-id="c6d8a-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="c6d8a-106">Description</span></span>|  
+|<span data-ttu-id="2ff76-106">Método</span><span class="sxs-lookup"><span data-stu-id="2ff76-106">Method</span></span>|<span data-ttu-id="2ff76-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="2ff76-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c6d8a-107">Next (Método)</span><span class="sxs-lookup"><span data-stu-id="c6d8a-107">Next Method</span></span>](icordebugobjectenum-next-method.md)|<span data-ttu-id="c6d8a-108">Obtiene las RVA del número especificado de objetos de la enumeración, comenzando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="c6d8a-108">Gets the RVAs of the specified number of objects from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="2ff76-108">Next (método)</span><span class="sxs-lookup"><span data-stu-id="2ff76-108">Next Method</span></span>](icordebugobjectenum-next-method.md)|<span data-ttu-id="2ff76-109">Obtiene las RVA del número especificado de objetos de la enumeración, comenzando en la posición actual.</span><span class="sxs-lookup"><span data-stu-id="2ff76-109">Gets the RVAs of the specified number of objects from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c6d8a-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c6d8a-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ff76-110">Observaciones</span><span class="sxs-lookup"><span data-stu-id="2ff76-110">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="c6d8a-110">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="c6d8a-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="2ff76-111">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="2ff76-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6d8a-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c6d8a-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ff76-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2ff76-112">Requirements</span></span>  
 
- <span data-ttu-id="c6d8a-112">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6d8a-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="2ff76-113">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ff76-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6d8a-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c6d8a-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2ff76-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2ff76-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c6d8a-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6d8a-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ff76-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ff76-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c6d8a-115">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6d8a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2ff76-116">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ff76-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6d8a-116">Consulte también</span><span class="sxs-lookup"><span data-stu-id="c6d8a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ff76-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ff76-117">See also</span></span>
 
-- [<span data-ttu-id="c6d8a-117">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="c6d8a-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="2ff76-118">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="2ff76-118">Debugging Interfaces</span></span>](debugging-interfaces.md)

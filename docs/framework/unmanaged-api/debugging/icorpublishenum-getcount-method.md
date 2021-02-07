@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorPublishEnum:: GetCount (método)'
 title: ICorPublishEnum::GetCount (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d228f684-2be3-4029-93ae-31fe02213c1f
 topic_type:
 - apiref
-ms.openlocfilehash: a23d61da2913d8732c3860a44eb58ffadab48315
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 99e831ae366604e2ae7494bf80fb2e7f25532582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677939"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721624"
 ---
-# <a name="icorpublishenumgetcount-method"></a><span data-ttu-id="48d12-102">ICorPublishEnum::GetCount (Método)</span><span class="sxs-lookup"><span data-stu-id="48d12-102">ICorPublishEnum::GetCount Method</span></span>
+# <a name="icorpublishenumgetcount-method"></a><span data-ttu-id="988f5-103">ICorPublishEnum::GetCount (Método)</span><span class="sxs-lookup"><span data-stu-id="988f5-103">ICorPublishEnum::GetCount Method</span></span>
 
-<span data-ttu-id="48d12-103">Obtiene el número de elementos de la enumeración.</span><span class="sxs-lookup"><span data-stu-id="48d12-103">Gets the number of items in the enumeration.</span></span>  
+<span data-ttu-id="988f5-104">Obtiene el número de elementos de la enumeración.</span><span class="sxs-lookup"><span data-stu-id="988f5-104">Gets the number of items in the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48d12-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="48d12-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="988f5-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="988f5-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -34,21 +35,21 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="48d12-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="48d12-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="988f5-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="988f5-106">Parameters</span></span>  
 
  `pcelt`  
- <span data-ttu-id="48d12-106">enuncia Puntero al número de elementos de la enumeración.</span><span class="sxs-lookup"><span data-stu-id="48d12-106">[out] A pointer to the number of items in the enumeration.</span></span>  
+ <span data-ttu-id="988f5-107">enuncia Puntero al número de elementos de la enumeración.</span><span class="sxs-lookup"><span data-stu-id="988f5-107">[out] A pointer to the number of items in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48d12-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="48d12-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="988f5-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="988f5-108">Requirements</span></span>  
 
- <span data-ttu-id="48d12-108">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="48d12-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="988f5-109">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="988f5-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48d12-109">**Encabezado:** CorPub. idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="48d12-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="988f5-110">**Encabezado:** CorPub. idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="988f5-110">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="48d12-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="48d12-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="988f5-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="988f5-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="48d12-111">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48d12-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="988f5-112">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="988f5-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48d12-112">Consulte también</span><span class="sxs-lookup"><span data-stu-id="48d12-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="988f5-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="988f5-113">See also</span></span>
 
-- [<span data-ttu-id="48d12-113">ICorPublishEnum (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="48d12-113">ICorPublishEnum Interface</span></span>](icorpublishenum-interface.md)
+- [<span data-ttu-id="988f5-114">ICorPublishEnum (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="988f5-114">ICorPublishEnum Interface</span></span>](icorpublishenum-interface.md)
