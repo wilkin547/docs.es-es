@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Getscope ('
 title: Método GetScope
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1555328-2c71-4ece-b357-9eb6d3a8efc4
 topic_type:
 - apiref
-ms.openlocfilehash: fd5ae6ef40cb171c33132df0f640acbef96d69b5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cdebda457573e70755b49798ae86eae8f076216b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684684"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718367"
 ---
 # <a name="getscope-method"></a>Método GetScope
 
@@ -58,7 +59,7 @@ HRESULT GetScope(
 
  Requiere ALink. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IALink (Interfaz)](ialink-interface.md)
 - [IALink2 (Interfaz)](ialink2-interface.md)
