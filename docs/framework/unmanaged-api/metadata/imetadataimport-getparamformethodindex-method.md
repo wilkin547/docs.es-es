@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: GetParamForMethodIndex ((método)'
 title: IMetaDataImport::GetParamForMethodIndex (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ec3bfa95-1920-4511-932e-3ff23d76fcb8
 topic_type:
 - apiref
-ms.openlocfilehash: d4d3ba5713398876b55c072f0cda7eb5d599c4d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d84b26f1239e548b6cf96d1e6b38791eb6ecddff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728163"
 ---
-# <a name="imetadataimportgetparamformethodindex-method"></a><span data-ttu-id="776af-102">IMetaDataImport::GetParamForMethodIndex (Método)</span><span class="sxs-lookup"><span data-stu-id="776af-102">IMetaDataImport::GetParamForMethodIndex Method</span></span>
+# <a name="imetadataimportgetparamformethodindex-method"></a><span data-ttu-id="e4ab2-103">IMetaDataImport::GetParamForMethodIndex (Método)</span><span class="sxs-lookup"><span data-stu-id="e4ab2-103">IMetaDataImport::GetParamForMethodIndex Method</span></span>
 
-<span data-ttu-id="776af-103">Obtiene el token que representa un parámetro especificado del método representado por el token de MethodDef especificado.</span><span class="sxs-lookup"><span data-stu-id="776af-103">Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.</span></span>  
+<span data-ttu-id="e4ab2-104">Obtiene el token que representa un parámetro especificado del método representado por el token de MethodDef especificado.</span><span class="sxs-lookup"><span data-stu-id="e4ab2-104">Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="776af-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="776af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4ab2-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e4ab2-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetParamForMethodIndex (  
@@ -36,28 +37,28 @@ HRESULT GetParamForMethodIndex (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="776af-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="776af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e4ab2-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e4ab2-106">Parameters</span></span>  
 
  `md`  
- <span data-ttu-id="776af-106">de Token que representa el método para el que se va a devolver el token de parámetro.</span><span class="sxs-lookup"><span data-stu-id="776af-106">[in] A token that represents the method to return the parameter token for.</span></span>  
+ <span data-ttu-id="e4ab2-107">de Token que representa el método para el que se va a devolver el token de parámetro.</span><span class="sxs-lookup"><span data-stu-id="e4ab2-107">[in] A token that represents the method to return the parameter token for.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="776af-107">de Posición ordinal en la lista de parámetros donde se produce el parámetro solicitado.</span><span class="sxs-lookup"><span data-stu-id="776af-107">[in] The ordinal position in the parameter list where the requested parameter occurs.</span></span> <span data-ttu-id="776af-108">Los parámetros se numeran a partir de uno, con el valor devuelto del método en la posición cero.</span><span class="sxs-lookup"><span data-stu-id="776af-108">Parameters are numbered starting from one, with the method's return value in position zero.</span></span>  
+ <span data-ttu-id="e4ab2-108">de Posición ordinal en la lista de parámetros donde se produce el parámetro solicitado.</span><span class="sxs-lookup"><span data-stu-id="e4ab2-108">[in] The ordinal position in the parameter list where the requested parameter occurs.</span></span> <span data-ttu-id="e4ab2-109">Los parámetros se numeran a partir de uno, con el valor devuelto del método en la posición cero.</span><span class="sxs-lookup"><span data-stu-id="e4ab2-109">Parameters are numbered starting from one, with the method's return value in position zero.</span></span>  
   
  `ppd`  
- <span data-ttu-id="776af-109">enuncia Un puntero a un token ParamDef que representa el parámetro solicitado.</span><span class="sxs-lookup"><span data-stu-id="776af-109">[out] A pointer to a ParamDef token that represents the requested parameter.</span></span>  
+ <span data-ttu-id="e4ab2-110">enuncia Un puntero a un token ParamDef que representa el parámetro solicitado.</span><span class="sxs-lookup"><span data-stu-id="e4ab2-110">[out] A pointer to a ParamDef token that represents the requested parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="776af-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="776af-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4ab2-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e4ab2-111">Requirements</span></span>  
 
- <span data-ttu-id="776af-111">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="776af-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="e4ab2-112">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e4ab2-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="776af-112">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="776af-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e4ab2-113">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="e4ab2-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="776af-113">**Biblioteca:** Se incluye como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="776af-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e4ab2-114">**Biblioteca:** Se incluye como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e4ab2-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="776af-114">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="776af-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e4ab2-115">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4ab2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="776af-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="776af-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4ab2-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="e4ab2-116">See also</span></span>
 
-- [<span data-ttu-id="776af-116">IMetaDataImport (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="776af-116">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
-- [<span data-ttu-id="776af-117">IMetaDataImport2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="776af-117">IMetaDataImport2 Interface</span></span>](imetadataimport2-interface.md)
+- [<span data-ttu-id="e4ab2-117">IMetaDataImport (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="e4ab2-117">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
+- [<span data-ttu-id="e4ab2-118">IMetaDataImport2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="e4ab2-118">IMetaDataImport2 Interface</span></span>](imetadataimport2-interface.md)
