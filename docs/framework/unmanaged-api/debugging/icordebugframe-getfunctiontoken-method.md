@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugFrame:: GetFunctionToken ((método)'
 title: ICorDebugFrame::GetFunctionToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a46925b3-3bf8-404f-9f30-a86ae41032c1
 topic_type:
 - apiref
-ms.openlocfilehash: 3430c5062bd5633e1178226974b7358783192e51
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c64bb8d59c8de03c3d8c667384ffe4118c996d8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675989"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692945"
 ---
-# <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="0f88e-102">ICorDebugFrame::GetFunctionToken (Método)</span><span class="sxs-lookup"><span data-stu-id="0f88e-102">ICorDebugFrame::GetFunctionToken Method</span></span>
+# <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="fad40-103">ICorDebugFrame::GetFunctionToken (Método)</span><span class="sxs-lookup"><span data-stu-id="fad40-103">ICorDebugFrame::GetFunctionToken Method</span></span>
 
-<span data-ttu-id="0f88e-103">Obtiene el símbolo (token) de metadatos para la función que contiene el código asociado a este marco de pila.</span><span class="sxs-lookup"><span data-stu-id="0f88e-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  
+<span data-ttu-id="fad40-104">Obtiene el símbolo (token) de metadatos para la función que contiene el código asociado a este marco de pila.</span><span class="sxs-lookup"><span data-stu-id="fad40-104">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f88e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0f88e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fad40-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fad40-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionToken (  
@@ -34,17 +35,17 @@ HRESULT GetFunctionToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0f88e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="0f88e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fad40-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="fad40-106">Parameters</span></span>  
 
  `pToken`  
- <span data-ttu-id="0f88e-106">enuncia Un puntero a un `mdMethodDef` token que hace referencia a los metadatos de la función.</span><span class="sxs-lookup"><span data-stu-id="0f88e-106">[out] A pointer to an `mdMethodDef` token that references the metadata for the function.</span></span>  
+ <span data-ttu-id="fad40-107">enuncia Un puntero a un `mdMethodDef` token que hace referencia a los metadatos de la función.</span><span class="sxs-lookup"><span data-stu-id="fad40-107">[out] A pointer to an `mdMethodDef` token that references the metadata for the function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0f88e-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0f88e-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fad40-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fad40-108">Requirements</span></span>  
 
- <span data-ttu-id="0f88e-108">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f88e-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="fad40-109">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fad40-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0f88e-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0f88e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fad40-110">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fad40-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0f88e-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f88e-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fad40-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fad40-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0f88e-111">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f88e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="fad40-112">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fad40-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
