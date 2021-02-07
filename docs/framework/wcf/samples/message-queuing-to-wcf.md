@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Message Queue Server para Windows Communication Foundation'
 title: Message Queuing a Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 5132e0380aebd595e79429fab9df8a7fb94574a0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 53c535379584bcb8fa50d1b550f87ea7acc15175
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704009"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing a Windows Communication Foundation
 
@@ -123,7 +124,7 @@ Console.ReadLine();
 
     2. Expanda la pestaña **características** .
 
-    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
+    3. Haga clic con el botón secundario en **colas de mensajes privadas** y seleccione **nuevo**, **cola privada**.
 
     4. Active la casilla **transaccional** .
 

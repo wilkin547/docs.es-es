@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: correlación de mensajes'
 title: Correlación del mensaje
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: c6c68ec36ecee294aa217f77f462dcea31f1e211
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e38e2e8d6936132e165fd3372ac57fef27240d1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704035"
 ---
 # <a name="message-correlation"></a>Correlación del mensaje
 
@@ -280,7 +281,7 @@ static void DisplayOrderStatus()
 
     2. Expanda la pestaña **características** .
 
-    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
+    3. Haga clic con el botón secundario en **colas de mensajes privadas** y seleccione **nuevo**, **cola privada**.
 
     4. Active la casilla **transaccional** .
 
