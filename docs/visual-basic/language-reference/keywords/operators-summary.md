@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Resumen de operadores (Visual Basic)'
 title: Resumen de los operadores
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-ms.openlocfilehash: c268ee548a43d31e353f1f1b2679db36d7f86f14
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: aebdd1e6239e1f7a0792b82048f07ca7b30b23ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730582"
 ---
 # <a name="operators-summary-visual-basic"></a>Resumen de operadores (Visual Basic)
 
@@ -26,7 +27,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Operadores lógicos y bit a bit|[Not](../operators/not-operator.md), [and](../operators/and-operator.md), [or](../operators/or-operator.md), [XOR](../operators/xor-operator.md), [AndAlso](../operators/andalso-operator.md), [OrElse](../operators/orelse-operator.md)|  
 |Otras operaciones|[AddressOf](../operators/addressof-operator.md), [Await](../operators/await-operator.md), [GetType](../operators/gettype-operator.md)|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ParamArray (Visual Basic)'
 title: ParamArray
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: baf9303101eea9eed27e8a4eee9e04d255c798e9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 064bad8a558308ee3361c11d07020e0e3bf40c13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867825"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730400"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 
 Especifica que un parámetro de procedimiento toma una matriz opcional de elementos del tipo especificado. `ParamArray` solo se puede usar en el último parámetro de una lista de parámetros.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `ParamArray` permite pasar un número arbitrario de argumentos al procedimiento. Un `ParamArray` parámetro siempre se declara mediante [ByVal](byval.md).  
   
@@ -38,7 +39,7 @@ Especifica que un parámetro de procedimiento toma una matriz opcional de elemen
   
  [Instrucción Sub](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](../keywords/index.md)
 - [Matrices de parámetros](../../programming-guide/language-features/procedures/parameter-arrays.md)

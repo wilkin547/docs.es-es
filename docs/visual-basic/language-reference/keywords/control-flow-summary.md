@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: Resumen de flujo de control (Visual Basic)'
 title: Resumen del flujo de control
 ms.date: 07/20/2015
 helpviewer_keywords:
 - decision structures [Visual Basic]
 ms.assetid: 6885d426-fa87-4e1c-881f-f0e9ec8d98af
-ms.openlocfilehash: 43821fe52db1b24cfa017107f3ffdb4f1f716b57
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fc2db68d68ab42e4f9e876d8bade2dd879e2779c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875662"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730907"
 ---
 # <a name="control-flow-summary-visual-basic"></a>Resumen de flujos de control (Visual Basic)
 
@@ -23,7 +24,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Tomar decisiones.|<xref:Microsoft.VisualBasic.Interaction.Choose%2A>, [Si... Después... ](../statements/if-then-else-statement.md)En caso contrario, [Seleccione Case](../statements/select-case-statement.md), <xref:Microsoft.VisualBasic.Interaction.Switch%2A>|  
 |Utilizar procedimientos.|[Call](../statements/call-statement.md), [function](../statements/function-statement.md), [Property](../statements/property-statement.md), [Sub](../statements/sub-statement.md)|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

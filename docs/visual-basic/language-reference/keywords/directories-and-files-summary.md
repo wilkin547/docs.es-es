@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Resumen de directorios y archivos (Visual Basic)'
 title: Resumen de archivos y directorios
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 84e5ac5276eeddf399003f72ef72e7117feb011b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4f0d05cfa94076e1619748042faca61008a3a1c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90868934"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730751"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Resumen de directorios y archivos (Visual Basic)
 
@@ -19,7 +20,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
   
  La característica `My` proporciona una mayor productividad y rendimiento en las operaciones de E/S de archivo que si se utilizan estos miembros. Para obtener más información, vea <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
-|**Acción**|**Elemento Language**|  
+|**Acción**|**Elemento del lenguaje**|  
 |----------------|--------------------------|  
 |Cambiar un directorio o una carpeta.|<xref:Microsoft.VisualBasic.FileSystem.ChDir%2A>|  
 |Cambiar la unidad.|<xref:Microsoft.VisualBasic.FileSystem.ChDrive%2A>|  
@@ -34,7 +35,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Devolver el nombre o la etiqueta de volumen de un archivo.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
 |Establecer la información de atributos para un archivo.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

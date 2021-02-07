@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Resumen financiero (Visual Basic)'
 title: Resumen financiero
 ms.date: 07/20/2015
 helpviewer_keywords:
 - financial functions
 - payment
 ms.assetid: 474f973e-7103-42b7-aa4d-367c935e07e1
-ms.openlocfilehash: abbb522798528ca5c2f19cf069277f35d9f110f9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 40f2ac6a6660964d77299b5b3773c36cba6a796f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875632"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730699"
 ---
 # <a name="financial-summary-visual-basic"></a>Resumen financiero (Visual Basic)
 
@@ -26,7 +27,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Calcular los pagos.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
 |Calcular el valor actual.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

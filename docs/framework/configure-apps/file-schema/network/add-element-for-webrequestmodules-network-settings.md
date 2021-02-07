@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <add> elemento para webRequestModules (configuración de red)'
 title: Elemento <add> para webRequestModules (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 8d792b967d967540469dca7c090e0f905ecb2e6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1edb63a1e1095bb4b3c3d749fd389ffaad5ddf9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201764"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729900"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>Elemento \<add> para webRequestModules (configuración de red)
 
@@ -62,7 +63,7 @@ Agrega un módulo de solicitud web personalizado a la aplicación.
   
  El módulo de solicitud Web se crea cuando se pasa al método un prefijo coincidente con el URI <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> .  
   
- El valor del `prefix` atributo debe ser el carácter inicial de un URI válido. Por ejemplo: `http` o `http://www.contoso.com`.
+ El valor del `prefix` atributo debe ser el carácter inicial de un URI válido. Por ejemplo, `http` o `http://www.contoso.com`.
   
  El valor del `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por una coma.
   
@@ -87,7 +88,7 @@ Agrega un módulo de solicitud web personalizado a la aplicación.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.WebRequest>
 - [Esquema de la configuración de red](index.md)

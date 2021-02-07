@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: personalización de operaciones: información general'
 title: 'Personalizar operaciones: Información general'
 ms.date: 03/30/2017
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-ms.openlocfilehash: d4d375716e3199afcbbb9bbd8b8b04867ca0e5fa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bdcaf482f49b9c55fb7a1834b19b683ac2fa16bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173528"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729606"
 ---
 # <a name="customizing-operations-overview"></a>Personalizar operaciones: Información general
 

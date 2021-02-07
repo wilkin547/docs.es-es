@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: iterator (Visual Basic)'
 title: Iterator
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 0b459a16317b8ba55886e52ecadb227ddf2fee83
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 7a3329ba23a3f2487343b332f3bb9c4b19c36496
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875438"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730530"
 ---
 # <a name="iterator-visual-basic"></a>Iterador (Visual Basic)
 
 Especifica que una función o un `Get` descriptor de acceso es un iterador.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un *iterador* realiza una iteración personalizada en una colección. Un iterador usa la instrucción [yield](../statements/yield-statement.md) para devolver cada elemento de la colección de uno en uno. Cuando `Yield` se alcanza una instrucción, se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama a la función del iterador.  
   
@@ -55,7 +56,7 @@ Especifica que una función o un `Get` descriptor de acceso es un iterador.
   
  Para obtener más ejemplos, vea [iteradores](../../programming-guide/concepts/iterators.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>
 - [Iteradores](../../programming-guide/concepts/iterators.md)

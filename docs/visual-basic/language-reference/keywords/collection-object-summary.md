@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: Resumen de objetos de colección (Visual Basic)'
 title: Resumen de los objetos de colección
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Collection object, summary
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
-ms.openlocfilehash: 26bc596cda1ceea9ae4b0bf02e73f013cb7ab5be
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9727c139d50894d6bc9d649df17d9511c7119f57
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875674"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730920"
 ---
 # <a name="collection-object-summary-visual-basic"></a>Resumen de objetos de colección (Visual Basic)
 
@@ -23,7 +24,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Hacer referencia a un elemento en una colección.|<xref:Microsoft.VisualBasic.Collection.Item%2A>|  
 |Devolver una referencia a una interfaz <xref:System.Collections.IEnumerator>.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

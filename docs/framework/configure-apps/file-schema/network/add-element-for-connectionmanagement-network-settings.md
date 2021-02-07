@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <add> elemento para connectionManagement (configuración de red)'
 title: Elemento <add> para connectionManagement (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 05e4a1bc42dc39c7d2b56e30c98bdeefd31e4416
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 646d9fcfb73cfd8f4f533672c1a92883274f6e39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729945"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>Elemento \<add> para connectionManagement (configuración de red)
 
@@ -56,7 +57,7 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor de la `address` atributo debe ser un asterisco para indicar todas las conexiones, o bien una cadena del formulario `<schema>://<idn_hostname>[:<port>]`.  
   

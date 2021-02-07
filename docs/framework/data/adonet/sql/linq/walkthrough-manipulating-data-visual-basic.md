@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: Tutorial: manipular datos (Visual Basic)'
 title: 'Tutorial: Manipular datos (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: dbf18273e69ff0977f5d16ff179b8659865ef696
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 22bef61c294a92984446402063bf14b06f5b2b2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164056"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729528"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Tutorial: Manipular datos (Visual Basic)
 
@@ -19,7 +20,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
  Este tutorial se escribió con la configuración de desarrollo de Visual Basic.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
 
  En este tutorial se requiere lo siguiente:  
   
@@ -67,7 +68,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 4. En el cuadro **nombre** , escriba **LinqDataManipulationApp**.  
   
-5. Haga clic en **OK**.  
+5. Haga clic en **Aceptar**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Agregar referencias y directivas LINQ  
 
@@ -75,7 +76,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 #### <a name="to-add-systemdatalinq"></a>Para agregar System.Data.Linq  
   
-1. En **Explorador de soluciones**, haga clic con el botón secundario en **referencias**y, a continuación, haga clic en **Agregar referencia**.  
+1. En **Explorador de soluciones**, haga clic con el botón secundario en **referencias** y, a continuación, haga clic en **Agregar referencia**.  
   
 2. En el cuadro de diálogo **Agregar referencia** , haga clic en **.net**, haga clic en el ensamblado System. Data. Linq y, a continuación, haga clic en **Aceptar**.  
   
@@ -197,6 +198,6 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 > [!NOTE]
 > Después de haber agregado el nuevo cliente al enviar los cambios, no puede ejecutar de nuevo esta solución tal como está, porque no puede agregar el mismo cliente de nuevo tal como está. Para ejecutar de nuevo la solución, cambie el valor del identificador de cliente que se debe agregar.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Aprender con tutoriales](learning-by-walkthroughs.md)

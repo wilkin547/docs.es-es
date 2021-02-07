@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Tutorial: realizar consultas en varias relaciones (C#)'
 title: 'Tutorial: Realizar consultas en varias relaciones (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 9dfe34136f2d0a14a12f72e22a96d1882ddbce49
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35811043ddd7ecc9aca5e1bd87a370abebf90853
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164018"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729450"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Tutorial: Realizar consultas en varias relaciones (C#)
 
@@ -96,6 +97,6 @@ En este tutorial se muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../in
 
  En el siguiente tutorial ([Tutorial: manipular datos (C#)](walkthrough-manipulating-data-csharp.md)) se muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Aprender con tutoriales](learning-by-walkthroughs.md)
