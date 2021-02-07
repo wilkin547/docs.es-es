@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo consumir un conjunto de un DataSet desde un servicio Web XML
 title: Consumir un conjunto de información desde un servicio Web XML
 ms.date: 07/14/2020
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d4f4d5d34698fbb9a7986f4628b282d4425da3f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3c9112d259d5a6450a968ba87b33c4072f6dc44c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554702"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725134"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>Consumir un conjunto de información desde un servicio Web XML
 
@@ -191,11 +192,11 @@ La arquitectura del <xref:System.Data.DataSet> tiene un diseño desconectado, en
   
 3. Cree un cliente de servicio Web XML.  
   
-     Si desea que Visual Studio genere la clase de proxy de servicio Web automáticamente, simplemente cree el proyecto de cliente y, en la ventana de explorador de soluciones, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar**  >  **referencia de servicio**. En el cuadro de diálogo **Agregar referencia de servicio** , seleccione **avanzadas**y, a continuación, seleccione **Agregar referencia Web**. Seleccione el servicio Web en la lista de servicios web disponibles (esto puede requerir que se proporcione la dirección del extremo de servicio Web si el servicio Web no está disponible en la solución actual o en el equipo actual). Si crea el proxy del servicio Web XML personalmente, tal y como se describe en el paso anterior, puede importarlo en el código de cliente y utilizar los métodos de servicio Web XML.
+     Si desea que Visual Studio genere la clase de proxy de servicio Web automáticamente, simplemente cree el proyecto de cliente y, en la ventana de explorador de soluciones, haga clic con el botón derecho en el proyecto y, a continuación, seleccione **Agregar**  >  **referencia de servicio**. En el cuadro de diálogo **Agregar referencia de servicio** , seleccione **avanzadas** y, a continuación, seleccione **Agregar referencia Web**. Seleccione el servicio Web en la lista de servicios web disponibles (esto puede requerir que se proporcione la dirección del extremo de servicio Web si el servicio Web no está disponible en la solución actual o en el equipo actual). Si crea el proxy del servicio Web XML personalmente, tal y como se describe en el paso anterior, puede importarlo en el código de cliente y utilizar los métodos de servicio Web XML.
 
      En el código de ejemplo siguiente se importa la biblioteca de proxy, se llama a **GetCustomers** para obtener una lista de clientes, se agrega un nuevo cliente y, a continuación, se devuelve un **conjunto** de elementos con las actualizaciones a **UpdateCustomers**.  
   
-     En el ejemplo se pasa el **conjunto** de resultados devuelto por **DataSet. GetChanges** a **UpdateCustomers** porque solo es necesario pasar las filas modificadas a **UpdateCustomers**. **UpdateCustomers** devuelve el **conjunto**de datos resuelto, que se puede **combinar** en el **conjunto** de datos existente para incorporar los cambios resueltos y cualquier información de error de fila de la actualización. En el código siguiente se supone que ha utilizado Visual Studio para crear la referencia Web y que ha cambiado el nombre de la referencia Web a DsSample en el cuadro de diálogo **Agregar referencia Web** .  
+     En el ejemplo se pasa el **conjunto** de resultados devuelto por **DataSet. GetChanges** a **UpdateCustomers** porque solo es necesario pasar las filas modificadas a **UpdateCustomers**. **UpdateCustomers** devuelve el **conjunto** de datos resuelto, que se puede **combinar** en el **conjunto** de datos existente para incorporar los cambios resueltos y cualquier información de error de fila de la actualización. En el código siguiente se supone que ha utilizado Visual Studio para crear la referencia Web y que ha cambiado el nombre de la referencia Web a DsSample en el cuadro de diálogo **Agregar referencia Web** .  
   
     ```vb  
     Imports System  

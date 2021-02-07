@@ -1,22 +1,23 @@
 ---
+description: Más información acerca de cómo crear una DataView
 title: Crear un objeto DataView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: 539e9763c8aa4affdb6f3bd219a99dbca50cee01
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e9614e7ee9aae58c4dc57f856a959bd3624dac03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725030"
 ---
 # <a name="creating-a-dataview"></a>Crear un objeto DataView
 
 Hay dos formas de crear una <xref:System.Data.DataView>. Puede usar el constructor **DataView** o puede crear una referencia a la <xref:System.Data.DataTable.DefaultView%2A> propiedad de <xref:System.Data.DataTable> . El constructor de **DataView** puede estar vacío o puede tomar un **DataTable** como un solo argumento, o un **DataTable** junto con criterios de filtro, criterios de ordenación y un filtro de estado de fila. Para obtener más información sobre los argumentos adicionales disponibles para su uso con **DataView**, vea [ordenar y filtrar datos](sorting-and-filtering-data.md).  
   
- Dado que el índice de un objeto **DataView** se genera cuando se crea la **DataView** y cuando se modifica cualquiera de las propiedades **Sort**, **RowFilter**o **RowStateFilter** , se obtiene el mejor rendimiento al proporcionar cualquier criterio de ordenación inicial o criterio de filtrado como argumentos del constructor al crear la **DataView**. La creación de una **DataView** sin especificar criterios de ordenación o de filtro y, después, el establecimiento de las propiedades **Sort**, **RowFilter**o **RowStateFilter** , hace que el índice se compile al menos dos veces: una vez cuando se crea la **DataView** y otra vez cuando se modifica cualquiera de las propiedades de ordenación o filtro.  
+ Dado que el índice de un objeto **DataView** se genera cuando se crea la **DataView** y cuando se modifica cualquiera de las propiedades **Sort**, **RowFilter** o **RowStateFilter** , se obtiene el mejor rendimiento al proporcionar cualquier criterio de ordenación inicial o criterio de filtrado como argumentos del constructor al crear la **DataView**. La creación de una **DataView** sin especificar criterios de ordenación o de filtro y, después, el establecimiento de las propiedades **Sort**, **RowFilter** o **RowStateFilter** , hace que el índice se compile al menos dos veces: una vez cuando se crea la **DataView** y otra vez cuando se modifica cualquiera de las propiedades de ordenación o filtro.  
   
  Tenga en cuenta que si crea una **DataView** con el constructor que no toma ningún argumento, no podrá usar la **DataView** hasta que haya establecido la propiedad de **tabla** .  
   
@@ -46,7 +47,7 @@ Dim custDV As DataView = custDS.Tables("Customers").DefaultView
 DataView custDV = custDS.Tables["Customers"].DefaultView;  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>

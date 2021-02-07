@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de la creación de columnas de expresión
 title: Crear columnas de expresión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: ad14e4d3d6a1107f994d9536485257f9dc1851f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 96b445734d645a957951a1d4cbd9d72ed254068f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166851"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724991"
 ---
 # <a name="creating-expression-columns"></a>Crear columnas de expresión
 
@@ -39,7 +40,7 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
   
  Las expresiones pueden hacer referencia a otras columnas de expresión; sin embargo, una referencia circular, en la que dos expresiones se hacen referencia una a otra, generará una excepción. Para obtener las reglas sobre la escritura de expresiones, vea la <xref:System.Data.DataColumn.Expression%2A> propiedad de la clase **DataColumn** .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataSet>

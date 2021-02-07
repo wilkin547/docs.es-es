@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: AcceptChanges y RejectChanges'
 title: Objetos AcceptChange y RejectChange
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: e29d2404d6d593b9a5b905206af3cdd3bc1a3e51
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e21952063bf27f4f969669eb76b964fc7537b59a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725264"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>Objetos AcceptChange y RejectChange
 
@@ -18,7 +19,7 @@ Después de comprobar la exactitud de los cambios realizados en los datos en un 
   
  Si existen restricciones Foreign Key en **DataTable**, los cambios aceptados o rechazados mediante **AcceptChanges** y **RejectChanges** se propagan a las filas secundarias de **DataRow** según la **ForeignKeyConstraint. AcceptRejectRule**. Para obtener más información, vea [restricciones de DataTable](datatable-constraints.md).  
   
- En el ejemplo siguiente se comprueba si hay filas con errores, se resuelven los errores que haya y se rechazan las filas en las que no se puede resolver el error. Tenga en cuenta que, en el caso de los errores resueltos, el valor de **RowError** se restablece en una cadena vacía, lo que hace que la propiedad **hasErrors** se establezca en **false**. Cuando todas las filas con errores se han resuelto o rechazado, se llama a **AcceptChanges** para aceptar todos los cambios de la **DataTable**completa.  
+ En el ejemplo siguiente se comprueba si hay filas con errores, se resuelven los errores que haya y se rechazan las filas en las que no se puede resolver el error. Tenga en cuenta que, en el caso de los errores resueltos, el valor de **RowError** se restablece en una cadena vacía, lo que hace que la propiedad **hasErrors** se establezca en **false**. Cuando todas las filas con errores se han resuelto o rechazado, se llama a **AcceptChanges** para aceptar todos los cambios de la **DataTable** completa.  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -57,7 +58,7 @@ if (workTable.HasErrors)
 workTable.AcceptChanges();  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
