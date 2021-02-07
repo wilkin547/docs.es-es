@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugRemoteTarget'
 title: ICorDebugRemoteTarget (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: 4212597b5ba43f0e4767aa585ca28a011e73e07a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6567ebb76c7a3c415c9978dc50941cb0b8985a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711993"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717880"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget (Interfaz)
 
@@ -46,7 +47,7 @@ interface ICorDebugRemoteTarget  : IUnknown
 |------------|-----------------|  
 |[ICorDebugRemoteTarget::GetHostName (Método)](icordebugremotetarget-gethostname-method.md)|Devuelve el nombre de host o la dirección IP de un equipo remoto.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  No se admite la depuración en modo mixto (es decir, código administrado y nativo) en Windows 95, Windows 98 o Windows ME, ni en plataformas que no sean x86 (como IA-64 y AMD64).  
   
@@ -60,7 +61,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
  **.NET Framework versiones:** 3,5 SP1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugRemote (Interfaz)](icordebugremote-interface.md)
 - [ICorDebug (Interfaz)](icordebug-interface.md)

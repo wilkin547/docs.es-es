@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugStepper:: Setunmappedstopmask ((método)'
 title: ICorDebugStepper::SetUnmappedStopMask (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b1211981-e90c-4e05-8def-fa18d85ad9ab
 topic_type:
 - apiref
-ms.openlocfilehash: 50fad8b38a6b33d0ddbb2f0f20676296c3d66737
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 60b8fd4b74e1eeb76868fc6cdac308ff805e44db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717723"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask (Método)
 
@@ -41,7 +42,7 @@ HRESULT SetUnmappedStopMask (
   
  El valor predeterminado es STOP_OTHER_UNMAPPED. El valor STOP_UNMANAGED solo es válido con la depuración de interoperabilidad.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Cuando el depurador encuentra una compilación Just-in-Time (JIT) que no tiene ninguna asignación correspondiente al lenguaje intermedio de Microsoft (MSIL), detiene la ejecución si se ha establecido la marca que especifica el tipo de código no asignado; de lo contrario, la ejecución continuará de forma transparente.  
   

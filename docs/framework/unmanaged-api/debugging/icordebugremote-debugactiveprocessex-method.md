@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugRemote::D ebugActiveProcessEx (método)'
 title: ICorDebugRemote::DebugActiveProcessEx (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: c9847fd6122aa32c95aecd5643a62a6775ae38d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ccbde152e59146bd852a5a0a2f991d10333fa9d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712123"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717906"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx (Método)
 
@@ -59,7 +60,7 @@ HRESULT DebugActiveProcessEx (
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede asociar al proceso en el equipo remoto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En Silverlight no se admite la depuración en modo mixto.  
   
@@ -73,7 +74,7 @@ HRESULT DebugActiveProcessEx (
   
  **.NET Framework versiones:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugRemote (Interfaz)](icordebugremote-interface.md)
 - [ICorDebug (Interfaz)](icordebug-interface.md)
