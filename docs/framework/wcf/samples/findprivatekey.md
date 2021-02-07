@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: ejemplo FindPrivateKey'
 title: Ejemplo de FindPrivateKey
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0e876aa3e1f6dde16acbb3ddd2a130ad49d369fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346018"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732428"
 ---
 # <a name="findprivatekey-sample"></a>Ejemplo de FindPrivateKey
 
@@ -22,7 +23,7 @@ Un administrador o cualquier usuario instala los certificados X.509 en el equipo
 
 Puede que esta cuenta no tenga acceso al archivo de clave privada porque no instaló el certificado en un principio. La herramienta FindPrivateKey le da la ubicación del archivo de clave privada de un certificado X.509 determinado. Puede agregar o quitar permisos a este archivo cuando conoce la ubicación del archivo de clave privada de los certificados X.509 determinados.
 
-Los ejemplos que usan certificados para la seguridad utilizan la herramienta FindPrivateKey en el archivo *setup. bat* . Una vez que se ha encontrado el archivo de clave privada, puede usar otras herramientas como *cacls. exe* para establecer los derechos de acceso adecuados en el archivo.
+Los ejemplos que usan certificados para la seguridad utilizan la herramienta FindPrivateKey en el archivo de *Setup.bat* . Una vez que se ha encontrado el archivo de clave privada, puede usar otras herramientas como *Cacls.exe* para establecer los derechos de acceso adecuados en el archivo.
 
 Al ejecutar un servicio de Windows Communication Foundation (WCF) bajo una cuenta de usuario, como un archivo ejecutable autohospedado, asegúrese de que la cuenta de usuario tiene acceso de solo lectura al archivo. Al ejecutar un servicio WCF en Internet Information Services (IIS), las cuentas predeterminadas en las que se ejecuta el servicio son el servicio de red en IIS 7 y versiones anteriores, o la identidad del grupo de aplicaciones en IIS 7,5 y versiones posteriores. Para obtener más información, vea [identidades del grupo de aplicaciones](/iis/manage/configuring-security/application-pool-identities).
 
@@ -36,7 +37,7 @@ Message="The certificate 'CN=localhost' must have a private key that is capable 
 Source="System.ServiceModel"
 ```
 
-Cuando esto suceda, use la herramienta FindPrivateKey para buscar el archivo de clave privada y, a continuación, establezca el derecho de acceso para el proceso en el que se está ejecutando el servicio. Por ejemplo, esto se puede hacer con la herramienta CACLS. exe como se muestra en el ejemplo siguiente:
+Cuando esto suceda, use la herramienta FindPrivateKey para buscar el archivo de clave privada y, a continuación, establezca el derecho de acceso para el proceso en el que se está ejecutando el servicio. Por ejemplo, esto se puede hacer con la herramienta Cacls.exe como se muestra en el ejemplo siguiente:
 
 ```console
 cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R
@@ -60,11 +61,11 @@ Para descargar el proyecto, visite los [ejemplos de Windows Communication Founda
 
  "{*Option*}" representa un conjunto obligatorio de parámetros.
 
- "*Opción1* &#124; *opción2*" representa una opción entre los conjuntos de opciones.
+ "*opción1* &#124; *opción2*" representa una opción entre los conjuntos de opciones.
 
- "\<*valor*>" representa un valor de parámetro que se va a escribir.
+ " \<*value*> " representa un valor de parámetro que se va a escribir.
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Uso
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
@@ -75,7 +76,7 @@ Donde:
 | Parámetro         | Descripción                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|
 | `<subjectName>` | Nombre del firmante del certificado.                                               |
-| `<thumbprint>`  | La huella digital del certificado (puede usar la herramienta Certmgr. exe para encontrarlo) |
+| `<thumbprint>`  | La huella digital del certificado (puede usar la herramienta de Certmgr.exe para encontrarla) |
 | `-f`            | solo nombre del archivo de salida                                                             |
 | `-d`            | solo el directorio de salida                                                             |
 | `-a`            | nombre de archivo absoluto de salida                                                         |
