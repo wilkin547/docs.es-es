@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: ServiceMetadataBehavior'
 title: ServiceMetadataBehavior
 ms.date: 03/30/2017
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
-ms.openlocfilehash: 921a880dad0d77558a70dff8a09f75c25a3cbb8a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1b1438013ec667b10b300d898687abf6f33f96fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715488"
 ---
 # <a name="servicemetadatabehavior"></a>ServiceMetadataBehavior
 
 ServiceMetadataBehavior  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```csharp
 class ServiceMetadataBehavior : Behavior  

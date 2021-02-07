@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo2:: Getnotifiedexceptionclauseinfo ((método)'
 title: ICorProfilerInfo2::GetNotifiedExceptionClauseInfo (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9594a7e-cb0c-4c48-accb-29f762aa0c21
 topic_type:
 - apiref
-ms.openlocfilehash: b0d94f5004da85caf0460e8f1d1b2d964944b045
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f297689ccdd1b600fe86db16940434c990e4b084
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727073"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716489"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>ICorProfilerInfo2::GetNotifiedExceptionClauseInfo (Método)
 
@@ -38,7 +39,7 @@ HRESULT GetNotifiedExceptionClauseInfo(
  `pinfo`  
  enuncia Puntero a una estructura de [COR_PRF_EX_CLAUSE_INFO](cor-prf-ex-clause-info-structure.md) que describe la instancia de la cláusula de excepción actual y su marco asociado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Cuando se recibe una notificación de excepción, `GetNotifiedExceptionClauseInfo` se puede usar para obtener la información de la dirección nativa y el marco de la cláusula de excepción ( `catch` / `finally` / `filter` ) que está a punto de ejecutarse (el generador de perfiles recibe las llamadas a[ICorProfilerCallback:: exceptioncatcherenter (](icorprofilercallback-exceptioncatcherenter-method.md), [ICorProfilerCallback:: exceptionunwindfinallyenter (](icorprofilercallback-exceptionunwindfinallyenter-method.md)o [ICorProfilerCallback:: exceptionsearchfilterenter (](icorprofilercallback-exceptionsearchfilterenter-method.md) ) o se acaba de ejecutar (el generador de perfiles recibe la llamada a[ICorProfilerCallback:: exceptioncatcherleave (](icorprofilercallback-exceptioncatcherleave-method.md), [ICorProfilerCallback:: ExceptionUnwindFinallyLeave (](icorprofilercallback-exceptionunwindfinallyleave-method.md)o [ICorProfilerCallback:](icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
@@ -54,7 +55,7 @@ HRESULT GetNotifiedExceptionClauseInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)

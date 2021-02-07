@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. MessageWritten'
 title: System.ServiceModel.MessageWritten
 ms.date: 03/30/2017
 ms.assetid: 5d8ce118-acdc-429c-ac89-34e943267c99
-ms.openlocfilehash: 9ee6c82ef2ebca1506e6d6f11bb74a4673f3c955
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d7007ecc1051837bf2169cadb8d32ab52f11336a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96235043"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716164"
 ---
 # <a name="systemservicemodelmessagewritten"></a>System.ServiceModel.MessageWritten
 

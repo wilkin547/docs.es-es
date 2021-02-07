@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo2:: GetStaticFieldInfo ((método)'
 title: ICorProfilerInfo2::GetStaticFieldInfo (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-ms.openlocfilehash: ff84bdfb8bbd5331fb94eed766f09137adf9e62c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1acde9d5ad1a35b11cb036bced99c1909f0b6b04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703849"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716364"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo (Método)
 
@@ -46,7 +47,7 @@ HRESULT GetStaticFieldInfo (
  `pFieldInfo`  
  enuncia Un puntero a un valor de la enumeración [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) que indica si el campo especificado es estático y, en ese caso, el tipo de estático que se aplica al campo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta información se puede usar para determinar la función a la que se va a llamar para obtener la dirección del campo estático.  
   
@@ -62,7 +63,7 @@ HRESULT GetStaticFieldInfo (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)
