@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración COR_PRF_MODULE_FLAGS'
 title: COR_PRF_MODULE_FLAGS (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: 7d9e187d4aede772b7a002359cd3bdd350aaec77
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0be5d97bfb6bea069d039d175fc554e0ef59993d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706443"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS (Enumeración)
 
@@ -40,7 +41,7 @@ typedef enum
 }   COR_PRF_MODULE_FLAGS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -52,7 +53,7 @@ typedef enum
 |COR_PRF_MODULE_FLAT_LAYOUT|El diseño del módulo en memoria es plano, no asignado. Si un módulo tiene este bit establecido, los perfiles que leen la información directamente del encabezado del archivo portable ejecutable (PE) tendrán que tener cuidado al interpretar las direcciones virtuales relativas (RVA) en el encabezado.|  
 |COR_PRF_MODULE_WINDOWS_RUNTIME|La marca de tipo de contenido Windows Runtime se establece en los metadatos del ensamblado de este módulo. Este es el caso de todos los módulos de metadatos de Windows (. winmd).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los bits de COR_PRF_MODULE_FLAGS se devuelven al generador de perfiles en el `pdwModuleFlags` parámetro de salida del método [ICorProfilerInfo3:: GetModuleInfo2 (](icorprofilerinfo3-getmoduleinfo2-method.md) . Algunas combinaciones de dos o más marcas son posibles, pero no todas las combinaciones son posibles.  
   
@@ -66,6 +67,6 @@ typedef enum
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)

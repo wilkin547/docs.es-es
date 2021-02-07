@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataAssemblyEmit::D método efineAssemblyRef'
 title: IMetaDataAssemblyEmit::DefineAssemblyRef (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-ms.openlocfilehash: ba53ff30f0b6d0ae7fed7db422b7c0a242204a2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e3c3acce77e6b0cb2943d66f3477898c90ea6251
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689438"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706713"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef (Método)
 
@@ -67,7 +68,7 @@ HRESULT DefineAssemblyRef (
  `pmdar`  
  enuncia Puntero al `AssemblyRef` token de metadatos devuelto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `AssemblyRef`Se debe definir una estructura de metadatos para cada ensamblado al que haga referencia este ensamblado.  
   
@@ -83,6 +84,6 @@ HRESULT DefineAssemblyRef (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)

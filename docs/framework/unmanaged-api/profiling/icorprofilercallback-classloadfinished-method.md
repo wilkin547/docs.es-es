@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback:: Classloadfinished ((método)'
 title: ICorProfilerCallback::ClassLoadFinished (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: 3be00d278a92398ad282a071f3e313e5de0e65a6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ba0a6a643ab49a4e7a0ed10dda0dadff5741234d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706428"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished (Método)
 
@@ -44,7 +45,7 @@ HRESULT ClassLoadFinished(
 
   \[in] un valor HRESULT que indica si la clase se cargó correctamente.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor de `classId` no es válido para una solicitud de información hasta que `ClassLoadFinished` se llama al método.  
   
@@ -60,7 +61,7 @@ HRESULT ClassLoadFinished(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método ClassLoadStarted](icorprofilercallback-classloadstarted-method.md)
