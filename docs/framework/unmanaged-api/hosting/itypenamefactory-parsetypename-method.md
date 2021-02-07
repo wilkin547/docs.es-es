@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ITypeNameFactory::P arseTypeName (método)'
 title: ITypeNameFactory::ParseTypeName (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13c9f063-371c-4911-a5e7-e1e0b88ae382
 topic_type:
 - apiref
-ms.openlocfilehash: 2b4d22fac7125ad113aaef5b093396a065f682c1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e0ff068dd0d095c3eed1c7a697d0c72919306996
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728724"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680205"
 ---
 # <a name="itypenamefactoryparsetypename-method"></a>ITypeNameFactory::ParseTypeName (Método)
 
@@ -46,6 +47,6 @@ HRESULT ParseTypeName (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)

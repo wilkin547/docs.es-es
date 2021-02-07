@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: compatibilidad con transacciones'
 title: Compatibilidad con transacciones
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: 1449f4d10d0feeec47ac17ffda91acb3e0da17ea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 97c076fadacde01c7d14e5d51b000839b3d014a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681180"
 ---
 # <a name="transaction-support"></a>Compatibilidad con transacciones
 
@@ -27,7 +28,7 @@ ms.locfileid: "91202206"
 
  Cuando se llama <xref:System.Data.Linq.DataContext.SubmitChanges%2A> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] a, comprueba si la llamada está en el ámbito de <xref:System.Transactions.Transaction> o si la `Transaction` propiedad ( `IDbTransaction` ) está establecida en una transacción local iniciada por el usuario. Si no encuentra ninguna transacción, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] inicia una transacción local ( `IDbTransaction` ) y la usa para ejecutar los comandos SQL generados. Cuando todos los comandos SQL se han completado correctamente, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] confirma la transacción local y devuelve.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general](background-information.md)
 - [Procedimiento para poner entre corchetes envíos de datos mediante el uso de transacciones](how-to-bracket-data-submissions-by-using-transactions.md)

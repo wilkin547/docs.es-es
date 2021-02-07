@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: pasos típicos para usar LINQ to SQL'
 title: Pasos habituales para usar LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: dc8c4be1e895ee5c4c7947e6311e5bf71008490f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eb35b983471db8926646418352b01e1186e235e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164265"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680972"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Pasos habituales para usar LINQ to SQL
 
@@ -92,7 +93,7 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
 
  Para obtener más información, consulte [compatibilidad con la depuración](debugging-support.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción](getting-started.md)
 - [Crear el modelo de objetos](creating-the-object-model.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostTaskManager:: ReverseLeaveRuntime (método)'
 title: IHostTaskManager::ReverseLeaveRuntime (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: 8e0981415c03120cc30e6349daced51e79216938
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2fed157f6ea05243270b957cacdb00ba5a47a88f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95669970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680873"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime (Método)
 
@@ -44,7 +45,7 @@ HRESULT ReverseLeaveRuntime ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la asignación de recursos solicitada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR llama `ReverseLeaveRuntime` a para informar al host de que la tarea que se está ejecutando actualmente devuelve el control a una función no administrada que, a su vez, se ha llamado desde código administrado a través de la invocación de plataforma. Cada llamada a `ReverseLeaveRuntime` coincide con una llamada correspondiente a [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md).  
   
@@ -58,7 +59,7 @@ HRESULT ReverseLeaveRuntime ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método CallNeedsHostHook](ihosttaskmanager-callneedshosthook-method.md)
 - [Método EnterRuntime](ihosttaskmanager-enterruntime-method.md)
