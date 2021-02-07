@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 601-CBAEntryRead'
 title: 601 - CBAEntryRead
 ms.date: 03/30/2017
 ms.assetid: 7d8b757f-e8d8-4c12-927e-ba3776c17983
-ms.openlocfilehash: 03721457bd80d633afa2c4879180e98eb95ad186
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3b28b1470e575db715a5d989b3f7b445cf3f455e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247036"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668999"
 ---
 # <a name="601---cbaentryread"></a>601 - CBAEntryRead
 
@@ -15,7 +16,7 @@ ms.locfileid: "96247036"
   
 |||  
 |-|-|  
-|ID|601|  
+|Id.|601|  
 |Palabras clave||  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
