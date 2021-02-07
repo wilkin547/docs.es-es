@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: Resumen de matrices (Visual Basic)'
 title: Resumen de las matrices
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic]
 ms.assetid: 167f77d4-7cb2-4a31-9dc9-0fd0b26fda7e
-ms.openlocfilehash: 6dfb0565803bce298fc1b9467e82d2e09ffb4239
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 10a66a90f49448b19f0bc978384bed878bcc1406
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875676"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730998"
 ---
 # <a name="arrays-summary-visual-basic"></a>Resumen de matrices (Visual Basic)
 
@@ -22,7 +23,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Buscar los límites de una matriz.|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
 |Volver a inicializar una matriz.|[Borrar](../statements/erase-statement.md), [ReDim](../statements/redim-statement.md)|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

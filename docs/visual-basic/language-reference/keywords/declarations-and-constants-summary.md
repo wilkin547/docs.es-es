@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Resumen de constantes y declaraciones (Visual Basic)'
 title: Resumen de las constantes y declaraciones
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - declaring constants [Visual Basic], keywords
 - declarations [Visual Basic], Visual Basic language elements
 ms.assetid: 79d64f3e-941d-4d39-bc5b-79f225d5be6e
-ms.openlocfilehash: b5ddf0146837ee7a2b4ee1eca6253dfd72d1db27
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 014eaf157502fc7b7a5a2c33f57653d606a8d1b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730972"
 ---
 # <a name="declarations-and-constants-summary-visual-basic"></a>Resumen de constantes y declaraciones (Visual Basic)
 
@@ -29,7 +30,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Controlar eventos.|[AddHandler](../statements/addhandler-statement.md), [Event](../statements/event-statement.md), [RaiseEvent](../statements/raiseevent-statement.md), [RemoveHandler](../statements/removehandler-statement.md)|  
 |Implementar la herencia.|[Inherits](../statements/inherits-statement.md), [MustInherit](../modifiers/mustinherit.md), [MustOverride](../modifiers/mustoverride.md), [MyBase](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md), [MyClass](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md), [New](../operators/new-operator.md), [NotInheritable](../modifiers/notinheritable.md), [NotOverridable](../modifiers/notoverridable.md), [Overloads](../modifiers/overloads.md), [Overridable](../modifiers/overridable.md), [invalidaciones](../modifiers/overrides.md)|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)
