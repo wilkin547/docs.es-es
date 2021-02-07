@@ -1,24 +1,25 @@
 ---
+description: 'Más información acerca de: Microsoft. Transactions. TransactionBridge. ParticipantStateMachineFinished'
 title: Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished
 ms.date: 03/30/2017
 ms.assetid: 54b677f7-03ad-40f2-9c5d-297a8ad9bf90
-ms.openlocfilehash: bd6c9124e6346437e2bb35df620e00bad13b60f3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f49027b82957969779423d0895ff24a4a36d1f4f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759385"
 ---
-# <a name="microsofttransactionstransactionbridgeparticipantstatemachinefinished"></a><span data-ttu-id="2f14e-102">Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished</span><span class="sxs-lookup"><span data-stu-id="2f14e-102">Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished</span></span>
+# <a name="microsofttransactionstransactionbridgeparticipantstatemachinefinished"></a><span data-ttu-id="86b78-103">Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished</span><span class="sxs-lookup"><span data-stu-id="86b78-103">Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished</span></span>
 
-<span data-ttu-id="2f14e-103">El equipo de estado para la inscripción de un participante introdujo el estado finalizado.</span><span class="sxs-lookup"><span data-stu-id="2f14e-103">The state machine for a participant enlistment entered the finished state.</span></span>  
+<span data-ttu-id="86b78-104">El equipo de estado para la inscripción de un participante introdujo el estado finalizado.</span><span class="sxs-lookup"><span data-stu-id="86b78-104">The state machine for a participant enlistment entered the finished state.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2f14e-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="2f14e-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="86b78-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="86b78-105">Description</span></span>  
 
- <span data-ttu-id="2f14e-105">Seguido cuando una inscripción de participante subordinado ha completado el procesamiento 2pc.</span><span class="sxs-lookup"><span data-stu-id="2f14e-105">Traced when a subordinate participant enlistment has completed 2pc processing.</span></span> <span data-ttu-id="2f14e-106">Se puede confirmar o anular el resultado de la inscripción.</span><span class="sxs-lookup"><span data-stu-id="2f14e-106">The outcome for the enlistment can be Committed or Aborted.</span></span> <span data-ttu-id="2f14e-107">También se sigue si cualquier participante vota ReadOnly durante Prepare.</span><span class="sxs-lookup"><span data-stu-id="2f14e-107">It is also traced if any participant votes ReadOnly during Prepare.</span></span>  
+ <span data-ttu-id="86b78-106">Seguido cuando una inscripción de participante subordinado ha completado el procesamiento 2pc.</span><span class="sxs-lookup"><span data-stu-id="86b78-106">Traced when a subordinate participant enlistment has completed 2pc processing.</span></span> <span data-ttu-id="86b78-107">Se puede confirmar o anular el resultado de la inscripción.</span><span class="sxs-lookup"><span data-stu-id="86b78-107">The outcome for the enlistment can be Committed or Aborted.</span></span> <span data-ttu-id="86b78-108">También se sigue si cualquier participante vota ReadOnly durante Prepare.</span><span class="sxs-lookup"><span data-stu-id="86b78-108">It is also traced if any participant votes ReadOnly during Prepare.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f14e-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="2f14e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86b78-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="86b78-109">See also</span></span>
 
-- [<span data-ttu-id="2f14e-109">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="2f14e-109">Tracing</span></span>](index.md)
-- [<span data-ttu-id="2f14e-110">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="2f14e-110">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="2f14e-111">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="2f14e-111">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="86b78-110">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="86b78-110">Tracing</span></span>](index.md)
+- [<span data-ttu-id="86b78-111">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="86b78-111">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="86b78-112">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="86b78-112">Administration and Diagnostics</span></span>](../index.md)

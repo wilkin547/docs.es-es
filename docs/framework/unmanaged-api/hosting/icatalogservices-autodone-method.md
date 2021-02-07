@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICatalogServices:: autodone (método)'
 title: ICatalogServices::Autodone (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-ms.openlocfilehash: 958d36ee4d51d2975139acb9997cc19fb51a00c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d42b2e9eb56e6fbdcc404d227441cf7db4c0e554
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698460"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760568"
 ---
-# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="052dc-102">ICatalogServices::Autodone (Método)</span><span class="sxs-lookup"><span data-stu-id="052dc-102">ICatalogServices::Autodone Method</span></span>
+# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="a2279-103">ICatalogServices::Autodone (Método)</span><span class="sxs-lookup"><span data-stu-id="a2279-103">ICatalogServices::Autodone Method</span></span>
 
-<span data-ttu-id="052dc-103">Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="052dc-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+<span data-ttu-id="a2279-104">Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="a2279-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="052dc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="052dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2279-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a2279-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="052dc-105">Consulte también</span><span class="sxs-lookup"><span data-stu-id="052dc-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2279-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="a2279-106">See also</span></span>
 
-- [<span data-ttu-id="052dc-106">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="052dc-106">Hosting Interfaces</span></span>](hosting-interfaces.md)
+- [<span data-ttu-id="a2279-107">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="a2279-107">Hosting Interfaces</span></span>](hosting-interfaces.md)

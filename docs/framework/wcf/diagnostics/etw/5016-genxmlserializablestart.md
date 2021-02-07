@@ -1,31 +1,32 @@
 ---
+description: 'Más información acerca de: 5016-GenXmlSerializableStart'
 title: 5016 - GenXmlSerializableStart
 ms.date: 03/30/2017
 ms.assetid: e1284ef0-2ec9-4acf-8901-c61521561cce
-ms.openlocfilehash: 5a65a812e612bccc22d600cc4b727a8e0e0bd11c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e14816f528cae78c035ebd4861eae30fef621453
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760048"
 ---
-# <a name="5016---genxmlserializablestart"></a><span data-ttu-id="d8cf5-102">5016 - GenXmlSerializableStart</span><span class="sxs-lookup"><span data-stu-id="d8cf5-102">5016 - GenXmlSerializableStart</span></span>
+# <a name="5016---genxmlserializablestart"></a><span data-ttu-id="732dd-103">5016 - GenXmlSerializableStart</span><span class="sxs-lookup"><span data-stu-id="732dd-103">5016 - GenXmlSerializableStart</span></span>
 
-## <a name="properties"></a><span data-ttu-id="d8cf5-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="d8cf5-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="732dd-104">Propiedades</span><span class="sxs-lookup"><span data-stu-id="732dd-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="d8cf5-104">ID</span><span class="sxs-lookup"><span data-stu-id="d8cf5-104">ID</span></span>|<span data-ttu-id="d8cf5-105">5016</span><span class="sxs-lookup"><span data-stu-id="d8cf5-105">5016</span></span>|  
-|<span data-ttu-id="d8cf5-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="d8cf5-106">Keywords</span></span>|<span data-ttu-id="d8cf5-107">Serialización</span><span class="sxs-lookup"><span data-stu-id="d8cf5-107">Serialization</span></span>|  
-|<span data-ttu-id="d8cf5-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="d8cf5-108">Level</span></span>|<span data-ttu-id="d8cf5-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="d8cf5-109">Verbose</span></span>|  
-|<span data-ttu-id="d8cf5-110">Canal</span><span class="sxs-lookup"><span data-stu-id="d8cf5-110">Channel</span></span>|<span data-ttu-id="d8cf5-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="d8cf5-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="732dd-105">Id.</span><span class="sxs-lookup"><span data-stu-id="732dd-105">ID</span></span>|<span data-ttu-id="732dd-106">5016</span><span class="sxs-lookup"><span data-stu-id="732dd-106">5016</span></span>|  
+|<span data-ttu-id="732dd-107">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="732dd-107">Keywords</span></span>|<span data-ttu-id="732dd-108">Serialización</span><span class="sxs-lookup"><span data-stu-id="732dd-108">Serialization</span></span>|  
+|<span data-ttu-id="732dd-109">Nivel</span><span class="sxs-lookup"><span data-stu-id="732dd-109">Level</span></span>|<span data-ttu-id="732dd-110">Verbose</span><span class="sxs-lookup"><span data-stu-id="732dd-110">Verbose</span></span>|  
+|<span data-ttu-id="732dd-111">Canal</span><span class="sxs-lookup"><span data-stu-id="732dd-111">Channel</span></span>|<span data-ttu-id="732dd-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="732dd-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="d8cf5-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="d8cf5-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="732dd-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="732dd-113">Description</span></span>  
 
- <span data-ttu-id="d8cf5-113">Este evento se genera cuando se inicia Generate Xml serializable.</span><span class="sxs-lookup"><span data-stu-id="d8cf5-113">This event is emitted when the generate Xml serializable starts.</span></span>  
+ <span data-ttu-id="732dd-114">Este evento se genera cuando se inicia Generate Xml serializable.</span><span class="sxs-lookup"><span data-stu-id="732dd-114">This event is emitted when the generate Xml serializable starts.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="d8cf5-114">Message</span><span class="sxs-lookup"><span data-stu-id="d8cf5-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="732dd-115">Message</span><span class="sxs-lookup"><span data-stu-id="732dd-115">Message</span></span>  
 
- <span data-ttu-id="d8cf5-115">Inicio de Generate Xml serializable para '%1'.</span><span class="sxs-lookup"><span data-stu-id="d8cf5-115">Generate Xml serializable for '%1' start.</span></span>  
+ <span data-ttu-id="732dd-116">Inicio de Generate Xml serializable para '%1'.</span><span class="sxs-lookup"><span data-stu-id="732dd-116">Generate Xml serializable for '%1' start.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="d8cf5-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="d8cf5-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="732dd-117">Detalles</span><span class="sxs-lookup"><span data-stu-id="732dd-117">Details</span></span>
