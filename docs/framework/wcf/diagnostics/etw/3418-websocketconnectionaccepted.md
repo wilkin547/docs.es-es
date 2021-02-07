@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3418-WebSocketConnectionAccepted'
 title: 3418 - WebSocketConnectionAccepted
 ms.date: 03/30/2017
 ms.assetid: 684a1806-27a4-4ac8-87d4-9089d55def13
-ms.openlocfilehash: 90847dcb5b919bfd97c0960ae698f5566d425d1d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 251cd2f41d71e452a6b196ced1d98115da745ca1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245450"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669480"
 ---
 # <a name="3418---websocketconnectionaccepted"></a>3418 - WebSocketConnectionAccepted
 
@@ -15,7 +16,7 @@ ms.locfileid: "96245450"
   
 |||  
 |-|-|  
-|ID|3418|  
+|Id.|3418|  
 |Palabras clave|HTTP|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

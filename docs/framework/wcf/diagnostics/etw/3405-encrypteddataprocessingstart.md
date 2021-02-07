@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3405-EncryptedDataProcessingStart'
 title: 3405 - EncryptedDataProcessingStart
 ms.date: 03/30/2017
 ms.assetid: bdb6e4e8-ec85-4629-a43a-7836d445ecab
-ms.openlocfilehash: d04e0bfa26ab82261dfe7647d29d7e62d6947d18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3afedbc3a399a9d5c2d29633e282488fb670d921
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669870"
 ---
 # <a name="3405---encrypteddataprocessingstart"></a>3405 - EncryptedDataProcessingStart
 
@@ -15,7 +16,7 @@ ms.locfileid: "96288949"
   
 |||  
 |-|-|  
-|ID|3405|  
+|Id.|3405|  
 |Palabras clave|Seguridad|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
