@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo2:: Getgenerationbounds ((método)'
 title: ICorProfilerInfo2::GetGenerationBounds (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c37185f-d1e0-4a6e-8b99-707f7df61d88
 topic_type:
 - apiref
-ms.openlocfilehash: 2b9bf1a9f40764f6d0544bafb91f967905eb40c7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2f6fb9037be2722166653cceb4081a5ddcb81327
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753233"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds (Método)
 
@@ -46,7 +47,7 @@ HRESULT GetGenerationBounds(
  `ranges`  
  enuncia Matriz de estructuras de [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) , cada una de las cuales describe un intervalo (es decir, un bloque) de memoria dentro de la generación que está en proceso de recolección de elementos no utilizados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Se puede llamar al método `GetGenerationBounds` desde cualquier devolución de llamada del generador de perfiles, siempre que la recolección de elementos no utilizados no esté en curso.
 
@@ -66,7 +67,7 @@ HRESULT GetGenerationBounds(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)

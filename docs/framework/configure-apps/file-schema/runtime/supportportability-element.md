@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <supportPortability> elemento'
 title: <supportPortability> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 05ce6943b9456d4fd380ea8d6cf354d197b92f96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a39f946d5b3841af5f4254cc2f70142aa6c013d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183954"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754516"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> (Elemento)
 
@@ -81,7 +82,7 @@ El siguiente ejemplo permite a una aplicación tener referencias a la implementa
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [-appconfig (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Información general sobre la unificación de ensamblados de .NET Framework](/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataDispenser:: Openscopeonmemory ((método)'
 title: IMetaDataDispenser::OpenScopeOnMemory (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 26293e38a275ca691c7d48dceb12c1e7dd316536
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 589c68ab60eec55efc43d077807789e75ae1682f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753593"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory (Método)
 
@@ -57,7 +58,7 @@ HRESULT OpenScopeOnMemory (
  `ppIUnk`  
  enuncia Puntero a la interfaz devuelta.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La copia en memoria de los metadatos se puede consultar utilizando métodos de una de las interfaces de "importación" o se pueden agregar al uso de métodos de una de las interfaces de "emisión".  
   
@@ -75,7 +76,7 @@ HRESULT OpenScopeOnMemory (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataDispenser (Interfaz)](imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx (Interfaz)](imetadatadispenserex-interface.md)

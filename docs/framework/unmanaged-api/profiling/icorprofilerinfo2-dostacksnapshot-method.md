@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo2::D método oStackSnapshot'
 title: ICorProfilerInfo2::DoStackSnapshot (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 10cc9dedfa34cd5235df721d7010bbd928fbc3ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e30e11dfe04da1e7a5adfef004036507b724963d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753255"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot (Método)
 
@@ -66,7 +67,7 @@ HRESULT DoStackSnapshot(
  `contextSize`  
  de Tamaño de la `CONTEXT` estructura, al que hace referencia el `context` parámetro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se pasa null para, se `thread` produce una instantánea del subproceso actual. Las instantáneas se pueden tomar de otros subprocesos solo si el subproceso de destino se suspende en el momento.  
   
@@ -112,7 +113,7 @@ HRESULT DoStackSnapshot(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)

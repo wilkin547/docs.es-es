@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3371-MtomMessageEncodingStart'
 title: 3371 - MtomMessageEncodingStart
 ms.date: 03/30/2017
 ms.assetid: b1ba417f-f765-4567-82e3-ea2080e0ac73
-ms.openlocfilehash: f66aa1f4c9117fe10076c972e74bb9f87717f0ae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 234ce0e5cad1353aa58c9ec38344bb8424fbf148
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753021"
 ---
 # <a name="3371---mtommessageencodingstart"></a>3371 - MtomMessageEncodingStart
 
@@ -15,7 +16,7 @@ ms.locfileid: "96259647"
   
 |||  
 |-|-|  
-|ID|3371|  
+|Id.|3371|  
 |Palabras clave|Canal|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <supportedRuntime> elemento'
 title: '<supportedRuntime> elemento de configuración: .NET'
 ms.date: 04/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 04c2b3fec591e1b99757085afdddf26c529591b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754503"
 ---
 # <a name="supportedruntime-element"></a>Elemento \<supportedRuntime>
 
@@ -83,13 +84,13 @@ El `sku` atributo usa un moniker de la plataforma de destino (TFM) para indicar 
 |4.0, Client Profile, actualización 2|". NETFramework, version = v 4.0.2, Profile = Client "|
 |4.0, actualización 3 de la plataforma|". NETFramework, versión = v 4.0.3 "|
 |4.0, Client Profile, actualización 3|". NETFramework, versión = v 4.0.3, perfil = cliente "|
-|4.5|".NETFramework,Version=v4.5"|
+|4.5.|".NETFramework,Version=v4.5"|
 |4.5.1|".NETFramework,Version=v4.5.1"|
 |4.5.2|".NETFramework,Version=v4.5.2"|
 |4.6|".NETFramework,Version=v4.6"|
 |4.6.1|".NETFramework,Version=v4.6.1"|
 |4.6.2|". NETFramework, versión = v 4.6.2 "|
-|4.7|". NETFramework, versión = v 4.7 "|
+|4,7|". NETFramework, versión = v 4.7 "|
 |4.7.1|". NETFramework, versión = v 4.7.1 "|
 |4.7.2|". NETFramework, versión = v 4.7.2 "|
 |4.8|". NETFramework, versión = v 4.8 "|
@@ -110,7 +111,7 @@ En el ejemplo siguiente se muestra cómo especificar la versión del runtime com
 
 Este elemento se puede utilizar en el archivo de configuración de la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de configuración de inicio](index.md)
 - [Esquema de los archivos de configuración](../index.md)

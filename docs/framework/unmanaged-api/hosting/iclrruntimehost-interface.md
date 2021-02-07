@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeHost (interfaz)'
 title: ICLRRuntimeHost (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb0c5f65-3791-47bc-b833-2f84f4101ba5
 topic_type:
 - apiref
-ms.openlocfilehash: 8d88222215eb31e1c63f3b26079517c4b088e81b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 92bab42fa1cf2cca5caa0eb039c88fec3e65390c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753892"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost (Interfaz)
 
@@ -39,11 +40,11 @@ Proporciona una funcionalidad similar a la de la interfaz [ICorRuntimeHost](icor
 |[Método GetCLRControl](iclrruntimehost-getclrcontrol-method.md)|Obtiene un puntero de interfaz de tipo [ICLRControl](iclrcontrol-interface.md) que los hosts pueden utilizar para personalizar los aspectos del Common Language Runtime (CLR).|  
 |[Método GetCurrentAppDomainId](iclrruntimehost-getcurrentappdomainid-method.md)|Obtiene el identificador numérico del <xref:System.AppDomain> que se está ejecutando actualmente.|  
 |[Método SetHostControl](iclrruntimehost-sethostcontrol-method.md)|Establece la interfaz de control host. Debe llamar a `SetHostControl` antes de llamar a `Start` .|  
-|[Método Start](iclrruntimehost-start-method.md)|Inicializa CLR en un proceso.|  
-|[Método Stop](iclrruntimehost-stop-method.md)|Detiene la ejecución del código en tiempo de ejecución.|  
+|[Start (método)](iclrruntimehost-start-method.md)|Inicializa CLR en un proceso.|  
+|[STOP (método)](iclrruntimehost-stop-method.md)|Detiene la ejecución del código en tiempo de ejecución.|  
 |[Método UnloadAppDomain](iclrruntimehost-unloadappdomain-method.md)|Descarga el <xref:System.AppDomain> que corresponde al identificador numérico especificado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  A partir de la .NET Framework 4, use la interfaz [ICLRMetaHost](iclrmetahost-interface.md) para obtener un puntero a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) y, a continuación, llame al método [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) para obtener un puntero a `ICLRRuntimeHost` . En versiones anteriores del .NET Framework, el host obtiene un puntero a una instancia llamando a `ICLRRuntimeHost` [CorBindToRuntimeEx](corbindtoruntimeex-function.md) o [CorBindToCurrentRuntime (](corbindtocurrentruntime-function.md). Para proporcionar implementaciones de cualquiera de las tecnologías que se proporcionan en la .NET Framework versión 2,0, debe utilizar `ICLRRuntimeHost` en lugar de `ICorRuntimeHost` .  
   
@@ -60,7 +61,7 @@ Proporciona una funcionalidad similar a la de la interfaz [ICorRuntimeHost](icor
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CorBindToCurrentRuntime (Función)](corbindtocurrentruntime-function.md)
 - [CorBindToRuntimeEx (Función)](corbindtoruntimeex-function.md)

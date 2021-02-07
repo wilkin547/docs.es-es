@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3364-SharedListenerProxyRegisterStart'
 title: 3364 - SharedListenerProxyRegisterStart
 ms.date: 03/30/2017
 ms.assetid: dfbbf889-46ef-484c-8811-1f51ae4790d8
-ms.openlocfilehash: 6700d8ae2099fb537c65d6f0a07b6be0d57ab5fe
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 112fe37cc88156a9ba1c1d02b030db77d2fda74d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282488"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753112"
 ---
 # <a name="3364---sharedlistenerproxyregisterstart"></a>3364 - SharedListenerProxyRegisterStart
 
@@ -15,7 +16,7 @@ ms.locfileid: "96282488"
   
 |||  
 |-|-|  
-|ID|3364|  
+|Id.|3364|  
 |Palabras clave|ActivationServices|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

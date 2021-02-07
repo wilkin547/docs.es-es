@@ -1,15 +1,16 @@
 ---
-title: <customTrackingQueries>de WCF
+description: 'Más información sobre: <customTrackingQueries> de WCF'
+title: <customTrackingQueries> de WCF
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: 2c4bd74ae346c536e8bc0ae454e638b7c76a40fc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ac1cdcc074201b97344b3727f6957e1b62c88dab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855440"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754477"
 ---
-# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries>de WCF
+# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries> de WCF
 
 Representa una colección de consultas que se utilizan para realizar el seguimiento de los eventos que defina en sus actividades de código. La consulta es necesaria para que un participante de seguimiento se suscriba a los registros del seguimiento personalizados.  
   
@@ -60,7 +61,7 @@ Ninguno.
 |-------------|-----------------|  
 |[\<workflow>](../windows-workflow-foundation/workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad `activityDefinitionId`.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>

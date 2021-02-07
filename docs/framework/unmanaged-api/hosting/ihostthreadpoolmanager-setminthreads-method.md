@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostThreadPoolManager:: SetMinThreads ((método)'
 title: IHostThreadPoolManager::SetMinThreads (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10409db9-9fd2-4e4d-b8cd-cf6fec0afaa2
 topic_type:
 - apiref
-ms.openlocfilehash: d6f56f689a35fa025a924be0db67c893f160fc7f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 00d6bd8212ee95318bbe546da80ca34bff7d1324
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730739"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753762"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads (Método)
 
@@ -51,7 +52,7 @@ HRESULT SetMinThreads (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_NOTIMPL|El host no proporciona una implementación de `SetMinThreads` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  No es necesario que un host proporcione una implementación de `SetMinThreads` . En este caso, debe devolver un valor HRESULT de E_NOTIMPL.  
   
@@ -65,7 +66,7 @@ HRESULT SetMinThreads (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.ThreadPool.SetMinThreads%2A>
 - <xref:System.Threading.ThreadPool>

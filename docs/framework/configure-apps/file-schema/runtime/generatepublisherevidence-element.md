@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <generatePublisherEvidence> elemento'
 title: <generatePublisherEvidence> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2a949b52abe5ec10872d2cade49a0556063b2018
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754529"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> (Elemento)
 
@@ -55,7 +56,7 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > En el .NET Framework 4 y versiones posteriores, este elemento no tiene ningún efecto en los tiempos de carga de ensamblados. Para obtener más información, consulte la sección "simplificación de la Directiva de seguridad" en [cambios de seguridad](/previous-versions/dotnet/framework/security/security-changes).  
@@ -81,7 +82,7 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

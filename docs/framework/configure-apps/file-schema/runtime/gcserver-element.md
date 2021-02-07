@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <gcServer> elemento'
 title: Elemento gcServer
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - gcServer element
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-ms.openlocfilehash: 8eab5e36bab90510aff4f1a3e15328197ac59ed7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bed347699786682421292392a8d2449b7aac61d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73968947"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754542"
 ---
 # <a name="gcserver-element"></a>Elemento \<gcServer>
 
@@ -58,7 +59,7 @@ Ninguno.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Common Language Runtime (CLR) admite dos tipos de recolección de elementos no utilizados: de estación de trabajo, que está disponible en todos los sistemas, y de servidor, que está disponible en sistemas multiprocesador. Use el elemento **gcServer** para controlar el tipo de recolección de elementos no utilizados que CLR realiza. Use la propiedad <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> para determinar si la recolección de elementos no utilizados de servidor está habilitada.
 
@@ -89,7 +90,7 @@ En el ejemplo siguiente se habilita la recolección de elementos no utilizados d
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Esquema de la configuración de Common Language Runtime](index.md)

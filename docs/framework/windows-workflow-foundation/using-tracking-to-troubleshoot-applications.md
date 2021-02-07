@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: uso del seguimiento para solucionar problemas de aplicaciones'
 title: Usar el seguimiento para resolver problemas de las aplicaciones
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: 62f2240831dd33bdaf78655199aad75b7e29c59c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9ff2c1b9a4a35a75a9f4d2229b5b43d6607e7557
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293577"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754997"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usar el seguimiento para resolver problemas de las aplicaciones
 

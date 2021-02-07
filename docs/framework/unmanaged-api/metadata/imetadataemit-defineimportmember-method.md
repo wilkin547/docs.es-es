@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataEmit::D método efineImportMember'
 title: IMetaDataEmit::DefineImportMember (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: 60210bc8f93294c3c3380c36096f3e80e5b26643
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 91c6ea70d38b8d4f73570ed19d86bacca30ebae5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723264"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753463"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember (Método)
 
@@ -67,11 +68,11 @@ HRESULT DefineImportMember (
  `pmr`  
  enuncia El `mdMemberRef` token que se define en el ámbito actual para la referencia de miembro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `DefineImportMember` método busca el miembro, especificado por `mbMember` , que se define en otro ámbito, especificado por `pImport` , y recupera sus propiedades. Usa esta información para llamar al método [IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md) en el ámbito actual para crear la referencia de miembro.  
   
- Normalmente, antes de usar el `DefineImportMember` método, debe crear, en el ámbito actual, una referencia de tipo o referencia de módulo para la clase primaria, la interfaz o el módulo del miembro de destino. A continuación, se pasa el token de metadatos para esta referencia en el `tkParent` argumento. No es necesario crear una referencia al elemento primario del miembro de destino si el compilador o el vinculador lo resolverán más adelante. Resumiendo:  
+ Normalmente, antes de usar el `DefineImportMember` método, debe crear, en el ámbito actual, una referencia de tipo o referencia de módulo para la clase primaria, la interfaz o el módulo del miembro de destino. A continuación, se pasa el token de metadatos para esta referencia en el `tkParent` argumento. No es necesario crear una referencia al elemento primario del miembro de destino si el compilador o el vinculador lo resolverán más adelante. En resumen:  
   
 - Si el miembro de destino es un campo o un método, use el método [IMetaDataEmit::D efinetyperefbyname](imetadataemit-definetyperefbyname-method.md) o [IMetaDataEmit::D efineimporttype](imetadataemit-defineimporttype-method.md) para crear una referencia de tipo, en el ámbito actual, para la clase primaria o la interfaz primaria del miembro.  
   
@@ -89,7 +90,7 @@ HRESULT DefineImportMember (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

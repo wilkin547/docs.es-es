@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: <GCNoAffinitize> elemento'
 title: Elemento GCNoAffinitize
 ms.date: 11/08/2019
 helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
-ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 139c0fd9e1ec829a3569b77a85e6526bec765e21
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84004743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754555"
 ---
 # <a name="gcnoaffinitize-element"></a>Elemento \<GCNoAffinitize>
 
@@ -54,7 +55,7 @@ Ninguno.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 De forma predeterminada, los subprocesos de GC de servidor son afinidad cons con sus respectivas CPU. Cada uno de los procesadores disponibles del sistema tiene su propio subproceso y montón de GC. Esta suele ser la configuración preferida, ya que optimiza el uso de la memoria caché. A partir de .NET Framework 4.6.2, al establecer el atributo del elemento **GCNoAffinitize** `enabled` en `true` , se puede especificar que los subprocesos de GC del servidor y las CPU no deben estar estrechamente acoplados.
 
@@ -87,7 +88,7 @@ En el ejemplo siguiente no se establecer afinidad entre los subprocesos de GC de
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Elemento GCHeapAffinitizeMask](gcheapaffinitizemask-element.md)

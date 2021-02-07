@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugMergedAssemblyRecord:: getCulture ((método)'
 title: ICorDebugMergedAssemblyRecord::GetCulture (método)
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-ms.openlocfilehash: 636d0fd25d345f513e00504b9eb5adb4f0c03b0f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f530bb68a1e7e4c4bff53b8f3046f6ae9ca42aab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710654"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754009"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord::GetCulture (método)
 
@@ -34,7 +35,7 @@ HRESULT GetCulture(
  `szCulture`  
  [out] Matriz de caracteres que contiene el nombre de referencia cultural.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El nombre de referencia cultural es una cadena única que identifica una referencia cultural, como "en-US" [para la referencia cultural inglés (Estados Unidos)] o "neutral" (para una referencia cultural neutra).  
   
@@ -51,7 +52,7 @@ HRESULT GetCulture(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

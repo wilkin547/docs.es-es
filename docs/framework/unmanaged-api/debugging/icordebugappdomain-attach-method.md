@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugAppDomain:: Attach (método)'
 title: ICorDebugAppDomain::Attach (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0358b84a-4236-4c34-945b-4babff7df570
 topic_type:
 - apiref
-ms.openlocfilehash: d133cacb611a1c7bd03d7653f46c2e5fb1acc043
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94448937a735b30d0403a207992dae29920a93bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723355"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754282"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach (Método)
 
@@ -32,7 +33,7 @@ Asocia el depurador al dominio de aplicación.
 HRESULT Attach ();  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El depurador se debe asociar al dominio de aplicación para recibir eventos y habilitar la depuración del dominio de aplicación.  
   

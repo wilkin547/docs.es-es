@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3398-PipeSharedMemoryCreated'
 title: 3398 - PipeSharedMemoryCreated
 ms.date: 03/30/2017
 ms.assetid: d68ec947-a174-4425-9c12-de56dd3a7f7a
-ms.openlocfilehash: ce31483679d6fdeb77b976e8103ebbe154f9aba3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a1c2afa0aa44817ab83fe8cccb17c6da191b95c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249571"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752813"
 ---
 # <a name="3398---pipesharedmemorycreated"></a>3398 - PipeSharedMemoryCreated
 
@@ -15,7 +16,7 @@ ms.locfileid: "96249571"
   
 |||  
 |-|-|  
-|ID|3398|  
+|Id.|3398|  
 |Palabras clave|Canal|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerCallback9::D ynamicMethodUnloaded (método)'
 title: ICorProfilerCallback9::D método ynamicMethodUnloaded
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 0e6fe3430696c16405d4ae414436bb12882c08a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 243660d3159e3c8c1d052c08e9c7499e7065d301
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753333"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::D método ynamicMethodUnloaded
 
@@ -44,7 +45,7 @@ El identificador de la función en memoria que se ha recolectado y descargado.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback8. DynamicMethodJITCompilationStarted, método](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8. DynamicMethodJITCompilationFinished, método](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

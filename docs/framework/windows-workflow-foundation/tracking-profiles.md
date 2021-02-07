@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: perfiles de seguimiento'
 title: Perfiles de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: ceeb0f5533bb4c637ea7df52249f5b00067d9b3d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9748f0452a1699e08760372f826f2458d82f4b79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755153"
 ---
 # <a name="tracking-profiles"></a>Perfiles de seguimiento
 
@@ -307,7 +308,7 @@ Los perfiles de seguimiento se estructuran como suscripciones declarativas para 
   };
   ```
 
-### <a name="annotations"></a>anotaciones
+### <a name="annotations"></a>Anotaciones
 
 Las anotaciones le permiten etiquetar de forma arbitraria registros de seguimiento con un valor que se puede configurar después de la compilación. Por ejemplo, puede que desee etiquetar varios registros de seguimiento en varios flujos de trabajo con "servidor de correo" = = "mail server1". De esta forma, se facilita la búsqueda de todos los registros con esta etiqueta cuando se realizan consultas de registros de seguimiento posteriormente.
 

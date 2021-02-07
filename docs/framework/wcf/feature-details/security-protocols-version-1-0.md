@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: protocolos de seguridad versión 1,0'
 title: Protocolos de seguridad versión 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: d98a05bbcb8413c33672a17580c6d16b57c63b83
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c807f0b844fb9cb861148afa63d83826a9740c98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752735"
 ---
 # <a name="security-protocols-version-10"></a>Protocolos de seguridad versión 1.0
 
@@ -39,7 +40,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
 - Patrones de intercambio de mensajes.  
   
-|Modo de autenticación|Autenticación de clientes|Autenticación de servidor|Mode|  
+|Modo de autenticación|Autenticación de clientes|Autenticación de servidor|Modo|  
 |-------------------------|---------------------------|---------------------------|----------|  
 |UserNameOverTransport|Nombre de usuario/contraseña|X509|Transporte|  
 |CertificateOverTransport|X509|X509|Transporte|  
@@ -201,7 +202,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 
  Con este modo de autenticación, el cliente se autentica con un token de nombre de usuario que aparece en la capa de SOAP como un token auxiliar firmado que siempre se envía desde el iniciador al destinatario. La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte. El enlace utilizado es un enlace de transporte.  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='UsernameOverTransport_policy' >  
@@ -287,7 +288,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 
  Con este modo de autenticación el cliente se autentica utilizando un certificado X.509 que aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario. La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte. El enlace utilizado es un enlace de transporte.  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='CertificateOverTransport_policy' >  
@@ -381,7 +382,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 
  Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un servicio de token de seguridad (STS) y demuestra que conoce una clave compartida. El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario. La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte. El enlace es un enlace de transporte.  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='IssuedTokenOverTransport_policy' >  
@@ -479,7 +480,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 
  Con este modo de autenticación, el cliente se autentica en el servicio utilizando un tique de Kerberos. El token de Kerberos aparece en la capa de SOAP como un token auxiliar de aprobación. La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte. El enlace es un enlace de transporte.  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='KerberosOverTransport_policy' >  
@@ -572,7 +573,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 
  Con este modo de negociación, se usa un protocolo de negociación para realizar la autenticación del cliente y del servidor. Se utiliza Kerberos si es posible; de lo contrario, se utiliza NTLM. El SCT resultante aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario. El servicio se autentica además en el nivel de transporte por un certificado X.509. El enlace utilizado es un enlace de transporte. "SPNEGO" (negociación) describe cómo WCF usa el protocolo de negociación binaria SSPI con WS-Trust. Los ejemplos de encabezados de seguridad de esta sección tienen lugar una vez se ha establecido SCT mediante el protocolo de enlace SPNEGO.  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='SspiNegotiatedOverTransport_policy' >  
@@ -683,7 +684,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Cifrar firma: True  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='MutualCertificate_WSS10_policy' >  
@@ -849,7 +850,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Cifrar firma: True  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='MutualCertificateDuplex_policy' >  
@@ -978,7 +979,7 @@ Protección de tokens: False
   
  Los modos de autenticación anteriores solo difieren en los tokens auxiliares que utilizan. AnonymousForCertificate no tiene ningún token auxiliar, MutualCertificate WSS 1.1 tiene el certificado X509 de cliente como un token auxiliar de aprobación, UserNameForCertificate tiene un token de nombre de usuario como un token auxiliar firmado e IssuedTokenForCertificate tiene el token emitido como un token auxiliar de aprobación.  
   
- Directiva  
+ Directiva de  
   
  Enlace simétrico  
   
@@ -1043,7 +1044,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 
  Con este modo de autenticación, el cliente es anónimo y el servicio se autentica utilizando un certificado X.509. El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 6.4.2.  
   
- Directiva  
+ Directiva de  
   
  Vea "Directiva" en 6.2.3 más arriba para obtener detalles sobre enlaces  
   
@@ -1153,7 +1154,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 
  Con este modo de autenticación el cliente se autentica en el servicio utilizando un token de nombre de usuario que aparece en la capa SOAP como un token auxiliar firmado. El servicio autentica al cliente utilizando un certificado X.509. El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.  
   
- Directiva  
+ Directiva de  
   
  Vea "Directiva" en 6.2.3 más arriba para obtener detalles sobre enlaces  
   
@@ -1279,7 +1280,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 
  Con este modo de autenticación el cliente se autentica mediante un certificado X.509 que aparece en la capa SOAP como el token auxiliar de aprobación. La autenticación del servicio también se realiza mediante un certificado X.509. El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.  
   
- Directiva  
+ Directiva de  
   
  Vea Directiva en 6.2.3 para obtener detalles sobre enlaces  
   
@@ -1426,7 +1427,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 
  Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida. El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación. El servicio autentica al cliente utilizando un certificado X.509. El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.  
   
- Directiva  
+ Directiva de  
   
  Vea Directiva en 6.2.3 más arriba para obtener detalles sobre enlaces  
   
@@ -1587,7 +1588,7 @@ Protección de tokens: False
   
  Cifrar firma: True  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='Kerberos_policy' >  
@@ -1721,7 +1722,7 @@ Protección de tokens: False
   
  Cifrar firma: True  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='CustomBinding_ISimple3_policy' >  
@@ -1954,7 +1955,7 @@ Protección de tokens: False
 
  Con este modo de autenticación, el cliente es anónimo y el servicio se autentica utilizando un certificado X.509. El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 6.5.1 más arriba.  
   
- Directiva  
+ Directiva de  
   
  Vea Directiva en 6.5.1 más arriba para obtener detalles sobre enlaces.  
   
@@ -2060,7 +2061,7 @@ Protección de tokens: False
 
  Con este modo de autenticación el cliente se autentica el servicio utilizando un token de nombre de usuario que aparece en la capa SOAP como un token auxiliar firmado. La autenticación del servicio se realiza mediante un certificado X.509. El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 6.5.1.  
   
- Directiva  
+ Directiva de  
   
  Vea la sección 6.5.1 anterior para obtener detalles sobre los enlaces  
   
@@ -2186,7 +2187,7 @@ Protección de tokens: False
 
  Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida. El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación. La autenticación del servicio se realiza mediante un certificado X.509. El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 6.5.1 más arriba.  
   
- Directiva  
+ Directiva de  
   
  Vea la sección 6.5.1 anterior para obtener detalles sobre los enlaces  
   
@@ -2338,7 +2339,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 
  Con este modo de autenticación, el cliente y el servicio autentican utilizando los certificados X.509. El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 6.5.1 más arriba.  
   
- Directiva  
+ Directiva de  
   
  Vea la sección 6.5.1 anterior para obtener detalles sobre los enlaces  
   
@@ -2468,7 +2469,7 @@ Protección de tokens: False
   
  Cifrar firma: True  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='CustomBinding_ISimple13_policy' >  
@@ -2623,7 +2624,7 @@ Protección de tokens: False
 
  El enlace utilizado es un enlace simétrico donde el token de protección es un SCT por WS-SecureConversation (WS SC). El SCT se negocia mediante WS-Trust (WS-Trust) o WS-SecureConversation (WS-SC) según un enlace anidado, que es en sí mismo un enlace simétrico que usa un protocolo de negociación. El protocolo de negociación utilizará Kerberos para realizar la autenticación de cliente y servidor si es posible. Si no se puede utilizar Kerberos, se volverá a NTLM.  
   
- Directiva  
+ Directiva de  
   
 ```xml  
 <wsp:Policy wsu:Id='SecureConversation_policy' >  

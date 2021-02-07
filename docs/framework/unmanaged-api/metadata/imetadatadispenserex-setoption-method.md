@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataDispenserEx:: SetOption (método)'
 title: IMetaDataDispenserEx::SetOption (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 4216658eb562c5c57b75c3c257cd8e53a7a34221
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fdaa280619eb750ea9357f590c3b91cf398608f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753515"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption (Método)
 
@@ -43,7 +44,7 @@ HRESULT SetOption (
  `pValue`  
  de Valor que se va a usar para establecer la opción. El tipo de este valor debe ser una variante del tipo de la opción especificada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En la tabla siguiente se enumeran los GUID disponibles `optionId` a los que puede apuntar el parámetro y los valores válidos correspondientes para el `pValue` parámetro.  
   
@@ -73,7 +74,7 @@ HRESULT SetOption (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataDispenserEx (Interfaz)](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser (Interfaz)](imetadatadispenser-interface.md)

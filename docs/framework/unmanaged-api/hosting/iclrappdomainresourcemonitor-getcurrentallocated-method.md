@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRAppDomainResourceMonitor:: Getcurrentallocated ((método)'
 title: ICLRAppDomainResourceMonitor::GetCurrentAllocated (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7bab209c-efd4-44c2-af30-61abab0ae2fc
 topic_type:
 - apiref
-ms.openlocfilehash: d3bd948dfe4a5cf97e3e3e430f551e7bc6404690
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d7aaf31f775a9d6e2af95cf1a832c78587a85fe1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700800"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753957"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated (Método)
 
@@ -50,7 +51,7 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 |S_OK|El método se completó correctamente.|  
 |COR_E_APPDOMAINUNLOADED|El dominio de aplicación se ha descargado o no existe.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método es el equivalente no administrado de la propiedad administrada <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> .  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ITypeName:: GetNames (método)'
 title: ITypeName::GetNames (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2a3637b-d1e9-4d93-9e9b-0555fbff793d
 topic_type:
 - apiref
-ms.openlocfilehash: 91e73f8e3d2e3c372d3fe1c4fd4fccf6ff67b363
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 958e24947adc02713d48f16b916c3ed669080b8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727814"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753697"
 ---
 # <a name="itypenamegetnames-method"></a>ITypeName::GetNames (Método)
 
@@ -46,6 +47,6 @@ HRESULT GetNames (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)

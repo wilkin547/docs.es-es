@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRAppDomainResourceMonitor:: Getcurrentcputime ((método)'
 title: ICLRAppDomainResourceMonitor::GetCurrentCpuTime (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebc9cc33-fcd6-4cae-9ecb-ea21c51874e6
 topic_type:
 - apiref
-ms.openlocfilehash: a0b966e85bedcbef622aba2f6b181b98e0950e01
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ce36bf4ab88f953834d3ff12404bcaadcb42812d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753934"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime (Método)
 
@@ -49,7 +50,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 |COR_E_APPDOMAINUNLOADED|El dominio de aplicación se ha descargado o no existe.|  
 |E_FAIL|La supervisión de recursos del dominio de aplicación no está habilitada.<br /><br /> o bien<br /><br /> Todos los demás errores.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método es el equivalente no administrado de la propiedad administrada <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> .  
   

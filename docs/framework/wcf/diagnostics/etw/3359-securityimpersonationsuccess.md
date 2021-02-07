@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3359-SecurityImpersonationSuccess'
 title: 3359 - SecurityImpersonationSuccess
 ms.date: 03/30/2017
 ms.assetid: 80bcea7c-ae57-4b89-8032-5f9787545b07
-ms.openlocfilehash: 523e58e545afce3120c7f2c5202cda04b8ca7d89
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f5d2f4f24c1ed80990b927d103fc00eeb8fa7d4b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753177"
 ---
 # <a name="3359---securityimpersonationsuccess"></a>3359 - SecurityImpersonationSuccess
 
@@ -15,7 +16,7 @@ ms.locfileid: "96282668"
   
 |||  
 |-|-|  
-|ID|3359|  
+|Id.|3359|  
 |Palabras clave|Seguridad|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRAppDomainResourceMonitor:: Getcurrentsurvived ((método)'
 title: ICLRAppDomainResourceMonitor::GetCurrentSurvived (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-ms.openlocfilehash: eba9caece91e369cd46aed652b559ace49c77725
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20aea8583da207144aa0ffe29591a113da789fa8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704913"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753918"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived (Método)
 
@@ -55,7 +56,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |S_OK|El método se completó correctamente.|  
 |COR_E_APPDOMAINUNLOADED|El dominio de aplicación se ha descargado o no existe.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Las estadísticas se actualizan solo después de una recolección completa de elementos no utilizados de bloqueo; es decir, una colección que incluye todas las generaciones y que detiene la aplicación mientras se produce la recolección. Por ejemplo, la <xref:System.GC.Collect?displayProperty=nameWithType> sobrecarga del método realiza una colección completa de bloqueos. La recolección de elementos no utilizados simultánea se produce en segundo plano y no bloquea la aplicación.  
   

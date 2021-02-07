@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: host de servicio personalizado'
 title: Host de servicio personalizado
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 56846f4021b2a0be1801decedb02c4c637847d07
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a18c3ec10eef5fc2c436a2fc2665ea73ed963384
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275598"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752449"
 ---
 # <a name="custom-service-host"></a>Host de servicio personalizado
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: dataContractSerializer'
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 0e4cbc50c25d4fa1f67f283f2b52d4b174428cd3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5dee59ba97a1632c142179aee79058dd3ce8c349
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754412"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 
@@ -48,7 +49,7 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener más información sobre los tipos conocidos, vea la documentación <xref:System.Runtime.Serialization.DataContractSerializer>.  
   

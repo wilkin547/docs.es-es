@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugProcess:: SetThreadContext (método)'
 title: ICorDebugProcess::SetThreadContext (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: 5b4052485a6d420eb83578d135ce51f8a918aab0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3576c3bf3159e3960e7d2d4601ac2fb67d7218f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724525"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753983"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext (Método)
 
@@ -49,7 +50,7 @@ HRESULT SetThreadContext(
   
  El contexto especifica la arquitectura del procesador en el que se ejecuta el subproceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El depurador debe llamar a este método en lugar de a la función de Win32 `SetThreadContext` , ya que el subproceso puede estar realmente en un estado "secuestrado", en el que su contexto ha cambiado temporalmente. Este método solo se debe usar cuando un subproceso está en código nativo. Use [ICorDebugRegisterSet](icordebugregisterset-interface.md) para subprocesos en código administrado. Nunca debe modificar el contexto de un subproceso durante un evento de depuración fuera de banda (OOB).  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Guía de interoperabilidad de los protocolos de servicios Web'
 title: Guía de interoperabilidad de los protocolos de servicios Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: f35ca629da65af749897d28d28808d06eced7aa8
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: cab744818d3a52c6f6cd0d95195d9112ac9babf6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752553"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guía de interoperabilidad de los protocolos de servicios Web
 
@@ -21,7 +22,7 @@ La interoperabilidad de los protocolos de infraestructura la proporcionan las es
 
 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> admite las especificaciones de la tabla siguiente.
 
-|Especificación/documento|Link|
+|Especificación/documento|Vínculo|
 |-----------------------------|----------|
 |HTTP 1.1|[RFC 2616](https://www.rfc-editor.org/rfc/rfc2616.txt)|
 |Enlace HTTP de SOAP 1.1|[Protocolo simple de acceso a objetos (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), sección 7|
@@ -29,7 +30,7 @@ La interoperabilidad de los protocolos de infraestructura la proporcionan las es
 
 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> y <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> admiten las especificaciones de la tabla siguiente.
 
-|Especificación/documento|Link|
+|Especificación/documento|Vínculo|
 |-----------------------------|----------|
 |XML|[Extensible Markup Language (XML) 1.0 (Fourth Edition)](https://www.w3.org/TR/REC-xml/)|
 |SOAP 1,1|[Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)|
@@ -44,7 +45,7 @@ La interoperabilidad de los protocolos de infraestructura la proporcionan las es
 
 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> admite las especificaciones de la tabla siguiente.
 
-|Especificación/documento|Link|
+|Especificación/documento|Vínculo|
 |-----------------------------|----------|
 |XOP|[XML-binary Optimized Packaging](https://www.w3.org/TR/xop10/)|
 |MTOM + Enlace SOAP1.2|[Mecanismo de optimización de transmisión de mensajes SOAP](https://www.w3.org/TR/soap12-mtom/)|
@@ -53,7 +54,7 @@ La interoperabilidad de los protocolos de infraestructura la proporcionan las es
 
 <xref:System.ServiceModel.Channels.SecurityBindingElement> admite las especificaciones de la tabla siguiente.
 
-|Especificación/documento|Link|
+|Especificación/documento|Vínculo|
 |-----------------------------|----------|
 |WSS: Message Security 1,0 de SOAP|[Seguridad de Servicios web: seguridad del mensaje SOAP 1,0](https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf)|
 |WSS: Token Profile 1.0 de Username|[Perfil Seguridad de Servicios web UsernameToken 1,0](https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf)<br /><br /> requerir Password/@Type = PasswordText (valor predeterminado)|
@@ -71,7 +72,7 @@ La interoperabilidad de los protocolos de infraestructura la proporcionan las es
 
 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> admite las especificaciones de la tabla siguiente.
 
-|Especificación/documento|Link|
+|Especificación/documento|Vínculo|
 |-----------------------------|----------|
 |WS-Coordination|[Web Services Coordination](/previous-versions/ms951231(v=msdn.10))|
 |Transacción WS-Atomic|[Web Services Atomic Transaction](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|

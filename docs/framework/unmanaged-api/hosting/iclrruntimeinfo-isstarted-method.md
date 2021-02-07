@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeInfo:: IsStarted ((método)'
 title: ICLRRuntimeInfo::IsStarted (Método)
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-ms.openlocfilehash: 1dfeb6101a6b8e33ab2fe35f318087d7f1834b6a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 22059ecbded9eae9659cdaae8b9b92f2d7df0650
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753853"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted (Método)
 
@@ -49,7 +50,7 @@ HRESULT IsStarted(
 |S_OK|El método se completó correctamente.|  
 |E_NOTIMPL|La versión de Common Language Runtime (CLR) es anterior a la versión de CLR en el .NET Framework 4.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método no funciona con las versiones de CLR anteriores a la versión de CLR en el .NET Framework 4.  
   
@@ -63,7 +64,7 @@ HRESULT IsStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

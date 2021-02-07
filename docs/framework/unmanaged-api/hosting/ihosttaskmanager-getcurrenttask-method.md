@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostTaskManager:: Getcurrenttask ((método)'
 title: IHostTaskManager::GetCurrentTask (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-ms.openlocfilehash: 72b7f6e3a5a09bd06e8a7fbb94680ed3ea89b225
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7e7e516fe4a706fce8b0302f318cfbb164a86eea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727307"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753814"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask (Método)
 
@@ -51,7 +52,7 @@ HRESULT GetCurrentTask (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_INVALIDOPERATION|`GetCurrentTask` se llamó a en un subproceso del sistema operativo fuera del control del host.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host también puede establecer el `pTask` parámetro en null para evitar que una tarea que no ha iniciado no haya entrado en CLR.  
   
@@ -65,7 +66,7 @@ HRESULT GetCurrentTask (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

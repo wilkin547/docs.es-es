@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración COR_PRF_SNAPSHOT_INFO'
 title: COR_PRF_SNAPSHOT_INFO (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-ms.openlocfilehash: 5290db008bfe5727ed5899c2ed6f7e41ae9a353a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcdaeeb6170cb9998281100c5628b3d95f9e9326
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753346"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO (Enumeración)
 
@@ -35,15 +36,15 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
-|Miembros|Descripción|  
+|Members|Descripción|  
 |-------------|-----------------|  
 |`COR_PRF_SNAPSHOT_DEFAULT`|Indica que se deben pasar valores para todos los `StackSnapshotCallback` parámetros, excepto el `context` parámetro.|  
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Indica que se deben pasar valores para todos los `StackSnapshotCallback` parámetros, incluido el `context` parámetro.|  
 |`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|Indica que se usará un algoritmo de recorrido de pila alternativo más sencillo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los valores que proporciona la `COR_PRF_SNAPSHOT_INFO` enumeración se pasan como parámetros al método [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) .  
   
@@ -57,7 +58,7 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)

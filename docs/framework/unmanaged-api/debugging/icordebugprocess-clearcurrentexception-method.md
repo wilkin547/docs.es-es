@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugProcess:: ClearCurrentException ((método)'
 title: ICorDebugProcess::ClearCurrentException (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e02ee1a-e495-4578-bfb5-b946274bede7
 topic_type:
 - apiref
-ms.openlocfilehash: 0d36390a905561b64b3ca6ca95722f82158450be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6f356078d8d303acb39cbaa500b7592185ad55ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754048"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException (Método)
 
@@ -37,7 +38,7 @@ HRESULT ClearCurrentException([in] DWORD threadID);
  `threadID`  
  de IDENTIFICADOR del subproceso en el que se borrará la excepción no administrada actual.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Llame a este método antes de llamar a [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) cuando un subproceso haya comunicado una excepción no administrada que el código depurado debe omitir. Esto borrará los eventos en banda (IB) y fuera de banda (OOB) pendientes en el subproceso determinado. Todos los puntos de interrupción de OOB y las excepciones de un solo paso se borran automáticamente.  
   

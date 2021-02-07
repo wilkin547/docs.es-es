@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3370-BinaryMessageEncodingStart'
 title: 3370 - BinaryMessageEncodingStart
 ms.date: 03/30/2017
 ms.assetid: 624f8dab-a150-468e-9709-613621a8627f
-ms.openlocfilehash: 922dc0e20eacc71072333976d42b295374995fe8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2f62f3148307f99da604b68ceb41faae92e5ecf7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753034"
 ---
 # <a name="3370---binarymessageencodingstart"></a>3370 - BinaryMessageEncodingStart
 
@@ -15,7 +16,7 @@ ms.locfileid: "96282397"
   
 |||  
 |-|-|  
-|ID|3370|  
+|Id.|3370|  
 |Palabras clave|Canal|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

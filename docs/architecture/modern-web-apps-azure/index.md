@@ -3,13 +3,13 @@ title: Diseño de aplicaciones web modernas con ASP.NET Core y Azure
 description: Es una guía en la que se proporcionan instrucciones de un extremo a otro sobre cómo compilar aplicaciones web monolíticas con ASP.NET Core y Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/07/2020
-ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.date: 02/02/2021
+ms.openlocfilehash: 37aec94625071fdc07f2b8433f6e9ef200d92099
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851300"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754594"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Diseño de aplicaciones web modernas con ASP.NET Core y Azure
 
@@ -29,7 +29,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 de Microsoft Corporation
+Copyright © 2021 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 

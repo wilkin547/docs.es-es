@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorProfilerFunctionControl'
 title: ICorProfilerFunctionControl (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e3d3141-4662-4166-8f05-bc857c1b4216
 topic_type:
 - apiref
-ms.openlocfilehash: 733a8f0bc7e8c19823827297a50f9c6906614ca7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b4ac58d2b8754108b4e10493596776987a93a49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698395"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753320"
 ---
 # <a name="icorprofilerfunctioncontrol-interface"></a>ICorProfilerFunctionControl (Interfaz)
 
@@ -33,7 +34,7 @@ Proporciona métodos que permiten a un generador de perfiles de código comunica
 |[SetILFunctionBody (Método)](icorprofilerfunctioncontrol-setilfunctionbody-method.md)|Reemplaza el cuerpo del Lenguaje intermedio común (CIL) del método.|  
 |[SetILInstrumentedCodeMap (Método)](icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)|Establece un mapa de código para la función especificada usando las entradas del mapa de Common Intermediate Language (CIL) especificadas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La interfaz `ICorProfilerFunctionControl` proporciona métodos para controlar la generación de código para una única función que se ha vuelto a compilar. El generador de perfiles obtiene una instancia de esta interfaz a través de la devolución de llamada [ICorProfilerCallback4:: getrejitparameters (](icorprofilercallback4-getrejitparameters-method.md) . Cada instancia de `ICorProfilerFunctionControl` controla todas las instancias de una función.  
   
@@ -47,7 +48,7 @@ Proporciona métodos que permiten a un generador de perfiles de código comunica
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo4 (Interfaz)](icorprofilerinfo4-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

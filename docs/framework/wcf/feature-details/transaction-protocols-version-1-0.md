@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: protocolos de transacción versión 1,0'
 title: Protocolos de transacción versión 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 7b1cfc21a1361cee3027fd5a61ec61a4a0a998b7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fb49e40ab76ff0eef9825ac886d5afbbf185565
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752722"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolos de transacción versión 1.0
 
@@ -64,7 +65,7 @@ Windows Communication Foundation (WCF) versión 1 implementa la versión 1,0 de 
 |wsa|`http://www.w3.org/2004/08/addressing`|  
 |wscoor|`http://schemas.xmlsoap.org/ws/2004/10/wscoor`|  
 |wsat|`http://schemas.xmlsoap.org/ws/2004/10/wsat`|  
-|m|`http://schemas.xmlsoap.org/ws/2005/02/trust`|  
+|t|`http://schemas.xmlsoap.org/ws/2005/02/trust`|  
 |o|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd`|  
 |xsd|`http://www.w3.org/2001/XMLSchema`|  
   
@@ -264,7 +265,7 @@ Windows Communication Foundation (WCF) versión 1 implementa la versión 1,0 de 
 
  Los siguientes mensajes son mensajes del registro.  
   
-#### <a name="register"></a>Registrarse  
+#### <a name="register"></a>Register  
   
 ```xml  
 <s:Envelope>  

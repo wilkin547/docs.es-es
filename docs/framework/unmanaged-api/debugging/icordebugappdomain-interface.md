@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugAppDomain (interfaz)'
 title: Interfaz ICorDebugAppDomain
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-ms.openlocfilehash: 98273a5d4602c023863758045bdb2a6a502ba7a7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5f1ac20a7376a741da2e34de74c810c0f45e8293
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687234"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754205"
 ---
 # <a name="icordebugappdomain-interface"></a>Interfaz ICorDebugAppDomain
 
@@ -35,12 +36,12 @@ Proporciona métodos para depurar dominios de aplicación. Esta interfaz es una 
 |[Método EnumerateSteppers](icordebugappdomain-enumeratesteppers-method.md)|Obtiene un enumerador para todos los steppers activos en el dominio de aplicación.|  
 |[GetId (método)](icordebugappdomain-getid-method.md)|Obtiene el identificador único del dominio de aplicación.|  
 |[Método GetModuleFromMetaDataInterface](icordebugappdomain-getmodulefrommetadatainterface-method.md)|Obtiene el objeto ICorDebugModule con la interfaz de metadatos especificada.|  
-|[GetName (Método)](icordebugappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación.|  
+|[Método GetName](icordebugappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación.|  
 |[GetObject (Método)](icordebugappdomain-getobject-method.md)|Obtiene un puntero de interfaz al dominio de aplicación de Common Language Runtime (CLR).|  
 |[Método GetProcess](icordebugappdomain-getprocess-method.md)|Obtiene el proceso que contiene el dominio de aplicación.|  
 |[Método IsAttached](icordebugappdomain-isattached-method.md)|Determina si el depurador está asociado al dominio de aplicación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -55,6 +56,6 @@ Proporciona métodos para depurar dominios de aplicación. Esta interfaz es una 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

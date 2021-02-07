@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Directiva de protección ampliada'
 title: Directiva de protección extendida
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: b513eafecf9b5eaee49b5bc318b3f4bad71213a2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 295b49f3795e60095403dcef98b3d7ecbf29aeb9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752397"
 ---
 # <a name="extended-protection-policy"></a>Directiva de protección extendida
 
@@ -17,7 +18,7 @@ Protección extendida es una iniciativa de seguridad para protegerse contra los 
 
  Protección extendida  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  Cuando las aplicaciones cliente se autentican mediante Kerberos, Digest o NTLM usando HTTPS, se establece en primer lugar un canal de Seguridad de nivel de transporte (TLS) y después la autenticación se lleva a cabo usando el canal seguro. Sin embargo, no hay ningún enlace entre la clave de sesión generada por SSL y la clave de sesión generada durante la autenticación. MITM se puede establecer entre el cliente y el servidor, y comienza a reenviar las solicitudes del cliente, incluso cuando el propio canal de transporte es seguro, porque el servidor no tiene ninguna manera de saber si el canal seguro se ha establecido desde el cliente o desde un MITM. La solución en este escenario es enlazar el canal de TLS externo con el canal de autenticación interno de modo que el servidor puede detectar si hay un MITM.  
   

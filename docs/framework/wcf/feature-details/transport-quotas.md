@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: cuotas de transporte'
 title: Cuotas de transporte
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: bcc63e6645580c1021667b278b80c09baf5700c1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0359d088402235a34b8cf1d13820c0a7c920b023
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261467"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752631"
 ---
 # <a name="transport-quotas"></a>Cuotas de transporte
 
@@ -64,7 +65,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 
  Establecer las cuotas de transporte a través del elemento de enlace proporciona la máxima flexibilidad para controlar el comportamiento del transporte. Los tiempos de espera predeterminados para operaciones de cierre, apertura, recepción y envío se toman del enlace cuando se crea un canal.  
   
-|NOMBRE|HTTP|TCP/IP|Canalización con nombre|  
+|Nombre|HTTP|TCP/IP|Canalización con nombre|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -87,7 +88,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 
  Establecer las cuotas de transporte a través del enlace ofrece un conjunto simplificado de cuotas de entre las que elegir al mismo tiempo que se proporciona acceso a los valores de cuota más comunes.  
   
-|NOMBRE|HTTP|TCP/IP|Canalización con nombre|  
+|Nombre|HTTP|TCP/IP|Canalización con nombre|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  
