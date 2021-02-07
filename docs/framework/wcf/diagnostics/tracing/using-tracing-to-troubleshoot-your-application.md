@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: usar el seguimiento para solucionar problemas de la aplicación'
 title: Uso del seguimiento para solucionar problemas de su aplicación
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 3b684bf2dc6b075906921f56c6aa07ee55ca7fd5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bc81199450da5522caa92120f0b8c5153ccb9957
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758052"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Uso del seguimiento para solucionar problemas de su aplicación
 
@@ -37,4 +38,4 @@ Esta sección contiene varios temas que describen cómo puede utilizar el seguim
 
 - [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Seguimiento](index.md)
-- [Seguimiento de traza de un extremo a otro](end-to-end-tracing.md)
+- [Seguimiento de un extremo a otro](end-to-end-tracing.md)
