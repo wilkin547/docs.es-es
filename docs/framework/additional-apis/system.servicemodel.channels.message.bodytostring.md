@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Message. BodyToString (método)'
 title: Método Message. BodyToString (System. ServiceModel. Channels)
 ms.date: 11/01/2019
 topic_type:
@@ -9,16 +10,16 @@ api_location:
 - system.servicemodel.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 9f1f852c0bd82299fd40afe66a5f90cd7c0335cf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: babcd881d191ff46b98e9999c4ff04166479a68d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215506"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699381"
 ---
 # <a name="messagebodytostring-method"></a>Message. BodyToString (método)
 
-Convierte el cuerpo del mensaje en una cadena mediante una llamada al método <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType>.
+Convierte el cuerpo del mensaje en una cadena mediante una llamada al <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> método.
 
 ```csharp
 internal void BodyToString(XmlDictionaryWriter writer);
@@ -32,7 +33,7 @@ internal void BodyToString(XmlDictionaryWriter writer);
 ## <a name="remarks"></a>Observaciones
 
 > [!WARNING]
-> El método `Message.BodyToString` es interno y no está diseñado para usarse directamente en el código.
+> El `Message.BodyToString` método es interno y no está diseñado para usarse directamente en el código.
 >
 > Microsoft no admite el uso de este método en una aplicación de producción bajo ninguna circunstancia.
 
@@ -40,6 +41,6 @@ internal void BodyToString(XmlDictionaryWriter writer);
 
 **Espacio de nombres:** <xref:System.ServiceModel.Channels>
 
-**Ensamblado:** System. ServiceModel. dll
+**Ensamblado:** System.ServiceModel.dll
 
 **.NET Framework versiones:** Disponible desde 3,0.

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <linkedConfiguration> elemento'
 title: <linkedConfiguration> (elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 14ee2275ecf690ab16ffaabd71fbbe7e1a4897bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e4312cf788784241efc35304b632dfe1fdef1bc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087960"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698666"
 ---
 # <a name="linkedconfiguration-element"></a>Elemento \<linkedConfiguration>
 
@@ -42,11 +43,11 @@ Especifica un archivo de configuración para incluirlo.
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<assemblyBinding>** Element](assemblybinding-element-for-configuration.md) | Especifica la directiva de enlace del ensamblado en el nivel de configuración. |
+| [**\<assemblyBinding>** Elemento](assemblybinding-element-for-configuration.md) | Especifica la directiva de enlace del ensamblado en el nivel de configuración. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-None
+Ninguno
 
 ## <a name="remarks"></a>Observaciones
 
@@ -65,7 +66,7 @@ Las siguientes reglas rigen el uso de archivos de configuración vinculados:
 
 - Todos los archivos de configuración vinculados se combinan para formar un archivo, de forma similar al comportamiento de la `#include` Directiva en C/C++.
 
-- El **\<linkedConfiguration>** elemento solo se permite en los archivos de configuración de la aplicación; se omite en *Machine. config*.
+- El **\<linkedConfiguration>** elemento solo se permite en los archivos de configuración de la aplicación; se omite en *Machine.config*.
 
 - Las referencias circulares se detectan y finalizan. Es decir, si los **\<linkedConfiguration>** elementos de una serie de archivos de configuración forman un bucle, el bucle se detecta y se detiene.
 
@@ -81,7 +82,7 @@ En el ejemplo siguiente se muestra cómo incluir el archivo de configuración de
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [**\<assemblyBinding>** Element](assemblybinding-element-for-configuration.md)
+- [**\<assemblyBinding>** Elemento](assemblybinding-element-for-configuration.md)
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

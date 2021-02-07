@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: clase RtcState'
 title: Clase RtcState (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
@@ -11,12 +12,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: 861bf2fc0dfef8f836e98e45ba22c7e2e24e19f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea16b46a918387d2333124ad82ec7b707627575e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155783"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699615"
 ---
 # <a name="rtcstate-class"></a>Clase RtcState
 
@@ -31,12 +32,12 @@ internal class RtcState
 > [!WARNING]
 > La `RtcState` clase es interna y no está diseñada para usarse directamente en el código.
 >
-> Microsoft no admite el uso de esta clase en una aplicación de producción bajo ninguna circunstancia.
+> Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espacio de nombres:**<xref:System.Net>
+**Espacio de nombres:** <xref:System.Net>
 
-**Montaje:** Sistema (en System.dll)
+**Ensamblado:** Sistema (en System.dll)
 
-**Versiones de .NET Framework:** Disponible desde 4.5.
+**.NET Framework versiones:** Disponible desde 4,5.

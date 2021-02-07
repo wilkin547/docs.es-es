@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <clear> elemento para connectionManagement (configuración de red)'
 title: Elemento <clear> para connectionManagement (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 446bec116118ee8b604ef3664a6eb0452e6d5a38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e6e756e1065e48e79d59e02858963ded70d30f7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184110"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698594"
 ---
 # <a name="clear-element-for-connectionmanagement-network-settings"></a>Elemento \<clear> para connectionManagement (configuración de red)
 
@@ -74,7 +75,7 @@ Borra la lista de administración de conexiones.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

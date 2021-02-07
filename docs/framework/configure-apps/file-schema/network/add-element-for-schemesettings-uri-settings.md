@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> elemento para schemeSettings (configuración de URI)'
 title: Elemento <add> para schemeSettings (configuración de URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 55fcba41d4dabf8937ebaa11235e9309bcb57952
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c372577af1c7fbfe669455b50c8b55c82da4fc52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698626"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>Elemento \<add> para schemeSettings (configuración de URI)
 
@@ -39,7 +40,7 @@ Agrega una configuración de esquema para un nombre de esquema.
   
 ## <a name="attribute-name-attribute"></a>{Nombre de atributo} Atribui  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |genericUriParserOptions|Opciones del analizador para este esquema. El único valor admitido es genericUriParserOptions = "DontUnescapePathDotsAndSlashes".|  
   
@@ -53,7 +54,7 @@ Agrega una configuración de esquema para un nombre de esquema.
 |-------------|-----------------|  
 |[\<schemeSettings> Elemento (configuración de URI)](schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  De forma predeterminada, la <xref:System.Uri?displayProperty=nameWithType> clase no escapa los delimitadores de ruta de acceso codificados por porcentaje antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad contra ataques como los siguientes:  
   

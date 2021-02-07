@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <providerOption> elemento'
 title: <providerOption> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 9374fbaf7ceb61e5b72335417d32a08525477e0d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1fdca58830e8563ef28cbca28857127252928fd4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149639"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699043"
 ---
 # <a name="provideroption-element"></a>\<providerOption> (Elemento)
 
@@ -58,7 +59,7 @@ Especifica los atributos de versión del compilador para un proveedor de lenguaj
 |[Elemento \<compilers>](compilers-element.md)|Contenedor para los elementos de configuración del compilador; contiene cero o más `<compiler>` elementos.|  
 |[Elemento \<compiler>](compiler-element.md)|Especifica los atributos de configuración del compilador para un proveedor de lenguaje.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En los proveedores de código .NET Framework versión 3,5, Code Document Object Model (CodeDOM) pueden admitir opciones específicas del proveedor mediante el `<providerOption>` elemento.  
   

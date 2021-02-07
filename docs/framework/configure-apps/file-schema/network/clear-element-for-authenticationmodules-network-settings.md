@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <clear> elemento para authenticationModules (configuración de red)'
 title: Elemento <clear> para authenticationModules (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 6ac2287ba9b17727835d43a3e3b8876f210fb5c7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ccfc9f53ef53268cdb1155673fc47a862a63419c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698575"
 ---
 # <a name="clear-element-for-authenticationmodules-network-settings"></a>Elemento \<clear> para authenticationModules (configuración de red)
 
@@ -72,7 +73,7 @@ Borra todos los módulos de autenticación de la aplicación.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

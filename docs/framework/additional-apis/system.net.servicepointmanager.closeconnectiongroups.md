@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ServicePointManager. CloseConnectionGroups (método)'
 title: Método ServicePointManager. CloseConnectionGroups (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -10,12 +11,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: aae9a389ae35e249d43c9dc830a68ec32cf4afef
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8cd1a1f0f4dbdaeaee117e6a7ae4219680363a6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990499"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699563"
 ---
 # <a name="servicepointmanagercloseconnectiongroups-method"></a>ServicePointManager. CloseConnectionGroups (método)
 

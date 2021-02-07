@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <compiler> elemento'
 title: <compiler> (Elemento)
 ms.date: 08/14/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: 0abbe594754cbd70ec4732a1e7ef98e8e88bf167
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91540d2217320b225ae67a48d616720ef2a0b679
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699225"
 ---
 # <a name="compiler-element"></a>\<compiler> (Elemento)
 
@@ -66,7 +67,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |[Elemento \<system.codedom>](system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|
 |[Elemento \<compilers>](compilers-element.md)|Contenedor para los elementos de configuración del compilador; contiene cero o más `<compiler>` elementos.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cada `<compiler>` elemento especifica los atributos de configuración del compilador para un proveedor de lenguaje específico. El proveedor extiende la <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> clase para un lenguaje específico; el `<compiler>` elemento define la configuración del compilador y del generador de código para el proveedor de lenguaje.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <compilers> elemento'
 title: <compilers> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 1aa096e185ae7f5957f173c03e221a31f30d5200
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6ced6bc81bc7d829ccebab50e0a361985c970f5e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699173"
 ---
 # <a name="compilers-element"></a>\<compilers> (Elemento)
 
@@ -88,5 +89,5 @@ Contenedor para los elementos de configuración del compilador; contiene cero o 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Esquema de los archivos de configuración](../index.md)
-- [Esquema de configuración de compilador y proveedor de lenguaje](index.md)
+- [Esquema de configuración de proveedor de lenguaje y compilador](index.md)
 - [Elemento \<compiler>](compiler-element.md)

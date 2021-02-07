@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: esquema de configuración de aplicaciones'
 title: Esquema de configuración de aplicaciones
 ms.date: 05/01/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-ms.openlocfilehash: a67689bd9757f7586881fd910ef6103b1dffeab8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a98a60b0470e0fa2c03313f25de9b310f5fce785
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550454"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699355"
 ---
 # <a name="app-settings-schema"></a>Esquema de configuración de aplicaciones
 

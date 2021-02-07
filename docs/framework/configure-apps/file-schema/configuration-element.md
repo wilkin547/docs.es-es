@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <configuration> elemento'
 title: <configuration> (elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - configuration element
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
-ms.openlocfilehash: 8f79981a55d0bc9b1cd522e45f5606fda102c72c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee48a45ddb987201e84213a0d7674da004951ab1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544697"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699003"
 ---
 # <a name="configuration-element"></a>Elemento \<configuration>
 
@@ -53,7 +54,7 @@ None
 | [**\<webServices>** Esquema de configuración](/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Todos los elementos del esquema de configuración de servicios Web. |
 | [Esquema de configuración Web](./web/index.md) | Describe todos los elementos del esquema de configuración web, que incluye elementos para configurar cómo funciona ASP.NET con una aplicación host como IIS. Se usa en archivos de *aspnet.config* . |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cada archivo de configuración debe contener exactamente un **\<configuration>** elemento.
 

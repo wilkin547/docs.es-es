@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: clase MailBnfHelper'
 title: Clase MailBnfHelper (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -20,16 +21,16 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 86c98726a7886285917b6be8c7631ca1e9e425e6
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 942b5c423d2f63985a8f7840f69d956bbade7582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990500"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699654"
 ---
 # <a name="mailbnfhelper-class"></a>Clase MailBnfHelper
 
-Contiene métodos de utilidad para analizar las cadenas con formato de mensajes de Internet. No se puede heredar esta clase.
+Contiene métodos de utilidad para analizar las cadenas con formato de mensajes de Internet. Esta clase no puede heredarse.
 
 ```csharp
 internal static class MailBnfHelper

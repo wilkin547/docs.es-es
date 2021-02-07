@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <clear> elemento para <appSettings>'
 title: Elemento <clear> para <appSettings>
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 88c6a02441c038619cb74947c024de7712189915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214810"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699342"
 ---
 # <a name="clear-element-for-appsettings"></a>Elemento \<clear> para \<appSettings>
 
@@ -54,6 +55,6 @@ En el ejemplo siguiente se muestra cómo borrar las opciones de configuración p
 </appSettings>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema del archivo de configuración para el .NET Framework](../index.md)

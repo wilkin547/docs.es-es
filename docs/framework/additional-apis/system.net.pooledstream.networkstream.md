@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: propiedad PooledStream. NetworkStream'
 title: Propiedad PooledStream. NetworkStream (System.Net)
 ms.date: 10/21/2019
 ms.technology: dotnet-networking
@@ -12,16 +13,16 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 541b8c94b30675c1286b48a2291c3bd3e4aeea0b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 8a4f1d6bd9297028e763ef73bf96f85cbbfdafd6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699641"
 ---
 # <a name="pooledstreamnetworkstream-property"></a>Propiedad PooledStream. NetworkStream
 
-Obtiene o establece la secuencia de red para el socket `PooledStream`.
+Obtiene o establece la secuencia de red para el `PooledStream` Socket.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,12 +33,12 @@ internal NetworkStream NetworkStream { get; set; }
 ## <a name="property-value"></a>Valor de propiedad
 
 <xref:System.Net.Sockets.NetworkStream>  
-La secuencia de red para el socket de `PooledStream`.
+La secuencia de red para el `PooledStream` Socket.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!WARNING]
-> La propiedad `PooledStream.NetworkStream` es interna y no está diseñada para usarse directamente en el código.
+> La `PooledStream.NetworkStream` propiedad es interna y no está diseñada para usarse directamente en el código.
 >
 > Microsoft no admite el uso de esta propiedad en una aplicación de producción bajo ninguna circunstancia.
 
@@ -45,6 +46,6 @@ La secuencia de red para el socket de `PooledStream`.
 
 **Espacio de nombres:** <xref:System.Net>
 
-**Ensamblado:** Sistema (en System. dll)
+**Ensamblado:** Sistema (en System.dll)
 
 **.NET Framework versiones:** Disponible desde 2,0.
