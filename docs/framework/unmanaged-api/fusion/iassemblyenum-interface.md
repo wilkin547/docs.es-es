@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IAssemblyEnum (interfaz)'
 title: IAssemblyEnum (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-ms.openlocfilehash: 22fcdb834f84bb3a9304e22a4b45ebb340f3590f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a422d5ed7383af3e8a22832e92cf4d803c3c5993
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760828"
 ---
-# <a name="iassemblyenum-interface"></a><span data-ttu-id="02b82-102">IAssemblyEnum (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="02b82-102">IAssemblyEnum Interface</span></span>
+# <a name="iassemblyenum-interface"></a><span data-ttu-id="1b889-103">IAssemblyEnum (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="1b889-103">IAssemblyEnum Interface</span></span>
 
-<span data-ttu-id="02b82-103">Representa un enumerador para una matriz de `IAssemblyName` objetos.</span><span class="sxs-lookup"><span data-stu-id="02b82-103">Represents an enumerator for an array of `IAssemblyName` objects.</span></span>  
+<span data-ttu-id="1b889-104">Representa un enumerador para una matriz de `IAssemblyName` objetos.</span><span class="sxs-lookup"><span data-stu-id="1b889-104">Represents an enumerator for an array of `IAssemblyName` objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="02b82-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="02b82-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1b889-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="1b889-105">Methods</span></span>  
   
-|<span data-ttu-id="02b82-105">Método</span><span class="sxs-lookup"><span data-stu-id="02b82-105">Method</span></span>|<span data-ttu-id="02b82-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="02b82-106">Description</span></span>|  
+|<span data-ttu-id="1b889-106">Método</span><span class="sxs-lookup"><span data-stu-id="1b889-106">Method</span></span>|<span data-ttu-id="1b889-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="1b889-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="02b82-107">Clone (Método)</span><span class="sxs-lookup"><span data-stu-id="02b82-107">Clone Method</span></span>](iassemblyenum-clone-method.md)|<span data-ttu-id="02b82-108">Crea una copia superficial de este `IAssemblyEnum` objeto.</span><span class="sxs-lookup"><span data-stu-id="02b82-108">Creates a shallow copy of this `IAssemblyEnum` object.</span></span>|  
-|[<span data-ttu-id="02b82-109">Método GetNextAssembly</span><span class="sxs-lookup"><span data-stu-id="02b82-109">GetNextAssembly Method</span></span>](iassemblyenum-getnextassembly-method.md)|<span data-ttu-id="02b82-110">Obtiene un puntero al siguiente `IAssemblyName` contenido en este `IAssemblyEnum` objeto.</span><span class="sxs-lookup"><span data-stu-id="02b82-110">Gets a pointer to the next `IAssemblyName` contained in this `IAssemblyEnum` object.</span></span>|  
-|[<span data-ttu-id="02b82-111">Reset (Método)</span><span class="sxs-lookup"><span data-stu-id="02b82-111">Reset Method</span></span>](iassemblyenum-reset-method.md)|<span data-ttu-id="02b82-112">Restablece el `IAssemblyEnum` objeto a su posición inicial.</span><span class="sxs-lookup"><span data-stu-id="02b82-112">Resets this `IAssemblyEnum` object to its starting position.</span></span>|  
+|[<span data-ttu-id="1b889-108">Método Clone</span><span class="sxs-lookup"><span data-stu-id="1b889-108">Clone Method</span></span>](iassemblyenum-clone-method.md)|<span data-ttu-id="1b889-109">Crea una copia superficial de este `IAssemblyEnum` objeto.</span><span class="sxs-lookup"><span data-stu-id="1b889-109">Creates a shallow copy of this `IAssemblyEnum` object.</span></span>|  
+|[<span data-ttu-id="1b889-110">Método GetNextAssembly</span><span class="sxs-lookup"><span data-stu-id="1b889-110">GetNextAssembly Method</span></span>](iassemblyenum-getnextassembly-method.md)|<span data-ttu-id="1b889-111">Obtiene un puntero al siguiente `IAssemblyName` contenido en este `IAssemblyEnum` objeto.</span><span class="sxs-lookup"><span data-stu-id="1b889-111">Gets a pointer to the next `IAssemblyName` contained in this `IAssemblyEnum` object.</span></span>|  
+|[<span data-ttu-id="1b889-112">Reset (Método)</span><span class="sxs-lookup"><span data-stu-id="1b889-112">Reset Method</span></span>](iassemblyenum-reset-method.md)|<span data-ttu-id="1b889-113">Restablece el `IAssemblyEnum` objeto a su posición inicial.</span><span class="sxs-lookup"><span data-stu-id="1b889-113">Resets this `IAssemblyEnum` object to its starting position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="02b82-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="02b82-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b889-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1b889-114">Requirements</span></span>  
 
- <span data-ttu-id="02b82-114">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02b82-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="1b889-115">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b889-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02b82-115">**Encabezado:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="02b82-115">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="1b889-116">**Encabezado:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="1b889-116">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="02b82-116">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02b82-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1b889-117">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b889-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02b82-117">Consulte también</span><span class="sxs-lookup"><span data-stu-id="02b82-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b889-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="1b889-118">See also</span></span>
 
-- [<span data-ttu-id="02b82-118">Interfaces de Fusion</span><span class="sxs-lookup"><span data-stu-id="02b82-118">Fusion Interfaces</span></span>](fusion-interfaces.md)
-- [<span data-ttu-id="02b82-119">IAssemblyName (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="02b82-119">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="1b889-119">Interfaces de Fusion</span><span class="sxs-lookup"><span data-stu-id="1b889-119">Fusion Interfaces</span></span>](fusion-interfaces.md)
+- [<span data-ttu-id="1b889-120">IAssemblyName (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="1b889-120">IAssemblyName Interface</span></span>](iassemblyname-interface.md)

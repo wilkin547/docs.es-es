@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ISymUnmanagedWriter2'
 title: ISymUnmanagedWriter2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 8e78faa4-cf43-44fb-a91d-94d6df692a25
 topic_type:
 - apiref
-ms.openlocfilehash: 6feb48b7c78dda64ba372e470b83ffb14f21f2f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 228bae40e12376b3b5e8ca3bbd3463ba70a6d67b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683334"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761783"
 ---
-# <a name="isymunmanagedwriter2-interface"></a><span data-ttu-id="d963c-102">ISymUnmanagedWriter2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="d963c-102">ISymUnmanagedWriter2 Interface</span></span>
+# <a name="isymunmanagedwriter2-interface"></a><span data-ttu-id="5eb91-103">ISymUnmanagedWriter2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="5eb91-103">ISymUnmanagedWriter2 Interface</span></span>
 
-<span data-ttu-id="d963c-103">Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, ámbitos léxicos y variables.</span><span class="sxs-lookup"><span data-stu-id="d963c-103">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span> <span data-ttu-id="d963c-104">Esta interfaz extiende la interfaz [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="d963c-104">This interface extends the [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) interface.</span></span>  
+<span data-ttu-id="5eb91-104">Representa un escritor de símbolos y proporciona métodos para definir documentos, puntos de secuencia, ámbitos léxicos y variables.</span><span class="sxs-lookup"><span data-stu-id="5eb91-104">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span> <span data-ttu-id="5eb91-105">Esta interfaz extiende la interfaz [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="5eb91-105">This interface extends the [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d963c-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="d963c-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5eb91-106">Métodos</span><span class="sxs-lookup"><span data-stu-id="5eb91-106">Methods</span></span>  
   
-|<span data-ttu-id="d963c-106">Método</span><span class="sxs-lookup"><span data-stu-id="d963c-106">Method</span></span>|<span data-ttu-id="d963c-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="d963c-107">Description</span></span>|  
+|<span data-ttu-id="5eb91-107">Método</span><span class="sxs-lookup"><span data-stu-id="5eb91-107">Method</span></span>|<span data-ttu-id="5eb91-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="5eb91-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d963c-108">Método DefineConstant2</span><span class="sxs-lookup"><span data-stu-id="d963c-108">DefineConstant2 Method</span></span>](isymunmanagedwriter2-defineconstant2-method.md)|<span data-ttu-id="d963c-109">Define un nombre para un valor constante.</span><span class="sxs-lookup"><span data-stu-id="d963c-109">Defines a name for a constant value.</span></span>|  
-|[<span data-ttu-id="d963c-110">Método DefineGlobalVariable2</span><span class="sxs-lookup"><span data-stu-id="d963c-110">DefineGlobalVariable2 Method</span></span>](isymunmanagedwriter2-defineglobalvariable2-method.md)|<span data-ttu-id="d963c-111">Define una única variable global.</span><span class="sxs-lookup"><span data-stu-id="d963c-111">Defines a single global variable.</span></span>|  
-|[<span data-ttu-id="d963c-112">Método DefineLocalVariable2</span><span class="sxs-lookup"><span data-stu-id="d963c-112">DefineLocalVariable2 Method</span></span>](isymunmanagedwriter2-definelocalvariable2-method.md)|<span data-ttu-id="d963c-113">Define una única variable en el ámbito léxico actual.</span><span class="sxs-lookup"><span data-stu-id="d963c-113">Defines a single variable in the current lexical scope.</span></span>|  
+|[<span data-ttu-id="5eb91-109">Método DefineConstant2</span><span class="sxs-lookup"><span data-stu-id="5eb91-109">DefineConstant2 Method</span></span>](isymunmanagedwriter2-defineconstant2-method.md)|<span data-ttu-id="5eb91-110">Define un nombre para un valor constante.</span><span class="sxs-lookup"><span data-stu-id="5eb91-110">Defines a name for a constant value.</span></span>|  
+|[<span data-ttu-id="5eb91-111">Método DefineGlobalVariable2</span><span class="sxs-lookup"><span data-stu-id="5eb91-111">DefineGlobalVariable2 Method</span></span>](isymunmanagedwriter2-defineglobalvariable2-method.md)|<span data-ttu-id="5eb91-112">Define una única variable global.</span><span class="sxs-lookup"><span data-stu-id="5eb91-112">Defines a single global variable.</span></span>|  
+|[<span data-ttu-id="5eb91-113">Método DefineLocalVariable2</span><span class="sxs-lookup"><span data-stu-id="5eb91-113">DefineLocalVariable2 Method</span></span>](isymunmanagedwriter2-definelocalvariable2-method.md)|<span data-ttu-id="5eb91-114">Define una única variable en el ámbito léxico actual.</span><span class="sxs-lookup"><span data-stu-id="5eb91-114">Defines a single variable in the current lexical scope.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d963c-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d963c-114">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5eb91-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5eb91-115">Requirements</span></span>  
 
- <span data-ttu-id="d963c-115">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="d963c-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="5eb91-116">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="5eb91-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d963c-116">Consulte también</span><span class="sxs-lookup"><span data-stu-id="d963c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5eb91-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="5eb91-117">See also</span></span>
 
-- [<span data-ttu-id="d963c-117">Interfaces de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="d963c-117">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="d963c-118">ISymUnmanagedWriter (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="d963c-118">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="d963c-119">ISymUnmanagedWriter3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="d963c-119">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="5eb91-118">Interfaces de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="5eb91-118">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="5eb91-119">ISymUnmanagedWriter (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="5eb91-119">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="5eb91-120">ISymUnmanagedWriter3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="5eb91-120">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)
