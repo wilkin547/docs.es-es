@@ -1,23 +1,24 @@
 ---
-title: Complementos MMC de configuración de WS-AtomicTransaction
+description: 'Más información acerca de: WS-AtomicTransaction complemento MMC de configuración'
+title: Complemento MMC de configuración de WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 5f1ac32a98b93a3ec3edb9cfa31ae0ebf424aba8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921342"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676305"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Complemento MMC de configuración de WS-AtomicTransaction
 
 El complemento MMC de configuración de WS-AtomicTransaction se usa para configurar una parte de la configuración de WS-AtomicTransaction en equipos locales y remotos.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Si está ejecutando Windows XP o Windows Server 2003, el complemento MMC se puede encontrar en **Panel de control/herramientas administrativas/servicios de componentes/** , haciendo clic con el botón derecho en **mi PC**y seleccionando **propiedades**. Ésta es la misma ubicación donde puede configurar MSDTC. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
+Si está ejecutando Windows XP o Windows Server 2003, el complemento MMC se puede encontrar en **Panel de control/herramientas administrativas/servicios de componentes/**, haciendo clic con el botón derecho en **mi PC** y seleccionando **propiedades**. Ésta es la misma ubicación donde puede configurar MSDTC. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
 
- Si está ejecutando Windows Vista o Windows Server 2008, puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo `dcomcnfg.exe` en el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
+ Si está ejecutando Windows Vista o Windows Server 2008, puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo en `dcomcnfg.exe` el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
 
  Los pasos anteriores se utilizan para iniciar el complemento para configurar un equipo local. Si desea configurar un equipo remoto, debe buscar el nombre del equipo remoto en **Panel de control/herramientas administrativas/servicios de componentes/** y realizar pasos similares si está ejecutando Windows XP o windows Server 2003. Si está ejecutando Windows Vista o Windows Server 2008, siga los pasos anteriores para vista y Windows Server 2008, pero use el nodo **DTC (Coordinator\Local de transacciones distribuidas** ) en el nodo del equipo remoto.
 
@@ -33,13 +34,13 @@ regasm.exe /codebase WsatUI.dll
 
  Puede utilizar esta herramienta para modificar los valores básicos de WS-AtomicTransaction. Por ejemplo, puede habilitar y deshabilitar la compatibilidad de protocolo de WS-AtomicTransaction, configurar los puertos del HTTP para WS-AT, enlazar un Certificado SSL al puerto HTTP, configurar los certificados especificando los nombres de sujeto de certificado, seleccionar el modo de seguimiento y establecer los tiempos de espera predeterminado y máximo.
 
- Si debe configurar la compatibilidad de WS-AtomicTransaction solo en el equipo local, puede usar la versión de línea de comandos de esta herramienta. Para obtener más información acerca de la herramienta de línea de comandos, vea el tema [utilidad de configuración de WS-AtomicTransaction (wsatConfig. exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) .
+ Si solo debe configurar la compatibilidad con WS-AtomicTransaction en el equipo local, puede usar la versión de línea de comandos de esta herramienta. Para obtener más información sobre la herramienta de línea de comandos, vea el tema [utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) .
 
- Debe tener en cuenta que tanto el complemento MMC como la herramienta de la línea de comandos no permiten configurar todos los valores WS-AT. Esta configuración sólo se puede editar modificando directamente el registro. Para obtener más información acerca de esta configuración del registro, consulte [configuración de la compatibilidad con transacciones WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).
+ Debe tener en cuenta que tanto el complemento MMC como la herramienta de la línea de comandos no permiten configurar todos los valores WS-AT. Esta configuración sólo se puede editar modificando directamente el registro. Para obtener más información acerca de esta configuración del registro, consulte Configuración de la [compatibilidad con transacciones de WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).
 
 ### <a name="user-interface-description"></a>Descripción de la interfaz de usuario
 
-**Habilitar la compatibilidad con la red de transacciones WS-Atomic**:
+**Habilitar la compatibilidad con redes de WS-Atomic de transacciones**:
 
  Esta casilla habilita o deshabilita todos los componentes GUI de este complemento.
 
@@ -67,7 +68,7 @@ Puede especificar el puerto HTTPS y configuración de seguridad adicional como c
 
  **Cuentas autorizadas**
 
- Al hacer clic en el botón **seleccionar** se invoca el editor de lista de Access Control de Windows, donde puede especificar el usuario o grupo que puede participar en transacciones WS-Atomic activando la casilla **permitir** o **denegar** en el grupo de permisos **participar** .
+ Al hacer clic en el botón **seleccionar** se invoca el editor de lista de Access Control de Windows, donde puede especificar el usuario o grupo que puede participar en WS-Atomic transacciones activando el cuadro **permitir** o **denegar** en el grupo de permisos **participar** .
 
  **Certificados autorizados**
 
@@ -83,7 +84,7 @@ El cuadro de grupo **seguimiento y registro** permite configurar el nivel de seg
 
  Al hacer clic en el botón **Opciones** , se invoca una página en la que puede especificar valores de configuración adicionales.
 
- El cuadro combinado de **nivel de seguimiento** permite elegir entre cualquier valor válido de la enumeración <xref:System.Diagnostics.TraceLevel>. También puede utilizar las casillas para especificar si desea realizar seguimiento de actividades, propagación de actividades o recoger información de identificación personal.
+ El cuadro combinado de **nivel de seguimiento** permite elegir entre cualquier valor válido de la <xref:System.Diagnostics.TraceLevel> enumeración. También puede utilizar las casillas para especificar si desea realizar seguimiento de actividades, propagación de actividades o recoger información de identificación personal.
 
  También puede especificar sesiones de registro en el cuadro grupo de **sesiones de registro** .
 

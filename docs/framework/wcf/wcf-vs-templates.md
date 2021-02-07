@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: plantillas de Visual Studio para WCF'
 title: Plantillas de Visual Studio para WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: a3aa7e3ee57759ef54ddaa898fe036c4e3caa33e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95d320b2a425ddef7e48f915c8f66d759702ccce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "96279706"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676370"
 ---
 # <a name="wcf-visual-studio-templates"></a>Plantillas de Visual Studio para WCF
 
@@ -93,7 +94,7 @@ Las plantillas de Windows Communication Foundation (WCF) de Visual Studio son pl
 > [!NOTE]
 > El servicio WCF habilitado para Silverlight expone un punto de conexión `basicHttpBinding` sin habilitar ninguna configuración de seguridad. Por lo tanto, todos los clientes que se conectan a este servicio pueden obtener información sobre el mismo. Los mensajes que se intercambian entre el servicio y el cliente tampoco están firmados ni cifrados. Para proteger el punto de conexión correctamente, debería usar la autenticación de ASP.NET, HTTPS u otros mecanismos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Host de servicio WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
 - [Cliente de prueba de WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

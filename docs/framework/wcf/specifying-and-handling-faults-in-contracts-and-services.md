@@ -1,15 +1,16 @@
 ---
+description: Más información acerca de cómo especificar y controlar errores en contratos y servicios
 title: Especificación y administración de errores en contratos y servicios
 ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: bbc1ca97c8887ebdfbe30f7dd76549572367efbe
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 32a1c795d2be964ff5da259b70a5695ddedfadb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676396"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificación y administración de errores en contratos y servicios
 
@@ -47,12 +48,12 @@ Para obtener más información, consulte [envío y recepción de errores](sendin
 
 ## <a name="undeclared-soap-faults-and-debugging"></a>Errores de SOAP no declarados y depuración
 
-Los errores de SOAP declarados son sumamente útiles para crear aplicaciones robustas, interoperables y distribuidas. Sin embargo, en algunos casos es útil para un servicio (o cliente dúplex) enviar un error SOAP no declarado, uno que no se menciona en el Lenguaje de descripción de servicios Web (WSDL) para esa operación. Por ejemplo, al desarrollar un servicio, pueden producirse situaciones inesperadas en las que es útil enviar información de vuelta al cliente para la depuración. Además, puede establecer la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o la propiedad <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` para permitir que los clientes de WCF obtengan información sobre las excepciones de operación de servicio internas. El envío de errores individuales y el establecimiento de las propiedades de comportamiento de depuración se describen en [envío y recepción de errores](sending-and-receiving-faults.md).
+Los errores de SOAP declarados son sumamente útiles para crear aplicaciones robustas, interoperables y distribuidas. Sin embargo, en algunos casos es útil para un servicio (o cliente dúplex) enviar un error SOAP no declarado, uno que no se menciona en el Lenguaje de descripción de servicios Web (WSDL) para esa operación. Por ejemplo, al desarrollar un servicio, pueden producirse situaciones inesperadas en las que es útil enviar información de vuelta al cliente para la depuración. Además, puede establecer la <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propiedad o la <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propiedad en `true` para permitir que los clientes de WCF obtengan información sobre las excepciones de operación de servicio internas. El envío de errores individuales y el establecimiento de las propiedades de comportamiento de depuración se describen en [envío y recepción de errores](sending-and-receiving-faults.md).
 
 > [!IMPORTANT]
-> Dado que las excepciones administradas pueden exponer información interna de la aplicación, si se establece <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` se puede permitir que los clientes de WCF obtengan información sobre las excepciones internas de operaciones de servicio, incluidos los identificadores personales u otros tipos de datos. informaciones.
+> Dado que las excepciones administradas pueden exponer información interna de la aplicación, establecer <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` puede permitir que los clientes de WCF obtengan información sobre las excepciones de operaciones de servicio internas, incluida la información de identificación personal u otra información confidencial.
 >
-> Por consiguiente, establecer <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` solo se recomienda como una manera de depurar temporalmente una aplicación de servicio. Además, el WSDL de un método que devuelve excepciones administradas no controladas de esta manera no contiene el contrato para la <xref:System.ServiceModel.FaultException%601> de tipo <xref:System.ServiceModel.ExceptionDetail>. Los clientes deben esperar la posibilidad de un error de SOAP desconocido (devuelto a los clientes de WCF como objetos <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>) para obtener la información de depuración correctamente.
+> Por consiguiente, establecer <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` solo se recomienda como una manera de depurar temporalmente una aplicación de servicio. Además, el WSDL de un método que devuelve excepciones administradas no controladas de esta manera no contiene el contrato para la <xref:System.ServiceModel.FaultException%601> de tipo <xref:System.ServiceModel.ExceptionDetail>. Los clientes deben esperar la posibilidad de un error de SOAP desconocido (devuelto a los clientes de WCF como <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> objetos) para obtener la información de depuración correctamente.
 
 ## <a name="customizing-error-handling-with-ierrorhandler"></a>Personalización del control de errores con IErrorHandler
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)'
 title: Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 763b617a99c98383b5b873e4fb8646884f9b5253
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 302da7e6e62db771472f95dc422cc7e97408600b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676331"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)
 
@@ -19,7 +20,7 @@ El registro de servicio de flujo de trabajo (WFServicesReg.exe) es una herramien
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La herramienta se puede encontrar en la ubicación de instalación de .NET Framework 3,5, específicamente,%windir%\Microsoft.NET\Framework\v3.5 o en%windir%\Microsoft.NET\Framework64\v3.5 en máquinas de 64 bits.  
   
