@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: extensibilidad del almacén'
 title: Extensibilidad de almacén
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f04c466224aacd1c8f755e7aa60b18846d0c7180
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641611"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755231"
 ---
 # <a name="store-extensibility"></a>Extensibilidad de almacén
 
@@ -36,9 +37,9 @@ La clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> tie
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     Para obtener más información acerca de cómo agregar un participante de persistencia personalizado, consulte el [participantes de persistencia](persistence-participants.md) ejemplo.
+     Para obtener más información sobre cómo agregar un participante de persistencia personalizado, vea el ejemplo de [participantes de persistencia](persistence-participants.md) .
 
-3. Las actividades personalizadas en la aplicación DP rellenan varios campos de estado en el **Execute** método.
+3. Las actividades personalizadas en la aplicación DP rellenan varios campos de estado en el método **Execute** .
 
     ```csharp
     public override void Execute(CodeActivityContext context)
@@ -52,7 +53,7 @@ La clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> tie
     }
     ```
 
-4. Cuando una instancia de flujo de trabajo alcanza un punto de persistencia, el **CollectValues** método de la **DocumentStatusExtension** participante de persistencia guarda estas propiedades en los datos de persistencia colección.
+4. Cuando una instancia de flujo de trabajo alcanza un punto de persistencia, el método **CollectValues** del participante de persistencia de **DocumentStatusExtension** guarda estas propiedades en la colección de datos de persistencia.
 
     ```csharp
     class DocumentStatusExtension : PersistenceParticipant
@@ -74,9 +75,9 @@ La clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> tie
     ```
 
     > [!NOTE]
-    > Todas estas propiedades se pasan a **SqlWorkflowInstanceStore** por el marco de persistencia a través de la **SaveWorkflowCommand.InstanceData** colección.
+    > El marco de persistencia pasa todas estas propiedades a **SqlWorkflowInstanceStore** mediante la colección **SaveWorkflowCommand. InstanceData** .
 
-5. La aplicación DP inicializa el Store de instancia de flujo de trabajo de SQL e invoca el **promover** método para promover estos datos.
+5. La aplicación DP inicializa el almacén de instancias de flujo de trabajo de SQL e invoca el método **Promote** para promover estos datos.
 
     ```csharp
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);
@@ -92,7 +93,7 @@ La clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> tie
     store.Promote("DocumentStatus", variantProperties, null);
     ```
 
-    Según esta información de promoción, **SqlWorkflowInstanceStore** coloca las propiedades de datos en las columnas de la [InstancePromotedProperties](#InstancePromotedProperties) vista.
+    Basándose en esta información de promoción, **SqlWorkflowInstanceStore** coloca las propiedades de datos en las columnas de la vista [InstancePromotedProperties](#InstancePromotedProperties) .
 
 6. Para consultar un subconjunto de datos en la tabla de promoción, la aplicación DP agrega una vista personalizada encima de la vista de promoción.
 
@@ -109,7 +110,7 @@ La clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> tie
     go
     ```
 
-## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view
+## <a name="systemactivitiesdurableinstancinginstancepromotedproperties-view"></a><a name="InstancePromotedProperties"></a> [System. Activities. DurableInstancing. InstancePromotedProperties] vista
 
 |Nombre de columna|Tipo de columna|Descripción|
 |-----------------|-----------------|-----------------|

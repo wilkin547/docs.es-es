@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: get WorkflowInstanceId'
 title: Get WorkflowInstanceId
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
-ms.openlocfilehash: db06b30f24a2d620406b3e6a35bba3a1fca70a9c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3be6c36e6a6996a11ad1e26414fa25f1e32399e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251560"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755322"
 ---
 # <a name="get-workflowinstanceid"></a>Get WorkflowInstanceId
 
@@ -17,7 +18,7 @@ En este ejemplo se muestra cómo utilizar la actividad personalizada `GetWorkflo
 
  Desarrollo de actividades personalizadas, cómo tener acceso a la instancia de flujo de trabajo.  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  La obtención del Id. de instancia de un flujo de trabajo en ejecución requiere código de escritura. Si desea escribir un flujo de trabajo totalmente declarativo, necesita una actividad que pueda devolver el identificador de la instancia de flujo de trabajo para que se pueda hacer referencia a la actividad en el flujo de trabajo a fin de proporcionar un flujo de trabajo totalmente declarativo que cree la experiencia. Muchos escenarios requieren tener acceso al Id. de instancia: algunos ejemplos son para registrar o auditar propósitos o para realizar una correlación en la aplicación proporcionando el Id. de instancia a un cliente para su asociación futura (por ejemplo, utilizando esta actividad dentro de una actividad SendReply).  
   

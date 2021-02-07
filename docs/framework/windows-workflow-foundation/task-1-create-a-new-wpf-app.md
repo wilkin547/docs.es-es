@@ -1,23 +1,24 @@
 ---
-title: 'Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation'
+description: 'Más información acerca de: tarea 1: creación de una nueva aplicación de Windows Presentation Foundation'
+title: 'Tarea 1: Crear una aplicación de Windows Presentation Foundation'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 3205840da575041b449eb841fc8084e89937fca7
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: 7bbb49e3d663d1878b2b3e150a24f775eeca0135
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031896"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755244"
 ---
-# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tarea 1: Crear una aplicación de Windows Presentation Foundation
 
-En esta tarea, creará una aplicación de Windows Presentation Foundation (WPF) vacía mediante la plantilla de Visual Studio de aplicación WPF y agregará referencias a los ensamblados de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] adecuados.  
+En esta tarea, creará una aplicación de Windows Presentation Foundation (WPF) vacía mediante la plantilla de Visual Studio de aplicación WPF y agregará referencias a los [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ensamblados de flujo de trabajo adecuados.  
   
 ## <a name="to-create-the-wpf-application-project"></a>Para crear el proyecto de aplicación WPF
 
-1. Abra Visual Studio y, en el menú **archivo** , seleccione **nuevo**y, a continuación, haga clic en **proyecto**.
+1. Abra Visual Studio y, en el menú **archivo** , seleccione **nuevo** y, a continuación, haga clic en **proyecto**.
 
-2. En el cuadro de diálogo **nuevo proyecto** , seleccione **Visual C#**  o **Visual Basic** en el panel **plantillas instaladas** en el lado izquierdo del cuadro. Si el idioma de su elección no aparece, mire debajo de **otros idiomas**.
+2. En el cuadro de diálogo **nuevo proyecto** , seleccione **Visual C#** o **Visual Basic** en el panel **plantillas instaladas** en el lado izquierdo del cuadro. Si el idioma de su elección no aparece, mire debajo de **otros idiomas**.
 
 3. Seleccione **Windows** en el panel **plantillas instaladas** .
 
@@ -41,5 +42,5 @@ En esta tarea, creará una aplicación de Windows Presentation Foundation (WPF) 
 
 ## <a name="see-also"></a>Vea también
 
-- [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
-- [Tarea 2: Hospedaje del Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)
+- [Rehospedar el Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
+- [Tarea 2: Hospedar el diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)

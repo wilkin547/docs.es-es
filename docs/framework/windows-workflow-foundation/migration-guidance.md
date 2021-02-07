@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Guía de migración'
 title: Guía de migración
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b9b90aedc06fb4a4564596d61aa0ac2dc4c6143f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 05aede02d7ad615ddeeceab6d71a545db9bcf5ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755361"
 ---
 # <a name="migration-guidance"></a>Guía de migración
 
@@ -47,6 +48,6 @@ En el .NET Framework 4, Microsoft está lanzando la segunda versión principal d
 
  [Guía de WF: servicios de flujo de trabajo](/previous-versions/appfabric/ff383417(v=azure.10)) Proporciona instrucciones paso a paso orientadas a un ejemplo para rediseñar flujos de trabajo que implementan servicios Web de Windows Communication Foundation (WCF) (comúnmente denominados servicios de flujo de trabajo) creados en WF3 para usar WF4, para escenarios comunes para actividades integradas.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Activities.Statements.Interop>

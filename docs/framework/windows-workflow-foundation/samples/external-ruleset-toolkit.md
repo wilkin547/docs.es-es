@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: External ruleset Toolkit'
 title: Kit de herramientas de RuleSet externo
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 41ee739ee90ba6dc1583369930919816e9afd53b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755387"
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de herramientas de RuleSet externo
 
@@ -37,7 +38,7 @@ La interacción de los componentes se muestra en la siguiente imagen. Las seccio
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ExternalRuleSetToolKit`
 
@@ -55,19 +56,19 @@ Al hacer clic en **editar reglas**, se inicia el editor de ruleset, tal como se 
 
 Se trata de un nuevo hospedaje del cuadro de diálogo del editor que forma parte del complemento Windows Workflow Foundation Visual Studio. Proporciona la misma funcionalidad, incluyendo la compatibilidad del IntelliSense. Las reglas se crean con un tipo de destino (por ejemplo, un flujo de trabajo) que está asociado con el conjunto de reglas de la herramienta. al hacer clic en **examinar** en el cuadro de diálogo principal de la herramienta, aparece el cuadro de diálogo **selector de flujo de trabajo/tipo** , como se muestra en la figura 4.
 
-![Selección &#47;de tipo de flujo de trabajo](./media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
+![Selección de tipo de &#47;de flujo de trabajo](./media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
 
 Figura 4: Selector de flujo de trabajo/tipo
 
 Puede usar el cuadro de diálogo **selector de flujo de trabajo/tipo** para especificar un ensamblado y un tipo específico dentro de ese ensamblado. Este tipo es el tipo de destino contra el que se crean (y se ejecuta) las reglas. En muchos casos, el tipo de destino es un flujo de trabajo o algún otro tipo de actividad. Sin embargo, puede ejecutar un RuleSet contra cualquier tipo de .NET.
 
-La ruta de acceso al archivo de ensamblado y el tipo `name are stored with the` RuleSet en la base de datos, de modo que cuando se recupere el conjunto de reglas de la base de datos, la herramienta intente cargar automáticamente el tipo de destino.
+La ruta de acceso al archivo de ensamblado y el tipo `name are stored with the` ruleset en la base de datos, de modo que cuando se recupere el conjunto de reglas de la base de datos, la herramienta intente cargar automáticamente el tipo de destino.
 
 Al hacer clic en **Aceptar** en el cuadro de diálogo **selector de flujo de trabajo/tipo** , valida el tipo seleccionado en el conjunto de reglas para asegurarse de que el tipo de destino tenga todos los miembros a los que hacen referencia las reglas. Los errores se muestran en un cuadro de diálogo **errores de validación** . Puede optar por continuar con el cambio a pesar de los errores o hacer clic en **Cancelar**. En el menú **herramientas** del cuadro de diálogo principal de la herramienta, puede hacer clic en **validar** para volver a validar la versión del ruleset con respecto a la actividad de destino.
 
 ![Captura de pantalla que muestra el cuadro de diálogo errores de validación.](./media/external-ruleset-toolkit/validation-errors-dialog.png)
 
-En el menú **datos** de la herramienta, puede importar y exportar conjuntos de herramientas. Al hacer clic en **importar**, aparece un cuadro de diálogo Selector de archivos, desde el que puede seleccionar un archivo. rules. Puede ser o no un archivo creado inicialmente en Visual Studio. El archivo .rules debería contener una instancia `RuleDefinitions` serializada que contiene una colección de condiciones y una colección de RuleSets. La herramienta no utiliza la colección de condiciones, pero usa el formato `RuleDefinitions`. rules para permitir la interacción con el entorno de Visual Studio.
+En el menú **datos** de la herramienta, puede importar y exportar conjuntos de herramientas. Al hacer clic en **importar**, aparece un cuadro de diálogo Selector de archivos, desde el que puede seleccionar un archivo. rules. Puede ser o no un archivo creado inicialmente en Visual Studio. El archivo .rules debería contener una instancia `RuleDefinitions` serializada que contiene una colección de condiciones y una colección de RuleSets. La herramienta no utiliza la colección de condiciones, pero usa el `RuleDefinitions` formato. rules para permitir la interacción con el entorno de Visual Studio.
 
 Después de seleccionar un archivo. rules, aparece un cuadro de diálogo **selector ruleset** . Puede utilizar el cuadro de diálogo para seleccionar RuleSets desde el archivo que desea importar (el valor predeterminado especificada todos los RuleSets). Los RuleSets en el archivo .rules no tienen números de versión, porque su versión dentro de un proyecto WF es igual que la versión del ensamblado. Durante el proceso de importación, la herramienta asigna automáticamente el siguiente número de versión principal disponible (que puede cambiar después de la importación); puede ver los números de versión asignados en la lista de **selector ruleset** .
 
@@ -109,9 +110,9 @@ La base de datos a la que va a acceder el servicio se debería configurar en el 
 
     - Cuando aparezca el cuadro de diálogo **elegir elementos del cuadro de herramientas** , haga clic en la pestaña **actividades** .
 
-    - Vaya al ensamblado `PolicyActivities` en la solución de `ExternalRuleSetToolkit` y haga clic en **abrir**.
+    - Busque el `PolicyActivities` ensamblado en la `ExternalRuleSetToolkit` solución y haga clic en **abrir**.
 
-    - Asegúrese de que la actividad `PolicyFromService` está seleccionada en el cuadro de diálogo **elegir elementos del cuadro de herramientas** y haga clic en **Aceptar**.
+    - Asegúrese de que la `PolicyFromService` actividad está seleccionada en el cuadro de diálogo **elegir elementos del cuadro de herramientas** y haga clic en **Aceptar**.
 
     - La actividad debe aparecer ahora en el cuadro de herramientas en la categoría **componentes de RuleSetToolkitUsageSample** .
 
@@ -125,7 +126,7 @@ La base de datos a la que va a acceder el servicio se debería configurar en el 
 
 9. Un archivo de configuración de la aplicación se agrega al proyecto de flujo de trabajo para especificar la cadena de conexión para la base de datos que va a utilizar el servicio. Ésta debería ser la misma cadena de conexión utilizada por la herramienta RuleSet, que señala a la base de datos que contiene la tabla RuleSet.
 
-10. Ahora puede ejecutar el proyecto `RuleSetToolkitUsageSample` como lo haría con cualquier otra aplicación de consola del flujo de trabajo. Presione F5 o Ctrl + F5 dentro de Visual Studio o ejecute el archivo RuleSetToolkitUsageSample. exe directamente.
+10. Ahora puede ejecutar el proyecto `RuleSetToolkitUsageSample` como lo haría con cualquier otra aplicación de consola del flujo de trabajo. Presione F5 o Ctrl + F5 dentro de Visual Studio o ejecute el archivo de RuleSetToolkitUsageSample.exe directamente.
 
     > [!NOTE]
     > Debe cerrar la herramienta RuleSet para recompilar el ejemplo de uso, porque la herramienta carga el ensamblado del ejemplo de uso.

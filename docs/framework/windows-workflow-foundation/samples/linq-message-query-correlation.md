@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: correlación de consultas de mensajes LINQ'
 title: Correlación de consultas de mensajes LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 83ffc80bd1944681da29e9058de454636aa7405b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7b979e3bdc2c0ede8f4f9d4595957f90581a0ecc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291107"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755283"
 ---
 # <a name="linq-message-query-correlation"></a>Correlación de consultas de mensajes LINQ
 
@@ -17,7 +18,7 @@ Este ejemplo muestra cómo realizar una correlación basada en contenidos median
 
  <xref:System.ServiceModel.Dispatcher.MessageQuery> personalizado, correlación basada en contenidos.  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  En este ejemplo se muestra cómo realizar una ampliación a partir de la clase base <xref:System.ServiceModel.Dispatcher.MessageQuery> para propósitos de correlación. La implementación personalizada, `LinqMessageQuery`, permite a los usuarios proporcionar un XName para encontrar dentro del mensaje utilizando XLinq. Los datos recuperados por la consulta se utilizan para formar la clave de correlación para enviar los mensajes a la instancia de flujo de trabajo adecuada.  
   
