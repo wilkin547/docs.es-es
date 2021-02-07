@@ -1,17 +1,18 @@
 ---
+description: 'Más información acerca de: <contractTypeNames>'
 title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: f1626983d34a7b66ee23c3a2d9a3c2107812e136
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7521b16c097a8df75819654525c0663124a1ebd0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175985"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754451"
 ---
 # \<contractTypeNames>
 
-<span data-ttu-id="36cea-101">Una sección de configuración que especifica una lista de nombres de tipos de contrato, que son los nombres del contrato de los servicios que se están buscando, y los criterios que suelen usarse al buscar un servicio.</span><span class="sxs-lookup"><span data-stu-id="36cea-101">A configuration section that specifies a list of contract type names, which are the contract names of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="36cea-102">Si se especifica más de un nombre del contrato, solo responderán los extremos del servicio que coincidan con TODOS los contratos.</span><span class="sxs-lookup"><span data-stu-id="36cea-102">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="36cea-103">Tenga en cuenta que en Windows Communication Foundation (WCF), un punto de conexión solo puede admitir un contrato.</span><span class="sxs-lookup"><span data-stu-id="36cea-103">Note that in Windows Communication Foundation (WCF), an endpoint can only support one contract.</span></span>  
+<span data-ttu-id="38849-102">Una sección de configuración que especifica una lista de nombres de tipos de contrato, que son los nombres del contrato de los servicios que se están buscando, y los criterios que suelen usarse al buscar un servicio.</span><span class="sxs-lookup"><span data-stu-id="38849-102">A configuration section that specifies a list of contract type names, which are the contract names of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="38849-103">Si se especifica más de un nombre del contrato, solo responderán los extremos del servicio que coincidan con TODOS los contratos.</span><span class="sxs-lookup"><span data-stu-id="38849-103">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="38849-104">Tenga en cuenta que en Windows Communication Foundation (WCF), un punto de conexión solo puede admitir un contrato.</span><span class="sxs-lookup"><span data-stu-id="38849-104">Note that in Windows Communication Foundation (WCF), an endpoint can only support one contract.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -22,7 +23,7 @@ ms.locfileid: "91175985"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<findCriteria>**](findcriteria.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<contractTypeNames>**  
   
-## <a name="syntax"></a><span data-ttu-id="36cea-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="36cea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="38849-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="38849-105">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -49,27 +50,27 @@ ms.locfileid: "91175985"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="36cea-105">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="36cea-105">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="38849-106">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="38849-106">Attributes and Elements</span></span>  
 
- <span data-ttu-id="36cea-106">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="36cea-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="38849-107">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="38849-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="36cea-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="36cea-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="38849-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="38849-108">Attributes</span></span>  
 
- <span data-ttu-id="36cea-108">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="36cea-108">None.</span></span>  
+ <span data-ttu-id="38849-109">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="38849-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="36cea-109">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="36cea-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="38849-110">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="38849-110">Child Elements</span></span>  
   
-|<span data-ttu-id="36cea-110">Elemento</span><span class="sxs-lookup"><span data-stu-id="36cea-110">Element</span></span>|<span data-ttu-id="36cea-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="36cea-111">Description</span></span>|  
+|<span data-ttu-id="38849-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="38849-111">Element</span></span>|<span data-ttu-id="38849-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="38849-112">Description</span></span>|  
 |-------------|-----------------|  
-|[\<add>](contracttypenames.md)|<span data-ttu-id="36cea-112">Un nombre de tipo de contrato es una propiedad que hace referencia al conjunto de criterios que suele usarse al buscar un servicio.</span><span class="sxs-lookup"><span data-stu-id="36cea-112">A contract type name is a property that refers to the set of criteria typically used when searching for a service.</span></span>|  
+|[\<add>](contracttypenames.md)|<span data-ttu-id="38849-113">Un nombre de tipo de contrato es una propiedad que hace referencia al conjunto de criterios que suele usarse al buscar un servicio.</span><span class="sxs-lookup"><span data-stu-id="38849-113">A contract type name is a property that refers to the set of criteria typically used when searching for a service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="36cea-113">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="36cea-113">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="38849-114">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="38849-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="36cea-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="36cea-114">Element</span></span>|<span data-ttu-id="36cea-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="36cea-115">Description</span></span>|  
+|<span data-ttu-id="38849-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="38849-115">Element</span></span>|<span data-ttu-id="38849-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="38849-116">Description</span></span>|  
 |-------------|-----------------|  
-|[\<findCriteria>](findcriteria.md)|<span data-ttu-id="36cea-116">Elemento de configuración que proporciona un conjunto de criterios utilizado por una aplicación cliente para buscar un servicio de detección.</span><span class="sxs-lookup"><span data-stu-id="36cea-116">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="36cea-117">Los criterios pueden agruparse en criterios de búsqueda (que especifican qué servicios está buscando) y en criterios de finalización de búsqueda (cuánto tiempo debería durar la búsqueda).</span><span class="sxs-lookup"><span data-stu-id="36cea-117">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
+|[\<findCriteria>](findcriteria.md)|<span data-ttu-id="38849-117">Elemento de configuración que proporciona un conjunto de criterios utilizado por una aplicación cliente para buscar un servicio de detección.</span><span class="sxs-lookup"><span data-stu-id="38849-117">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="38849-118">Los criterios pueden agruparse en criterios de búsqueda (que especifican qué servicios está buscando) y en criterios de finalización de búsqueda (cuánto tiempo debería durar la búsqueda).</span><span class="sxs-lookup"><span data-stu-id="38849-118">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="36cea-118">Consulte también</span><span class="sxs-lookup"><span data-stu-id="36cea-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38849-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="38849-119">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.FindCriteria>
 - <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

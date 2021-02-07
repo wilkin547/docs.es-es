@@ -1,31 +1,32 @@
 ---
+description: 'Más información acerca de: 3370-BinaryMessageEncodingStart'
 title: 3370 - BinaryMessageEncodingStart
 ms.date: 03/30/2017
 ms.assetid: 624f8dab-a150-468e-9709-613621a8627f
-ms.openlocfilehash: 922dc0e20eacc71072333976d42b295374995fe8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2f62f3148307f99da604b68ceb41faae92e5ecf7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753034"
 ---
-# <a name="3370---binarymessageencodingstart"></a><span data-ttu-id="52573-102">3370 - BinaryMessageEncodingStart</span><span class="sxs-lookup"><span data-stu-id="52573-102">3370 - BinaryMessageEncodingStart</span></span>
+# <a name="3370---binarymessageencodingstart"></a><span data-ttu-id="ef2f3-103">3370 - BinaryMessageEncodingStart</span><span class="sxs-lookup"><span data-stu-id="ef2f3-103">3370 - BinaryMessageEncodingStart</span></span>
 
-## <a name="properties"></a><span data-ttu-id="52573-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="52573-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="ef2f3-104">Propiedades</span><span class="sxs-lookup"><span data-stu-id="ef2f3-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="52573-104">ID</span><span class="sxs-lookup"><span data-stu-id="52573-104">ID</span></span>|<span data-ttu-id="52573-105">3370</span><span class="sxs-lookup"><span data-stu-id="52573-105">3370</span></span>|  
-|<span data-ttu-id="52573-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="52573-106">Keywords</span></span>|<span data-ttu-id="52573-107">Canal</span><span class="sxs-lookup"><span data-stu-id="52573-107">Channel</span></span>|  
-|<span data-ttu-id="52573-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="52573-108">Level</span></span>|<span data-ttu-id="52573-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="52573-109">Verbose</span></span>|  
-|<span data-ttu-id="52573-110">Canal</span><span class="sxs-lookup"><span data-stu-id="52573-110">Channel</span></span>|<span data-ttu-id="52573-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="52573-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="ef2f3-105">Id.</span><span class="sxs-lookup"><span data-stu-id="ef2f3-105">ID</span></span>|<span data-ttu-id="ef2f3-106">3370</span><span class="sxs-lookup"><span data-stu-id="ef2f3-106">3370</span></span>|  
+|<span data-ttu-id="ef2f3-107">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="ef2f3-107">Keywords</span></span>|<span data-ttu-id="ef2f3-108">Canal</span><span class="sxs-lookup"><span data-stu-id="ef2f3-108">Channel</span></span>|  
+|<span data-ttu-id="ef2f3-109">Nivel</span><span class="sxs-lookup"><span data-stu-id="ef2f3-109">Level</span></span>|<span data-ttu-id="ef2f3-110">Verbose</span><span class="sxs-lookup"><span data-stu-id="ef2f3-110">Verbose</span></span>|  
+|<span data-ttu-id="ef2f3-111">Canal</span><span class="sxs-lookup"><span data-stu-id="ef2f3-111">Channel</span></span>|<span data-ttu-id="ef2f3-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ef2f3-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="52573-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="52573-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="ef2f3-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="ef2f3-113">Description</span></span>  
 
- <span data-ttu-id="52573-113">Este evento se genera cuando BinaryMessageEncoder empezó a codificar el mensaje.</span><span class="sxs-lookup"><span data-stu-id="52573-113">This event is emitted when the BinaryMessageEncoder started encoding the message.</span></span>  
+ <span data-ttu-id="ef2f3-114">Este evento se genera cuando BinaryMessageEncoder empezó a codificar el mensaje.</span><span class="sxs-lookup"><span data-stu-id="ef2f3-114">This event is emitted when the BinaryMessageEncoder started encoding the message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="52573-114">Message</span><span class="sxs-lookup"><span data-stu-id="52573-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="ef2f3-115">Message</span><span class="sxs-lookup"><span data-stu-id="ef2f3-115">Message</span></span>  
 
- <span data-ttu-id="52573-115">BinaryMessageEncoder inició la codificación del mensaje.</span><span class="sxs-lookup"><span data-stu-id="52573-115">BinaryMessageEncoder started encoding the message.</span></span>  
+ <span data-ttu-id="ef2f3-116">BinaryMessageEncoder inició la codificación del mensaje.</span><span class="sxs-lookup"><span data-stu-id="ef2f3-116">BinaryMessageEncoder started encoding the message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="52573-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="52573-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="ef2f3-117">Detalles</span><span class="sxs-lookup"><span data-stu-id="ef2f3-117">Details</span></span>

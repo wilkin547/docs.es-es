@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo10:: RequestReJITWithInliners (método)'
 title: ICorProfilerInfo10::RequestReJITWithInliners
 ms.date: 08/06/2019
 dev_langs:
@@ -11,18 +12,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: e3d5a09730cb8e477bd506749017a403acff1696
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: da3434926b36408adfdee2171d56f23ba764f0eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753268"
 ---
-# <a name="icorprofilerinfo10requestrejitwithinliners-method"></a><span data-ttu-id="c1f50-102">ICorProfilerInfo10:: RequestReJITWithInliners (método)</span><span class="sxs-lookup"><span data-stu-id="c1f50-102">ICorProfilerInfo10::RequestReJITWithInliners Method</span></span>
+# <a name="icorprofilerinfo10requestrejitwithinliners-method"></a><span data-ttu-id="327f3-103">ICorProfilerInfo10:: RequestReJITWithInliners (método)</span><span class="sxs-lookup"><span data-stu-id="327f3-103">ICorProfilerInfo10::RequestReJITWithInliners Method</span></span>
 
-<span data-ttu-id="c1f50-103">ReJITs los métodos solicitados, así como los inlineers de los métodos solicitados.</span><span class="sxs-lookup"><span data-stu-id="c1f50-103">ReJITs the methods requested, as well as any inliners of the methods requested.</span></span>
+<span data-ttu-id="327f3-104">ReJITs los métodos solicitados, así como los inlineers de los métodos solicitados.</span><span class="sxs-lookup"><span data-stu-id="327f3-104">ReJITs the methods requested, as well as any inliners of the methods requested.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c1f50-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c1f50-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="327f3-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="327f3-105">Syntax</span></span>
 
 ```cpp
 HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejitFlags,
@@ -31,38 +32,38 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
                                   [in, size_is(cFunctions)]  mdMethodDef methodIds[]);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="c1f50-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c1f50-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="327f3-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="327f3-106">Parameters</span></span>
 
 - `dwRejitFlags`
 
-  <span data-ttu-id="c1f50-106">\[en] una máscara de [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="c1f50-106">\[in] A bitmask of [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md).</span></span>
+  <span data-ttu-id="327f3-107">\[en] una máscara de [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="327f3-107">\[in] A bitmask of [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md).</span></span>
 
 - `cFunctions`
 
-  <span data-ttu-id="c1f50-107">\[en] número de funciones que se van a volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="c1f50-107">\[in] The number of functions to recompile.</span></span>
+  <span data-ttu-id="327f3-108">\[en] número de funciones que se van a volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="327f3-108">\[in] The number of functions to recompile.</span></span>
 
 - `moduleIds`
 
-  <span data-ttu-id="c1f50-108">\[en] especifica la `moduleId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="c1f50-108">\[in] Specifies the `moduleId` portion of the (`module`, `methodDef`) pairs that identify the functions to be recompiled.</span></span>
+  <span data-ttu-id="327f3-109">\[en] especifica la `moduleId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="327f3-109">\[in] Specifies the `moduleId` portion of the (`module`, `methodDef`) pairs that identify the functions to be recompiled.</span></span>
 
 - `methodIds`
 
-  <span data-ttu-id="c1f50-109">\[en] especifica la `methodId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="c1f50-109">\[in] Specifies the `methodId` portion of the (`module`, `methodDef`) pairs that identify the functions to be recompiled.</span></span>
+  <span data-ttu-id="327f3-110">\[en] especifica la `methodId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="327f3-110">\[in] Specifies the `methodId` portion of the (`module`, `methodDef`) pairs that identify the functions to be recompiled.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="c1f50-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c1f50-110">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="327f3-111">Observaciones</span><span class="sxs-lookup"><span data-stu-id="327f3-111">Remarks</span></span>
 
-<span data-ttu-id="c1f50-111">[Requestrejit (](icorprofilerinfo4-requestrejit-method.md) no realiza ningún seguimiento de los métodos insertados.</span><span class="sxs-lookup"><span data-stu-id="c1f50-111">[RequestReJIT](icorprofilerinfo4-requestrejit-method.md) does not do any tracking of inlined methods.</span></span> <span data-ttu-id="c1f50-112">Se espera que el generador de perfiles bloquee la inserción o realice un seguimiento de la inserción y llame a `RequestReJIT` para todos los inlineers para asegurarse de que se ReJITted cada instancia de un método insertado.</span><span class="sxs-lookup"><span data-stu-id="c1f50-112">The profiler was expected to either block inlining or track inlining and call `RequestReJIT` for all inliners to make sure every instance of an inlined method was ReJITted.</span></span> <span data-ttu-id="c1f50-113">Esto supone un problema con ReJIT en attach, ya que el generador de perfiles no está presente para supervisar la inserción.</span><span class="sxs-lookup"><span data-stu-id="c1f50-113">This poses a problem with ReJIT on attach, since the profiler is not present to monitor inlining.</span></span> <span data-ttu-id="c1f50-114">Se puede llamar a este método para garantizar que el conjunto completo de inlineers también se ReJITted.</span><span class="sxs-lookup"><span data-stu-id="c1f50-114">This method can be called to guarantee that the full set of inliners will be ReJITted as well.</span></span>
+<span data-ttu-id="327f3-112">[Requestrejit (](icorprofilerinfo4-requestrejit-method.md) no realiza ningún seguimiento de los métodos insertados.</span><span class="sxs-lookup"><span data-stu-id="327f3-112">[RequestReJIT](icorprofilerinfo4-requestrejit-method.md) does not do any tracking of inlined methods.</span></span> <span data-ttu-id="327f3-113">Se espera que el generador de perfiles bloquee la inserción o realice un seguimiento de la inserción y llame a `RequestReJIT` para todos los inlineers para asegurarse de que se ReJITted cada instancia de un método insertado.</span><span class="sxs-lookup"><span data-stu-id="327f3-113">The profiler was expected to either block inlining or track inlining and call `RequestReJIT` for all inliners to make sure every instance of an inlined method was ReJITted.</span></span> <span data-ttu-id="327f3-114">Esto supone un problema con ReJIT en attach, ya que el generador de perfiles no está presente para supervisar la inserción.</span><span class="sxs-lookup"><span data-stu-id="327f3-114">This poses a problem with ReJIT on attach, since the profiler is not present to monitor inlining.</span></span> <span data-ttu-id="327f3-115">Se puede llamar a este método para garantizar que el conjunto completo de inlineers también se ReJITted.</span><span class="sxs-lookup"><span data-stu-id="327f3-115">This method can be called to guarantee that the full set of inliners will be ReJITted as well.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c1f50-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c1f50-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="327f3-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="327f3-116">Requirements</span></span>
 
-<span data-ttu-id="c1f50-116">**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="c1f50-116">**Platforms:** See [.NET Core supported operating systems](../../../core/install/windows.md?pivots=os-windows).</span></span>
+<span data-ttu-id="327f3-117">**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="327f3-117">**Platforms:** See [.NET Core supported operating systems](../../../core/install/windows.md?pivots=os-windows).</span></span>
 
-<span data-ttu-id="c1f50-117">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c1f50-117">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="327f3-118">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="327f3-118">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="c1f50-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c1f50-118">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="327f3-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="327f3-119">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="c1f50-119">**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1f50-119">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="327f3-120">**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="327f3-120">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c1f50-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="c1f50-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="327f3-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="327f3-121">See also</span></span>
 
-- [<span data-ttu-id="c1f50-121">Interfaz ICorProfilerInfo10</span><span class="sxs-lookup"><span data-stu-id="c1f50-121">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="327f3-122">Interfaz ICorProfilerInfo10</span><span class="sxs-lookup"><span data-stu-id="327f3-122">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
