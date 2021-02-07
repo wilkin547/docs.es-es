@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostThreadPoolManager:: GetMaxThreads (método)'
 title: IHostThreadPoolManager::GetMaxThreads (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-ms.openlocfilehash: 3aecebe2803d3a795db801491d0f60a5eb7c00ce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e8cae2aa29a50ef58a5b87deba9e275a441d43ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730791"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728390"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads (Método)
 
@@ -51,7 +52,7 @@ HRESULT GetMaxThreads (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_NOTIMPL|El host no proporciona una implementación de `GetMaxThreads` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR llama `GetMaxThreads` a para determinar el número total de subprocesos del grupo de subprocesos. El método [GetAvailableThreads](ihostthreadpoolmanager-getavailablethreads-method.md) obtiene el número de subprocesos que no están procesando actualmente los elementos de trabajo. Todas las solicitudes por encima del valor devuelto del `pdwMaxWorkerThreads` parámetro permanecen en la cola hasta que los subprocesos están disponibles.  
   
@@ -67,7 +68,7 @@ HRESULT GetMaxThreads (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.ThreadPool.GetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>

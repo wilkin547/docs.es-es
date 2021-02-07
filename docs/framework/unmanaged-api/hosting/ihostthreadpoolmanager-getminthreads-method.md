@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostThreadPoolManager:: GetMinThreads ((método)'
 title: IHostThreadPoolManager::GetMinThreads (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc07232b-b2e4-4dab-87e2-3c955974ab48
 topic_type:
 - apiref
-ms.openlocfilehash: 54dfa2741d3b4c1b2eada75ee8d214a2d0b250a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2ebb828f9bc6230b4b0237aa1494f428a1834139
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728402"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads (Método)
 
@@ -51,7 +52,7 @@ HRESULT GetMinThreads (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_NOTIMPL|El host no proporciona una implementación de `GetMinThreads` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  No es necesario que el host proporcione una implementación de `GetMinThreads` . En este caso, debe devolver un valor HRESULT de E_NOTIMPL.  
   
@@ -65,7 +66,7 @@ HRESULT GetMinThreads (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.ThreadPool.GetMinThreads%2A>
 - <xref:System.Threading.ThreadPool>

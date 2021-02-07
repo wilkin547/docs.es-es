@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostIoCompletionManager:: CloseIoCompletionPort ((método)'
 title: IHostIoCompletionManager::CloseIoCompletionPort (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e86ad7be-3758-498a-a972-5522d69dfbb3
 topic_type:
 - apiref
-ms.openlocfilehash: a45f8ab6372776bece09e408bc9887bfaddb0955
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 987b9f4e0fa22fa977fa1b14c77c8c0381e3e399
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727372"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728514"
 ---
 # <a name="ihostiocompletionmanagercloseiocompletionport-method"></a>IHostIoCompletionManager::CloseIoCompletionPort (Método)
 
@@ -51,7 +52,7 @@ HRESULT CloseIoCompletionPort (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|Se pasó un identificador de puerto no válido.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `hPort` debe ser un identificador de un puerto creado por una llamada anterior a `CreateIoCompletionPort` .  
   
@@ -65,7 +66,7 @@ HRESULT CloseIoCompletionPort (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRIoCompletionManager (Interfaz)](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager (Interfaz)](ihostiocompletionmanager-interface.md)
