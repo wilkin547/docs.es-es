@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo especificar el comportamiento de Run-Time de servicio
 title: Especificación del comportamiento en tiempo de ejecución del servicio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 61c3b8ebd431c3a16475342984b463d5f8842a89
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a7336a64c32773b0fa960879021bb04cccfaa24f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "96235888"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703489"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Especificación del comportamiento en tiempo de ejecución del servicio
 
@@ -129,7 +130,7 @@ Una vez que haya diseñado un contrato de servicios ([Designing Service Contract
   
 - <xref:System.ServiceModel.TransactionFlowAttribute>. Especifica el nivel en el que una operación de servicio acepta un encabezado de transacción.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Configuración de servicios](configuring-services.md)
 - [Procedimiento para controlar la creación de instancias de servicio](./feature-details/how-to-control-service-instancing.md)

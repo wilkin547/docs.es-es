@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ejemplo de identidad de servicio'
 title: Ejemplo de identidad de servicio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: cc8edcd7bfee73b99225c19f20df8df1e062b7bf
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fa3dc9454d816655d3d3f2af165df19e1c65e15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703528"
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: enumerar zonas horarias presentes en un equipo'
 title: Procedimiento para enumerar zonas horarias presentes en un equipo
 ms.date: 04/10/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET], enumerating
 - enumerating time zones [.NET]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 276c13bb95685e9588e25238f1a6e45cd57a6c91
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 98227d61ed81828f9c0614f622fed9a9667c6f4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702683"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Procedimiento para enumerar zonas horarias presentes en un equipo
 
@@ -24,7 +25,7 @@ Para trabajar correctamente con una zona horaria designada, es necesario que la 
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Para enumerar las zonas horarias presentes en el sistema local
 
-1. Llame al método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. El método devuelve una <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> colección genérica de <xref:System.TimeZoneInfo> objetos. Las entradas de la colección se ordenan por su <xref:System.TimeZoneInfo.DisplayName%2A> propiedad. Por ejemplo:
+1. Llame al método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> . El método devuelve una <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> colección genérica de <xref:System.TimeZoneInfo> objetos. Las entradas de la colección se ordenan por su <xref:System.TimeZoneInfo.DisplayName%2A> propiedad. Por ejemplo:
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -36,7 +37,7 @@ Para trabajar correctamente con una zona horaria designada, es necesario que la 
 
 ### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>Para presentar al usuario una lista de zonas horarias presentes en el sistema local
 
-1. Llame al método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. El método devuelve una <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> colección genérica de <xref:System.TimeZoneInfo> objetos.
+1. Llame al método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> . El método devuelve una <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> colección genérica de <xref:System.TimeZoneInfo> objetos.
 
 2. Asigne la colección devuelta en el paso 1 a la `DataSource` propiedad de un control de lista de Windows Forms o ASP.net.
 

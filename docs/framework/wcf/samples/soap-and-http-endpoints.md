@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de los puntos de conexión SOAP y HTTP
 title: Extremos SOAP y HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: 9e7ce32a0f5a2f37294db57659e2b30b364bef24
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e07f2d33656b6f697d25a684e49e60d748badc2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268266"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703541"
 ---
 # <a name="soap-and-http-endpoints"></a>Extremos SOAP y HTTP
 
@@ -17,7 +18,7 @@ Este ejemplo muestra cómo implementar un servicio basado en RPC y exponerlo en 
 
  Exponer un servicio RPC a través de SOAP y HTTP mediante WCF.  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  Este ejemplo consta de dos componentes: un proyecto de aplicación web (servicio) que contiene un servicio WCF y una aplicación de consola (cliente) que invoca operaciones de servicio mediante enlaces HTTP y SOAP.  
   
