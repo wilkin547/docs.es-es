@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Take while (cláusula, Visual Basic)'
 title: Cláusula Take While
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 632e9e2195f21a3aa1d1ffd28e9838905c471156
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a413223d4a85670c66f71e24addb92ae4d38a4a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719713"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While (Cláusula, Visual Basic)
 
@@ -31,7 +32,7 @@ Take While expression
 |---|---|  
 |`expression`|Obligatorio. Expresión que representa una condición de la que se van a probar los elementos. La expresión debe devolver un `Boolean` valor o un equivalente funcional, como un `Integer` que se va a evaluar como `Boolean` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `Take While` cláusula incluye elementos desde el principio del resultado de una consulta hasta que el proporcionado `expression` devuelve `false` . Una vez que `expression` devuelve `false` , la consulta omitirá todos los elementos restantes. `expression`Se omite para los resultados restantes.  
   
@@ -43,12 +44,12 @@ Take While expression
   
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [Consultas](index.md)
 - [Select (cláusula)](select-clause.md)
-- [Cláusula FROM](from-clause.md)
+- [Cláusula From](from-clause.md)
 - [Cláusula Take](take-clause.md)
 - [Cláusula Skip While](skip-while-clause.md)
 - [Cláusula WHERE](where-clause.md)

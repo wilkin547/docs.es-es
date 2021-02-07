@@ -12,12 +12,12 @@ helpviewer_keywords:
 - rules, security
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: e907905b065d786fc8b3c370fb2d2e2b19e62a2b
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 861827662a771ec7cc1827cdd8125be6c05bf05c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "96594717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719726"
 ---
 # <a name="security-rules"></a>Reglas de seguridad
 
@@ -93,7 +93,7 @@ Las reglas de seguridad admiten bibliotecas y aplicaciones más seguras. Estas r
 |[CA5375: No usar la firma de acceso compartido de la cuenta](ca5375.md)|Una SAS de cuenta puede delegar el acceso a operaciones de lectura, escritura y eliminación en contenedores de blobs, tablas, colas y recursos compartidos de archivos que no se permiten con una SAS de servicio. Sin embargo, no es compatible con las directivas de nivel de contenedor y tiene menos flexibilidad y control sobre los permisos que se conceden. Una vez que los usuarios malintencionados la obtienen, la cuenta de almacenamiento se verá comprometida fácilmente.|
 |[CA5376: Usar HttpsOnly con SharedAccessProtocol](ca5376.md)|SAS es información confidencial que no se puede transportar en texto sin formato en HTTP.|
 |[CA5377: Usar una directiva de acceso de nivel de contenedor](ca5377.md)|Una directiva de acceso de nivel de contenedor se puede modificar o revocar en cualquier momento. Proporciona mayor flexibilidad y control sobre los permisos que se conceden.|
-|[CA5378: No deshabilitar ServicePointManagerSecurityProtocols](ca5378.md)|Establecer `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` en `true` limita las conexiones de seguridad de la capa de transporte (TLS) de Windows Communication Framework (WCF) al uso de TLS 1,0. Esa versión de TLS quedará en desuso.|
+|[CA5378: No deshabilitar ServicePointManagerSecurityProtocols](ca5378.md)|Establecer `DisableUsingServicePointManagerSecurityProtocols` en `true` limita las conexiones de seguridad de la capa de transporte (TLS) de Windows Communication Framework (WCF) al uso de TLS 1,0. Esa versión de TLS quedará en desuso.|
 |[CA5379: Asegúrese de que el algoritmo de función de derivación de claves sea suficientemente seguro](ca5379.md)|De <xref:System.Security.Cryptography.Rfc2898DeriveBytes> forma predeterminada, la clase usa el <xref:System.Security.Cryptography.HashAlgorithmName.SHA1> algoritmo. Debe especificar el algoritmo hash que se utilizará en algunas sobrecargas del constructor con <xref:System.Security.Cryptography.HashAlgorithmName.SHA256> o superior. Tenga en cuenta <xref:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm> que la propiedad solo tiene un `get` descriptor de acceso y no tiene un `overriden` modificador.|
 |[CA5380: No agregar certificados al almacén raíz](ca5380.md)|Esta regla detecta código que agrega un certificado al almacén de certificados de entidades de certificación raíz de confianza. De forma predeterminada, el almacén de certificados de entidades de certificación raíz de confianza se configura con un conjunto de entidades de certificación públicas que cumplen los requisitos del programa de certificados raíz de Microsoft.|
 |[CA5381: Asegurar que no se agregan certificados al almacén raíz](ca5381.md)|Esta regla detecta código que puede Agregar un certificado al almacén de certificados de entidades de certificación raíz de confianza. De forma predeterminada, el almacén de certificados de entidades de certificación raíz de confianza se configura con un conjunto de entidades de certificación (CA) públicas que cumplen los requisitos del programa de certificados raíz de Microsoft.|

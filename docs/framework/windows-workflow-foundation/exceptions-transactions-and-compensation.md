@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: excepciones, transacciones y compensación'
 title: Excepciones, transacciones y compensación
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], error handling
 ms.assetid: 694db4f9-7387-4b13-8f9f-b923b18c7490
-ms.openlocfilehash: 2d8574c0f0f6bd3f66214367c1ed15292adc24a9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3188b0238b1909847c289bb56274671ff4b307b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720194"
 ---
 # <a name="exceptions-transactions-and-compensation"></a>Excepciones, transacciones y compensación
 
@@ -20,7 +21,7 @@ ms.locfileid: "96280252"
  [Excepciones](exceptions.md)  
  Muestra cómo usar la actividad <xref:System.Activities.Statements.TryCatch> para administrar las excepciones en un flujo de trabajo.  
   
- [Transacciones](workflow-transactions.md)  
+ [Transactions](workflow-transactions.md)  
  Muestra cómo usar la actividad <xref:System.Activities.Statements.TransactionScope> para utilizar excepciones en un flujo de trabajo.  
   
  [Compensación](compensation.md)  
