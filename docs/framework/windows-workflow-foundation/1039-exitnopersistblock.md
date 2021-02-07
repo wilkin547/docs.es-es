@@ -1,35 +1,36 @@
 ---
+description: 'Más información acerca de: 1039-ExitNoPersistBlock'
 title: 1039 - ExitNoPersistBlock
 ms.date: 03/30/2017
 ms.assetid: 3b46ea28-3ee0-43eb-96ff-a6d696da87f8
-ms.openlocfilehash: b7ab7ec33d665f27be0151b15a77e5a14ee8fc88
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bbfe1bde7eb62e62ceb092e1541529c29a56cfca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667842"
 ---
-# <a name="1039---exitnopersistblock"></a><span data-ttu-id="7aedb-102">1039 - ExitNoPersistBlock</span><span class="sxs-lookup"><span data-stu-id="7aedb-102">1039 - ExitNoPersistBlock</span></span>
+# <a name="1039---exitnopersistblock"></a><span data-ttu-id="6405a-103">1039 - ExitNoPersistBlock</span><span class="sxs-lookup"><span data-stu-id="6405a-103">1039 - ExitNoPersistBlock</span></span>
 
-## <a name="properties"></a><span data-ttu-id="7aedb-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="7aedb-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="6405a-104">Propiedades</span><span class="sxs-lookup"><span data-stu-id="6405a-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="7aedb-104">ID</span><span class="sxs-lookup"><span data-stu-id="7aedb-104">ID</span></span>|<span data-ttu-id="7aedb-105">1039</span><span class="sxs-lookup"><span data-stu-id="7aedb-105">1039</span></span>|  
-|<span data-ttu-id="7aedb-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="7aedb-106">Keywords</span></span>|<span data-ttu-id="7aedb-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="7aedb-107">WFRuntime</span></span>|  
-|<span data-ttu-id="7aedb-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="7aedb-108">Level</span></span>|<span data-ttu-id="7aedb-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="7aedb-109">Verbose</span></span>|  
-|<span data-ttu-id="7aedb-110">Canal</span><span class="sxs-lookup"><span data-stu-id="7aedb-110">Channel</span></span>|<span data-ttu-id="7aedb-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="7aedb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="6405a-105">Id.</span><span class="sxs-lookup"><span data-stu-id="6405a-105">ID</span></span>|<span data-ttu-id="6405a-106">1039</span><span class="sxs-lookup"><span data-stu-id="6405a-106">1039</span></span>|  
+|<span data-ttu-id="6405a-107">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="6405a-107">Keywords</span></span>|<span data-ttu-id="6405a-108">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="6405a-108">WFRuntime</span></span>|  
+|<span data-ttu-id="6405a-109">Nivel</span><span class="sxs-lookup"><span data-stu-id="6405a-109">Level</span></span>|<span data-ttu-id="6405a-110">Verbose</span><span class="sxs-lookup"><span data-stu-id="6405a-110">Verbose</span></span>|  
+|<span data-ttu-id="6405a-111">Canal</span><span class="sxs-lookup"><span data-stu-id="6405a-111">Channel</span></span>|<span data-ttu-id="6405a-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="6405a-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="7aedb-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="7aedb-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="6405a-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="6405a-113">Description</span></span>  
 
- <span data-ttu-id="7aedb-113">Indica que se ha salido de un bloque no conservado.</span><span class="sxs-lookup"><span data-stu-id="7aedb-113">Indicates a no persist block has been exited.</span></span>  
+ <span data-ttu-id="6405a-114">Indica que se ha salido de un bloque no conservado.</span><span class="sxs-lookup"><span data-stu-id="6405a-114">Indicates a no persist block has been exited.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="7aedb-114">Message</span><span class="sxs-lookup"><span data-stu-id="7aedb-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="6405a-115">Message</span><span class="sxs-lookup"><span data-stu-id="6405a-115">Message</span></span>  
 
- <span data-ttu-id="7aedb-115">Saliendo de un bloque no persistente.</span><span class="sxs-lookup"><span data-stu-id="7aedb-115">Exiting a no persist block.</span></span>  
+ <span data-ttu-id="6405a-116">Saliendo de un bloque no persistente.</span><span class="sxs-lookup"><span data-stu-id="6405a-116">Exiting a no persist block.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="7aedb-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="7aedb-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="6405a-117">Detalles</span><span class="sxs-lookup"><span data-stu-id="6405a-117">Details</span></span>  
   
-|<span data-ttu-id="7aedb-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="7aedb-117">Data Item Name</span></span>|<span data-ttu-id="7aedb-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="7aedb-118">Data Item Type</span></span>|<span data-ttu-id="7aedb-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="7aedb-119">Description</span></span>|  
+|<span data-ttu-id="6405a-118">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="6405a-118">Data Item Name</span></span>|<span data-ttu-id="6405a-119">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="6405a-119">Data Item Type</span></span>|<span data-ttu-id="6405a-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="6405a-120">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="7aedb-120">AppDomain</span><span class="sxs-lookup"><span data-stu-id="7aedb-120">AppDomain</span></span>|<span data-ttu-id="7aedb-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="7aedb-121">xs:string</span></span>|<span data-ttu-id="7aedb-122">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="7aedb-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="6405a-121">AppDomain</span><span class="sxs-lookup"><span data-stu-id="6405a-121">AppDomain</span></span>|<span data-ttu-id="6405a-122">xs:string</span><span class="sxs-lookup"><span data-stu-id="6405a-122">xs:string</span></span>|<span data-ttu-id="6405a-123">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="6405a-123">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
