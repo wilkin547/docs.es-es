@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugEval:: ABORT (método)'
 title: ICorDebugEval::Abort (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,33 +16,33 @@ helpviewer_keywords:
 ms.assetid: 7070b6d0-f2e0-44ff-b124-0944cd807e69
 topic_type:
 - apiref
-ms.openlocfilehash: 6e6ea5e42c5e1b1943a080ae02e1dbf6d702bebc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d61cb0d696a8a134d992bc8dbbfdb61103ef469f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694323"
 ---
-# <a name="icordebugevalabort-method"></a><span data-ttu-id="263ed-102">ICorDebugEval::Abort (Método)</span><span class="sxs-lookup"><span data-stu-id="263ed-102">ICorDebugEval::Abort Method</span></span>
+# <a name="icordebugevalabort-method"></a><span data-ttu-id="5d276-103">ICorDebugEval::Abort (Método)</span><span class="sxs-lookup"><span data-stu-id="5d276-103">ICorDebugEval::Abort Method</span></span>
 
-<span data-ttu-id="263ed-103">Anula el cálculo que este objeto ICorDebugEval está realizando actualmente.</span><span class="sxs-lookup"><span data-stu-id="263ed-103">Aborts the computation this ICorDebugEval object is currently performing.</span></span>  
+<span data-ttu-id="5d276-104">Anula el cálculo que este objeto ICorDebugEval está realizando actualmente.</span><span class="sxs-lookup"><span data-stu-id="5d276-104">Aborts the computation this ICorDebugEval object is currently performing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="263ed-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="263ed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d276-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5d276-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Abort ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="263ed-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="263ed-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d276-106">Observaciones</span><span class="sxs-lookup"><span data-stu-id="5d276-106">Remarks</span></span>  
 
- <span data-ttu-id="263ed-106">Si la evaluación está anidada y no es la más reciente, `Abort` puede producirse un error en el método.</span><span class="sxs-lookup"><span data-stu-id="263ed-106">If the evaluation is nested and it is not the most recent one, the `Abort` method may fail.</span></span>  
+ <span data-ttu-id="5d276-107">Si la evaluación está anidada y no es la más reciente, `Abort` puede producirse un error en el método.</span><span class="sxs-lookup"><span data-stu-id="5d276-107">If the evaluation is nested and it is not the most recent one, the `Abort` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="263ed-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="263ed-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d276-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5d276-108">Requirements</span></span>  
 
- <span data-ttu-id="263ed-108">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="263ed-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="5d276-109">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d276-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="263ed-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="263ed-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5d276-110">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5d276-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="263ed-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="263ed-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5d276-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5d276-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="263ed-111">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="263ed-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="5d276-112">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d276-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

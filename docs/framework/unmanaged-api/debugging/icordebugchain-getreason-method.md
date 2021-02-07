@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugChain:: GetReason ((método)'
 title: ICorDebugChain::GetReason (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9f9f62b9-113a-4a98-8f9b-b593cef27b03
 topic_type:
 - apiref
-ms.openlocfilehash: 58e40995012d98c1af6a41eb12d898c6b9b1d47b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0952d09db6d43f7970ba9e8c46c409fb2cd4b131
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719676"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694974"
 ---
-# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="ef082-102">ICorDebugChain::GetReason (Método)</span><span class="sxs-lookup"><span data-stu-id="ef082-102">ICorDebugChain::GetReason Method</span></span>
+# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="d4051-103">ICorDebugChain::GetReason (Método)</span><span class="sxs-lookup"><span data-stu-id="d4051-103">ICorDebugChain::GetReason Method</span></span>
 
-<span data-ttu-id="ef082-103">Obtiene el motivo del Genesis de esta cadena de llamada.</span><span class="sxs-lookup"><span data-stu-id="ef082-103">Gets the reason for the genesis of this calling chain.</span></span>  
+<span data-ttu-id="d4051-104">Obtiene el motivo del Genesis de esta cadena de llamada.</span><span class="sxs-lookup"><span data-stu-id="d4051-104">Gets the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef082-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ef082-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4051-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d4051-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetReason (  
@@ -34,17 +35,17 @@ HRESULT GetReason (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ef082-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ef082-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d4051-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d4051-106">Parameters</span></span>  
 
  `pReason`  
- <span data-ttu-id="ef082-106">enuncia Un puntero a un valor (una combinación bit a bit) de la enumeración CorDebugChainReason (que indica el motivo de la Genesis de esta cadena de llamada.</span><span class="sxs-lookup"><span data-stu-id="ef082-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
+ <span data-ttu-id="d4051-107">enuncia Un puntero a un valor (una combinación bit a bit) de la enumeración CorDebugChainReason (que indica el motivo de la Genesis de esta cadena de llamada.</span><span class="sxs-lookup"><span data-stu-id="d4051-107">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef082-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ef082-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4051-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d4051-108">Requirements</span></span>  
 
- <span data-ttu-id="ef082-108">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef082-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="d4051-109">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4051-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ef082-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ef082-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d4051-110">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d4051-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ef082-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ef082-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4051-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4051-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ef082-111">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef082-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="d4051-112">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4051-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

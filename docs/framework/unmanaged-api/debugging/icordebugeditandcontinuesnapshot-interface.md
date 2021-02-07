@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugEditAndContinueSnapshot'
 title: Interfaz ICorDebugEditAndContinueSnapshot
 ms.date: 03/30/2017
 api_name:
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 91b558b3-cea9-4106-be8c-3d628d904bfe
 topic_type:
 - apiref
-ms.openlocfilehash: 4cd2fd05dc193884ab73c9e92e43f67b3a42ca3a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5e3765eb4a56cf0dcf591fa90764d921b744b1be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783177"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694648"
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface"></a><span data-ttu-id="e282b-102">Interfaz ICorDebugEditAndContinueSnapshot</span><span class="sxs-lookup"><span data-stu-id="e282b-102">ICorDebugEditAndContinueSnapshot Interface</span></span>
+# <a name="icordebugeditandcontinuesnapshot-interface"></a><span data-ttu-id="f0258-103">Interfaz ICorDebugEditAndContinueSnapshot</span><span class="sxs-lookup"><span data-stu-id="f0258-103">ICorDebugEditAndContinueSnapshot Interface</span></span>
 
-<span data-ttu-id="e282b-103">`ICorDebugEditAndContinueSnapshot` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="e282b-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="e282b-104">No utilice esta interfaz.</span><span class="sxs-lookup"><span data-stu-id="e282b-104">Do not use this interface.</span></span>  
+<span data-ttu-id="f0258-104">`ICorDebugEditAndContinueSnapshot` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="f0258-104">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="f0258-105">No utilice esta interfaz.</span><span class="sxs-lookup"><span data-stu-id="f0258-105">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e282b-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="e282b-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0258-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="f0258-106">See also</span></span>
 
-- [<span data-ttu-id="e282b-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="e282b-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="f0258-107">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="f0258-107">Debugging Interfaces</span></span>](debugging-interfaces.md)

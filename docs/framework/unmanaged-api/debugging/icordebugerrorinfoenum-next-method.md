@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Icordebugerrorinfoenum (:: Next (método)'
 title: ICorDebugErrorInfoEnum::Next (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 41c09512-e8fe-4a82-90c5-6b39c18682da
 topic_type:
 - apiref
-ms.openlocfilehash: c2246f83922b0527d2aad96d5bc8172d80d5eaf6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 33afd7bf1fb3855467ba29ba7f308555f5ef93b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694297"
 ---
-# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="6b114-102">ICorDebugErrorInfoEnum::Next (Método)</span><span class="sxs-lookup"><span data-stu-id="6b114-102">ICorDebugErrorInfoEnum::Next Method</span></span>
+# <a name="icordebugerrorinfoenumnext-method"></a><span data-ttu-id="61006-103">ICorDebugErrorInfoEnum::Next (Método)</span><span class="sxs-lookup"><span data-stu-id="61006-103">ICorDebugErrorInfoEnum::Next Method</span></span>
 
-<span data-ttu-id="6b114-103">`ICorDebugErrorInfoEnum::Next` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="6b114-103">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="6b114-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="6b114-104">Do not call this method.</span></span>  
+<span data-ttu-id="61006-104">`ICorDebugErrorInfoEnum::Next` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="61006-104">`ICorDebugErrorInfoEnum::Next` is obsolete.</span></span> <span data-ttu-id="61006-105">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="61006-105">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b114-105">Consulte también</span><span class="sxs-lookup"><span data-stu-id="6b114-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61006-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="61006-106">See also</span></span>
 
-- [<span data-ttu-id="6b114-106">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="6b114-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="61006-107">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="61006-107">Debugging Interfaces</span></span>](debugging-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugEditAndContinueSnapshot:: SetPEBytes ((método)'
 title: ICorDebugEditAndContinueSnapshot::SetPEBytes (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-ms.openlocfilehash: 6c654cfb2b2680987b2801a37f3d87352968431d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cfd63cae0aa972d6983df5641339d0c6ff2ca63c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722965"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694544"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="8318e-102">ICorDebugEditAndContinueSnapshot::SetPEBytes (Método)</span><span class="sxs-lookup"><span data-stu-id="8318e-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="87fd2-103">ICorDebugEditAndContinueSnapshot::SetPEBytes (Método)</span><span class="sxs-lookup"><span data-stu-id="87fd2-103">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
 
-<span data-ttu-id="8318e-103">`SetPEBytes` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="8318e-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="8318e-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="8318e-104">Do not call this method.</span></span>  
+<span data-ttu-id="87fd2-104">`SetPEBytes` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="87fd2-104">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="87fd2-105">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="87fd2-105">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8318e-105">Consulte también</span><span class="sxs-lookup"><span data-stu-id="8318e-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87fd2-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="87fd2-106">See also</span></span>
 
-- [<span data-ttu-id="8318e-106">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="8318e-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="87fd2-107">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="87fd2-107">Debugging Interfaces</span></span>](debugging-interfaces.md)
