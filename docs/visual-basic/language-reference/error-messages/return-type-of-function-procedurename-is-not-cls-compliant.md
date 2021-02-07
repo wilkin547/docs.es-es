@@ -1,4 +1,5 @@
 ---
+description: "Más información sobre: BC40027: el tipo de valor devuelto de la función ' <procedurename> ' no es conforme a CLS"
 title: El tipo de valor devuelto de la función '<procedurename>' no es compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 9a877046a1b30e2e3773a41b8b44573e11ff1c96
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: df0cdb10ebc62a833cef89d3e82bc1ed756c556e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675122"
 ---
 # <a name="bc40027-return-type-of-function-procedurename-is-not-cls-compliant"></a>BC40027: el tipo de valor devuelto de la función ' \<procedurename> ' no es conforme a CLS
 
