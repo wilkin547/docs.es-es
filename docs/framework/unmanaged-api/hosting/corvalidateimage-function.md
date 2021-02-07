@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: _CorValidateImage función'
 title: _CorValidateImage (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 2d49a40610bd0e1a7629594e245bde9eacfcc06d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3d91c2d7e05786f7bfb0ab94b64e2cfb84a21d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687982"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746248"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage (Función)
 
@@ -51,7 +52,7 @@ STDAPI _CorValidateImage (
 |`STATUS_INVALID_IMAGE_FORMAT`|La imagen no es válida. Este valor tiene HRESULT 0xC000007BL.|  
 |`STATUS_SUCCESS`|La imagen es válida. Este valor tiene HRESULT 0x00000000L.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En Windows XP y versiones posteriores, el cargador del sistema operativo comprueba los módulos administrados examinando el bit del directorio de descriptores COM en el encabezado Common Object File Format (COFF). Un bit establecido indica un módulo administrado. Si el cargador detecta un módulo administrado, carga MsCorEE.dll y llama a `_CorValidateImage` , que realiza las acciones siguientes:  
   
@@ -85,6 +86,6 @@ STDAPI _CorValidateImage (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales para metadatos](../metadata/metadata-global-static-functions.md)
