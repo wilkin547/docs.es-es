@@ -1,17 +1,18 @@
 ---
+description: 'Más información acerca de: CAST (Entity SQL)'
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 5591f1947963dde45d34ad2342485af476765709
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f6a90c0ec2557391c2da6e46511a020f90d32ab7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739487"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 
-Convierte una expresión de un tipo de datos a otro.  
+Convierte una expresión de un tipo de datos en otro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,6 +65,6 @@ CAST( e as T )
   
  [!code-csharp[DP EntityServices Concepts 2#CAST](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#cast)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)

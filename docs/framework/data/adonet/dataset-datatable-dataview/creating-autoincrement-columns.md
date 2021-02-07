@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo crear columnas de incremento automático
 title: Crear columnas de incremento automático
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
-ms.openlocfilehash: 9a979f39003e60c70c03206bd886bdd6827c82e6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7568b1013b7af5aef7a6fc1f28dc163a082743a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203727"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739643"
 ---
 # <a name="creating-autoincrement-columns"></a>Crear columnas de incremento automático
 
@@ -36,7 +37,7 @@ workColumn.AutoIncrementSeed = 200;
 workColumn.AutoIncrementStep = 3;  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataColumn>
 - [Definición del esquema de DataTable](datatable-schema-definition.md)

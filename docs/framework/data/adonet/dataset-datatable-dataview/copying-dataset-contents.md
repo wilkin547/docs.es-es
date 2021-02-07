@@ -1,28 +1,29 @@
 ---
+description: Más información acerca de cómo copiar contenido de un conjunto de DataSet
 title: Copiar el contenido de DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: 1cadcacab6084bbf3caaf61d98b78fe3067d92f7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4b49ad367c96dd7c99363c7c4282930a6e4da37d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202375"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739695"
 ---
 # <a name="copying-dataset-contents"></a>Copiar el contenido de DataSet
 
-Puede crear una copia de <xref:System.Data.DataSet> para que pueda trabajar con datos sin que afecte a los datos originales o trabajar con un subconjunto de los datos de un **conjunto**de datos. Al copiar un **conjunto de DataSet**, puede:  
+Puede crear una copia de <xref:System.Data.DataSet> para que pueda trabajar con datos sin que afecte a los datos originales o trabajar con un subconjunto de los datos de un **conjunto** de datos. Al copiar un **conjunto de DataSet**, puede:  
   
-- Cree una copia exacta del **conjunto**de datos, incluidos el esquema, los datos, la información de estado de fila y las versiones de fila.  
+- Cree una copia exacta del **conjunto** de datos, incluidos el esquema, los datos, la información de estado de fila y las versiones de fila.  
   
-- Cree un **conjunto de DataSet** que contenga el esquema de un **conjunto**de los existentes, pero solo las filas que se hayan modificado. Puede devolver todas las filas que se han modificado o especificar un **DataRowState**específico. Para obtener más información sobre los Estados de fila, vea [Estados de fila y versiones de fila](row-states-and-row-versions.md).  
+- Cree un **conjunto de DataSet** que contenga el esquema de un **conjunto** de los existentes, pero solo las filas que se hayan modificado. Puede devolver todas las filas que se han modificado o especificar un **DataRowState** específico. Para obtener más información sobre los Estados de fila, vea [Estados de fila y versiones de fila](row-states-and-row-versions.md).  
   
 - Copiar el esquema o la estructura relacional solo del **conjunto** de filas, sin copiar ninguna fila. Las filas se pueden importar en un objeto <xref:System.Data.DataTable> existente mediante <xref:System.Data.DataTable.ImportRow%2A>.  
   
- Para crear una copia exacta del **DataSet** que incluya tanto el esquema como los datos, use el <xref:System.Data.DataSet.Copy%2A> método del **conjunto**de datos. En el ejemplo de código siguiente se muestra cómo crear una copia exacta del **conjunto**de elementos.  
+ Para crear una copia exacta del **DataSet** que incluya tanto el esquema como los datos, use el <xref:System.Data.DataSet.Copy%2A> método del **conjunto** de datos. En el ejemplo de código siguiente se muestra cómo crear una copia exacta del **conjunto** de elementos.  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -32,7 +33,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Para crear una copia de un **conjunto** de datos que incluya el esquema y solo los datos que representan filas **agregadas**, **modificadas**o **eliminadas** , use el <xref:System.Data.DataSet.GetChanges%2A> método del **conjunto**de datos. También puede usar **GetChanges** para devolver solo las filas con un estado de fila especificado pasando un valor de **DataRowState** al llamar a **GetChanges**. En el ejemplo de código siguiente se muestra cómo pasar un **DataRowState** al llamar a **GetChanges**.  
+ Para crear una copia de un **conjunto** de datos que incluya el esquema y solo los datos que representan filas **agregadas**, **modificadas** o **eliminadas** , use el <xref:System.Data.DataSet.GetChanges%2A> método del **conjunto** de datos. También puede usar **GetChanges** para devolver solo las filas con un estado de fila especificado pasando un valor de **DataRowState** al llamar a **GetChanges**. En el ejemplo de código siguiente se muestra cómo pasar un **DataRowState** al llamar a **GetChanges**.  
   
 ```vb  
 ' Copy all changes.  
@@ -95,7 +96,7 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>

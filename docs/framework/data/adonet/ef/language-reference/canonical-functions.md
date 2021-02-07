@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: funciones canónicas'
 title: Funciones canónicas
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 11e22d527c4266f45ea5d26f2ec95926ebe46332
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6e84c4b5199d38e2efac44cf7e69c72abb1663f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185254"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739513"
 ---
 # <a name="canonical-functions"></a>Funciones canónicas
 
@@ -50,7 +51,7 @@ Esta sección describe las funciones canónicas que son admitidas por todos los 
  [Otras funciones canónicas](other-canonical-functions.md)  
  Describe las funciones no clasificadas como funciones bit a bit, de fecha y hora, de cadena, matemáticas o de agregado.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general sobre Entity SQL](entity-sql-overview.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)
