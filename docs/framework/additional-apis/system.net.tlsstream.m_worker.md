@@ -1,5 +1,6 @@
 ---
-title: Campo TlsStream. m_Worker (System.Net)
+description: 'Más información acerca de: TlsStream.m_Worker campo'
+title: Campo de TlsStream.m_Worker (System.Net)
 ms.date: 10/21/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -10,39 +11,39 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: d335820d13e1e15e054e824a284615cdbf6c2094
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: d929b0b1949bc1902425c016bfd770d4c66a3257
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847245"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699524"
 ---
-# <a name="tlsstreamm_worker-field"></a><span data-ttu-id="07257-102">TlsStream. m_Worker, campo</span><span class="sxs-lookup"><span data-stu-id="07257-102">TlsStream.m_Worker Field</span></span>
+# <a name="tlsstreamm_worker-field"></a><span data-ttu-id="b561d-103">TlsStream.m_Worker campo</span><span class="sxs-lookup"><span data-stu-id="b561d-103">TlsStream.m_Worker Field</span></span>
 
-<span data-ttu-id="07257-103">Representa el estado de la secuencia SSL.</span><span class="sxs-lookup"><span data-stu-id="07257-103">Represents the state of the SSL stream.</span></span>
+<span data-ttu-id="b561d-104">Representa el estado de la secuencia SSL.</span><span class="sxs-lookup"><span data-stu-id="b561d-104">Represents the state of the SSL stream.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="07257-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="07257-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b561d-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b561d-105">Syntax</span></span>
 
 ```csharp
 private SslState m_Worker;
 ```
 
-## <a name="field-value"></a><span data-ttu-id="07257-105">Valor del campo</span><span class="sxs-lookup"><span data-stu-id="07257-105">Field value</span></span>
+## <a name="field-value"></a><span data-ttu-id="b561d-106">Valor de campo</span><span class="sxs-lookup"><span data-stu-id="b561d-106">Field value</span></span>
 
 `System.Net.Security.SslState`  
-<span data-ttu-id="07257-106">El estado de la secuencia SSL.</span><span class="sxs-lookup"><span data-stu-id="07257-106">The state of the SSL stream.</span></span>
+<span data-ttu-id="b561d-107">El estado de la secuencia SSL.</span><span class="sxs-lookup"><span data-stu-id="b561d-107">The state of the SSL stream.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="07257-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="07257-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b561d-108">Observaciones</span><span class="sxs-lookup"><span data-stu-id="b561d-108">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="07257-108">El campo `TlsStream.m_Worker` es privado y no está diseñado para usarse directamente en el código.</span><span class="sxs-lookup"><span data-stu-id="07257-108">The `TlsStream.m_Worker` field is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="b561d-109">El `TlsStream.m_Worker` campo es privado y no está diseñado para usarse directamente en el código.</span><span class="sxs-lookup"><span data-stu-id="b561d-109">The `TlsStream.m_Worker` field is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="07257-109">Microsoft no admite el uso de este campo en una aplicación de producción en cualquier circunstancia.</span><span class="sxs-lookup"><span data-stu-id="07257-109">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="b561d-110">Microsoft no admite el uso de este campo en una aplicación de producción en cualquier circunstancia.</span><span class="sxs-lookup"><span data-stu-id="b561d-110">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="07257-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="07257-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b561d-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b561d-111">Requirements</span></span>
 
-<span data-ttu-id="07257-111">**Espacio de nombres:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="07257-111">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="b561d-112">**Espacio de nombres:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="b561d-112">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="07257-112">**Ensamblado:** Sistema (en System. dll)</span><span class="sxs-lookup"><span data-stu-id="07257-112">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="b561d-113">**Ensamblado:** Sistema (en System.dll)</span><span class="sxs-lookup"><span data-stu-id="b561d-113">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="07257-113">**.NET Framework versiones:** Disponible desde 2,0.</span><span class="sxs-lookup"><span data-stu-id="07257-113">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="b561d-114">**.NET Framework versiones:** Disponible desde 2,0.</span><span class="sxs-lookup"><span data-stu-id="b561d-114">**.NET Framework versions:** Available since 2.0.</span></span>
