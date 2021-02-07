@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <state> de WCF, <workflowInstanceQuery>'
 title: <state> de WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: c323f7dba265e7fbcb09482115694088e761af0e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8dbf741473e5f3c15c1833868c2c17abdfba6643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682649"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<state> de WCF, \<workflowInstanceQuery>
 
@@ -66,13 +67,13 @@ Ninguno.
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
 Los registros devueltos se filtran por los estados de esta colección.  
   
 Los valores de estado posibles se describen en la tabla siguiente:
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |Anulado|Se ha anulado la instancia de flujo de trabajo.|  
 |Completado|Se ha completado la instancia de flujo de trabajo.|  

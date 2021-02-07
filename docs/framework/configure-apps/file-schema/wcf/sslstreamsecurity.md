@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <sslStreamSecurity>'
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: aa6bc7f5a94afc8a190d3d9d2d71ea8b38d8c25b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 77e08deb5263e330ead5df21ed1ef2dddbba28ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153578"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682701"
 ---
 # \<sslStreamSecurity>
 
@@ -35,7 +36,7 @@ Representa un elemento de enlace personalizado que admite seguridad del canal me
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|requireClientCertificate|Un valor booleano que especifica si se requiere un certificado de cliente para este enlace. El valor predeterminado es `false`.|  
+|requireClientCertificate|Un valor booleano que especifica si se requiere un certificado de cliente para este enlace. De manera predeterminada, es `false`.|  
 |sslProtocols|Un valor de marca de enumeración de SslProtocols que especifica qué SslProtocols son compatibles. El valor predeterminado es Ssl3&#124;TLS&#124;Tls11&#124;Tls12.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

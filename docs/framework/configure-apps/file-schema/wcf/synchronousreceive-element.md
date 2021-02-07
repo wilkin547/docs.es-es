@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <synchronousReceive> elemento'
 title: <synchronousReceive> (elemento)
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: 2073d115dd87d513a6e48b8b585fed4b49d5bb32
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: afcd10b4ad41bd6ff12dbf246f66ef7fac4e759a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157179"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682623"
 ---
 # <a name="synchronousreceive-element"></a>Elemento \<synchronousReceive>
 
@@ -44,7 +45,7 @@ Este elemento de configuración se usa para especificar el comportamiento del ti
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Utilice este comportamiento para indicar a la escucha del canal que utilice un receptor sincrónico en lugar del valor predeterminado, asincrónico. Windows Communication Foundation (WCF) emite un nuevo subproceso para bombear cada canal aceptado. Si hay muchos canales, cabe la posibilidad de quedarse sin subprocesos.  
   

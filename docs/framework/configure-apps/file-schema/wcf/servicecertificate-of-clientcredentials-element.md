@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <serviceCertificate> del <clientCredentials> elemento'
 title: <serviceCertificate> del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 502452c664f2dcb0856f72e25ff8b1517f432919
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5503c1a60b2d37f4f9359a2f49c019c37df71619
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172897"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682909"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate> del \<clientCredentials> elemento
 
@@ -55,7 +56,7 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
   
  Los atributos del `serviceCertificate` elemento son idénticos a los atributos de [\<clientCertificate>](clientcertificate-of-clientcredentials-element.md) .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>

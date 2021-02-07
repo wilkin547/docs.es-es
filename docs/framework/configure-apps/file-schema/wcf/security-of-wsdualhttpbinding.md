@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <wsDualHttpBinding>'
 title: <security> de <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 7398cd538bb240e78413575f7c28abe7f797d05c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6d2e87912aef6114d7dcb99b82e4a7804317b28a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683039"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<security> de \<wsDualHttpBinding>
 
@@ -42,10 +43,10 @@ Define las capacidades de seguridad de [\<wsDualHttpBinding>](wsdualhttpbinding.
   
 ## <a name="mode-attribute"></a>Atributo mode  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |None|La seguridad está deshabilitada.|  
-|Mensaje|La seguridad se proporciona mediante la seguridad del mensaje SOAP.|  
+|Message|La seguridad se proporciona mediante la seguridad del mensaje SOAP.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -59,7 +60,7 @@ Define las capacidades de seguridad de [\<wsDualHttpBinding>](wsdualhttpbinding.
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todas las funciones de enlace de [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un enlace dual expone la dirección IP del cliente al servicio. El cliente debería utilizar la seguridad para asegurarse de que sólo se conecta a servicios de confianza.  
   

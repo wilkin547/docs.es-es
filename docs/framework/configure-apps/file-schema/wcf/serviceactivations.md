@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <serviceActivations>'
 title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 64ae0bfd90ae941fc78515c7936c998201c87485
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 726514af4e42cc387daf61b688d528f690ec8ee8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683026"
 ---
 # \<serviceActivations>
 
@@ -49,7 +50,7 @@ Ninguno.
 |-------------|-----------------|
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Define el tipo del que el entorno host del servicio crea instancias para un transporte determinado.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En el siguiente ejemplo se muestra cómo configurar los valores de activación dentro del archivo web.config.
 
@@ -71,7 +72,7 @@ Observe que `<serviceHostingEnvironment>` es una configuración de nivel de apli
 
 La activación basada en la configuración admite la activación a través de protocolos http y distintos de http. Requiere extensiones en relativeAddress, es decir,. SVC,. xoml o. xamlx. Puede asignar sus propias extensiones al buildProviders conocido, que le permitirá activar el servicio a través de cualquier extensión. Si existe conflicto, la sección `<serviceActivations>` invalida los registros de .svc.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>

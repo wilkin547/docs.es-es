@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <wsHttpBinding>'
 title: <security> de <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: 9f984759fb52242bf8030a101b567c14627dd314
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 646d49bd67b2b544ae2616f206bfdeabf7806579
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158700"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683065"
 ---
 # <a name="security-of-wshttpbinding"></a>\<security> de \<wsHttpBinding>
 
@@ -45,15 +46,15 @@ Representa las capacidades de seguridad de [\<wsHttpBinding>](wshttpbinding.md) 
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|mode|Opta. Especifica el tipo de seguridad que se aplica. El valor predeterminado es `Message`.<br />: Este atributo es del tipo <xref:System.ServiceModel.SecurityMode> .|  
+|mode|Opta. Especifica el tipo de seguridad que se aplica. De manera predeterminada, es `Message`.<br />: Este atributo es del tipo <xref:System.ServiceModel.SecurityMode> .|  
   
 ## <a name="mode-attribute"></a>Atributo mode  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |None|La seguridad está deshabilitada.|  
 |Transporte|La seguridad se proporciona utilizando HTTPS. El servicio necesita ser configurado con certificados SSL. El mensaje se protege completamente utilizando HTTPS y es autenticado por el cliente utilizando el Certificado SSL del servicio. La autenticación del cliente se controla a través del atributo `ClientCredentials`. del [\<transport>](transport-of-wshttpbinding.md) .|  
-|Mensaje|La seguridad se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo SOAP se cifra y firma. Este modo proporciona una variedad de características, como si las credenciales del servicio están disponibles para el cliente fuera de la banda, el conjunto de algoritmos que se utiliza y qué nivel de protección se aplica al cuerpo del mensaje a través de la propiedad Security.Message. Se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en memoria caché durante la duración de la sesión.|  
+|Message|La seguridad se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo SOAP se cifra y firma. Este modo proporciona una variedad de características, como si las credenciales del servicio están disponibles para el cliente fuera de la banda, el conjunto de algoritmos que se utiliza y qué nivel de protección se aplica al cuerpo del mensaje a través de la propiedad Security.Message. Se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en memoria caché durante la duración de la sesión.|  
 |TransportWithMessageCredential|En este modo, HTTPS proporciona integridad, confidencialidad y autenticación de servidor y la seguridad del mensaje SOAP proporciona la autenticación del cliente. De manera predeterminada, se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en la memoria caché durante la duración de la sesión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -69,7 +70,7 @@ Representa las capacidades de seguridad de [\<wsHttpBinding>](wshttpbinding.md) 
 |-------------|-----------------|  
 |[\<wsHttpBinding>](wshttpbinding.md)|Un enlace seguro para las aplicaciones de transporte HTTP.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La clase WSHttpBinding está diseñada para la interoperación con servicios que implementan las especificaciones de WS-*. La seguridad de transporte para este enlace es Capa de sockets seguros (SSL) sobre HTTP o HTTPS.  
   

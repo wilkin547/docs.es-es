@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <serviceAuthorization> elemento'
 title: <serviceAuthorization> (elemento)
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: f476f754a340f52859be2986e42754cba0ef3771
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ee447f487027ed12f829dd0fd364556ce095d7d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71834019"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682935"
 ---
 # <a name="serviceauthorization-element"></a>Elemento \<serviceAuthorization>
 
@@ -58,7 +59,7 @@ En las secciones siguientes se describen los atributos, los elementos secundario
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Contiene una colección de valores para el comportamiento de un servicio.|  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta sección contiene elementos que afectan a la autorización, a los proveedores de roles personalizados y a la suplantación.  
   
@@ -99,7 +100,7 @@ En el código siguiente se muestra el `roleProviderName` utilizado con el `princ
 
 Para obtener un ejemplo detallado del uso de este elemento de configuración, vea [autorizar el acceso a las operaciones de servicio y a](../../../wcf/samples/authorizing-access-to-service-operations.md) la [Directiva de autorización](../../../wcf/samples/authorization-policy.md).
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
