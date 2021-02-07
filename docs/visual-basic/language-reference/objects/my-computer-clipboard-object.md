@@ -1,22 +1,23 @@
 ---
+description: 'Más información acerca de: My. Computer. Clipboard (objeto)'
 title: My.Computer.Clipboard (Objeto)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 8a89494a622989ffb9efb502cf2f6597d10dfffe
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4373b9e5bfc1016881a8c411dd1afedd2ed0a5f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875346"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674524"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard (Objeto)
 
 Proporciona métodos para manipular el Portapapeles.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Computer.Clipboard` , vea <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
@@ -33,7 +34,7 @@ Proporciona métodos para manipular el Portapapeles.
   
  **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
 - [My.Computer (Objeto)](my-computer-object.md)

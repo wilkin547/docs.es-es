@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: instrucción const (Visual Basic)'
 title: Instrucción Const
 ms.date: 05/12/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 3b05d4067ef99e03df07d2c316c982051180d961
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 61d898823c7697c91b207a502417b49cdeaf5eea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84382112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673861"
 ---
 # <a name="const-statement-visual-basic"></a>Instrucción Const (Visual Basic)
 
@@ -104,7 +105,7 @@ Si define una constante con el tipo `Object` de datos, el compilador Visual Basi
 
 En el ejemplo anterior se usa el <xref:System.Type.ToString%2A> método en el <xref:System.Type> objeto devuelto por el [operador GetType](../operators/gettype-operator.md), porque <xref:System.Type> no se puede convertir en `String` mediante `CStr` .
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: declare (instrucción)'
 title: Declare Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ad8169515bbb2889c0adbed4df4e30a0215d47d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545524"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673848"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
@@ -60,15 +61,15 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|Opcional. Especifica el juego de caracteres y la información de búsqueda de archivos. Puede ser uno de los siguientes:<br /><br /> -   [ANSI](../modifiers/ansi.md) (valor predeterminado)<br />-   [Unicode](../modifiers/unicode.md)<br />-   [Automático](../modifiers/auto.md)|
 |`Sub`|Opcional, pero `Sub` `Function` debe aparecer o. Indica que el procedimiento externo no devuelve un valor.|
 |`Function`|Opcional, pero `Sub` `Function` debe aparecer o. Indica que el procedimiento externo devuelve un valor.|
-|`name`|Obligatorio. Nombre de esta referencia externa. Para obtener más información, vea [nombres de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Lib`|Obligatorio. Introduce una `Lib` cláusula, que identifica el archivo externo (dll o recurso de código) que contiene un procedimiento externo.|
-|`libname`|Obligatorio. Nombre del archivo que contiene el procedimiento declarado.|
+|`name`|Necesario. Nombre de esta referencia externa. Para obtener más información, vea [nombres de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Lib`|Necesario. Introduce una `Lib` cláusula, que identifica el archivo externo (dll o recurso de código) que contiene un procedimiento externo.|
+|`libname`|Necesario. Nombre del archivo que contiene el procedimiento declarado.|
 |`Alias`|Opcional. Indica que no se puede identificar el procedimiento declarado en su archivo por el nombre especificado en `name` . Especifique su identificación en `aliasname` .|
 |`aliasname`|Obligatorio si se usa la `Alias` palabra clave. Cadena que identifica el procedimiento de una de estas dos maneras:<br /><br /> Nombre del punto de entrada del procedimiento dentro de su archivo, entre comillas ( `""` )<br /><br /> o bien<br /><br /> Un signo de número ( `#` ) seguido de un entero que especifica el número ordinal del punto de entrada del procedimiento dentro de su archivo.|
 |`parameterlist`|Obligatorio si el procedimiento toma parámetros. Vea [lista de parámetros](parameter-list.md).|
 |`returntype`|Obligatorio si `Function` se especifica y `Option Strict` es `On` . Tipo de datos del valor devuelto por el procedimiento.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 A veces es necesario llamar a un procedimiento definido en un archivo (por ejemplo, un archivo DLL o un recurso de código) fuera del proyecto. Al hacerlo, el compilador Visual Basic no tiene acceso a la información que necesita para llamar al procedimiento correctamente, como dónde se encuentra el procedimiento, cómo se identifica, su secuencia de llamada y tipo de valor devuelto, y el juego de caracteres de cadena que usa. La `Declare` instrucción crea una referencia a un procedimiento externo y proporciona esta información necesaria.
 

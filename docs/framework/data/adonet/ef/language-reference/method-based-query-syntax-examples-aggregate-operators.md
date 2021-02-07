@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Method-Based ejemplos de sintaxis de consultas: operadores de agregado'
 title: 'Ejemplos de sintaxis de consulta basada en métodos: Operadores de agregación'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
-ms.openlocfilehash: f8754101e7ec55fe5f9836300de1d077e1db2478
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 26398af95398905f2e28c603ef90a04a4a2c56bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192131"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673620"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators"></a>Ejemplos de sintaxis de consulta basada en métodos: Operadores de agregación
 
@@ -21,7 +22,7 @@ En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="average"></a>Average  
+## <a name="average"></a>Promedio  
   
 ### <a name="example"></a>Ejemplo  
 
@@ -152,6 +153,6 @@ En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.
  [!code-csharp[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

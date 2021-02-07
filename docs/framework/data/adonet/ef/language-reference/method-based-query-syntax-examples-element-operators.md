@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Method-Based ejemplos de sintaxis de consultas: operadores de elementos'
 title: 'Ejemplos de sintaxis de consulta basada en métodos: Operadores de elementos'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
-ms.openlocfilehash: 96d393a34af69935e75582ef1954ddd661a355f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a83602c4d374ae02b4f39ee75821718f8b53f3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192053"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673588"
 ---
 # <a name="method-based-query-syntax-examples-element-operators"></a>Ejemplos de sintaxis de consulta basada en métodos: Operadores de elementos
 
@@ -30,6 +31,6 @@ En los ejemplos de este tema se muestra cómo usar el <xref:System.Linq.Enumerab
  [!code-csharp[DP L2E Examples#FirstCondition_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#firstcondition_mq)]
  [!code-vb[DP L2E Examples#FirstCondition_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#firstcondition_mq)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

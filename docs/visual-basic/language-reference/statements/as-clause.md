@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: cláusula as (Visual Basic)'
 title: Cláusula As
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 2f0b217fb299a9c7c05f211c17d10efd80168ab5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a8c7a3d9bcc43c817910aa330b81ffaf98980699
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674069"
 ---
 # <a name="as-clause-visual-basic"></a>As (Cláusula, Visual Basic)
 
 Introduce una `As` cláusula, que identifica un tipo de datos en una instrucción de declaración o una lista de restricciones en un parámetro de tipo genérico.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La palabra clave `As` se puede usar en los siguientes contextos:  
   
@@ -43,7 +44,7 @@ Introduce una `As` cláusula, que identifica un tipo de datos en una instrucció
   
  [Para cada... Instrucciones Next](for-each-next-statement.md)  
   
- [Cláusula FROM](../queries/from-clause.md)  
+ [Cláusula From](../queries/from-clause.md)  
   
  [Instrucción Function](function-statement.md)  
   
@@ -61,7 +62,7 @@ Introduce una `As` cláusula, que identifica un tipo de datos en una instrucció
   
  [Try... Detectar... Finally (instrucciones)](try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimiento para crear una variable](../../programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [Tipo de datos](../../programming-guide/language-features/data-types/index.md)

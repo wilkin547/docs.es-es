@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: lista de atributos (Visual Basic)'
 title: Lista de atributos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: e566239c56efa8ca8e83bff92486fec4c434e92b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bde9387a48001a2696a6f69454edc311e7597bb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874734"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674043"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista de atributos (Visual Basic)
 
@@ -27,11 +28,11 @@ Especifica los atributos que se van a aplicar a un elemento de programación dec
 |||
 |---|---|
 |`attributemodifier`|Se requiere para los atributos aplicados al principio de un archivo de código fuente. Puede ser un [ensamblado](../modifiers/assembly.md) o un [módulo](../modifiers/module-keyword.md).|
-|`attributename`| Obligatorio. Nombre del atributo.|
+|`attributename`| Necesario. Nombre del atributo.|
 |`attributearguments`|Opcional. Lista de argumentos posicionales para este atributo. Los argumentos múltiples se separan mediante comas.|
 |`attributeinitializer`|Opcional. Lista de inicializadores de variable o propiedad para este atributo. Los inicializadores múltiples se separan mediante comas.|
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede aplicar uno o varios atributos a casi cualquier elemento de programación (tipos, procedimientos, propiedades, etc.). Los atributos aparecen en los metadatos del ensamblado y pueden ayudarle a anotar el código o especificar cómo usar un elemento de programación determinado. Puede aplicar atributos definidos por Visual Basic y el .NET Framework, y puede definir sus propios atributos.  
 
@@ -57,9 +58,9 @@ Especifica los atributos que se van a aplicar a un elemento de programación dec
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> indica que el procedimiento con atributos representa un punto de entrada de una biblioteca de vínculos dinámicos (DLL) no administrada. El atributo proporciona el nombre del archivo DLL como argumento posicional y la otra información como inicializadores de variables.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Ensamblado](../modifiers/assembly.md)
+- [Ensamblaje](../modifiers/assembly.md)
 - [Destina \<keyword>](../modifiers/module-keyword.md)
 - [Información general de atributos](../../programming-guide/concepts/attributes/index.md)
 - [Procedimiento Interrupción y combinación de instrucciones en código](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

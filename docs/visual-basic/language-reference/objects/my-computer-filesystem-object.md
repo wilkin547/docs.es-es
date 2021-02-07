@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: My. Computer. FileSystem (objeto)'
 title: My.Computer.FileSystem (Objeto)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 519571f665aed553f98f6b01a1cf9e03a0d78fe9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 0700da02d9dfb136b11a9e0b4db1c00883fa8cff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867588"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674485"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem (Objeto)
 
 Proporciona propiedades y métodos para trabajar con unidades, archivos y directorios.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Computer.FileSystem` , vea <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
@@ -40,7 +41,7 @@ Proporciona propiedades y métodos para trabajar con unidades, archivos y direct
   
  **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [My.Computer.FileSystem.SpecialDirectories (Objeto)](my-computer-filesystem-specialdirectories-object.md)
 - [My.Computer (Objeto)](my-computer-object.md)

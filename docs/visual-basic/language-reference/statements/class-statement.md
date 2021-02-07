@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: instrucción Class (Visual Basic)'
 title: Instrucción Class
 ms.date: 05/12/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: de4541addc9f4755d973586c7d1b4410e4bf12ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866032"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673900"
 ---
 # <a name="class-statement-visual-basic"></a>Instrucción Class (Visual Basic)
 
@@ -45,7 +46,7 @@ End Class
 |`MustInherit`|Opcional. Vea [MustInherit](../modifiers/mustinherit.md).|  
 |`NotInheritable`|Opcional. Vea [NotInheritable](../modifiers/notinheritable.md).|  
 |`Partial`|Opcional. Indica una definición parcial de la clase. Vea [partial](../modifiers/partial.md).|  
-|`name`|Obligatorio. Nombre de esta clase. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Necesario. Nombre de esta clase. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que se trata de una clase genérica.|  
 |`typelist`|Obligatorio si se usa la palabra clave [of](of-clause.md) . Lista de parámetros de tipo de esta clase. Consulte [lista de tipos](type-list.md).|  
 |`Inherits`|Opcional. Indica que esta clase hereda los miembros de otra clase. Vea [Inherits (instrucción](inherits-statement.md)).|  
@@ -53,9 +54,9 @@ End Class
 |`Implements`|Opcional. Indica que esta clase implementa los miembros de una o más interfaces. Vea [Implements (instrucción](implements-statement.md)).|  
 |`interfacenames`|Es obligatorio si se utiliza la instrucción `Implements`. Los nombres de las interfaces que implementa esta clase.|  
 |`statements`|Opcional. Instrucciones que definen los miembros de esta clase.|  
-|`End Class`|Obligatorio. Termina la definición de `Class`.|  
+|`End Class`|Necesario. Termina la definición de `Class`.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una `Class` instrucción define un nuevo tipo de datos. Una *clase* es un bloque de creación fundamental de la programación orientada a objetos (OOP). Para obtener más información, vea [objetos y clases](../../programming-guide/language-features/objects-and-classes/index.md).  
   
@@ -67,7 +68,7 @@ End Class
   
 ## <a name="rules"></a>Reglas  
   
-- **Anidamiento.** Puede definir una clase dentro de otra. La clase externa se denomina *clase contenedora*y la clase interna se denomina *clase anidada*.  
+- **Anidamiento.** Puede definir una clase dentro de otra. La clase externa se denomina *clase contenedora* y la clase interna se denomina *clase anidada*.  
   
 - **Ella.** Si la clase usa la [instrucción Inherits](inherits-statement.md), solo puede especificar una clase base o una interfaz. Una clase no puede heredar de más de un elemento.  
   
@@ -111,7 +112,7 @@ End Class
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Objetos y clases](../../programming-guide/language-features/objects-and-classes/index.md)
 - [Estructuras y clases](../../programming-guide/language-features/data-types/structures-and-classes.md)

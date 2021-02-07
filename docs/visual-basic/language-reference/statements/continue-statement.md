@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de la instrucción Continue (Visual Basic)
 title: Instrucción Continue
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: cf73ea1b3d402609c9966980dcab9ddd9bc096c2
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: c6d67e766b2551956795803076efe639ba3c8c99
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874963"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673874"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue (Instrucción, Visual Basic)
 
@@ -24,7 +25,7 @@ Transfiere el control inmediatamente a la siguiente iteración de un bucle.
 Continue { Do | For | While }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede transferir desde dentro de un `Do` `For` bucle, o `While` hasta la siguiente iteración del bucle. El control pasa inmediatamente a la prueba de la condición de bucle, que es equivalente a transferir a la `For` `While` instrucción o, o a la `Do` `Loop` instrucción o que contiene la `Until` `While` cláusula o.  
   
@@ -42,9 +43,9 @@ Continue { Do | For | While }
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Do...Loop](do-loop-statement.md)
 - [Instrucción For...Next](for-next-statement.md)
 - [Instrucción While...End While](while-end-while-statement.md)
-- [Try... Detectar... Finally (instrucción)](try-catch-finally-statement.md)
+- [Try...Catch...Finally (instrucción)](try-catch-finally-statement.md)

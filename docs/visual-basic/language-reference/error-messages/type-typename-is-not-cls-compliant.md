@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: BC40041: el tipo <typename> no es conforme a CLS'
 title: El tipo <typename> no es compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: c50e721e9170a402724a11f3aab573c7e8abf4c1
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a1e807dba64f2fce70b0fb39147087d91ca80fbc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161171"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675044"
 ---
 # <a name="bc40041-type-typename-is-not-cls-compliant"></a>BC40041: el tipo \<typename> no es conforme a CLS
 

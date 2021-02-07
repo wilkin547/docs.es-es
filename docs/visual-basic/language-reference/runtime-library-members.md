@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Visual Basic miembros de la biblioteca en tiempo de ejecución'
 title: Miembros de la biblioteca en tiempo de ejecución
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cbfca94fa1e8378c04c5a9a6c9cb77b560eed4c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359495"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674186"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Miembros de la biblioteca en tiempo de ejecución de Visual Basic
 
@@ -195,7 +196,7 @@ El `Microsoft.VisualBasic` espacio de nombres contiene las clases, los módulos,
 
  El `Microsoft.VisualBasic` espacio de nombres proporciona constantes y enumeraciones como parte de la biblioteca en tiempo de ejecución Visual Basic. Puede usar estos valores constantes en el código. Cada enumeración representa una categoría determinada de funcionalidad. Para obtener más información, vea [constantes y enumeraciones](constants-and-enumerations.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Constantes y enumeraciones](constants-and-enumerations.md)
 - [Palabras clave](keywords/index.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: instrucción Delegate'
 title: Delegate (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 29de4c174273c3c6c0d4f0cea1ee6dc254a1339b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3fbf3d7b47b465fd0850f01170e02b19b7b93b4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866659"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673822"
 ---
 # <a name="delegate-statement"></a>Delegate (Instrucción)
 
@@ -34,12 +35,12 @@ Se usa para declarar un delegado. Un delegado es un tipo de referencia que hace 
 |`Shadows`|Opcional. Indica que este delegado vuelve a declarar y oculta un elemento de programación con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base. Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.<br /><br /> Un elemento reemplazado no está disponible desde la clase derivada que lo reemplaza, excepto desde donde el elemento reemplazado es inaccesible. Por ejemplo, si un `Private` elemento sombrea un elemento de clase base, el código que no tiene permiso para obtener acceso al elemento de `Private` la clase base en su lugar.|  
 |`Sub`|Opcional, pero `Sub` `Function` debe aparecer o. Declara este procedimiento como un procedimiento delegado `Sub` que no devuelve un valor.|  
 |`Function`|Opcional, pero `Sub` `Function` debe aparecer o. Declara este procedimiento como un procedimiento delegado `Function` que devuelve un valor.|  
-|`name`|Obligatorio. Nombre del tipo de delegado; sigue las convenciones de nomenclatura de variables estándar.|  
+|`name`|Necesario. Nombre del tipo de delegado; sigue las convenciones de nomenclatura de variables estándar.|  
 |`typeparamlist`|Opcional. Lista de parámetros de tipo para este delegado. Varios parámetros de tipo se separan mediante comas. Opcionalmente, cada parámetro de tipo se puede declarar como variante mediante el uso `In` de los `Out` Modificadores genéricos y. Debe incluir la [lista de tipos](type-list.md) entre paréntesis y presentarla con la `Of` palabra clave.|  
 |`parameterlist`|Opcional. Lista de parámetros que se pasan al procedimiento cuando se llama. Debe incluir la [lista de parámetros](parameter-list.md) entre paréntesis.|  
 |`type`|Obligatorio si se especifica un `Function` procedimiento. Tipo de datos del valor devuelto.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `Delegate` instrucción define el parámetro y los tipos devueltos de una clase de delegado. Cualquier procedimiento con parámetros coincidentes y tipos de valor devueltos se puede utilizar para crear una instancia de esta clase de delegado. Posteriormente, el procedimiento se puede invocar mediante la instancia de delegado, llamando al método del delegado `Invoke` .  
   
@@ -67,7 +68,7 @@ Se usa para declarar un delegado. Un delegado es un tipo de referencia que hace 
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operador AddressOf](../operators/addressof-operator.md)
 - [De](of-clause.md)
@@ -76,4 +77,4 @@ Se usa para declarar un delegado. Un delegado es un tipo de referencia que hace 
 - [Tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
 - [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md)
 - [In](../modifiers/in-generic-modifier.md)
-- [Enuncia](../modifiers/out-generic-modifier.md)
+- [Fuera](../modifiers/out-generic-modifier.md)

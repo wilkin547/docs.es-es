@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: SqlClient para Entity Framework'
 title: SqlClient para tipos de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: bca2cc0e0d9f43c51c66080f3bd38c245ce94381
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 92bd557198d203229394fb3a4c2fe286e217edca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156594"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673185"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient para tipos de Entity Framework
 
@@ -51,6 +52,6 @@ El archivo del manifiesto del proveedor correspondiente al Proveedor de datos .N
 |`Unique`<br /><br /> `identifier`|Igual comparable: true<br /><br /> Orden comparable: true|`Edm.Guid`|N/D|  
 |`xml`|Igual comparable: false<br /><br /> Orden comparable: false|`Edm.String`|Longitud<br /><br /> -Valor predeterminado: 1073741823<br /><br /> -Constant: true<br /><br /> Unicode:<br /><br /> -Default: true<br /><br /> -Constant: true<br /><br /> FixedLength<br /><br /> -Valor predeterminado: false<br /><br /> -Constant: true|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Especificaciones CSDL, SSDL MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

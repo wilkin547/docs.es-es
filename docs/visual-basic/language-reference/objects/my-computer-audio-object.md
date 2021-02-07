@@ -1,22 +1,23 @@
 ---
+description: 'Más información acerca de: My. Computer. audio (objeto)'
 title: My.Computer.Audio (Objeto)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Audio object
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
-ms.openlocfilehash: 1051cd9dff8c83b853f5bf8b5a8edc533f21a185
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6eaaa7cae53e875793e07d937541107e3e3b617f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875374"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674550"
 ---
 # <a name="mycomputeraudio-object"></a>My.Computer.Audio (Objeto)
 
 Proporciona métodos para reproducir sonidos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Computer.Audio` , vea <xref:Microsoft.VisualBasic.Devices.Audio>.  
   
@@ -30,6 +31,6 @@ Proporciona métodos para reproducir sonidos.
   
  **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [My.Computer (Objeto)](my-computer-object.md)

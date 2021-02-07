@@ -1,21 +1,22 @@
 ---
+description: 'Más información acerca de: My. Computer (objeto)'
 title: My.Computer (Objeto)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: 4e9019773c74aa570f52eb573677f687f2600419
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 524c742432b37345054ca76b046be921659dba82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674303"
 ---
 # <a name="mycomputer-object"></a>My.Computer (Objeto)
 
 Proporciona propiedades para manipular componentes del equipo, como el audio, el reloj, el teclado, el sistema de archivos, etc.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Computer` , vea <xref:Microsoft.VisualBasic.Devices.Computer>. La clase base <xref:Microsoft.VisualBasic.Devices.ServerComputer> proporciona los miembros que están disponibles en todos los proyectos.  
   
@@ -27,7 +28,7 @@ Proporciona propiedades para manipular componentes del equipo, como el audio, el
   
  **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [My.Computer.Audio (Objeto)](my-computer-audio-object.md)
 - [My.Computer.Clipboard (Objeto)](my-computer-clipboard-object.md)
