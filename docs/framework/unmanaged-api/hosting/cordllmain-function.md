@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: _CorDllMain función'
 title: _CorDllMain (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-ms.openlocfilehash: 1b3ebcabc66ee7ca29245bb02d958be311bc65fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 442afae3a627eb684a86c02fbc6e546aa804b7a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673701"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717157"
 ---
 # <a name="_cordllmain-function"></a>\_CorDllMain función)
 
@@ -50,7 +51,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 
  Este método devuelve `true` un resultado correcto y `false` si se produce un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El cargador del sistema operativo llama a esta función para los ensamblados DLL. En el caso de los ensamblados ejecutables, el cargador llama a la función [ \_ CorExeMain](corexemain-function.md) en su lugar.  
   
@@ -70,6 +71,6 @@ El `_CorDllMain` cargador del sistema operativo llama directamente a la función
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales para metadatos](../metadata/metadata-global-static-functions.md)

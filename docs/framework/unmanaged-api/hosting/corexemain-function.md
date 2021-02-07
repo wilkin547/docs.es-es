@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: _CorExeMain función'
 title: _CorExeMain (Función)
 ms.date: 03/30/2017
 api_name:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 898f76e2-16f4-4a63-b7d9-dad2d3824d8a
 topic_type:
 - apiref
-ms.openlocfilehash: af1d0e2039024a51341e30bec497c581a0bcacb3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f94197598d01255c35712aa682f83ca9be1fb377
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717139"
 ---
 # <a name="_corexemain-function"></a>_CorExeMain (Función)
 
@@ -34,7 +35,7 @@ Inicializa el Common Language Runtime (CLR), busca el punto de entrada administr
 __int32 STDMETHODCALLTYPE _CorExeMain ();  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El cargador llama a esta función en los procesos creados a partir de ensamblados ejecutables administrados. En el caso de los ensamblados DLL, el cargador llama a la función [_CorDllMain](cordllmain-function.md) en su lugar.  
   
@@ -54,6 +55,6 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales para metadatos](../metadata/metadata-global-static-functions.md)

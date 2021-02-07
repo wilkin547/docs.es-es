@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura Customdumpitem ('
 title: CustomDumpItem (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: c77e93686c7d121e9fe2a92f03970404ab823dc0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bd7b2bb59675bc01e24dc6e6d0ce524f3d35466
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673246"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716905"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem (Estructura)
 
@@ -36,14 +37,14 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`itemKind`|Valor de [ecustomdumpitemkind (](ecustomdumpitemkind-enumeration.md) que indica el tipo de elemento que se va a agregar.|  
 |`pReserved`|No se usa actualmente. Los elementos agregados a la Unión no deben ser mayores que el tamaño del puntero. Si `struct` es necesario, debe asignarlo por separado y apuntar a él.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  [ICLRErrorReportingManager:: BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md) toma un parámetro de tipo `CustomDumpItem` .  
   
@@ -57,6 +58,6 @@ struct {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de hospedaje](hosting-structures.md)

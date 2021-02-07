@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRPolicyManager:: SetUnhandledExceptionPolicy ((método)'
 title: ICLRPolicyManager::SetUnhandledExceptionPolicy (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5268480e-280a-4931-b7a3-dc3ffdf7f78f
 topic_type:
 - apiref
-ms.openlocfilehash: 1088374c9df18ded38b44384be44de245f0bd403
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 489127bb00b2b65466460baa3cfd31439672cd1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728958"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716554"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy (Método)
 
@@ -50,7 +51,7 @@ HRESULT SetUnhandledExceptionPolicy (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  De forma predeterminada, el CLR es el controlador final de todas las excepciones no controladas y su comportamiento predeterminado es anular el proceso. El host puede cambiar este comportamiento estableciendo el `policy` valor en eHostDeterminedPolicy. Este valor permite que el host implemente su propio comportamiento predeterminado, al igual que con las versiones anteriores de CLR.  
   
@@ -64,7 +65,7 @@ HRESULT SetUnhandledExceptionPolicy (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EClrUnhandledException (Enumeración)](eclrunhandledexception-enumeration.md)
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)
