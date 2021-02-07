@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: activación de MSMQ'
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 349eadb8f517993c343e81656204ad25e62ed931
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3360ae560cba9c3b42551617beb295154668814b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752249"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Este comando permite tener acceso a la aplicación/servicemodelsamples mediante `http://localhost/servicemodelsamples` y `net.msmq://localhost/servicemodelsamples` .
 
-7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **Ejecutar**y escriba `Services.msc` . Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón secundario y seleccione **Propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
+7. Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. En el menú **Inicio** , haga clic en **Ejecutar** y escriba `Services.msc` . Busque en la lista de servicios el **adaptador de escucha net. MSMQ**. Haga clic con el botón secundario y seleccione **Propiedades**. Establezca el **tipo de inicio** en **automático**, haga clic en **aplicar** y haga clic en el botón **iniciar** . Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.
 
 8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Use el código siguiente:
 
@@ -337,7 +338,7 @@ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguri
 
     1. Ejecute Services.msc.
 
-    2. Haga clic con el botón secundario en el **adaptador net. MsmqListener**y elija **propiedades**.
+    2. Haga clic con el botón secundario en el **adaptador net. MsmqListener** y elija **propiedades**.
 
 4. Cambie la cuenta en la pestaña **Inicio de sesión** .
 

@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: varios puntos de conexión'
 title: Varios puntos de conexión
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 92c329ff922b5e4fc025245dac596c6abebc2716
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f11110cdc53c6e9a8abc876f0304b144a2d82964
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260154"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752254"
 ---
 # <a name="multiple-endpoints"></a>Varios puntos de conexión
 

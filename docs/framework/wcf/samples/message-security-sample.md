@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ejemplo de seguridad de mensajes'
 title: Ejemplo de seguridad de mensaje
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: 267073d22d3b1b311e0de90454e0f2ec3744cf66
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: adec9df3b2a3b5ba022ec2123a8d90d85869246b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294409"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752306"
 ---
 # <a name="message-security-sample"></a>Ejemplo de seguridad de mensaje
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: varios puntos de conexión en un solo ListenUri'
 title: Varios puntos de conexión en un ListenUri único
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 09696ec8170915f29dae7510f8953565bcc67436
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 20506b05528727a7db2a0720c5c89d237ebd7f5a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260193"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752226"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Varios puntos de conexión en un ListenUri único
 
