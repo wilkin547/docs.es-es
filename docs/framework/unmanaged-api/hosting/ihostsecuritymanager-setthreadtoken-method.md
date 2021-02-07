@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostSecurityManager:: SetThreadToken (método)'
 title: IHostSecurityManager::SetThreadToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e951c345-8a86-4587-911b-a1a57bc6428a
 topic_type:
 - apiref
-ms.openlocfilehash: 5a2b2e5560c292598f0110de9445eb66ba794997
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 96fb8d487cecc0e62d9b7787c686c74898d99d70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671404"
 ---
 # <a name="ihostsecuritymanagersetthreadtoken-method"></a>IHostSecurityManager::SetThreadToken (Método)
 
@@ -50,7 +51,7 @@ HRESULT SetThreadToken (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `IHostSecurityManager::SetThreadToken` se comporta de forma similar a la función de Win32 correspondiente del mismo nombre, salvo que la función de Win32 permite que el llamador pase un identificador a un subproceso arbitrario, mientras que `IHostSecurityManager::SetThreadToken` puede asociar un token solo al subproceso que se está ejecutando actualmente.  
   
@@ -66,7 +67,7 @@ HRESULT SetThreadToken (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostSecurityManager (Interfaz)](ihostsecuritymanager-interface.md)
 - [IHostThreadPoolManager (Interfaz)](ihostthreadpoolmanager-interface.md)

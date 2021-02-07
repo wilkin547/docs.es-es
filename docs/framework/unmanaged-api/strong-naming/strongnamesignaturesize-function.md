@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Strongnamesignaturesize ((función)'
 title: StrongNameSignatureSize (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: 6a2b3afe66f1eaa358c5f80de50f14ceb730048b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3f22a6a4d5455af4dd17cb75edfd18befed7de3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670533"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize (Función)
 
@@ -52,7 +53,7 @@ BOOLEAN StrongNameSignatureSize (
 
  `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si la `StrongNameSignatureSize` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
@@ -66,7 +67,7 @@ BOOLEAN StrongNameSignatureSize (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md)
 - [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Resetenum ((método)'
 title: IMetaDataImport::ResetEnum (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dda867b5-1050-49ba-b01c-fcc83b7a5617
 topic_type:
 - apiref
-ms.openlocfilehash: 52c35b3bd726d4c83c6745bf99940faa44ea7338
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b1572be2e2b905e6db5cf6e422643dbb76ca9be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670585"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum (Método)
 
@@ -53,7 +54,7 @@ HRESULT ResetEnum (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

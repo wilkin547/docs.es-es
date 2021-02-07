@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostSecurityManager:: OpenThreadToken (método)'
 title: IHostSecurityManager::OpenThreadToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-ms.openlocfilehash: 30ec8cc8bbbd6d49f89cd67371c3326c0cb0df9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e0273f379f4adcf71396630b367a94c623ae15f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671573"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken (Método)
 
@@ -58,7 +59,7 @@ HRESULT OpenThreadToken (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `IHostSecurityManager::OpenThreadToken` se comporta de forma similar a la función de Win32 correspondiente del mismo nombre, salvo que la función de Win32 permite que el llamador pase un identificador a un subproceso arbitrario, mientras que `IHostSecurityManager::OpenThreadToken` solo abre el token asociado al subproceso que realiza la llamada.  
   
@@ -74,7 +75,7 @@ HRESULT OpenThreadToken (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostSecurityContext (Interfaz)](ihostsecuritycontext-interface.md)
 - [IHostSecurityManager (Interfaz)](ihostsecuritymanager-interface.md)

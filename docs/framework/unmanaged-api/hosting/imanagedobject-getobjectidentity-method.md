@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IManagedObject:: GetObjectIdentity ((método)'
 title: IManagedObject::GetObjectIdentity (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-ms.openlocfilehash: fc74b84bccceb1772bf3642e51ec88c562ce5dce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8929819bbf490680b5f3f1f47b9f3b8e830d57ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730724"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671170"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity (Método)
 
@@ -47,7 +48,7 @@ HRESULT GetObjectIdentity (
  `pCCW`  
  enuncia Puntero al índice de un objeto en la tabla v clásica de COM.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La identidad de un objeto administrado incluye el GUID del proceso, el identificador del dominio de aplicación y el índice del objeto en la tabla v clásica de COM.  
   
@@ -61,6 +62,6 @@ HRESULT GetObjectIdentity (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IManagedObject (Interfaz)](imanagedobject-interface.md)

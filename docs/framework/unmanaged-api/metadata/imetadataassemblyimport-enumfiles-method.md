@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataAssemblyImport:: Enumfiles ((método)'
 title: IMetaDataAssemblyImport::EnumFiles (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0d721e2-b946-426d-8e20-9124bd04e4cb
 topic_type:
 - apiref
-ms.openlocfilehash: f9af770f3bdca98f6b3d06d8b0fe6c92745f73e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 25282edd081e937e4c84334f9f004e201b9db46f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671027"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles (Método)
 
@@ -68,6 +69,6 @@ HRESULT EnumFiles (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataAssemblyImport (Interfaz)](imetadataassemblyimport-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostSecurityContext (interfaz)'
 title: IHostSecurityContext (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88e2eac0-8ccb-404f-abbc-287d55159842
 topic_type:
 - apiref
-ms.openlocfilehash: aafaa1d648396ddaa76193fa15cf7f74394777a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c4c1be00a8b1c9df58797a0f2fc7e60abcab9673
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724811"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671651"
 ---
 # <a name="ihostsecuritycontext-interface"></a>IHostSecurityContext (Interfaz)
 
@@ -31,7 +32,7 @@ Permite que el Common Language Runtime (CLR) Mantenga la información de context
 |------------|-----------------|  
 |[Método Capture](ihostsecuritycontext-capture-method.md)|Obtiene un clon de la `IHostSecurityContext` instancia de devuelta desde una llamada a [IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un host puede controlar todo el acceso del código a los tokens de subproceso mediante el código de usuario y el CLR. También puede asegurarse de que se pasa información de contexto de seguridad completa a través de operaciones asincrónicas o puntos de código con acceso restringido al código. `IHostSecurityContext` encapsula esta información de contexto de seguridad, que es opaca para el tiempo de ejecución. El motor en tiempo de ejecución captura esta información mediante `Capture` y la mueve entre la distribución de elementos de trabajo del grupo de subprocesos, la ejecución del finalizador y los constructores de clase y módulo.  
   
@@ -45,7 +46,7 @@ Permite que el Common Language Runtime (CLR) Mantenga la información de context
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRHostProtectionManager (Interfaz)](iclrhostprotectionmanager-interface.md)
 - [IHostSecurityManager (Interfaz)](ihostsecuritymanager-interface.md)

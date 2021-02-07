@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: EnumMembersWithName ((método)'
 title: IMetaDataImport::EnumMembersWithName (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: 35b82c33e54619eb9bebd5e5749ae202e905357a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bb6d8f0769029dccaf1f52dd211c67d47bf32a73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721002"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670767"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName (Método)
 
@@ -59,7 +60,7 @@ HRESULT EnumMembersWithName (
  `pcTokens`  
  enuncia Número real de tokens de MemberDef devueltos en `rMembers` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método enumera los campos y métodos, pero no las propiedades o los eventos. A diferencia de [IMetaDataImport:: EnumMembers (](imetadataimport-enummembers-method.md), `EnumMembersWithName` descarta todos los tokens de campo y miembro que no tienen el nombre especificado.  
   
@@ -80,7 +81,7 @@ HRESULT EnumMembersWithName (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

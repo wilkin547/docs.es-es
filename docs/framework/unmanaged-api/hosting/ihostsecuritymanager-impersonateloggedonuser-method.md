@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostSecurityManager:: ImpersonateLoggedOnUser (método)'
 title: IHostSecurityManager::ImpersonateLoggedOnUser (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acc49ba0-f1d9-45ad-871f-9d053a89dcbe
 topic_type:
 - apiref
-ms.openlocfilehash: dd1d1af8072ac11e37bd2eb1a47d76b12685cb31
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b77e0a163551a48629898b1311fc19ba815aaf4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724785"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671599"
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>IHostSecurityManager::ImpersonateLoggedOnUser (Método)
 
@@ -50,7 +51,7 @@ HRESULT ImpersonateLoggedOnUser (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Llame a `LogonUser` o a una función de Win32 relacionada para obtener un identificador de las credenciales de la identidad del usuario actual.  
   
@@ -66,7 +67,7 @@ HRESULT ImpersonateLoggedOnUser (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostSecurityContext (Interfaz)](ihostsecuritycontext-interface.md)
 - [IHostSecurityManager (Interfaz)](ihostsecuritymanager-interface.md)
