@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedWriter:: Close (método)'
 title: ISymUnmanagedWriter::Close (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,35 +16,35 @@ helpviewer_keywords:
 ms.assetid: 4cce59e1-80b9-4fc4-b3aa-126f1c5876bc
 topic_type:
 - apiref
-ms.openlocfilehash: 1d684c14f14fcc93040798ae4ee3b8bb1df5354d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 02f4d8d4a232240160ad5065947282f40af42f4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733261"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762635"
 ---
-# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="9babe-102">ISymUnmanagedWriter::Close (Método)</span><span class="sxs-lookup"><span data-stu-id="9babe-102">ISymUnmanagedWriter::Close Method</span></span>
+# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="612e5-103">ISymUnmanagedWriter::Close (Método)</span><span class="sxs-lookup"><span data-stu-id="612e5-103">ISymUnmanagedWriter::Close Method</span></span>
 
-<span data-ttu-id="9babe-103">Cierra el escritor de símbolos después de confirmar los símbolos en el almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="9babe-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
+<span data-ttu-id="612e5-104">Cierra el escritor de símbolos después de confirmar los símbolos en el almacén de símbolos.</span><span class="sxs-lookup"><span data-stu-id="612e5-104">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9babe-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9babe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="612e5-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="612e5-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Close();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="9babe-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="9babe-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="612e5-106">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="612e5-106">Return Value</span></span>  
 
- <span data-ttu-id="9babe-106">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="9babe-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="612e5-107">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="612e5-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9babe-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9babe-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="612e5-108">Observaciones</span><span class="sxs-lookup"><span data-stu-id="612e5-108">Remarks</span></span>  
 
- <span data-ttu-id="9babe-108">Después de esta llamada, el escritor de símbolos deja de ser válido para actualizaciones adicionales.</span><span class="sxs-lookup"><span data-stu-id="9babe-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="9babe-109">Para cerrar el escritor de símbolos sin confirmar los símbolos, utilice en su lugar el método [ISymUnmanagedWriter:: ABORT](isymunmanagedwriter-abort-method.md) .</span><span class="sxs-lookup"><span data-stu-id="9babe-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](isymunmanagedwriter-abort-method.md) method instead.</span></span>  
+ <span data-ttu-id="612e5-109">Después de esta llamada, el escritor de símbolos deja de ser válido para actualizaciones adicionales.</span><span class="sxs-lookup"><span data-stu-id="612e5-109">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="612e5-110">Para cerrar el escritor de símbolos sin confirmar los símbolos, utilice en su lugar el método [ISymUnmanagedWriter:: ABORT](isymunmanagedwriter-abort-method.md) .</span><span class="sxs-lookup"><span data-stu-id="612e5-110">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](isymunmanagedwriter-abort-method.md) method instead.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9babe-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9babe-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="612e5-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="612e5-111">Requirements</span></span>  
 
- <span data-ttu-id="9babe-111">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="9babe-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="612e5-112">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="612e5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9babe-112">Consulte también</span><span class="sxs-lookup"><span data-stu-id="9babe-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="612e5-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="612e5-113">See also</span></span>
 
-- [<span data-ttu-id="9babe-113">ISymUnmanagedWriter (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9babe-113">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="612e5-114">ISymUnmanagedWriter (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="612e5-114">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)

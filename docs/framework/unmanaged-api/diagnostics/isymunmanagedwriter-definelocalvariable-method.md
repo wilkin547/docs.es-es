@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedWriter::D método efineLocalVariable'
 title: ISymUnmanagedWriter::DefineLocalVariable (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: b8b9f8e63a0b52dde0e814f53cfc75e6f6d48e78
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd817e3002c2a55fd8bbd7e565283752926f746b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762375"
 ---
-# <a name="isymunmanagedwriterdefinelocalvariable-method"></a><span data-ttu-id="0db01-102">ISymUnmanagedWriter::DefineLocalVariable (Método)</span><span class="sxs-lookup"><span data-stu-id="0db01-102">ISymUnmanagedWriter::DefineLocalVariable Method</span></span>
+# <a name="isymunmanagedwriterdefinelocalvariable-method"></a><span data-ttu-id="f0be0-103">ISymUnmanagedWriter::DefineLocalVariable (Método)</span><span class="sxs-lookup"><span data-stu-id="f0be0-103">ISymUnmanagedWriter::DefineLocalVariable Method</span></span>
 
-<span data-ttu-id="0db01-103">Define una única variable en el ámbito léxico actual.</span><span class="sxs-lookup"><span data-stu-id="0db01-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="0db01-104">Se puede llamar a este método varias veces para una variable del mismo nombre que tiene varias casas en todo el ámbito.</span><span class="sxs-lookup"><span data-stu-id="0db01-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="0db01-105">Sin embargo, en este caso, los valores de `startOffset` los `endOffset` parámetros y no deben superponerse.</span><span class="sxs-lookup"><span data-stu-id="0db01-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
+<span data-ttu-id="f0be0-104">Define una única variable en el ámbito léxico actual.</span><span class="sxs-lookup"><span data-stu-id="f0be0-104">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="f0be0-105">Se puede llamar a este método varias veces para una variable del mismo nombre que tiene varias casas en todo el ámbito.</span><span class="sxs-lookup"><span data-stu-id="f0be0-105">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="f0be0-106">Sin embargo, en este caso, los valores de `startOffset` los `endOffset` parámetros y no deben superponerse.</span><span class="sxs-lookup"><span data-stu-id="f0be0-106">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0db01-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0db01-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f0be0-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f0be0-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineLocalVariable(  
@@ -42,48 +43,48 @@ HRESULT DefineLocalVariable(
     [in] ULONG32      endOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0db01-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="0db01-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f0be0-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f0be0-108">Parameters</span></span>  
 
  `name`  
- <span data-ttu-id="0db01-108">de Puntero a `WCHAR` que define el nombre de la variable local.</span><span class="sxs-lookup"><span data-stu-id="0db01-108">[in] A pointer to a `WCHAR` that defines the local variable name.</span></span>  
+ <span data-ttu-id="f0be0-109">de Puntero a `WCHAR` que define el nombre de la variable local.</span><span class="sxs-lookup"><span data-stu-id="f0be0-109">[in] A pointer to a `WCHAR` that defines the local variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="0db01-109">de Atributos de la variable local.</span><span class="sxs-lookup"><span data-stu-id="0db01-109">[in] The local variable attributes.</span></span>  
+ <span data-ttu-id="f0be0-110">de Atributos de la variable local.</span><span class="sxs-lookup"><span data-stu-id="f0be0-110">[in] The local variable attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="0db01-110">de `ULONG32` Que indica el tamaño, en bytes, del `signature` búfer.</span><span class="sxs-lookup"><span data-stu-id="0db01-110">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span></span>  
+ <span data-ttu-id="f0be0-111">de `ULONG32` Que indica el tamaño, en bytes, del `signature` búfer.</span><span class="sxs-lookup"><span data-stu-id="f0be0-111">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span></span>  
   
  `signature`  
- <span data-ttu-id="0db01-111">de Firma de la variable local.</span><span class="sxs-lookup"><span data-stu-id="0db01-111">[in] The local variable signature.</span></span>  
+ <span data-ttu-id="f0be0-112">de Firma de la variable local.</span><span class="sxs-lookup"><span data-stu-id="f0be0-112">[in] The local variable signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="0db01-112">de Tipo de dirección.</span><span class="sxs-lookup"><span data-stu-id="0db01-112">[in] The address type.</span></span>  
+ <span data-ttu-id="f0be0-113">de Tipo de dirección.</span><span class="sxs-lookup"><span data-stu-id="f0be0-113">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="0db01-113">de Primera dirección de la especificación de parámetro.</span><span class="sxs-lookup"><span data-stu-id="0db01-113">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="f0be0-114">de Primera dirección de la especificación de parámetro.</span><span class="sxs-lookup"><span data-stu-id="f0be0-114">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="0db01-114">de Segunda dirección de la especificación de parámetro.</span><span class="sxs-lookup"><span data-stu-id="0db01-114">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="f0be0-115">de Segunda dirección de la especificación de parámetro.</span><span class="sxs-lookup"><span data-stu-id="f0be0-115">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="0db01-115">de Tercera dirección de la especificación de parámetro.</span><span class="sxs-lookup"><span data-stu-id="0db01-115">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="f0be0-116">de Tercera dirección de la especificación de parámetro.</span><span class="sxs-lookup"><span data-stu-id="f0be0-116">[in] The third address for the parameter specification.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="0db01-116">de Desplazamiento inicial de la variable.</span><span class="sxs-lookup"><span data-stu-id="0db01-116">[in] The start offset for the variable.</span></span> <span data-ttu-id="0db01-117">Este parámetro es opcional.</span><span class="sxs-lookup"><span data-stu-id="0db01-117">This parameter is optional.</span></span> <span data-ttu-id="0db01-118">Si es 0, este parámetro se omite y la variable se define en todo el ámbito.</span><span class="sxs-lookup"><span data-stu-id="0db01-118">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="0db01-119">Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.</span><span class="sxs-lookup"><span data-stu-id="0db01-119">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="f0be0-117">de Desplazamiento inicial de la variable.</span><span class="sxs-lookup"><span data-stu-id="f0be0-117">[in] The start offset for the variable.</span></span> <span data-ttu-id="f0be0-118">Este parámetro es opcional.</span><span class="sxs-lookup"><span data-stu-id="f0be0-118">This parameter is optional.</span></span> <span data-ttu-id="f0be0-119">Si es 0, este parámetro se omite y la variable se define en todo el ámbito.</span><span class="sxs-lookup"><span data-stu-id="f0be0-119">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="f0be0-120">Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.</span><span class="sxs-lookup"><span data-stu-id="f0be0-120">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="0db01-120">de Desplazamiento final de la variable.</span><span class="sxs-lookup"><span data-stu-id="0db01-120">[in] The end offset for the variable.</span></span> <span data-ttu-id="0db01-121">Este parámetro es opcional.</span><span class="sxs-lookup"><span data-stu-id="0db01-121">This parameter is optional.</span></span> <span data-ttu-id="0db01-122">Si es 0, este parámetro se omite y la variable se define en todo el ámbito.</span><span class="sxs-lookup"><span data-stu-id="0db01-122">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="0db01-123">Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.</span><span class="sxs-lookup"><span data-stu-id="0db01-123">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="f0be0-121">de Desplazamiento final de la variable.</span><span class="sxs-lookup"><span data-stu-id="f0be0-121">[in] The end offset for the variable.</span></span> <span data-ttu-id="f0be0-122">Este parámetro es opcional.</span><span class="sxs-lookup"><span data-stu-id="f0be0-122">This parameter is optional.</span></span> <span data-ttu-id="f0be0-123">Si es 0, este parámetro se omite y la variable se define en todo el ámbito.</span><span class="sxs-lookup"><span data-stu-id="f0be0-123">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="f0be0-124">Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.</span><span class="sxs-lookup"><span data-stu-id="f0be0-124">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0db01-124">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="0db01-124">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f0be0-125">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="f0be0-125">Return Value</span></span>  
 
- <span data-ttu-id="0db01-125">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="0db01-125">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="f0be0-126">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="f0be0-126">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0db01-126">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0db01-126">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f0be0-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f0be0-127">Requirements</span></span>  
 
- <span data-ttu-id="0db01-127">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="0db01-127">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="f0be0-128">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="f0be0-128">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0db01-128">Consulte también</span><span class="sxs-lookup"><span data-stu-id="0db01-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0be0-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="f0be0-129">See also</span></span>
 
-- [<span data-ttu-id="0db01-129">ISymUnmanagedWriter (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="0db01-129">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="0db01-130">Método DefineGlobalVariable</span><span class="sxs-lookup"><span data-stu-id="0db01-130">DefineGlobalVariable Method</span></span>](isymunmanagedwriter-defineglobalvariable-method.md)
-- [<span data-ttu-id="0db01-131">Método DefineLocalVariable2</span><span class="sxs-lookup"><span data-stu-id="0db01-131">DefineLocalVariable2 Method</span></span>](isymunmanagedwriter2-definelocalvariable2-method.md)
+- [<span data-ttu-id="f0be0-130">ISymUnmanagedWriter (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="f0be0-130">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="f0be0-131">Método DefineGlobalVariable</span><span class="sxs-lookup"><span data-stu-id="f0be0-131">DefineGlobalVariable Method</span></span>](isymunmanagedwriter-defineglobalvariable-method.md)
+- [<span data-ttu-id="f0be0-132">Método DefineLocalVariable2</span><span class="sxs-lookup"><span data-stu-id="f0be0-132">DefineLocalVariable2 Method</span></span>](isymunmanagedwriter2-definelocalvariable2-method.md)

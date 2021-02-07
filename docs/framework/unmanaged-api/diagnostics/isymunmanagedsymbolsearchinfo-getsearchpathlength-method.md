@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedSymbolSearchInfo:: GetSearchPathLength ((método)'
 title: ISymUnmanagedSymbolSearchInfo::GetSearchPathLength (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,37 +16,37 @@ helpviewer_keywords:
 ms.assetid: 274e73cf-8333-47ba-ac12-70214e2b0112
 topic_type:
 - apiref
-ms.openlocfilehash: 9803094753dee27318af9981bd2e2ad196d434e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3d5faf9d972881ff9c1eaf71bcaa6f68da46dae6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763025"
 ---
-# <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a><span data-ttu-id="8c052-102">ISymUnmanagedSymbolSearchInfo::GetSearchPathLength (Método)</span><span class="sxs-lookup"><span data-stu-id="8c052-102">ISymUnmanagedSymbolSearchInfo::GetSearchPathLength Method</span></span>
+# <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a><span data-ttu-id="7fbfd-103">ISymUnmanagedSymbolSearchInfo::GetSearchPathLength (Método)</span><span class="sxs-lookup"><span data-stu-id="7fbfd-103">ISymUnmanagedSymbolSearchInfo::GetSearchPathLength Method</span></span>
 
-<span data-ttu-id="8c052-103">Obtiene la longitud de la ruta de acceso de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="8c052-103">Gets the search path length.</span></span>  
+<span data-ttu-id="7fbfd-104">Obtiene la longitud de la ruta de acceso de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="7fbfd-104">Gets the search path length.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c052-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8c052-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7fbfd-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7fbfd-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSearchPathLength(  
     [out] ULONG32 *pcchPath);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8c052-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8c052-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7fbfd-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7fbfd-106">Parameters</span></span>  
 
  `pcchPath`  
- <span data-ttu-id="8c052-106">enuncia Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener la longitud de la ruta de acceso de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="8c052-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path length.</span></span>  
+ <span data-ttu-id="7fbfd-107">enuncia Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener la longitud de la ruta de acceso de búsqueda.</span><span class="sxs-lookup"><span data-stu-id="7fbfd-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path length.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8c052-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="8c052-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7fbfd-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="7fbfd-108">Return Value</span></span>  
 
- <span data-ttu-id="8c052-108">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="8c052-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="7fbfd-109">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="7fbfd-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c052-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8c052-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7fbfd-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7fbfd-110">Requirements</span></span>  
 
- <span data-ttu-id="8c052-110">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="8c052-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="7fbfd-111">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="7fbfd-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c052-111">Consulte también</span><span class="sxs-lookup"><span data-stu-id="8c052-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7fbfd-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="7fbfd-112">See also</span></span>
 
-- [<span data-ttu-id="8c052-112">ISymUnmanagedSymbolSearchInfo (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="8c052-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](isymunmanagedsymbolsearchinfo-interface.md)
+- [<span data-ttu-id="7fbfd-113">ISymUnmanagedSymbolSearchInfo (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="7fbfd-113">ISymUnmanagedSymbolSearchInfo Interface</span></span>](isymunmanagedsymbolsearchinfo-interface.md)
