@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataTables:: GetColumnInfo (método)'
 title: IMetaDataTables::GetColumnInfo (Método)
 ms.date: 10/10/2019
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: 227d9ab67ab3091508232be3018ca520a6b5dcc6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 21980567c5f9b364362f7e3ff02ee3a5e60b01ee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711057"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688239"
 ---
-# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="ba452-102">IMetaDataTables::GetColumnInfo (Método)</span><span class="sxs-lookup"><span data-stu-id="ba452-102">IMetaDataTables::GetColumnInfo Method</span></span>
+# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="08895-103">IMetaDataTables::GetColumnInfo (Método)</span><span class="sxs-lookup"><span data-stu-id="08895-103">IMetaDataTables::GetColumnInfo Method</span></span>
 
-<span data-ttu-id="ba452-103">Obtiene datos sobre la columna especificada de la tabla especificada.</span><span class="sxs-lookup"><span data-stu-id="ba452-103">Gets data about the specified column in the specified table.</span></span>  
+<span data-ttu-id="08895-104">Obtiene datos sobre la columna especificada de la tabla especificada.</span><span class="sxs-lookup"><span data-stu-id="08895-104">Gets data about the specified column in the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba452-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ba452-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08895-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="08895-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetColumnInfo (
@@ -39,65 +40,65 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ba452-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ba452-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="08895-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="08895-106">Parameters</span></span>
 
 =======
 
  `ixTbl`  
- <span data-ttu-id="ba452-106">de Índice de la tabla deseada.</span><span class="sxs-lookup"><span data-stu-id="ba452-106">[in] The index of the desired table.</span></span>  
+ <span data-ttu-id="08895-107">de Índice de la tabla deseada.</span><span class="sxs-lookup"><span data-stu-id="08895-107">[in] The index of the desired table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="ba452-107">de Índice de la columna deseada.</span><span class="sxs-lookup"><span data-stu-id="ba452-107">[in] The index of the desired column.</span></span>  
+ <span data-ttu-id="08895-108">de Índice de la columna deseada.</span><span class="sxs-lookup"><span data-stu-id="08895-108">[in] The index of the desired column.</span></span>  
   
  `poCol`  
- <span data-ttu-id="ba452-108">enuncia Puntero al desplazamiento de la columna de la fila.</span><span class="sxs-lookup"><span data-stu-id="ba452-108">[out] A pointer to the offset of the column in the row.</span></span>  
+ <span data-ttu-id="08895-109">enuncia Puntero al desplazamiento de la columna de la fila.</span><span class="sxs-lookup"><span data-stu-id="08895-109">[out] A pointer to the offset of the column in the row.</span></span>  
   
  `pcbCol`  
- <span data-ttu-id="ba452-109">enuncia Puntero al tamaño, en bytes, de la columna.</span><span class="sxs-lookup"><span data-stu-id="ba452-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
+ <span data-ttu-id="08895-110">enuncia Puntero al tamaño, en bytes, de la columna.</span><span class="sxs-lookup"><span data-stu-id="08895-110">[out] A pointer to the size, in bytes, of the column.</span></span>  
   
  `pType`  
- <span data-ttu-id="ba452-110">enuncia Puntero al tipo de los valores de la columna.</span><span class="sxs-lookup"><span data-stu-id="ba452-110">[out] A pointer to the type of the values in the column.</span></span>  
+ <span data-ttu-id="08895-111">enuncia Puntero al tipo de los valores de la columna.</span><span class="sxs-lookup"><span data-stu-id="08895-111">[out] A pointer to the type of the values in the column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="ba452-111">enuncia Un puntero a un puntero al nombre de la columna.</span><span class="sxs-lookup"><span data-stu-id="ba452-111">[out] A pointer to a pointer to the column name.</span></span>  
+ <span data-ttu-id="08895-112">enuncia Un puntero a un puntero al nombre de la columna.</span><span class="sxs-lookup"><span data-stu-id="08895-112">[out] A pointer to a pointer to the column name.</span></span>  
 
-## <a name="remarks"></a><span data-ttu-id="ba452-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ba452-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="08895-113">Observaciones</span><span class="sxs-lookup"><span data-stu-id="08895-113">Remarks</span></span>
 
-<span data-ttu-id="ba452-113">El tipo de columna devuelto está dentro de un intervalo de valores:</span><span class="sxs-lookup"><span data-stu-id="ba452-113">The returned column type falls within a range of values:</span></span>
+<span data-ttu-id="08895-114">El tipo de columna devuelto está dentro de un intervalo de valores:</span><span class="sxs-lookup"><span data-stu-id="08895-114">The returned column type falls within a range of values:</span></span>
 
-| <span data-ttu-id="ba452-114">pType</span><span class="sxs-lookup"><span data-stu-id="ba452-114">pType</span></span>                    | <span data-ttu-id="ba452-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="ba452-115">Description</span></span>   | <span data-ttu-id="ba452-116">Función auxiliar</span><span class="sxs-lookup"><span data-stu-id="ba452-116">Helper function</span></span>                   |
+| <span data-ttu-id="08895-115">pType</span><span class="sxs-lookup"><span data-stu-id="08895-115">pType</span></span>                    | <span data-ttu-id="08895-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="08895-116">Description</span></span>   | <span data-ttu-id="08895-117">Función auxiliar</span><span class="sxs-lookup"><span data-stu-id="08895-117">Helper function</span></span>                   |
 |--------------------------|---------------|-----------------------------------|
-| <span data-ttu-id="ba452-117">`0`..`iRidMax`</span><span class="sxs-lookup"><span data-stu-id="ba452-117">`0`..`iRidMax`</span></span><br><span data-ttu-id="ba452-118">(0.. 63)</span><span class="sxs-lookup"><span data-stu-id="ba452-118">(0..63)</span></span>   | <span data-ttu-id="ba452-119">Libra</span><span class="sxs-lookup"><span data-stu-id="ba452-119">Rid</span></span>           | <span data-ttu-id="ba452-120">**IsRidType**</span><span class="sxs-lookup"><span data-stu-id="ba452-120">**IsRidType**</span></span><br><span data-ttu-id="ba452-121">**IsRidOrToken**</span><span class="sxs-lookup"><span data-stu-id="ba452-121">**IsRidOrToken**</span></span> |
-| <span data-ttu-id="ba452-122">`iCodedToken`..`iCodedTokenMax`</span><span class="sxs-lookup"><span data-stu-id="ba452-122">`iCodedToken`..`iCodedTokenMax`</span></span><br><span data-ttu-id="ba452-123">(64.. 95)</span><span class="sxs-lookup"><span data-stu-id="ba452-123">(64..95)</span></span> | <span data-ttu-id="ba452-124">Token codificado</span><span class="sxs-lookup"><span data-stu-id="ba452-124">Coded token</span></span> | <span data-ttu-id="ba452-125">**IsCodedTokenType**</span><span class="sxs-lookup"><span data-stu-id="ba452-125">**IsCodedTokenType**</span></span> <br><span data-ttu-id="ba452-126">**IsRidOrToken**</span><span class="sxs-lookup"><span data-stu-id="ba452-126">**IsRidOrToken**</span></span> |
-| <span data-ttu-id="ba452-127">`iSHORT` (96)</span><span class="sxs-lookup"><span data-stu-id="ba452-127">`iSHORT` (96)</span></span>            | <span data-ttu-id="ba452-128">Int16</span><span class="sxs-lookup"><span data-stu-id="ba452-128">Int16</span></span>         | <span data-ttu-id="ba452-129">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="ba452-129">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="ba452-130">`iUSHORT` (97)</span><span class="sxs-lookup"><span data-stu-id="ba452-130">`iUSHORT` (97)</span></span>           | <span data-ttu-id="ba452-131">UInt16</span><span class="sxs-lookup"><span data-stu-id="ba452-131">UInt16</span></span>        | <span data-ttu-id="ba452-132">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="ba452-132">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="ba452-133">`iLONG` (98)</span><span class="sxs-lookup"><span data-stu-id="ba452-133">`iLONG` (98)</span></span>             | <span data-ttu-id="ba452-134">Int32</span><span class="sxs-lookup"><span data-stu-id="ba452-134">Int32</span></span>         | <span data-ttu-id="ba452-135">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="ba452-135">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="ba452-136">`iULONG` (99)</span><span class="sxs-lookup"><span data-stu-id="ba452-136">`iULONG` (99)</span></span>            | <span data-ttu-id="ba452-137">UInt32</span><span class="sxs-lookup"><span data-stu-id="ba452-137">UInt32</span></span>        | <span data-ttu-id="ba452-138">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="ba452-138">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="ba452-139">`iBYTE` (100)</span><span class="sxs-lookup"><span data-stu-id="ba452-139">`iBYTE` (100)</span></span>            | <span data-ttu-id="ba452-140">Byte</span><span class="sxs-lookup"><span data-stu-id="ba452-140">Byte</span></span>          | <span data-ttu-id="ba452-141">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="ba452-141">**IsFixedType**</span></span>                   |
-| <span data-ttu-id="ba452-142">`iSTRING` (101)</span><span class="sxs-lookup"><span data-stu-id="ba452-142">`iSTRING` (101)</span></span>          | <span data-ttu-id="ba452-143">String</span><span class="sxs-lookup"><span data-stu-id="ba452-143">String</span></span>        | <span data-ttu-id="ba452-144">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="ba452-144">**IsHeapType**</span></span>                    |
-| <span data-ttu-id="ba452-145">`iGUID` (102)</span><span class="sxs-lookup"><span data-stu-id="ba452-145">`iGUID` (102)</span></span>            | <span data-ttu-id="ba452-146">Guid</span><span class="sxs-lookup"><span data-stu-id="ba452-146">Guid</span></span>          | <span data-ttu-id="ba452-147">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="ba452-147">**IsHeapType**</span></span>                    |
-| <span data-ttu-id="ba452-148">`iBLOB` (103)</span><span class="sxs-lookup"><span data-stu-id="ba452-148">`iBLOB` (103)</span></span>            | <span data-ttu-id="ba452-149">Blob</span><span class="sxs-lookup"><span data-stu-id="ba452-149">Blob</span></span>          | <span data-ttu-id="ba452-150">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="ba452-150">**IsHeapType**</span></span>                    |
+| <span data-ttu-id="08895-118">`0`..`iRidMax`</span><span class="sxs-lookup"><span data-stu-id="08895-118">`0`..`iRidMax`</span></span><br><span data-ttu-id="08895-119">(0.. 63)</span><span class="sxs-lookup"><span data-stu-id="08895-119">(0..63)</span></span>   | <span data-ttu-id="08895-120">Libra</span><span class="sxs-lookup"><span data-stu-id="08895-120">Rid</span></span>           | <span data-ttu-id="08895-121">**IsRidType**</span><span class="sxs-lookup"><span data-stu-id="08895-121">**IsRidType**</span></span><br><span data-ttu-id="08895-122">**IsRidOrToken**</span><span class="sxs-lookup"><span data-stu-id="08895-122">**IsRidOrToken**</span></span> |
+| <span data-ttu-id="08895-123">`iCodedToken`..`iCodedTokenMax`</span><span class="sxs-lookup"><span data-stu-id="08895-123">`iCodedToken`..`iCodedTokenMax`</span></span><br><span data-ttu-id="08895-124">(64.. 95)</span><span class="sxs-lookup"><span data-stu-id="08895-124">(64..95)</span></span> | <span data-ttu-id="08895-125">Token codificado</span><span class="sxs-lookup"><span data-stu-id="08895-125">Coded token</span></span> | <span data-ttu-id="08895-126">**IsCodedTokenType**</span><span class="sxs-lookup"><span data-stu-id="08895-126">**IsCodedTokenType**</span></span> <br><span data-ttu-id="08895-127">**IsRidOrToken**</span><span class="sxs-lookup"><span data-stu-id="08895-127">**IsRidOrToken**</span></span> |
+| <span data-ttu-id="08895-128">`iSHORT` (96)</span><span class="sxs-lookup"><span data-stu-id="08895-128">`iSHORT` (96)</span></span>            | <span data-ttu-id="08895-129">Int16</span><span class="sxs-lookup"><span data-stu-id="08895-129">Int16</span></span>         | <span data-ttu-id="08895-130">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="08895-130">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="08895-131">`iUSHORT` (97)</span><span class="sxs-lookup"><span data-stu-id="08895-131">`iUSHORT` (97)</span></span>           | <span data-ttu-id="08895-132">UInt16</span><span class="sxs-lookup"><span data-stu-id="08895-132">UInt16</span></span>        | <span data-ttu-id="08895-133">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="08895-133">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="08895-134">`iLONG` (98)</span><span class="sxs-lookup"><span data-stu-id="08895-134">`iLONG` (98)</span></span>             | <span data-ttu-id="08895-135">Int32</span><span class="sxs-lookup"><span data-stu-id="08895-135">Int32</span></span>         | <span data-ttu-id="08895-136">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="08895-136">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="08895-137">`iULONG` (99)</span><span class="sxs-lookup"><span data-stu-id="08895-137">`iULONG` (99)</span></span>            | <span data-ttu-id="08895-138">UInt32</span><span class="sxs-lookup"><span data-stu-id="08895-138">UInt32</span></span>        | <span data-ttu-id="08895-139">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="08895-139">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="08895-140">`iBYTE` (100)</span><span class="sxs-lookup"><span data-stu-id="08895-140">`iBYTE` (100)</span></span>            | <span data-ttu-id="08895-141">Byte</span><span class="sxs-lookup"><span data-stu-id="08895-141">Byte</span></span>          | <span data-ttu-id="08895-142">**IsFixedType**</span><span class="sxs-lookup"><span data-stu-id="08895-142">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="08895-143">`iSTRING` (101)</span><span class="sxs-lookup"><span data-stu-id="08895-143">`iSTRING` (101)</span></span>          | <span data-ttu-id="08895-144">String</span><span class="sxs-lookup"><span data-stu-id="08895-144">String</span></span>        | <span data-ttu-id="08895-145">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="08895-145">**IsHeapType**</span></span>                    |
+| <span data-ttu-id="08895-146">`iGUID` (102)</span><span class="sxs-lookup"><span data-stu-id="08895-146">`iGUID` (102)</span></span>            | <span data-ttu-id="08895-147">Guid</span><span class="sxs-lookup"><span data-stu-id="08895-147">Guid</span></span>          | <span data-ttu-id="08895-148">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="08895-148">**IsHeapType**</span></span>                    |
+| <span data-ttu-id="08895-149">`iBLOB` (103)</span><span class="sxs-lookup"><span data-stu-id="08895-149">`iBLOB` (103)</span></span>            | <span data-ttu-id="08895-150">Blob</span><span class="sxs-lookup"><span data-stu-id="08895-150">Blob</span></span>          | <span data-ttu-id="08895-151">**IsHeapType**</span><span class="sxs-lookup"><span data-stu-id="08895-151">**IsHeapType**</span></span>                    |
 
-<span data-ttu-id="ba452-151">Los valores que se almacenan en el *montón* (es decir, `IsHeapType == true` ) se pueden leer mediante:</span><span class="sxs-lookup"><span data-stu-id="ba452-151">Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:</span></span>
+<span data-ttu-id="08895-152">Los valores que se almacenan en el *montón* (es decir, `IsHeapType == true` ) se pueden leer mediante:</span><span class="sxs-lookup"><span data-stu-id="08895-152">Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:</span></span>
 
-- <span data-ttu-id="ba452-152">`iSTRING`: **IMetadataTables. GetString**</span><span class="sxs-lookup"><span data-stu-id="ba452-152">`iSTRING`: **IMetadataTables.GetString**</span></span>
-- <span data-ttu-id="ba452-153">`iGUID`: **IMetadataTables. GetGUID**</span><span class="sxs-lookup"><span data-stu-id="ba452-153">`iGUID`: **IMetadataTables.GetGUID**</span></span>
-- <span data-ttu-id="ba452-154">`iBLOB`: **IMetadataTables. GetBlob**</span><span class="sxs-lookup"><span data-stu-id="ba452-154">`iBLOB`: **IMetadataTables.GetBlob**</span></span>
+- <span data-ttu-id="08895-153">`iSTRING`: **IMetadataTables. GetString**</span><span class="sxs-lookup"><span data-stu-id="08895-153">`iSTRING`: **IMetadataTables.GetString**</span></span>
+- <span data-ttu-id="08895-154">`iGUID`: **IMetadataTables. GetGUID**</span><span class="sxs-lookup"><span data-stu-id="08895-154">`iGUID`: **IMetadataTables.GetGUID**</span></span>
+- <span data-ttu-id="08895-155">`iBLOB`: **IMetadataTables. GetBlob**</span><span class="sxs-lookup"><span data-stu-id="08895-155">`iBLOB`: **IMetadataTables.GetBlob**</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="ba452-155">Para usar las constantes definidas en la tabla anterior, incluya la directiva `#define _DEFINE_META_DATA_META_CONSTANTS` proporcionada por el archivo de encabezado *Cor. h* .</span><span class="sxs-lookup"><span data-stu-id="ba452-155">To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.</span></span>
+> <span data-ttu-id="08895-156">Para usar las constantes definidas en la tabla anterior, incluya la directiva `#define _DEFINE_META_DATA_META_CONSTANTS` proporcionada por el archivo de encabezado *Cor. h* .</span><span class="sxs-lookup"><span data-stu-id="08895-156">To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="ba452-156">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ba452-156">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08895-157">Requisitos</span><span class="sxs-lookup"><span data-stu-id="08895-157">Requirements</span></span>  
 
- <span data-ttu-id="ba452-157">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ba452-157">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="08895-158">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08895-158">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ba452-158">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="ba452-158">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="08895-159">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="08895-159">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ba452-159">**Biblioteca:** Se usa como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ba452-159">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="08895-160">**Biblioteca:** Se usa como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="08895-160">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ba452-160">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba452-160">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="08895-161">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08895-161">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ba452-161">Consulte también</span><span class="sxs-lookup"><span data-stu-id="ba452-161">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08895-162">Vea también</span><span class="sxs-lookup"><span data-stu-id="08895-162">See also</span></span>
 
-- [<span data-ttu-id="ba452-162">IMetaDataTables (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ba452-162">IMetaDataTables Interface</span></span>](imetadatatables-interface.md)
-- [<span data-ttu-id="ba452-163">IMetaDataTables2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ba452-163">IMetaDataTables2 Interface</span></span>](imetadatatables2-interface.md)
+- [<span data-ttu-id="08895-163">IMetaDataTables (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="08895-163">IMetaDataTables Interface</span></span>](imetadatatables-interface.md)
+- [<span data-ttu-id="08895-164">IMetaDataTables2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="08895-164">IMetaDataTables2 Interface</span></span>](imetadatatables2-interface.md)
