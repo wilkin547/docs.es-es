@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <sendMessageChannelCache>'
 title: <sendMessageChannelCache>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: c1775ddabffda58c7529a64b89c9c53ff3da7b99
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2c77372bb44df74a1d2186500367c5164e1e5042
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164927"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739786"
 ---
 # \<sendMessageChannelCache>
 
@@ -63,7 +64,7 @@ Un comportamiento del servicio que permite personalizar los niveles de uso compa
 |-------------|-----------------|  
 |[\<behavior> de \<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Especifica un elemento de comportamiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este comportamiento del servicio está orientado para los flujos de trabajo que envían mensajes a los extremos de servicio. Estos flujos de trabajo son normalmente flujos de trabajo del cliente pero podrían ser también servicios de flujo de trabajo que se hospedan en <xref:System.ServiceModel.WorkflowServiceHost>.  
   
@@ -97,7 +98,7 @@ Un comportamiento del servicio que permite personalizar los niveles de uso compa
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.SendMessageChannelCache>
 - <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>

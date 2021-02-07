@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <iriParsing> elemento (configuración de URI)'
 title: Elemento <iriParsing> (configuración de URI)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: ec2610e47957d5560bc7f51e0641afc9ba60c814
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 460216b64056cd9c9f769c5bcd1b651d249e98b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740306"
 ---
 # <a name="iriparsing-element-uri-settings"></a>Elemento \<iriParsing> (configuración de URI)
 
@@ -45,7 +46,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
 |-----------------|---------------------|  
 |[uri](uri-element-uri-settings.md)|Contiene opciones que especifican cómo el .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La clase existente se ha <xref:System.Uri> ampliado en .NET Framework 3,5. 3,0 SP1 y 2,0 SP1 para proporcionar compatibilidad con los identificadores de recursos internacionales (IRI) y los nombres de dominio internacionalizados (IDN). Los usuarios actuales no verán ningún cambio en el comportamiento de .NET Framework 2,0 a menos que habiliten específicamente la compatibilidad con IRI e IDN. Esto garantiza la compatibilidad de las aplicaciones con versiones anteriores de .NET Framework.  
   

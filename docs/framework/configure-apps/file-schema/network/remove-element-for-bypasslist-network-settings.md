@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <remove> elemento para BypassList (configuración de red)'
 title: Elemento <remove> para bypasslist (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 97b49a8a520d6a4f72945366874991d2deb18710
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 48441f1b402b339a1bd2ea069678afb4b1d5f2e1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697891"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740293"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>Elemento \<remove> para bypasslist (configuración de red)
 
@@ -41,7 +42,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-|**Attribute**|**Descripción**|
+|**Atributo**|**Descripción**|
 |-------------------|---------------------|
 |`address`|Expresión regular que describe una dirección IP o un nombre DNS.|
 
@@ -55,7 +56,7 @@ Ninguno.
 |-----------------|---------------------|
 |[bypasslist](bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen las direcciones que no utilizan un proxy.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El `remove` elemento quita las expresiones regulares que describen las direcciones IP o los nombres de servidor DNS de la lista de direcciones que omiten un servidor proxy. Las direcciones se definieron anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.
 
@@ -84,7 +85,7 @@ En el ejemplo siguiente se quita cualquier definición anterior del dominio adve
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de la configuración de red](index.md)

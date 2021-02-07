@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <socket> elemento (configuración de red)'
 title: Elemento <socket> (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 564d6566bf6f6b1997b986cb6c0d85f841195e55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201738"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740137"
 ---
 # <a name="socket-element-network-settings"></a>Elemento \<socket> (configuración de red)
 
@@ -79,11 +80,11 @@ Especifica si las operaciones de socket utilizan puertos de finalización.
 |**Valor del atributo**|**Descripción**|  
 |-|-|  
 |EdgeRestricted|El nivel de protección de IP tiene una restricción perimetral. Este valor lo usan las aplicaciones diseñadas para funcionar a través de Internet. Este valor no permite NAT (Traducción de direcciones de red) transversal mediante la implementación de Teredo en Windows. Estas aplicaciones pueden eludir los firewalls de IPv4, lo que hace necesario protegerlas frente a los ataques por Internet dirigidos al puerto abierto. En Windows Server 2003 y Windows XP, el valor predeterminado para el nivel de protección de IP en un socket es la restricción perimetral.|  
-|Restringido|El nivel de protección de IP está restringido. Este valor lo usan las aplicaciones de intranet que no implementan escenarios de Internet. Estas aplicaciones no se suelen probar ni proteger frente a los ataques por Internet. Este valor limitará el tráfico recibido a las direcciones locales de vínculo.|  
+|Restringidos|El nivel de protección de IP está restringido. Este valor lo usan las aplicaciones de intranet que no implementan escenarios de Internet. Estas aplicaciones no se suelen probar ni proteger frente a los ataques por Internet. Este valor limitará el tráfico recibido a las direcciones locales de vínculo.|  
 |Sin restricciones|El nivel de protección de IP no está restringido. Este valor lo usan las aplicaciones diseñadas para funcionar a través de Internet, incluidas las aplicaciones que aprovechan las funciones de NAT transversal de IPv6 integradas en Windows (por ejemplo, Teredo). Estas aplicaciones pueden eludir los firewalls de IPv4, lo que hace necesario protegerlas frente a los ataques por Internet dirigidos al puerto abierto. En Windows Server 2008 R2 y Windows Vista, el valor predeterminado para el nivel de protección de IP en un socket es no restringido.|  
 |Sin especificar|El nivel de protección de IP no está especificado. En Windows 7 y Windows Server 2008 R2, este es el valor predeterminado para el nivel de protección de IP en un socket.|  
   
- `ipProtectionLevel`No se **especifica**el valor predeterminado del atributo.  
+ `ipProtectionLevel`No se **especifica** el valor predeterminado del atributo.  
   
  La <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> propiedad se puede utilizar para obtener el valor actual del `ipProtectionLevel` atributo desde los archivos de configuración aplicables.  
   
@@ -109,7 +110,7 @@ Especifica si las operaciones de socket utilizan puertos de finalización.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
