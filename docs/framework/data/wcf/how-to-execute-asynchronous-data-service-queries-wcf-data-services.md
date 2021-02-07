@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: ejecutar consultas asincrónicas de servicios de datos (Servicios de datos de WCF)'
 title: 'Cómo: Ejecutar consultas asincrónicas de Data Services (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,29 +9,31 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 84eb88695580598d41615653723c137d3f766a47
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35300de319673b29484dc981b5d6d51c964ad908
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150614"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765352"
 ---
-# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a><span data-ttu-id="b0bc3-102">Cómo: Ejecutar consultas asincrónicas de Data Services (Data Services de WCF)</span><span class="sxs-lookup"><span data-stu-id="b0bc3-102">How to: Execute Asynchronous Data Service Queries (WCF Data Services)</span></span>
+# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a><span data-ttu-id="1e5b3-103">Cómo: Ejecutar consultas asincrónicas de Data Services (Data Services de WCF)</span><span class="sxs-lookup"><span data-stu-id="1e5b3-103">How to: Execute Asynchronous Data Service Queries (WCF Data Services)</span></span>
 
-<span data-ttu-id="b0bc3-103">Mediante el uso de la biblioteca de cliente de WCF Data Services, puede realizar de forma asincrónica operaciones cliente-servidor, como ejecutar consultas y guardar cambios.</span><span class="sxs-lookup"><span data-stu-id="b0bc3-103">By using the WCF Data Services client library, you can asynchronously perform client-server operations, such as executing queries and saving changes.</span></span> <span data-ttu-id="b0bc3-104">Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="b0bc3-104">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+<span data-ttu-id="1e5b3-104">Mediante el uso de la biblioteca de cliente de Servicios de datos de WCF, puede realizar de forma asincrónica operaciones cliente-servidor, como ejecutar consultas y guardar cambios.</span><span class="sxs-lookup"><span data-stu-id="1e5b3-104">By using the WCF Data Services client library, you can asynchronously perform client-server operations, such as executing queries and saving changes.</span></span> <span data-ttu-id="1e5b3-105">Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="1e5b3-105">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b0bc3-105">En una aplicación donde se debe invocar la devolución de llamada en un subproceso concreto, debe calcular explícitamente las referencias de la ejecución del método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>.</span><span class="sxs-lookup"><span data-stu-id="b0bc3-105">In an application where the callback must be invoked on a specific thread, you must explicitly marshal the execution of the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method.</span></span> <span data-ttu-id="b0bc3-106">Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="b0bc3-106">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
+> <span data-ttu-id="1e5b3-106">En una aplicación donde se debe invocar la devolución de llamada en un subproceso concreto, debe calcular explícitamente las referencias de la ejecución del método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>.</span><span class="sxs-lookup"><span data-stu-id="1e5b3-106">In an application where the callback must be invoked on a specific thread, you must explicitly marshal the execution of the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method.</span></span> <span data-ttu-id="1e5b3-107">Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="1e5b3-107">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="b0bc3-107">En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente.</span><span class="sxs-lookup"><span data-stu-id="b0bc3-107">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="b0bc3-108">Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="b0bc3-108">This service and the client data classes are created when you complete the [WCF Data Services quickstart](quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="1e5b3-108">En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente.</span><span class="sxs-lookup"><span data-stu-id="1e5b3-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="1e5b3-109">Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de servicios de datos de WCF](quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="1e5b3-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0bc3-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b0bc3-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1e5b3-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1e5b3-110">Example</span></span>  
 
- <span data-ttu-id="b0bc3-110">En el siguiente ejemplo se muestra cómo ejecutar una consulta asincrónica llamando al método <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> para iniciar la consulta.</span><span class="sxs-lookup"><span data-stu-id="b0bc3-110">The following example shows how to execute an asynchronous query by calling the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method to start the query.</span></span> <span data-ttu-id="b0bc3-111">El delegado alineado llama al método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para mostrar los resultados de la consulta.</span><span class="sxs-lookup"><span data-stu-id="b0bc3-111">The inline delegate calls the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method to display the query results.</span></span>  
+ <span data-ttu-id="1e5b3-111">En el siguiente ejemplo se muestra cómo ejecutar una consulta asincrónica llamando al método <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> para iniciar la consulta.</span><span class="sxs-lookup"><span data-stu-id="1e5b3-111">The following example shows how to execute an asynchronous query by calling the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method to start the query.</span></span> <span data-ttu-id="1e5b3-112">El delegado alineado llama al método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para mostrar los resultados de la consulta.</span><span class="sxs-lookup"><span data-stu-id="1e5b3-112">The inline delegate calls the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method to display the query results.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#executequeryasync)]
  [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#executequeryasync)]  
   
-## <a name="see-also"></a><span data-ttu-id="b0bc3-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="b0bc3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e5b3-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e5b3-113">See also</span></span>
 
-- [<span data-ttu-id="b0bc3-113">Biblioteca cliente de Data Services de WCF</span><span class="sxs-lookup"><span data-stu-id="b0bc3-113">WCF Data Services Client Library</span></span>](wcf-data-services-client-library.md)
+- [<span data-ttu-id="1e5b3-114">Biblioteca cliente de Data Services de WCF</span><span class="sxs-lookup"><span data-stu-id="1e5b3-114">WCF Data Services Client Library</span></span>](wcf-data-services-client-library.md)
