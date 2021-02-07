@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataFilter:: UnmarkAll ((método)'
 title: IMetaDataFilter::UnmarkAll (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a04d91dc-690f-4de8-8c97-55c69a8503b4
 topic_type:
 - apiref
-ms.openlocfilehash: 0be94e55b2838e543686b84be736a228ce7dae57
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f4923c3b2c6ff4332d4a885136d660d889f2c8d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701827"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688863"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll (Método)
 
@@ -46,6 +47,6 @@ HRESULT UnmarkAll ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataFilter (Interfaz)](imetadatafilter-interface.md)

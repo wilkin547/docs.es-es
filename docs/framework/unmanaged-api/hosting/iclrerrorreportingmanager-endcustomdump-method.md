@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRErrorReportingManager:: EndCustomDump (método)'
 title: ICLRErrorReportingManager::EndCustomDump (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88a5da04-8729-4108-82c4-af206a7d483e
 topic_type:
 - apiref
-ms.openlocfilehash: feaeba15fcc4e8264f7fde57d3b268a6b583ad83
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 406d7d77f4cd63c69fec56acb0819d56c6271630
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689474"
 ---
 # <a name="iclrerrorreportingmanagerendcustomdump-method"></a>ICLRErrorReportingManager::EndCustomDump (Método)
 
@@ -43,7 +44,7 @@ HRESULT EndCustomDump ();
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `EndCustomDump` método borra la configuración de volcado de pila personalizada establecida por una llamada anterior al `BeginCustomDump` método y libera cualquier estado asociado. Se debe llamar después de completar el volcado de la pila personalizado.  
   
@@ -60,7 +61,7 @@ HRESULT EndCustomDump ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CustomDumpItem (Estructura)](customdumpitem-structure.md)
 - [ECustomDumpFlavor (Enumeración)](ecustomdumpflavor-enumeration.md)

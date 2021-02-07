@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugValue:: GetAddress (método)'
 title: ICorDebugValue::GetAddress (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 47c0c4dfa78e85bcc83f0bb2a333955c8e8666fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c922388fbab820e50edffc140be94a2c0920099d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728373"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690436"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetAddress (
  `pAddress`  
  enuncia Puntero a un `CORDB_ADDRESS` objeto que especifica la dirección de este objeto de valor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el valor no está disponible, se devuelve 0 (cero). Esto puede ocurrir si el valor es, al menos, parcialmente en registros o almacenados en un identificador de recolector de elementos no utilizados ( `GCHandle` ).  
   
@@ -53,4 +54,4 @@ HRESULT GetAddress (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también

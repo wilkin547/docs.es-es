@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugValue (interfaz)'
 title: Interfaz ICorDebugValue
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-ms.openlocfilehash: 7d3c35ed6cda637e3b885afe089ddfa590d51076
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cae8fdef5c1c49cbabc25d3d547cb5748a9eeee1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690321"
 ---
 # <a name="icordebugvalue-interface"></a>Interfaz ICorDebugValue
 
@@ -34,7 +35,7 @@ Representa un valor en el proceso que se está depurando. El valor puede ser un 
 |[Método GetSize](icordebugvalue-getsize-method.md)|Obtiene el tamaño, en bytes, de este `ICorDebugValue` objeto.|  
 |[Método GetType](icordebugvalue-gettype-method.md)|Obtiene el tipo primitivo de este `ICorDebugValue` objeto.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En general, la propiedad de un objeto de valor se pasa cuando se devuelve. El destinatario es responsable de quitar una referencia del objeto cuando ha terminado con el objeto.  
   
@@ -53,7 +54,7 @@ Representa un valor en el proceso que se está depurando. El valor puede ser un 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugValue3 (Interfaz)](icordebugvalue3-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

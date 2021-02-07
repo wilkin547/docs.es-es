@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedConstant:: Getsignature ((método)'
 title: ISymUnmanagedConstant::GetSignature (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 4436e4528c1dc486eb5c443c5a9467ac69a26c7d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d28051c9d0e2675e980926fe63ffa7c4d13ef13a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706936"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689799"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature (Método)
 
@@ -55,8 +56,8 @@ HRESULT GetSignature(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedConstant (Interfaz)](isymunmanagedconstant-interface.md)
-- [GetName (Método)](isymunmanagedconstant-getname-method.md)
-- [GetValue (Método)](isymunmanagedconstant-getvalue-method.md)
+- [Método GetName](isymunmanagedconstant-getname-method.md)
+- [Método GetValue](isymunmanagedconstant-getvalue-method.md)

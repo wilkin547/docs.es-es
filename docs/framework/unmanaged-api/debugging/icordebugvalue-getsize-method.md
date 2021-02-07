@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugValue:: método se obtiene'
 title: ICorDebugValue::GetSize (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-ms.openlocfilehash: 9f5688ae4f76f9ddfde231aa6252d666c9152eec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3fc2582990d58fa2e42f240dfd3e563eed34e372
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731088"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690345"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetSize (
  `pSize`  
  enuncia Tamaño, en bytes, de este objeto de valor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el tipo del valor es un tipo de referencia, este método devuelve el tamaño del puntero en lugar del tamaño del objeto.  
   
@@ -55,6 +56,6 @@ HRESULT GetSize (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetSize64](icordebugvalue3-getsize64-method.md)

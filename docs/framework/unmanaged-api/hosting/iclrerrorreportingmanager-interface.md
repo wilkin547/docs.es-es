@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRErrorReportingManager (interfaz)'
 title: ICLRErrorReportingManager (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea8af0d5-4133-4472-8a1f-50570d7e85fa
 topic_type:
 - apiref
-ms.openlocfilehash: d3816c8a3b6204b053505aa888eb28d696f8990b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 094fe52858983fd0e1e5826e823932cb150b6087
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677854"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689279"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager (Interfaz)
 
@@ -33,7 +34,7 @@ Proporciona métodos que permiten al host configurar volcados de pila personaliz
 |[Método EndCustomDump](iclrerrorreportingmanager-endcustomdump-method.md)|Borra la configuración de volcado de la pila personalizada establecida por una llamada anterior a `BeginCustomDump` .|  
 |[Método GetBucketParametersForCurrentException](iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Obtiene el depósito de Watson para la excepción actual en el subproceso que realiza la llamada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `BeginCustomDump` método establece la configuración personalizada del volcado de la pila. El `EndCustomDump` método borra la configuración de volcado de la pila personalizada y libera cualquier estado asociado. Se debe llamar después de completar el volcado de memoria personalizado.  
   
@@ -50,7 +51,7 @@ Proporciona métodos que permiten al host configurar volcados de pila personaliz
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ECustomDumpItemKind (Enumeración)](ecustomdumpitemkind-enumeration.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

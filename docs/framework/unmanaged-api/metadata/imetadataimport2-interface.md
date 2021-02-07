@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz IMetaDataImport2'
 title: IMetaDataImport2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d39b2b87-ba53-4771-ae53-952a68452511
 topic_type:
 - apiref
-ms.openlocfilehash: a845ecfde6583d625d2a8f165443344ff9e40d05
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: de1b190ae174c6028e4f116d7f6fc0b9af0aac6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702557"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688551"
 ---
 # <a name="imetadataimport2-interface"></a>IMetaDataImport2 (Interfaz)
 
@@ -48,7 +49,7 @@ Extiende la interfaz [IMetaDataImport](imetadataimport-interface.md) para propor
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Reflection.PortableExecutableKinds>
 - [Interfaces de metadatos](metadata-interfaces.md)

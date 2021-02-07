@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Iclrgcmanager2 (:: Setgcstartuplimitsex ((método)'
 title: ICLRGCManager2::SetGCStartupLimitsEx (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6c3a08a9-5d65-48d4-8bbf-2a86ed7d356a
 topic_type:
 - apiref
-ms.openlocfilehash: 27d1ce06800075d2690bc508554b70f8d10168af
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a4801d2f6255f5f84e0a4bae7a1886689ee8dc5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715022"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689244"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx (Método)
 
@@ -58,7 +59,7 @@ HRESULT SetGCStartupLimitsEx (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los valores que `SetGCStartupLimitsEx` establece se pueden especificar solo antes de que se inicie el host. Las llamadas posteriores a `SetGCStartupLimitsEx` se omiten.  
   
@@ -74,7 +75,7 @@ HRESULT SetGCStartupLimitsEx (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
 - [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)

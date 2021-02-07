@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport2:: Getpekind ((método)'
 title: IMetaDataImport2::GetPEKind (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-ms.openlocfilehash: d335beecc12e0c1c895e42888ad7172f78062ff7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3cd003f4b1a56f59b9e8c89bf1c4f8f2f8c7fea1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688590"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind (Método)
 
@@ -43,7 +44,7 @@ HRESULT GetPEKind (
  `pdwMachine`  
  enuncia Un puntero a un valor que identifica la arquitectura de la máquina. Vea la sección siguiente para ver los posibles valores.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor al que hace referencia el `pdwMachine` parámetro puede ser uno de los siguientes.  
   
@@ -63,7 +64,7 @@ HRESULT GetPEKind (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)

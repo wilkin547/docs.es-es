@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRMetaHost:: ExitProcess (método)'
 title: ICLRMetaHost::ExitProcess (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4df98cc-4e4e-407b-b8f4-e0076afef3a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6d601ac3ece801353b630c74ed852c2657f25d7f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3bc832538a5ad2b457de758fc35a632b09c02974
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730469"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689162"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>ICLRMetaHost::ExitProcess (Método)
 
@@ -54,7 +55,7 @@ HRESULT ExitProcess (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRMetaHost (Interfaz)](iclrmetahost-interface.md)
 - [Hospedar aplicaciones de WPF](index.md)

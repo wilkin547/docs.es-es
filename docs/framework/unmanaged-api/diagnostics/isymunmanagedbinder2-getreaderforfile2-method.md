@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Isymunmanagedbinder2 (:: Getreaderforfile2 ((método)'
 title: ISymUnmanagedBinder2::GetReaderForFile2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-ms.openlocfilehash: e0fc6cf2a08de4a00cb8b7f98d3922df98f427c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c1a180ceec07c3087150613365acfce646adc34e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689942"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 (Método)
 
@@ -64,11 +65,11 @@ HRESULT GetReaderForFile2(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta versión del método puede buscar el archivo PDB en áreas distintas de la derecha junto al módulo. La Directiva de búsqueda se puede controlar mediante la combinación de [corsymsearchpolicyattributes (](corsymsearchpolicyattributes-enumeration.md). Por ejemplo, `AllowReferencePathAccess | AllowSymbolServerAccess` busca el archivo PDB junto al archivo ejecutable y en un servidor de símbolos, pero no consulta el registro o usa la ruta de acceso en el archivo ejecutable. Si `searchPath` se proporciona el parámetro, se buscará siempre esos directorios.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedBinder2 (Interfaz)](isymunmanagedbinder2-interface.md)
 - [Método GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md)

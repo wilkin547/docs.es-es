@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRDomainManager:: SetPropertiesForDefaultAppDomain ((método)'
 title: ICLRDomainManager::SetPropertiesForDefaultAppDomain (Método)
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - ICLRDomainManager::SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 - SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
-ms.openlocfilehash: b5577d0444caf14fb47d9d7e2de60a8399378db7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 08e6c885d5d089fa22c30a4e3cef69480b840031
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702139"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689448"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain (Método)
 
@@ -54,7 +55,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
 |S_OK|El método se completó correctamente.|  
 |HRESULT_FROM_WIN32 (ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` incluye un nombre de propiedad que este método no reconoce.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor de propiedad para "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" es una lista de ensamblados que tienen el <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo condicional (APTCA) con la <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> marca, que se van a hacer visibles para los llamadores de confianza parcial en el dominio de aplicación predeterminado.  
   
@@ -68,7 +69,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Hospedar aplicaciones de WPF](index.md)
 - [ICLRDomainManager (Interfaz)](iclrdomainmanager-interface.md)

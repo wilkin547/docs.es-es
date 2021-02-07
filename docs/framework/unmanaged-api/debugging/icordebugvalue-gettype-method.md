@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugValue:: GetType (método)'
 title: ICorDebugValue::GetType (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-ms.openlocfilehash: 06f403f0b653866428a41240f99833ec1180eb86
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 750e73634683a03e811d2756cc62c16b6dcea3de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731090"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690332"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetType (
  `pType`  
  enuncia Un puntero a un valor de la enumeración "CorElementType" que indica el tipo del valor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el objeto es un tipo complejo en tiempo de ejecución, ese tipo se puede examinar en las subclases adecuadas de la `ICorDebugValue` interfaz. Por ejemplo, "ICorDebugObjectValue", que hereda de `ICorDebugValue` , representa un tipo complejo.  
   
@@ -55,4 +56,4 @@ HRESULT GetType (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugValueEnum'
 title: Interfaz ICorDebugValueEnum
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: e3934cbce76df3997fa07d8fa3a99bd8ddab09a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bbc9ee8d8db570c8cb45abf7d47360349820225d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690124"
 ---
 # <a name="icordebugvalueenum-interface"></a>Interfaz ICorDebugValueEnum
 
@@ -29,9 +30,9 @@ Implementa los métodos "ICorDebugEnum" y enumera las matrices "ICorDebugValue".
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (Método)](icordebugvalueenum-next-method.md)|Obtiene el número especificado de `ICorDebugValue` instancias de la enumeración, comenzando en la posición actual.|  
+|[Next (método)](icordebugvalueenum-next-method.md)|Obtiene el número especificado de `ICorDebugValue` instancias de la enumeración, comenzando en la posición actual.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -46,6 +47,6 @@ Implementa los métodos "ICorDebugEnum" y enumera las matrices "ICorDebugValue".
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

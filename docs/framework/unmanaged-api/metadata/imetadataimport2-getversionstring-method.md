@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport2:: GetVersionString ((método)'
 title: IMetaDataImport2::GetVersionString (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 3e62b1177c0161883ad03086723cc43b71292df5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6f7e296607dc3167936c69d52a8baae4f5555b88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702568"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688564"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString (Método)
 
@@ -47,7 +48,7 @@ HRESULT GetVersionString (
  `pccBufSize`  
  enuncia El número de caracteres anchos, incluido un terminador nulo, devuelto en la `pwzBuf` matriz.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `GetVersionString` método obtiene la versión integrada del ámbito de metadatos actual. Si el ámbito no se ha guardado nunca, no tendrá una versión integrada y se devolverá una cadena vacía.  
   
@@ -61,7 +62,7 @@ HRESULT GetVersionString (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)

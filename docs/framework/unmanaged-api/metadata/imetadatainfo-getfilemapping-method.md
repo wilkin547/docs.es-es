@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataInfo:: Getfilemapping ((método)'
 title: IMetaDataInfo::GetFileMapping (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 8823f3cc016072d3f20100c29532459da5e97492
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82a1a23c50a4d8340804f66966933fc6a11e0f8c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688486"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping (Método)
 
@@ -55,7 +56,7 @@ HRESULT GetFileMapping (
 |`E_INVALIDARG`|Se pasó NULL como un valor de argumento.|  
 |`COR_E_NOTSUPPORTED`|La implementación de CLR no puede proporcionar información sobre la región de memoria. Esto puede deberse a los siguientes motivos:<br /><br /> -El ámbito de metadatos se abrió con la `ofWrite` `ofCopyMemory` marca o.<br />-El ámbito de metadatos se abrió sin la `ofReadOnly` marca.<br />-El método [IMetaDataDispenser:: openscopeonmemory (](imetadatadispenser-openscopeonmemory-method.md) se usó para abrir solo la parte de metadatos del archivo.<br />-El archivo no es un archivo ejecutable portable (PE). **Nota:**  Estas condiciones dependen de la implementación de CLR y es probable que se debiliten en versiones futuras de CLR.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La memoria a la que `ppvData` apunta solo es válida siempre y cuando el ámbito de los metadatos subyacentes sea abierto.  
   
@@ -75,7 +76,7 @@ HRESULT GetFileMapping (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataInfo (Interfaz)](imetadatainfo-interface.md)
 - [CorFileMapping (Enumeración)](corfilemapping-enumeration.md)
