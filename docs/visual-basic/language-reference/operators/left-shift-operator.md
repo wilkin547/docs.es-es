@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador de  << (Visual Basic)'
 title: Operador <<
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 77bf26d4e6bb068f9130deed5eb1ecbaee62afce
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 079af61e5c4ce3834db0877feace724c74c8169c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866782"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665632"
 ---
 # <a name="-operator-visual-basic"></a>\<\< Operador (Visual Basic)
 
@@ -28,7 +29,7 @@ result = pattern << amount
 ## <a name="parts"></a>Partes  
 
  `result`  
- Obligatorio. Valor numérico entero. Resultado de desplazar el modelo de bits. El tipo de datos es el mismo que el de `pattern`.  
+ Necesario. Valor numérico entero. Resultado de desplazar el modelo de bits. El tipo de datos es el mismo que el de `pattern`.  
   
  `pattern`  
  Obligatorio. Expresión numérica integral. Modelo de bits que se va a desplazar. El tipo de datos debe ser un tipo entero (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` o `ULong`).  
@@ -36,7 +37,7 @@ result = pattern << amount
  `amount`  
  Obligatorio. Expresión numérica. Número de bits que se va a desplazar el modelo de bits. El tipo de datos debe ser `Integer` o ampliarse a `Integer`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los turnos aritméticos no son circulares, lo que significa que los bits desplazados fuera de un extremo del resultado no se reintroducen en el otro extremo. En un desplazamiento aritmético a la izquierda, los bits desplazados más allá del intervalo del tipo de datos del resultado se descartan y las posiciones de bits que quedan a la derecha se establecen en cero.  
   
@@ -76,7 +77,7 @@ result = pattern << amount
   
  La cantidad de desplazamiento de `result4` se calcula como 17 y 15, que es igual a 1.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operadores de desplazamiento de bits](bit-shift-operators.md)
 - [Operadores de asignación](assignment-operators.md)

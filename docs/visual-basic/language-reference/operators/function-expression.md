@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: expresión de función (Visual Basic)'
 title: Expresión Function
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 719969be23a6d94f22a1d86cb4ad3f37e4c3b254
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bef5db7f167b615c2a0c20539521c186683da985
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873422"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666022"
 ---
 # <a name="function-expression-visual-basic"></a>Expresión de función (Visual Basic)
 
@@ -32,10 +33,10 @@ End Function
 |Término|Definición|  
 |---|---|  
 |`parameterlist`|Opcional. Una lista de nombres de variables locales que representan los parámetros de este procedimiento. Los paréntesis deben estar presentes incluso cuando la lista esté vacía. Vea [lista de parámetros](../statements/parameter-list.md).|  
-|`expression`|Obligatorio. Expresión única. El tipo de la expresión es el tipo de valor devuelto de la función.|  
-|`statements`|Obligatorio. Una lista de instrucciones que devuelven un valor mediante la `Return` instrucción. (Consulte la [instrucción return](../statements/return-statement.md)). El tipo del valor devuelto es el tipo de valor devuelto de la función.|  
+|`expression`|Necesario. Expresión única. El tipo de la expresión es el tipo de valor devuelto de la función.|  
+|`statements`|Necesario. Una lista de instrucciones que devuelven un valor mediante la `Return` instrucción. (Consulte la [instrucción return](../statements/return-statement.md)). El tipo del valor devuelto es el tipo de valor devuelto de la función.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una *expresión lambda* es una función sin un nombre que calcula y devuelve un valor. Puede usar una expresión lambda en cualquier lugar en el que pueda usar un tipo de delegado, excepto como argumento para `RemoveHandler` . Para obtener más información sobre los delegados y el uso de expresiones lambda con delegados, vea [instrucción Delegate](../statements/delegate-statement.md) y [conversión de delegado relajado](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
@@ -94,7 +95,7 @@ Dim londonCusts = db.Customers.
   
  Para obtener más información sobre los métodos de consulta, vea [consultas](../queries/index.md). Para obtener más información acerca de los operadores de consulta estándar, vea [información general sobre operadores de consulta estándar](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Function](../statements/function-statement.md)
 - [Expresiones lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)

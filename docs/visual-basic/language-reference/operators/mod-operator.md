@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador mod (Visual Basic)'
 title: Mod (Operador)
 ms.date: 04/24/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: 32065567799b023556a018ae2f5ba338796e0b49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bfec39f54041714258e21f087a044dce24edcb6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665437"
 ---
 # <a name="mod-operator-visual-basic"></a>Operador mod (Visual Basic)
 
@@ -35,10 +36,10 @@ result = number1 Mod number2
 Necesario. Cualquier variable o propiedad numérica.
 
 `number1` \
-Necesario. Cualquier expresión numérica.
+Obligatorio. Cualquier expresión numérica.
 
 `number2` \
-Necesario. Cualquier expresión numérica.
+Obligatorio. Cualquier expresión numérica.
 
 ## <a name="supported-types"></a>Tipos admitidos
 
@@ -49,7 +50,7 @@ todos los tipos numéricos. Esto incluye los tipos de punto flotante y sin signo
 El resultado es el resto después de `number1` dividir por `number2` . Por ejemplo, la expresión `14 Mod 4` se evalúa como 2.
 
 > [!NOTE]
-> Hay una diferencia entre el *resto* y el *módulo* en las matemáticas, con resultados diferentes para los números negativos. El `Mod` operador de Visual Basic, el operador de .NET Framework `op_Modulus` y la instrucción [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) máquina de Il subyacente realizan una operación de resto.
+> Hay una diferencia entre el *resto* y el *módulo* en las matemáticas, con resultados diferentes para los números negativos. El `Mod` operador de Visual Basic, el operador de .NET Framework `op_Modulus` y la instrucción [](<xref:System.Reflection.Emit.OpCodes.Rem>) máquina de Il subyacente realizan una operación de resto.
 
 El resultado de una `Mod` operación conserva el signo del dividendo, `number1` , y, por tanto, puede ser positivo o negativo. El resultado siempre está en el intervalo (- `number2` , `number2` ), Exclusive. Por ejemplo:
 
@@ -116,7 +117,7 @@ En el ejemplo siguiente se muestran los posibles imprecisión de operandos de pu
 
 [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>

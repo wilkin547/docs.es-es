@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: operadores lógicos y bit a bit (Visual Basic)'
 title: Operadores lógicos y bit a bit
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: ec39b191f1a8374fd3b6c6d9a72841ec5510afe8
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b76c82d76a0d476eef569c410294edcc5d072d25
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665580"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>Operadores lógicos y bit a bit (Visual Basic)
 
@@ -32,7 +33,7 @@ A continuación se muestran los operadores lógicos y bit a bit definidos en Vis
   
  [Operador IsTrue](istrue-operator.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Prioridad de operador en Visual Basic](operator-precedence.md)
 - [Operadores lógicos y bit a bit en Visual Basic](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Operador IsNot (Visual Basic)'
 title: IsNot (operador)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - TypeOf...IsNot expression
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: ea978f8874cee20fb3a005189fd846f7564da777
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ac3e127676dfa57d14e07838152022de62fc336b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811046"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665671"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot (Operador) (Visual Basic)
 
 Compara dos variables de referencia de objeto.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxis
 
 ```vb
 result = object1 IsNot object2
@@ -39,7 +40,7 @@ result = object1 IsNot object2
 
   Necesario. Cualquier `Object` variable o expresión.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El `IsNot` operador determina si dos referencias de objeto hacen referencia a objetos diferentes. Sin embargo, no realiza comparaciones de valores. Si `object1` y `object2` ambos hacen referencia a la misma instancia de objeto exacta, `result` es `False` ; si no, `result` es `True` .
 
@@ -61,9 +62,9 @@ A partir de Visual Basic 14, puede usar el `TypeOf` operador con el `IsNot` oper
 If TypeOf sender IsNot Button Then
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Operador is](is-operator.md)
-- [Typeof (operador)](typeof-operator.md)
+- [Operador Is](is-operator.md)
+- [Operador TypeOf](typeof-operator.md)
 - [Prioridad de operador en Visual Basic](operator-precedence.md)
 - [Procedimiento para comprobar si dos objetos son iguales](../../programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

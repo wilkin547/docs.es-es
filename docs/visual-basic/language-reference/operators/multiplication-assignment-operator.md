@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: * = (operador) (Visual Basic)'
 title: '*= (Operador)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 4e2f18fb2b8110d97390390b3934d3c1761baa35
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d5a88dc71a05c6375a09fe3f4b55eff704c13910
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866737"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665424"
 ---
 # <a name="-operator-visual-basic"></a>*= (Operador, Visual Basic)
 
@@ -30,12 +31,12 @@ variableorproperty *= expression
 ## <a name="parts"></a>Partes  
 
  `variableorproperty`  
- Obligatorio. Cualquier variable o propiedad numérica.  
+ Necesario. Cualquier variable o propiedad numérica.  
   
  `expression`  
  Obligatorio. Cualquier expresión numérica.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El elemento del lado izquierdo del `*=` operador puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o la propiedad no pueden ser de [solo lectura](../modifiers/readonly.md).  
   
@@ -51,7 +52,7 @@ variableorproperty *= expression
   
  [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [* (Operador)](multiplication-operator.md)
 - [Operadores de asignación](assignment-operators.md)

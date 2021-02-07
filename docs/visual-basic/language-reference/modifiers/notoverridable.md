@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: NotOverridable (Visual Basic)'
 title: NotOverridable
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: 8eec54a12c7fb748df46e8c48a8b07eab983cc72
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f0363024aacc1ed6ab9d8820cc965b5b71e557b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666100"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
 
 Especifica que una propiedad o un procedimiento no se pueden invalidar en una clase derivada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `NotOverridable` modificador evita que una propiedad o un método se invalide en una clase derivada.  El modificador [Overridable](overridable.md) permite que una propiedad o un método de una clase se invalide en una clase derivada. Para más información, vea [Fundamentos de la herencia](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
@@ -53,7 +54,7 @@ Especifica que una propiedad o un procedimiento no se pueden invalidar en una cl
   
  [Instrucción Sub](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modificadores](index.md)
 - [Fundamentos de la herencia](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <exposedMethod>'
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 2947f0de6a88f39463e58a3b39bda52588fe4baa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7bf271ba03ee16c6a45726e2bcb522bf6f55d441
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203909"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664735"
 ---
 # \<exposedMethod>
 
@@ -74,7 +75,7 @@ Representa un método de COM+ que se expone cuando la interfaz en un componente 
   
  En el momento de la inicialización del servicio, el tiempo de ejecución intenta generar un contrato de servicio reflejando y agregando solo los métodos incluidos en la lista de [\<exposedMethod>](exposedmethod.md) elementos. Un seguimiento se genera para cada método de interfaz que no está incluido en el contrato del servicio.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>

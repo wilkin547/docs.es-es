@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador IsTrue (Visual Basic)'
 title: Operador IsTrue
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: 2e67a4adabe58ab12d317ae6318c0a2fac29da7d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 50b618c888ce988da5241041fb2f728e0a581c70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866946"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665658"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue (Operador) (Visual Basic)
 
@@ -47,7 +48,7 @@ Determina si una expresión es `True` .
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operador IsFalse](isfalse-operator.md)
 - [Procedimiento para definir un operador](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador (Visual Basic)'
 title: '\ (Operador)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: cf2dc66532925d56cea6fd141f44a245bc2dd8dd
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e15a630d37e423b7a7d0040e495f2543889f37b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873399"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665788"
 ---
 # <a name="-operator-visual-basic"></a>\ (Operador, Visual Basic)
 
@@ -54,7 +55,7 @@ expression1 \ expression2
   
  El [operador/(Visual Basic)](floating-point-division-operator.md) devuelve el cociente completo, que conserva el resto de la parte fraccionaria.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Antes de realizar la división, Visual Basic intenta convertir cualquier expresión numérica de punto flotante en `Long` . Si `Option Strict` es `On` , se produce un error del compilador. Si `Option Strict` es `Off` , <xref:System.OverflowException> es posible si el valor está fuera del intervalo del tipo de [datos Long](../data-types/long-data-type.md). La conversión a `Long` también está sujeta a *redondeo bancario*. Para obtener más información, vea "partes fraccionarias" en [funciones de conversión de tipos](../functions/type-conversion-functions.md).  
   
@@ -75,7 +76,7 @@ expression1 \ expression2
   
  Las expresiones del ejemplo anterior devuelven los valores 2, 3, 33 y-22, respectivamente.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [\\= (Operador)](integer-division-assignment-operator.md)
 - [Operador/(Visual Basic)](floating-point-division-operator.md)

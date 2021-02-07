@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <transport> de <netTcpBinding>'
 title: <transport> de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 8f752373c51992c51b747f5f4dc4a63910a387c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9005de300b41c9f53c62875ee185d0f8a3ee8d7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162197"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664553"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> de \<netTcpBinding>
 
@@ -56,7 +57,7 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |None|El cliente es anónimo. Esto requiere un certificado para el servicio.|  
 |Windows|Especifica la autenticación de Windows del cliente utilizando Negotiation de SP (negociación de Kerberos).|  
@@ -64,10 +65,10 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
   
 ## <a name="protectionlevel-attribute"></a>Atributo protectionLevel  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |None|Ninguna protección|  
-|Firma|Se firman los mensajes.|  
+|Signo|Se firman los mensajes.|  
 |EncryptAndSign|-Los mensajes se cifran y firman.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -80,7 +81,7 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|Especifica las capacidades de seguridad de [\<netTcpBinding>](nettcpbinding.md) .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Utilice la seguridad de transporte para la integridad y confidencialidad del mensaje SOAP y para la autenticación mutua. Si este modo de seguridad está seleccionado en un enlace, la pila del canal se configura utilizando un transporte seguro y los mensajes SOAP se protegen utilizando la seguridad de transporte, como Windows (Negotiate) o SSL sobre TCP.  
   

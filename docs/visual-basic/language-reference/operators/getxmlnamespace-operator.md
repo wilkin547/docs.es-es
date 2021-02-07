@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: operador GetXmlNamespace (Visual Basic)'
 title: Operador GetXmlNamespace
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: 660474c1193076755889fd885c1b78bec78f0a2c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 704ac22493a0d6ce1255d171ae3b418313b74f09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873469"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665918"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace (Operador) (Visual Basic)
 
@@ -34,7 +35,7 @@ GetXmlNamespace(xmlNamespacePrefix)
 
  <xref:System.Xml.Linq.XNamespace>Objeto que corresponde al prefijo del espacio de nombres XML.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `GetXmlNamespace` operador obtiene el <xref:System.Xml.Linq.XNamespace> objeto que corresponde al prefijo del espacio de nombres XML `xmlNamespacePrefix` .  
   
@@ -50,7 +51,7 @@ GetXmlNamespace(xmlNamespacePrefix)
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Imports (Instrucción, Espacio de nombres XML)](../statements/imports-statement-xml-namespace.md)
 - [Obtener acceso a XML en Visual Basic](../../programming-guide/language-features/xml/accessing-xml.md)

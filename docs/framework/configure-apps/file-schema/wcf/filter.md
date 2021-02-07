@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <filter>'
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 993d2265ac3a714475e8cbe9e8a2c3f93c46bde2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664683"
 ---
 # \<filter>
 
@@ -39,7 +40,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 | Atributo  | Descripción |
 | ---------- | ----------- |
-| customType | Cadena que contiene el nombre de tipo completo del tipo personalizado que se va a usar como filtro. Si `filterType` está establecido en `custom` , este atributo contiene el nombre de tipo completo de la clase que se va a crear.  `filterData`también puede contener valores que se van a usar durante la evaluación del filtro de tipo personalizado. |
+| customType | Cadena que contiene el nombre de tipo completo del tipo personalizado que se va a usar como filtro. Si `filterType` está establecido en `custom` , este atributo contiene el nombre de tipo completo de la clase que se va a crear.  `filterData` también puede contener valores que se van a usar durante la evaluación del filtro de tipo personalizado. |
 | filterData | Cadena que contiene los datos del filtro. Para obtener más información sobre cómo especificar este atributo, vea <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | filterType | Cadena que contiene el tipo de filtro. Este atributo es del tipo <xref:System.ServiceModel.Routing.Configuration.FilterType>.  Para obtener más información sobre su funcionamiento con el atributo `filterData`, vea <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | name       | Cadena que contiene el nombre único de este elemento de filtro. |
@@ -54,7 +55,7 @@ Ninguno.
 | ------- | ----------- |
 | [\<routing>](routing.md) | Sección de configuración para definir un conjunto de filtros de enrutamiento, que determinan el tipo de Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> que se va a usar al evaluar los mensajes entrantes. |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>

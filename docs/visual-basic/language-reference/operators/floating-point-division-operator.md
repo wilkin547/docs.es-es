@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador/(Visual Basic)'
 title: / (Operador)
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 765a80d45908e0ecf17e4c21b748dbf6b2a4c0f5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 717c8fdc6abae02de555040a3aadb92fed2bfbee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666009"
 ---
 # <a name="-operator-visual-basic"></a>/ (Operador, Visual Basic)
 
@@ -51,7 +52,7 @@ expression1 / expression2
   
  El [operador \ (Visual Basic)](integer-division-operator.md) devuelve el cociente entero, que quita el resto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El tipo de datos del resultado depende de los tipos de los operandos. En la tabla siguiente se muestra cómo se determina el tipo de datos del resultado.  
   
@@ -87,7 +88,7 @@ expression1 / expression2
   
  Las expresiones del ejemplo anterior devuelven los valores 2,5 y 3,333333. Tenga en cuenta que el resultado siempre es el punto flotante ( `Double` ), aunque ambos operandos son constantes de tipo entero.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [/= (Operador) (Visual Basic)](floating-point-division-assignment-operator.md)
 - [Operador (Visual Basic)](integer-division-operator.md)

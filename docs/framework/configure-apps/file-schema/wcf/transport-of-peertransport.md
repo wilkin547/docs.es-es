@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <transport> de <peerTransport>'
 title: <transport> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 7328d67c4649010dce3e1c866238d1e0067e4990
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ba3405c5dfadb513f92ebd537409a3f7b12fa291
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664514"
 ---
 # <a name="transport-of-peertransport"></a>\<transport> de \<peerTransport>
 
@@ -42,7 +43,7 @@ Especifica el tipo de transporte para mensajes seguros enviados por pares config
   
 ## <a name="credentialtype-attribute"></a>Atributo credentialType  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Certificado|La autenticación del transporte de canal del mismo nivel requiere un certificado X509.|  
 |Contraseña|La autenticación del transporte de canal del mismo nivel requiere una contraseña correcta.|  
@@ -57,7 +58,7 @@ Especifica el tipo de transporte para mensajes seguros enviados por pares config
 |-------------|-----------------|  
 |[\<security>](security-of-peertransport.md)|Define la configuración de seguridad de un transporte del mismo nivel.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este elemento se establece solo si el atributo de modo de [\<security>](security-of-peertransport.md) se establece en `Transport` o `TransportWithMessageCredential` .  
   

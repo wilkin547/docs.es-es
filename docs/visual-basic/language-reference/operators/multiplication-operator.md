@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: * (operador) (Visual Basic)'
 title: '* Operator'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: 7038fef4258d190b726a851b26f2a2840ff3c0ea
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9a9f7eff9468fd6784b705a50871bc79fd6c1faa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873371"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665398"
 ---
 # <a name="-operator-visual-basic"></a>* (Operador, Visual Basic)
 
@@ -42,7 +43,7 @@ number1 * number2
 
  Todos los tipos numéricos, incluidos los tipos de punto flotante y sin signo y `Decimal` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El tipo de datos del resultado depende de los tipos de los operandos. En la tabla siguiente se muestra cómo se determina el tipo de datos del resultado.  
   
@@ -65,7 +66,7 @@ number1 * number2
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [* = (Operador)](multiplication-assignment-operator.md)
 - [Operadores aritméticos](arithmetic-operators.md)

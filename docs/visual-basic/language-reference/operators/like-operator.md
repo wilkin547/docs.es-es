@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: operador like (Visual Basic)'
 title: Like (Operador)
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: 49dfe5cf5dbcf8dc6f79f569a92e36aa81806913
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f1be174010b7acae5bface4fc0a2d0e606a90fca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665593"
 ---
 # <a name="like-operator-visual-basic"></a>Like (operador, Visual Basic)
 
@@ -45,7 +46,7 @@ result = string Like pattern
 ## <a name="parts"></a>Partes  
 
  `result`  
- Obligatorio. Cualquier `Boolean` variable. El resultado es un `Boolean` valor que indica si el satisface o no `string` el `pattern` .  
+ Necesario. Cualquier `Boolean` variable. El resultado es un `Boolean` valor que indica si el satisface o no `string` el `pattern` .  
   
  `string`  
  Obligatorio. Cualquier expresión `String` .  
@@ -53,7 +54,7 @@ result = string Like pattern
  `pattern`  
  Obligatorio. Cualquier `String` expresión que se ajuste a las convenciones de coincidencia de patrones descritas en "Comentarios".  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el valor de `string` satisface el modelo contenido en `pattern` , `result` es `True` . Si la cadena no satisface el modelo, `result` es `False` . Si `string` y `pattern` son cadenas vacías, el resultado es `True` .  
   
@@ -119,7 +120,7 @@ result = string Like pattern
   
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>

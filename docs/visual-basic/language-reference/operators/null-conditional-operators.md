@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de:?. etc? () operadores condicionales null (Visual Basic)
 title: Operadores condicionales null
 ms.date: 10/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: bffbba859968e0a050397cd9e685c142f801798a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 558b8921d0da4089505dd1035cb6039af24a2802
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665372"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. etc? () operadores condicionales null (Visual Basic)
 
@@ -109,7 +110,7 @@ SendNews?.Invoke("Just in...")
 
 La nueva forma de hacerlo es segura para los subprocesos porque el compilador genera código para evaluar `SendNews` solo una vez, manteniendo el resultado en una variable temporal. Debe llamar explícitamente al método `Invoke` porque no hay ninguna sintaxis de invocación del delegado null condicional `SendNews?(String)`.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operadores (Visual Basic)](index.md)
 - [Guía de programación en Visual Basic](../../programming-guide/index.md)

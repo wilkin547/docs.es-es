@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: operadores (Visual Basic)'
 title: Operadores
 ms.date: 10/17/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-ms.openlocfilehash: d980621ed493bbe5f243062238f4b87e1e44003b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ee14fc653dbc477946507d0cf60c86053546dd2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838174"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665866"
 ---
 # <a name="operators-visual-basic"></a>Operadores (Visual Basic)
 
@@ -33,4 +34,4 @@ ms.locfileid: "74838174"
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-- [Referencia del lenguaje Visual Basic](../index.md)
+- [Referencia del lenguaje Visual Basic](../index.md)

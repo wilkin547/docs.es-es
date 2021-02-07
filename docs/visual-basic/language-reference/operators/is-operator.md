@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador is (Visual Basic)'
 title: Operador is
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: 1c2d87ef0a8202332c87af552f488d652c400213
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 0912ebd9bc9c33149568c6cea0197ef24c305ff2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812268"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665690"
 ---
 # <a name="is-operator-visual-basic"></a>Operador is (Visual Basic)
 
 Compara dos variables de referencia de objeto.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxis
 
 ```vb
 result = object1 Is object2
@@ -37,7 +38,7 @@ result = object1 Is object2
  `object2`  
  Necesario. Cualquier `Object` nombre.  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El `Is` operador determina si dos referencias de objeto hacen referencia al mismo objeto. Sin embargo, no realiza comparaciones de valores. Si `object1` y `object2` ambos hacen referencia a la misma instancia de objeto exacta, `result` es `True` ; si no es así, `result` es `False` .
 
@@ -60,9 +61,9 @@ Como se muestra en el ejemplo anterior, puede utilizar el `Is` operador para pro
 If TypeOf sender Is Button Then
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Typeof (operador)](typeof-operator.md)
+- [Operador TypeOf](typeof-operator.md)
 - [Operador IsNot](isnot-operator.md)
 - [Comparison Operators in Visual Basic](../../programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Prioridad de operador en Visual Basic](operator-precedence.md)
