@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método ICorProfilerCallback2:: Handledestroyed ('
 title: ICorProfilerCallback2::HandleDestroyed (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,40 +16,40 @@ helpviewer_keywords:
 ms.assetid: ab4f4bbd-40c7-4667-bfde-60cd73803110
 topic_type:
 - apiref
-ms.openlocfilehash: 06064d82e5f572de08e56fd83923134a94d5e77b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d583a2170efbb4ebe72d7eacdd60af1a089a518f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731935"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705604"
 ---
-# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="f14e8-102">ICorProfilerCallback2::HandleDestroyed (Método)</span><span class="sxs-lookup"><span data-stu-id="f14e8-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
+# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="eeae8-103">ICorProfilerCallback2::HandleDestroyed (Método)</span><span class="sxs-lookup"><span data-stu-id="eeae8-103">ICorProfilerCallback2::HandleDestroyed Method</span></span>
 
-<span data-ttu-id="f14e8-103">Notifica al generador de perfiles de código que se ha destruido un identificador de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="f14e8-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
+<span data-ttu-id="eeae8-104">Notifica al generador de perfiles de código que se ha destruido un identificador de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="eeae8-104">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f14e8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f14e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eeae8-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="eeae8-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT HandleDestroyed(  
     [in] GCHandleID handleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f14e8-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f14e8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eeae8-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="eeae8-106">Parameters</span></span>  
 
  `handleId`  
- <span data-ttu-id="f14e8-106">de IDENTIFICADOR del identificador para la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="f14e8-106">[in] The ID of the handle for the garbage collection.</span></span>  
+ <span data-ttu-id="eeae8-107">de IDENTIFICADOR del identificador para la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="eeae8-107">[in] The ID of the handle for the garbage collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f14e8-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f14e8-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eeae8-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="eeae8-108">Requirements</span></span>  
 
- <span data-ttu-id="f14e8-108">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f14e8-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="eeae8-109">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eeae8-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f14e8-109">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f14e8-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="eeae8-110">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="eeae8-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f14e8-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f14e8-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eeae8-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eeae8-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f14e8-111">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f14e8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="eeae8-112">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eeae8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f14e8-112">Consulte también</span><span class="sxs-lookup"><span data-stu-id="f14e8-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eeae8-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="eeae8-113">See also</span></span>
 
-- [<span data-ttu-id="f14e8-113">ICorProfilerCallback (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="f14e8-113">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="f14e8-114">ICorProfilerCallback2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="f14e8-114">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)
+- [<span data-ttu-id="eeae8-114">ICorProfilerCallback (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="eeae8-114">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="eeae8-115">ICorProfilerCallback2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="eeae8-115">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)
