@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugDataTarget:: Readvirtual ((método)'
 title: ICorDebugDataTarget::ReadVirtual (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 8fb0cfc72867653eaff65f3183dacf9191604290
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4525ba1e5dc685813d963dab96879b886987f38f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710613"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual (Método)
 
@@ -51,7 +52,7 @@ HRESULT ReadVirtual(
  `pBytesRead`  
  enuncia Número de bytes realmente leídos de la dirección de destino. Puede ser menor que `bytesRequested` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se puede leer el primer byte (en la dirección de inicio especificada), la llamada debe devolver Success (para admitir la lectura eficaz de estructuras de datos con longitud autodescriptiva, como cadenas terminadas en null).  
   
@@ -65,7 +66,7 @@ HRESULT ReadVirtual(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugDataTarget (Interfaz)](icordebugdatatarget-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

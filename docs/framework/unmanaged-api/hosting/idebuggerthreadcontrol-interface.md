@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz IDebuggerThreadControl'
 title: IDebuggerThreadControl (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a270c42-a7d1-45f1-a64d-fa3e84d14532
 topic_type:
 - apiref
-ms.openlocfilehash: 2268fce5d3ca732d852edfdb6f0edf63117df363
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 293a120d44b9b04d7e367546c477fb273f535310
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684218"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709777"
 ---
 # <a name="idebuggerthreadcontrol-interface"></a>IDebuggerThreadControl (Interfaz)
 
@@ -43,6 +44,6 @@ Proporciona métodos para notificar al host el bloqueo y desbloqueo de subproces
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)

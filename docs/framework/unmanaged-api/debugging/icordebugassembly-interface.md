@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: interfaz ICorDebugAssembly'
 title: Interfaz ICorDebugAssembly
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: 821eae8ea5b4147408e9fe60d1e5b70c7936959e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 746b5f4b2f26550788708d93bf0dd50f5f495041
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711952"
 ---
 # <a name="icordebugassembly-interface"></a>Interfaz ICorDebugAssembly
 
@@ -32,10 +33,10 @@ Representa un ensamblado.
 |[Método EnumerateModules](icordebugassembly-enumeratemodules-method.md)|Obtiene un enumerador para los módulos incluidos en el ensamblado.|  
 |[Método GetAppDomain](icordebugassembly-getappdomain-method.md)|Obtiene un puntero de interfaz al dominio de aplicación que contiene esta `ICorDebugAssembly` instancia.|  
 |[Método GetCodeBase](icordebugassembly-getcodebase-method.md)|No se implementa en la versión actual del .NET Framework.|  
-|[GetName (Método)](icordebugassembly-getname-method.md)|Obtiene el nombre del ensamblado.|  
+|[Método GetName](icordebugassembly-getname-method.md)|Obtiene el nombre del ensamblado.|  
 |[Método GetProcess](icordebugassembly-getprocess-method.md)|Obtiene la instancia de ICorDebugProcess en la que se ejecuta el ensamblado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -50,6 +51,6 @@ Representa un ensamblado.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

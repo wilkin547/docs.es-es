@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugCode (interfaz)'
 title: Interfaz ICorDebugCode
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7bd14fb6-8b54-4484-a891-e3c21859c019
 topic_type:
 - apiref
-ms.openlocfilehash: 03cbc1a598ba6c0166f72ff404c239763956c996
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ce67c48501783bbe00152f0ba2c224e6e7dde6d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687611"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711159"
 ---
 # <a name="icordebugcode-interface"></a>Interfaz ICorDebugCode
 
@@ -34,12 +35,12 @@ Representa un segmento de código de lenguaje intermedio de Microsoft (MSIL) o c
 |[Método GetCode](icordebugcode-getcode-method.md)|Obtiene todo el código para la función especificada, con formato de desensamblado. Este método está en desuso; Use [ICorDebugCode2:: getcodechunks (](icordebugcode2-getcodechunks-method.md) en su lugar.|  
 |[Método GetEnCRemapSequencePoints](icordebugcode-getencremapsequencepoints-method.md)|Sin implementar.|  
 |[Método GetFunction](icordebugcode-getfunction-method.md)|Obtiene la "ICorDebugFunction" asociada a este `ICorDebugCode` .|  
-|[GetILToNativeMapping (Método)](icordebugcode-getiltonativemapping-method.md)|Obtiene una matriz de instancias "COR_DEBUG_IL_TO_NATIVE_MAP" que representan asignaciones de desplazamientos MSIL a desplazamientos nativos.|  
+|[Método GetILToNativeMapping](icordebugcode-getiltonativemapping-method.md)|Obtiene una matriz de instancias "COR_DEBUG_IL_TO_NATIVE_MAP" que representan asignaciones de desplazamientos MSIL a desplazamientos nativos.|  
 |[Método GetSize](icordebugcode-getsize-method.md)|Obtiene el tamaño, en bytes, del código binario representado por esta instancia de `ICorDebugCode`.|  
 |[GetVersionNumber (Método)](icordebugcode-getversionnumber-method.md)|Obtiene el número basado en uno que identifica la versión del código que representa esta instancia de `ICorDebugCode`.|  
 |[Método IsIL](icordebugcode-isil-method.md)|Obtiene un valor que indica si esta instancia de `ICorDebugCode` está compilada en MSIL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `ICorDebugCode` puede representar MSIL o código nativo. Un objeto "ICorDebugFunction" que representa el código MSIL puede tener o ninguno de los `ICorDebugCode` objetos asociados. Un objeto "ICorDebugFunction" que representa el código nativo puede tener cualquier número de `ICorDebugCode` objetos asociados a él.  
   
@@ -56,7 +57,7 @@ Representa un segmento de código de lenguaje intermedio de Microsoft (MSIL) o c
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugCode3 (Interfaz)](icordebugcode3-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

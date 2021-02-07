@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugClass2'
 title: Interfaz ICorDebugClass2
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: ce3f289ae914817071fad5274c45d1e5fae71a06
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 80aa8e59ccc774141e7fcea130d1fc6a38fa37da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717986"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711480"
 ---
 # <a name="icordebugclass2-interface"></a>Interfaz ICorDebugClass2
 
@@ -32,7 +33,7 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
 |[Método GetParameterizedType](icordebugclass2-getparameterizedtype-method.md)|Obtiene la declaración de tipos para esta clase.|  
 |[SetJMCStatus (Método)](icordebugclass2-setjmcstatus-method.md)|Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -47,7 +48,7 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugClass](icordebugclass-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

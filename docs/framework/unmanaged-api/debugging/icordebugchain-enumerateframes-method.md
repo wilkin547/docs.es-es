@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugChain:: EnumerateFrames ((método)'
 title: ICorDebugChain::EnumerateFrames (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fcefa98-750d-4168-8915-8173a43accf2
 topic_type:
 - apiref
-ms.openlocfilehash: ae6d81e6fdab0f8e3346d8a08a3b5ebc329a542a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 45bf69760eeccebada743d81e859a19e209b611a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730154"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711601"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames (Método)
 
@@ -39,7 +40,7 @@ HRESULT EnumerateFrames (
  `ppFrames`  
  enuncia Puntero a la dirección de un objeto ICorDebugFrameEnum (que es el enumerador de los marcos de pila.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La cadena representa la pila de llamadas física del subproceso.  
   

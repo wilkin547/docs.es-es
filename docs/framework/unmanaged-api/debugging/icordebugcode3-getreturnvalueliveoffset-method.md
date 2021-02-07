@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugCode3:: GetReturnValueLiveOffset (método)'
 title: ICorDebugCode3::GetReturnValueLiveOffset (Método)
 ms.date: 03/30/2017
 dev_langs:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 6153ebf24ae939a50d71cad2d4323090aa905851
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6ec9a342805c047d7331c3ce2af2a4ffba596a26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720820"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711016"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset (Método)
 
@@ -53,7 +54,7 @@ HRESULT GetReturnValueLiveOffset(
  `pOffsets`  
  Matriz de desplazamientos nativos. Normalmente, `pOffsets` contiene un único desplazamiento, aunque una sola instrucción IL puede asociar varios mapas a varias instrucciones de ensamblado `CALL`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método se usa junto con el método [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) para obtener el valor devuelto de un método que devuelve un tipo de referencia. Pasar un desplazamiento IL a un sitio de la llamada de función a este método devuelve uno o varios desplazamientos nativos. El depurador puede establecer puntos de interrupción en estos desplazamientos nativos en la función. Cuando el depurador llega a uno de los puntos de interrupción, puede pasar el mismo desplazamiento IL que pasó a este método al método [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) para obtener el valor devuelto. A continuación, el depurador debe borrar todos los puntos de interrupción que estableció.  
   
@@ -80,7 +81,7 @@ HRESULT GetReturnValueLiveOffset(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)
 - [ICorDebugCode3 (Interfaz)](icordebugcode3-interface.md)

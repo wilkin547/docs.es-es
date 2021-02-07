@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedNamespace:: Getnamespaces ((método)'
 title: ISymUnmanagedNamespace::GetNamespaces (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-ms.openlocfilehash: 8eef973c4c054b704b7c3f798e5dc1aa455dda96
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f17b16e2a3a7001d16c86dd6dc95241c1b0785e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707781"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709911"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces (Método)
 
@@ -55,6 +56,6 @@ HRESULT GetNamespaces(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedNamespace (Interfaz)](isymunmanagednamespace-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: interfaz ICorDebugController'
 title: Interfaz ICorDebugController
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: 1ca9e55a2183ca4293d30607496b588cbf21d6dd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 588c41b5b8d87589facd6085655ed0ad415ec3aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679954"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710756"
 ---
 # <a name="icordebugcontroller-interface"></a>Interfaz ICorDebugController
 
@@ -37,10 +38,10 @@ Representa un ámbito, <xref:System.Diagnostics.Process> o <xref:System.AppDomai
 |[Método HasQueuedCallbacks](icordebugcontroller-hasqueuedcallbacks-method.md)|Obtiene un valor que indica si las devoluciones de llamada administradas están actualmente en la cola del subproceso especificado.|  
 |[Método IsRunning](icordebugcontroller-isrunning-method.md)|Obtiene un valor que indica si los subprocesos del proceso se están ejecutando libremente.|  
 |[Método SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md)|Establece el estado de depuración de todos los subprocesos administrados en el proceso.|  
-|[Método Stop](icordebugcontroller-stop-method.md)|Realiza una detención cooperativa en todos los subprocesos que ejecutan código administrado en el proceso.|  
+|[STOP (método)](icordebugcontroller-stop-method.md)|Realiza una detención cooperativa en todos los subprocesos que ejecutan código administrado en el proceso.|  
 |[Terminate (Método)](icordebugcontroller-terminate-method.md)|Finaliza el proceso con el código de salida especificado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si `ICorDebugController` controla un proceso, el ámbito incluye todos los subprocesos del proceso. Si `ICorDebugController` está controlando un dominio de aplicación, el ámbito incluye solo los subprocesos de ese dominio de aplicación concreto.  
   
@@ -57,6 +58,6 @@ Representa un ámbito, <xref:System.Diagnostics.Process> o <xref:System.AppDomai
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

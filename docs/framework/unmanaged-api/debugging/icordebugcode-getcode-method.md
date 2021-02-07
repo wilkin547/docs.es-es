@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugCode:: GetCode (método)'
 title: ICorDebugCode::GetCode (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: 20eac75a1f1d13b6a30267d56ff66024725e6f33
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 329770fac4f2b375c01dd68e4ea7114e59c609b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711289"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode (Método)
 
@@ -56,7 +57,7 @@ HRESULT GetCode (
  `pcBufferSize`  
  enuncia Número de bytes devueltos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el código de la función se ha dividido en varios fragmentos, se concatenan en orden de desplazamiento nativo creciente. Los límites de la instrucción no se comprueban.  
   
@@ -70,6 +71,6 @@ HRESULT GetCode (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetCodeChunks](icordebugcode2-getcodechunks-method.md)
