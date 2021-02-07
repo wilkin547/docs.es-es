@@ -1,24 +1,25 @@
 ---
+description: 'Más información acerca de: <System. serviceModel. Activation>'
 title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: cbb12ce84f53f55f7d5b2dabd449a116969dc9b8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4da87248426f5da3c53a03d5f307a174b2b0dfc7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682610"
 ---
 # \<system.serviceModel.activation>
 
-<span data-ttu-id="0265e-102">Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="0265e-102">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="0265e-103">Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="0265e-103">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="0265e-104">Específicamente, incluye todos los valores de equipo que se deben configurar.</span><span class="sxs-lookup"><span data-stu-id="0265e-104">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+<span data-ttu-id="cd371-103">Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="cd371-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="cd371-104">Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="cd371-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="cd371-105">Específicamente, incluye todos los valores de equipo que se deben configurar.</span><span class="sxs-lookup"><span data-stu-id="cd371-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.serviceModel.activation>**  
   
-## <a name="sample-configuration-file"></a><span data-ttu-id="0265e-105">Archivo de configuración del ejemplo</span><span class="sxs-lookup"><span data-stu-id="0265e-105">Sample Configuration File</span></span>  
+## <a name="sample-configuration-file"></a><span data-ttu-id="cd371-106">Archivo de configuración del ejemplo</span><span class="sxs-lookup"><span data-stu-id="cd371-106">Sample Configuration File</span></span>  
 
- <span data-ttu-id="0265e-106">A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="0265e-106">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
+ <span data-ttu-id="cd371-107">A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="cd371-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
   
 ```xml  
 <configuration>
@@ -65,6 +66,6 @@ ms.locfileid: "91157140"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0265e-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="0265e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd371-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="cd371-108">See also</span></span>
 
 - <xref:System.ServiceModel.Activation.Configuration>
