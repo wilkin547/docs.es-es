@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Directiva de autorización'
 title: Directiva de autorización
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: a789faae1f6224512f9a8a9ab084c8a82e4a2b87
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c096585803f07aff157726bce850c09e27c51df5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732714"
 ---
 # <a name="authorization-policy"></a>Directiva de autorización
 

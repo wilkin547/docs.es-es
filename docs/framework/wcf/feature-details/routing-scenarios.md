@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: escenarios de enrutamiento'
 title: Escenarios de enrutamiento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: b84cd4ba49e9deaf4ffc0e901716efc56059d60f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cce69ca846f5179d78b2e7321e62444fc6f6ec26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288532"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733286"
 ---
 # <a name="routing-scenarios"></a>Escenarios de enrutamiento
 

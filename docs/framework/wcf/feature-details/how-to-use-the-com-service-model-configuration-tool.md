@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de cómo: usar la herramienta de configuración del modelo de servicio COM+'
 title: Procedimiento para usar la herramienta configuración de modelos de servicio COM+
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 2d21ec8ccf84a7c9af235af8e0afd444044cf81b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2047604f327cd871629bbdac403e9acd816bbdb1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734092"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedimiento para usar la herramienta configuración de modelos de servicio COM+
 
@@ -110,6 +111,6 @@ Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de 
     ComSvcConfig.exe /?
     ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general de la integración con aplicaciones COM+](integrating-with-com-plus-applications-overview.md)

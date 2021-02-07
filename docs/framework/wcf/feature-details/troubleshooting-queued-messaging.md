@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo solucionar problemas de la mensajería en cola
 title: Solución de problemas de la mensajería en cola
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: f695af3d2ad498e1f5975e1a396f1e7b05bf63bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7cf2706e7c0853f14bad449b6ecaa8dd5983755
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733091"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 
@@ -152,7 +153,7 @@ Todavía otra solución alternativa es instalar MSMQ con integración de Active 
 
 **P:** Cuando se envía un mensaje con el enlace predeterminado (seguridad de transporte activada) en Active Directory a una cola, aparece el mensaje "no se encontró el certificado interno". ¿Cómo puedo corregirlo?
 
-**R:** Esto significa que el certificado en Active Directory para el remitente debe renovarse. Para ello, abra el **Panel de control**, **herramientas administrativas**, **Administración de equipos**, haga clic con el botón secundario en **MSMQ**y seleccione **propiedades**. Seleccione la pestaña **certificado de usuario** y haga clic en el botón **renovar** .
+**R:** Esto significa que el certificado en Active Directory para el remitente debe renovarse. Para ello, abra el **Panel de control**, **herramientas administrativas**, **Administración de equipos**, haga clic con el botón secundario en **MSMQ** y seleccione **propiedades**. Seleccione la pestaña **certificado de usuario** y haga clic en el botón **renovar** .
 
 **P:** Cuando se envía un mensaje mediante <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> y se especifica el certificado que se va a utilizar, aparece un mensaje que indica que el certificado no es válido. ¿Cómo puedo corregirlo?
 

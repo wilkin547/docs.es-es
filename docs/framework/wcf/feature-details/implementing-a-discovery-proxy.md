@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo implementar un proxy de detección
 title: Implementar un proxy de detección
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
-ms.openlocfilehash: ae003c89bb0f14623c5d31a1596533d821380336
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cfd897e114c99bcacb24e9981ee4a3e99e06636c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268305"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734040"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Implementar un proxy de detección
 

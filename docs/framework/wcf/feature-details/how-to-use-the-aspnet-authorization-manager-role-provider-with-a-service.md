@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: usar el proveedor de funciones del administrador de autorización de ASP.NET con un servicio'
 title: Procedimiento para usar el proveedor de roles del administrador de autorización de ASP.NET con un servicio
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: bbdafdd96a32b41d7c6892944ed872e3f8702f0e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 24d6bbbf2181189104fb0df0068130c402fd2f68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280603"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734131"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Procedimiento para usar el proveedor de roles del administrador de autorización de ASP.NET con un servicio
 

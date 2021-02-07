@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: importación y exportación de esquemas'
 title: Importación y exportación de esquemas
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 52a9e1bf4c9442bd42beb55b133a185c4a42148d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3381cfee1d431b53a6f579ae50655a6f4fe80a3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288572"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733169"
 ---
 # <a name="schema-import-and-export"></a>Importación y exportación de esquemas
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: conversaciones seguras y sesiones seguras'
 title: Conversaciones y sesiones seguras
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
-ms.openlocfilehash: 6cbf877c80b7d10705868120c4ec4a7b40895114
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dd935fd5de833dc2ba68b1aec3a2992dcba6a000
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288507"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733117"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Conversaciones y sesiones seguras
 

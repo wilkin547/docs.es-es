@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: criterios de búsqueda personalizados'
 title: Criterios de búsqueda personalizados
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 9271ae1ec4bbd555fe93df24c7d38f0f345a03ab
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 71082f303e3464e27e1bad3995d20b5f6cf7d647
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241816"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732571"
 ---
 # <a name="custom-find-criteria"></a>Criterios de búsqueda personalizados
 
@@ -25,7 +26,7 @@ Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usand
   
 - Implementar una coincidencia del ámbito personalizada por algoritmo.  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  El cliente está buscando criterios de coincidencia de tipo "OR". Un servicio responde si los ámbitos de sus puntos de conexión coinciden con alguno de los ámbitos que proporciona el cliente. En este caso, el cliente busca un servicio de calculadora que tenga cualquiera de los ámbitos de la siguiente lista:  
   
