@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <workflow>'
 title: <workflow>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560aa9b6-9cf3-460e-b798-f87d14b1d2de
-ms.openlocfilehash: fdfaf234b5dda5703da7fc1ca1fe4554d57405f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2d35f03c2715fcba7cf868a3550855066d747d82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148690"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697977"
 ---
 # \<workflow>
 
@@ -108,7 +109,7 @@ Un elemento de configuración que contiene todas las consultas para un flujo de 
 |-------------|-----------------|  
 |[\<trackingProfile>](trackingprofile.md)|Representa una sección de configuración para crear una suscripción a los registros de seguimiento del flujo de trabajo en un participante del seguimiento. Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución. Las consultas definidas dentro de la sección de perfil de seguimiento definen los tipos de eventos que devuelve la suscripción.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una determinada instancia de flujo de trabajo cambia en el tiempo de ejecución. Este elemento de configuración identifica la instancia de flujo de trabajo de la que se está realizando el seguimiento.  
   

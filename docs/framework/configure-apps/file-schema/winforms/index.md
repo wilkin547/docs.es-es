@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Windows Forms sección de configuración'
 title: Sección de configuración de Windows Forms
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 2d518ec03602580f3c5d00ef2901ff7d7ac1d81b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f1eaf2d74c7645d6cf4580d75e23d8910628cce0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148508"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697769"
 ---
 # <a name="windows-forms-configuration-section"></a>Sección de configuración de Windows Forms
 
@@ -45,7 +46,7 @@ Elemento  |Descripción |
 ---------|---------|
 [\<configuration>](../configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y Windows Forms. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 A partir de .NET Framework 4.7, el elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar las aplicaciones de Windows Forms para aprovechar las características agregadas en versiones recientes de .NET Framework.
 

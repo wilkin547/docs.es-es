@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: método CLR para la asignación de funciones canónicas'
 title: Asignar un método CLR a una función canónica
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 6f14ad8d9e8f919fe820447cc991b102319b38d5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3a082f0b9bce63330e113e6ae9f50d15d71ce727
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697080"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Asignar un método CLR a una función canónica
 
@@ -40,17 +41,17 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 
 |Método System.String (instancia)|Función canónica|Notas|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` no es una constante, se asigna a IndexOf (`this`, `value`) > 0|
-|Boolean EndsWith(String `value`)|`this`LIKE `'` '% `value`|Si `value` no es una constante, entonces asigna a Right(`this`, length(`value`)) = `value`.|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` no es una constante, se asigna a IndexOf ( `this` , `value` ) > 0|
+|Boolean EndsWith(String `value`)|`this`LIKE `'` % `value` '|Si `value` no es una constante, entonces asigna a Right(`this`, length(`value`)) = `value`.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Si `value` no es una constante, entonces asigna a IndexOf(`this`, `value`) = 1.|
 |Length|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (subcadena (`this`, 1, `startIndex`), subcadena (`this`, `startIndex` `this` `count`  +  + 1, longitud ()-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) solo es compatible si `count` es un número entero mayor o igual que 0.|
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (subcadena ( `this` , 1, `startIndex` ), subcadena ( `this` , `startIndex`  +  `count` + 1, longitud ( `this` )-( `startIndex`  +  `count` )))|Remove(`startIndex`, `count`) solo es compatible si `count` es un número entero mayor o igual que 0.|
 |System.String Replace(String `oldValue`, String `newValue`)|Replace(`this`, `oldValue`, `newValue`)||
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring ( `this` , `startIndex` + 1, `length` )||
 |System.String ToLower()|ToLower(`this`)||
 |System.String ToUpper()|ToUpper(`this`)||
 |System.String Trim()|Trim(`this`)||
@@ -67,11 +68,11 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= (operador)||
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> (operador)||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> = (operador)||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= (operador)||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= (operador)||
-|Boolean op_LessThan (DateTime `t1`, DateTime `t2`)|< (operador)||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< = (operador)||
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` as DateInterval,\_<br /><br /> ByVal `DateValue` as DateTime,\_<br /><br /> Opcional ByVal `FirstDayOfWeekValue` as FirstDayOfWeek = VbSunday,\_<br /><br /> Opcional ByVal `FirstWeekOfYearValue` as primera_semana_año = VbFirstJan1\_<br /><br /> ) As Integer||Para obtener más información, consulte la sección Función DatePart.|
+|Op_LessThan booleano (DateTime `t1` , DateTime `t2` )|< (operador)||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= (operador)||
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` as DateInterval, \_<br /><br /> ByVal `DateValue` as DateTime, \_<br /><br /> Opcional ByVal `FirstDayOfWeekValue` as FirstDayOfWeek = VbSunday, \_<br /><br /> Opcional ByVal `FirstWeekOfYearValue` as primera_semana_año = VbFirstJan1 \_<br /><br /> ) As Integer||Para obtener más información, consulte la sección Función DatePart.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||
@@ -86,11 +87,11 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 |-----------------------------------------|------------------------|
 |Boolean Equals(DateTime `value`)|= (operador)|
 |Día|Day(`this`)|
-|Hour|Hour(`this`)|
+|Hora|Hour(`this`)|
 |Millisecond|Millisecond(`this`)|
 |Minute|Minute(`this`)|
-|Mes|Month(`this`)|
-|Second|Second(`this`)|
+|Month (Mes)|Month(`this`)|
+|Segundo|Second(`this`)|
 |Year|Year(`this`)|
 
 ## <a name="systemdatetimeoffset-method-instance-mapping"></a>Asignación del método System.DateTimeOffset (instancia)
@@ -100,11 +101,11 @@ La asignación mostrada para los métodos `get` sobre las propiedades enumeradas
 |Método System.DateTimeOffset (instancia)|Función canónica|Notas|
 |-----------------------------------------------|------------------------|-----------|
 |Día|Day(`this`)|No se admite en SQL Server 2005.|
-|Hour|Hour(`this`)|No se admite en SQL Server 2005.|
+|Hora|Hour(`this`)|No se admite en SQL Server 2005.|
 |Millisecond|Millisecond(`this`)|No se admite en SQL Server 2005.|
 |Minute|Minute(`this`)|No se admite en SQL Server 2005.|
-|Mes|Month(`this`)|No se admite en SQL Server 2005.|
-|Second|Second(`this`)|No se admite en SQL Server 2005.|
+|Month (Mes)|Month(`this`)|No se admite en SQL Server 2005.|
+|Segundo|Second(`this`)|No se admite en SQL Server 2005.|
 |Year|Year(`this`)|No se admite en SQL Server 2005.|
 
 > [!NOTE]
@@ -125,9 +126,9 @@ La asignación mostrada para los métodos `get` sobre las propiedades enumeradas
 |Método System.TimeSpan (instancia)|Función canónica|Notas|
 |-----------------------------------------|------------------------|-----------|
 |Horas|Hour(`this`)|No se admite en SQL Server 2005.|
-|Milliseconds|Millisecond(`this`)|No se admite en SQL Server 2005.|
+|Milisegundos|Millisecond(`this`)|No se admite en SQL Server 2005.|
 |Minutos|Minute(`this`)|No se admite en SQL Server 2005.|
-|Seconds|Second(`this`)|No se admite en SQL Server 2005.|
+|Segundos|Second(`this`)|No se admite en SQL Server 2005.|
 
 > [!NOTE]
 > El método <xref:System.TimeSpan.Equals%2A> devuelve `true` si los objetos <xref:System.TimeSpan> comparados son iguales; de lo contrario, devuelve `false`. El método <xref:System.TimeSpan.CompareTo%2A> devuelve 0, 1 o -1 dependiendo de si el objeto <xref:System.TimeSpan> comparado es igual, mayor que, o menor que, respectivamente.

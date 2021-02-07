@@ -1,14 +1,15 @@
 ---
+description: 'Más información sobre: <behaviors> del flujo de trabajo'
 title: <behaviors> del flujo de trabajo
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-ms.openlocfilehash: 21974f77526f55a47c014a285efd3bbac6fc1f7b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5154a389aded34065cc7bdb11d1c73d71ca9f9f5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189609"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698198"
 ---
 # <a name="behaviors-of-workflow"></a>\<behaviors> del flujo de trabajo
 
@@ -47,7 +48,7 @@ Este elemento contiene la colección **serviceBehaviors** .  Cada elemento de la
 |-------------|-----------------|  
 |[\<system.serviceModel>](../wcf/system-servicemodel.md)|El elemento raíz de todos los elementos de configuración de flujo de trabajo.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BehaviorsSection>
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: opciones e instrucciones de la tecnología ADO.NET'
 title: Opciones de tecnología e instrucciones
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: c91eff55a322bfbe5675395a54c2b294d67d909a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0cd26162c70e1cad8a08488f0705a8aebf2fab96
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697756"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Directrices y opciones de tecnología de ADO.NET
 
@@ -47,9 +48,9 @@ La plataforma de datos ADO.NET es una estrategia para varias versiones mediante 
   
 ## <a name="wcf-data-services"></a>Servicios de datos de WCF  
 
- WCF Data Services implementa los servicios de datos en Internet o en una intranet. Los datos se estructuran como entidades y relaciones de acuerdo a las especificaciones de Entity Data Model. Los datos implementados en este modelo se pueden direccionar mediante el protocolo HTTP estándar. Para obtener más información, vea [WCF Data Services 4.5](../wcf/index.md).  
+ Servicios de datos de WCF implementa los servicios de datos en Internet o en una intranet. Los datos se estructuran como entidades y relaciones de acuerdo a las especificaciones de Entity Data Model. Los datos implementados en este modelo se pueden direccionar mediante el protocolo HTTP estándar. Para obtener más información, vea [WCF Data Services 4.5](../wcf/index.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general de ADO.NET](ado-net-overview.md)
 - [Novedades de ADO.NET](whats-new.md)

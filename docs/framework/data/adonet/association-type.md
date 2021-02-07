@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: tipo de asociación'
 title: tipo de asociación
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 6f6eb91d4f292c7e98b8c9a1d814ed6bf71b7370
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4df84d97c798e9f2d06e0f5dce442e05cb4c67b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198761"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697561"
 ---
 # <a name="association-type"></a>tipo de asociación
 
@@ -36,7 +37,7 @@ Un *tipo de asociación* (también denominado Asociación) es el bloque de creac
   
  [!code-xml[EDM_Example_Model#AssociationExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#associationexample)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: usar EdmGen.exe para validar los archivos de asignación y de modelo'
 title: Procedimiento para usar EdmGen.exe para validar los archivos de asignación y de modelo
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
-ms.openlocfilehash: 62a3bde9d2431b9e9e86e2a8d8896520f3456590
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e729ea36b7ff17dc318f4488a669b968161aea8b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697353"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>Procedimiento para usar EdmGen.exe para validar los archivos de asignación y de modelo
 
@@ -25,7 +26,7 @@ En este tema se muestra cómo usar la herramienta [generador de EDM (EdmGen.exe)
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:ValidateArtifacts /inssdl:.\School.ssdl /inmsl:.\School.msl /incsdl:.\School.csdl  
     ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cómo: Configurar manualmente un proyecto de Entity Framework](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [ADO.NET Entity Data Model herramientas](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Cómo: hacer que los archivos de asignación y de modelo sean recursos incrustados'
 title: Procedimiento para hacer que los archivos de asignación y de modelo sean recursos incrustados
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 8496dcad5422d1a45af52e58325efd360768da34
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 373dfc2c93adfc510341ec0ea0487ad8962aa3e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697522"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Procedimiento para hacer que los archivos de asignación y de modelo sean recursos incrustados
 
@@ -38,7 +39,7 @@ El Entity Framework permite implementar archivos de asignación y de modelo como
 
  La siguiente cadena de conexión hace referencia a los archivos de asignación y de modelo incrustados para el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Esta cadena de conexión está almacenada en el archivo App.config del proyecto.  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelado y asignación](modeling-and-mapping.md)
 - [Procedimiento para defina la cadena de conexión](how-to-define-the-connection-string.md)

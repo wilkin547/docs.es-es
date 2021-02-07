@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <securityTokenHandlerConfiguration>'
 title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: 4c6affbc24a58424158e466fb732e9a3b3d6f1ed
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c014d971d3e8cc640a3b7042e3a0266d902de7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698315"
 ---
 # \<securityTokenHandlerConfiguration>
 
@@ -63,7 +64,7 @@ Proporciona la configuración para la colección de controladores de token.
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|Especifica una colección de controladores de tokens de seguridad que se registran con el punto de conexión.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En esta sección se proporcionan los valores de propiedad de un <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> objeto. Los valores configurados en esta sección reemplazan a los configurados en el servicio. Algunos de estos valores se pueden reemplazar a su vez por los valores que se especifican cuando se agrega un controlador a la colección de controladores de tokens de seguridad.  
   
