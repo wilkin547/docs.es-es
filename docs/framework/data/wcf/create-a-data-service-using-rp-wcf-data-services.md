@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: crear un servicio de datos mediante el proveedor de reflexión (Servicios de datos de WCF)'
 title: 'Cómo: Crear un servicio de datos utilizando el proveedor de reflexión (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,16 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 7315c6d8-f452-4fb2-a0c1-76ab0593c146
-ms.openlocfilehash: 6bab9d9be484cf90cb85df63a1b237b5cc39a5e0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1c4d131b21c69e11dd6d8b574e4c22a6af7c5a25
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766240"
 ---
 # <a name="how-to-create-a-data-service-using-the-reflection-provider-wcf-data-services"></a>Cómo: Crear un servicio de datos utilizando el proveedor de reflexión (Data Services de WCF)
 
-WCF Data Services permite definir un modelo de datos basado en clases arbitrarias siempre que dichas clases se expongan como objetos que implementan la <xref:System.Linq.IQueryable%601> interfaz. Para obtener más información, vea [proveedores de Data Services](data-services-providers-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Servicios de datos de WCF permite definir un modelo de datos basado en clases arbitrarias siempre que dichas clases se expongan como objetos que implementan la <xref:System.Linq.IQueryable%601> interfaz. Para obtener más información, vea [proveedores de Data Services](data-services-providers-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  
 

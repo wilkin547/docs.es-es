@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo configurar el servicio de datos (Servicios de datos de WCF)
 title: Configurar el servicio de datos (Data Services de WCF)
 ms.date: 03/30/2017
 dev_langs:
@@ -7,18 +8,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: a30a8c2c731e8c5cb2b22c8d7f34ec32d149803c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72bd0de5319cc4b19fd831f4ee302e073106c74b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152798"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766199"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurar el servicio de datos (Data Services de WCF)
 
-Con WCF Data Services, puede crear servicios de datos que expongan fuentes Open Data Protocol (OData). Los datos de estas fuentes pueden proceder de diferentes orígenes de datos. WCF Data Services utiliza proveedores de datos para exponer estos datos como una fuente de OData. Estos proveedores incluyen un proveedor de Entity Framework, un proveedor de reflexión y un conjunto de interfaces de proveedor de servicio de datos personalizados. La implementación del proveedor define el modelo de datos del servicio. Para obtener más información, vea [proveedores de Data Services](data-services-providers-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Con Servicios de datos de WCF, puede crear servicios de datos que expongan fuentes Open Data Protocol (OData). Los datos de estas fuentes pueden proceder de diferentes orígenes de datos. Servicios de datos de WCF utiliza proveedores de datos para exponer estos datos como una fuente de OData. Estos proveedores incluyen un proveedor de Entity Framework, un proveedor de reflexión y un conjunto de interfaces de proveedor de servicio de datos personalizados. La implementación del proveedor define el modelo de datos del servicio. Para obtener más información, vea [proveedores de Data Services](data-services-providers-wcf-data-services.md).  
   
- En WCF Data Services, un servicio de datos es una clase que hereda de la <xref:System.Data.Services.DataService%601> clase, donde el tipo del servicio de datos es el contenedor de entidades del modelo de datos. Este contenedor de entidades tiene una o varias propiedades que devuelven una interfaz <xref:System.Linq.IQueryable%601>, que se usa para tener acceso a los conjuntos de entidades del modelo de datos.  
+ En Servicios de datos de WCF, un servicio de datos es una clase que hereda de la <xref:System.Data.Services.DataService%601> clase, donde el tipo del servicio de datos es el contenedor de entidades del modelo de datos. Este contenedor de entidades tiene una o varias propiedades que devuelven una interfaz <xref:System.Linq.IQueryable%601>, que se usa para tener acceso a los conjuntos de entidades del modelo de datos.  
   
  Los miembros de la clase <xref:System.Data.Services.DataServiceConfiguration> definen los comportamientos del servicio de datos junto con los miembros de la clase <xref:System.Data.Services.DataServiceBehavior>, a la que se tiene acceso desde la propiedad <xref:System.Data.Services.DataServiceConfiguration.DataServiceBehavior%2A> de la clase <xref:System.Data.Services.DataServiceConfiguration>. La clase <xref:System.Data.Services.DataServiceConfiguration> se proporciona al método `InitializeService` que implementa el servicio de datos, como en la siguiente implementación de un servicio de datos de Northwind:  
   
@@ -29,7 +32,7 @@ Con WCF Data Services, puede crear servicios de datos que expongan fuentes Open 
 
  La clase <xref:System.Data.Services.DataServiceConfiguration> permite especificar los comportamientos siguientes del servicio de datos.  
   
-|Member|Comportamiento|  
+|Miembro|Comportamiento|  
 |------------|--------------|  
 |<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|Permite deshabilitar las solicitudes de recuento que se envían al servicio de datos usando el segmento de ruta de acceso `$count` y la opción de consulta `$inlinecount`. Para obtener más información, vea [OData: convenciones de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
 |<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|Permite deshabilitar la compatibilidad con la proyección de los datos en las solicitudes que se envían al servicio de datos usando la opción de consulta `$select`. Para obtener más información, vea [OData: convenciones de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
@@ -41,13 +44,13 @@ Con WCF Data Services, puede crear servicios de datos que expongan fuentes Open 
 |<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Permite limitar el tamaño de una respuesta limitando el número de entidades relacionadas que pueden incluirse en una sola solicitud utilizando el operador de consulta `$expand`. Para obtener más información, vea [OData: convenciones de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) y [carga de contenido aplazado](loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Permite limitar el tamaño de una respuesta limitando la profundidad del gráfico de las entidades relacionadas que pueden incluirse en una sola solicitud usando el operador de consulta `$expand`. Para obtener más información, vea [OData: convenciones de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) y [carga de contenido aplazado](loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|Permite limitar el número de entidades que se van a insertar que puede contener una sola solicitud POST.|  
-|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Define la versión del protocolo Atom utilizado por el servicio de datos. Cuando el valor de <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> se establece en un valor menor que el valor máximo de <xref:System.Data.Services.Common.DataServiceProtocolVersion> , la funcionalidad más reciente de WCF Data Services no está disponible para los clientes que tienen acceso al servicio de datos. Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Define la versión del protocolo Atom utilizado por el servicio de datos. Cuando el valor de <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> se establece en un valor menor que el valor máximo de <xref:System.Data.Services.Common.DataServiceProtocolVersion> , la funcionalidad más reciente de servicios de datos de WCF no está disponible para los clientes que tienen acceso al servicio de datos. Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Le permite limitar el tamaño de una respuesta limitando el número de entidades de cada conjunto de entidades que se devuelve como fuente de distribución de datos.|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|Agrega un tipo de datos a la lista de tipos reconocidos por el servicio de datos.|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|Establece los derechos de acceso para los recursos del conjunto de entidades que están disponibles en el servicio de datos. Se puede proporcionar el valor asterisco (`*` para el parámetro de nombre para establecer el acceso en el mismo nivel para todos los conjuntos de entidades restantes. Se recomienda establecer el acceso a los conjuntos de entidades para proporcionar el acceso con privilegios mínimos a los recursos del servicio de datos requeridos por las aplicaciones cliente. Para obtener más información, consulta [Securing WCF Data Services](securing-wcf-data-services.md). Para obtener ejemplos de los derechos de acceso mínimos necesarios para un URI determinado y una acción HTTP, consulte la tabla de la sección [requisitos mínimos de acceso a recursos](configuring-the-data-service-wcf-data-services.md#accessRequirements) .|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetPageSize%2A>|Establece el tamaño de página máximo de un recurso de conjunto de entidades. Para obtener más información, consulte [Cómo: habilitar la paginación de los resultados del servicio de datos](how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetServiceOperationAccessRule%2A>|Establece los derechos de acceso para las operaciones de servicio definidas en el servicio de datos. Para obtener más información, consulte [operaciones de servicio](service-operations-wcf-data-services.md). Se puede proporcionar el valor asterisco (`*`) para el parámetro de nombre con objeto de establecer el acceso en el mismo nivel para todas las operaciones de servicio. Se recomienda establecer el acceso a las operaciones de servicio para proporcionar el acceso con privilegios mínimos a los recursos del servicio de datos requeridos por las aplicaciones cliente. Para obtener más información, consulta [Securing WCF Data Services](securing-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|Esta propiedad de configuración le permite solucionar más fácilmente los problemas de un servicio de datos devolviendo más información en el mensaje de respuesta del error. Esta opción no está pensada para su uso en un entorno de producción. Para obtener más información, consulte [desarrollar e implementar WCF Data Services](developing-and-deploying-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|Esta propiedad de configuración le permite solucionar más fácilmente los problemas de un servicio de datos devolviendo más información en el mensaje de respuesta del error. Esta opción no está pensada para su uso en un entorno de producción. Para obtener más información, consulte [desarrollar e implementar servicios de datos de WCF](developing-and-deploying-wcf-data-services.md).|  
   
 <a name="accessRequirements"></a>
 
@@ -67,7 +70,7 @@ Con WCF Data Services, puede crear servicios de datos que expongan fuentes Open 
 |`/Orders(10643)/$links/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteMerge> o <xref:System.Data.Services.EntitySetRights.WriteReplace>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteMerge>|No compatible|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle>;<br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers/$count`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|No compatible|No compatible|No compatible|No compatible|  
 |`/Customers('ALFKI')/ContactName`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|No compatible|<xref:System.Data.Services.EntitySetRights.WriteMerge>|No compatible|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Address/StreetAddress/$value`<sup>1</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.WriteDelete>|No compatible|No compatible|No compatible|  
+|`/Customers('ALFKI')/Address/StreetAddress/$value` <sup>1</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.WriteDelete>|No compatible|No compatible|No compatible|  
 |`/Customers('ALFKI')/ContactName/$value`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.WriteMerge>|No compatible|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers('ALFKI')/$value` <sup>2</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|No compatible|No compatible|No compatible|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|No compatible|No compatible|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|No compatible|  

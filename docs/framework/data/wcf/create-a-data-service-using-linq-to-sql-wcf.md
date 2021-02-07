@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: crear un servicio de datos mediante un origen de datos de LINQ to SQL (Servicios de datos de WCF)'
 title: 'Cómo: Crear un servicio de datos utilizando un origen de datos de LINQ to SQL (Servicios de datos de WCF)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,20 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: cde5b9903a1fd164ce106a6a408ac4bb79976642
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 18c59cc8a067372f2a5c5b4b25d9aec77515ad98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802285"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766249"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Cómo: Crear un servicio de datos utilizando un origen de datos de LINQ to SQL (Servicios de datos de WCF)
 
-WCF Data Services expone los datos de entidad como un servicio de datos. El proveedor de reflexión permite definir un modelo de datos que se basa en cualquier clase que expone miembros que devuelven una implementación <xref:System.Linq.IQueryable%601>. Para poder realizar actualizaciones en los datos del origen de datos, estas clases también deben implementar la interfaz <xref:System.Data.Services.IUpdatable>. Para obtener más información, vea [proveedores de Data Services](data-services-providers-wcf-data-services.md). En este tema se muestra cómo crear clases LINQ to SQL que tienen acceso a la base de datos de ejemplo Northwind usando el proveedor de reflexión, así como el modo de crear el servicio de datos que está basado en estas clases de datos.
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Servicios de datos de WCF expone los datos de entidad como un servicio de datos. El proveedor de reflexión permite definir un modelo de datos basado en cualquier clase que exponga miembros que devuelvan una <xref:System.Linq.IQueryable%601> implementación de. Para poder realizar actualizaciones en los datos del origen de datos, estas clases también deben implementar la interfaz <xref:System.Data.Services.IUpdatable>. Para obtener más información, vea [proveedores de Data Services](data-services-providers-wcf-data-services.md). En este tema se muestra cómo crear clases LINQ to SQL que tienen acceso a la base de datos de ejemplo Northwind usando el proveedor de reflexión, así como el modo de crear el servicio de datos que está basado en estas clases de datos.
 
 ## <a name="to-add-linq-to-sql-classes-to-a-project"></a>Para agregar clases LINQ to SQL a un proyecto
 
-1. Desde dentro de una Visual Basic C# o aplicación, en el menú **proyecto** , haga clic en **Agregar** > **nuevo elemento**.
+1. En una aplicación Visual Basic o C#, en el menú **proyecto** , haga clic en **Agregar**  >  **nuevo elemento**.
 
 2. Haga clic en la plantilla **clases de LINQ to SQL** .
 
@@ -31,7 +34,7 @@ WCF Data Services expone los datos de entidad como un servicio de datos. El prov
 
      Se agrega al proyecto el archivo Northwind.dbml y se abre Object Relational Designer (O/R Designer).
 
-5. En **servidor**/**Explorador de bases de datos**, en Northwind, expanda **tablas** y arrastre la tabla `Customers` al Object Relational Designer (Object Relational Designer).
+5. En **servidor** / **Explorador de bases de datos**, en Northwind, expanda **tablas** y arrastre la `Customers` tabla al Object Relational Designer (Object Relational Designer).
 
      Se crea una clase de entidad `Customer` que aparece en la superficie de diseño.
 
@@ -48,7 +51,7 @@ WCF Data Services expone los datos de entidad como un servicio de datos. El prov
 
 ### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a>Para crear un servicio de datos usando un modelo de datos basado en LINQ to SQL
 
-1. En **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto ASP.net y, a continuación, haga clic en **Agregar** > **nuevo elemento**.
+1. En **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto ASP.net y, a continuación, haga clic en **Agregar**  >  **nuevo elemento**.
 
 2. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione la plantilla de **servicio de datos de WCF** en la categoría **Web** .
 
@@ -74,6 +77,6 @@ WCF Data Services expone los datos de entidad como un servicio de datos. El prov
 
 ## <a name="see-also"></a>Vea también
 
-- [Creación de un servicio de datos con un origen de datos de ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md)
-- [Creación de un servicio de datos utilizando el proveedor de reflexión](create-a-data-service-using-rp-wcf-data-services.md)
+- [Procedimiento para crear un servicio de datos con un origen de datos de ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md)
+- [Procedimiento para crear un servicio de datos mediante el proveedor de reflexión](create-a-data-service-using-rp-wcf-data-services.md)
 - [Proveedores de Data Services](data-services-providers-wcf-data-services.md)

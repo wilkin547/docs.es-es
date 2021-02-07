@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: personalización de fuentes (Servicios de datos de WCF)'
 title: Personalización de fuentes (Data Services de WCF)
 ms.date: 03/30/2017
 dev_langs:
@@ -10,23 +11,25 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: bf25737d98a880ac720318de18b687b4df5b0708
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c9e0ead05c446b293fd728c3720472529a0cf0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172637"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765963"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalización de fuentes (Data Services de WCF)
 
-WCF Data Services usa el Open Data Protocol (OData) para exponer los datos como una fuente. OData admite los formatos Atom y notación de objetos JavaScript (JSON) para las fuentes de datos. Cuando se usa una fuente Atom, OData proporciona un método estándar para serializar los datos, como entidades y relaciones, en un formato XML que se puede incluir en el cuerpo del mensaje HTTP. OData define una asignación de propiedad de entidad predeterminada entre los datos contenidos en entidades y elementos Atom. Para obtener más información, consulte [OData: formato Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Servicios de datos de WCF usa el Open Data Protocol (OData) para exponer los datos como una fuente. OData admite los formatos Atom y notación de objetos JavaScript (JSON) para las fuentes de datos. Cuando se usa una fuente Atom, OData proporciona un método estándar para serializar los datos, como entidades y relaciones, en un formato XML que se puede incluir en el cuerpo del mensaje HTTP. OData define una asignación de propiedad de entidad predeterminada entre los datos contenidos en entidades y elementos Atom. Para obtener más información, consulte [OData: formato Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/).  
   
  Quizá tenga un escenario de aplicación que requiera que los datos de la propiedad devueltos por el servicio de datos se serialicen de forma personalizada en vez de hacerlo con el formato de fuente estándar. Con OData, puede personalizar la serialización en una fuente de distribución de datos para que las propiedades de una entidad se puedan asignar a elementos y atributos no usados de una entrada o a elementos personalizados de una entrada en la fuente.  
   
 > [!NOTE]
 > La personalización de fuentes solo se admite en las fuentes Atom. No se devuelven fuentes personalizadas cuando se solicita el formato JSON para la fuente devuelta.  
   
- Con WCF Data Services, puede definir una asignación alternativa de propiedad de entidad para una carga Atom aplicando manualmente los atributos a los tipos de entidad en el modelo de datos. El proveedor del origen de datos del servicio de datos determina cómo debería aplicar estos atributos.  
+ Con Servicios de datos de WCF, puede definir una asignación alternativa de propiedad de entidad para una carga Atom aplicando manualmente los atributos a los tipos de entidad en el modelo de datos. El proveedor del origen de datos del servicio de datos determina cómo debería aplicar estos atributos.  
   
 > [!IMPORTANT]
 > Cuando defina las fuentes personalizadas, debe asegurarse de que se incluyan todas las propiedades de entidad con asignaciones personalizadas en la proyección. Cuando no se incluya ninguna propiedad de entidad asignada en la proyección, se puede producir la pérdida de datos. Para obtener más información, consulte [proyecciones de consultas](query-projections-wcf-data-services.md).  
@@ -53,7 +56,7 @@ WCF Data Services usa el Open Data Protocol (OData) para exponer los datos como 
 |Nombre del atributo|Descripción|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|Indica el tipo de contenido. Las palabras clave siguientes definen los tipos de contenido de distribución:<br /><br /> `text:` El valor de la propiedad se muestra en la fuente como texto.<br /><br /> `html:` El valor de la propiedad se muestra en la fuente como HTML.<br /><br /> `xhtml:` El valor de la propiedad se muestra en la fuente como HTML con formato XML.<br /><br /> Estas palabras clave son equivalentes a los valores de la enumeración <xref:System.Data.Services.Common.SyndicationTextContentKind> usada con el proveedor de reflexión.<br /><br /> No se admite este atributo cuando se usan los atributos `FC_NsPrefix` y `FC_NsUri`.<br /><br /> Cuando especifique un valor de `xhtml` para el atributo `FC_ContentKind`, debe asegurarse de que el valor de propiedad contenga XML con el formato correcto. El servicio de datos devuelve el valor sin realizar transformaciones. Además, debe asegurarse de que cualquier prefijo de elemento XML del XML devuelto tenga un URI de espacio de nombres definido en la fuente asignada.|  
-|`FC_KeepInContent`|Indica que el valor de propiedad a la que se hace referencia debería estar incluido tanto en la sección de contenido de la fuente como en la ubicación asignada. Los valores válidos son `true` y `false`. Para que la fuente resultante sea compatible con versiones anteriores de WCF Data Services, especifique un valor de para asegurarse de `true` que el valor se incluye en la sección de contenido de la fuente.|  
+|`FC_KeepInContent`|Indica que el valor de propiedad a la que se hace referencia debería estar incluido tanto en la sección de contenido de la fuente como en la ubicación asignada. Los valores válidos son `true` y `false`. Para que la fuente resultante sea compatible con versiones anteriores de Servicios de datos de WCF, especifique un valor de para asegurarse de `true` que el valor se incluye en la sección de contenido de la fuente.|  
 |`FC_NsPrefix`|El prefijo del espacio de nombres del elemento XML de una asignación sin distribución. Este atributo debe usarse con el atributo `FC_NsUri` y no se puede usar con el atributo `FC_ContentKind`.|  
 |`FC_NsUri`|El URI del espacio de nombres del elemento XML de una asignación sin distribución. Este atributo debe usarse con el atributo `FC_NsPrefix` y no se puede usar con el atributo `FC_ContentKind`.|  
 |`FC_SourcePath`|La ruta de acceso de la propiedad de la entidad a la que se aplica esta regla de asignación de fuentes. Este atributo solo se admite cuando se usa en un elemento `EntityType`.<br /><br /> La propiedad <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> no puede hacer referencia directamente a un tipo complejo. Para los tipos complejos, debe usar una expresión de ruta cuyos nombres de propiedad estén separados por un carácter de barra diagonal (`/`). Por ejemplo, se permiten los siguientes valores para un tipo de entidad `Person` con una propiedad de entero `Age` y una propiedad compleja.<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> La propiedad <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> no puede establecerse en un valor que contenga un espacio ni en ningún otro carácter que no sea válido para un nombre de propiedad.|  
@@ -90,7 +93,7 @@ WCF Data Services usa el Open Data Protocol (OData) para exponer los datos como 
 
  Debe considerar lo siguiente cuando defina asignaciones de fuentes personalizadas.  
   
-- El cliente WCF Data Services trata los elementos asignados en una fuente como vacíos cuando contienen solo espacios en blanco. Por este motivo, los elementos asignados que solo contienen espacios en blanco no se materializan en el cliente con el mismo espacio en blanco. Para conservar este espacio en blanco en el cliente, debe establecer el valor de `KeepInContext` en `true` en el atributo de asignación de fuentes.  
+- El cliente Servicios de datos de WCF trata los elementos asignados en una fuente como vacíos cuando contienen solo espacios en blanco. Por este motivo, los elementos asignados que solo contienen espacios en blanco no se materializan en el cliente con el mismo espacio en blanco. Para conservar este espacio en blanco en el cliente, debe establecer el valor de `KeepInContext` en `true` en el atributo de asignación de fuentes.  
   
 ## <a name="versioning-requirements"></a>Requisitos de control de versiones  
 
@@ -100,7 +103,7 @@ WCF Data Services usa el Open Data Protocol (OData) para exponer los datos como 
   
  Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proveedor de reflexión](reflection-provider-wcf-data-services.md)
 - [Proveedor de Entity Framework](entity-framework-provider-wcf-data-services.md)
