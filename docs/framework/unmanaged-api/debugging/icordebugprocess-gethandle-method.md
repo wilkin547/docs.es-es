@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugProcess:: GetHandle (método)'
 title: ICorDebugProcess::GetHandle (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e7d3ecf5-09d2-4d94-abb6-ff3483deebb6
 topic_type:
 - apiref
-ms.openlocfilehash: 87b7b7381ef53f7e2abebc053b5c9f87f94d96c2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fbc92be53b30d3c70f85fea36e05c6a5514b0f03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695080"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722131"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle (Método)
 
@@ -37,7 +38,7 @@ HRESULT GetHandle([out] HPROCESS *phProcessHandle);
  `phProcessHandle`  
  enuncia Un puntero a un `HPROCESS` que es el identificador del proceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El identificador recuperado es propiedad de la interfaz de depuración. El depurador debe duplicar el identificador antes de usarlo.  
   

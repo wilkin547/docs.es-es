@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICeeGen:: GetStringSection ((método)'
 title: ICeeGen::GetStringSection (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2267d39-69d1-4de1-bf37-f752cafacc71
 topic_type:
 - apiref
-ms.openlocfilehash: bd284bced625de39791377a9248796ca3dd76f5c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ef4b4bb502e1099b9b3bcdbd494d03df0858aa6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722926"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721065"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection (Método)
 
@@ -51,6 +52,6 @@ HRESULT GetStringSection (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICeeGen (Interfaz)](iceegen-interface.md)

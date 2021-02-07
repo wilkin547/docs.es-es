@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICeeGen:: Computepointer ((método)'
 title: ICeeGen::ComputePointer (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 41a3b9c77fc766b2fa39b406dedbb3203cc97ad9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9319343cc93eae3e4c7b060239d23ad8aeb7d3e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721182"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer (Método)
 
@@ -59,6 +60,6 @@ HRESULT ComputePointer (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICeeGen (Interfaz)](iceegen-interface.md)

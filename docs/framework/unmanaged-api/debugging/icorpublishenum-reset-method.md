@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorPublishEnum:: RESET (método)'
 title: ICorPublishEnum::Reset (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-ms.openlocfilehash: 296ff6d5d78a22106c6a61ea8c7567a8e0fff3aa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 124dba7380579d445d64af5f2867aeb43f44ff52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693338"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721608"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset (Método)
 
@@ -46,6 +47,6 @@ HRESULT Reset ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorPublishEnum (Interfaz)](icorpublishenum-interface.md)

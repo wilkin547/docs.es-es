@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedMethod:: GetScopeFromOffset ((método)'
 title: ISymUnmanagedMethod::GetScopeFromOffset (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: cf2784ce0ac6e614e75a341660808b9fe03ada0e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 87dd1f1732ec5d7c8669dbc2bf73b0b6128aafa1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699448"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721325"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset (Método)
 
@@ -50,6 +51,6 @@ HRESULT GetScopeFromOffset(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)

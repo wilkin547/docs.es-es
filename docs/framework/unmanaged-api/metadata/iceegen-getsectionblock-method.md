@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICeeGen:: Getsectionblock ((método)'
 title: ICeeGen::GetSectionBlock (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: 9ce3afded5f914ecf970d8db738becc7f5cfff84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d1a9fdeb35507f9dd6528b581be877049d2a1478
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723147"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721156"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock (Método)
 
@@ -53,7 +54,7 @@ HRESULT GetSectionBlock (
  `ppBytes`  
  enuncia Puntero a una ubicación que recibe la dirección del bloque recuperado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Llame `GetSectionBlock` solo si tiene requisitos de sección especiales que no se controlan mediante otros métodos.  
   
@@ -67,6 +68,6 @@ HRESULT GetSectionBlock (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICeeGen (Interfaz)](iceegen-interface.md)

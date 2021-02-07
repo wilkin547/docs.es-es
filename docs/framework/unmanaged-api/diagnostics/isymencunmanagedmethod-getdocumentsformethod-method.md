@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymENCUnmanagedMethod:: GetDocumentsForMethod ((método)'
 title: ISymENCUnmanagedMethod::GetDocumentsForMethod (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: d9fe18225dc27e93d4e97940cba878e4d73b4ed2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 01c7280abe437266618d96c6e195e61a4f830131
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730531"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721546"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod (Método)
 
@@ -54,6 +55,6 @@ HRESULT GetDocumentsForMethod(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymENCUnmanagedMethod (Interfaz)](isymencunmanagedmethod-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugNativeFrame2:: Ismatchingparentframe ((método)'
 title: ICorDebugNativeFrame2::IsMatchingParentFrame (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: 213bee96531fa0bbc9bf0ae76b2505019833abfc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6dff1cb7f5205ad742ac4b886f72938dd28bd88f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724707"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722209"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame (Método)
 
@@ -68,7 +69,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugNativeFrame2 (Interfaz)](icordebugnativeframe2-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

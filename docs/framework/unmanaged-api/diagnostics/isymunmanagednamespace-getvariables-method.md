@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedNamespace:: GetVariables ((método)'
 title: ISymUnmanagedNamespace::GetVariables (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: f554fa95f552285ad92d9f780a8d77f53e6890b6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63316bf3ba1e4736d542be3362076c3ae6e95def
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721208"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables (Método)
 
@@ -55,6 +56,6 @@ HRESULT GetVariables(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedNamespace (Interfaz)](isymunmanagednamespace-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedDocumentWriter:: SetSource (método)'
 title: ISymUnmanagedDocumentWriter::SetSource (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea5b9d9f-ff06-4bd3-8de5-6435343aba59
 topic_type:
 - apiref
-ms.openlocfilehash: 31475b08b569b925aab9cab869545f0912c4ecf8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e24e34a297a9931babf3df4f2bae1b5e8f60db1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691596"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721481"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource (Método)
 
@@ -50,6 +51,6 @@ HRESULT SetSource(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedDocumentWriter (Interfaz)](isymunmanageddocumentwriter-interface.md)

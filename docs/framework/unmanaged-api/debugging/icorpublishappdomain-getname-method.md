@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorPublishAppDomain:: GetName (método)'
 title: ICorPublishAppDomain::GetName (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: d6b05333b9e02c4202c0fd9bdee9b5c055aa4da3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 05b1b14f7e0db371b29059ec3d44333ac40428e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694365"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721806"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName (Método)
 
@@ -48,7 +49,7 @@ HRESULT GetName (
  `szName`  
  enuncia Matriz en la que se va a almacenar el nombre.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si `szName` no es null, el `GetName` método copia hasta `cchName` caracteres (incluido el terminador null) en `szName` . Si se devuelve un valor distinto de NULL en `pcchName` , el número real de caracteres del nombre (incluido el terminador nulo) se almacena en la `szName` matriz.  
   
@@ -64,6 +65,6 @@ HRESULT GetName (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorPublishAppDomain (Interfaz)](icorpublishappdomain-interface.md)

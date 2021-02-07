@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataAssemblyEmit:: Setmanifestresourceprops ((método)'
 title: IMetaDataAssemblyEmit::SetManifestResourceProps (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: c46a3bc34ba7efa760e50416e9a6c39779727813
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0d5022c4acc562f9e77cec4ba080815db410862b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708934"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721037"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps (Método)
 
@@ -51,7 +52,7 @@ HRESULT SetManifestResourceProps (
  `dwResourceFlags`  
  de Combinación bit a bit de valores de marca que especifican los atributos del recurso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para crear una `ManifestResource` estructura de metadatos, use el método [IMetaDataAssemblyEmit::D efinemanifestresource](imetadataassemblyemit-definemanifestresource-method.md) .  
   
@@ -65,6 +66,6 @@ HRESULT SetManifestResourceProps (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)

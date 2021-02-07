@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugProcess5:: Enumerateheap ((método)'
 title: ICorDebugProcess5::EnumerateHeap (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-ms.openlocfilehash: 22ab29f8a204a4b27dafdefcd3652cc3dcf9769c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b43e7993b114ed64d009f91746ea987198edde74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722040"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap (Método)
 
@@ -39,7 +40,7 @@ HRESULT EnumerateHeap(
  `ppObject`  
  enuncia Puntero a la dirección de un objeto de interfaz [icordebugheapenum (](icordebugheapenum-interface.md) que es un enumerador para los objetos que residen en el montón administrado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Antes de llamar al `ICorDebugProcess5::EnumerateHeap` método, debe llamar al método [ICorDebugProcess5:: getgcheapinformation (](icordebugprocess5-getgcheapinformation-method.md) y examinar el valor del `areGCStructuresValid` campo del objeto devuelto [COR_HEAPINFO](cor-heapinfo-structure.md) para asegurarse de que el montón de recolección de elementos no utilizados en su estado actual es Enumerable. Además, `ICorDebugProcess5::EnumerateHeap` devuelve `E_FAIL` si se adjunta demasiado pronto en la duración del proceso, antes de que se asigne la memoria para el montón administrado.  
   
@@ -55,7 +56,7 @@ HRESULT EnumerateHeap(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugProcess5 (Interfaz)](icordebugprocess5-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

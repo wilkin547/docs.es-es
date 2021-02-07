@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorPublishAppDomainEnum (:: Next (método)'
 title: ICorPublishAppDomainEnum::Next (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 00aff9ab4edbbebe4b924d335fa12f92e9840737
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e8255aa2326c6f0678132f5735d6cdf504dcbd0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693702"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721728"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next (Método)
 
@@ -58,6 +59,6 @@ HRESULT Next (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorPublishAppDomainEnum (Interfaz)](icorpublishappdomainenum-interface.md)

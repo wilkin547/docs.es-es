@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorPublish:: GetProcess (método)'
 title: ICorPublish::GetProcess (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-ms.openlocfilehash: a45f613b7547e2e80abdbd8ac85cb0b2b6a499e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d288a772274618cc99b63a68b37e84e543957b44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721988"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess (Método)
 
@@ -43,7 +44,7 @@ HRESULT GetProcess(
  `ppProcess`  
  enuncia Puntero a la dirección de una `ICorPublishProcess` instancia de que representa el proceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `GetProcess` se produce un error si el proceso no existe o no es un proceso administrado que el usuario actual puede depurar.  
   
@@ -57,6 +58,6 @@ HRESULT GetProcess(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorPublish (Interfaz)](icorpublish-interface.md)

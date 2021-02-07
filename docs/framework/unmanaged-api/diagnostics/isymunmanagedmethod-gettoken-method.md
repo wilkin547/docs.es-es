@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedMethod:: GetToken (método)'
 title: ISymUnmanagedMethod::GetToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-ms.openlocfilehash: 76134a2447cbc40b5c97304540d9907648bc89e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fde9936a6e79b9d1fff5b38ee7242cf5bb71369d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719923"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721312"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken (Método)
 
@@ -46,6 +47,6 @@ HRESULT GetToken(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)
