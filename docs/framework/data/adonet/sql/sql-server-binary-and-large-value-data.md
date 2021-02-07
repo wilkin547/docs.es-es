@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: SQL Server datos binarios y de Large-Value'
 title: Datos binarios y datos de valores grandes de SQL Server
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.openlocfilehash: a9296e83b0f4e4352423470433670bb2cbe5a248
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c7da5d504af0bc1beeea7e210a6fff4157fb090
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183044"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767445"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>Datos binarios y datos de valores grandes de SQL Server
 
@@ -17,13 +18,13 @@ SQL Server proporciona el especificador `max`, que amplía la capacidad de alma
   
 ## <a name="in-this-section"></a>En esta sección  
 
- [Modificación de datos de valores grandes (Max) en ADO.NET](modifying-large-value-max-data.md)  
+ [Modificación de datos de Large-Value (Max) en ADO.NET](modifying-large-value-max-data.md)  
  Describe cómo trabajar con tipos de datos de valores grandes.  
   
- [Datos FILESTREAM](filestream-data.md)  
+ [Datos de FILESTREAM](filestream-data.md)  
  Describe cómo trabajar con datos de valores grandes almacenados en SQL Server 2008 con el atributo FILESTREAM.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tipos de datos de SQL Server y ADO.NET](sql-server-data-types.md)
 - [SQL Server operaciones de datos en ADO.NET](sql-server-data-operations.md)

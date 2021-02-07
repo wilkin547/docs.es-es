@@ -1,26 +1,27 @@
 ---
+description: Más información sobre cómo actualizar datos en un origen de datos
 title: Actualizar datos de un origen de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 6b0234337c85ace0797d75b72560ccb55635daae
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a55d6a53f4607908fa279474419803eac3963909
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177272"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766574"
 ---
 # <a name="updating-data-in-a-data-source"></a>Actualizar datos de un origen de datos
 
-Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelven filas, cree un objeto **Command** con el comando SQL adecuado y una **conexión**, incluidos los **parámetros**necesarios. Ejecute el comando con el método **ExecuteNonQuery** del objeto **Command** .  
+Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelvan filas, cree un objeto **Command** con el comando SQL adecuado y otro **Connection**, incluidos las propiedades de **Parameters** necesarias. Ejecute el comando con el método **ExecuteNonQuery** del objeto **Command** .  
   
- El método **ExecuteNonQuery** devuelve un entero que representa el número de filas afectadas por la instrucción o el procedimiento almacenado que se ha ejecutado. Si se ejecutan varias instrucciones, el valor devuelto es la suma de los registros afectados por todas las instrucciones ejecutadas.  
+ El método **ExecuteNonQuery** devuelve un entero que representa el número de filas que se ven afectadas por la instrucción o por el procedimiento almacenado que se haya ejecutado. Si se ejecutan varias instrucciones, el valor devuelto es la suma de los registros afectados por todas las instrucciones ejecutadas.  
   
 ## <a name="example"></a>Ejemplo  
 
- En el ejemplo de código siguiente se ejecuta una instrucción INSERT para insertar un registro en una base de datos mediante **ExecuteNonQuery**.  
+ En el ejemplo de código siguiente se ejecuta una instrucción INSERT para insertar un registro en una base de datos mediante el método **ExecuteNonQuery**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -44,7 +45,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- En el ejemplo de código siguiente se ejecuta el procedimiento almacenado creado por el código de ejemplo en la [realización de operaciones de catálogo](performing-catalog-operations.md). El procedimiento almacenado no devuelve ninguna fila, por lo que se utiliza el método **ExecuteNonQuery** , pero el procedimiento almacenado recibe un parámetro de entrada y devuelve un parámetro de salida y un valor devuelto.  
+ En el ejemplo de código siguiente se ejecuta el procedimiento almacenado que se creó con el ejemplo de código de la sección [Realización de operaciones de catálogo](performing-catalog-operations.md). El procedimiento almacenado no devuelve ninguna fila, por lo que se utiliza el método **ExecuteNonQuery**, aunque el procedimiento almacenado reciba un parámetro de entrada y devuelva un parámetro de salida y un valor devuelto.  
   
  En el caso del <xref:System.Data.OleDb.OleDbCommand> objeto, el parámetro **ReturnValue** debe agregarse primero a la colección **Parameters** .  
   
@@ -93,7 +94,7 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Usar comandos para modificar datos](using-commands-to-modify-data.md)
 - [Actualizar orígenes de datos con objetos DataAdapter](updating-data-sources-with-dataadapters.md)

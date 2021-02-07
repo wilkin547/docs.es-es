@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: SQL Server características y ADO.NET'
 title: Características de SQL Server y ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 121381114fadd8b20978d2e932bf3ec8bdcdb193
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 19440a74e5561f730ece0c4f96de69f4e4baba2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177324"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767237"
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
 
@@ -49,7 +50,7 @@ En los temas de esta sección se describen las características de SQL Server or
  [Compatibilidad de SqlClient con LocalDB](sqlclient-support-for-localdb.md)  
  Describe la compatibilidad de SqlClient con las bases de datos de LocalDB.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [SQL Server operaciones de datos en ADO.NET](sql-server-data-operations.md)
 - [Recuperar y modificar datos en ADO.NET](../retrieving-and-modifying-data.md)

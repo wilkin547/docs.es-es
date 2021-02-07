@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: function (instrucción) (Visual Basic)'
 title: Instrucción Function
 ms.date: 05/12/2018
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 49cf4fead2c5594b7ac6815f82fea0dc995ea436
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e8a05b02c3a214f0572e85c1fc973cb9f03118ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769070"
 ---
 # <a name="function-statement-visual-basic"></a>Function (Instrucción, Visual Basic)
 
@@ -62,15 +63,15 @@ End Function
 
   - [Público](../modifiers/public.md)
 
-  - [Contra](../modifiers/protected.md)
+  - [Protegido](../modifiers/protected.md)
 
-  - [Respecto](../modifiers/friend.md)
+  - [Friend](../modifiers/friend.md)
 
   - [Privado](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [Privado protegido](../modifiers/private-protected.md)
+  - [Private Protected](../modifiers/private-protected.md)
 
   Consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
@@ -180,7 +181,7 @@ Para devolver un valor al código de llamada, use un `Function` procedimiento; d
 
 Solo puede definir un `Function` procedimiento en el nivel de módulo. Por lo tanto, el contexto de la declaración de una función debe ser una clase, una estructura, un módulo o una interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
 
-`Function`los procedimientos tienen como valor predeterminado el acceso público. Los niveles de acceso se pueden ajustar con los modificadores de acceso.
+`Function` los procedimientos tienen como valor predeterminado el acceso público. Los niveles de acceso se pueden ajustar con los modificadores de acceso.
 
 Un `Function` procedimiento puede declarar el tipo de datos del valor que devuelve el procedimiento. Puede especificar cualquier tipo de datos o el nombre de una enumeración, una estructura, una clase o una interfaz. Si no especifica el `returntype` parámetro, el procedimiento devuelve `Object` .
 
@@ -242,7 +243,7 @@ Se llama a un iterador desde el código de cliente mediante un método [for each
 
 El tipo de valor devuelto de una función de iterador puede ser <xref:System.Collections.IEnumerable> , <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601> .
 
-Para obtener más información, vea [iteradores](../../programming-guide/concepts/iterators.md).
+Para obtener más información, consulta [Iteradores](../../programming-guide/concepts/iterators.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -264,7 +265,7 @@ El `startButton_Click` procedimiento es un ejemplo de un `Async Sub` procedimien
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Sub](sub-statement.md)
 - [Procedimientos de función](../../programming-guide/language-features/procedures/function-procedures.md)
@@ -276,4 +277,4 @@ El `startButton_Click` procedimiento es un ejemplo de un `Async Sub` procedimien
 - [Procedimiento Uso de clases genéricas](../../programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Solución de problemas de procedimientos](../../programming-guide/language-features/procedures/troubleshooting-procedures.md)
 - [Expresiones lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)
-- [Expresión de función](../operators/function-expression.md)
+- [Expresión Function](../operators/function-expression.md)

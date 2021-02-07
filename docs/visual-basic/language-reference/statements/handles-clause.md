@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: cláusula handles (Visual Basic)'
 title: Cláusula Handles
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 347f521267d4fd954ac359ab25ed5810cfd71d34
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2bddfdecc163feacaaf042a7928ab16af324b0a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769031"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles (Cláusula, Visual Basic)
 
@@ -32,7 +33,7 @@ proceduredeclaration Handles eventlist
  `eventlist`  
  Lista de los eventos que `proceduredeclaration` debe controlar, separados por comas. Los eventos deben ser generados bien por la clase base de la clase actual o bien por un objeto declarado mediante la palabra clave `WithEvents`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Utilice la palabra clave `Handles` al final de una declaración de procedimiento para que controle los eventos generados por una variable de objeto declarada mediante el uso de la palabra clave `WithEvents` . La palabra clave `Handles` también puede usarse en una clase derivada para controlar eventos de una clase base.  
   
@@ -60,7 +61,7 @@ proceduredeclaration Handles eventlist
   
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [WithEvents](../modifiers/withevents.md)
 - [AddHandler (Instrucción)](addhandler-statement.md)

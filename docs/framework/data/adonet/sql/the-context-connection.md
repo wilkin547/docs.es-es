@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: la conexión de contexto'
 title: Conexión del contexto
 ms.date: 03/30/2017
 ms.assetid: e443ca86-9243-4234-a822-ed10a53a9de0
-ms.openlocfilehash: 85b303d62b619a8139ca56b23cacd3411cebc17b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: caea829464ae19a8944f02c4edb38ec41b9bde48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767016"
 ---
 # <a name="the-context-connection"></a>Conexión del contexto
 
@@ -19,6 +20,6 @@ El problema de acceso interno a los datos es un escenario bastante común. Es de
   
 1. [La conexión de contexto](/sql/relational-databases/clr-integration/data-access/context-connection)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general de ADO.NET](../ado-net-overview.md)

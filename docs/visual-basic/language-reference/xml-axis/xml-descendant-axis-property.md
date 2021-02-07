@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: propiedad de eje descendiente XML (Visual Basic)'
 title: XML Descendant Axis Property
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 52544619171dbc7034baeb5feb61395d81096387
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c356d4d6f9a84755e9df171b26060fc6bfc4ead6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400258"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768784"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Propiedad de eje descendiente XML Visual Basic)
 
@@ -44,7 +45,7 @@ object...<descendant>
 
 ## <a name="return-value"></a>Valor devuelto
 
-Colección de objetos <xref:System.Xml.Linq.XElement>.
+Una colección de objetos <xref:System.Xml.Linq.XElement>.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -78,7 +79,7 @@ Este código muestra el siguiente texto:
 
 `Name: Patrick Hines`
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Linq.XElement>
 - [Propiedades de eje XML](index.md)

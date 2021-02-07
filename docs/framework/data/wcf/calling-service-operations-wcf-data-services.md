@@ -1,22 +1,25 @@
 ---
+description: 'Más información sobre: llamar a operaciones de servicio (Servicios de datos de WCF)'
 title: Operaciones de servicio de llamada (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: ac1b28665dcaaa9f8c6ae6a6611757f6c4969adb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 49b08581e42fcd20b9d560d73379eb43ebbf2eb4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766470"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Operaciones de servicio de llamada (WCF Data Services)
 
-El Open Data Protocol (OData) define las operaciones de servicio para un servicio de datos. WCF Data Services permite definir operaciones como métodos en el servicio de datos. Las operaciones de servicio se direccionan como los demás recursos del servicio de datos, mediante los URI. Una operación de servicio puede devolver colecciones de tipos de entidad, instancias de tipo de entidad único y tipos primitivos, como entero y cadena. Una operación de servicio también puede devolver `null` (`Nothing` en Visual Basic). La biblioteca de cliente de WCF Data Services se puede utilizar para tener acceso a las operaciones de servicio que admiten solicitudes HTTP GET. Estas clases de operaciones de servicio se definen como métodos a los que se ha aplicado <xref:System.ServiceModel.Web.WebGetAttribute>. Para obtener más información, consulte [operaciones de servicio](service-operations-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+El Open Data Protocol (OData) define las operaciones de servicio para un servicio de datos. Servicios de datos de WCF permite definir operaciones como métodos en el servicio de datos. Las operaciones de servicio se direccionan como los demás recursos del servicio de datos, mediante los URI. Una operación de servicio puede devolver colecciones de tipos de entidad, instancias de tipo de entidad único y tipos primitivos, como entero y cadena. Una operación de servicio también puede devolver `null` (`Nothing` en Visual Basic). La biblioteca de cliente de Servicios de datos de WCF se puede utilizar para tener acceso a las operaciones de servicio que admiten solicitudes HTTP GET. Estas clases de operaciones de servicio se definen como métodos a los que se ha aplicado <xref:System.ServiceModel.Web.WebGetAttribute>. Para obtener más información, consulte [operaciones de servicio](service-operations-wcf-data-services.md).  
   
- Las operaciones de servicio se exponen en los metadatos devueltos por un servicio de datos que implementa OData. En los metadatos, las operaciones de servicio se representan como elementos `FunctionImport`. Al generar el fuertemente tipado <xref:System.Data.Services.Client.DataServiceContext> , las herramientas Agregar referencia de servicio y DataSvcUtil.exe omiten este elemento. Por esto, no encontrará un método en el contexto que se pueda usar para llamar directamente a una operación de servicio. Sin embargo, todavía puede usar el cliente de WCF Data Services para llamar a las operaciones de servicio de una de estas dos maneras:  
+ Las operaciones de servicio se exponen en los metadatos devueltos por un servicio de datos que implementa OData. En los metadatos, las operaciones de servicio se representan como elementos `FunctionImport`. Al generar el fuertemente tipado <xref:System.Data.Services.Client.DataServiceContext> , las herramientas Agregar referencia de servicio y DataSvcUtil.exe omiten este elemento. Por esto, no encontrará un método en el contexto que se pueda usar para llamar directamente a una operación de servicio. Sin embargo, todavía puede usar el cliente de Servicios de datos de WCF para llamar a las operaciones de servicio de una de estas dos maneras:  
   
 - Llamando al método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> en <xref:System.Data.Services.Client.DataServiceContext>, proporcionando el URI de la operación de servicio, junto con cualquier parámetro. Este método se usa para llamar a cualquier operación de servicio GET.  
   
@@ -24,23 +27,23 @@ El Open Data Protocol (OData) define las operaciones de servicio para un servici
   
 ## <a name="considerations-for-calling-service-operations"></a>Consideraciones para llamar a las operaciones de servicio  
 
- Las consideraciones siguientes se aplican cuando se usa el cliente de WCF Data Services para llamar a las operaciones de servicio.  
+ Las consideraciones siguientes se aplican cuando se usa el cliente de Servicios de datos de WCF para llamar a las operaciones de servicio.  
   
 - Al tener acceso al servicio de datos de forma asincrónica, debe utilizar los métodos asincrónicos equivalentes <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> en <xref:System.Data.Services.Client.DataServiceContext> o los <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> métodos de <xref:System.Data.Services.Client.DataServiceQuery%601> .  
   
-- La biblioteca de cliente de WCF Data Services no puede materializar los resultados de una operación de servicio que devuelve una colección de tipos primitivos.  
+- La biblioteca de cliente de Servicios de datos de WCF no puede materializar los resultados de una operación de servicio que devuelve una colección de tipos primitivos.  
   
-- La biblioteca de cliente de WCF Data Services no admite la llamada a operaciones POST Service. Las operaciones de servicio a las que llama una solicitud HTTP POST se definen usando <xref:System.ServiceModel.Web.WebInvokeAttribute> con el parámetro `Method="POST"`. Para llamar a una operación de servicio usando una solicitud HTTP POST, debe usar <xref:System.Net.HttpWebRequest> en su lugar.  
+- La biblioteca de cliente de Servicios de datos de WCF no admite la llamada a operaciones POST Service. Las operaciones de servicio a las que llama una solicitud HTTP POST se definen usando <xref:System.ServiceModel.Web.WebInvokeAttribute> con el parámetro `Method="POST"`. Para llamar a una operación de servicio usando una solicitud HTTP POST, debe usar <xref:System.Net.HttpWebRequest> en su lugar.  
   
 - No puede usar <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para llamar a una operación de servicio GET que devuelve un único resultado, ya sea de tipo de entidad o de tipo primitivo, o que requiera más de un parámetro de entrada. Debe llamar en su lugar al método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
   
-- Considere la posibilidad de crear un método de extensión en la clase parcial fuertemente tipada <xref:System.Data.Services.Client.DataServiceContext> , generada por las herramientas de, que usa el <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> método o para llamar a una operación de servicio. Esto le permite llamar directamente a operaciones de servicio desde el contexto. Para obtener más información, consulte la entrada de blog [operaciones de servicio y el cliente de WCF Data Services](/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client).  
+- Considere la posibilidad de crear un método de extensión en la clase parcial fuertemente tipada <xref:System.Data.Services.Client.DataServiceContext> , generada por las herramientas de, que usa el <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> método o para llamar a una operación de servicio. Esto le permite llamar directamente a operaciones de servicio desde el contexto. Para obtener más información, consulte la entrada de blog [operaciones de servicio y el cliente de servicios de datos de WCF](/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client).  
   
 - Cuando se usa <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para llamar a una operación de servicio, la biblioteca de cliente convierte automáticamente en caracteres de escape los caracteres proporcionados al <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> mediante la codificación porcentual de caracteres reservados, como la y comercial (&), y el escape de comillas simples en cadenas. Sin embargo, al llamar a uno de los métodos *Execute* para llamar a una operación de servicio, debe recordar realizar este escape de cualquier valor de cadena proporcionado por el usuario. Las comillas simples de los URI se pasan como pares de comillas simples.  
   
 ## <a name="examples-of-calling-service-operations"></a>Ejemplos de llamada a operaciones de servicio  
 
- Esta sección contiene los siguientes ejemplos de cómo llamar a las operaciones de servicio mediante la biblioteca de cliente de WCF Data Services:  
+ Esta sección contiene los siguientes ejemplos de cómo llamar a las operaciones de servicio mediante la biblioteca de cliente de Servicios de datos de WCF:  
   
 - [Llamar a Execute &lt; T &gt; para devolver una colección de entidades](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: enlazar datos a elementos de Windows Presentation Foundation (Servicios de datos de WCF)'
 title: 'Cómo: Enlazar datos a elementos de Windows Presentation Foundation (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,18 +9,20 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
-ms.openlocfilehash: d6f50fb849d958ae1109324f1055b84451bde5a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 57ad03770681fbedf9b0d5afae82a0a2590f0bc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191637"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766535"
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Cómo: Enlazar datos a elementos de Windows Presentation Foundation (Data Services de WCF)
 
-Con WCF Data Services, puede enlazar elementos de Windows Presentation Foundation (WPF) como <xref:System.Windows.Controls.ListBox> o <xref:System.Windows.Controls.ComboBox> a una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> , que controla los eventos generados por los controles para mantener el <xref:System.Data.Services.Client.DataServiceContext> sincronizado con los cambios realizados en los datos de los controles. Para obtener más información, consulte [enlazar datos a controles](binding-data-to-controls-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Con Servicios de datos de WCF, puede enlazar elementos de Windows Presentation Foundation (WPF) como <xref:System.Windows.Controls.ListBox> o <xref:System.Windows.Controls.ComboBox> a una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> , que controla los eventos generados por los controles para mantener el <xref:System.Data.Services.Client.DataServiceContext> sincronizado con los cambios realizados en los datos de los controles. Para obtener más información, consulte [enlazar datos a controles](binding-data-to-controls-wcf-data-services.md).  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de servicios de datos de WCF](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  
 

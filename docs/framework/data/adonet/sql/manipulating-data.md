@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo manipular datos
 title: Manipular datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: b5f649f0247c150ebc2f0e7e54c3fc8c0b607c5c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dba948fe923e709f6564e6c64fd9adce7f3f15f5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172715"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767692"
 ---
 # <a name="manipulating-data"></a>Manipular datos
 
@@ -168,7 +169,7 @@ static void Main()
   
 ## <a name="reading-and-updating-data-with-mars"></a>Lectura y actualización de datos con MARS  
 
- MARS permite usar una conexión para operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente. Esta característica elimina la necesidad de que una aplicación se ocupe de los errores de conexión ocupada. Además, MARS puede reemplazar el uso de cursores del lado servidor, que normalmente consumen más recursos. Finalmente, dado que es posible realizar varias operaciones con una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar los procedimientos almacenados del sistema **sp_getbindtoken** y **sp_bindsession**.  
+ MARS permite usar una conexión para operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente. Esta característica elimina la necesidad de que una aplicación se ocupe de los errores de conexión ocupada. Además, MARS puede reemplazar el uso de los cursores del lado servidor, que suelen consumir más recursos. Finalmente, dado que es posible realizar varias operaciones con una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar los procedimientos almacenados del sistema **sp_getbindtoken** y **sp_bindsession**.  
   
 ### <a name="example"></a>Ejemplo  
 
@@ -407,7 +408,7 @@ private static string GetConnectionString()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Conjuntos de resultados activos múltiples (MARS)](multiple-active-result-sets-mars.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

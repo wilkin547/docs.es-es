@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: para cada... Instrucción Next (Visual Basic)'
 title: Instrucción For Each...Next
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: 0feb938121a97b06509b472652e6a753841ab2b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ff7afb5e3b505ebe2326343063a7884dc4f567b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404659"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769109"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrucción For Each...Next (Visual Basic)
 
@@ -94,7 +95,7 @@ En el ejemplo siguiente se muestra cómo usar `Continue For` las `Exit For` inst
 
 Puede incluir cualquier número de `Exit For` instrucciones en un `For Each` bucle. Cuando se usa dentro de `For Each` bucles anidados, `Exit For` hace que la ejecución salga del bucle más interno y transfiere el control al siguiente nivel superior de anidamiento.
 
-`Exit For`se suele usar después de una evaluación de alguna condición, por ejemplo, en `If` ... `Then` ...`Else` estructuras. Puede que desee usar `Exit For` para las siguientes condiciones:
+`Exit For` se suele usar después de una evaluación de alguna condición, por ejemplo, en `If` ... `Then` ...`Else` estructuras. Puede que desee usar `Exit For` para las siguientes condiciones:
 
 - Continuar la iteración no es necesario o imposible. Esto puede deberse a un valor erróneo o a una solicitud de finalización.
 
@@ -132,7 +133,7 @@ Si el código depende de atravesar una colección en un orden determinado, un `F
 
 El tiempo de ejecución debe ser capaz de convertir los elementos de en `group` `element` . La `Option Strict` instrucción [] controla si se permiten las conversiones de ampliación y de restricción ( `Option Strict` está desactivada, su valor predeterminado) o si solo se permiten conversiones de ampliación ( `Option Strict` está activada). Para obtener más información, vea [conversiones de restricción](#narrowing-conversions).
 
-El tipo de datos de `group` debe ser un tipo de referencia que haga referencia a una colección o una matriz que sea Enumerable. Normalmente esto significa que `group` hace referencia a un objeto que implementa la <xref:System.Collections.IEnumerable> interfaz del espacio de `System.Collections` nombres o la <xref:System.Collections.Generic.IEnumerable%601> interfaz del espacio de `System.Collections.Generic` nombres. `System.Collections.IEnumerable`define el <xref:System.Collections.IEnumerable.GetEnumerator%2A> método, que devuelve un objeto de enumerador para la colección. El objeto de enumerador implementa la `System.Collections.IEnumerator` interfaz del `System.Collections` espacio de nombres y expone la <xref:System.Collections.IEnumerator.Current%2A> propiedad y <xref:System.Collections.IEnumerator.Reset%2A> los <xref:System.Collections.IEnumerator.MoveNext%2A> métodos y. Visual Basic los usa para recorrer la colección.
+El tipo de datos de `group` debe ser un tipo de referencia que haga referencia a una colección o una matriz que sea Enumerable. Normalmente esto significa que `group` hace referencia a un objeto que implementa la <xref:System.Collections.IEnumerable> interfaz del espacio de `System.Collections` nombres o la <xref:System.Collections.Generic.IEnumerable%601> interfaz del espacio de `System.Collections.Generic` nombres. `System.Collections.IEnumerable` define el <xref:System.Collections.IEnumerable.GetEnumerator%2A> método, que devuelve un objeto de enumerador para la colección. El objeto de enumerador implementa la `System.Collections.IEnumerator` interfaz del `System.Collections` espacio de nombres y expone la <xref:System.Collections.IEnumerator.Current%2A> propiedad y <xref:System.Collections.IEnumerator.Reset%2A> los <xref:System.Collections.IEnumerator.MoveNext%2A> métodos y. Visual Basic los usa para recorrer la colección.
 
 ### <a name="narrowing-conversions"></a>conversiones de restricción
 
@@ -182,7 +183,7 @@ En el método `ListCars`, la instrucción `cars.Sort()` ordena la lista. Esta ll
 
 [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Colecciones](../../../standard/collections/index.md)
 - [Instrucción For...Next](for-next-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: end (instrucción)'
 title: End (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 0c99b919b50701e93fab7caf5fb5d8b6b976d44b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 29e0e203689d3516a19f7e6a2b5f1c231f349ddb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865854"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769187"
 ---
 # <a name="end-statement"></a>End (Instrucción)
 
@@ -31,7 +32,7 @@ Finaliza la ejecución inmediatamente.
 End  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede colocar la `End` instrucción en cualquier parte de un procedimiento para obligar a que toda la aplicación deje de ejecutarse. `End` cierra los archivos abiertos con una `Open` instrucción y borra todas las variables de la aplicación. La aplicación se cierra en cuanto no hay ningún otro programa que contenga referencias a sus objetos y no se está ejecutando ningún código.  
   
@@ -59,7 +60,7 @@ End
 
  Esta instrucción no se admite.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Instrucción Stop](stop-statement.md)

@@ -1,14 +1,15 @@
 ---
+description: 'Más información sobre: SQL Server tipos de datos y ADO.NET'
 title: Tipos de datos de SQL Server y ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: db4618ac624ea8401cab682a8c21d8f23c253d05
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 841fa5864bf54b5e4fc4dc24dab64e6ac1435c7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155463"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767302"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de datos de SQL Server y ADO.NET
 
@@ -29,7 +30,7 @@ SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo qu
  [SqlTypes y DataSet](sqltypes-and-the-dataset.md)  
  Describe la compatibilidad de tipos con `SqlTypes` en `DataSet`.  
   
- [Controlar valores Null](handling-null-values.md)  
+ [Controlar valores NULL](handling-null-values.md)  
  Demuestra cómo trabajar con valores NULL y la lógica de tres valores.  
   
  [Comparar valores GUID y uniqueidentifier](comparing-guid-and-uniqueidentifier-values.md)  
@@ -63,5 +64,5 @@ SQL Server y .NET Framework están basados en sistemas de tipos distintos, lo qu
 - [Asignaciones de tipos de datos de SQL Server](../sql-server-data-type-mappings.md)
 - [Configurar parámetros y tipos de datos de parámetros](../configuring-parameters-and-parameter-data-types.md)
 - [Parámetros con valores de tabla](table-valued-parameters.md)
-- [SQL Server datos binarios y de valores grandes](sql-server-binary-and-large-value-data.md)
+- [Datos binarios y datos de valores grandes de SQL Server](sql-server-binary-and-large-value-data.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

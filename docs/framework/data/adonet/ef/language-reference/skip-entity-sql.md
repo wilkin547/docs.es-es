@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: SKIP (Entity SQL)'
 title: SKIP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: 68f54dc5118e09d78f98c687e8a44def43b45c7d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f4924acae6e351e076b5795cf47d63966ebdcb43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768017"
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 
@@ -24,7 +25,7 @@ Puede realizar la paginación física utilizando la subcláusula SKIP en la clá
 `n` \
 Número de elementos que se han de omitir.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Si en una cláusula ORDER BY hay una subcláusula de expresión SKIP, los resultados se ordenarán en función de la especificación de clasificación, y el conjunto de resultados incluirá filas a partir de la situada inmediatamente después de la expresión SKIP. Por ejemplo, SKIP 5 omitirá las cinco primeras filas y devolverá a partir de la sexta.
 
@@ -44,5 +45,5 @@ La [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta en [Cómo: p
 
 - [ORDER BY](order-by-entity-sql.md)
 - [Cómo hojear los resultados de la consulta](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
-- [Paginación](paging-entity-sql.md)
+- [Buscapersona](paging-entity-sql.md)
 - [TOP](top-entity-sql.md)

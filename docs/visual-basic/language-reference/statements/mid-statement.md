@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: instrucción MID'
 title: Mid (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 0379a6cabe819365b22994a5e4f9353d98b2c768
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 29cf933cb38fc6ef831570d0940b481abf9cfecf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768888"
 ---
 # <a name="mid-statement"></a>Mid (Instrucción)
 
@@ -34,7 +35,7 @@ Mid( _
 ## <a name="parts"></a>Partes  
 
  `Target`  
- Obligatorio. Nombre de la `String` variable que se va a modificar.  
+ Necesario. Nombre de la `String` variable que se va a modificar.  
   
  `Start`  
  Obligatorio. Expresión `Integer`. Posición de carácter en `Target` donde comienza la sustitución del texto. `Start` utiliza un índice basado en uno.  
@@ -43,7 +44,7 @@ Mid( _
  Opcional. Expresión `Integer`. Número de caracteres que se van a reemplazar. Si se omite, `String` se usa ALL.  
   
  `StringExpression`  
- Obligatorio. `String` expresión que reemplaza a parte de `Target` .  
+ Necesario. `String` expresión que reemplaza a parte de `Target` .  
   
 ## <a name="exceptions"></a>Excepciones  
   
@@ -51,7 +52,7 @@ Mid( _
 |--------------------|---------------|  
 |<xref:System.ArgumentException>|`Start` <= 0 o `Length` < 0.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El número de caracteres reemplazados siempre es menor o igual que el número de caracteres de `Target` .  
   

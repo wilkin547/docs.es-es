@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: adjuntar una entidad existente a DataServiceContext (Servicios de datos de WCF)'
 title: 'Cómo: Asociar una entidad existente a DataServiceContext (Data Services de WCF)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,18 +8,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 69ca64f4ab3470c1a4f58c582b31c06aed9cadd5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 039225ec992a4ddd23fd9f7013e04562f6fe72a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166136"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766600"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Cómo: Asociar una entidad existente a DataServiceContext (Data Services de WCF)
 
-Cuando una entidad ya existe en un servicio de datos, la biblioteca de cliente de WCF Data Services le permite adjuntar un objeto que representa la entidad directamente a <xref:System.Data.Services.Client.DataServiceContext> sin ejecutar primero una consulta. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Cuando una entidad ya existe en un servicio de datos, la biblioteca de cliente de Servicios de datos de WCF le permite adjuntar un objeto que representa la entidad directamente a <xref:System.Data.Services.Client.DataServiceContext> sin ejecutar primero una consulta. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de servicios de datos de WCF](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  
 
@@ -27,6 +30,6 @@ Cuando una entidad ya existe en un servicio de datos, la biblioteca de cliente d
  [!code-csharp[Astoria Northwind Client#AttachObject](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobject)]
  [!code-vb[Astoria Northwind Client#AttachObject](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobject)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)

@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo obtener acceso a los recursos del servicio de datos (Servicios de datos de WCF)
 title: Acceder a recursos de servicios de datos (Servicios de datos de WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 02e45f4e67a80d3afb600f44ea9fa6a5e175310c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b1b4d94b020dcbb942959dfbf3fb3fc26dcbf915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766652"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Acceder a recursos de servicios de datos (Servicios de datos de WCF)
 
-WCF Data Services admite el Open Data Protocol (OData) para exponer los datos como una fuente con recursos direccionables mediante URI. Estos recursos se representan según las convenciones de entidad-relación del [Entity Data Model](../adonet/entity-data-model.md). En este modelo, las entidades representan unidades operacionales de datos que son tipos de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. El acceso a los datos de entidad y la modificación de los mismos se realiza usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE.  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Servicios de datos de WCF admite el Open Data Protocol (OData) para exponer los datos como una fuente con recursos direccionables mediante URI. Estos recursos se representan según las convenciones de entidad-relación del [Entity Data Model](../adonet/entity-data-model.md). En este modelo, las entidades representan unidades operacionales de datos que son tipos de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. El acceso a los datos de entidad y la modificación de los mismos se realiza usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE.  
   
 ## <a name="addressing-resources"></a>Direccionar recursos  
 
@@ -59,7 +62,7 @@ WCF Data Services admite el Open Data Protocol (OData) para exponer los datos co
   
  Las entradas de la fuente devuelta se ordenan también en función del valor de propiedad ShipCity de los pedidos.  
   
- WCF Data Services admite las siguientes opciones de consulta del sistema OData:  
+ Servicios de datos de WCF admite las siguientes opciones de consulta del sistema OData:  
   
 |Opción de consulta|Descripción|  
 |------------------|-----------------|  
@@ -81,8 +84,8 @@ WCF Data Services admite el Open Data Protocol (OData) para exponer los datos co
   
 ## <a name="consuming-the-returned-feed"></a>Utilizar la fuente devuelta  
 
- El URI de un recurso de OData permite direccionar los datos de la entidad expuestos por el servicio. Cuando se escribe un URI en el campo de dirección de un explorador Web, se devuelve una representación de la fuente de OData del recurso solicitado. Para obtener más información, consulte la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md). Aunque un explorador web puede ser útil para probar que un recurso del servicio de datos devuelve los datos esperados, normalmente el acceso a los servicios de datos de producción -que también pueden crear, actualizar y eliminar datos- se realiza mediante código de aplicación o lenguajes de scripting en una página web. Para obtener más información, consulte [uso de un servicio de datos en una aplicación cliente](using-a-data-service-in-a-client-application-wcf-data-services.md).  
+ El URI de un recurso de OData permite direccionar los datos de la entidad expuestos por el servicio. Cuando se escribe un URI en el campo de dirección de un explorador Web, se devuelve una representación de la fuente de OData del recurso solicitado. Para obtener más información, consulte la guía de [Inicio rápido de servicios de datos de WCF](quickstart-wcf-data-services.md). Aunque un explorador web puede ser útil para probar que un recurso del servicio de datos devuelve los datos esperados, normalmente el acceso a los servicios de datos de producción -que también pueden crear, actualizar y eliminar datos- se realiza mediante código de aplicación o lenguajes de scripting en una página web. Para obtener más información, consulte [uso de un servicio de datos en una aplicación cliente](using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Sitio web de Open Data Protocol](https://www.odata.org/)

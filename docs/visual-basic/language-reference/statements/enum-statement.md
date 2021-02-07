@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: instrucción enum (Visual Basic)'
 title: Instrucción Enum
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 976cc68d67c69ec86918962ab2dd3406d15aed9a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dcaf28e949f8d34b8d72b07d8029ea10d6baeabf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404737"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769174"
 ---
 # <a name="enum-statement-visual-basic"></a>Instrucción Enum (Visual Basic)
 
@@ -45,15 +46,15 @@ End Enum
 
   - [Público](../modifiers/public.md)
 
-  - [Contra](../modifiers/protected.md)
+  - [Protegido](../modifiers/protected.md)
 
-  - [Respecto](../modifiers/friend.md)
+  - [Friend](../modifiers/friend.md)
 
   - [Privado](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [Privado protegido](../modifiers/private-protected.md)
+  - [Private Protected](../modifiers/private-protected.md)
 
 - `Shadows`
 
@@ -71,7 +72,7 @@ End Enum
 
   Necesario. Lista de constantes de miembro que se declaran en esta instrucción. Aparecen varios miembros en líneas de código fuente individuales.
 
-  Cada una `member` de ellas tiene la sintaxis y las partes siguientes:`[<attribute list>] member name [ = initializer ]`
+  Cada una `member` de ellas tiene la sintaxis y las partes siguientes: `[<attribute list>] member name [ = initializer ]`
 
   |Parte|Descripción|
   |---|---|
@@ -184,7 +185,7 @@ En el ejemplo siguiente se recorre en iteración una enumeración. Utiliza el <x
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Enum>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>

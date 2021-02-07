@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: get (instrucción)'
 title: Get (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 3da6c099b3f43a144484eaddf58605609eb0bbfe
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1cda485867a941129ab2453d4c0900d1403f4e8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866200"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769044"
 ---
 # <a name="get-statement"></a>Get (Instrucción)
 
@@ -37,9 +38,9 @@ End Get
 |`attributelist`|Opcional. Vea [lista de atributos](attribute-list.md).|  
 |`accessmodifier`|Opcional en, como máximo, una de las `Get` `Set` instrucciones y de esta propiedad. Puede ser uno de los siguientes:<br /><br /> -   [Contra](../modifiers/protected.md)<br />-   [Respecto](../modifiers/friend.md)<br />-   [Privada](../modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
 |`statements`|Opcional. Una o varias instrucciones que se ejecutan cuando `Get` se llama al procedimiento de propiedad.|  
-|`End Get`|Obligatorio. Finaliza la definición del procedimiento de `Get` propiedad.|  
+|`End Get`|Necesario. Finaliza la definición del procedimiento de `Get` propiedad.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Cada propiedad debe tener un `Get` procedimiento de propiedad a menos que se marque la propiedad `WriteOnly` . El `Get` procedimiento se utiliza para devolver el valor actual de la propiedad.  
   
@@ -85,7 +86,7 @@ End Get
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Set (instrucción)](set-statement.md)
 - [Property Statement](property-statement.md)

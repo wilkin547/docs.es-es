@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: para... Instrucción Next (Visual Basic)'
 title: Instrucción For...Next
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 6896c6cfb4ec5d6207011e56b72639c459120e53
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f26d9cb1885d9d22b96d622f44325aad64e34d1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404646"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769083"
 ---
 # <a name="fornext-statement-visual-basic"></a>Instrucción For...Next (Visual Basic)
 
@@ -52,8 +53,8 @@ Next [ counter ]
 |----------|-----------------|
 |`counter`|Obligatorio en la `For` instrucción. Variable numérica. Variable de control del bucle. Para obtener más información, vea el [argumento Counter](#BKMK_Counter) más adelante en este tema.|
 |`datatype`|Opcional. Tipo de datos de `counter` . Para obtener más información, vea el [argumento Counter](#BKMK_Counter) más adelante en este tema.|
-|`start`|Necesario. Expresión numérica. Valor inicial de `counter`.|
-|`end`|Necesario. Expresión numérica. Valor final de `counter` .|
+|`start`|Obligatorio. Expresión numérica. Valor inicial de `counter`.|
+|`end`|Obligatorio. Expresión numérica. Valor final de `counter` .|
 |`step`|Opcional. Expresión numérica. Cantidad que `counter` se incrementa cada vez a través del bucle.|
 |`statements`|Opcional. Una o más instrucciones entre `For` y `Next` que ejecutan el número especificado de veces.|
 |`Continue For`|Opcional. Transfiere el control a la siguiente iteración del bucle.|
@@ -100,7 +101,7 @@ En el ejemplo siguiente se muestra el uso de `Continue For` las `Exit For` instr
 
 Puede incluir cualquier número de `Exit For` instrucciones en `For` ...`Next` bucle Cuando se usa dentro de la instrucción anidada `For` ...`Next` bucles, `Exit For` sale del bucle más interno y transfiere el control al siguiente nivel superior de anidamiento.
 
-`Exit For`se suele usar después de evaluar alguna condición (por ejemplo, en `If` ... `Then` ...`Else` estructura). Puede que desee usar `Exit For` para las siguientes condiciones:
+`Exit For` se suele usar después de evaluar alguna condición (por ejemplo, en `If` ... `Then` ...`Else` estructura). Puede que desee usar `Exit For` para las siguientes condiciones:
 
 - Continuar la iteración no es necesario o imposible. Un valor erróneo o una solicitud de finalización podría crear esta condición.
 
@@ -127,18 +128,18 @@ El valor de `step` puede ser positivo o negativo. Este parámetro determina el p
 |**Valor del paso**|**El bucle se ejecuta si**|
 |--------------------|--------------------------|
 |Positivo o cero|`counter` <= `end`|
-|Negative|`counter` >= `end`|
+|Negativo|`counter` >= `end`|
 
 El valor predeterminado de `step` es 1.
 
-### <a name="counter-argument"></a><a name="BKMK_Counter"></a>Argumento Counter
+### <a name="counter-argument"></a><a name="BKMK_Counter"></a> Argumento Counter
 
 En la tabla siguiente se indica si `counter` define una nueva variable local cuyo ámbito es el `For…Next` bucle completo. Esta determinación depende de si `datatype` está presente y si `counter` ya está definido.
 
 |`datatype`¿Está presente?|`counter`¿Ya está definido?|Resultado (si `counter` define una nueva variable local cuyo ámbito es el `For...Next` bucle completo)|
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
 |No|Sí|No, porque `counter` ya está definido. Si el ámbito de `counter` no es local para el procedimiento, se produce una advertencia en tiempo de compilación.|
-|Sin|No|Sí. El tipo de datos se deduce de `start` las `end` expresiones, y `step` . Para obtener información sobre la inferencia de tipos, vea [Option Infer Statement](option-infer-statement.md) e [inferencia de tipo local](../../programming-guide/language-features/variables/local-type-inference.md).|
+|No|No|Sí. El tipo de datos se deduce de `start` las `end` expresiones, y `step` . Para obtener información sobre la inferencia de tipos, vea [Option Infer Statement](option-infer-statement.md) e [inferencia de tipo local](../../programming-guide/language-features/variables/local-type-inference.md).|
 |Sí|Sí|Sí, pero solo si la `counter` variable existente se define fuera del procedimiento. Esa variable sigue siendo independiente. Si el ámbito de la `counter` variable existente es local para el procedimiento, se produce un error en tiempo de compilación.|
 |Sí|No|Sí.|
 
@@ -148,7 +149,7 @@ El tipo de datos de `counter` determina el tipo de iteración, que debe ser uno 
 
 - Una enumeración que se declara mediante una [instrucción enum](enum-statement.md).
 
-- Un valor de tipo `Object`.
+- Una clase `Object`.
 
 - Tipo `T` que tiene los operadores siguientes, donde `B` es un tipo que se puede utilizar en una `Boolean` expresión.
 
@@ -182,7 +183,7 @@ En el ejemplo siguiente, los parámetros de instrucción usan una clase que tien
 
 [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Collections.Generic.List%601>
 - [Estructuras de bucle](../../programming-guide/language-features/control-flow/loop-structures.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: instrucción On Error (Visual Basic)'
 title: Instrucción On Error
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 7e007d59292fc577c0c8927766423ba6f7896a71
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 593e90b07101d08d18a0db127bcb74cf6509f317
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873191"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768836"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrucción On Error (Visual Basic)
 
@@ -53,7 +54,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 |`GoTo -1`|Deshabilita la excepción habilitada en el procedimiento actual y la restablece en `Nothing` .|
 |`Resume Next`|Especifica que cuando se produce un error en tiempo de ejecución, el control va a la instrucción inmediatamente posterior a la instrucción en la que se produjo el error y la ejecución continúa a partir de ese punto. Utilice este formulario en lugar de `On Error GoTo` al obtener acceso a los objetos.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!NOTE]
 > Se recomienda usar el control de excepciones estructurado en el código siempre que sea posible, en lugar de usar el control de excepciones no estructurado y la `On Error` instrucción. Para obtener más información, vea [Instrucción Try...Catch...Finally (Visual Basic)](try-catch-finally-statement.md).
@@ -125,14 +126,14 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 
  **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Number%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Description%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
-- [End (Instrucción)](end-statement.md)
+- [End (instrucción)](end-statement.md)
 - [Instrucción Exit](exit-statement.md)
 - [Resume (Instrucción)](resume-statement.md)
 - [Mensajes de error](../error-messages/index.md)
-- [Try... Detectar... Finally (instrucción)](try-catch-finally-statement.md)
+- [Try...Catch...Finally (instrucción)](try-catch-finally-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: instrucción Operator'
 title: Operator Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: f9e6ffe5a49715592399321ab471d73826e05d8e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6a8ae2ac51e8bc8fe1be0de3549004b9dda4ef4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768823"
 ---
 # <a name="operator-statement"></a>Operator Statement
 
@@ -72,7 +73,7 @@ Necesario. El nombre y el tipo del operando único de un operador unario (inclui
 `operand2`  
 Requerido para los operadores binarios. Nombre y tipo del operando derecho de un operador binario.
 
-`operand1`y `operand2` tienen la sintaxis y las partes siguientes:
+`operand1` y `operand2` tienen la sintaxis y las partes siguientes:
 
 `[ ByVal ] operandname [ As operandtype ]`
 
@@ -174,11 +175,11 @@ Si existe la posibilidad de que un procedimiento de conversión no se lleve a ca
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo de código siguiente `Operator` se usa la instrucción para definir el contorno de una estructura que incluye procedimientos de operador para los `And` `Or` operadores,, `IsFalse` y `IsTrue` . `And`y `Or` cada uno de ellos toman dos operandos de tipo `abc` y tipo de valor devuelto `abc` . `IsFalse`y `IsTrue` cada toman un solo operando de tipo `abc` y devuelven `Boolean` . Estas definiciones permiten que el código de llamada use `And` ,, `AndAlso` `Or` y `OrElse` con operandos de tipo `abc` .
+En el ejemplo de código siguiente `Operator` se usa la instrucción para definir el contorno de una estructura que incluye procedimientos de operador para los `And` `Or` operadores,, `IsFalse` y `IsTrue` . `And` y `Or` cada uno de ellos toman dos operandos de tipo `abc` y tipo de valor devuelto `abc` . `IsFalse` y `IsTrue` cada toman un solo operando de tipo `abc` y devuelven `Boolean` . Estas definiciones permiten que el código de llamada use `And` ,, `AndAlso` `Or` y `OrElse` con operandos de tipo `abc` .
 
 [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operador IsFalse](../operators/isfalse-operator.md)
 - [Operador IsTrue](../operators/istrue-operator.md)

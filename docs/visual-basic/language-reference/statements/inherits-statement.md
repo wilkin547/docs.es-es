@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Inherits (instrucción)'
 title: Inherits Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: dd8fbc71fdc859bb127764951464278267c0984c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fba574ec207b384c1e7219341526a4a89c8a619c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875229"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768927"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 
@@ -31,7 +32,7 @@ Inherits basetypenames
 |---|---|  
 |`basetypenames`|Obligatorio. Nombre de la clase de la que se deriva esta clase.<br /><br /> o bien<br /><br /> Los nombres de las interfaces de las que se deriva esta interfaz. Use comas para separar varios nombres.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se utiliza, la `Inherits` instrucción debe ser la primera línea no vacía sin comentarios en una definición de clase o interfaz. Debe seguir inmediatamente a la `Class` `Interface` instrucción o.  
   
@@ -67,7 +68,7 @@ Inherits basetypenames
   
  La interfaz denominada `thisInterface` ahora incluye todas las definiciones de las <xref:System.IComparable> <xref:System.IDisposable> interfaces, y <xref:System.IFormattable> que los miembros heredados proporcionan respectivamente para la comparación específica del tipo de dos objetos, liberando los recursos asignados y expresando el valor de un objeto como `String` . Una clase que implementa `thisInterface` debe implementar todos los miembros de cada interfaz base.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [MustInherit](../modifiers/mustinherit.md)
 - [NotInheritable](../modifiers/notinheritable.md)

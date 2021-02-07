@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: namespace (instrucción)'
 title: Namespace (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: cef339a66458ee9657dc1706082c3c5328746dc6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2c315947a26f72a90e03bc1f4bf1b5f647866b33
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875208"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768862"
 ---
 # <a name="namespace-statement"></a>Namespace (Instrucción)
 
@@ -37,7 +38,7 @@ End Namespace
  Opcional. Permite definir un espacio de nombres fuera del espacio de nombres raíz del proyecto. Vea [espacios de nombres en Visual Basic](../../programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Obligatorio. Nombre único que identifica el espacio de nombres. Debe ser un identificador de Visual Basic válido. Para obtener más información, vea [nombres de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Necesario. Nombre único que identifica el espacio de nombres. Debe ser un identificador de Visual Basic válido. Para obtener más información, vea [nombres de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
  Opcional. Elementos que componen el espacio de nombres. Estos incluyen, entre otros, enumeraciones, estructuras, interfaces, clases, módulos, delegados y otros espacios de nombres.  
@@ -45,7 +46,7 @@ End Namespace
  `End Namespace`  
  Finaliza un `Namespace` bloque.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los espacios de nombres se usan como sistema de la organización. Proporcionan una manera de clasificar y presentar los elementos de programación que se exponen a otros programas y aplicaciones. Tenga en cuenta que un espacio de nombres no es un *tipo* en el sentido de que una clase o estructura es: no puede declarar un elemento de programación para que tenga el tipo de datos de un espacio de nombres.  
   
@@ -112,7 +113,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Imports (Tipo y espacio de nombres de .NET)](imports-statement-net-namespace-and-type.md)
 - [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)

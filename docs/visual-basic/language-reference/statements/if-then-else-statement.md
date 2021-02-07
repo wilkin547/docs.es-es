@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: if... Después... Else (instrucción) (Visual Basic)'
 title: Instrucción If...Then...Else
 ms.date: 04/16/2018
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: 0884b71c24742286e695e720add9d00dd4bfe52b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 83850771354b95f0e2d9c1bf1360a61d5264fe2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404594"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769018"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>Instrucción If...Then...Else (Visual Basic)
 
@@ -94,7 +95,7 @@ En la sintaxis de varias líneas, la `If` instrucción debe ser la única instru
 > [!TIP]
 > La [selección... La instrucción Case](select-case-statement.md) podría ser más útil cuando se evalúa una expresión única que tiene varios valores posibles.
 
-### <a name="single-line-syntax"></a>Sintaxis de una sola línea
+### <a name="single-line-syntax"></a>Sintaxis de Single-Line
 
 Puede usar la sintaxis de una sola línea para una única condición con el código que se ejecutará si es true. Sin embargo, la sintaxis de varias líneas proporciona más estructura y flexibilidad y es más fácil de leer, mantener y depurar.
 
@@ -118,13 +119,13 @@ El ejemplo siguiente contiene anidado `If` ... `Then` ...`Else` afirma.
 
 [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
-## <a name="single-line-syntax-example"></a>Ejemplo de sintaxis de una sola línea
+## <a name="single-line-syntax-example"></a>Ejemplo de sintaxis de Single-Line
 
-<a name="single-line"></a>En el ejemplo siguiente se muestra el uso de la sintaxis de una sola línea.
+<a name="single-line"></a> En el ejemplo siguiente se muestra el uso de la sintaxis de una sola línea.
 
 [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Switch%2A>

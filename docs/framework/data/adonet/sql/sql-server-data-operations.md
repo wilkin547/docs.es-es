@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: SQL Server operaciones de datos en ADO.NET'
 title: Operaciones de datos de SQL Server
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 590b7942148b9db49817c13b102b82552e935fb2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 79eda39fe16a8c7bd7f9a77b1f7ff0739c4f8062
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203467"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767354"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Operaciones de datos de SQL Server en ADO.NET
 
@@ -27,7 +28,7 @@ En esta sección se describen características y funcionalidad de SQL Server esp
  [Parámetros con valores de tabla](table-valued-parameters.md)  
  Describe cómo trabajar con parámetros con valores de tabla, que se introdujeron en SQL Server 2008.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Recuperar y modificar datos en ADO.NET](../retrieving-and-modifying-data.md)
 - [SQL Server y ADO.NET](index.md)

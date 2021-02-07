@@ -1,5 +1,6 @@
 ---
-title: Propiedad SmiOrderProperty.Item (Microsoft.SqlServer.Server)
+description: 'Más información sobre: SmiOrderProperty. Item (propiedad)'
+title: Propiedad SmiOrderProperty. Item (Microsoft. SqlServer. Server)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -13,16 +14,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: e2d8788f610d80c30baf51bff0131f0834d59fcd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fc2151d3f36a6746e80e2fd6d611a803b2c3162e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767991"
 ---
-# <a name="smiorderpropertyitem-property"></a>SmiOrderProperty.Item Property
+# <a name="smiorderpropertyitem-property"></a>SmiOrderProperty. Item (propiedad)
 
-Obtiene el orden de las columnas de la entidad. El ensamblado que contiene esta propiedad tiene una relación de confianza con SQLAccess.dll. Está pensado para su uso con SQL Server. Para otras bases de datos, utilice el mecanismo de hospedaje proporcionado por esa base de datos.
+Obtiene el orden de las columnas de la entidad. El ensamblado que contiene esta propiedad tiene una relación de confianza con SQLAccess.dll. Está pensado para su uso por SQL Server. En el caso de otras bases de datos, use el mecanismo de hospedaje proporcionado por esa base de datos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,10 +35,10 @@ internal SmiColumnOrder Item { get; }
 
 El orden de las columnas.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!WARNING]
-> El `SmiOrderProperty.Item` propiedad es interna y no está pensada para usarse directamente en el código.
+> La `SmiOrderProperty.Item` propiedad es interna y no está diseñada para usarse directamente en el código.
 >
 > Microsoft no admite el uso de esta propiedad en una aplicación de producción bajo ninguna circunstancia.
 
@@ -47,4 +48,4 @@ El orden de las columnas.
 
 **Ensamblado:** System.Data (en System.Data.dll)
 
-**Versiones de .NET framework:** Disponible desde la versión 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

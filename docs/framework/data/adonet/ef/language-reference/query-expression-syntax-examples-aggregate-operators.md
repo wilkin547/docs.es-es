@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: ejemplos de sintaxis de expresiones de consulta: operadores de agregado'
 title: 'Ejemplos de sintaxis de expresiones de consulta: Operadores de agregado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: 4842bdb3aeb024afc72bde43d056b48b0d8258b8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c0fd9c3faf770a00a54341cf3718c2dda91a4d7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153006"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767939"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>Ejemplos de sintaxis de expresiones de consulta: Operadores de agregado
 
@@ -21,7 +22,7 @@ Los ejemplos de este tema muestran cómo usar los <xref:System.Linq.Enumerable.A
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="average"></a>Average  
+## <a name="average"></a>Promedio  
   
 ### <a name="example"></a>Ejemplo  
 

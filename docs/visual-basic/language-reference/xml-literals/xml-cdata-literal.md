@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: XML CDATA literal (Visual Basic)'
 title: Literal de CDATA XML
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 4447ad6cf0fb251b0d2d1387c109b06d32f69cb8
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d0b419954acb5a9e8ae824dbac8234e2116d09b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866103"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768758"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Literal de CDATA XML (Visual Basic)
 
@@ -28,19 +29,19 @@ Literal que representa un <xref:System.Xml.Linq.XCData> objeto.
 ## <a name="parts"></a>Partes  
 
  `<![CDATA[`  
- Obligatorio. Denota el inicio de la sección XML CDATA.  
+ Necesario. Denota el inicio de la sección XML CDATA.  
   
  `content`  
- Obligatorio. Contenido de texto para que aparezca en la sección XML CDATA.  
+ Necesario. Contenido de texto para que aparezca en la sección XML CDATA.  
   
  `]]>`  
- Obligatorio. Denota el final de la sección.  
+ Necesario. Denota el final de la sección.  
   
 ## <a name="return-value"></a>Valor devuelto  
 
- Un objeto <xref:System.Xml.Linq.XCData>.  
+ Objeto <xref:System.Xml.Linq.XCData>.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Las secciones CDATA XML contienen texto sin formato que se debe incluir, pero no analizar, con el XML que lo contiene. Una sección CDATA XML puede contener cualquier texto. Esto incluye los caracteres XML reservados. La sección CDATA XML finaliza con la secuencia "]] >". Esto implica los puntos siguientes:  
   
@@ -61,7 +62,7 @@ Literal que representa un <xref:System.Xml.Linq.XCData> objeto.
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Linq.XCData>
 - [Literal de elemento XML](xml-element-literal.md)

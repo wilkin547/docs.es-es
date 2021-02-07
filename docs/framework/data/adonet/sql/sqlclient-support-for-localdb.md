@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: compatibilidad con SqlClient para LocalDB'
 title: Compatibilidad de SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 55ab1346de6f5c14f15d01344a984c18edf30e02
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f99c46277638c810c91f7ceffd0e47c896125c63
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767172"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Compatibilidad de SqlClient para LocalDB
 
 En este artículo se describe cómo conectarse a una base de datos de LocalDB. LocalDB es una versión ligera de SQL Server.
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
   
  Para resumir lo que puede hacer con LocalDB:  
   
@@ -57,7 +58,7 @@ Para obtener información acerca de cómo instalar LocalDB, vea [SQL Server Expr
   
 - Use la palabra clave de cadena de conexión `AttachDBFilename` para especificar el archivo .MDF.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Características de SQL Server y ADO.NET](sql-server-features-and-adonet.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Module (instrucción)'
 title: Module (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 24a27ba41f5ac889f2f2725a2852368a4292a6fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2a19bcfa4521d34b5a91fbc9de412a6d8f6f39c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404464"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768875"
 ---
 # <a name="module-statement"></a>Module (Instrucción)
 
@@ -42,7 +43,7 @@ Opcional. Puede ser uno de los siguientes:
 
 - [Público](../modifiers/public.md)
 
-- [Respecto](../modifiers/friend.md)
+- [Friend](../modifiers/friend.md)
 
 Consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
@@ -101,7 +102,7 @@ Estos elementos tienen muchas similitudes, pero también hay algunas diferencias
 
 [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Class](class-statement.md)
 - [Namespace (Instrucción)](namespace-statement.md)

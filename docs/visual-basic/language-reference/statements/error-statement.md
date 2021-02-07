@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: instrucción error'
 title: Error (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: f3f9f5ecb96686fe525e98cf64672d81a3145796
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6c152e9e4fb4fa3a937042761c7d776b337f4fef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873282"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769148"
 ---
 # <a name="error-statement"></a>Error (Instrucción)
 
@@ -30,15 +31,15 @@ Error errornumber
 ## <a name="parts"></a>Partes  
 
  `errornumber`  
- Obligatorio. Puede ser cualquier número de error válido.  
+ Necesario. Puede ser cualquier número de error válido.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `Error` instrucción se admite por compatibilidad con versiones anteriores. En el nuevo código, especialmente al crear objetos, utilice el `Err` método del objeto `Raise` para generar errores en tiempo de ejecución.  
   
  Si `errornumber` se define, la `Error` instrucción llama al controlador de errores después de que `Err` se asignen los siguientes valores predeterminados a las propiedades del objeto:  
   
-|Propiedad|Valor|  
+|Propiedad|Value|  
 |--------------|-----------|  
 |`Number`|Valor especificado como argumento para la `Error` instrucción. Puede ser cualquier número de error válido.|  
 |`Source`|Nombre del proyecto de Visual Basic actual.|  
@@ -67,7 +68,7 @@ Error 11   ' Simulate the "Division by zero" error.
   
  **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
 - <xref:Microsoft.VisualBasic.Information.Err%2A>

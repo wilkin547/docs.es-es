@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: transacciones y operaciones de copia masiva'
 title: Objeto Transaction y operaciones de copia masiva
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: 27fafc0ef45b80eddd993229f52d119b40b4956f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 84e7c3c73a7886fff3a7cc16166b78e26e89ca93
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155449"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766990"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Objeto Transaction y operaciones de copia masiva
 

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: valores de columna XML de SQL'
 title: Valores de columna de SQL XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: cd55e2263d4b71fe62910ac918e331ebe37833eb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 357d55e2ce497c9929b8e7e7459ebf23ccaafede
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177285"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767185"
 ---
 # <a name="sql-xml-column-values"></a>Valores de columna de SQL XML
 
@@ -26,7 +27,7 @@ SQL Server admite el tipo de datos `xml` y los desarrolladores pueden recuperar 
  [!code-csharp[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.SqlTypes.SqlXml>
 - [Datos XML en SQL Server](xml-data-in-sql-server.md)

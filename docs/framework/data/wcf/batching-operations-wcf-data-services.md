@@ -1,19 +1,22 @@
 ---
+description: 'Más información sobre: operaciones de procesamiento por lotes (Servicios de datos de WCF)'
 title: Procesar por lotes operaciones (Servicios de datos de WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: 95524c1397172e645d682a6ef3f03b17bb3a639d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0f8f4043e35c872445f73483832311ed86989101
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166071"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766548"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Procesar por lotes operaciones (Servicios de datos de WCF)
 
-El Open Data Protocol (OData) admite el procesamiento por lotes de solicitudes a un servicio basado en OData. Para obtener más información, vea [OData: Batch Processing](https://www.odata.org/documentation/odata-version-2-0/batch-processing/). En WCF Data Services, cada operación que usa <xref:System.Data.Services.Client.DataServiceContext> , como ejecutar una consulta o guardar cambios, da como resultado que se envíe una solicitud independiente al servicio de datos. Para mantener un número razonable de conjuntos de operaciones, puede definir los lotes operacionales explícitamente. Esto garantiza que todas las operaciones del lote se envían al servicio de datos en una única solicitud HTTP, permite al servidor procesar las operaciones automáticamente y reduce el número de viajes de ida y vuelta (round trip) al servicio de datos.  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+El Open Data Protocol (OData) admite el procesamiento por lotes de solicitudes a un servicio basado en OData. Para obtener más información, vea [OData: Batch Processing](https://www.odata.org/documentation/odata-version-2-0/batch-processing/). En Servicios de datos de WCF, cada operación que usa <xref:System.Data.Services.Client.DataServiceContext> , como ejecutar una consulta o guardar cambios, da como resultado que se envíe una solicitud independiente al servicio de datos. Para mantener un número razonable de conjuntos de operaciones, puede definir los lotes operacionales explícitamente. Esto garantiza que todas las operaciones del lote se envían al servicio de datos en una única solicitud HTTP, permite al servidor procesar las operaciones automáticamente y reduce el número de viajes de ida y vuelta (round trip) al servicio de datos.  
   
 ## <a name="batching-query-operations"></a>Operaciones de consulta por lotes  
 
@@ -27,6 +30,6 @@ El Open Data Protocol (OData) admite el procesamiento por lotes de solicitudes a
   
  También puede guardar de forma asincrónica los cambios por lotes. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)

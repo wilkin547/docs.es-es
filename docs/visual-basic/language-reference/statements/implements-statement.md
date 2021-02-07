@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Implements (instrucción)'
 title: Implements (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: b982057d2094f807b68d5190dfad388fb9a2c65a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: aa53d1f3b4ba9d9111f5ffb09198a11511f8d9e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873232"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768992"
 ---
 # <a name="implements-statement"></a>Implements (Instrucción)
 
@@ -31,18 +32,18 @@ Implements interfacename.interfacemember [, ...]
 ## <a name="parts"></a>Partes  
 
  `interfacename`  
- Obligatorio. Interfaz cuyas propiedades, procedimientos y eventos van a ser implementados por los miembros correspondientes de la clase o estructura.  
+ Necesario. Interfaz cuyas propiedades, procedimientos y eventos van a ser implementados por los miembros correspondientes de la clase o estructura.  
   
  `interfacemember`  
- Obligatorio. Miembro de una interfaz que se está implementando.  
+ Necesario. Miembro de una interfaz que se está implementando.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
- Una interfaz es una colección de prototipos que representan los miembros (propiedades, procedimientos y eventos) que la interfaz encapsula. Las interfaces contienen solo las declaraciones de los miembros; las clases y estructuras implementan estos miembros. Para más información, vea [Interfaces](../../programming-guide/language-features/interfaces/index.md).  
+ Una interfaz es una colección de prototipos que representan los miembros (propiedades, procedimientos y eventos) que la interfaz encapsula. Las interfaces contienen solo las declaraciones de los miembros; las clases y estructuras implementan estos miembros. Para obtener más información, vea [Interfaces](../../programming-guide/language-features/interfaces/index.md).  
   
  La `Implements` instrucción debe seguir inmediatamente a `Class` la `Structure` instrucción o.  
   
- Al implementar una interfaz, debe implementar todos los miembros declarados en la interfaz. Omitir cualquier miembro se considera un error de sintaxis. Para implementar un miembro individual, se especifica la palabra clave [Implements](implements-clause.md) (que es independiente de la `Implements` instrucción) cuando se declara el miembro en la clase o estructura. Para más información, vea [Interfaces](../../programming-guide/language-features/interfaces/index.md).  
+ Al implementar una interfaz, debe implementar todos los miembros declarados en la interfaz. Omitir cualquier miembro se considera un error de sintaxis. Para implementar un miembro individual, se especifica la palabra clave [Implements](implements-clause.md) (que es independiente de la `Implements` instrucción) cuando se declara el miembro en la clase o estructura. Para obtener más información, vea [Interfaces](../../programming-guide/language-features/interfaces/index.md).  
   
  Las clases pueden utilizar implementaciones [privadas](../modifiers/private.md) de propiedades y procedimientos, pero solo se puede tener acceso a estos miembros si se convierte una instancia de la clase de implementación en una variable declarada como del tipo de la interfaz.  
   
@@ -60,7 +61,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Implementaciones](implements-clause.md)
 - [Instrucción Interface](interface-statement.md)

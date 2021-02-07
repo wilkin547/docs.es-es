@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: especificar valores XML como parámetros'
 title: Especificar valores XML como parámetros
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 20a573da0221704451f10138cb854523d5a17f17
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c5b81270eeaec1fc0b3992971c9285863c92466
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183057"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767458"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parámetros
 
@@ -161,7 +162,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.SqlTypes.SqlXml>
 - [Datos XML en SQL Server](xml-data-in-sql-server.md)

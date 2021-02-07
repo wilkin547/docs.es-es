@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: instrucción Interface (Visual Basic)'
 title: Instrucción Interface
 ms.date: 05/12/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 3025adfe8c881a08df3b5f03253510c263c624d1
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e7fccec585fdbfd3946c2fa9874b5ea9b65ff014
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873226"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768914"
 ---
 # <a name="interface-statement-visual-basic"></a>Instrucción Interface (Visual Basic)
 
@@ -41,7 +42,7 @@ End Interface
 |`attributelist`|Opcional. Vea [lista de atributos](attribute-list.md).|  
 |`accessmodifier`|Opcional. Puede ser uno de los siguientes:<br /><br /> -   [Pública](../modifiers/public.md)<br />-   [Contra](../modifiers/protected.md)<br />-   [Respecto](../modifiers/friend.md)<br />-   [Privada](../modifiers/private.md)<br />-  [Friend protegido](../modifiers/protected-friend.md)<br/>- [Privado protegido](../modifiers/private-protected.md)<br /><br /> Consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Opcional. Vea [Shadows](../modifiers/shadows.md).|  
-|`name`|Obligatorio. Nombre de esta interfaz. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Necesario. Nombre de esta interfaz. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que se trata de una interfaz genérica.|  
 |`typelist`|Obligatorio si se usa la palabra clave [of](of-clause.md) . Lista de parámetros de tipo para esta interfaz. Opcionalmente, cada parámetro de tipo se puede declarar como variante mediante el uso `In` de los `Out` Modificadores genéricos y. Consulte [lista de tipos](type-list.md).|  
 |`Inherits`|Opcional. Indica que esta interfaz hereda los atributos y los miembros de otra interfaz o interfaces. Vea [Inherits (instrucción](inherits-statement.md)).|  
@@ -57,7 +58,7 @@ End Interface
 |`membername`|Se requiere para cada propiedad, procedimiento, evento, interfaz, clase o estructura definidos como miembro de la interfaz. Nombre del miembro.|  
 |`End Interface`|Termina la definición de `Interface`.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una *interfaz* define un conjunto de miembros, como propiedades y procedimientos, que las clases y estructuras pueden implementar. La interfaz solo define las firmas de los miembros y no sus trabajos internos.  
   
@@ -69,7 +70,7 @@ End Interface
   
 ## <a name="rules"></a>Reglas  
   
-- **Anidar interfaces.** Puede definir una interfaz dentro de otra. La interfaz externa se denomina *interfaz contenedora*y la interfaz interna se denomina *interfaz anidada*.  
+- **Anidar interfaces.** Puede definir una interfaz dentro de otra. La interfaz externa se denomina *interfaz contenedora* y la interfaz interna se denomina *interfaz anidada*.  
   
 - **Declaración de miembros.** Cuando se declara una propiedad o un procedimiento como miembro de una interfaz, solo se define la *firma* de esa propiedad o procedimiento. Esto incluye el tipo de elemento (propiedad o procedimiento), sus parámetros y tipos de parámetro, y su tipo de valor devuelto. Por este motivo, la definición de miembro solo utiliza una línea de código y las instrucciones de terminación como `End Function` o `End Property` no son válidas en una interfaz.  
   
@@ -115,7 +116,7 @@ End Interface
   
  Tenga en cuenta que las `Property` `Function` instrucciones y no presentan los bloques que terminan con `End Property` y `End Function` dentro de la interfaz. La interfaz define solo las firmas de sus miembros. Los `Property` bloques y completos `Function` aparecen en una clase que implementa `thisInterface` .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces](../../programming-guide/language-features/interfaces/index.md)
 - [Instrucción Class](class-statement.md)
@@ -127,4 +128,4 @@ End Interface
 - [Tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
 - [Varianza en interfaces genéricas](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [In](../modifiers/in-generic-modifier.md)
-- [Enuncia](../modifiers/out-generic-modifier.md)
+- [Fuera](../modifiers/out-generic-modifier.md)

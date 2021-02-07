@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo escribir SQL dinámico seguro en SQL Server
 title: Escribir código SQL dinámico y seguro en SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: c598427a17ceb289f75fab481a55016f0efe5624
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35db22358bae1150a80daa72cf4a86ef8fba9620
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147455"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766951"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escribir código SQL dinámico y seguro en SQL Server
 
@@ -69,7 +70,7 @@ La inyección de código SQL es el proceso por el que un usuario malintencionado
 
  Para obtener más información, vea los recursos siguientes.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Procedimientos almacenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Inyección de SQL](/sql/relational-databases/security/sql-injection) en los Libros en pantalla de SQL Server|En los temas se describe cómo crear procedimientos almacenados y cómo funciona la inyección de código SQL.|  
   

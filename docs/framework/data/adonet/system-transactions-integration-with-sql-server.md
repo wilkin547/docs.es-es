@@ -1,24 +1,25 @@
 ---
+description: 'Más información sobre: integración de System. Transactions con SQL Server'
 title: Integración de System.Transactions con SQL Server
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 5adf40f96854e08736cdef77300d69e452de5eea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 977ff18600256613dabc0212c2f7aa1bc2650408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191689"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766782"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integración de System.Transactions con SQL Server
 
 La versión .NET Framework 2,0 presentó un marco de trabajo de transacciones al que se puede tener acceso a través del <xref:System.Transactions> espacio de nombres. Este marco de trabajo expone las transacciones de una manera totalmente integrada en el .NET Framework, incluido ADO.NET.  
   
- Además de las mejoras de programación, <xref:System.Transactions> y ADO.net pueden funcionar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
+ Además de las mejoras de programación, <xref:System.Transactions> y ADO.NET pueden funcionar conjuntamente para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
   
- A partir de ADO.NET 2,0, <xref:System.Data.SqlClient> admite transacciones promocionadas al trabajar con SQL Server. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Las transacciones promocionadas son automáticas y no requieren la intervención del desarrollador.  
+ A partir de ADO.NET 2,0, <xref:System.Data.SqlClient> admite transacciones promocionadas al trabajar con SQL Server. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Las transacciones aptas para promoción son automáticas y no necesitan la intervención del desarrollador.  
   
  Las transacciones promocionadas solo están disponibles cuando se usa el proveedor de datos de .NET Framework para SQL Server ( `SqlClient` ) con SQL Server.  
   
@@ -31,7 +32,7 @@ La versión .NET Framework 2,0 presentó un marco de trabajo de transacciones al
   
 ## <a name="promotable-transaction-scenarios"></a>Situaciones de uso de transacciones promocionadas  
 
- Normalmente, las transacciones distribuidas consumen muchos recursos del sistema, siendo el encargado de administrarlas Microsoft DTC (Coordinador de transacciones distribuidas), que integra todos los administradores de recursos a los que se tiene acceso en la transacción. Una transacción promocionada es una forma especial de una <xref:System.Transactions> transacción que delega eficazmente el trabajo a una transacción de SQL Server simple. <xref:System.Transactions>, <xref:System.Data.SqlClient> y SQL Server coordinar el trabajo implicado en el control de la transacción y promoverla a una transacción distribuida completa según sea necesario.  
+ Normalmente, las transacciones distribuidas consumen muchos recursos del sistema, siendo el encargado de administrarlas Microsoft DTC (Coordinador de transacciones distribuidas), que integra todos los administradores de recursos a los que se tiene acceso en la transacción. Una transacción apta para promoción es una forma especial de una transacción <xref:System.Transactions> que delega eficazmente el trabajo en una transacción simple de SQL Server. <xref:System.Transactions>, <xref:System.Data.SqlClient> y SQL Server coordinan el trabajo relacionado con la administración de la transacción, y la promueven a una transacción distribuida completa, según sea necesario.  
   
  La ventaja de utilizar transacciones promocionadas es que cuando se abre una conexión utilizando una transacción <xref:System.Transactions.TransactionScope> activa, y no hay ninguna otra conexión abierta, la transacción se confirma como una transacción ligera, en lugar de incurrir en la sobrecarga adicional de una transacción completamente distribuida.  
   

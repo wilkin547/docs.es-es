@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: instrucción Imports (espacio de nombres XML)'
 title: 'Instrucción Imports: espacio de nombres XML'
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: a3184d68b0e4cdff5d4296a5a638e22b4e83bcde
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2ca285c9104c5a03b265dd15ce38a378e66d6916
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404542"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768966"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports (Instrucción, Espacio de nombres XML)
 
@@ -94,7 +95,7 @@ Este código muestra el siguiente texto:
 
 `Patrick Hines`
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Literal de elemento XML](../xml-literals/xml-element-literal.md)
 - [Propiedades de eje XML](../xml-axis/index.md)

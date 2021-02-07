@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: GoTo (instrucción)'
 title: GoTo (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 000f6754575bcce6b2d79d85541e755219aca956
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 804baec130111562225b09cbdc7b5fb2d73adba5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866614"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769057"
 ---
 # <a name="goto-statement"></a>GoTo (Instrucción)
 
@@ -33,9 +34,9 @@ GoTo line
 ## <a name="part"></a>Parte  
 
  `line`  
- Obligatorio. Cualquier etiqueta de línea.  
+ Necesario. Cualquier etiqueta de línea.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `GoTo` instrucción solo puede bifurcar a las líneas del procedimiento en el que aparece. La línea debe tener una etiqueta de línea que `GoTo` pueda hacer referencia a. Para obtener más información, vea [Cómo: etiquetar instrucciones](../../programming-guide/program-structure/how-to-label-statements.md).  
   
@@ -66,13 +67,13 @@ GoTo line
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Do...Loop](do-loop-statement.md)
 - [Instrucción For...Next](for-next-statement.md)
 - [Instrucción For Each...Next](for-each-next-statement.md)
 - [Instrucción If...Then...Else](if-then-else-statement.md)
 - [Instrucción Select...Case](select-case-statement.md)
-- [Instrucción Try...Catch...Finally](try-catch-finally-statement.md)
+- [Try...Catch...Finally (instrucción)](try-catch-finally-statement.md)
 - [Instrucción While...End While](while-end-while-statement.md)
 - [Instrucción With...End With](with-end-with-statement.md)

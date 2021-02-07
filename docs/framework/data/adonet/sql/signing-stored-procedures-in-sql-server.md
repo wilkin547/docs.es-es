@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: firmar procedimientos almacenados en SQL Server'
 title: Firmar procedimientos almacenados en SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 3f33af0238781407dd845a823ff28d87af48feb2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1189f3ac24c8499cd8fb3ff9e6b6263a71fcc3a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767510"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firmar procedimientos almacenados en SQL Server
 
@@ -52,7 +53,7 @@ Si el módulo necesita permisos adicionales en el nivel de servidor:
 
 Para obtener más información, vea los recursos siguientes.
 
-|Recurso|Descripción|
+|Resource|Descripción|
 |--------------|-----------------|
 |[Module Signing](/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|Describe la firma de módulos, lo que proporciona un escenario de ejemplo y vínculos a los artículos correspondientes de Transact-SQL.|
 |[Firmar procedimientos almacenados con un certificado](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|Proporciona un tutorial sobre la firma de procedimientos almacenados con un certificado.|

@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo enlazar datos a controles (Servicios de datos de WCF)
 title: Enlazar datos a controles (Servicios de datos de WCF)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,16 +10,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 01ef24c2723bb690a8f441a315085c4312307b03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805218"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766483"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Enlazar datos a controles (Servicios de datos de WCF)
 
-Con WCF Data Services, puede enlazar controles como los `ComboBox` controles y `ListView` a una instancia de la <xref:System.Data.Services.Client.DataServiceCollection%601> clase. Esta colección, que hereda de la <xref:System.Collections.ObjectModel.ObservableCollection%601> clase, contiene los datos de una fuente Open Data Protocol (OData). Esta clase representa una colección de datos dinámicos que proporciona notificaciones si se agregan o se quitan elementos. Cuando se usa una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> para el enlace de datos, las bibliotecas de cliente de WCF Data Services controlan estos eventos para garantizar que los objetos a los que hace seguimiento <xref:System.Data.Services.Client.DataServiceContext> permanecen sincronizados con los datos del elemento de la interfaz de usuario enlazado.  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Con Servicios de datos de WCF, puede enlazar controles como los `ComboBox` controles y `ListView` a una instancia de la <xref:System.Data.Services.Client.DataServiceCollection%601> clase. Esta colección, que hereda de la <xref:System.Collections.ObjectModel.ObservableCollection%601> clase, contiene los datos de una fuente Open Data Protocol (OData). Esta clase representa una colección de datos dinámicos que proporciona notificaciones si se agregan o se quitan elementos. Cuando se usa una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> para el enlace de datos, las bibliotecas de cliente de servicios de datos de WCF controlan estos eventos para garantizar que los objetos a los que hace seguimiento <xref:System.Data.Services.Client.DataServiceContext> permanecen sincronizados con los datos del elemento de la interfaz de usuario enlazado.  
   
  La clase <xref:System.Data.Services.Client.DataServiceCollection%601>(indirectamente) implementa la interfaz <xref:System.Collections.Specialized.INotifyCollectionChanged> para avisar al contexto en el momento en el que se agreguen o quiten objetos de la colección. Los objetos de tipo de servicio de datos usados con una clase <xref:System.Data.Services.Client.DataServiceCollection%601> también deben implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> para avisar a la clase <xref:System.Data.Services.Client.DataServiceCollection%601> en el momento en el que cambien las propiedades de los objetos en la colección de enlaces.  
   
@@ -92,7 +95,7 @@ Con WCF Data Services, puede enlazar controles como los `ComboBox` controles y `
 - `entityCollectionChanged`: método al que se llama cuando un objeto se agrega o se quita de la colección de enlaces. Este delegado <xref:System.Func%602> acepta un objeto <xref:System.Data.Services.Client.EntityCollectionChangedParams> y devuelve un valor booleano que indica si el comportamiento predeterminado, que consiste en llamar a <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> para una acción <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> o a <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> para una acción <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> en <xref:System.Data.Services.Client.DataServiceContext>, aún se debe producir.  
   
 > [!NOTE]
-> WCF Data Services no realiza ninguna validación de los comportamientos personalizados que se implementan en estos delegados.  
+> Servicios de datos de WCF no realiza ninguna validación de los comportamientos personalizados que se implementan en estos delegados.  
   
  En el siguiente ejemplo, la acción <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> está personalizada para llamar al método <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> y <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> con el fin de quitar las entidades `Orders_Details` que pertenecen a una entidad `Orders` eliminada. Esta acción personalizada se realiza porque las entidades dependientes no se eliminan automáticamente cuando se elimina la entidad primaria.  
   
