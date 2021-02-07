@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: restaurar zonas horarias desde un recurso incrustado'
 title: Procedimiento para restaurar zonas horarias de un recurso incrustado
 ms.date: 04/10/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET], deserializing
 - time zones [.NET], restoring
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
-ms.openlocfilehash: a1302f595a0907103bae2695e703e5af6da660a7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 593fb392c073ca0a3b557b7d82d430b024b3d13a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817671"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702488"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procedimiento para restaurar zonas horarias de un recurso incrustado
 
@@ -55,7 +56,7 @@ Para este ejemplo se necesita:
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Información general sobre zonas horarias](time-zone-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: guardar zonas horarias en un recurso incrustado'
 title: Procedimiento para guardar zonas horarias en un recurso incrustado
 ms.date: 04/10/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4f1455ffa790652d2dad605a0eb71fb81a05326d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817606"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702475"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procedimiento para guardar zonas horarias en un recurso incrustado
 
@@ -22,7 +23,7 @@ Una aplicación que tiene en cuenta la zona horaria suele requerir la presencia 
 
 Normalmente, la serialización de un <xref:System.TimeZoneInfo> objeto se produce aparte de la aplicación que tiene en cuenta la zona horaria. Dependiendo del almacén de datos utilizado para contener objetos serializados <xref:System.TimeZoneInfo> , los datos de zona horaria se pueden serializar como parte de una rutina de instalación o instalación (por ejemplo, cuando los datos se almacenan en una clave de aplicación del registro) o como parte de una rutina de utilidad que se ejecuta antes de que se compile la aplicación final (por ejemplo, cuando los datos serializados se almacenan en un archivo de recursos XML de .net).
 
-Además de un archivo de recursos que se compila con la aplicación, se pueden usar otros almacenes de datos para la información de zona horaria. Entre ellas, se incluyen las siguientes:
+Además de un archivo de recursos que se compila con la aplicación, se pueden usar otros almacenes de datos para la información de zona horaria. que incluyen la siguiente información:
 
 - El registro. Tenga en cuenta que una aplicación debe usar las subclaves de su propia clave de aplicación para almacenar datos de zona horaria personalizados en lugar de usar las subclaves de HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
 
@@ -46,9 +47,9 @@ Además de un archivo de recursos que se compila con la aplicación, se pueden u
 
 5. Pase la cadena serializada de la zona horaria al <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> método.
 
-6. Llame al método <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType>.
+6. Llame al método <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> .
 
-7. Llame al método <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType>.
+7. Llame al método <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> .
 
 8. Cierre el <xref:System.IO.StreamWriter> objeto llamando a su <xref:System.IO.StreamWriter.Close%2A> método.
 
@@ -80,7 +81,7 @@ Para este ejemplo se necesita:
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Información general sobre zonas horarias](time-zone-overview.md)

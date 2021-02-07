@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo realizar operaciones aritméticas con fechas y horas
 title: Efectuar operaciones aritméticas con fechas y horas
 ms.date: 04/10/2017
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: af294c45359f6226c4189aabb34fdfc670bbd1c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b39a6dec3abc2206c8eef7566f74aab6614aae6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702566"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Efectuar operaciones aritméticas con fechas y horas
 
@@ -67,7 +68,7 @@ Para ilustrar, la transición al horario de verano en la zona horaria estándar 
 
 ## <a name="arithmetic-operations-with-times-in-time-zones"></a>Operaciones aritméticas con horas en zonas horarias
 
-La <xref:System.TimeZoneInfo> clase incluye una serie de métodos de conversión que aplican automáticamente los ajustes cuando convierten las horas de una zona horaria a otra. Entre ellas, se incluyen las siguientes:
+La <xref:System.TimeZoneInfo> clase incluye una serie de métodos de conversión que aplican automáticamente los ajustes cuando convierten las horas de una zona horaria a otra. que incluyen la siguiente información:
 
 - Los <xref:System.TimeZoneInfo.ConvertTime%2A> <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> métodos y, que convierten las horas entre dos zonas horarias cualesquiera.
 
