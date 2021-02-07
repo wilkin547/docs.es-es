@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: obtener acceso a los dispositivos de cifrado de hardware'
 title: Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
 ms.date: 07/14/2020
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-ms.openlocfilehash: c4f0b77985dea1818729af41b69a4a7d30427415
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fcf12314490542848d20bd3a4977d68c386853bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685275"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Procedimiento para obtener acceso a los dispositivos de cifrado de hardware
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: descifrar elementos XML con claves simétricas'
 title: Procedimiento para descifrar elementos XML con claves simétricas
 ms.date: 07/14/2020
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: 67ace547fc539ab0a2d7affb339f908eb9670a29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 894b202143daf2af767fd9877266e2323e0057e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685184"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Procedimiento para descifrar elementos XML con claves simétricas
 
@@ -82,7 +83,7 @@ No almacene nunca una clave criptográfica en texto sin formato ni transfiera un
   
 Cuando haya terminado de usar una clave criptográfica simétrica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelo de criptografía](cryptography-model.md)
 - [servicios criptográficos](cryptographic-services.md)

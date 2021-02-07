@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <mexNamedPipeBinding>'
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: 64e250ae5ccb30da3f8857b94628b85b8c237a03
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a7d1c6b10ed436d5ec1b20092d042d6b0a80bd34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204715"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684326"
 ---
 # \<mexNamedPipeBinding>
 
@@ -55,7 +56,7 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexNamedPipeBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>

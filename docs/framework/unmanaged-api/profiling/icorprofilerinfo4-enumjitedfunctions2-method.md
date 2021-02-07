@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo4:: Enumjitedfunctions2 ((método)'
 title: ICorProfilerInfo4::EnumJITedFunctions2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 40e9a1be-9bd2-4fad-9921-34a84b61c1e3
 topic_type:
 - apiref
-ms.openlocfilehash: 2a6ddaef7b64427f8349abedbbd85b4d82a0b88c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3740236cfe2bc7ecc6cd3bbeb3345c7510dd159f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697797"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686952"
 ---
 # <a name="icorprofilerinfo4enumjitedfunctions2-method"></a>ICorProfilerInfo4::EnumJITedFunctions2 (Método)
 
@@ -37,7 +38,7 @@ HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);
  `ppEnum`  
  enuncia Puntero al enumerador [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método se puede superponer con `JITCompilation` devoluciones de llamada como el método [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) . La enumeración devuelta incluye valores para el `COR_PRF_FUNCTION::reJitId` campo. El método [ICorProfilerInfo3:: EnumJITedFunctions (](icorprofilerinfo3-enumjitedfunctions-method.md) , que este método reemplaza, no enumera los identificadores compilados con JIT, ya que el `COR_PRF_FUNCTION::reJitId` campo siempre se establece en 0. El `ICorProfilerInfo4::EnumJITedFunctions` método enumera los identificadores de recompilación JIT, ya que el `COR_PRF_FUNCTION::reJitId` campo se ha establecido correctamente. Tenga en cuenta que el método [ICorProfilerInfo4:: enumjitedfunctions2 (](icorprofilerinfo4-enumjitedfunctions2-method.md) puede desencadenar una recolección de elementos no utilizados, mientras que el [método ICorProfilerInfo3:: EnumJITedFunctions (](icorprofilerinfo3-enumjitedfunctions-method.md) no lo hará.  Para obtener más información, vea [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md).  
   
@@ -51,7 +52,7 @@ HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md)
 - [ICorProfilerInfo4 (Interfaz)](icorprofilerinfo4-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: conceptos clave de seguridad'
 title: Conceptos clave de seguridad
 ms.date: 07/15/2020
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8643c87197049465371da00b2ecb70ac99d70f9e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685002"
 ---
 # <a name="key-security-concepts"></a>Conceptos clave de seguridad
 
@@ -71,10 +72,10 @@ El ejemplo siguiente requiere que la entidad de seguridad activa sea un administ
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Autorización  
+## <a name="authorization"></a>Authorization  
 
 La autorización es el proceso de determinar si una entidad de seguridad puede realizar una acción solicitada. La autorización se produce después de la autenticación y usa información sobre la identidad y los roles de la entidad de seguridad para determinar a qué recursos puede tener acceso la entidad de seguridad. Puede usar la seguridad basada en roles de .NET para implementar la autorización.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Seguridad de ASP.NET Core](/aspnet/core/security/)

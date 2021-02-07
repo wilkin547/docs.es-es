@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo4:: Getiltonativemapping2 ((método)'
 title: ICorProfilerInfo4::GetILToNativeMapping2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 756c1c25-08a7-4060-9798-dbeaa2f3bee5
 topic_type:
 - apiref
-ms.openlocfilehash: 37d6b6d5112089df18fb138086db5e138a69629c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f548dbef3444c6e63e51cd5f3db79e567b2630b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686796"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 (Método)
 
@@ -55,7 +56,7 @@ HRESULT GetILToNativeMapping(
  `map`  
  [out] Matriz de estructuras `COR_DEBUG_IL_TO_NATIVE_MAP`, cada una de las cuales especifica los desplazamientos. Después de que el método `GetILToNativeMapping2` vuelva, `map` contendrá algunas o todas las estructuras `COR_DEBUG_IL_TO_NATIVE_MAP`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `GetILToNativeMapping2` es similar al método [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) , salvo que permitirá al generador de perfiles especificar el identificador de la función recompilada en versiones futuras.  
   
@@ -78,9 +79,9 @@ HRESULT GetILToNativeMapping(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [GetILToNativeMapping (Método)](icorprofilerinfo-getiltonativemapping-method.md)
+- [Método GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)
 - [ICorProfilerInfo4 (Interfaz)](icorprofilerinfo4-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [Generación de perfiles](index.md)

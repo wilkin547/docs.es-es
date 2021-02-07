@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: cifrar elementos XML con certificados X. 509'
 title: Procedimiento para cifrar elementos XML con certificados X.509
 ms.date: 07/14/2020
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: a336997a8cb81f1838d9c5b1ec82bbb04326ed0c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f815d253b15823070e074c5d922d3024da602a0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729335"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685106"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Procedimiento para cifrar elementos XML con certificados X.509
 
@@ -120,7 +121,7 @@ Para ejecutar este ejemplo, debe crear un certificado de prueba y guardarlo en u
   
 El certificado X.509 usado en este ejemplo se usa únicamente para pruebas.  Las aplicaciones deben usar un certificado X. 509 generado por una entidad de certificación de confianza.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelo de criptografía](cryptography-model.md)
 - [servicios criptográficos](cryptographic-services.md)

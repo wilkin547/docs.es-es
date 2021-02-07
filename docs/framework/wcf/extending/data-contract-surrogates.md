@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: suplentes de contratos de datos'
 title: Suplentes de contratos de datos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: e33a487c03bbf87666d517040e00131f5482be6f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 335e7f64868177d00c747e29c463808f3eff3056
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251521"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685808"
 ---
 # <a name="data-contract-surrogates"></a>Suplentes de contratos de datos
 

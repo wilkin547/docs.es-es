@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: FunctionTailcall ((función)'
 title: FunctionTailcall (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 02bc6f4bbb6754bd160fe2694f27563908f3a759
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8da3efde7d925fdb02232ca98662f8d6a6fd0adf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687316"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall (Función)
 
@@ -42,7 +43,7 @@ void __stdcall FunctionTailcall (
 
   \[in] el identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La función de destino de la llamada de cola usará el marco de pila actual y devolverá directamente al llamador de la función que realizó la llamada de cola. Esto significa que no se emitirá una devolución de llamada de [FunctionLeave (](functionleave-function.md) para una función que sea el destino de una llamada de cola.  
   
@@ -68,7 +69,7 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

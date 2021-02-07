@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <mexTcpBinding>'
 title: <mexTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: 0d12f886eaee6283ee686209dfc129e397a8e1fe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d13d9f5eb4bae13a39d4f0cdb57129eb9216ab5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204702"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684300"
 ---
 # \<mexTcpBinding>
 
@@ -55,7 +56,7 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.MexTcpBindingElement>
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>

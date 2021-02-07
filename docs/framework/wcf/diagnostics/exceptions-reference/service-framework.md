@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: marco de trabajo de servicio'
 title: Marco de servicios
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-ms.openlocfilehash: 1fb39f2106e027cc5d4125cfb0bc89f3e5983cec
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aa53a6c0740c292c1f34920edabdb81f7c5a13ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686146"
 ---
 # <a name="service-framework"></a>Marco de servicios
 
@@ -108,7 +109,7 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |SFxErrorReflectingOnType2|Se produjo un error al cargar el atributo especificado en el tipo especificado.  Consulte InnerException para obtener más información".|  
 |SFxErrorSerializingBody|Se produjo un error al serializar el cuerpo del mensaje especificado. Consulte InnerException para obtener más información".|  
 |SFxErrorSerializingHeader|Se produjo un error al deserializar uno de los encabezados en el mensaje especificado. Consulte InnerException para obtener más información".|  
-|SFxExpectedIMethodCallMessage|Error interno. El mensaje debe ser un IMethodCallMessage válido.|  
+|SFxExpectedIMethodCallMessage|Error interno El mensaje debe ser un IMethodCallMessage válido.|  
 |SFxExportMustHaveType|No se puede exportar la Parte especificada en la operación especificada ya que no tiene un tipo CLR válido.|  
 |SFxHeaderNotUnderstood|No se procesó el mensaje. El destinatario de este mensaje no entendió el encabezado especificado del espacio de nombres especificado. Este error indica normalmente que el remitente de este mensaje ha habilitado un protocolo de comunicaciones que el receptor no puede procesar. Asegúrese de que la configuración del enlace del cliente es coherente con el enlace del servicio.|  
 |SFxHeadersAreNotSupportedInEncoded|El mensaje especificado no debe tener encabezados que se vayan a utilizar en el estilo codificado de llamada de procedimiento remoto.|  

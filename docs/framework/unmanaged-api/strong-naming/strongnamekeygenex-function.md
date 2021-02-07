@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: StrongNameKeyGenEx ((función)'
 title: StrongNameKeyGenEx (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36bd10b9-9857-45f3-8d3b-0da091d6169e
 topic_type:
 - apiref
-ms.openlocfilehash: f28ee5767997240018d182b8303e4f65be81c702
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6c103d16cac1b4668e4b478a0947970b5b44a0b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708548"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686835"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx (Función)
 
@@ -64,7 +65,7 @@ BOOLEAN StrongNameKeyGenEx (
 
  `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Las versiones .NET Framework 1,0 y 1,1 requieren un `dwKeySize` de 1024 bits para firmar un ensamblado con un nombre seguro; la versión 2,0 agrega admite claves de 2048 bits.  
   
@@ -82,7 +83,7 @@ BOOLEAN StrongNameKeyGenEx (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameKeyGenEx](../hosting/iclrstrongname-strongnamekeygenex-method.md)
 - [Método StrongNameKeyGen](../hosting/iclrstrongname-strongnamekeygen-method.md)

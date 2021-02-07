@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <mexHttpsBinding>'
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 8025f5ed42325963aa4b695890caa5031f6bb6a6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1e6eb66e1379cb8f351e34d4fd406dd3cc1f9a4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204728"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684339"
 ---
 # \<mexHttpsBinding>
 
@@ -57,9 +58,9 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
   
 ## <a name="remarks"></a>Observaciones  
 
- Este enlace es esencialmente un enlace `WSHttpBinding` que admite seguridad de nivel de transporte mediante los certificados. Para obtener más información sobre la configuración y el uso de este extremo de metadatos, consulte [Cómo: configurar un enlace de WS-Metadata Exchange personalizado](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [Cómo: recuperar metadatos a través de un enlace no Mex](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)y el [extremo de metadatos seguro personalizado](../../../wcf/samples/custom-secure-metadata-endpoint.md)de ejemplo.  
+ Este enlace es esencialmente un enlace `WSHttpBinding` que admite seguridad de nivel de transporte mediante los certificados. Para obtener más información sobre la configuración y el uso de este punto de conexión de metadatos, consulte [Cómo: configurar un enlace de intercambio personalizado WS-Metadata](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [Cómo: recuperar metadatos a través de un enlace no Mex](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)y el [extremo de metadatos seguro personalizado](../../../wcf/samples/custom-secure-metadata-endpoint.md)de ejemplo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>

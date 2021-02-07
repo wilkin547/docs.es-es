@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: FunctionTailcall2 (función)'
 title: FunctionTailcall2 (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: e1cd3ef78d303aaa325699e1bcdec95f077fef21
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 03547537d43a76f26d6946666589f38ca4e02ec4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703985"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687433"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 (Función)
 
@@ -51,7 +52,7 @@ void __stdcall FunctionTailcall2 (
 
   El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La función de destino de la llamada de cola usará el marco de pila actual y devolverá directamente al llamador de la función que realizó la llamada de cola. Esto significa que no se emitirá una devolución de llamada de [FunctionLeave2](functionleave2-function.md) para una función que sea el destino de una llamada de cola.  
   
@@ -79,7 +80,7 @@ void __stdcall FunctionTailcall2 (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

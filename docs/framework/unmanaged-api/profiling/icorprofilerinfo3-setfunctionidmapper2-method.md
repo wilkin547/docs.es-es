@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo3:: Setfunctionidmapper2 ((método)'
 title: ICorProfilerInfo3::SetFunctionIDMapper2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdb1188-952a-4ba8-9f05-bfebc18cdd29
 topic_type:
 - apiref
-ms.openlocfilehash: 26c26cf204f1a2743f46cfcfdfadbf2c3e3df38e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4847d3bd7b8bf6142da0f32c3558016b2c758087
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721574"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686991"
 ---
 # <a name="icorprofilerinfo3setfunctionidmapper2-method"></a>ICorProfilerInfo3::SetFunctionIDMapper2 (Método)
 
@@ -44,7 +45,7 @@ HRESULT SetFunctionIDMapper2(
   
 ## <a name="return-value"></a>Valor devuelto  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Las alternativas para los valores de FunctionID se pasarán a los enlaces de entrada y salida de función del generador de perfiles ([FunctionEnter3](functionenter3-function.md), [FunctionLeave3](functionleave3-function.md)y [FunctionTailcall3](functiontailcall3-function.md); o [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)y [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)) especificados por el método [SetEnterLeaveFunctionHooks3 (](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) o [SetEnterLeaveFunctionHooks3WithInfo (](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) .  
   
@@ -60,7 +61,7 @@ HRESULT SetFunctionIDMapper2(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Setfunctionidmapper (](icorprofilerinfo-setfunctionidmapper-method.md)
 - [ICorProfilerInfo3 (Interfaz)](icorprofilerinfo3-interface.md)

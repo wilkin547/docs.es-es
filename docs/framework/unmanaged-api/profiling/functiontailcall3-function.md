@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: FunctionTailcall3 (función)'
 title: FunctionTailcall3 (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e48243f-5de6-4bd6-a1d0-e1d248bca4b8
 topic_type:
 - apiref
-ms.openlocfilehash: dfe1a530ea009300e7cfbf002053d2e2b6034845
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07ab49e8aeccdd82680a677c8b94e8a0c075d242
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687303"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 (Función)
 
@@ -37,7 +38,7 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
 
   \[in] el identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `FunctionTailcall3` función de devolución de llamada notifica al generador de perfiles cuando se llama a funciones. Use el [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 (](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) para registrar su implementación de esta función.  
   
@@ -63,7 +64,7 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionLeave3](functionleave3-function.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: FunctionLeave3WithInfo (función)'
 title: FunctionLeave3WithInfo (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: 69ee0ea78e0c7edbb61999ef8fba1791e6f682bc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a861f455e827258368764b80547c3b3e9c986cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687420"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo (Función)
 
@@ -43,7 +44,7 @@ void __stdcall FunctionLeave3WithInfo(
 
   \[in] un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `FunctionLeave3WithInfo` método de devolución de llamada notifica al generador de perfiles cuando se llama a las funciones y permite que el generador de perfiles use el [método ICorProfilerInfo3:: GetFunctionLeave3Info (](icorprofilerinfo3-getfunctionleave3info-method.md) para inspeccionar el valor devuelto. Para tener acceso a la información del valor devuelto, se debe `COR_PRF_ENABLE_FUNCTION_RETVAL` establecer la marca. El generador de perfiles puede utilizar el [método ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento y, a continuación, usar el [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo (](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) para registrar la implementación de esta función.  
   
@@ -69,7 +70,7 @@ void __stdcall FunctionLeave3WithInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Getfunctionleave3info (](icorprofilerinfo3-getfunctionleave3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)

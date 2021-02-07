@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: excepciones de seguridad'
 title: Excepciones de seguridad
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
-ms.openlocfilehash: e96c317862867b9e461eb2d13dce6ede5b30cf13
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: efa3b7e132f3f3fdc8f2cb5b7dc09614ce584fdb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686237"
 ---
 # <a name="security-exceptions"></a>Excepciones de seguridad
 
@@ -27,9 +28,9 @@ En este tema se enumeran todas las excepciones de seguridad.
 |BasicTokenCannotBeWrittenWithoutEncryption|El token básico no se puede escribir sin cifrado.|
 |BindingDoesNotSupportProtectionForRst|El enlace especificado para el contrato especificado se configura con SecureConversation, pero el modo de autenticación no puede proporcionar la confidencialidad e integridad basada en solicitud/respuesta requeridas para la negociación.|
 |BindingDoesNotSupportWindowsIdenityForImpersonation|La operación del contrato especificado requiere la identidad de Windows para la suplantación automática. Una identidad de Windows que representa al llamador no es proporcionada por el enlace específico para el contrato específico.|
-|CachedNegotiationStateQuotaReached|El servicio no puede almacenar en caché el estado de la negociación cuando se ha alcanzado la capacidad especificada. Reintente la solicitud.|
+|CachedNegotiationStateQuotaReached|El servicio no puede almacenar en caché el estado de la negociación cuando se ha alcanzado la capacidad especificada. Vuelva a intentarlo.|
 |CacheQuotaReached|No se puede agregar el elemento. Se especifica el tamaño de caché máximo.|
-|CannotDetermineSPNBasedOnAddress|El cliente no puede determinar el nombre de la entidad de seguridad del servicio basándose en la identidad en la dirección de destino especificada con el propósito de SspiNegotiation/Kerberos. La identidad de la dirección de destino debe ser una identidad UPN (como acmedomain\\\alice) o una identidad SPN (como host/bobs-Machine).|
+|CannotDetermineSPNBasedOnAddress|El cliente no puede determinar el nombre de la entidad de seguridad del servicio basándose en la identidad en la dirección de destino especificada con el propósito de SspiNegotiation/Kerberos. La identidad de la dirección de destino debe ser una identidad UPN (por ejemplo, acmedomain \\ \alice) o una identidad SPN (como host/bobs-Machine).|
 |CannotFindCert|No se puede encontrar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue.|
 |CannotFindCertForTarget|No se puede encontrar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue para el destino especificado.|
 |CannotFindCorrelationStateForApplyingSecurity|No se puede encontrar el estado de correlación para aplicar la seguridad para responder en el respondedor.|
@@ -117,7 +118,7 @@ En este tema se enumeran todas las excepciones de seguridad.
 |SecurityBindingSupportsOneWayOnly|El SecurityBinding para el enlace especificado para el contrato especificado solo admite la operación OneWay.|
 |SecurityContextDoesNotAllowImpersonation|No se puede iniciar la suplantación porque el SecurityContext para la función UltimateReceiver del mensaje de solicitud con la acción especificada no está asignado a una identidad de Windows.|
 |SecurityListenerClosing|El agente de escucha no acepta nuevas conversaciones seguras porque se está cerrando.|
-|SecurityListenerClosingFaultReason|El servidor no acepta actualmente nuevas conversaciones seguras porque se está cerrando. Vuelva a intentarlo más tarde.|
+|SecurityListenerClosingFaultReason|El servidor no acepta actualmente nuevas conversaciones seguras porque se está cerrando. Inténtelo de nuevo más tarde.|
 |SecurityProtocolFactoryShouldBeSetBeforeThisOperation|Se debe establecer el generador de protocolos de seguridad antes de que se realice esta operación.|
 |SecuritySessionAbortedFaultReason|Se finalizó la sesión de seguridad. Esto puede deberse a que no se recibieron mensajes en la sesión durante mucho tiempo.|
 |SecuritySessionKeyIsStale|Se debe renovar la clave de sesión antes de que pueda proteger los mensajes de la aplicación.|
