@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: WSStreamedHttpBinding'
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 619c7e793ff94efffcb72774cf3e367df377a3a3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ef5b3bf3501f64389005ea1542874ff32a42ad82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668284"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -137,7 +138,7 @@ public class StreamedEchoService : IStreamedEchoService
 
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>Cliente de muestra WSStreamedHttpBinding 
 
-El cliente que se utiliza para interactuar con el servicio mediante `WSStreamedHttpBinding` se encuentra en el subdirectorio del cliente. Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert. exe, se muestra una alerta de seguridad al intentar obtener acceso a una dirección HTTPS en el explorador como `https://localhost/servicemodelsamples/service.svc` . Para permitir que el cliente WCF funcione con un certificado de prueba en contexto, se ha agregado código adicional al cliente para suprimir la alerta de seguridad. El código y la clase que lo acompaña no son necesarios cuando se usan certificados de producción.
+El cliente que se utiliza para interactuar con el servicio mediante `WSStreamedHttpBinding` se encuentra en el subdirectorio del cliente. Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, se muestra una alerta de seguridad al intentar obtener acceso a una dirección HTTPS en el explorador como `https://localhost/servicemodelsamples/service.svc` . Para permitir que el cliente WCF funcione con un certificado de prueba en contexto, se ha agregado código adicional al cliente para suprimir la alerta de seguridad. El código y la clase que lo acompaña no son necesarios cuando se usan certificados de producción.
 
 ```csharp
 // WARNING: This code is only required for test certificates such as those created by makecert. It is

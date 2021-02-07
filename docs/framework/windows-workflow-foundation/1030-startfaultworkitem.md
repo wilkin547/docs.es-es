@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 1030-StartFaultWorkItem'
 title: 1030 - StartFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: e1601fb9-0bc6-4dbe-816f-f24914063d34
-ms.openlocfilehash: 52034f7cc7c6f6749fbbbf06db9267ecb6279ee1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2d148277b2d593cfcf75e17662626f1f486e7c1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281864"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668102"
 ---
 # <a name="1030---startfaultworkitem"></a>1030 - StartFaultWorkItem
 
@@ -15,7 +16,7 @@ ms.locfileid: "96281864"
   
 |||  
 |-|-|  
-|ID|1030|  
+|Id.|1030|  
 |Palabras clave|WFRuntime|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

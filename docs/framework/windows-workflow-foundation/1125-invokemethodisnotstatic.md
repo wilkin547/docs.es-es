@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 1125-InvokeMethodIsNotStatic'
 title: 1125 - InvokeMethodIsNotStatic
 ms.date: 03/30/2017
 ms.assetid: ea2b3827-63da-497b-b2c3-d5cebefe57a1
-ms.openlocfilehash: 0405b4e1207db5c056fbd478b98c408258daf0c3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cd63b7b75121a70f7d7bad6a799827971aa4eae9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294214"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667374"
 ---
 # <a name="1125---invokemethodisnotstatic"></a>1125 - InvokeMethodIsNotStatic
 
@@ -15,7 +16,7 @@ ms.locfileid: "96294214"
   
 |||  
 |-|-|  
-|ID|1125|  
+|Id.|1125|  
 |Palabras clave|WFRuntime|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
