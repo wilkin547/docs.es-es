@@ -1,13 +1,14 @@
 ---
+description: Más información sobre la ejecución en paralelo en ADO.NET
 title: Ejecución en paralelo
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 609fc7b7cefd92e38ecfff54e5ac1651e855e4b7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ab55430382f49c40a577d5cac8501c0136c9f0a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718777"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Ejecución en paralelo en ADO.NET
 
@@ -27,7 +28,7 @@ La ejecución en paralelo en el .NET Framework es la capacidad de ejecutar una a
   
  Si tiene una aplicación desarrollada para la .NET Framework versión 1,0 que usa el proveedor de datos de ODBC para conectarse al origen de datos y desea ejecutar dicha aplicación en la .NET Framework versión 1,1 o posterior, debe actualizar el espacio de nombres para el proveedor de datos ODBC a **System. Data. ODBC**. A continuación, debe volver a compilarla para la versión más reciente de la .NET Framework.  
   
- Si tiene una aplicación desarrollada para la .NET Framework versión 2,0 o posterior que usa el proveedor de datos de ODBC para conectarse al origen de datos y desea ejecutar dicha aplicación en la .NET Framework versión 1,0, debe descargar el proveedor de datos de ODBC e instalarlo en el sistema .NET Framework versión 1,0. A continuación, debe cambiar el espacio de nombres para el proveedor de datos ODBC a **Microsoft. Data. ODBC**y volver a compilar la aplicación para la .NET Framework versión 1,0.  
+ Si tiene una aplicación desarrollada para la .NET Framework versión 2,0 o posterior que usa el proveedor de datos de ODBC para conectarse al origen de datos y desea ejecutar dicha aplicación en la .NET Framework versión 1,0, debe descargar el proveedor de datos de ODBC e instalarlo en el sistema .NET Framework versión 1,0. A continuación, debe cambiar el espacio de nombres para el proveedor de datos ODBC a **Microsoft. Data. ODBC** y volver a compilar la aplicación para la .NET Framework versión 1,0.  
   
 ## <a name="the-net-framework-data-provider-for-oracle"></a>Proveedor de datos .NET Framework para Oracle  
 
@@ -70,7 +71,7 @@ SELECT * FROM dbo.Customers;
 SET NOCOUNT OFF;  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general de ADO.NET](ado-net-overview.md)
 - [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)

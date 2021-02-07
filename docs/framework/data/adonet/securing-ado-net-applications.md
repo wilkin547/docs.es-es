@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo proteger aplicaciones ADO.NET
 title: Proteger aplicaciones
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: af184f64b43c2d3dc39f8c0add08940d3b002c24
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e4d219d1f4249846943d019e174abd6d43687c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550760"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718881"
 ---
 # <a name="securing-adonet-applications"></a>Protección de aplicaciones de ADO.NET
 

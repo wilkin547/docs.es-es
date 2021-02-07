@@ -1,20 +1,21 @@
 ---
+description: 'Más información acerca de: Single-Table de consultas (LINQ to DataSet)'
 title: Consultas de tabla única (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 17a2fcf54cae64d9443b0cc0e8a37e1002bbd394
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a4b6ce2a60eeafc9221d838d1b86c9964774df60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718764"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Consultas de tabla única (LINQ to DataSet)
 
-Las consultas Language-Integrated Query (LINQ) funcionan en orígenes de datos que implementan la <xref:System.Collections.Generic.IEnumerable%601> interfaz o la <xref:System.Linq.IQueryable%601> interfaz. La <xref:System.Data.DataTable> clase no implementa ninguna de las interfaces, por lo que debe llamar al <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método si desea utilizar <xref:System.Data.DataTable> como origen en la `From` cláusula de una consulta LINQ.  
+Las consultas de Language-Integrated Query (LINQ) funcionan en orígenes de datos que implementan la <xref:System.Collections.Generic.IEnumerable%601> interfaz o la <xref:System.Linq.IQueryable%601> interfaz. La <xref:System.Data.DataTable> clase no implementa ninguna de las interfaces, por lo que debe llamar al <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método si desea utilizar <xref:System.Data.DataTable> como origen en la `From` cláusula de una consulta LINQ.  
   
  En el ejemplo siguiente se obtienen todos los pedidos en línea desde la tabla SalesOrderHeader y se envían los resultados de id., fecha y número de pedido a la consola.  
   
@@ -31,7 +32,7 @@ Las consultas Language-Integrated Query (LINQ) funcionan en orígenes de datos q
   
  Observe que el tipo de datos especificado en el parámetro `T` genérico de los métodos <xref:System.Data.DataRowExtensions.Field%2A> y <xref:System.Data.DataRowExtensions.SetField%2A> deben coincidir con el tipo del valor subyacente; en caso contrario, se producirá una <xref:System.InvalidCastException>. El nombre de columna especificado debe también coincidir con el nombre de una columna en <xref:System.Data.DataSet>, en caso contrario, se producirá una <xref:System.ArgumentException>. En ambos casos, la excepción se produce en tiempo de ejecución de enumeración de datos, cuando se ejecuta la consulta.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Consultas entre tablas](cross-table-queries-linq-to-dataset.md)
 - [Consultar objetos DataSet con tipo](querying-typed-datasets.md)

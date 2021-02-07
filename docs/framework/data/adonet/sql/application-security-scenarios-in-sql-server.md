@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: escenarios de seguridad de aplicaciones en SQL Server'
 title: Escenarios de seguridad de aplicaciones en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 2d0e65f61939312bf29111e87c49366cd9e389be
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a0e055c3afa1590a74516505d513992bca8b952
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197656"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718660"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Escenarios de seguridad de aplicaciones en SQL Server
 
@@ -64,7 +65,7 @@ No hay una única manera correcta de crear una aplicación cliente de SQL Serve
  [Habilitar el acceso entre bases de datos en SQL Server](enabling-cross-database-access-in-sql-server.md)  
  Describe cómo habilitar el acceso entre bases de datos sin poner en peligro la seguridad.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Seguridad de SQL Server](sql-server-security.md)
 - [Información general sobre la seguridad de SQL Server](overview-of-sql-server-security.md)

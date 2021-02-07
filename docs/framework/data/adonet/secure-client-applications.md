@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: aplicaciones cliente seguras'
 title: Aplicaciones cliente seguras
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 96b43d28d3e22df66cb7f7010916b5c7f7a86b77
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a40a6444c2e317b03f03688ca46de157ded6f0ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718959"
 ---
 # <a name="secure-client-applications"></a>Aplicaciones cliente seguras
 
@@ -26,7 +27,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
  [Validación de la entrada del usuario en ASP.NET Web Pages](/previous-versions/aspnet/7kh55542(v=vs.100))  
  Información general sobre la validación de datos introducidos por el usuario con controles de validación de ASP.NET.  
   
- [Datos proporcionados por el usuario en formularios Windows Forms](/dotnet/desktop/winforms/user-input-in-windows-forms)  
+ [Datos proporcionados por el usuario en Windows Forms](/dotnet/desktop/winforms/user-input-in-windows-forms)  
  Proporciona vínculos e información para validar entrada de mouse y teclado en aplicaciones de Windows Forms.  
   
  [Expresiones regulares de .NET Framework](../../../standard/base-types/regular-expressions.md)  
@@ -36,7 +37,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 
  En versiones anteriores, las aplicaciones Windows normalmente se ejecutaban con todos los permisos. .NET Framework proporciona la infraestructura para restringir la ejecución del código en una aplicación Windows mediante la seguridad de acceso del código (CAS). Sin embargo, CAS no es suficiente por sí solo para proteger la aplicación.  
   
- [Seguridad en los formularios Windows Forms](/dotnet/desktop/winforms/windows-forms-security)  
+ [Seguridad de Windows Forms](/dotnet/desktop/winforms/windows-forms-security)  
  Describe cómo proteger las aplicaciones de Windows Forms y proporciona vínculos a temas relacionados.  
   
  [Aplicaciones de Windows Forms y aplicaciones no administradas](/dotnet/desktop/winforms/advanced/windows-forms-and-unmanaged-applications)  
@@ -53,7 +54,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
   
  Para obtener más información, vea los recursos siguientes.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Protección de sitios web de ASP.NET](/previous-versions/aspnet/91f66yxt(v=vs.100))|Describe cómo proteger aplicaciones ASP.NET.|  
 |[Proteger servicios Web XML creados con ASP.NET](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Describe cómo implementar la seguridad en un servicio Web ASP.NET.|  
@@ -64,13 +65,13 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 
  La comunicación remota de .NET permite crear fácilmente aplicaciones ampliamente distribuidas, tanto si los componentes de las aplicaciones están todos en un equipo como si están repartidos por el mundo. Puede generar aplicaciones cliente que utilizan los objetos de otros procesos en el mismo equipo o en cualquier otro equipo que se puede alcanzar a través de su red. También puede usar .NET Remoting para comunicar con otros dominios de aplicación en el mismo proceso.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Configuración de aplicaciones remotas](/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Describe cómo configurar aplicaciones de comunicación remota para evitar problemas habituales.|  
 |[Seguridad en comunicación remota](/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Describe la autenticación y el cifrado, así como temas adicionales de seguridad relacionados con la comunicación remota.|  
 |[Consideraciones de seguridad y de interacción remota](../../misc/security-and-remoting-considerations.md)|Describe problemas de seguridad con objetos protegidos y con el cruce entre dominios de aplicación.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Recomendaciones para las estrategias de acceso a datos](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))

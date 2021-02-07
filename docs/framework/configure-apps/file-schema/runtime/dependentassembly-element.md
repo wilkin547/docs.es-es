@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <dependentAssembly> elemento'
 title: <dependentAssembly> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 6a924b1998651c923c64429029a118dd1e9ede69
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c804920de961fc609fd04a0853ecbdbc9202e5be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91199008"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719089"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly> (Elemento)
 
@@ -82,7 +83,7 @@ Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `dep
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

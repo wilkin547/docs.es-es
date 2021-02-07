@@ -1,20 +1,21 @@
 ---
+description: 'Más información acerca de: restricciones de esquema'
 title: Restricciones de esquema
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: c0a3cafef45341cd95fa0a4f65c818129e120e44
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 74ddfe5b8aaf9b8193e0c0b2a929ccde333eac26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719050"
 ---
 # <a name="schema-restrictions"></a>Restricciones de esquema
 
-El segundo parámetro opcional del método **GetSchema** son las restricciones que se utilizan para limitar la cantidad de información de esquema devuelta y se pasa al método **GetSchema** como una matriz de cadenas. La posición en la matriz determina los valores que puede pasar, y es equivalente al número de restricciones.  
+El segundo parámetro opcional del método **GetSchema** son las restricciones que se usan para limitar la cantidad de información de esquema devuelta. Este parámetro se pasa al método **GetSchema** como una matriz de cadenas. La posición en la matriz determina los valores que puede pasar, y es equivalente al número de restricciones.  
   
  Por ejemplo, en la tabla siguiente se describen las restricciones que admite la colección de esquemas "Tables" utilizando el proveedor de datos .NET Framework para SQL Server. Las restricciones adicionales para las colecciones de esquemas de SQL Server se muestran al final de este tema.  
   
@@ -27,7 +28,7 @@ El segundo parámetro opcional del método **GetSchema** son las restricciones q
   
 ## <a name="specifying-restriction-values"></a>Especificación de los valores de restricción  
 
- Para utilizar una de las restricciones de la colección de esquemas "Tables", basta con crear una matriz de cadenas con cuatro elementos y, después, colocar un valor en el elemento que coincida con el número de restricción. Por ejemplo, para restringir las tablas devueltas por el método **GetSchema** solo a las tablas del esquema "sales", establezca el segundo elemento de la matriz en "sales" antes de pasarlo al método **GetSchema** .  
+ Para utilizar una de las restricciones de la colección de esquemas "Tables", basta con crear una matriz de cadenas con cuatro elementos y, después, colocar un valor en el elemento que coincida con el número de restricción. Por ejemplo, para restringir las tablas devueltas por el método **GetSchema** solo a las del esquema "Sales", establezca el segundo elemento de la matriz en "Sales" antes de pasarlo al método **GetSchema**.  
   
 > [!NOTE]
 > Las colecciones con restricciones para `SqlClient` y `OracleClient` tienen una columna `ParameterName` adicional. La columna de valor predeterminado de restricción sigue ahí para la compatibilidad con versiones anteriores, pero actualmente se omite. Para reducir el riesgo de un ataque de inyección de SQL al especificar valores de restricción, es necesario utilizar consultas parametrizadas en lugar de sustitución de cadenas.  
@@ -266,6 +267,6 @@ class Program
 |Tabla|@Table|TABLE_NAME|3|  
 |Columna|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general de ADO.NET](ado-net-overview.md)

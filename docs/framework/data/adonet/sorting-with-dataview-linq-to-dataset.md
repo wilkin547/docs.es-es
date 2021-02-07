@@ -1,20 +1,21 @@
 ---
+description: 'Obtener más información acerca de: ordenar con DataView (LINQ to DataSet)'
 title: Ordenar con DataView (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: d80c00a4b06a31f61a521e7206c204c02106748a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ac07e5bc2c74a5724a4497d630d7352694ac9a7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175283"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718686"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Ordenar con DataView (LINQ to DataSet)
 
-La capacidad de ordenar datos basándose en criterios específicos y, a continuación, presentarlos a un cliente mediante un control de interfaz de usuario es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de ordenar datos y devolver filas de datos ordenados según criterios de ordenación específicos. Además de las funciones de ordenación basadas en cadenas, <xref:System.Data.DataView> también permite usar expresiones LINQ (Language-Integrated Query) para los criterios de ordenación. Las expresiones LINQ permiten operaciones de ordenación mucho más complejas y eficaces que la ordenación basada en cadena. En este tema se describen ambos enfoques de ordenación utilizando <xref:System.Data.DataView>.  
+La capacidad de ordenar datos basándose en criterios específicos y, a continuación, presentarlos a un cliente mediante un control de interfaz de usuario es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de ordenar datos y devolver filas de datos ordenados según criterios de ordenación específicos. Además de las funciones de ordenación basadas en cadenas, <xref:System.Data.DataView> también permite usar expresiones de Language-Integrated Query (LINQ) para los criterios de ordenación. Las expresiones LINQ permiten operaciones de ordenación mucho más complejas y eficaces que la ordenación basada en cadena. En este tema se describen ambos enfoques de ordenación utilizando <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Crear DataView desde una consulta con información de ordenación  
 
@@ -92,7 +93,7 @@ La capacidad de ordenar datos basándose en criterios específicos y, a continua
  [!code-csharp[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearsort2)]
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enlace de datos y LINQ to DataSet](data-binding-and-linq-to-dataset.md)
 - [Filtrado con DataView](filtering-with-dataview-linq-to-dataset.md)

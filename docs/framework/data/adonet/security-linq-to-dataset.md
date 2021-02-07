@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: seguridad (LINQ to DataSet)'
 title: Seguridad (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-ms.openlocfilehash: 03a5f562cb6dda8579d7cbdca56a60c6da34a576
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 30a57980047e38ffca8af6ca5987517619ce0d45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186931"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718855"
 ---
 # <a name="security-linq-to-dataset"></a>Seguridad (LINQ to DataSet)
 
@@ -25,6 +26,6 @@ En este tema se describen los problemas de seguridad de LINQ to DataSet.
   
  Cualquier entrada derivada directa o indirectamente del usuario o de un agente externo puede inyectar contenido que aproveche la sintaxis del lenguaje de destino para realizar acciones no autorizadas. Esto se conoce como ataque de inyección de SQL porque en el patrón de ataque el idioma de destino es Transact-SQL. La entrada de usuario inyectada directamente en la consulta se utiliza para quitar una tabla de base de datos, provocar un ataque de denegación de servicio o cambiar la naturaleza de la operación que se está realizando. Aunque la composición de consultas es posible en LINQ to DataSet, se realiza a través de la API del modelo de objetos. LINQ to DataSet consultas no se componen mediante la manipulación o concatenación de cadenas, como en Transact-SQL, y no son susceptibles de ataques de inyección de SQL en el sentido tradicional.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Guía de programación](programming-guide-linq-to-dataset.md)

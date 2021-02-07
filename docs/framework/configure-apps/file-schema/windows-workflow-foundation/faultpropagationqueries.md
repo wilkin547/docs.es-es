@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <faultPropagationQueries>'
 title: <faultPropagationQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
-ms.openlocfilehash: 24e9136729df1352ebb1e665d1ebaf0ce9dc28a5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 13bd19a3673846bfbd641cd2f8eeafc20b8186f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175842"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719075"
 ---
 # \<faultPropagationQueries>
 
@@ -58,7 +59,7 @@ Representa una colección de consultas que se utilizan para realizar el seguimie
 |-------------|-----------------|  
 |[\<workflow>](workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad **activityDefinitionId** .|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>

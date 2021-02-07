@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <appDomainResourceMonitoring> elemento'
 title: <appDomainResourceMonitoring> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-ms.openlocfilehash: 9ecf2e382b5d483377df871835793219b3f74760
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aee85386e6d0af2ca4fd30c0ad8fe69bae240315
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170277"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719297"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring> (Elemento)
 
@@ -75,7 +76,7 @@ Indica el runtime para recopilar estadísticas de todos los dominios de aplicaci
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [Esquema de la configuración de Common Language Runtime](index.md)

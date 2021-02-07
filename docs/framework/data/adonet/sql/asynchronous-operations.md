@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: operaciones asincrónicas'
 title: Operaciones asincrónicas
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: f94a33b1ff06b5433f61687b8e28096ea37b412a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 415da1c8a9891bcca13ad26cbbc4c09bfd8909f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197591"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718569"
 ---
 # <a name="asynchronous-operations"></a>Operaciones asincrónicas
 
@@ -31,7 +32,7 @@ Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden t
  [Sondear aplicaciones de consola](polling-in-console-applications.md)  
  Proporciona un ejemplo que muestra el uso del sondeo para esperar a que se complete la ejecución de un comando asincrónico desde una aplicación de consola. Esta técnica también es válida en una biblioteca de clases u otra aplicación sin una interfaz de usuario.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [SQL Server y ADO.NET](index.md)
 - [Llamada a métodos sincrónicos de forma asincrónica](../../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)

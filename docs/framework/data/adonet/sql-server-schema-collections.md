@@ -1,17 +1,18 @@
 ---
+description: 'Más información acerca de: SQL Server de las colecciones de esquemas'
 title: Colecciones de esquemas de SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: ebb0cea20aede3d04e37536c7c615678e109337a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0299daada77b6968a0b1f875956da7bd2a221322
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197669"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718673"
 ---
 # <a name="sql-server-schema-collections"></a>Colecciones de esquemas de SQL Server
 
-El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecciones de esquemas adicionales, además de las colecciones de esquemas comunes. Las colecciones de esquemas varían ligeramente respecto de la versión de SQL Server que está utilizando. Para determinar la lista de colecciones de esquemas admitidas, llame al método **GetSchema** sin argumentos o con el nombre de la colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean.  
+El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecciones de esquemas adicionales, además de las colecciones de esquemas comunes. Las colecciones de esquemas varían ligeramente respecto de la versión de SQL Server que está utilizando. Para determinar la lista de colecciones de esquemas admitidas, llame al método **GetSchema** sin argumentos o con el nombre de colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean.  
   
 ## <a name="databases"></a>Bases de datos  
   
@@ -53,7 +54,7 @@ El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecci
   
 |ColumnName|DataType|Descripción|  
 |----------------|--------------|-----------------|  
-|type_desc|String|El tipo de índice debe ser uno de los valores siguientes:<br /><br /> -MONTÓN<br />-AGRUPAdo<br />-Nonclustered<br />-XML<br />-ESPACIAL|  
+|type_desc|String|El tipo de índice debe ser uno de los valores siguientes:<br /><br /> -   HEAP<br />-   CLUSTERED<br />-   NONCLUSTERED<br />-   XML<br />-   SPATIAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -249,12 +250,12 @@ El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecci
 |----------------|--------------|-----------------|  
 |assembly_name|String|Nombre de archivo del ensamblado.|  
 |udt_name|String|Nombre de clase del ensamblado.|  
-|version_major|Objeto|Número de versión principal.|  
-|version_minor|Objeto|Número de versión secundaria.|  
-|version_build|Objeto|Número de compilación.|  
-|version_revision|Objeto|Número de revisión.|  
-|culture_info|Objeto|La referencia cultural asociada con este tipo definido por el usuario.|  
-|public_key|Objeto|La clave pública que utiliza este ensamblado.|  
+|version_major|Object|Número de versión principal.|  
+|version_minor|Object|Número de versión secundaria.|  
+|version_build|Object|Número de compilación.|  
+|version_revision|Object|Número de revisión.|  
+|culture_info|Object|La referencia cultural asociada con este tipo definido por el usuario.|  
+|public_key|Object|La clave pública que utiliza este ensamblado.|  
 |is_fixed_length|Boolean|Especifica si la longitud del tipo es siempre igual que max_length.|  
 |max_length|Int16|Longitud máxima del tipo en bytes.|  
 |Create_Date|DateTime|Fecha en que se creó o registró el ensamblado.|  
@@ -262,5 +263,5 @@ El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecci
   
 ## <a name="see-also"></a>Consulte también
 
-- [Recuperar información del esquema de la base de datos](retrieving-database-schema-information.md)
+- [Recuperación de la información del esquema de la base de datos](retrieving-database-schema-information.md)
 - [Información general de ADO.NET](ado-net-overview.md)

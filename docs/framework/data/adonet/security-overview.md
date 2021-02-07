@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Introducción a la seguridad'
 title: Introducción a la seguridad
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: ede9b24828da74c043bed103595073c4607c51f2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3aa6e5cbe444e9cfc417d79defce7e89a2034f71
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718829"
 ---
 # <a name="security-overview"></a>Introducción a la seguridad
 
@@ -27,9 +28,9 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 
  El modelo de amenazas es un enfoque repetitivo en la evaluación de las vulnerabilidades de la aplicación, que se usa para detectar las vulnerabilidades más peligrosas, ya que éstas exponen los datos más confidenciales. Una vez identificadas, las vulnerabilidades se clasifican en función de su gravedad y se crea un conjunto con prioridades de medidas para contrarrestar las amenazas.
 
-Para obtener más información, vea los siguientes recursos:
+Para obtener más información, consulte los siguientes recursos:
 
-|Recurso|Descripción|
+|Resource|Descripción|
 |--------------|-----------------|
 |El sitio de [modelado de amenazas](https://www.microsoft.com/securityengineering/sdl/threatmodeling) en el portal de ingeniería de seguridad|Los recursos de esta página le ayudarán a entender el proceso de modelo de amenazas y a desarrollar modelos de amenazas que puede usar para proteger sus propias aplicaciones|
 
@@ -43,7 +44,7 @@ Para obtener más información, vea los siguientes recursos:
 
 Para obtener más información sobre cómo proteger las aplicaciones, consulte los siguientes recursos:
 
-|Recurso|Descripción|
+|Resource|Descripción|
 |--------------|-----------------|
 |[Protección de aplicaciones](/visualstudio/ide/securing-applications)|Contiene vínculos a temas generales de la seguridad. Asimismo, incluye vínculos a temas sobre la protección de las aplicaciones distribuidas, aplicaciones web, aplicaciones móviles y de escritorio.|
 
@@ -67,9 +68,9 @@ La seguridad de acceso del código (CAS) es un mecanismo que ayuda a limitar el 
 
 Para reducir los daños que se pueden producir cuando un ataque tiene éxito, elija un contexto de seguridad para el código de forma que se conceda acceso única y exclusivamente a los recursos necesarios para realizar el trabajo.
 
-Para obtener más información, vea los siguientes recursos:
+Para obtener más información, consulte los siguientes recursos:
 
-|Recurso|Descripción|
+|Resource|Descripción|
 |--------------|-----------------|
 |[Seguridad de acceso del código y ADO.NET](code-access-security.md)|Describe las interacciones entre la seguridad de acceso del código, la seguridad basada en funciones y los entornos de confianza parcial desde la perspectiva de una aplicación ADO.NET.|
 |[Seguridad de acceso del código](../../misc/code-access-security.md)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|
@@ -90,9 +91,9 @@ El principio de privilegios mínimos también se aplica al origen de los datos. 
 
 - Habilitar el registro y la auditoría de seguridad en la base de datos que se utiliza, de forma que se reciba una alerta en caso de infracciones de seguridad.
 
-Para obtener más información, vea los siguientes recursos:
+Para obtener más información, consulte los siguientes recursos:
 
-|Recurso|Descripción|
+|Resource|Descripción|
 |--------------|-----------------|
 |[Seguridad de SQL Server](./sql/sql-server-security.md)|Proporciona una introducción general a la seguridad de SQL Server con escenarios de aplicación que orientan en la creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.|
 |[Recomendaciones para las estrategias de acceso a datos](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|
@@ -101,14 +102,14 @@ Para obtener más información, vea los siguientes recursos:
 
 La administración inadecuada de la directiva de seguridad de acceso del código (CAS) puede crear puntos débiles en la seguridad. Cuando se utiliza una aplicación, deben seguirse las técnicas de supervisión de seguridad y deben evaluarse los riesgos a medida que surgen nuevas amenazas.
 
-Para obtener más información, vea los siguientes recursos:
+Para obtener más información, consulte los siguientes recursos:
 
-|Recurso|Descripción|
+|Resource|Descripción|
 |--------------|-----------------|
 |[Administración de directivas de seguridad](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Proporciona información sobre la creación y administración de la directiva de seguridad.|
 |[Prácticas recomendadas de la Directiva de seguridad](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Seguridad en .NET](../../../standard/security/index.md)
