@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: funciones de cadena (Visual Basic)'
 title: Funciones de cadena
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 778e57eadd75baf1aabd100f9d8d41a490f79a04
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c121bc3de66caf748426b5cd04d049b30bf78bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731157"
 ---
 # <a name="string-functions-visual-basic"></a>Funciones de cadena (Visual Basic)
 
@@ -87,7 +88,7 @@ En este ejemplo se muestran los diversos usos de la función `Format` para dar f
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](../keywords/index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

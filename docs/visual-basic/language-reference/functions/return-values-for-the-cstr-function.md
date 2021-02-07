@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: valores devueltos para la función CStr (Visual Basic)'
 title: Valores devueltos para la función CStr
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: cc5e5cc437175e9aebfba559488ca74283faa9ad
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ce45059db8ff8e926954014a09379ee54f1caf30
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870154"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731152"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>Valores devueltos para la función CStr (Visual Basic)
 
@@ -25,7 +26,7 @@ En la tabla siguiente se describen los valores devueltos para `CStr` para distin
 |Si el `expression` tipo es|Devoluciones de `CStr`|  
 |-----------------------------|--------------------|  
 |[Tipo de datos Boolean](../data-types/boolean-data-type.md)|Cadena que contiene "true" o "false".|  
-|[Date (tipo de datos)](../data-types/date-data-type.md)|Cadena que contiene un `Date` valor (fecha y hora) en el formato de fecha corta del sistema.|  
+|[Tipo de datos Date](../data-types/date-data-type.md)|Cadena que contiene un `Date` valor (fecha y hora) en el formato de fecha corta del sistema.|  
 |[Tipos de datos numéricos](../../programming-guide/language-features/data-types/numeric-data-types.md)|Cadena que representa el número.|  
   
 ## <a name="cstr-and-date"></a>CStr y Date  
@@ -35,9 +36,9 @@ En la tabla siguiente se describen los valores devueltos para `CStr` para distin
 > [!NOTE]
 > La `CStr` función realiza su conversión en función de la configuración de la referencia cultural actual de la aplicación. Para obtener la representación en forma de cadena de un número en una referencia cultural determinada, use el método del número `ToString(IFormatProvider)` . Por ejemplo, <xref:System.Double.ToString%2A?displayProperty=nameWithType> se usa al convertir un valor de tipo `Double` en `String` .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
 - [Type Conversion Functions](type-conversion-functions.md)
 - [Tipo de datos Boolean](../data-types/boolean-data-type.md)
-- [Date (tipo de datos)](../data-types/date-data-type.md)
+- [Tipo de datos Date](../data-types/date-data-type.md)

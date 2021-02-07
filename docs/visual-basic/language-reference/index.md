@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: referencia del lenguaje Visual Basic'
 title: Referencia del lenguaje
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: dd7b26d7b5acf924c3eac39b7a67c35245945aaa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 47a299437b5f3ceab1cb24b8a09666366c546a64
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362480"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731037"
 ---
 # <a name="visual-basic-language-reference"></a>Referencia del lenguaje Visual Basic
 
@@ -32,16 +33,16 @@ En esta sección se proporciona información de referencia sobre diversos aspect
  [Palabras clave](keywords/index.md)  
  Enumera todas las palabras clave de Visual Basic y proporciona vínculos a más información.  
   
- [Atributos (Visual Basic)](attributes.md)  
+ [Atributos de Visual Basic](attributes.md)  
  Documenta los atributos disponibles en Visual Basic.  
   
  [Constantes y enumeraciones](constants-and-enumerations.md)  
  Documenta las constantes y enumeraciones disponibles en Visual Basic.  
   
- [Tipos de datos](data-types/index.md)  
+ [Tipo de datos](data-types/index.md)  
  Documenta los tipos de datos disponibles en Visual Basic.  
   
- [Roga](directives/index.md)  
+ [Directivas](directives/index.md)  
  Documenta las directivas de compilador disponibles en Visual Basic.  
   
  [Funciones](functions/index.md)  
@@ -53,10 +54,10 @@ En esta sección se proporciona información de referencia sobre diversos aspect
  [Módulos](modules.md)  
  Documenta los módulos disponibles en Visual Basic y sus miembros.  
   
- [Relación](nothing.md)  
+ [Nothing](nothing.md)  
  Describe el valor predeterminado de cualquier tipo de datos.  
   
- [Objects](objects/index.md)  
+ [Objetos](objects/index.md)  
  Documenta los objetos disponibles en Visual Basic y sus miembros.  
   
  [Operadores](operators/index.md)  
@@ -66,7 +67,7 @@ En esta sección se proporciona información de referencia sobre diversos aspect
  Documenta las propiedades disponibles en Visual Basic.  
   
  [Consultas](queries/index.md)  
- Proporciona información de referencia sobre el uso de expresiones LINQ (Language-Integrated Query) en el código.  
+ Proporciona información de referencia sobre el uso de expresiones de Language-Integrated Query (LINQ) en el código.  
   
  [Instrucciones](statements/index.md)  
  Documenta la declaración y las instrucciones ejecutables disponibles en Visual Basic.  
