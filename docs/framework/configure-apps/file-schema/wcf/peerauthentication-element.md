@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <peerAuthentication> elemento'
 title: <peerAuthentication> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 7e4f86c361dc3ade5dedf4017921516357bb9a58
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 887b65a4a2a7da9d545bc25636be0ea6c646f6fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181588"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683728"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication> (Elemento)
 
@@ -43,8 +44,8 @@ Especifica las opciones de autenticación de clientes punto a punto.
 |---------------|-----------------|  
 |`customCertificateValidatorType`|Cadena opcional. Tipo y ensamblado utilizados para validar un tipo personalizado. Se debe establecer este atributo cuando `certificateValidationMode` está establecido en `Custom`.|  
 |`certificateValidationMode`|Enumeración opcional. Especifica uno de los tres modos utilizados para validar las credenciales. Si se establece en `Custom`, también debe proporcionarse un `customCertificateValidator`. De manera predeterminada, es `ChainTrust`.|  
-|`revocationMode`|Enumeración opcional. Uno de los modos utilizados para comprobar listas de certificados revocadas (CRL). El valor predeterminado es `Online`.|  
-|`trustedStoreLocation`|Enumeración opcional. Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`. Se utiliza este valor cuando un certificado del servicio se negocia al cliente. La validación se realiza en el almacén de **personas de confianza** en la ubicación de almacén especificada. El valor predeterminado es `CurrentUser`.|  
+|`revocationMode`|Enumeración opcional. Uno de los modos utilizados para comprobar listas de certificados revocadas (CRL). De manera predeterminada, es `Online`.|  
+|`trustedStoreLocation`|Enumeración opcional. Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`. Se utiliza este valor cuando un certificado del servicio se negocia al cliente. La validación se realiza en el almacén de **personas de confianza** en la ubicación de almacén especificada. De manera predeterminada, es `CurrentUser`.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>Atributo customCertificateValidatorType  
   
@@ -56,19 +57,19 @@ Especifica las opciones de autenticación de clientes punto a punto.
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Uno de los siguientes valores: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. El valor predeterminado es `ChainTrust`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
+|Enumeración|Uno de los siguientes valores: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. De manera predeterminada, es `ChainTrust`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>Atributo revocationMode  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Uno de los siguientes valores: `NoCheck`, `Online`, `Offline`. El valor predeterminado es `Online`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
+|Enumeración|Uno de los siguientes valores: `NoCheck`, `Online`, `Offline`. De manera predeterminada, es `Online`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>Atributo trustedStoreLocation  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Enumeración|Puede ser uno de los siguientes valores: `LocalMachine` o `CurrentUser`. El valor predeterminado es `CurrentUser`. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.|  
+|Enumeración|Puede ser uno de los siguientes valores: `LocalMachine` o `CurrentUser`. De manera predeterminada, es `CurrentUser`. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
 
@@ -106,7 +107,7 @@ Especifica las opciones de autenticación de clientes punto a punto.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
@@ -114,7 +115,7 @@ Especifica las opciones de autenticación de clientes punto a punto.
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Conexión de redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [Autenticación del mensaje del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [Autenticación personalizada de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protección de las aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <namedPipeTransport>'
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 4582066098feaf50b33b083de56bcb8c3e04df0f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 68714404492be92ce789dbde95a39199f5de16d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204624"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684105"
 ---
 # \<namedPipeTransport>
 
@@ -77,7 +78,7 @@ Este transporte utiliza los URI del formulario "net.pipe://hostname/path." Otros
   
 El elemento `namedPipeTransport` es el punto inicial para crear un enlace personalizado que implementa el protocolo de transporte de canalizaciones con nombre. Este transporte se utiliza para la comunicación entre WCF y Windows Communication Foundation (WCF) en el equipo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>

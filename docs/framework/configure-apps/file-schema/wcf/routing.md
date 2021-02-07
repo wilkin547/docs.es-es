@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <routing>'
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: fcf2d4eec93fd7127c6f800e1c739ad1fac49203
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 62222b527a14310b66015d4fdc4503e6cff25c8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683351"
 ---
 # \<routing>
 
@@ -62,6 +63,6 @@ None
 | --- | ----------- |
 | **\<system.ServiceModel>** | Elemento raíz de todos los elementos de configuración de WCF. |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>

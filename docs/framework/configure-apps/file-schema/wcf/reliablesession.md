@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <reliableSession>'
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: ec69d9194d98302a4744e290f23fbb150b2e87cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b5798326be9b376ece4e590f068f5b5e71bd878
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683416"
 ---
 # \<reliableSession>
 
@@ -42,12 +43,12 @@ Define el valor para los mensajes de confianza de WS. Cuando este elemento se ag
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |acknowledgementInterval|<xref:System.TimeSpan> que contiene el intervalo de tiempo máximo que el canal va a esperar para enviar un reconocimiento para los mensajes recibidos hasta ese punto. El valor predeterminado es 00:00:02.|  
-|flowControlEnabled|Un valor booleano que indica si se activa el control de flujo avanzado, una implementación específica de Microsoft de control de flujo para la mensajería de confianza de WS. El valor predeterminado es `true`.|  
+|flowControlEnabled|Un valor booleano que indica si se activa el control de flujo avanzado, una implementación específica de Microsoft de control de flujo para la mensajería de confianza de WS. De manera predeterminada, es `true`.|  
 |inactivityTimeOut|Un <xref:System.TimeSpan> que especifica el tiempo máximo durante el cual el canal va a permitir a la otra parte de la comunicación no enviar ningún mensaje sin que se produzca un error. El valor predeterminado es 00:10:00.<br /><br /> La actividad en un canal se define como la recepción de una aplicación o mensajes de infraestructura. Esta propiedad controla el tiempo máximo para mantener activa una sesión inactiva. Si transcurre más tiempo sin actividad, la sesión es finalizada por la infraestructura y los errores del canal. **Nota:**  No es necesario que la aplicación envíe mensajes periódicamente para mantener la conexión activa.|  
 |maxPendingChannels|Un entero que especifica el número máximo de canales que pueden esperar en el agente de escucha para ser aceptados. Este valor debe estar comprendido entre 1 y 16384, ambos inclusive. El valor predeterminado es 4.<br /><br /> Los canales están pendientes cuando esperan a ser aceptados. Una vez alcanzado ese límite, no se crea ningún canal. Más bien, se colocan en modo pendiente hasta que este número baje (al aceptar los canales pendientes). Éste es un límite por generador.<br /><br /> Cuando se alcanza el umbral y una aplicación remota intenta establecer una nueva sesión fiable, se deniega la solicitud y falla la operación abierta que pidió confirmación. Este límite no se aplica al número de canales pendientes de la salida.|  
 |maxRetryCount|Un entero que especifica el número máximo de horas que un canal fiable intenta retransmitir un mensaje para el que no ha recibido reconocimiento, yendo a Enviar en su canal subyacente.<br /><br /> Este valor debería ser mayor que cero. El valor predeterminado es 8.<br /><br /> Este valor debería ser un entero mayor que cero. Si un reconocimiento no se recibe después de la última retransmisión, el canal falla.<br /><br /> Se considera que un mensaje es transferido si el destinatario ha confirmado su entrega.<br /><br /> Si no se ha recibido reconocimiento tras un cierto tiempo de un mensaje que se ha transmitido, la infraestructura retransmite automáticamente el mensaje. La infraestructura intenta reenviar el mensaje el máximo número de veces especificado por esta propiedad. Si un reconocimiento no se recibe después de la última retransmisión, el canal falla.<br /><br /> La infraestructura utiliza un algoritmo de espera exponencial para determinar cuándo retransmitir, en función del tiempo medio calculado de ida y vuelta. El tiempo empieza inicialmente 1 segundo antes de la retransmisión y duplica el retraso en cada intento, lo que da como resultado aproximadamente 8,5 minutos que pasan entre el primer intento de la transmisión y el último intento de la retransmisión. El tiempo del primer intento de retransmisión se ajusta al cálculo del tiempo de ida y vuelta y varía según el período de tiempo adicional que resulta del número de intentos que se necesitan. Esto permite que el tiempo de retransmisión se adapte dinámicamente a las condiciones variantes de la red.|  
 |maxTransferWindowSize|Un entero que especifica el tamaño máximo del búfer. Los valores válidos están comprendidos entre 1 y 4096, ambos incluidos.<br /><br /> En lo que respecta al cliente, este atributo define el tamaño máximo del búfer utilizado por un canal fiable para contener mensajes no confirmados todavía por el receptor. La unidad de la cuota es un mensaje. Si el búfer está lleno, las operaciones de ENVÍO siguientes se bloquean.<br /><br /> En lo que respecta al receptor, este atributo define el tamaño máximo del búfer utilizado por el canal para almacenar mensajes entrantes no distribuidos en la aplicación. Si el búfer está lleno, los mensajes siguientes son quitados por el receptor y requieren la retransmisión del cliente.|  
-|ordered|Un booleano que especifica si se garantiza que los mensajes lleguen en el orden en el que fueron enviados. Si este valor es `false`, los mensajes pueden llegar desordenados. El valor predeterminado es `true`.|  
+|ordered|Un booleano que especifica si se garantiza que los mensajes lleguen en el orden en el que fueron enviados. Si este valor es `false`, los mensajes pueden llegar desordenados. De manera predeterminada, es `true`.|  
 |reliableMessagingVersion|Un valor válido de <xref:System.ServiceModel.ReliableMessagingVersion> que especifica la versión WS-ReliableMessaging que se va a utilizar.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -125,7 +126,7 @@ Define el valor para los mensajes de confianza de WS. Cuando este elemento se ag
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

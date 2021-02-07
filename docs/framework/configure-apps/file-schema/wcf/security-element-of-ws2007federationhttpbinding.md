@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca <security> de: elemento de <ws2007FederationHttpBinding>'
 title: <security> elemento de <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: 943ccc241aef15b58661699408b085d98cf86c3b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0caa2c3791c0dc3c8db0d9ee27175a28e52f6baa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183707"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683299"
 ---
 # <a name="security-element-of-ws2007federationhttpbinding"></a>\<security> elemento de \<ws2007FederationHttpBinding>
 
@@ -52,7 +53,7 @@ Define la configuración de seguridad del [\<ws2007FederationHttpBinding>](ws200
 |Value|Descripción|  
 |-----------|-----------------|  
 |None|El mensaje SOAP no es seguro durante la transferencia.|  
-|Mensaje|La integridad, confidencialidad, autenticación de servidor y autenticación del cliente se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo se cifra y firma. El servicio se debe configurar con un certificado. La autenticación del cliente está basada en el token emitido al cliente por un servicio del token de seguridad.|  
+|Message|La integridad, confidencialidad, autenticación de servidor y autenticación del cliente se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo se cifra y firma. El servicio se debe configurar con un certificado. La autenticación del cliente está basada en el token emitido al cliente por un servicio del token de seguridad.|  
 |TransportWithMessageCredential|HTTPS proporciona integridad, confidencialidad y autenticación del servidor. El servicio se debe configurar con un certificado. La autenticación del cliente se proporciona por medio de la seguridad del mensaje SOAP y está basada en el token emitido al cliente por un servicio de token de seguridad.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -67,7 +68,7 @@ Define la configuración de seguridad del [\<ws2007FederationHttpBinding>](ws200
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todas las funciones de enlace de [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.WSFederationHttpSecurity>
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>

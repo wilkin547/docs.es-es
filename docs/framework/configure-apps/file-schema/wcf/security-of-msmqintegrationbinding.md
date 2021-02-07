@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <msmqIntegrationBinding>'
 title: <security> de <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: be2f48f7d9c3be4ea0a5fe95436930b3f23c7551
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ad4cb89599198661d764cfeb985609be027c0eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170069"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683208"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<security> de \<msmqIntegrationBinding>
 
@@ -60,7 +61,7 @@ Define la configuración de seguridad de transporte para el canal de integració
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Elemento de enlace de [\<msmqIntegrationBinding>](msmqintegrationbinding.md) .|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>

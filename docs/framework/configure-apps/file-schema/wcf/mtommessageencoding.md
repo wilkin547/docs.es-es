@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <mtomMessageEncoding>'
 title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: 76b83381849b8519c1b758ef52c6d5c3f682f9b7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 37ac0be5f3de84a4c310b8ec2a09ed6f3c4def56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204637"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684118"
 ---
 # \<mtomMessageEncoding>
 
@@ -71,7 +72,7 @@ Especifica la codificación y la versión del mensaje utilizada para los mensaje
                      textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.MtomMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

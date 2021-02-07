@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <resolver>'
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: 6b1fd8e916aef2425377c45a0c85e37773f3ca28
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 338f9342d1ef14f3d96dada17fb9f6d893c86bee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683364"
 ---
 # \<resolver>
 
@@ -51,7 +52,7 @@ Especifica una resolución del mismo nivel que se utiliza para resolver un id. d
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todas las funciones de enlace de [\<netPeerTcpBinding>](netpeertcpbinding.md) .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una resolución de nombres del mismo nivel es un servicio de descubrimiento utilizado por los canales del mismo nivel para buscar nodos del mismo nivel que participen en una malla del mismo nivel. También se utiliza para "registrar" un nodo con una malla del mismo nivel, el mecanismo por el que se conoce el nodo del mismo nivel y está disponible en la malla del mismo nivel. Para obtener más información sobre las resoluciones del mismo nivel, consulte [solucionadores del mismo nivel](../../../wcf/feature-details/peer-resolvers.md).  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <netHttpBinding>'
 title: <security> de <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 97c52fa4f062ed0c65d5b1a8ca47a1439ab04cf5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 70d6363c0ac7fa00d83880ddc8c873548b385a29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736482"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683130"
 ---
 # <a name="security-of-nethttpbinding"></a>\<security> de \<netHttpBinding>
 
@@ -65,11 +66,11 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |-------------|-----------------|
 |binding|Elemento de enlace de [\<basicHttpBinding>](basichttpbinding.md) .|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
  De forma predeterminada, no se protege el mensaje SOAP y no se autentica el cliente. Este elemento le permite establecer la configuración de seguridad adicional para el elemento `netHttpBinding`.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.NetHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetHttpBindingElement.Security%2A>  

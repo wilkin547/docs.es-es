@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <msmqTransportSecurity>'
 title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: 9d28f3f08e9c3984c055567df03f2839709a1522
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d5a681c287749598c8c80470ea6d800f1687a80d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204650"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684170"
 ---
 # \<msmqTransportSecurity>
 
@@ -59,7 +60,7 @@ Especifica la configuración de seguridad de transporte MSMQ para un enlace pers
 
  Para obtener más información sobre la seguridad de transporte, vea [seguridad de transporte](../../../wcf/feature-details/transport-security.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>

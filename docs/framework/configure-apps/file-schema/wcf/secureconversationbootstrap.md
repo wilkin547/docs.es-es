@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <secureConversationBootstrap>'
 title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: 02072c55e299d9e3a5d53b61c891a9ee9837ada0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bbf0ed0df485ba76f0f179fdfc981802403e4e57
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183720"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683312"
 ---
 # \<secureConversationBootstrap>
 
@@ -21,7 +22,7 @@ Especifica los valores predeterminados usados para iniciar un servicio de conver
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<secureConversationBootstrap>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```xml  
 <secureConversationBootstrap allowSerializedSigningTokenOnReply="Boolean"
@@ -53,14 +54,14 @@ Especifica los valores predeterminados usados para iniciar un servicio de conver
 |---------------|-----------------|  
 |`allowSerializedSigningTokenOnReply`|Opcional. Valor booleano que especifica si un token serializado se puede usar como respuesta. El valor predeterminado es `false`. Cuando use un enlace dual, el valor de la configuración predeterminada es `true`. Se ignorarán los cambios de configuración realizados.|  
 |`authenticationMode`|Especifica el modo de autenticación de SOAP utilizado entre el iniciador y el respondedor.<br /><br /> El valor predeterminado es sspiNegotiated.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.Configuration.AuthenticationMode>.|  
-|`defaultAlgorithmSuite`|El conjunto de algoritmos de seguridad define una variedad de algoritmos como la canonización, resumen, encapsulado de claves, firma, cifrado y derivación de claves. Cada uno de los conjuntos de algoritmo de seguridad define los valores para estos parámetros diferentes. La seguridad basada en mensaje se logra utilizando estos algoritmos.<br /><br /> Se utiliza este atributo al trabajar con una plataforma diferente que opta por un conjunto de algoritmos diferente que el valor predeterminado. Debe tener presentes las ventajas y desventajas de los algoritmos relevantes al efectuar modificaciones en esta configuración. Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. El valor predeterminado es `Basic256`.|  
-|`includeTimestamp`|Valor booleano que especifica si las marcas de tiempo se incluyen en cada mensaje. El valor predeterminado es `true`.|  
+|`defaultAlgorithmSuite`|El conjunto de algoritmos de seguridad define una variedad de algoritmos como la canonización, resumen, encapsulado de claves, firma, cifrado y derivación de claves. Cada uno de los conjuntos de algoritmo de seguridad define los valores para estos parámetros diferentes. La seguridad basada en mensaje se logra utilizando estos algoritmos.<br /><br /> Se utiliza este atributo al trabajar con una plataforma diferente que opta por un conjunto de algoritmos diferente que el valor predeterminado. Debe tener presentes las ventajas y desventajas de los algoritmos relevantes al efectuar modificaciones en esta configuración. Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. De manera predeterminada, es `Basic256`.|  
+|`includeTimestamp`|Valor booleano que especifica si las marcas de tiempo se incluyen en cada mensaje. De manera predeterminada, es `true`.|  
 |`keyEntropyMode`|Especifica la manera en que se calculan las claves para proteger mensajes. Las claves pueden estar basadas en el material de clave de cliente únicamente, en el servicio de material clave, o en una combinación de ambos. Los valores válidos son:<br /><br /> -ClientEntropy: la clave de sesión se basa en el material de clave proporcionado por el cliente.<br />-ServerEntropy: la clave de sesión se basa en el material de clave proporcionado por el servicio.<br />-CombinedEntropy: la clave de sesión se basa en el material de clave proporcionado por el cliente y el servicio.<br /><br /> El valor predeterminado es CombinedEntropy.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
 |`messageProtectionOrder`|Establece el orden en el que los algoritmos de seguridad de nivel de mensaje se aplican al mensaje. Los valores válidos incluyen los siguientes:<br /><br /> -SignBeforeEncrypt: firmar primero y después cifrar.<br />-SignBeforeEncryptAndEncryptSignature: firmar, cifrar y cifrar la firma.<br />-EncryptBeforeSign: Cifre primero y luego firme.<br /><br /> SignBeforeEncryptAndEncryptSignature es el valor predeterminado cuando se usan certificados mutuos con WS-Security 1.1.  SignBeforeEncrypt es el valor predeterminado con WS-Security 1.0.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
 |`messageSecurityVersion`|Establece la versión de WS-Security que se utiliza. Los valores válidos incluyen los siguientes:<br /><br /> - WSSecurityJan2004<br />-WSSecurityXXX2005<br /><br /> El valor predeterminado es WSSecurityXXX2005. Este atributo es del tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
-|`requireDerivedKeys`|Un valor booleano que especifica si las claves se pueden derivar de las claves de prueba originales. El valor predeterminado es `true`.|  
-|`requireSecurityContextCancellation`|Un valor booleano que especifica si el contexto de seguridad debería ser cancelado y finalizado cuando no sea necesario. El valor predeterminado es `true`.|  
-|`requireSignatureConfirmation`|Un valor booleano que especifica si la confirmación de la firma de Seguridad del WS está habilitada. Cuando se establece en `true`, el respondedor confirma las firmas del mensaje. El valor predeterminado es `false`.<br /><br /> La confirmación de la firma se utiliza para confirmar que el servicio está respondiendo perfectamente a una solicitud.|  
+|`requireDerivedKeys`|Un valor booleano que especifica si las claves se pueden derivar de las claves de prueba originales. De manera predeterminada, es `true`.|  
+|`requireSecurityContextCancellation`|Un valor booleano que especifica si el contexto de seguridad debería ser cancelado y finalizado cuando no sea necesario. De manera predeterminada, es `true`.|  
+|`requireSignatureConfirmation`|Un valor booleano que especifica si la confirmación de la firma de Seguridad del WS está habilitada. Cuando se establece en `true`, el respondedor confirma las firmas del mensaje. De manera predeterminada, es `false`.<br /><br /> La confirmación de la firma se utiliza para confirmar que el servicio está respondiendo perfectamente a una solicitud.|  
 |`securityHeaderLayout`|Especifica la clasificación de los elementos en el encabezado de seguridad. Los valores válidos son:<br /><br /> Contrario. Se agregan elementos al encabezado de seguridad según el principio general de "declarar antes de usar".<br />Poco. Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: SOAP Message Security.<br />- LaxWithTimestampFirst. Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: SOAP Message Security, solo que el primer elemento en el encabezado de seguridad debe ser un elemento wsse:Timestamp.<br />- LaxWithTimestampLast. Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: SOAP Message Security, solo que el último elemento en el encabezado de seguridad debe ser un elemento wsse:Timestamp.<br /><br /> El valor predeterminado es Strict.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -77,7 +78,7 @@ Especifica los valores predeterminados usados para iniciar un servicio de conver
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
