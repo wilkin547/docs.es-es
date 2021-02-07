@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración RUNTIME_INFO_FLAGS'
 title: RUNTIME_INFO_FLAGS (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 6f4fbb40053628d60ba7f094fcb5d50a94d63e1a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 54ff62cdee6e940ae9ea8a2ce8ceff99f923d3f4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729946"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679451"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS (Enumeración)
 
@@ -42,7 +43,7 @@ typedef enum {
 } RUNTIME_INFO_FLAGS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -55,7 +56,7 @@ typedef enum {
 |`RUNTIME_INFO_REQUEST_X86`|Indica una solicitud de información sobre una versión compatible con x86 del Runtime.|  
 |`RUNTIME_INFO_UPGRADE_VERSION`|Indica que se debe incluir la información de actualización de la versión.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Las marcas de arquitectura de plataforma siguientes solo se pueden especificar de una en una y no se pueden combinar:  
   
@@ -75,6 +76,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para hosts](hosting-enumerations.md)

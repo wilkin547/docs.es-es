@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración WAIT_OPTION'
 title: WAIT_OPTION (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 962fc293-8ded-4b3b-90ce-2c21a4f1b244
 topic_type:
 - apiref
-ms.openlocfilehash: 056d41df328de5796eec9f04589205d18b408f1f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d651909e0f62f2db7478a6e0b37139d1f953196
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732806"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679152"
 ---
 # <a name="wait_option-enumeration"></a>WAIT_OPTION (Enumeración)
 
@@ -35,7 +36,7 @@ typedef enum {
 } WAIT_OPTION;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -43,7 +44,7 @@ typedef enum {
 |`WAIT_MSGPUMP`|Notifica al host que debe bombear los mensajes en el subproceso del sistema operativo actual si el subproceso se bloquea. El tiempo de ejecución especifica este valor solo en un <xref:System.Threading.ApartmentState.STA> subproceso.|  
 |`WAIT_NOTINDEADLOCK`|Notifica al host que un host no puede interrumpir la solicitud de sincronización especificada. Es decir, el host no puede devolver `HOST_E_DEADLOCK` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los métodos [IHostTaskManager:: Sleep](ihosttaskmanager-sleep-method.md) y [IHostTaskManager:: switchtotask (](ihosttaskmanager-switchtotask-method.md) toman un parámetro de este tipo.  
   
@@ -57,6 +58,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para hosts](hosting-enumerations.md)

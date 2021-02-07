@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: función LockClrVersion'
 title: LockClrVersion (Función)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 2ff08ec8f194ccc9e968b3a7ee017afe788f4b03
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 268c08cdd24a826ba92cc8865dfd036f544febcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704947"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679932"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion (Función)
 
@@ -58,7 +59,7 @@ HRESULT LockClrVersion (
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|Uno o varios argumentos son NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host llama a `LockClrVersion` antes de inicializar el CLR. `LockClrVersion` toma tres parámetros, todos ellos son devoluciones de llamada de tipo [FLockClrVersionCallback](flockclrversioncallback-function-pointer.md). Este tipo se define como se indica a continuación.  
   
@@ -96,6 +97,6 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

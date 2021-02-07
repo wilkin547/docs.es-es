@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración MALLOC_TYPE'
 title: MALLOC_TYPE (enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c02476f9-23a2-4af7-9282-aa9c42c7429b
 topic_type:
 - apiref
-ms.openlocfilehash: fe58a519d0feac0da49e7778247da1ef538f8b83
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 47eb58107d79309c34af5f0acdf614804d1f208f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679810"
 ---
 # <a name="malloc_type-enumeration"></a>MALLOC_TYPE (enumeración)
 
@@ -34,7 +35,7 @@ typedef enum {
 } MALLOC_TYPE;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -51,6 +52,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para hosts](hosting-enumerations.md)

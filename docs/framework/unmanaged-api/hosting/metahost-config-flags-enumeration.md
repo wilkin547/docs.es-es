@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración METAHOST_CONFIG_FLAGS'
 title: METAHOST_CONFIG_FLAGS (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f1e389f-ed99-4d6a-a0ba-72d7d869a01d
 topic_type:
 - apiref
-ms.openlocfilehash: 01e55659bf2a348ec763f51112cbdcd706f27c84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 56d70f50d3b4c48b7fbf1aa3be6fc11cda904638
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679646"
 ---
 # <a name="metahost_config_flags-enumeration"></a>METAHOST_CONFIG_FLAGS (Enumeración)
 
@@ -36,7 +37,7 @@ typedef enum {
 } METAHOST_CONFIG_FLAGS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -57,7 +58,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para hosts](hosting-enumerations.md)
 - [Método GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: LoadLibraryShim ((función)'
 title: LoadLibraryShim (Función)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: d5e9ba0023b6516eb6190f32bc65b2b8b6af79f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 829d64b5215fc21b2d8c8b753f5ad99212267b6a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727567"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680010"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim (Función)
 
@@ -62,7 +63,7 @@ HRESULT LoadLibraryShim (
 |S_OK|El método se completó correctamente.|  
 |CLR_E_SHIM_RUNTIMELOAD|`szDllName`La carga requiere cargar el Common Language Runtime (CLR) y no se puede cargar la versión necesaria de CLR.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta función se usa para cargar los archivos DLL que se incluyen en el paquete redistribuible de .NET Framework. No carga los archivos dll generados por el usuario.  
   
@@ -77,6 +78,6 @@ HRESULT LoadLibraryShim (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

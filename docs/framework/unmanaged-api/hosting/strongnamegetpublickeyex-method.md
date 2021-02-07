@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Strongnamegetpublickeyex ('
 title: StrongNameGetPublicKeyEx (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 8cc28d9ccd40c65d225a96b269562c9d3dfa2124
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bc9d40afc34509f852a0961823e264255125fa16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679308"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx (Método)
 
@@ -71,11 +72,11 @@ HRESULT StrongNameGetPublicKey (
 
  `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La clave pública está contenida en una estructura [PublicKeyBlob](../strong-naming/publickeyblob-structure.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En la tabla siguiente se muestra el conjunto de valores aceptados para el `uHashAlgId` parámetro.  
   
@@ -97,7 +98,7 @@ HRESULT StrongNameGetPublicKey (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)
 - [PublicKeyBlob (Estructura)](../strong-naming/publickeyblob-structure.md)

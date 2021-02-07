@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: LPTHREAD_START_ROUTINE puntero a función'
 title: puntero a la función LPTHREAD_START_ROUTINE
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-ms.openlocfilehash: c86b65e136869603f93253678108b2ffa9d388e1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f79cffb0b5290031915b453353dd47cb3959970
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679815"
 ---
 # <a name="lpthread_start_routine-function-pointer"></a>puntero a la función LPTHREAD_START_ROUTINE
 
@@ -40,7 +41,7 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
  `lpThreadParameter`  
  de Puntero al código que ha empezado a ejecutarse.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La función a la que `LPTHREAD_START_ROUTINE` apunta es una función de devolución de llamada y debe ser implementada por el escritor de la aplicación de hospedaje.  
   
@@ -54,6 +55,6 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

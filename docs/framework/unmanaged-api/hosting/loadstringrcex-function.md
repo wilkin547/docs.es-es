@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Loadstringrcex ((función)'
 title: LoadStringRCEx (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa5c9f5dd7dd63e69c2eed1f6dd8ad6f007f01f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d3fe4b97014e5093dd8d209a5e27bac4ed7b879f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727541"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679927"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx (Función)
 
@@ -69,7 +70,7 @@ HRESULT LoadStringRCEx (
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`szBuffer` es null, o `iMax` es cero (0).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el método no se completa correctamente, `szBuffer` contiene una cadena vacía.  
   
@@ -83,7 +84,7 @@ HRESULT LoadStringRCEx (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
 - [LoadStringRC (Función)](loadstringrc-function.md)

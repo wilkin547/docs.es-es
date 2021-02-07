@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorAttributeTargets ('
 title: CorAttributeTargets (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6f80df31b9da8591fac3d979ede1e9bf0f8ecfc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678502"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets (Enumeración)
 
@@ -59,7 +60,7 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -80,7 +81,7 @@ typedef enum CorAttributeTargets
 |`catAll`|El atributo puede aplicarse a cualquier elemento de la aplicación.|  
 |`catClassMembers`|El atributo se puede aplicar a un miembro de una clase.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los `CorAttributeTargets` valores de enumeración se pueden combinar con una operación OR bit a bit para obtener la combinación preferida.  
   
@@ -94,6 +95,6 @@ typedef enum CorAttributeTargets
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para metadatos](metadata-enumerations.md)

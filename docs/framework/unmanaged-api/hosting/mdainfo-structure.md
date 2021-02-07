@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura MDAInfo ('
 title: MDAInfo (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 8e88d90e3291d21888fae7aa162f84b6377658c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c42537a68d38e6cff3d70dcb796cd733ce64a1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730024"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679763"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo (Estructura)
 
@@ -34,14 +35,14 @@ typedef struct _MDAInfo {
 } MDAInfo;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`lpMDACaption`|Título del MDA actual. El título describe el tipo de error que desencadenó el `Event_MDAFired` evento.|  
 |`lpMDAMessage`|Mensaje de salida proporcionado por el MDA actual.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los asistentes para la depuración administrada (MDA) son ayudas para la depuración que funcionan junto con el Common Language Runtime (CLR) para realizar tareas como la identificación de condiciones no válidas en el motor de ejecución en tiempo de ejecución o el volcado de información adicional sobre el estado del motor. Los MDA generan mensajes XML sobre eventos que, de otro modo, son difíciles de interceptar. Son especialmente útiles para depurar las transiciones entre el código administrado y no administrado.  
   
@@ -63,7 +64,7 @@ typedef struct _MDAInfo {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de hospedaje](hosting-structures.md)
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

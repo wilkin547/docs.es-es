@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Loadstringrc ((función)'
 title: LoadStringRC (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 16f95f8fce20f2cf46d4cda214e4494bd288bf60
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 188597f9dc21b6a67fb84e91cd66b50ba5a514f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727554"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679930"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC (Función)
 
@@ -61,7 +62,7 @@ HRESULT LoadStringRC (
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`szBuffer` es null o `iMax` es cero (0).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el método no se completa correctamente, `szBuffer` contiene una cadena vacía.  
   
@@ -75,7 +76,7 @@ HRESULT LoadStringRC (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LoadStringRCEx (Función)](loadstringrcex-function.md)
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

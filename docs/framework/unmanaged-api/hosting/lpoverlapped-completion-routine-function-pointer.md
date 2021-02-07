@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: LPOVERLAPPED_COMPLETION_ROUTINE puntero a función'
 title: puntero a la función LPOVERLAPPED_COMPLETION_ROUTINE
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: a3a45a13073cf422064d28554a274e068db6f517
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6645e6a9746404a4ae355a22cf16e6d164c63bed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727515"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679841"
 ---
 # <a name="lpoverlapped_completion_routine-function-pointer"></a>puntero a la función LPOVERLAPPED_COMPLETION_ROUTINE
 
@@ -50,7 +51,7 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  `lpOverlapped`  
  de Puntero a una estructura que contiene información que se va a usar para completar la solicitud de e/s.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La función a la que `LPOVERLAPPED_COMPLETION_ROUTINE` apunta es una función de devolución de llamada y debe ser implementada por el escritor de la aplicación de hospedaje. La función de devolución de llamada permite al host procesar la solicitud de e/s completada.  
   
@@ -64,6 +65,6 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)
