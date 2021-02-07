@@ -1,20 +1,21 @@
 ---
+description: 'Más información acerca de: <variable>'
 title: <variable>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
-ms.openlocfilehash: d9b40551233f3b22db7953f1980aaf99b0ee8ae9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 187aa0b1ab0494a9bad759c504b804580a60553e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698003"
 ---
 # \<variable>
 
-<span data-ttu-id="08cfd-101">Representa una colección de variables asociada a esta consulta de actividad.</span><span class="sxs-lookup"><span data-stu-id="08cfd-101">Represents a collection of variables associated with this activity query.</span></span>  
+<span data-ttu-id="963c7-102">Representa una colección de variables asociada a esta consulta de actividad.</span><span class="sxs-lookup"><span data-stu-id="963c7-102">Represents a collection of variables associated with this activity query.</span></span>  
   
- <span data-ttu-id="08cfd-102">Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="08cfd-102">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="963c7-103">Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="963c7-103">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
@@ -26,7 +27,7 @@ ms.locfileid: "91185358"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<variables>**](variables.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<variable>**  
   
-## <a name="syntax"></a><span data-ttu-id="08cfd-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="08cfd-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="963c7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="963c7-104">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -43,29 +44,29 @@ ms.locfileid: "91185358"
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="08cfd-104">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="08cfd-104">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="963c7-105">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="963c7-105">Attributes and Elements</span></span>  
 
- <span data-ttu-id="08cfd-105">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="08cfd-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="963c7-106">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="963c7-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="08cfd-106">Atributos</span><span class="sxs-lookup"><span data-stu-id="08cfd-106">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="963c7-107">Atributos</span><span class="sxs-lookup"><span data-stu-id="963c7-107">Attributes</span></span>  
   
-|<span data-ttu-id="08cfd-107">Atributo</span><span class="sxs-lookup"><span data-stu-id="08cfd-107">Attribute</span></span>|<span data-ttu-id="08cfd-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="08cfd-108">Description</span></span>|  
+|<span data-ttu-id="963c7-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="963c7-108">Attribute</span></span>|<span data-ttu-id="963c7-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="963c7-109">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="08cfd-109">name</span><span class="sxs-lookup"><span data-stu-id="08cfd-109">name</span></span>|<span data-ttu-id="08cfd-110">Una cadena que especifica el nombre de la variable.</span><span class="sxs-lookup"><span data-stu-id="08cfd-110">A string that specifies the name of the variable.</span></span>|  
+|<span data-ttu-id="963c7-110">name</span><span class="sxs-lookup"><span data-stu-id="963c7-110">name</span></span>|<span data-ttu-id="963c7-111">Una cadena que especifica el nombre de la variable.</span><span class="sxs-lookup"><span data-stu-id="963c7-111">A string that specifies the name of the variable.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="08cfd-111">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="08cfd-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="963c7-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="963c7-112">Child Elements</span></span>  
 
- <span data-ttu-id="08cfd-112">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="08cfd-112">None.</span></span>  
+ <span data-ttu-id="963c7-113">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="963c7-113">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="08cfd-113">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="08cfd-113">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="963c7-114">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="963c7-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="08cfd-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="08cfd-114">Element</span></span>|<span data-ttu-id="08cfd-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="08cfd-115">Description</span></span>|  
+|<span data-ttu-id="963c7-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="963c7-115">Element</span></span>|<span data-ttu-id="963c7-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="963c7-116">Description</span></span>|  
 |-------------|-----------------|  
-|[\<variable>](variable.md)|<span data-ttu-id="08cfd-116">Una variable asociada a una consulta de estado de actividad.</span><span class="sxs-lookup"><span data-stu-id="08cfd-116">A variable associated with an activity state query.</span></span>|  
+|[\<variable>](variable.md)|<span data-ttu-id="963c7-117">Una variable asociada a una consulta de estado de actividad.</span><span class="sxs-lookup"><span data-stu-id="963c7-117">A variable associated with an activity state query.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="08cfd-117">Observaciones</span><span class="sxs-lookup"><span data-stu-id="08cfd-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="963c7-118">Observaciones</span><span class="sxs-lookup"><span data-stu-id="963c7-118">Remarks</span></span>  
 
- <span data-ttu-id="08cfd-118">Una característica única de ActivityStateQuery es la capacidad de extraer los datos al realizar el seguimiento de la ejecución de un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="08cfd-118">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="08cfd-119">Esto proporciona contexto adicional al tener acceso a los registros de seguimiento tras la ejecución.</span><span class="sxs-lookup"><span data-stu-id="08cfd-119">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="08cfd-120">Puede usar los [\<arguments>](arguments.md) elementos, [\<states>](states.md) y [\<states>](states.md) para extraer cualquier variable o argumento de cualquier actividad de un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="08cfd-120">You can use the [\<arguments>](arguments.md), [\<states>](states.md) and [\<states>](states.md) elements to extract any variable or argument from any activity in a workflow.</span></span> <span data-ttu-id="08cfd-121">El siguiente ejemplo muestra una consulta de estado de actividad que extrae variables y argumentos cuando se emite el registro de seguimiento de la actividad `Closed`.</span><span class="sxs-lookup"><span data-stu-id="08cfd-121">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="08cfd-122">Las variables y los argumentos solo se pueden extraer con un ActivityStateRecord y, por tanto, se suscriben a dentro de un perfil de seguimiento mediante [\<activityStateQuery>](activitystatequery.md) .</span><span class="sxs-lookup"><span data-stu-id="08cfd-122">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](activitystatequery.md).</span></span>  
+ <span data-ttu-id="963c7-119">Una característica única de ActivityStateQuery es la capacidad de extraer los datos al realizar el seguimiento de la ejecución de un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="963c7-119">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="963c7-120">Esto proporciona contexto adicional al tener acceso a los registros de seguimiento tras la ejecución.</span><span class="sxs-lookup"><span data-stu-id="963c7-120">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="963c7-121">Puede usar los [\<arguments>](arguments.md) elementos, [\<states>](states.md) y [\<states>](states.md) para extraer cualquier variable o argumento de cualquier actividad de un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="963c7-121">You can use the [\<arguments>](arguments.md), [\<states>](states.md) and [\<states>](states.md) elements to extract any variable or argument from any activity in a workflow.</span></span> <span data-ttu-id="963c7-122">El siguiente ejemplo muestra una consulta de estado de actividad que extrae variables y argumentos cuando se emite el registro de seguimiento de la actividad `Closed`.</span><span class="sxs-lookup"><span data-stu-id="963c7-122">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="963c7-123">Las variables y los argumentos solo se pueden extraer con un ActivityStateRecord y, por tanto, se suscriben a dentro de un perfil de seguimiento mediante [\<activityStateQuery>](activitystatequery.md) .</span><span class="sxs-lookup"><span data-stu-id="963c7-123">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](activitystatequery.md).</span></span>  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -81,9 +82,9 @@ ms.locfileid: "91185358"
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="08cfd-123">Consulte también</span><span class="sxs-lookup"><span data-stu-id="08cfd-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="963c7-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="963c7-124">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="08cfd-124">Seguimiento y traza del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="08cfd-124">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="08cfd-125">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="08cfd-125">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="963c7-125">Seguimiento y traza del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="963c7-125">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="963c7-126">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="963c7-126">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
