@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: enlazar un objeto DataView a un control DataGridView Windows Forms'
 title: Procedimiento para enlazar un objeto DataView a un control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b73d60a-6049-446a-85a7-3e5a68b183e2
-ms.openlocfilehash: cf2a47c5d29c0af680ee4ccae503e92d3a9124d8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 59bc1a0f6b7b2b0d6da4fa6d88e06922d95c9f46
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194718"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723912"
 ---
 # <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>Procedimiento para enlazar un objeto DataView a un control DataGridView de formularios Windows Forms
 
@@ -30,6 +31,6 @@ El control <xref:System.Windows.Forms.DataGridView> proporciona una forma eficaz
      [!code-csharp[DP DataViewWinForms Sample#LDVSample1FormLoad](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/CS/Form1.cs#ldvsample1formload)]
      [!code-vb[DP DataViewWinForms Sample#LDVSample1FormLoad](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/VB/Form1.vb#ldvsample1formload)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enlace de datos y LINQ to DataSet](data-binding-and-linq-to-dataset.md)

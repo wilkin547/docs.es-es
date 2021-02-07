@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Entity SQL referencia rápida'
 title: Referencia rápida de Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 7ec3b6fc184b4f169d6f6489bda0ec8fa4abb4f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ddac48bece1f0e9df737db295d4d028529ea290f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724562"
 ---
 # <a name="entity-sql-quick-reference"></a>Referencia rápida de Entity SQL
 
@@ -29,7 +30,7 @@ Este tema proporciona una referencia rápida a las consultas de [!INCLUDE[esql](
   
  Salida:  
   
-|Valor|  
+|Value|  
 |-----------|  
 |hello|  
   
@@ -47,7 +48,7 @@ DATETIME '2006-12-25 01:01'
   
  Salida:  
   
-|Valor|  
+|Value|  
 |-----------|  
 |25.12.06 01:01:00|  
   
@@ -64,7 +65,7 @@ DATETIME '2006-12-25 01:01'
   
  Salida:  
   
-|Valor|  
+|Value|  
 |-----------|  
 |1|  
 |2|  
@@ -114,7 +115,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
-### <a name="object"></a>Objeto  
+### <a name="object"></a>Object  
 
  El [constructor de tipo con nombre](named-type-constructor-entity-sql.md) crea objetos definidos por el usuario (con nombre), como `person("abc", 12)` .  
   
@@ -147,7 +148,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Salida:  
   
-|Valor|  
+|Value|  
 |-----------|  
 |1|  
 |2|  
@@ -165,7 +166,7 @@ SELECT VALUE REF(p).Name FROM
   
  Salida:  
   
-|Valor|  
+|Value|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -185,7 +186,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Salida:  
   
-|Valor|  
+|Value|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -212,7 +213,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 |771|  
 |...|  
   
-## <a name="functions"></a>Funciones  
+## <a name="functions"></a>Functions  
   
 ### <a name="canonical"></a>Canonical  
 
@@ -266,7 +267,7 @@ using SqlServer; LOWER('AA');
   
  Salida:  
   
-|Valor|  
+|Value|  
 |-----------|  
 |aa|  
   
@@ -378,9 +379,9 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
  Salida:  
   
-|Valor|  
+|Value|  
 |-----------|  
-|TRUE|  
+|true|  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: recuperar información como Read-Only'
 title: Procedimiento para recuperar información con formato de solo lectura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: 0a6853ef5d0b67e5efb95731adb5a106e8701e0f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7743e555bcc3f6371ca601d02313e30895e57961
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723457"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Procedimiento para recuperar información con formato de solo lectura
 

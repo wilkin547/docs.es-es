@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: resolver conflictos sobrescribiendo valores de base de datos'
 title: Procedimiento para resolver conflictos sobrescribiendo valores de base de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 1dc112350451bde28d27c63961733b96f6fc84be
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4eaa66b4bb49706bb1ca6449d24c688a89f2750b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191715"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723509"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procedimiento para resolver conflictos sobrescribiendo valores de base de datos
 
@@ -42,6 +43,6 @@ Para conciliar las diferencias existentes entre los valores de base de datos esp
  [!code-csharp[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#2)]
  [!code-vb[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimiento para administrar conflictos de cambios](how-to-manage-change-conflicts.md)

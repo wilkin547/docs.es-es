@@ -1,15 +1,16 @@
 ---
+description: Más información acerca de cómo rellenar un conjunto de un conjunto de
 title: Rellenar un conjunto de datos utilizando uno o varios parámetros REF CURSOR
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-ms.openlocfilehash: 07de2e708cd3e69bff05be0c73e41696d715609c
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 6df871a9ab708a4275f15a136f3f99b6a98e1fe1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739716"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724159"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Rellenar un conjunto de datos utilizando uno o varios parámetros REF CURSOR
 
@@ -47,7 +48,7 @@ Private Sub Button1_Click(ByVal sender As Object, _
   End Using
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Parámetros REF CURSOR de Oracle](oracle-ref-cursors.md)
 - [Información general de ADO.NET](ado-net-overview.md)

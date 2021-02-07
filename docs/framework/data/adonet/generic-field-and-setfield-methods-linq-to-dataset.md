@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de los métodos genéricos Field y SetField (LINQ to DataSet)
 title: Métodos genéricos Field y SetField (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 9deda11592389dd799477bdc027d59a0be0036da
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2dfbb7377d782525170d47f59a5577f96caadbb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200659"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724016"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Métodos genéricos Field y SetField (LINQ to DataSet)
 
@@ -30,6 +31,6 @@ LINQ to DataSet proporciona métodos de extensión a la <xref:System.Data.DataRo
   
  El método <xref:System.Data.DataRowExtensions.SetField%2A> en sí no realiza ninguna conversión de tipos. Sin embargo, esto no significa que no se realizará una conversión de tipos. El <xref:System.Data.DataRowExtensions.SetField%2A> método expone el comportamiento ADO.net de la <xref:System.Data.DataRow> clase. El objeto puede realizar una conversión de tipos <xref:System.Data.DataRow> y el valor convertido se guardaría en el <xref:System.Data.DataRow> objeto.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataRowExtensions>

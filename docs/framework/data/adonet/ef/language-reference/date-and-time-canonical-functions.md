@@ -1,19 +1,20 @@
 ---
+description: 'Más información sobre: funciones canónicas de fecha y hora'
 title: Funciones canónicas de fecha y hora
 ms.date: 03/30/2017
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
-ms.openlocfilehash: 9b7650990232face3a7c3673a6fb789912acf15c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3c57edc613e5ef871aa3359ef7609e6c0892efc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148287"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724796"
 ---
 # <a name="date-and-time-canonical-functions"></a>Funciones canónicas de fecha y hora
 
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] incluye funciones canónicas de fecha y hora.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En la tabla siguiente se muestran las funciones canónicas de fecha y hora [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . `datetime` es un <xref:System.DateTime> valor.  
   

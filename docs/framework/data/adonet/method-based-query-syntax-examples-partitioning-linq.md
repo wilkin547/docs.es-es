@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: Method-Based ejemplos de sintaxis de consultas: creación de particiones (LINQ'
 title: 'Ejemplos de sintaxis de consulta basada en métodos: creación de particiones (LINQ)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a582c53f-f203-44ae-a797-d7f169a4fbb5
-ms.openlocfilehash: 0ef7176ccffb7037a7d4496cc7d4da7991741d38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1e045fb4f0b627bdb5a926de2272bbaa59abdcee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147936"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723782"
 ---
 # <a name="method-based-query-syntax-examples-partitioning-linq"></a>Ejemplos de sintaxis de consulta basada en métodos: creación de particiones (LINQ)
 

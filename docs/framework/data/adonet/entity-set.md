@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: conjunto de entidades'
 title: conjunto de entidades
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 6286d3707a8506e7a389359a5aa361c152e75212
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4881be280e1da2d53db6fc9f526289cdcd82ee07
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194798"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724432"
 ---
 # <a name="entity-set"></a>conjunto de entidades
 
@@ -46,7 +47,7 @@ Un *conjunto de entidades* es un contenedor lógico para las instancias de un [t
   
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

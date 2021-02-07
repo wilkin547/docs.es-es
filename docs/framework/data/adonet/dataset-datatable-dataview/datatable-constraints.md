@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: restricciones de DataTable'
 title: Restricciones de DataTable
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 1224518a9a16f48f770b6839317b9787da97377b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0c712115fd87fefae3578b2f3fc0adfc416f412e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153279"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724913"
 ---
 # <a name="datatable-constraints"></a>Restricciones de DataTable
 
@@ -29,7 +30,7 @@ Se pueden utilizar restricciones para exigir restricciones sobre los datos de un
 |**Cascade**|Elimina o actualiza las filas relacionadas.|  
 |**SetNull**|Establezca los valores de las filas relacionadas en **DBNull**.|  
 |**SetDefault**|Establece los valores de las filas relacionadas en el valor predeterminado.|  
-|**None**|No realiza ninguna acción en las filas relacionadas. Este es el valor predeterminado.|  
+|**Ninguno**|No realiza ninguna acción en las filas relacionadas. Este es el valor predeterminado.|  
   
  Una **ForeignKeyConstraint** puede restringir y propagar los cambios en las columnas relacionadas. En función de las propiedades establecidas para la **ForeignKeyConstraint** de una columna, si la propiedad **EnforceConstraints** del **DataSet** es **true**, realizar determinadas operaciones en la fila primaria producirá una excepción. Por ejemplo, si la propiedad **DeleteRule** de **ForeignKeyConstraint** es **None**, no se puede eliminar una fila primaria si tiene filas secundarias.  
   
@@ -57,14 +58,14 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 ### <a name="acceptrejectrule"></a>AcceptRejectRule  
 
- Los cambios en las filas se pueden aceptar con el método **AcceptChanges** o cancelarse con el método **RejectChanges** del **DataSet**, **DataTable**o **DataRow**. Cuando un **conjunto de DataSet** contiene **ForeignKeyConstraints**, al invocar los métodos **AcceptChanges** o **RejectChanges** se aplica el método **AcceptRejectRule**. La propiedad **AcceptRejectRule** de **ForeignKeyConstraint** determina la acción que se realizará en las filas secundarias cuando se llame a **AcceptChanges** o **RejectChanges** en la fila primaria.  
+ Los cambios en las filas se pueden aceptar con el método **AcceptChanges** o cancelarse con el método **RejectChanges** del **DataSet**, **DataTable** o **DataRow**. Cuando un **conjunto de DataSet** contiene **ForeignKeyConstraints**, al invocar los métodos **AcceptChanges** o **RejectChanges** se aplica el método **AcceptRejectRule**. La propiedad **AcceptRejectRule** de **ForeignKeyConstraint** determina la acción que se realizará en las filas secundarias cuando se llame a **AcceptChanges** o **RejectChanges** en la fila primaria.  
   
  En la tabla siguiente se enumeran los valores disponibles para **AcceptRejectRule**.  
   
 |Establecimiento de reglas|Descripción|  
 |------------------|-----------------|  
 |**Cascade**|Acepta o rechaza los cambios en filas secundarias.|  
-|**None**|No realiza ninguna acción en las filas secundarias. Este es el valor predeterminado.|  
+|**Ninguno**|No realiza ninguna acción en las filas secundarias. Este es el valor predeterminado.|  
   
 ### <a name="example"></a>Ejemplo  
 

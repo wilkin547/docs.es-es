@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugNativeFrame:: Getlocaldoubleregistervalue ((método)'
 title: ICorDebugNativeFrame::GetLocalDoubleRegisterValue (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1f838215-ac8a-434f-8ce6-03021d3098d9
 topic_type:
 - apiref
-ms.openlocfilehash: 10f06fb04099ef947711bc7c5641e5a7f1fa36b7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a478c51ea7bf04b3fc3faf49fef39f9b29a30599
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695720"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722430"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue (Método)
 
@@ -55,7 +56,7 @@ HRESULT GetLocalDoubleRegisterValue (
  `ppValue`  
  enuncia Puntero a la dirección de un objeto "ICorDebugValue" que representa el valor recuperado que se almacena en los registros especificados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `GetLocalDoubleRegisterValue` método se puede utilizar en un marco nativo o en un marco compilado Just-in-Time (JIT).  
   
@@ -69,4 +70,4 @@ HRESULT GetLocalDoubleRegisterValue (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también

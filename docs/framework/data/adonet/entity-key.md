@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: clave de entidad'
 title: clave de entidad
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: b2692faf2f8bea27c8a5d6cdc52689ca186d3194
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 588f18a2f76ca11c797b9b2aaab00b090c99e345
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724445"
 ---
 # <a name="entity-key"></a>clave de entidad
 
@@ -41,7 +42,7 @@ Una *clave de entidad* es una [propiedad](property.md) o un conjunto de propieda
   
  El uso de `Name` y `Address` para la clave de entidad es una opción razonable, ya que no es probable que dos autores con el mismo nombre vivan en la misma dirección. Sin embargo, esta opción no garantiza por completo la existencia de claves de entidad únicas en un conjunto de entidades. En este caso, se recomienda la adición de una propiedad, como `AuthorId`, que se podría usar para identificar un autor de forma inequívoca.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

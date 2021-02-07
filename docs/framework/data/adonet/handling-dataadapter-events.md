@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo controlar eventos DataAdapter
 title: Controlar eventos de DataAdapter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a2c2dc71cc9e5c445fd05534dad5ad47fd66f436
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 045a48ae545ad4354844dd451ff58618b760a9a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194731"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723951"
 ---
 # <a name="handling-dataadapter-events"></a>Controlar eventos de DataAdapter
 
@@ -30,7 +31,7 @@ ms.locfileid: "91194731"
   
  Puede utilizar la propiedad `Status` para determinar si se ha producido o no un error durante la operación y, si lo desea, controlar las acciones que se emprenden en las filas actuales y las resultantes de la operación. Cuando se produce el evento, la propiedad `Status` toma el valor `Continue` o `ErrorsOccurred`. En la tabla siguiente se muestran los valores que se pueden asignar a la propiedad `Status` para controlar las acciones posteriores en el proceso de actualización.  
   
-|Status|Descripción|  
+|Situación|Descripción|  
 |------------|-----------------|  
 |`Continue`|Continuar la operación de actualización.|  
 |`ErrorsOccurred`|Anular la operación de actualización e iniciar una excepción.|  
@@ -41,7 +42,7 @@ ms.locfileid: "91194731"
   
  También puede utilizar la propiedad `ContinueUpdateOnError` para controlar los errores producidos en las filas actualizadas. Cuando `DataAdapter.ContinueUpdateOnError` tiene el valor `true` y la actualización de una fila inicia una excepción, el texto de la excepción se coloca en la información `RowError` de la fila en cuestión y el proceso continúa sin que se inicie una excepción. De esta forma, puede responder a los errores cuando se complete el proceso `Update`, a diferencia del evento `RowUpdated`, que permite responder a los errores cuando se detectan.  
   
- En el ejemplo de código siguiente se muestra cómo se pueden agregar y quitar controladores de eventos. El controlador de eventos `RowUpdating` mantiene un registro de todos los registros eliminados y una marca de tiempo asociada a cada uno de ellos. El `RowUpdated` controlador de eventos agrega información de error a la `RowError` propiedad de la fila de `DataSet` , suprime la excepción y continúa el procesamiento (creación de reflejo del comportamiento de `ContinueUpdateOnError`  =  `true` ).  
+ En el ejemplo de código siguiente se muestra cómo se pueden agregar y quitar controladores de eventos. El controlador de eventos `RowUpdating` mantiene un registro de todos los registros eliminados y una marca de tiempo asociada a cada uno de ellos. El controlador de eventos `RowUpdated` agrega información de error a la propiedad `RowError` de la fila en `DataSet`, suprime la excepción y deja continuar el procesamiento (similar al comportamiento de `ContinueUpdateOnError` = `true`).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  

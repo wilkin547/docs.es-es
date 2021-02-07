@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Entity Data Model: tipos de datos primitivos'
 title: 'Entity Data Model: tipos de datos primitivos'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 4d52f50dec44c7d667dfedc10a2c9c25fcde8917
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bdc34f3232e78d29e6c2ce25d8f159d7f5238f2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194822"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724471"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Entity Data Model: tipos de datos primitivos
 
@@ -30,7 +31,7 @@ El Entity Data Model (EDM) admite un conjunto de tipos de datos primitivos abstr
 |DateTime|Representa una fecha y hora.|Precision, Nullable, Default|  
 |DateTimeOffset|Contiene una fecha y hora como un desplazamiento en minutos con respecto a GMT.|Precision, Nullable, Default|  
 |Decimal|Contiene un valor numérico con una precisión y escala fijas.|Precision, Nullable, Default|  
-|Doble|Contiene un número de punto flotante con una precisión de 15 dígitos.|Precision, Nullable, Default|  
+|Double|Contiene un número de punto flotante con una precisión de 15 dígitos.|Precision, Nullable, Default|  
 |Float|Contiene un número de punto flotante con una precisión de siete dígitos.|Precision, Nullable, Default|  
 |Guid|Contiene un identificador único de 16 bytes.|Precision, Nullable, Default|  
 |Int16|Contiene un valor entero de 16 bits con signo.|Precision, Nullable, Default|  
@@ -38,9 +39,9 @@ El Entity Data Model (EDM) admite un conjunto de tipos de datos primitivos abstr
 |Int64|Contiene un valor entero de 64 bits con signo.|Precision, Nullable, Default|  
 |SByte|Contiene un valor entero de 8 bits con signo.|Precision, Nullable, Default|  
 |String|Contiene datos de caracteres.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
-|Time|Contiene una hora del día.|Precision, Nullable, Default|  
+|Hora|Contiene una hora del día.|Precision, Nullable, Default|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: representar claves principales'
 title: Procedimiento para representar claves principales
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-ms.openlocfilehash: 02570176c8aef5cfdc7ba09fd6976f430900e8df
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1fbac2d60bd730718b5330bfd48910a61deae15c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723613"
 ---
 # <a name="how-to-represent-primary-keys"></a>Procedimiento para representar claves principales
 
@@ -24,7 +25,7 @@ Utilice la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <
   
 2. Especifique el valor como `true`.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [El modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)
 - [Procedimiento para personalizar clases de entidades con el editor de código](how-to-customize-entity-classes-by-using-the-code-editor.md)

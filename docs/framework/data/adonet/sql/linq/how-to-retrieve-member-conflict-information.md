@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: recuperar información de conflictos de miembros'
 title: Procedimiento para recuperar información de conflictos de miembros
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
-ms.openlocfilehash: 4848ef69914f0520d2365538faea7fa064c1a15c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2a33aba1a113bdfd66bdc341bfc9ae59406f2c40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155814"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723405"
 ---
 # <a name="how-to-retrieve-member-conflict-information"></a>Procedimiento para recuperar información de conflictos de miembros
 

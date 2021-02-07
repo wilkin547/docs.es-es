@@ -1,20 +1,21 @@
 ---
+description: 'Más información acerca de: GetSchema y colecciones de esquemas'
 title: GetSchema y colecciones de esquema
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: cea9deb7fe019fea189a87fc08468d010929db9a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2b085435f0f9ea9ec33897ee417cd7a726c4503d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177454"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723990"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema y colecciones de esquema
 
-Las clases de **conexión** de cada uno de los proveedores administrados de .NET Framework implementan un método **GetSchema** que se utiliza para recuperar información de esquema sobre la base de datos que está conectada actualmente, y la información de esquema devuelta desde el método **GetSchema** tiene el formato de <xref:System.Data.DataTable> . El método **GetSchema** es un método sobrecargado que proporciona parámetros opcionales para especificar la colección de esquemas que se va a devolver y restringir la cantidad de información devuelta.  
+Las clases de **conexión** de cada uno de los proveedores administrados de .NET Framework implementan un método **GetSchema** que se utiliza para recuperar información de esquema sobre la base de datos que está conectada actualmente, y la información de esquema devuelta desde el método **GetSchema** tiene el formato de <xref:System.Data.DataTable> . El método **GetSchema** es un método sobrecargado que proporciona parámetros opcionales para especificar la colección de esquemas que se devolverá y restringe la cantidad de información devuelta.  
   
 ## <a name="specifying-the-schema-collections"></a>Especificación de las colecciones de esquemas  
 
@@ -109,5 +110,5 @@ class Program
   
 ## <a name="see-also"></a>Consulte también
 
-- [Recuperar información del esquema de la base de datos](retrieving-database-schema-information.md)
+- [Recuperación de la información del esquema de la base de datos](retrieving-database-schema-information.md)
 - [Información general de ADO.NET](ado-net-overview.md)

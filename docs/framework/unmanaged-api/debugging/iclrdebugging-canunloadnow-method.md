@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRDebugging:: Canunloadnow ((método)'
 title: ICLRDebugging::CanUnloadNow (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-ms.openlocfilehash: e89d936c528ea7482487a8629dbd882f6f67483e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 537494fe862c58aa8a8768dd5ce2abc8ca94f87d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723576"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723379"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow (Método)
 
@@ -63,7 +64,7 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

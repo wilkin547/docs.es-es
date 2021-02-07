@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: DEREF (Entity SQL)'
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: c0c975ab5cf2761496db6efa1f88f409aa1b1abd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9d0f29123c1459c6eab21ea9cd860b5c9e77f591
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148222"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724731"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 
@@ -28,7 +29,7 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
 
  El valor de la entidad a la que se hace referencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El operador DEREF desreferencia un valor de referencia y genera el resultado de dicha desreferenciación. Por ejemplo, si `r` es una referencia de tipo REF \<T> , `Deref(r)` es una expresión de tipo `T` que produce la entidad a la que hace referencia `r` . Si el valor de referencia es NULL, o está pendiente (es decir, el destino de la referencia no existe), el resultado del operador DEREF es NULL.  
   

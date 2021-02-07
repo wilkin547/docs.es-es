@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: interfaz ICorDebugManagedCallback'
 title: ICorDebugManagedCallback (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: 6eebabc3a08027eab4ac55c1e46dd75b1f75bd21
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0dd33e4295caa8f5ae41c65d9bd10152737156ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679707"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722820"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback (Interfaz)
 
@@ -37,12 +38,12 @@ Proporciona métodos que permiten procesar las devoluciones de llamada del depur
 |[Método CreateProcess](icordebugmanagedcallback-createprocess-method.md)|Notifica al depurador cuando un proceso se ha adjuntado o Iniciado por primera vez.|  
 |[Método CreateThread](icordebugmanagedcallback-createthread-method.md)|Notifica al depurador que un subproceso ha empezado a ejecutar código administrado.|  
 |[Método DebuggerError](icordebugmanagedcallback-debuggererror-method.md)|Notifica al depurador que se ha producido un error al intentar controlar un evento desde CLR.|  
-|[Método EditAndContinueRemap](icordebugmanagedcallback-editandcontinueremap-method.md)|Desusado. Notifica al depurador que se ha enviado un evento de reasignación al IDE.|  
+|[Método EditAndContinueRemap](icordebugmanagedcallback-editandcontinueremap-method.md)|En desuso. Notifica al depurador que se ha enviado un evento de reasignación al IDE.|  
 |[Método EvalComplete](icordebugmanagedcallback-evalcomplete-method.md)|Notifica al depurador que se ha completado una evaluación.|  
 |[Método EvalException](icordebugmanagedcallback-evalexception-method.md)|Notifica al depurador que se ha finalizado una evaluación con una excepción no controlada.|  
 |[Método Exception](icordebugmanagedcallback-exception-method.md)|Notifica al depurador que se ha producido una excepción del código administrado.|  
 |[Método ExitAppDomain](icordebugmanagedcallback-exitappdomain-method.md)|Notifica al depurador que se ha salido de un dominio de aplicación.|  
-|[Método ExitProcess](icordebugmanagedcallback-exitprocess-method.md)|Notifica al depurador que se ha salido de un proceso.|  
+|[ExitProcess (Método)](icordebugmanagedcallback-exitprocess-method.md)|Notifica al depurador que se ha salido de un proceso.|  
 |[Método ExitThread](icordebugmanagedcallback-exitthread-method.md)|Notifica al depurador que un subproceso que estaba ejecutando código administrado ha salido.|  
 |[Método LoadAssembly](icordebugmanagedcallback-loadassembly-method.md)|Notifica al depurador que se ha cargado correctamente un ensamblado CLR.|  
 |[Método LoadClass](icordebugmanagedcallback-loadclass-method.md)|Notifica al depurador que se ha cargado una clase.|  
@@ -56,7 +57,7 @@ Proporciona métodos que permiten procesar las devoluciones de llamada del depur
 |[Método UnloadModule](icordebugmanagedcallback-unloadmodule-method.md)|Notifica al depurador que se ha descargado un módulo CLR (DLL).|  
 |[Método UpdateModuleSymbols](icordebugmanagedcallback-updatemodulesymbols-method.md)|Notifica al depurador que los símbolos para un módulo CLR han cambiado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Todas las devoluciones de llamada se serializan, se llaman en el mismo subproceso y se llama con el proceso en el estado Synchronized.  
   
@@ -77,7 +78,7 @@ Proporciona métodos que permiten procesar las devoluciones de llamada del depur
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebug (Interfaz)](icordebug-interface.md)
 - [ICorDebugManagedCallback2 (Interfaz)](icordebugmanagedcallback2-interface.md)

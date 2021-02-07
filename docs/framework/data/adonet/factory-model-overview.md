@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Introducción al modelo de factoría'
 title: Información general sobre el modelo de fábrica
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
-ms.openlocfilehash: 7cee3966ab3a37d2dbc6dd0ea9ab26b485ef63fd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 175b05a298eb260dfe8c59b380ab3b8b9dcba943
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156399"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724211"
 ---
 # <a name="factory-model-overview"></a>Información general sobre el modelo de fábrica
 

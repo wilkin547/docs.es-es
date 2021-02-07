@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo generar comandos con objetos CommandBuilder
 title: Generar comandos con objetos CommandBuilder
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: d88f5772e038766d49baf8c758c547e6d5667904
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 495312f57d497421182384eff23b621130447940
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200724"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724107"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generar comandos con objetos CommandBuilder
 
@@ -54,7 +55,7 @@ Cuando la propiedad `SelectCommand` se especifica de forma dinámica en tiempo d
   
 ### <a name="table-and-column-names"></a>Nombres de tabla y columna  
 
- La lógica de generación automática de comandos puede ocasionar un error cuando los nombres de las tablas o de las columnas incluyen algún carácter especial, como espacios, puntos, comillas y otros caracteres no alfanuméricos, incluso si están delimitados por corchetes. En función del proveedor, el establecimiento de los parámetros QuotePrefix y QuoteSuffix puede permitir que la lógica de generación procese espacios, pero los caracteres especiales no pueden convertirse en caracteres de escape. Se admiten nombres de tabla completos con el formato *Catalog. Schema. Table* .  
+ La lógica de generación automática de comandos puede ocasionar un error cuando los nombres de las tablas o de las columnas incluyen algún carácter especial, como espacios, puntos, comillas y otros caracteres no alfanuméricos, incluso si están delimitados por corchetes. En función del proveedor, el establecimiento de los parámetros QuotePrefix y QuoteSuffix puede permitir que la lógica de generación procese espacios, pero los caracteres especiales no pueden convertirse en caracteres de escape. Se pueden utilizar nombres completos de tabla, como *catalog.schema.table*.  
   
 ## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Utilizar CommandBuilder para generar automáticamente una instrucción SQL  
 
@@ -98,7 +99,7 @@ Console.WriteLine(builder.GetUpdateCommand().CommandText)
 Console.WriteLine(builder.GetUpdateCommand().CommandText);
 ```
   
- En el siguiente ejemplo se vuelve a crear la tabla `Customers` en el conjunto de datos `custDS`. Se llama al método **RefreshSchema** para actualizar los comandos generados automáticamente con esta nueva información de columna.  
+ En el siguiente ejemplo se vuelve a crear la tabla `Customers` en el conjunto de datos `custDS`. Se llama al método **RefreshSchema** para actualizar los comandos generados automáticamente con la información de esta nueva columna.  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -120,7 +121,7 @@ custDS.Tables.Remove(custDS.Tables["Customers"]);
 adapter.Fill(custDS, "Customers");  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Comandos y parámetros](commands-and-parameters.md)
 - [Ejecutar un comando](executing-a-command.md)

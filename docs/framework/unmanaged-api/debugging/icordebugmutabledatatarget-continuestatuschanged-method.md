@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugMutableDataTarget:: Continuestatuschanged ((método)'
 title: ICorDebugMutableDataTarget::ContinueStatusChanged (método)
 ms.date: 03/30/2017
 ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
-ms.openlocfilehash: 4910b125c2344505128a6979dfe4c9fad2b72c19
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6655d6f1a115b4879c73e356faa8e8785a110078
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695795"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722508"
 ---
 # <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>ICorDebugMutableDataTarget::ContinueStatusChanged (método)
 
@@ -29,7 +30,7 @@ HRESULT ContinueStatusChanged(
  `continueStatus`  
  Valor [COREDB_CONTINUE_STATUS](../common-data-types-unmanaged-api-reference.md) que representa el nuevo estado de continuación solicitado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El depurador llama al método `ContinueStatusChanged` cuando llama a un método ICorDebug que requiere que el evento de depuración actual se trate de una manera potencialmente diferente al modo en que se suele tratar. Por ejemplo, si hay una excepción pendiente y el depurador solicita una operación que cancelará la excepción (como [ICorDebugILFrame::SetIP](icordebugilframe-setip-method.md) o `FuncEval`), esta API se usa para solicitar que se cancele la excepción.  
   
@@ -43,7 +44,7 @@ HRESULT ContinueStatusChanged(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugMutableDataTarget](icordebugmutabledatatarget-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)
