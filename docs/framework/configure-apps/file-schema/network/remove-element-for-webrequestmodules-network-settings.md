@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <remove> elemento para webRequestModules (configuración de red)'
 title: Elemento <remove> para webRequestModules (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 65e8b1f2088015b86d4f981f07875d236a11a617
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: db65c91417af2538e27b65e0ae28d06a6bfcde0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176193"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713005"
 ---
 # <a name="remove-element-for-webrequestmodules-network-settings"></a>Elemento \<remove> para webRequestModules (configuración de red)
 
@@ -82,7 +83,7 @@ En el ejemplo siguiente se quita el módulo de solicitud Web existente para HTTP
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.WebRequest>
 - [Esquema de la configuración de red](index.md)

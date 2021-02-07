@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <relativeBindForResources> elemento'
 title: <relativeBindForResources> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-ms.openlocfilehash: daf576488e38bed28c7c0e5222bc053659372ff0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f08d8f8a8fc4bb14d28762254dca99788d44a858
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184006"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712927"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources> (Elemento)
 

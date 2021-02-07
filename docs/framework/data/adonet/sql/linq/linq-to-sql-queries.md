@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: LINQ to SQL de consultas'
 title: Consultas de LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-ms.openlocfilehash: c49644a866a6e245c6be1f9a8e8f95d003fd0191
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b5df2095043b01eb426de86e4add91941bb74c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175231"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712485"
 ---
 # <a name="linq-to-sql-queries"></a>Consultas de LINQ to SQL
 
@@ -24,7 +25,7 @@ Las consultas se definen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecd
 |----------|----------------|----------------------------------------------------------------------|  
 |Tipo de valor devuelto de la variable local que contiene la consulta (para las consultas que devuelven secuencias)|Generic <ph id="ph1">`IEnumerable`</ph>|Generic <ph id="ph1">`IQueryable`</ph>|  
 |Especificar el origen de datos|Usa la `From` cláusula (Visual Basic) o `from` (C#)|Iguales|  
-|Filtros|Usa la `Where` / `where` cláusula|Iguales|  
+|Filtrado|Usa la `Where` / `where` cláusula|Iguales|  
 |Agrupar|Usa la `Group…By` / `groupby` cláusula|Iguales|  
 |Seleccionar (proyectar)|Usa la `Select` / `select` cláusula|Iguales|  
 |Ejecución diferida frente a ejecución inmediata|Vea [Introducción a las consultas LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)|Iguales|  

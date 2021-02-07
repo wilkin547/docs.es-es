@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de COR_SEGMENT'
 title: COR_SEGMENT (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-ms.openlocfilehash: 738e29fa15340c76b055b608140f3c3bfbd29611
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bbc452b2c2036d019175ac1be8b9917ffa07b6a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712199"
 ---
 # <a name="cor_segment-structure"></a>COR_SEGMENT (Estructura)
 
@@ -36,7 +37,7 @@ typedef struct _COR_SEGMENT {
 } COR_SEGMENT;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -45,7 +46,7 @@ typedef struct _COR_SEGMENT {
 |`gen`|Un miembro de la enumeración [CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md) que indica la generación de la región de memoria.|  
 |`heap`|El número de montón en el que reside la región de memoria. Vea la sección Comentarios para obtener más información.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La estructura `COR_SEGMENTS` representa una región de memoria en el montón administrado.  Los objetos `COR_SEGMENTS` son miembros del objeto de colección [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md), que se rellena mediante una llamada al método [ICorDebugProcess5::EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md).  
   
@@ -61,7 +62,7 @@ typedef struct _COR_SEGMENT {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

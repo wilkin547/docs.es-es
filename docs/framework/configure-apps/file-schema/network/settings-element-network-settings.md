@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <settings> elemento (configuración de red)'
 title: Elemento <settings> (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: c5fe0b9eccd1c429c0041fcfab06b0cc20a20aa2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e6ed242e68ac9a9e2c20067d66681bbcd51fcc50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712979"
 ---
 # <a name="settings-element-network-settings"></a>Elemento \<settings> (configuración de red)
 
@@ -69,7 +70,7 @@ Configura opciones de red básicas para el espacio de nombres <xref:System.Net?d
 
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net?displayProperty=nameWithType>
 - [Esquema de la configuración de red](index.md)

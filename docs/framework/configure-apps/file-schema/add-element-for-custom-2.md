@@ -1,5 +1,6 @@
 ---
-title: <add>elemento para NameValueSectionHandler y DictionarySectionHandler
+description: 'Más información sobre: <add> elemento para NameValueSectionHandler y DictionarySectionHandler'
+title: <add> elemento para NameValueSectionHandler y DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a8cf22b21370e60086408f792f8137386d07aa3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77215437"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713057"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<add>elemento para NameValueSectionHandler y DictionarySectionHandler
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<add> elemento para NameValueSectionHandler y DictionarySectionHandler
 
 Agrega la configuración de la aplicación personalizada. Cada **\<add>** etiqueta contiene un par clave-valor.
 
@@ -39,7 +40,7 @@ Agrega la configuración de la aplicación personalizada. Cada **\<add>** etique
 
 | Elemento | Descripción |
 | ------- | ------------|
-| [**\<sectionName>** Element](custom-element-2.md) | Define la configuración de las secciones de configuración personalizadas que utilizan las <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> clases y. |
+| [**\<sectionName>** Elemento](custom-element-2.md) | Define la configuración de las secciones de configuración personalizadas que utilizan las <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> clases y. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -62,8 +63,8 @@ En el ejemplo siguiente se muestra cómo definir una sección de configuración 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
+Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine.config*) y *Web.config* archivos que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: información general'
 title: Información general
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8e2027319145a5e88049c66fb2b8935128115e43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156100"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712667"
 ---
 # <a name="background-information"></a>Información general
 
@@ -19,7 +20,7 @@ En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUD
   
 - Participe en el [Foro de LINQ](https://social.msdn.microsoft.com/forums/home?forum=linqtosql), donde puede discutir con detalle temas más complejos con expertos.  
   
-- Estudie las notas del producto que detallan la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, vea [LINQ to SQL: consulta integrada en el lenguaje .net para datos relacionales](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
+- Estudie las notas del producto que detallan la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, vea [LINQ to SQL: .net Language-Integrated Query para datos relacionales](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>En esta sección  
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: asignación de Attribute-Based'
 title: Asignación basada en atributos
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 986a5022ea9e70868689c898649067135eac944b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9dfe9fce10d7ba76281afd843385c734e86af245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156113"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712732"
 ---
 # <a name="attribute-based-mapping"></a>Asignación basada en atributos
 
@@ -75,7 +76,7 @@ ms.locfileid: "91156113"
   
 |Propiedad|Tipo|Valor predeterminado|Descripción|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Booleano|`false`|Cuando se coloca en una asociación cuyos miembros de clave externa no aceptan valores Null, elimina el objeto cuando la asociación está establecida en null.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|Cuando se coloca en una asociación cuyos miembros de clave externa no aceptan valores Null, elimina el objeto cuando la asociación está establecida en null.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|None|Agrega comportamiento de eliminación a una asociación.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|Si es verdadero, designa el miembro como la clave externa de una asociación que representa una relación de base de datos.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|Si es verdadero, indica una restricción de unicidad en la clave externa.|  
@@ -109,7 +110,7 @@ ms.locfileid: "91156113"
   
 |Propiedad|Tipo|Valor predeterminado|Descripción|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Booleano|`false`|Si es falso, indica la asignación a un procedimiento almacenado. Si es verdadero, indica la asignación a una función definida por el usuario.|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|Si es falso, indica la asignación a un procedimiento almacenado. Si es verdadero, indica la asignación a una función definida por el usuario.|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|String|La misma cadena que el nombre en la base de datos|Especifica el nombre del procedimiento almacenado o la función definida por el usuario.|  
   
  Para obtener más información, vea <xref:System.Data.Linq.Mapping.FunctionAttribute>.  

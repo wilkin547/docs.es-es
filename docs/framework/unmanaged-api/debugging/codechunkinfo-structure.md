@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura CodeChunkInfo ('
 title: Estructura CodeChunkInfo
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-ms.openlocfilehash: 11197246662a93f6a8b57c6e61e49505a9999d00
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 017a9ee8c608d4efae98eb0a342a3371ef8ec310
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727437"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712355"
 ---
 # <a name="codechunkinfo-structure"></a>Estructura CodeChunkInfo
 
@@ -34,14 +35,14 @@ typedef struct _CodeChunkInfo {
 } CodeChunkInfo;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`startAddr`|`CORDB_ADDRESS`Valor que especifica la dirección de inicio del fragmento.|  
 |`length`|Tamaño, en bytes, del fragmento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El único fragmento de código es una región de código nativo que forma parte de un objeto de código como una función.  
   
@@ -55,7 +56,7 @@ typedef struct _CodeChunkInfo {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetCodeChunks](icordebugcode2-getcodechunks-method.md)
 - [Estructuras de depuración](debugging-structures.md)

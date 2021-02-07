@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de COR_HEAPINFO'
 title: COR_HEAPINFO (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-ms.openlocfilehash: 5400350e1c489ec4c2ff3cddf83a4f1a8a0c7947
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0841739172b3eaf807813af28e0b20fbb54608b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726605"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712320"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO (Estructura)
 
@@ -37,7 +38,7 @@ typedef struct _COR_HEAPINFO {
 } COR_HEAPINFO;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -47,7 +48,7 @@ typedef struct _COR_HEAPINFO {
 |`concurrent`|`TRUE` Si la recolección de elementos no utilizados simultánea (en segundo plano) está habilitada; en caso contrario, `FALSE` .|  
 |`gcType`|Miembro de la enumeración [cordebuggctype (](cordebuggctype-enumeration.md) que indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Se devuelve una instancia de la `COR_HEAPINFO` estructura llamando al método [ICorDebugProcess5:: getgcheapinformation (](icordebugprocess5-getgcheapinformation-method.md) .  
   
@@ -63,7 +64,7 @@ typedef struct _COR_HEAPINFO {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)
