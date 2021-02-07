@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: <wsFederationHttpBinding>'
 title: <wsFederationHttpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-ms.openlocfilehash: a57b5ff0b4a8186ffc4c01b5e0824100f265551c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1217c4e46fe18ea5df478b8a790be4da33590c92
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682103"
 ---
 # \<wsFederationHttpBinding>
 
@@ -142,7 +143,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |-------------|-----------------|
 |[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La federación es la capacidad de compartir identidades en varios sistemas para la autenticación y autorización. Estas identidades pueden hacer referencia a usuarios o a equipos. El HTTP federado admite la seguridad de SOAP así como la seguridad de modo mixto, pero no permite utilizar únicamente la seguridad de transporte. Este enlace proporciona compatibilidad con Windows Communication Foundation (WCF) para el protocolo WS-Federation. Los servicios configurados con este enlace deben utilizar el transporte de HTTP.
 

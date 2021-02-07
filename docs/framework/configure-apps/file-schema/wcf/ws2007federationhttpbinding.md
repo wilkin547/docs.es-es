@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <ws2007FederationHttpBinding>'
 title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: fe9ab2e19706a5d295b5916aeb818621d1132c11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 90635805573e5bee64d8adf0f79de827733f178b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682194"
 ---
 # \<ws2007FederationHttpBinding>
 
@@ -96,7 +97,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |-------------|-----------------|
 |[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La federación es la capacidad de compartir identidades en varias empresas o dominios de confianza para la autenticación y autorización. Utiliza el protocolo WS-Trust para asignar la representación de identidad de un dominio de confianza a otro. El enlace HTTP federado admite la seguridad de SOAP así como la seguridad de modo mixto, pero no permite la seguridad de transporte. Los servicios configurados con este enlace deben utilizar el transporte de HTTP. Para obtener más información, vea [\<wsFederationHttpBinding>](wsfederationhttpbinding.md).
 

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Method-Based ejemplos de sintaxis de consultas: operadores de agregado (LINQ to DataSet)'
 title: 'Ejemplos de sintaxis de consulta basada en métodos: operadores de agregado (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5ed5f01d-acb2-4dd4-be60-f04c2d570fa8
-ms.openlocfilehash: f702506e648c73dc179cf1755a467b13afce4bc6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a404cde84266d4ef8c2118dd07644b28417e159a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681609"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a>Ejemplos de sintaxis de consulta basada en métodos: operadores de agregado (LINQ to DataSet)
 
@@ -36,7 +37,7 @@ Los ejemplos de este tema muestran cómo utilizar los operadores <xref:System.Li
  [!code-csharp[DP LINQ to DataSet Examples#Aggregate_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#aggregate_mq)]
  [!code-vb[DP LINQ to DataSet Examples#Aggregate_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#aggregate_mq)]  
   
-## <a name="average"></a>Average  
+## <a name="average"></a>Promedio  
   
 ### <a name="example"></a>Ejemplo  
 
@@ -166,7 +167,7 @@ Los ejemplos de este tema muestran cómo utilizar los operadores <xref:System.Li
  [!code-csharp[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cargar datos en un conjunto de datos](loading-data-into-a-dataset.md)
 - [Ejemplos de LINQ to DataSet](linq-to-dataset-examples.md)

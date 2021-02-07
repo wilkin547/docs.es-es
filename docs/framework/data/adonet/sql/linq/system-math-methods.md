@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: métodos System. Math'
 title: System.Math (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
-ms.openlocfilehash: e91c8ea95d21288ad2577f1550333febd448766d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e97e0a16b6eafdb57f4aaf72d62788e6657afbdc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681349"
 ---
 # <a name="systemmath-methods"></a>System.Math (Métodos)
 
@@ -27,6 +28,6 @@ ms.locfileid: "91158206"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite directamente la semántica de `ROUND` en SQL y no intenta implementar el redondeo bancario.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tipos de datos y funciones](data-types-and-functions.md)

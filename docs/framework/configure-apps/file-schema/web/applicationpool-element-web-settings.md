@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: <applicationPool> elemento (configuración Web)'
 title: Elemento <applicationPool> (configuración web)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 963b25e57ae8c2cc59dcc3e50ae2a52cc04f54a8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e70b804fbad506f98d5356828843208e5ef9e515
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681999"
 ---
 # <a name="applicationpool-element-web-settings"></a>Elemento \<applicationPool> (configuración web)
 
@@ -99,6 +100,6 @@ Los valores del ejemplo son los valores predeterminados.
 |Archivo de validación||  
 |Puede estar vacío||  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [\<system.web> (Elemento, configuración Web)](system-web-element-web-settings.md)

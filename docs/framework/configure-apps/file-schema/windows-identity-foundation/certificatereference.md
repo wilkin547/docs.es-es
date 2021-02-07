@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <certificateReference>'
 title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: c21e5186b8afdf8c72cbfc605af94c95bc2bc0d5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3404d44457849fb78ae88617d049a2199f2b5509
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201386"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681791"
 ---
 # \<certificateReference>
 

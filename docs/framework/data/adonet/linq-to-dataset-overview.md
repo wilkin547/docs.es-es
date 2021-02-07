@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: información general sobre LINQ to DataSet'
 title: Información general de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: f7659d03005df69d7debe604581ce49973f938cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 73054a4f9b7397e3fa5d417d85afa2fa23aec643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681700"
 ---
 # <a name="linq-to-dataset-overview"></a>Información general de LINQ to DataSet
 
@@ -19,7 +20,7 @@ ms.locfileid: "91200620"
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>Consultar conjuntos de datos usando LINQ to DataSet  
 
- Antes de poder empezar a consultar un <xref:System.Data.DataSet> objeto mediante LINQ to DataSet, debe rellenar el <xref:System.Data.DataSet> . Hay varias maneras de cargar datos en un <xref:System.Data.DataSet> , como usar la <xref:System.Data.Common.DataAdapter> clase o [LINQ to SQL](./sql/linq/index.md). Una vez que los datos se han cargado en un <xref:System.Data.DataSet> objeto, puede empezar a consultarlos. La formulación de consultas mediante LINQ to DataSet es similar al uso de Language-Integrated Query (LINQ) en otros orígenes de datos habilitados para LINQ. Las consultas LINQ se pueden realizar en tablas únicas en un <xref:System.Data.DataSet> o en más de una tabla mediante el uso de los <xref:System.Linq.Enumerable.Join%2A> operadores de <xref:System.Linq.Enumerable.GroupJoin%2A> consulta estándar y.  
+ Antes de poder empezar a consultar un <xref:System.Data.DataSet> objeto mediante LINQ to DataSet, debe rellenar el <xref:System.Data.DataSet> . Hay varias maneras de cargar datos en un <xref:System.Data.DataSet> , como usar la <xref:System.Data.Common.DataAdapter> clase o [LINQ to SQL](./sql/linq/index.md). Una vez que los datos se han cargado en un <xref:System.Data.DataSet> objeto, puede empezar a consultarlos. La formulación de consultas mediante LINQ to DataSet es similar a usar Language-Integrated Query (LINQ) en otros orígenes de datos habilitados para LINQ. Las consultas LINQ se pueden realizar en tablas únicas en un <xref:System.Data.DataSet> o en más de una tabla mediante el uso de los <xref:System.Linq.Enumerable.Join%2A> operadores de <xref:System.Linq.Enumerable.GroupJoin%2A> consulta estándar y.  
   
  Las consultas LINQ se admiten en objetos con tipo y sin tipo <xref:System.Data.DataSet> . Si el esquema de <xref:System.Data.DataSet> es desconocido en tiempo de diseño, se recomienda un <xref:System.Data.DataSet> con tipo. En un <xref:System.Data.DataSet> con tipo, las tablas y las filas tienen miembros con tipo para cada una de las columnas, lo que hace que las consultas sean más sencillas y legibles.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "91200620"
   
  En las aplicaciones con n niveles, a menudo se utiliza <xref:System.Data.DataSet> en el nivel medio para almacenar en caché información para una aplicación web. La funcionalidad de consulta de LINQ to DataSet se implementa a través de métodos de extensión y extiende el ADO.NET existente 2,0 <xref:System.Data.DataSet> .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Consulta de conjuntos de datos](querying-datasets-linq-to-dataset.md)
 - [Language Integrated Query (LINQ) (C#)](../../../csharp/programming-guide/concepts/linq/index.md)

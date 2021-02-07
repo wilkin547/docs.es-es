@@ -1,15 +1,16 @@
 ---
-title: <workflowInstanceQueries>de WCF
+description: 'Más información sobre: <workflowInstanceQueries> de WCF'
+title: <workflowInstanceQueries> de WCF
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: 8a58767745efab67fb7550de8770fec2c6226117
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d4dc4827cba5a1732070b5269350ca3dd9bf2c47
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682337"
 ---
-# <a name="workflowinstancequeries-of-wcf"></a>\<workflowInstanceQueries>de WCF
+# <a name="workflowinstancequeries-of-wcf"></a>\<workflowInstanceQueries> de WCF
 
 Representa una colección de elementos de configuración que realizan el seguimiento de los cambios del ciclo de vida de la instancia del flujo de trabajo, como un evento iniciado o completado.  
   
@@ -63,7 +64,7 @@ Ninguno.
 |-------------|-----------------|  
 |[\<workflow>](../windows-workflow-foundation/workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad [activityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId) .|  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 <xref:System.Activities.Tracking.WorkflowInstanceQuery> se usa para suscribirse a los siguientes objetos <xref:System.Activities.Tracking.TrackingRecord>:  
   
@@ -91,7 +92,7 @@ La siguiente configuración se suscribe a los registros de seguimiento de nivel 
 </workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
