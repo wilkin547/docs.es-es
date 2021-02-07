@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración CREATE_ASM_NAME_OBJ_FLAGS'
 title: CREATE_ASM_NAME_OBJ_FLAGS (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5ed2fd0-c7d2-4603-aaca-5d0caad92675
 topic_type:
 - apiref
-ms.openlocfilehash: 52d5ad3a18c102422e90621c7d1e23b2692c0000
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b68eed0671d57893e7ffbfbd8127c7ef872d5eb0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761205"
 ---
 # <a name="create_asm_name_obj_flags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS (Enumeración)
 
@@ -39,7 +40,7 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -56,7 +57,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IAssemblyName (Interfaz)](iassemblyname-interface.md)
 - [CreateAssemblyNameObject (Función)](createassemblynameobject-function.md)

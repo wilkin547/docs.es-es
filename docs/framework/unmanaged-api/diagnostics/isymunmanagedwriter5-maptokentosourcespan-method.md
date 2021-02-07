@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ISymUnmanagedWriter5:: Maptokentosourcespan ((método)'
 title: ISymUnmanagedWriter5::MapTokenToSourceSpan (Método)
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-ms.openlocfilehash: e4b09e6d89b3ba8ba3bf7e149d31a14a74b945b5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b30d8051f5d2872488639ce999cccd4248af367f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723940"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761621"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>ISymUnmanagedWriter5::MapTokenToSourceSpan (Método)
 
@@ -40,6 +41,6 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedWriter5 (Interfaz)](isymunmanagedwriter5-interface.md)

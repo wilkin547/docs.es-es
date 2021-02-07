@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ISymUnmanagedWriter2'
 title: ISymUnmanagedWriter2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e78faa4-cf43-44fb-a91d-94d6df692a25
 topic_type:
 - apiref
-ms.openlocfilehash: 6feb48b7c78dda64ba372e470b83ffb14f21f2f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 228bae40e12376b3b5e8ca3bbd3463ba70a6d67b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683334"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761783"
 ---
 # <a name="isymunmanagedwriter2-interface"></a>ISymUnmanagedWriter2 (Interfaz)
 
@@ -37,7 +38,7 @@ Representa un escritor de símbolos y proporciona métodos para definir document
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)

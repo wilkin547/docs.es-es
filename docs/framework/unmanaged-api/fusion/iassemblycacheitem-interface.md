@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: interfaz IAssemblyCacheItem'
 title: IAssemblyCacheItem (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccc9387a-9f44-4f4f-bf8f-0ea6d2afa21b
 topic_type:
 - apiref
-ms.openlocfilehash: 72922d1fd0f8ae5e59fe76c7aa50f9c52dcd5302
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2dcb721f6b65ecca93262f9af2ba355d94bb774d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760877"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem (Interfaz)
 
@@ -30,7 +31,7 @@ Representa un ensamblado único en la caché global de ensamblados.
 |Método|Descripción|  
 |------------|-----------------|  
 |[Método AbortItem](iassemblycacheitem-abortitem-method.md)|Permite que el ensamblado de la caché global de ensamblados realice las operaciones de limpieza antes de que se libere.|  
-|[Commit (Método)](iassemblycacheitem-commit-method.md)|Confirma la referencia de ensamblado en caché a la memoria.|  
+|[Commit (método)](iassemblycacheitem-commit-method.md)|Confirma la referencia de ensamblado en caché a la memoria.|  
 |[Método CreateStream](iassemblycacheitem-createstream-method.md)|Crea una secuencia con el nombre y el formato especificados.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -41,7 +42,7 @@ Representa un ensamblado único en la caché global de ensamblados.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de Fusion](fusion-interfaces.md)
 - [Caché global de ensamblados](../../app-domains/gac.md)

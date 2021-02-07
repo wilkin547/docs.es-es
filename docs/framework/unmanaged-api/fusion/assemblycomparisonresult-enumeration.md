@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Assemblycomparisonresult ('
 title: AssemblyComparisonResult (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd042f89-10b1-40ca-946e-46da082f5263
 topic_type:
 - apiref
-ms.openlocfilehash: cde25a9507006c89ef6490c13ae82033f04c2931
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 093cff830aa87d28ee86ecaeb6965887279a72d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761296"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult (Enumeración)
 
@@ -44,7 +45,7 @@ typedef enum _tagAssemblyComparisonResult {
 } AssemblyComparisonResult;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
@@ -71,7 +72,7 @@ typedef enum _tagAssemblyComparisonResult {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CompareAssemblyIdentity (Función)](compareassemblyidentity-function.md)
 - [Enumeraciones de fusión](fusion-enumerations.md)

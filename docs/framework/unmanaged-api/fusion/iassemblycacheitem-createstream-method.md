@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IAssemblyCacheItem:: CreateStream ((método)'
 title: IAssemblyCacheItem::CreateStream (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 697ab0f4-470c-4baa-a415-4a975c42d0d5
 topic_type:
 - apiref
-ms.openlocfilehash: 0660621f465f2ba3610e06bd1df38baa1bc5c907
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89592d8fe1a7f43a7da20dd10883881c3339f088
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760880"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream (Método)
 
@@ -57,7 +58,7 @@ de Marcas específicas del formato definidas en Fusion. idl.
 enuncia Puntero a la dirección de la instancia de [IStream](/windows/desktop/api/objidl/nn-objidl-istream) devuelta.
 
 `puliMaxSize`\
-[in, Optional] Tamaño máximo de la secuencia a la que hace referencia `ppIStream`.
+[in, Optional] Tamaño máximo de la secuencia a la que hace referencia `ppIStream` .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -65,8 +66,8 @@ enuncia Puntero a la dirección de la instancia de [IStream](/windows/desktop/ap
 
 **Encabezado:** Fusion. h
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Vea también
 
-- [IAssemblyCacheItem (interfaz)](iassemblycacheitem-interface.md)
+- [IAssemblyCacheItem (Interfaz)](iassemblycacheitem-interface.md)

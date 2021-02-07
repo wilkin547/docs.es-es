@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: GetHistoryFileDirectory ((función)'
 title: GetHistoryFileDirectory (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-ms.openlocfilehash: 484adf288356b9955fe0cac0bb30002ec1f012d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 960bc75d69f4be6d1639e109d6327b5e65d3e129
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724443"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760971"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory (Función)
 
@@ -51,7 +52,7 @@ HRESULT GetHistoryFileDirectory (
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`wzDir` o `pdwSize` es null, o la cadena de versión es incorrecta.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se completa correctamente, el `pdwSize` argumento se establece en la longitud de la cadena de ruta de acceso.  
   
@@ -65,7 +66,7 @@ HRESULT GetHistoryFileDirectory (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CreateHistoryReader (Función)](createhistoryreader-function.md)
 - [NukeDownloadedCache (Función)](nukedownloadedcache-function.md)

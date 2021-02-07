@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IAssemblyName:: IsEqual (método)'
 title: IAssemblyName::IsEqual (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6dfc220f-d0d4-45b3-bfce-5829f817766f
 topic_type:
 - apiref
-ms.openlocfilehash: 0fabf8159c2626d4e1716e3be60baaf1ec834032
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f1bb0e26a217354e904ff79b397771d727a7a661
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760697"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual (Método)
 
@@ -51,7 +52,7 @@ HRESULT IsEqual (
   
  **Versiones de .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IAssemblyName (Interfaz)](iassemblyname-interface.md)
 - [Enumeraciones de fusión](fusion-enumerations.md)
