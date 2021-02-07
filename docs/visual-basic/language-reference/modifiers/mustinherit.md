@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: MustInherit (Visual Basic)'
 title: MustInherit
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 6502da947ae331a26e66d8ce2dbcda46e4172a6e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6ca11dd3fee8240f39ea1a3d278870d167d283d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867954"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701045"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 
 Especifica que una clase se puede usar solo como una clase base y que no se puede crear un objeto directamente a partir de ella.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El propósito de una *clase base* (también conocida como *clase abstracta*) es definir la funcionalidad común a todas las clases derivadas de ella. Esto evita que las clases derivadas tengan que volver a definir los elementos comunes. En algunos casos, esta funcionalidad común no es suficiente para crear un objeto utilizable y cada clase derivada define la funcionalidad que falta. En tal caso, desea que el código utilizado solo cree objetos a partir de las clases derivadas. Utilice `MustInherit` en la clase base para aplicar este.  
   
@@ -51,7 +52,7 @@ Especifica que una clase se puede usar solo como una clase base y que no se pued
   
  [Instrucción Class](../statements/class-statement.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Inherits Statement](../statements/inherits-statement.md)
 - [NotInheritable](notinheritable.md)

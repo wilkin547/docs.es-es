@@ -1,17 +1,18 @@
 ---
-title: Resumen de manipulación de cadenas
+description: 'Más información acerca de: Resumen de manipulación de cadenas (Visual Basic)'
+title: Resumen de la manipulación de cadenas
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-ms.openlocfilehash: f9916fb00b4073e6b0b6ebfc4bb420975b320747
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d1e24c870816a10b493f0900b92b570b214663a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875544"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701175"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Resumen de manipulaciones de cadenas (Visual Basic)
 
@@ -33,7 +34,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Devolver una matriz de cadenas basada en un filtro.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
 |Devolver un número de subcadenas especificado.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Palabras clave](index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../runtime-library-members.md)

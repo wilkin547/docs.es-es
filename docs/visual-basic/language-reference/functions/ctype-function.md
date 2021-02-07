@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: función CType (Visual Basic)'
 title: CType Function
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: 88d609146648fe1b0c3124b99a65e85293fc0707
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9732f52b40e5f762769ba5dc340c000e7e1ba17a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406435"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701266"
 ---
 # <a name="ctype-function-visual-basic"></a>CType (Función) (Visual Basic)
 
@@ -28,9 +29,9 @@ CType(expression, typename)
 
 ## <a name="parts"></a>Partes
 
-`expression`Cualquier expresión válida. Si el valor de `expression` está fuera del intervalo permitido por `typename` , Visual Basic produce una excepción.
+`expression` Cualquier expresión válida. Si el valor de `expression` está fuera del intervalo permitido por `typename` , Visual Basic produce una excepción.
 
-`typename`Cualquier expresión válida dentro de una `As` cláusula de una `Dim` instrucción, es decir, el nombre de cualquier tipo de datos, objeto, estructura, clase o interfaz.
+`typename` Cualquier expresión válida dentro de una `As` cláusula de una `Dim` instrucción, es decir, el nombre de cualquier tipo de datos, objeto, estructura, clase o interfaz.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -40,7 +41,7 @@ CType(expression, typename)
 > - Funciones de conversión de tipos como `CByte` , `CDbl` y `CInt` que realizan una conversión a un tipo de datos específico. Para obtener más información, vea [Funciones de conversión de tipos](type-conversion-functions.md).
 > - [Operador DirectCast](../operators/directcast-operator.md) o [TryCast](../operators/trycast-operator.md). Estos operadores requieren que un tipo herede de o implemente el otro tipo. Pueden proporcionar un rendimiento algo mejor que `CType` al convertir a y desde el `Object` tipo de datos.
 
-`CType`está compilado insertado, lo que significa que el código de conversión forma parte del código que evalúa la expresión. En algunos casos, el código se ejecuta más rápido porque no se llama a ningún procedimiento para realizar la conversión.
+`CType` está compilado insertado, lo que significa que el código de conversión forma parte del código que evalúa la expresión. En algunos casos, el código se ejecuta más rápido porque no se llama a ningún procedimiento para realizar la conversión.
 
 Si no se define ninguna conversión de `expression` a `typename` (por ejemplo, de `Integer` a `Date` ), Visual Basic muestra un mensaje de error en tiempo de compilación.
 
@@ -64,7 +65,7 @@ En el ejemplo siguiente se utiliza la `CType` función para convertir una expres
 
 Para obtener más ejemplos, vea [conversiones implícitas y explícitas](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.OverflowException>
 - <xref:System.InvalidCastException>

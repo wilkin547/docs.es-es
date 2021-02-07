@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: modificadores (Visual Basic)'
 title: Modificadores
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 581f484e81a7de2cb6c80061eb4730adc18f316b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875449"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701058"
 ---
 # <a name="modifiers-visual-basic"></a>Modificadores de Visual Basic
 
@@ -15,13 +16,13 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
 ## <a name="in-this-section"></a>En esta sección  
 
- [ANSI](ansi.md)  
+ [Ansi](ansi.md)  
   
- [Ensamblado](assembly.md)  
+ [Ensamblaje](assembly.md)  
   
  [Asincrónico](async.md)  
   
- [Auto](auto.md)  
+ [Automático](auto.md)  
   
  [ByRef](byref.md)  
   
@@ -51,7 +52,7 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [Opcional](optional.md)  
   
- [Enuncia](out-generic-modifier.md)  
+ [Fuera](out-generic-modifier.md)  
   
  [Sobrecargas](overloads.md)  
   
@@ -65,13 +66,13 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [Privado](private.md)  
   
- [Privado protegido](private-protected.md)  
+ [Private Protected](private-protected.md)  
   
- [Contra](protected.md)  
+ [Protegido](protected.md)  
 
  [Protected Friend](protected-friend.md)  
   
- [Pública](public.md)  
+ [Público](public.md)  
   
  [ReadOnly](readonly.md)  
   

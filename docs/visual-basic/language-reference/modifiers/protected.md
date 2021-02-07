@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: protected (Visual Basic)'
 title: Protegido
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: d66ed68004f8b6ef21ae703f02b317589814764b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 74a695e7c8ff06543a7118c935365e31af258171
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398225"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700941"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 
@@ -69,12 +70,12 @@ El modificador `Protected` se puede utilizar en los contextos siguientes:
 
 - [Instrucción Sub](../statements/sub-statement.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Público](public.md)
-- [Respecto](friend.md)
+- [Friend](friend.md)
 - [Privado](private.md)
-- [Privado protegido](private-protected.md)
+- [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
 - [Niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimientos](../../programming-guide/language-features/procedures/index.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: funciones de conversión (Visual Basic)'
 title: Funciones de conversión
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - functions [Visual Basic], conversion
 - dates [Visual Basic], converting
 ms.assetid: 8a8fb553-a8ac-424e-8103-26eea25eaa71
-ms.openlocfilehash: c25ede7c86d11c108981acc4103ce6334803393a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3a022d120fbccd833e942405bfa9c370f94875ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406448"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701292"
 ---
 # <a name="conversion-functions-visual-basic"></a>Funciones de conversión (Visual Basic)
 
@@ -48,7 +49,7 @@ ms.locfileid: "84406448"
 - <xref:Microsoft.VisualBasic.Conversion.Str%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Type Conversion Functions](type-conversion-functions.md)
 - [Conversión de tipos de datos](../../programming-guide/concepts/linq/converting-data-types.md)

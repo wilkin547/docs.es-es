@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Shadows (Visual Basic)'
 title: Shadows
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: 7aed6bec21bd484cca019b061bd5915de13a9eb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4a455a78c36e15db977936b81c22e7a5b03d107e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700850"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
@@ -70,7 +71,7 @@ El modificador `Shadows` se puede utilizar en los contextos siguientes:
 
 - [Instrucción Sub](../statements/sub-statement.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Compartido](shared.md)
 - [Estática](static.md)

@@ -1,5 +1,6 @@
 ---
-title: Privados
+description: 'Más información acerca de: privado (Visual Basic)'
+title: Privada
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 59f1c1666ce38923a2861244fb377007cd0fa992
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 20dcd943856e20ccb1b7cb5c0603fa5f313d2421
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874979"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700954"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 
 Especifica que solo se puede tener acceso a uno o varios elementos de programación declarados desde dentro del contexto de declaración, incluido desde dentro de cualquier tipo contenido.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si un elemento de programación representa la funcionalidad de propiedad o contiene datos confidenciales, normalmente querrá limitar el acceso a él lo máximo posible. Para lograr la limitación máxima, solo se permite el módulo, la clase o la estructura que la define para tener acceso a ella. Para limitar el acceso a un elemento de esta manera, puede declararlo con `Private` .  
 
@@ -61,12 +62,12 @@ Especifica que solo se puede tener acceso a uno o varios elementos de programaci
   
  [Instrucción Sub](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Pública](public.md)
-- [Contra](protected.md)
+- [Público](public.md)
+- [Protegido](protected.md)
 - [Friend](friend.md)
-- [Privado protegido](./private-protected.md)
+- [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
 - [Niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimientos](../../programming-guide/language-features/procedures/index.md)
