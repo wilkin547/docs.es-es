@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: hospedar en Internet Information Services'
 title: Hospedaje en Internet Information Services
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 7bfdf2b057c791da7e15619d69c0314557944093
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 23c81bcfccba316500d333d277907d66e5d457c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743140"
 ---
 # <a name="host-in-internet-information-services"></a>Host en Internet Information Services
 
@@ -55,7 +56,7 @@ El desarrollo e implementación de un servicio WCF hospedado en IIS consta de la
 
 - Configure el servicio WCF.
 
-Para obtener una explicación de cada una de estas tareas, consulte [implementación de un servicio WCF hospedado en Internet Information Services](deploying-an-internet-information-services-hosted-wcf-service.md).
+Para obtener una explicación de cada una de estas tareas, consulte [implementación de un servicio WCF de Internet Information Services-Hosted](deploying-an-internet-information-services-hosted-wcf-service.md).
 
 ## <a name="wcf-services-and-aspnet"></a>Servicios WCF y ASP.NET
 

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: seguridad de aplicaciones distribuidas'
 title: Seguridad distribuida de aplicaciones
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 80878857145c7a4e09106b6e1c4cb9ad68b7680a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 79e206157e7bb0a242b66064d345038d4272cf3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743166"
 ---
 # <a name="distributed-application-security"></a>Seguridad distribuida de aplicaciones
 
@@ -68,7 +69,7 @@ La seguridad de Windows Communication Foundation (WCF) se divide en tres áreas 
 
  La siguiente tabla muestra los posibles valores utilizados al crear una aplicación que utiliza la seguridad de transferencia. Puede utilizar estos valores en código o ajustes de enlaces.  
   
-|Configuración|Descripción|  
+|Setting|Descripción|  
 |-------------|-----------------|  
 |None|Especifica que el cliente no necesita presentar ningún credencial. Realiza una conversión a un cliente anónimo.|  
 |Básico|Especifica la autenticación básica. Para obtener más información, vea RFC2617, "[autenticación http: autenticación básica e implícita](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)".|  
@@ -81,7 +82,7 @@ La seguridad de Windows Communication Foundation (WCF) se divide en tres áreas 
 
  La siguiente tabla muestra los posibles valores utilizados al crear una aplicación que utiliza la seguridad de mensajes. Puede utilizar estos valores en código o ajustes de enlaces.  
   
-|Configuración|Descripción|  
+|Setting|Descripción|  
 |-------------|-----------------|  
 |None|Permite al servicio interactuar con clientes anónimos.|  
 |Windows|Permite a los intercambios de mensajes SOAP ocurrir bajo el contexto autenticado de una credencial de Windows. Utiliza el mecanismo de negociación de SSPI para escoger entre el protocolo Kerberos o NTLM como servicio de autenticación.|  

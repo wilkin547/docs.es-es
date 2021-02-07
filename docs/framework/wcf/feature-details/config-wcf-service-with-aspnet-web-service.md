@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo configurar el servicio WCF para interoperar con clientes de servicios Web de ASP.NET
 title: Procedimiento para configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 9c241c06f153e4f85c70459ff3c50889057103f5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 180307763054f8dfe5696fb0bbf294ec2b5ee3db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295046"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743400"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedimiento para configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
 

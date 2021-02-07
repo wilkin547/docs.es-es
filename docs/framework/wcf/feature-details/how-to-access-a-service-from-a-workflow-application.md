@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: obtener acceso a un servicio desde una aplicación de flujo de trabajo'
 title: Cómo obtener acceso a un servicio desde una aplicación de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 13fae7dec3026e96e3c196467da29fe768a3655f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f8972bf7755c0103d164633d53d8d32508ce2efe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257937"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743101"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Cómo obtener acceso a un servicio desde una aplicación de flujo de trabajo
 
