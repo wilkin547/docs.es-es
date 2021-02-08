@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorThreadpool:: Corunregisterwait ((método)'
 title: ICorThreadpool::CorUnregisterWait (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 42c933f1-30a8-4011-bdea-e117f3c3265e
 topic_type:
 - apiref
-ms.openlocfilehash: 38b3655da75750ffc3ea1c7983ce3b549d76f087
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 61b6c7a1fa8459ddd173d2857cff982f353afc31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733979"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789533"
 ---
-# <a name="icorthreadpoolcorunregisterwait-method"></a><span data-ttu-id="50e71-102">ICorThreadpool::CorUnregisterWait (Método)</span><span class="sxs-lookup"><span data-stu-id="50e71-102">ICorThreadpool::CorUnregisterWait Method</span></span>
+# <a name="icorthreadpoolcorunregisterwait-method"></a><span data-ttu-id="de0ab-103">ICorThreadpool::CorUnregisterWait (Método)</span><span class="sxs-lookup"><span data-stu-id="de0ab-103">ICorThreadpool::CorUnregisterWait Method</span></span>
 
-<span data-ttu-id="50e71-103">Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="50e71-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+<span data-ttu-id="de0ab-104">Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="de0ab-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50e71-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="50e71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de0ab-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="de0ab-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CorUnregisterWait (  
@@ -36,16 +37,16 @@ HRESULT CorUnregisterWait (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="50e71-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="50e71-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de0ab-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="de0ab-106">Requirements</span></span>  
 
- <span data-ttu-id="50e71-106">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50e71-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="de0ab-107">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="de0ab-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="50e71-107">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="50e71-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="de0ab-108">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="de0ab-108">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="50e71-108">**Biblioteca:** Se incluye como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="50e71-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="de0ab-109">**Biblioteca:** Se incluye como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="de0ab-109">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="50e71-109">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50e71-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="de0ab-110">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de0ab-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50e71-110">Consulte también</span><span class="sxs-lookup"><span data-stu-id="50e71-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de0ab-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="de0ab-111">See also</span></span>
 
-- [<span data-ttu-id="50e71-111">ICorThreadpool (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="50e71-111">ICorThreadpool Interface</span></span>](icorthreadpool-interface.md)
+- [<span data-ttu-id="de0ab-112">ICorThreadpool (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="de0ab-112">ICorThreadpool Interface</span></span>](icorthreadpool-interface.md)
