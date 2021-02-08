@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Econtexttype ('
 title: EContextType (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92b926a9-b87e-408a-9036-df7b752c9492
 topic_type:
 - apiref
-ms.openlocfilehash: c6d1ace12bd07fa1f14c8570eca1f950a5c22be9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b7d6ddb385386bb0616a01ef6fcc432f2c925d51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686337"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785541"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType (Enumeración)
 
@@ -34,14 +35,14 @@ typedef enum {
 } EContextType;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`eCurrentContext`|Indica el contexto del subproceso actual en el momento en que el Common Language Runtime (CLR) llama al método [IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md) o el contexto solicitado por CLR en una llamada al método [IHostSecurityManager:: SetSecurityContext](ihostsecuritymanager-setsecuritycontext-method.md) .|  
 |`eRestrictedContext`|Indica un contexto sobre el que el host tiene privilegios más bajos, como el recolector de elementos no utilizados, o los constructores de clase o módulo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR proporciona uno de los `EContextType` valores como un valor de parámetro en las llamadas a `IHostSecurityManager::GetSecurityContext` los `IHostSecurityManager::SetSecurityContext` métodos y.  
   
@@ -55,7 +56,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostSecurityContext (Interfaz)](ihostsecuritycontext-interface.md)
 - [IHostSecurityManager (Interfaz)](ihostsecuritymanager-interface.md)

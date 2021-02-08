@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Ebindpolicylevels ('
 title: EBindPolicyLevels (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-ms.openlocfilehash: a0992ca8ac4bfffef681c74de455a0eeb627a042
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 00e10cff79cdd782e8d9ab8e9b7e1e3f388fb1ee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726852"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785619"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels (Enumeración)
 
@@ -40,7 +41,7 @@ typedef enum {
 } EBindPolicyLevels;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -53,7 +54,7 @@ typedef enum {
 |`ePolicyPortability`|Especifica que la Directiva debe admitir la portabilidad entre las implementaciones de un ensamblado de .NET Framework. Vea el [\<supportPortability>](../../configure-apps/file-schema/runtime/supportportability-element.md) elemento de archivo de configuración.|  
 |`ePolicyUnifiedToCLR`|Especifica que la Directiva se debe unificar con la del Common Language Runtime (CLR).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta enumeración se pasa a los métodos de la interfaz [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) para especificar cambios en la Directiva de aplicación.  
   
@@ -67,7 +68,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)
 - [Enumeraciones para hosts](hosting-enumerations.md)

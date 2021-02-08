@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <serviceThrottling>'
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 0c6d844ac287037b7a546d3a48e7cd924e8a63d1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eb65f6d60a266a367789d87e4e6ea10ebfd2c7a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786686"
 ---
 # \<serviceThrottling>
 
@@ -50,7 +51,7 @@ Especifica el mecanismo de limitación de peticiones de un servicio de Windows C
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los controles de limitación de peticiones establecen límites en el número de llamadas simultáneas, instancias o sesiones para evitar el consumo excesivo de recursos.  
   

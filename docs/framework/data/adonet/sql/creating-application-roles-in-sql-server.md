@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo crear roles de aplicación en SQL Server
 title: Crear roles de aplicación en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 764ae61cba4bf01681d658cc4aacc2aeaecedd3f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 20047d12a004230aebca1cf9d42b3893d36f3844
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173554"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786165"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Crear roles de aplicación en SQL Server
 
@@ -60,11 +61,11 @@ Los roles de aplicación proporcionan un método para asignar permisos a una apl
 
  Para obtener más información, vea los recursos siguientes.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Roles de aplicación](/sql/relational-databases/security/authentication-access/application-roles)|Describe cómo crear y usar roles de aplicación en SQL Server 2008.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Información general sobre la seguridad de SQL Server](overview-of-sql-server-security.md)

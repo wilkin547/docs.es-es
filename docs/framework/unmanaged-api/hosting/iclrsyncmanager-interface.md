@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRSyncManager (interfaz)'
 title: ICLRSyncManager (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a49f9d80-1c76-4ddd-8c49-34f913a5c596
 topic_type:
 - apiref
-ms.openlocfilehash: 5bfab21a36becf943b1813f266cf70c4b5e5b1d2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 188d1c913d75666aea09b17244012401d377fa10
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785021"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager (Interfaz)
 
@@ -44,7 +45,7 @@ Define métodos que permiten al host obtener información sobre las tareas solic
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Thread>
 - [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)

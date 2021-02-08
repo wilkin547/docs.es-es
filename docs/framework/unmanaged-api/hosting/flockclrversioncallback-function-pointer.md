@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: puntero de función FLockClrVersionCallback'
 title: puntero a la función FLockClrVersionCallback
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-ms.openlocfilehash: d18702a1bb15d2cc6c7b8577b91ed011e9bd0c05
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3506cd30ab2a9e5a06b03f5010c9870280a38378
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785385"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>puntero a la función FLockClrVersionCallback
 
@@ -33,7 +34,7 @@ Apunta a una función a la que llama el Common Language Runtime (CLR) para indic
 typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta función se implementa mediante el host.  
   
@@ -47,7 +48,7 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LockClrVersion (Función)](lockclrversion-function.md)
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

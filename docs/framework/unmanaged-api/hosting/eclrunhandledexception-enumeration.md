@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración EClrUnhandledException ('
 title: EClrUnhandledException (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: bccd44e1bead4feadf67929dc104557715904577
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 088d448a92c4d9030208537b9c788477c85f9d37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686480"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785554"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException (Enumeración)
 
@@ -34,14 +35,14 @@ typedef enum {
 } EClrUnhandledException;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`eRuntimeDeterminedPolicy`|Especifica que se produce el comportamiento predeterminado. El proceso se ha anulado.|  
 |`eHostDeterminedPolicy`|Especifica que el Common Language Runtime (CLR) omite las excepciones no controladas y permite que el host determine cualquier acción más.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para especificar que el CLR se comporte como versiones anteriores, utilice el `eHostDeterminedPolicy` miembro.  
   
@@ -55,7 +56,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EClrFailure (Enumeración)](eclrfailure-enumeration.md)
 - [EClrOperation (Enumeración)](eclroperation-enumeration.md)

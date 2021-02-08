@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <wsFederationHttpBinding>'
 title: <security> de <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 650483099c7d70450cfc56a9a28efac076d64675
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6c01c7a50b05f1723b3620407eb5e5761bae35cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162246"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786803"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<security> de \<wsFederationHttpBinding>
 
@@ -92,10 +93,10 @@ Define la configuración de seguridad de [\<wsFederationHttpBinding>](wsfederati
   
 ## <a name="mode-attribute"></a>Atributo mode  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |None|El mensaje SOAP no es seguro durante la transferencia.|  
-|Mensaje|La integridad, confidencialidad, autenticación de servidor y autenticación del cliente se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo se cifra y firma. El servicio necesita ser configurado con un certificado. La autenticación del cliente está basada en el token emitido al cliente por un servicio de token de seguridad.|  
+|Message|La integridad, confidencialidad, autenticación de servidor y autenticación del cliente se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo se cifra y firma. El servicio necesita ser configurado con un certificado. La autenticación del cliente está basada en el token emitido al cliente por un servicio de token de seguridad.|  
 |TransportWithMessageCredential|HTTPS proporciona integridad, confidencialidad y autenticación del servidor. El servicio necesita ser configurado con un certificado. La autenticación del cliente se proporciona por medio de la seguridad del mensaje SOAP y está basada en el token emitido al cliente por un servicio de token de seguridad.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: validar archivos DBML y de asignación externa'
 title: Procedimiento para validar archivos DBML y de asignación externa
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46e5c787bef8e152020fc97631ef8c1c4928fe74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793042"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785788"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedimiento para validar archivos DBML y de asignación externa
 
@@ -17,7 +18,7 @@ Los archivos de asignación externa y los archivos .dbml que se modifican se deb
 
 ### <a name="to-validate-a-dbml-or-xml-file"></a>Para validar un archivo .dbml o XML
 
-1. En el menú **archivo** de Visual Studio, elija **abrir**y, a continuación, haga clic en **archivo**.
+1. En el menú **archivo** de Visual Studio, elija **abrir** y, a continuación, haga clic en **archivo**.
 
 2. En el cuadro de diálogo **Abrir archivo** , haga clic en el archivo de asignación. DBML o XML que desea validar.
 
@@ -41,7 +42,7 @@ Los archivos de asignación externa y los archivos .dbml que se modifican se deb
 
     Asegúrese de que no hay otras definiciones de esquema seleccionadas.
 
-7. En el menú **Ver** , haga clic en **lista de errores**.
+7. En el menú **Ver** , haga clic en **Lista de errores**.
 
     Determine si se han generado errores, advertencias o mensajes. Si no, el archivo XML es válido respecto a la definición de esquema.
 

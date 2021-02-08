@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Iapartmentcallback (::D oCallback (método)'
 title: IApartmentCallback::DoCallback (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-ms.openlocfilehash: e3031bf123ff9107b4cebc0723f1be0d423bdaec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 65b7f496f953f08e099bf13ef8212c7d6e1026ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785115"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback (Método)
 
@@ -53,6 +54,6 @@ HRESULT _stdcall DoCallback(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IApartmentCallback (Interfaz)](iapartmentcallback-interface.md)

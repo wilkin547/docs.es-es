@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: EClrEvent (enumeración)'
 title: EClrEvent (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-ms.openlocfilehash: 5d6ec42da60a7b294177063b9f8bd5afbf352c62
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c2365d1a2fb0109bab9159c3af4e2da3a46de6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726826"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785606"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent (Enumeración)
 
@@ -36,7 +37,7 @@ typedef enum {
 } EClrEvent;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -45,7 +46,7 @@ typedef enum {
 |`Event_MDAFired`|Especifica que se ha generado un mensaje del Asistente para la depuración administrada (MDA).|  
 |`Event_StackOverflow`|Especifica que se ha producido un error de desbordamiento de pila.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host puede registrar devoluciones de llamada para cualquiera de los tipos de evento descritos por `EClrEvent` llamando a métodos de la interfaz [ICLROnEventManager](iclroneventmanager-interface.md) . El host obtiene un puntero a esta interfaz llamando al método [ICLRControl:: GetCLRManager (](iclrcontrol-getclrmanager-method.md) .  
   
@@ -63,7 +64,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IActionOnCLREvent (Interfaz)](iactiononclrevent-interface.md)
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <ws2007HttpBinding>'
 title: <security> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: 48b49bf69f791f90ed5b2eea8e6d412438cd9519
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ef8b82d34b318db79db061b9c01b147e619d39c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169848"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786816"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<security> de \<ws2007HttpBinding>
 
@@ -47,7 +48,7 @@ Representa la configuración de seguridad utilizada con el [\<ws2007HttpBinding>
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`mode`|Opta. Especifica el tipo de seguridad que se aplica. El valor predeterminado es `Message`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.SecurityMode>.|  
+|`mode`|Opta. Especifica el tipo de seguridad que se aplica. De manera predeterminada, es `Message`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo mode  
   
@@ -75,7 +76,7 @@ Representa la configuración de seguridad utilizada con el [\<ws2007HttpBinding>
 
  Este elemento está diseñado para la interoperación con servicios que implementan las especificaciones de WS-*. La seguridad de transporte para este enlace es Capa de sockets seguros (SSL) sobre HTTP o HTTPS.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.WSHttpBinding.Security%2A>

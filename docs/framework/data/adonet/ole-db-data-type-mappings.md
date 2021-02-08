@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: OLE DB las asignaciones de tipos de datos'
 title: Asignaciones de tipos de datos de OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 7f3b498e39feac4a6fe98e739793d20e0268b8f4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8dd750754a67921437ca9b8fac751857961385cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150705"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786191"
 ---
 # <a name="ole-db-data-type-mappings"></a>Asignaciones de tipos de datos de OLE DB
 
@@ -31,11 +32,11 @@ En la tabla siguiente se muestra el tipo de .NET Framework deducido para los tip
 |adError|DBTYPE_ERROR|ExternalException|GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DateTime|GetDateTime()|  
 |adGUID|DBTYPE_GUID|Guid|GetGuid()|  
-|adIDispatch|DBTYPE_IDISPATCH *|Objeto|GetValue()|  
+|adIDispatch|DBTYPE_IDISPATCH *|Object|GetValue()|  
 |adInteger|DBTYPE_I4|Int32|GetInt32()|  
-|adIUnknown|DBTYPE_IUNKNOWN *|Objeto|GetValue()|  
+|adIUnknown|DBTYPE_IUNKNOWN *|Object|GetValue()|  
 |adNumeric|DBTYPE_NUMERIC|Decimal|GetDecimal()|  
-|adPropVariant|DBTYPE_PROPVARIANT|Objeto|GetValue()|  
+|adPropVariant|DBTYPE_PROPVARIANT|Object|GetValue()|  
 |adSingle|DBTYPE_R4|Single|GetFloat()|  
 |adSmallInt|DBTYPE_I2|Int16|GetInt16()|  
 |adTinyInt|DBTYPE_I1|Byte|GetByte()|  
@@ -43,7 +44,7 @@ En la tabla siguiente se muestra el tipo de .NET Framework deducido para los tip
 |adUnsignedInt|DBTYPE_UI4|UInt32|GetValue()|  
 |adUnsignedSmallInt|DBTYPE_UI2|UInt16|GetValue()|  
 |adUnsignedTinyInt|DBTYPE_UI1|Byte|GetByte()|  
-|adVariant|DBTYPE_VARIANT|Objeto|GetValue()|  
+|adVariant|DBTYPE_VARIANT|Object|GetValue()|  
 |adWChar|DBTYPE_WSTR|String|GetString()|  
 |adUserDefined|DBTYPE_UDT|no admitido||  
 |adVarNumeric|DBTYPE_VARNUMERIC|no admitido||  

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <textMessageEncoding>'
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: 159c581955336575af87a66a796cb78dd35d09c7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a8c7820b2e22152850d6d21c5091e328feb7a9f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786608"
 ---
 # \<textMessageEncoding>
 
@@ -54,7 +55,7 @@ Especifica la codificación de caracteres y la versión del mensaje utilizadas p
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La codificación es el proceso de transformación de un mensaje en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Texto, Binario y Mecanismo de optimización de transmisión del mensaje (MTOM).  
   
@@ -69,7 +70,7 @@ Especifica la codificación de caracteres y la versión del mensaje utilizadas p
                      textEncoding="utf-8" />
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.TextMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

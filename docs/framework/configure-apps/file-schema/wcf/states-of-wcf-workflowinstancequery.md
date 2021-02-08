@@ -1,15 +1,16 @@
 ---
-title: <states>de WCF,<workflowInstanceQuery>
+description: 'Más información sobre: <states> de WCF, <workflowInstanceQuery>'
+title: <states> de WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: 5b779cf1074687dbd648b23d04f7cf3a354a2014
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 66b3008b352d1f76c30aab9a0ec038836f33d408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786647"
 ---
-# <a name="states-of-wcf-workflowinstancequery"></a>\<states>de WCF,\<workflowInstanceQuery>
+# <a name="states-of-wcf-workflowinstancequery"></a>\<states> de WCF, \<workflowInstanceQuery>
 
 Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.  
   
@@ -65,21 +66,21 @@ Ninguno.
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](../windows-workflow-foundation/workflowinstancequery.md)|Una consulta que realiza el seguimiento de los cambios del ciclo de vida de la instancia de flujo de trabajo, como por ejemplo, un evento iniciado o completado.|  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los registros devueltos se filtran por los estados de esta colección.  
   
 En la siguiente tabla se describen los valores de estado posibles.  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |Anulado|Se ha anulado la instancia de flujo de trabajo.|  
 |Completado|Se ha completado la instancia de flujo de trabajo.|  
 |Deleted|Se ha eliminado la instancia de flujo de trabajo.|  
-|Inactivo|La instancia del flujo de trabajo está inactiva.|  
+|Inactivo|La instancia de flujo de trabajo está inactiva.|  
 |Guardado|Se ha guardado la instancia de flujo de trabajo.|  
 |Reanudado|Se ha reanudado la instancia de flujo de trabajo.|  
-|Comenzado|Se ha iniciado la instancia de flujo de trabajo.|  
+|Iniciado|Se ha iniciado la instancia de flujo de trabajo.|  
 |UnhandledException|La instancia de flujo de trabajo ha detectado una excepción no controlada.|  
 |Descargado|Se ha descargado la instancia de flujo de trabajo.|  
 |Canceled|Se ha cancelado la instancia de flujo de trabajo.|  
@@ -101,7 +102,7 @@ La siguiente configuración se suscribe a los registros de seguimiento de nivel 
 </workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>

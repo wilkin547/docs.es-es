@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo modificar datos con un DbDataAdapter
 title: Modificar datos con un objeto DbDataAdapter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 5272a53ae0b3ac1888d01dc2a59778c6c7231619
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 749c56e8db76a469d7ebf0e503508665c2fdbd94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786256"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modificar datos con un objeto DbDataAdapter
 
@@ -46,7 +47,7 @@ El método <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> de u
 > [!IMPORTANT]
 > Por razones de seguridad, no es recomendable evitar totalmente parámetros específicos del proveedor mediante el uso de concatenación de cadenas para construir instrucciones SQL directas. El uso de cadenas de concatenación en lugar de parámetros expone a la aplicación a ataques por inyección de SQL.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Objetos DbProviderFactory](dbproviderfactories.md)
 - [Obtener un objeto DbProviderFactory](obtaining-a-dbproviderfactory.md)

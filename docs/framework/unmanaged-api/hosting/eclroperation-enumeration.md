@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: EClrOperation (enumeración)'
 title: EClrOperation (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aef6808-5aac-4b2f-a2c7-fee1575c55ed
 topic_type:
 - apiref
-ms.openlocfilehash: c24e4557695d26666682ee385131abaab707a24d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f75762a400955b5f36fb2a337f283e36a32658c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720716"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785567"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation (Enumeración)
 
@@ -39,7 +40,7 @@ typedef enum {
 } EClrOperation;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -51,7 +52,7 @@ typedef enum {
 |`OPR_ThreadRudeAbortInCriticalRegion`|El host puede especificar acciones de directiva que se deben realizar cuando se produce una anulación de subproceso forzada en una región de código crítica.|  
 |`OPR_ThreadRudeAbortInNonCriticalRegion`|El host puede especificar acciones de directiva que se deben realizar cuando se produce una anulación de subproceso forzada en una región de código no crítica.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La infraestructura de confiabilidad de Common Language Runtime (CLR) distingue entre anulaciones y errores de asignación de recursos que se producen en regiones críticas de código y las que se producen en regiones no críticas de código. Esta distinción está diseñada para permitir que los hosts establezcan diferentes directivas en función de dónde se produzca un error en el código.  
   
@@ -71,7 +72,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EClrFailure (Enumeración)](eclrfailure-enumeration.md)
 - [EPolicyAction (Enumeración)](epolicyaction-enumeration.md)

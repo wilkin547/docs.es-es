@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <soapProcessing>'
 title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 0728e22205d4ac2c7674f7690e142aed51d42440
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1355dc5b344891d7b6ed0fa0d5c64f877ec0ba48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786673"
 ---
 # \<soapProcessing>
 
@@ -38,7 +39,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-None
+Ninguno
 
 ### <a name="parent-elements"></a>Elementos primarios
 
@@ -46,7 +47,7 @@ None
 | --- | ----------- |
 | [**\<behavior>**](behavior-of-endpointbehaviors.md) | Especifica el comportamiento de un punto de conexión. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El procesamiento SOAP es el proceso donde los mensajes se convierten entre las versiones del mensaje.
 

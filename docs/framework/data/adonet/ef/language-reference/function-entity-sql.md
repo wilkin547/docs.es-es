@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: función (Entity SQL)'
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: 4e06b5bf8a2ca62630666ab3e8ba35f0425e3988
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d61aafce03dc7b82b678f1eb107afb79c6c3ed2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148040"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786321"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 
@@ -52,7 +53,7 @@ FUNCTION function-name
  ROW **(** `row_expression` **)**  
  Una expresión que devuelve registros anónimos y de tipo estructural a partir de uno o varios valores. Para obtener más información, consulta [ROW](row-entity-sql.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Es posible declarar varias funciones inline con el mismo nombre, siempre que sus firmas sean distintas. Para obtener más información, consulta [Function Overload Resolution](function-overload-resolution-entity-sql.md).  
   

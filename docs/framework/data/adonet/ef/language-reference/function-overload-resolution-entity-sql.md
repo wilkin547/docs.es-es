@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: resolución de sobrecargas de función (Entity SQL)'
 title: Resolución de la sobrecarga de funciones (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: d37cd9342d1fb3b60d5a2c05d373fb7e71f54b1f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8fbe0b54ed559d1f962c3e916d25554e0de65737
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786334"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Resolución de la sobrecarga de funciones (Entity SQL)
 
@@ -31,7 +32,7 @@ En este tema se describe cómo se resuelven las funciones de [!INCLUDE[esql](../
   
  Para las funciones definidas por el usuario, la definición de una función inline de consulta tiene prioridad incluso cuando existe una función definida por el modelo con una firma que es una coincidencia mejor para la función definida por el usuario.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
 - [Información general sobre Entity SQL](entity-sql-overview.md)

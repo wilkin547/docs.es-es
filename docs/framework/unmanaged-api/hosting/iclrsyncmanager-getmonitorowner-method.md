@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRSyncManager:: GetMonitorOwner ((método)'
 title: ICLRSyncManager::GetMonitorOwner (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 840983a4-396d-47b4-86a0-d35f9b437cdb
 topic_type:
 - apiref
-ms.openlocfilehash: a2cb82d8071518af4d4bc3276871f3846a5a5693
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67fb966c415009236cabef5e6b4d27cbb90d50ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687104"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785034"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>ICLRSyncManager::GetMonitorOwner (Método)
 
@@ -54,7 +55,7 @@ HRESULT GetMonitorOwner (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Normalmente, el host llama `GetMonitorOwner` como parte de un mecanismo de detección de interbloqueos. La cookie está asociada a un monitor cuando se crea mediante una llamada a [IHostSyncManager:: CreateMonitorEvent (](ihostsyncmanager-createmonitorevent-method.md).  
   
@@ -73,7 +74,7 @@ HRESULT GetMonitorOwner (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)

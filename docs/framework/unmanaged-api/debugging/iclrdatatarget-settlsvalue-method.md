@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRDataTarget:: Settlsvalue ((método)'
 title: ICLRDataTarget::SetTLSValue (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-ms.openlocfilehash: d2eaab1f42eb04d8e9727220a08842ca75a2eadf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2432cd66f604575e35f171c98a0fb313c5ccd94e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785692"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue (Método)
 
@@ -47,7 +48,7 @@ HRESULT SetTLSValue (
  `value`  
  de `CLRDATA_ADDRESS` Valor que especifica el valor que se va a colocar en la ubicación TLS determinada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método lo implementa el escritor de la aplicación de depuración.  
   
@@ -61,6 +62,6 @@ HRESULT SetTLSValue (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget (Interfaz)](iclrdatatarget-interface.md)

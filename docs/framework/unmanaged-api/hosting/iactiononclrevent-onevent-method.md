@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IActionOnCLREvent:: onEvent (método)'
 title: IActionOnCLREvent::OnEvent (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: 3bfcb01e30b4cb33ec9276f1d3c6ac2f3bde4b58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 163956ab319eb34d58da23d2c4ef2a6b592aab0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721769"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785151"
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent (Método)
 
@@ -54,7 +55,7 @@ HRESULT OnEvent (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a cualquier método de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `data` parámetro es un puntero a un objeto de tipo no especificado. Si el `event` parámetro es `Event_DomainUnload` , `data` es el identificador numérico del <xref:System.AppDomain> que se ha descargado. El host puede tomar las medidas adecuadas con este identificador como clave.  
   
@@ -70,7 +71,7 @@ HRESULT OnEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [EClrEvent (Enumeración)](eclrevent-enumeration.md)

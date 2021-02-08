@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: compatibilidad con la depuración'
 title: Capacidad de depuración
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
-ms.openlocfilehash: 89558b634c9fdfae13c13aca3041e22271feaa1e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 05ffe9790ce1b73361db55bb96cc703b01e4d69c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194510"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786139"
 ---
 # <a name="debugging-support"></a>Capacidad de depuración
 
@@ -29,6 +30,6 @@ ms.locfileid: "91194510"
  [Solución de problemas](troubleshooting.md)  
  Presenta escenarios comunes cuyas causas podrían ser difíciles de determinar.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Guía de programación](programming-guide.md)

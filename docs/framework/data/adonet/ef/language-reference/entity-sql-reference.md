@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: referencia de Entity SQL'
 title: Referencia de Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: 987aa5c05b88d684e050721077d704b29e546aab
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 89a53d6d365d8cae99e16c52cc159c9d2ff57cfc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542129"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786425"
 ---
 # <a name="entity-sql-reference"></a>Referencia de Entity SQL
 
@@ -17,7 +18,7 @@ Esta sección contiene Entity SQL artículos de referencia. En este artículo se
 
 Los operadores aritméticos realizan operaciones matemáticas con dos expresiones de uno o más tipos de datos numéricos. En la tabla siguiente se enumeran los operadores aritméticos Entity SQL:
 
-|Operador|Use|
+|Operator|Uso|
 |--------------|---------|
 |[+ (Sumar)](add.md)|Suma.|
 |[/ (Dividir)](divide-entity-sql.md)|División.|
@@ -45,7 +46,7 @@ Los operadores de comparación se definen para los tipos siguientes: `Byte`, `In
 
 La igualdad y desigualdad se definen para cualquier tipo de objeto que tenga identidad, como el tipo `Boolean`. Los objetos no primitivos con identidad se consideran iguales si comparten la misma identidad. En la tabla siguiente se enumeran los operadores de comparación Entity SQL:
 
-|Operador|Descripción|
+|Operator|Descripción|
 |--------------|-----------------|
 |[= (Es igual a)](equals-entity-sql.md)|Compara la igualdad de dos expresiones.|
 |[> (Mayor que)](greater-than-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor mayor que el de la expresión de la derecha.|
@@ -61,7 +62,7 @@ La igualdad y desigualdad se definen para cualquier tipo de objeto que tenga ide
 
 Los operadores lógicos prueban la veracidad de una condición. La expresión CASE evalúa un conjunto de expresiones booleanas para determinar el resultado. En la tabla siguiente se enumeran los operadores lógicos y de expresiones CASE:
 
-|Operador|Descripción|
+|Operator|Descripción|
 |--------------|-----------------|
 |[&&  (AND lógico)](and-entity-sql.md)|Y lógico.|
 |[\! (NOT lógico)](not-entity-sql.md)|NOT lógico.|
@@ -73,7 +74,7 @@ Los operadores lógicos prueban la veracidad de una condición. La expresión CA
 
 Los operadores de consulta se usan para definir expresiones de consulta que devuelven datos de la entidad. En la tabla siguiente se enumeran los operadores de consulta:
 
-|Operador|Use|
+|Operator|Uso|
 |--------------|---------|
 |[FROM](from-entity-sql.md)|Especifica la colección que se utiliza en las instrucciones [Select](select-entity-sql.md) .|
 |[GROUP BY](group-by-entity-sql.md)|Especifica los grupos en los que se van a colocar los objetos devueltos por una expresión de consulta ([Select](select-entity-sql.md)).|
@@ -90,7 +91,7 @@ Los operadores de consulta se usan para definir expresiones de consulta que devu
 
 Una referencia es un puntero lógico (clave externa) a una entidad concreta en un conjunto de entidades específico. Entity SQL admite los operadores siguientes para construir, deconstruir y navegar por referencias:
 
-|Operador|Use|
+|Operator|Uso|
 |--------------|---------|
 |[CREATEREF](createref-entity-sql.md)|Crea referencias a una entidad en un conjunto de entidades.|
 |[DEREF](deref-entity-sql.md)|Desreferencia un valor de referencia y genera el resultado de dicha desreferenciación.|
@@ -102,7 +103,7 @@ Una referencia es un puntero lógico (clave externa) a una entidad concreta en u
 
 Entity SQL proporciona varias operaciones de conjuntos muy eficaces. Esto incluye operadores de conjuntos similares a los operadores de Transact-SQL como UNION, INTERSECT, Except y EXISTs. Entity SQL también admite operadores para la eliminación de duplicados (SET), la prueba de pertenencia (en) y las combinaciones (JOIN). En la tabla siguiente se enumeran los operadores de conjuntos de Entity SQL:
 
-|Operador|Use|
+|Operator|Uso|
 |--------------|---------|
 |[ANYELEMENT](anyelement-entity-sql.md)|Extrae un elemento de una colección de varios valores.|
 |[EXCEPT](except-entity-sql.md)|Devuelve una colección de los valores distintos de la expresión de consulta a la izquierda del operando Except que no se devuelven también desde la expresión de consulta a la derecha del operando except.|
@@ -118,7 +119,7 @@ Entity SQL proporciona varias operaciones de conjuntos muy eficaces. Esto incluy
 
 Entity SQL proporciona operaciones que permiten construir, consultar y manipular el tipo de una expresión (valor). En la tabla siguiente se enumeran los operadores que se usan para trabajar con tipos:
 
-|Operador|Use|
+|Operator|Uso|
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|Convierte una expresión de un tipo de datos a otro.|
 |[COLLECTION](collection-entity-sql.md)|Se utiliza en una operación de [función](function-entity-sql.md) para declarar una colección de tipos de entidad o tipos complejos.|
@@ -133,7 +134,7 @@ Entity SQL proporciona operaciones que permiten construir, consultar y manipular
 
 En la tabla siguiente se enumeran otros operadores de Entity SQL:
 
-|Operador|Use|
+|Operator|Uso|
 |--------------|---------|
 |[+ (Concatenación de cadenas)](string-concatenation-entity-sql.md)|Se utiliza para concatenar cadenas en Entity SQL.|
 |[. (Acceso a miembros)](member-access-entity-sql.md)|Obtiene acceso al valor de una propiedad o campo de una instancia de un tipo de modelo conceptual estructural.|

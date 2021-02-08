@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración HOST_TYPE'
 title: HOST_TYPE (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-ms.openlocfilehash: 31640ada28af8e35554b91d5931d427fbaa8dcbe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a0baf3050f99885953ddec06342cbe19accfef3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721860"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785242"
 ---
 # <a name="host_type-enumeration"></a>HOST_TYPE (Enumeración)
 
@@ -35,7 +36,7 @@ typedef enum {
 } HOST_TYPE;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -53,6 +54,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para hosts](hosting-enumerations.md)

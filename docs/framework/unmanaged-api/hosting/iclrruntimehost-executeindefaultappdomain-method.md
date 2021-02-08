@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeHost:: Executeindefaultappdomain ((método)'
 title: ICLRRuntimeHost::ExecuteInDefaultAppDomain (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-ms.openlocfilehash: df0b2d96963ad03e04bd8770d8a8078c6c20b8ff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fae9be69cf67da252dcdb423432ec922c0b00ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785143"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain (Método)
 
@@ -66,7 +67,7 @@ HRESULT ExecuteInDefaultAppDomain (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, la CRL ya no se podrá usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El método invocado debe tener la siguiente firma:  
   
@@ -86,6 +87,6 @@ static int pwzMethodName (String pwzArgument)
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRRuntimeHost (Interfaz)](iclrruntimehost-interface.md)

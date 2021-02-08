@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: GetRequestedRuntimeInfo (función)'
 title: GetRequestedRuntimeInfo (Función)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: b120b854e1787824808dd64d95b0fa78ba6c9fa2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63d0bdcd07be5727cddc0acc352e8358b5ff0090
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705493"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785294"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo (Función)
 
@@ -90,7 +91,7 @@ HRESULT GetRequestedRuntimeInfo (
 |S_OK|El método se completó correctamente.|  
 |ERROR_INSUFFICIENT_BUFFER|El búfer de directorio no es lo suficientemente grande como para almacenar la ruta de acceso al directorio.<br /><br /> o bien<br /><br /> El búfer de versión no es lo suficientemente grande como para almacenar la cadena de versión.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `GetRequestedRuntimeInfo` método devuelve información en tiempo de ejecución sobre la versión cargada en el proceso, que no es necesariamente la versión más reciente instalada en el equipo.  
   
@@ -126,7 +127,7 @@ HRESULT GetRequestedRuntimeInfo (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [GetRequestedRuntimeVersion (Función)](getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess (Función)](getversionfromprocess-function.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeInfo:: SetDefaultStartupFlags ((método)'
 title: ICLRRuntimeInfo::SetDefaultStartupFlags (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 8020db491c3b66be38a9f6cbcb7551721859dcd5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: eb839b2ff71836adc1b3858092f7caf5787275b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723121"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785047"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags (Método)
 
@@ -50,7 +51,7 @@ HRESULT SetDefaultStartupFlags(
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un host multiproceso debe sincronizar las llamadas a este método. De lo contrario, el subproceso A podría llamar al método después de que el `SetStartupFlags` subproceso b complete una llamada a `SetStartupFlags` y antes de que el subproceso b inicie el tiempo de ejecución.  
   
@@ -64,7 +65,7 @@ HRESULT SetDefaultStartupFlags(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

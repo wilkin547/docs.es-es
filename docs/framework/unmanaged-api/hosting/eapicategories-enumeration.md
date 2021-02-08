@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración EApiCategories'
 title: EApiCategories (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-ms.openlocfilehash: f90e08373c0497201816bc7eead89b83b84be255
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 58a7d4fa4d0c965bf9158ad6713185782d4ae94a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785632"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories (Enumeración)
 
@@ -43,7 +44,7 @@ typedef enum {
 } EHostProtectionCategories;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -59,7 +60,7 @@ typedef enum {
 |`eSynchronization`|Especifica que Common Language Runtime clases y miembros que permiten que el código de usuario mantenga bloqueos no se ejecuten en código de confianza parcial.|  
 |`eUI`|Especifica que las clases administradas y los miembros que permiten o requieren la interacción humana no se pueden ejecutar en código de confianza parcial.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El método [ICLRHostProtectionManager:: setprotectedcategories (](iclrhostprotectionmanager-setprotectedcategories-method.md) toma un parámetro de tipo `EApiCategories` .  
   
@@ -75,7 +76,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRHostProtectionManager (Interfaz)](iclrhostprotectionmanager-interface.md)
 - [Enumeraciones para hosts](hosting-enumerations.md)

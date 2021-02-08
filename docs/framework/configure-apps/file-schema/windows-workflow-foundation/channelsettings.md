@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <channelSettings>'
 title: <channelSettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 94a4457f-f43f-458d-a47e-2d11103ee75e
-ms.openlocfilehash: ef806669470595638de124a480513db13674af51
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3136a8298e609e51415e3334fcfc77a8b590244e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202414"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786471"
 ---
 # \<channelSettings>
 
@@ -94,7 +95,7 @@ Especifica los valores de la memoria caché del canal.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.SendMessageChannelCache>
 - <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>

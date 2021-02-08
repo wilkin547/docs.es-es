@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: desde (Entity SQL)'
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 8affac82fb1813aa0282540b5dc2f47d42234a1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e8f7906669b3ea9ee5c3be307bd31a2043b2650e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148065"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786347"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 
@@ -24,7 +25,7 @@ FROM expression [ ,...n ] AS C
 `expression` \
 Cualquier expresión de consulta válida que produce una colección que usar como origen en una instrucción `SELECT`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Una cláusula `FROM` es una lista separada por comas de uno o varios elementos de la cláusula `FROM`. La cláusula `FROM` se puede utilizar para especificar uno o varios orígenes para una instrucción `SELECT`. La forma más sencilla de una cláusula `FROM` es una expresión de una única consulta que identifica una colección y un alias que se usa como origen en una instrucción `SELECT`, tal y como se muestra en el ejemplo siguiente:
 

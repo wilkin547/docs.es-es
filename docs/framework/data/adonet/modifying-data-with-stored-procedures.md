@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo modificar datos con procedimientos almacenados
 title: Modificar datos con procedimientos almacenados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: 65116a48533fd6ce86894c6a4522929285f8e1f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 66a4aa9577c71605bde0152a142a65dfa81a31d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786230"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modificar datos con procedimientos almacenados
 
@@ -21,7 +22,7 @@ Los procedimientos almacenados pueden aceptar datos como parámetros de entrada 
   
 ## <a name="example"></a>Ejemplo  
 
- En el ejemplo se usa el siguiente procedimiento almacenado para insertar una nueva categoría en la tabla **Categories** de **Northwind** . El procedimiento almacenado toma el valor de la columna **CategoryName** como parámetro de entrada y usa la función SCOPE_IDENTITY () para recuperar el nuevo valor del campo de identidad, **CategoryID**, y devolverlo en un parámetro de salida. La instrucción return utiliza la @ROWCOUNT función @ para devolver el número de filas insertadas.  
+ En el ejemplo se utiliza el siguiente procedimiento almacenado para insertar una nueva categoría en la tabla **Categories** de **Northwind**. El procedimiento almacenado recibe el valor de la columna **CategoryName** como parámetro de entrada y usa la función SCOPE_IDENTITY() para recuperar el nuevo valor del campo de identidad, **CategoryID**, y devolverlo en un parámetro de salida. La instrucción return utiliza la @ROWCOUNT función @ para devolver el número de filas insertadas.  
   
 ```sql
 CREATE PROCEDURE dbo.InsertCategory  

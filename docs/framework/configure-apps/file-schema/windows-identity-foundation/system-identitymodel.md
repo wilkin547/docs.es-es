@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <System. identityModel>'
 title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 216b4c73e06469d6577c61338ad1af0fdd2dc05e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c597f2a849248366f9cf3847c8ef369c13d7a286
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185579"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786530"
 ---
 # \<system.identityModel>
 
@@ -81,6 +82,6 @@ Proporciona la configuración para habilitar las opciones de Windows Identity Fo
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

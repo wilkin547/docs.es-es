@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: usar procedimientos almacenados que toman parámetros'
 title: Procedimiento para usar procedimientos almacenados que toman parámetros
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: a54e2ee553629179022b68658d44cbcb02ab590f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eaa2e9c602e2e6baae82648a4237d1098e89896a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184968"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785801"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Procedimiento para usar procedimientos almacenados que toman parámetros
 
@@ -42,7 +43,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos almacenados](stored-procedures.md)
 - [Descargar bases de datos de ejemplo](downloading-sample-databases.md)

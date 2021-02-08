@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRDataTarget:: GetThreadContext (método)'
 title: ICLRDataTarget::GetThreadContext (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 35b7bff5d4d778a429ddc1dcd0206e6e8970ee4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 210f4294aed31307557db419a0fb567cc71d4354
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703504"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785697"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext (Método)
 
@@ -54,7 +55,7 @@ HRESULT GetThreadContext (
   
  Los datos del `context` búfer deben tener el formato de la estructura de Win32 `CONTEXT` . El contexto especifica los datos de registro específicos del procesador, por lo que la definición de la estructura de Win32 `CONTEXT` depende de la arquitectura del procesador. Consulte el archivo de encabezado Winnt. h para ver la definición de la estructura de Win32 `CONTEXT` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método lo implementa el escritor de la aplicación de depuración.  
   
@@ -68,6 +69,6 @@ HRESULT GetThreadContext (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget (Interfaz)](iclrdatatarget-interface.md)

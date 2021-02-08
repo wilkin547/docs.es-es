@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <tcpTransport>'
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 6d4302e1840f58e2daad855942493cc96b7d5e34
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b660443ac58e8ed72d70adb5bf9e9e87b060e3af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158674"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786621"
 ---
 # \<tcpTransport>
 
@@ -63,8 +64,8 @@ Define un transporte del TCP que puede ser utilizado por un canal para la transf
 |maxPendingAccepts|Obtiene o establece el número máximo de operaciones de aceptación asincrónica pendientes disponibles para procesar conexiones entrantes en el servicio.|  
 |maxPendingConnections|Obtiene o establece el número máximo de conexiones pendientes de distribución en el servicio.|  
 |maxReceivedMessageSize|Obtiene y establece el tamaño máximo permitido del mensaje que se puede recibir.|  
-|portSharingEnabled|Un valor booleano que especifica si el uso compartido de puerto TCP está habilitado para esta conexión. Si éste es `false`, cada enlace utilizará su propio puerto exclusivo. El valor predeterminado es `false`.<br /><br /> Este valor sólo es pertinente a los servicios. Los clientes no se ven afectados.<br /><br /> Para usar esta configuración se necesita que se habilite el servicio de puerto TCP compartido Windows Communication Foundation (WCF), cambiando su tipo de inicio a manual o automático.|  
-|teredoEnabled|Un valor booleano que especifica si Teredo (una tecnología para direccionar clientes que están detrás de firewalls) está habilitada. El valor predeterminado es `false`.<br /><br /> Esta propiedad habilita Teredo para el socket TCP subyacente. Para obtener más información, vea [información general sobre Teredo](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).<br /><br /> Esta propiedad solo es aplicable en Windows XP SP2 y Windows Server 2003. Windows Vista tiene una opción de configuración de todo el equipo para Teredo, por lo que al ejecutar vista, se omite esta propiedad. Teredo requiere que los equipos de servicio y del cliente tengan la pila de Microsoft IPv6 instalada y correctamente configurada para el uso de Teredo.|  
+|portSharingEnabled|Un valor booleano que especifica si el uso compartido de puerto TCP está habilitado para esta conexión. Si éste es `false`, cada enlace utilizará su propio puerto exclusivo. De manera predeterminada, es `false`.<br /><br /> Este valor sólo es pertinente a los servicios. Los clientes no se ven afectados.<br /><br /> Para usar esta configuración se necesita que se habilite el servicio de puerto TCP compartido Windows Communication Foundation (WCF), cambiando su tipo de inicio a manual o automático.|  
+|teredoEnabled|Un valor booleano que especifica si Teredo (una tecnología para direccionar clientes que están detrás de firewalls) está habilitada. De manera predeterminada, es `false`.<br /><br /> Esta propiedad habilita Teredo para el socket TCP subyacente. Para obtener más información, vea [información general sobre Teredo](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).<br /><br /> Esta propiedad solo es aplicable en Windows XP SP2 y Windows Server 2003. Windows Vista tiene una opción de configuración de todo el equipo para Teredo, por lo que al ejecutar vista, se omite esta propiedad. Teredo requiere que los equipos de servicio y del cliente tengan la pila de Microsoft IPv6 instalada y correctamente configurada para el uso de Teredo.|  
 |transferMode|Obtiene o establece un valor que indica si los mensajes están almacenados en búfer o se transmiten por secuencias mediante el transporte orientado a la conexión.|  
 |connectionPoolSettings|Especifica valores adicionales del grupo de conexiones para un enlace de canalización con nombre.|  
   
@@ -84,7 +85,7 @@ Define un transporte del TCP que puede ser utilizado por un canal para la transf
   
  El elemento `tcpTransport` es el punto inicial para crear un enlace personalizado que implementa el protocolo de transporte TCP. Este transporte está optimizado para la comunicación de WCF a WCF.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

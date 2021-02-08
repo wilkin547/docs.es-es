@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: determinar si alguno o todos los elementos de una secuencia satisfacen una condición'
 title: Determinar si alguno o todos los elementos de una secuencia satisfacen una condición
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
-ms.openlocfilehash: 65a9a7cf289c2006bab14cb384efb07eaea7f7a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a46cf7e4e213eba830dc203f9266a408103cee80
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786113"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>Determinar si alguno o todos los elementos de una secuencia satisfacen una condición
 
@@ -37,6 +38,6 @@ El operador <xref:System.Linq.Enumerable.All%2A> devuelve `true` si todos los el
   
  [!code-csharp[DLinqQueryExamples#38](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#38)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Ejemplos de consultas](query-examples.md)

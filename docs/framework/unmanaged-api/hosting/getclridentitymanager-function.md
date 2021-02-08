@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Getclridentitymanager ((función)'
 title: GetCLRIdentityManager (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1196749e033c71b0c8923d0325eb4886122d1a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 483cf0499fa162da4c89e350198a5609f9f1bab6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733664"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785372"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager (Función)
 
@@ -44,7 +45,7 @@ STDAPI GetCLRIdentityManager(
  `ppManager`  
  enuncia Puntero a la dirección de un objeto [ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md) o [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Llame a la función [GetRealProcAddress (](getrealprocaddress-function.md) para obtener un puntero a la `GetCLRIdentityManager` función.  
   
@@ -58,6 +59,6 @@ STDAPI GetCLRIdentityManager(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

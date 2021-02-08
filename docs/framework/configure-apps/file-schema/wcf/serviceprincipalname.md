@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <servicePrincipalName>'
 title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: 0d03844a58de5b4af93f276de75c88af6efed3f8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 494368f1f47f10aac8009e47a9219966c87e5eda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786699"
 ---
 # \<servicePrincipalName>
 
@@ -48,7 +49,7 @@ Para obtener más información acerca de cómo establecer el SPN, consulte [iden
 |-------------|-----------------|  
 |[\<identity>](identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un cliente de Windows Communication Foundation seguro (WCF) que se conecta a un punto de conexión con esta identidad utiliza el SPN al realizar la autenticación SSPI con el punto de conexión.  
   

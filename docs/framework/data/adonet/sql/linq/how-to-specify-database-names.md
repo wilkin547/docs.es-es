@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: especificar nombres de base de datos'
 title: Procedimiento para especificar nombres de base de datos
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: 82cb3f8f31af433b0299b4fec742b548d61921e4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 231c78830e009ed3414609eb6dbe05c3745f3e05
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197162"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785892"
 ---
 # <a name="how-to-specify-database-names"></a>Procedimiento para especificar nombres de base de datos
 
@@ -23,7 +24,7 @@ Utilice la propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> e
   
 3. Establezca el valor de propiedad <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> en el nombre que desea especificar.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [El modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)
 - [Procedimiento para personalizar clases de entidades con el editor de código](how-to-customize-entity-classes-by-using-the-code-editor.md)

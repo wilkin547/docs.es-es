@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: asignaciones de tipos de datos ODBC'
 title: Asignaciones de tipos de datos de ODBC
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: b08c649c148aacf4050c1f7ebcc17f79d1305e0c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0589f065da852158d35ee1104618dd13e5b2d36f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150718"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786217"
 ---
 # <a name="odbc-data-type-mappings"></a>Asignaciones de tipos de datos de ODBC
 
@@ -20,7 +21,7 @@ En la tabla siguiente se muestra el tipo de .NET Framework deducido para los tip
 |SQL_BIT|Boolean|GetBoolean()|  
 |SQL_CHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
 |SQL_DECIMAL|Decimal|GetDecimal()|  
-|SQL_DOUBLE|Doble|GetDouble()|  
+|SQL_DOUBLE|Double|GetDouble()|  
 |SQL_GUID|Guid|GetGuid()|  
 |SQL_INTEGER|Int32|GetInt32()|  
 |SQL_LONG_VARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: GetCORSystemDirectory ((función)'
 title: GetCORSystemDirectory (Función)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-ms.openlocfilehash: 21b01156afceb24ab5c132894fae6922d7b97e59
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 267736c2f8cdea03fbd9f77108a3d88193830ab4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733300"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785346"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory (Función)
 
@@ -49,7 +50,7 @@ HRESULT GetCORSystemDirectory (
  `dwLength`  
  enuncia Número de caracteres devueltos en `pbuffer` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!CAUTION]
 > No utilice esta función en los procesos que ejecutan la versión 4 de CLR. Si hay instalada una versión anterior de CLR en el equipo, esta función devuelve el directorio de instalación de esa versión.  
@@ -64,6 +65,6 @@ HRESULT GetCORSystemDirectory (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

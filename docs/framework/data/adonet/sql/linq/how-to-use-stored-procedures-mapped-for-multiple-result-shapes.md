@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: usar procedimientos almacenados asignados para varias formas de resultados'
 title: Procedimiento para usar procedimientos almacenados asignados en varias formas de resultados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 26cc30790da26949fba889106d060cdef89013a3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9faf80e565656120a2601b30424df80ca10913e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785827"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Procedimiento para usar procedimientos almacenados asignados en varias formas de resultados
 
@@ -46,6 +47,6 @@ else if(@shape = 2)
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos almacenados](stored-procedures.md)

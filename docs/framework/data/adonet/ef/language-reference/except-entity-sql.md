@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Except (Entity SQL)'
 title: EXCEPT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
-ms.openlocfilehash: 6797f8038a83533b5a6bd41ad402daec7abdc7de
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fd66d8dc6e22a73afbfd27e6eb1fd6c8bb9d3475
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148064"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786399"
 ---
 # <a name="except-entity-sql"></a>EXCEPT (Entity SQL)
 
@@ -28,7 +29,7 @@ expression EXCEPT expression
 
  Colección del mismo tipo que `expression`o de un tipo base común o derivado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  EXCEPT es uno de los operadores de conjuntos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Todos los operadores de conjuntos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se evalúan de izquierda a derecha. En la tabla siguiente se muestra la prioridad de los operadores de conjuntos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .  
   

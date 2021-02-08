@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Eclrfailure ('
 title: EClrFailure (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: d2794b53ed17640413928b3af0d1ed3656e25f22
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f3a2270651e5b05d2d31ed90511b8eb05dd4d44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675768"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785593"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure (Enumeración)
 
@@ -39,7 +40,7 @@ typedef enum {
 } EClrFailure;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -51,7 +52,7 @@ typedef enum {
 |`FAIL_AccessViolation`|Se intentó leer o escribir en la memoria protegida. No se admite en el .NET Framework 4.|  
 |`FAIL_CodeContract`|Error de contrato de código. Vea [contratos de código](../../debug-trace-profile/code-contracts.md).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Vea el método [ICLRPolicyManager:: setactiononfailure (](iclrpolicymanager-setactiononfailure-method.md) para obtener una lista de los valores de [EPolicyAction](epolicyaction-enumeration.md) que el host puede usar para especificar las acciones de directiva para las condiciones de error. Para obtener más información sobre las regiones críticas y no críticas de código, vea [EClrOperation](eclroperation-enumeration.md).  
   
@@ -65,7 +66,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRPolicyManager (Interfaz)](iclrpolicymanager-interface.md)
 - [Método SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md)

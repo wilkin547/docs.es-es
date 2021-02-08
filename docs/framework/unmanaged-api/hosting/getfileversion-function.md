@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: GetFileVersion ((función)'
 title: GetFileVersion (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: 57b30824c7849127f48d4da61872945366e7141e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7de19484f2f8123d61eb94e6a5ae09f56a3b5541
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785307"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion (Función)
 
@@ -60,6 +61,6 @@ HRESULT GetFileVersion (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

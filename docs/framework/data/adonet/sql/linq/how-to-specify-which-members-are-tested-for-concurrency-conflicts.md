@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: especificar los miembros para los que se van a probar los conflictos de simultaneidad'
 title: Procedimiento para especificar en qué miembros se comprueban los conflictos de simultaneidad
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: e774935827934ae73873247def049b4045535272
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f2623c1e6afcf97ee2de62b94b80145ca2a5cad3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785866"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Procedimiento para especificar en qué miembros se comprueban los conflictos de simultaneidad
 

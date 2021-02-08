@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeInfo:: LoadLibrary (método)'
 title: ICLRRuntimeInfo::LoadLibrary (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-ms.openlocfilehash: aa45c814568188a5fe93e3acd2514cb54bb0f984
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 47557934868c7c1b68b23bf4eded0e90705d7252
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688619"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785060"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary (Método)
 
@@ -54,7 +55,7 @@ HRESULT LoadLibrary(
 |E_POINTER|`pwzDllName` o `phndModule` es null.|  
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para controlar la solicitud.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método solo carga los archivos dll incluidos en el paquete redistribuible de .NET Framework. No puede cargar los ensamblados generados por el usuario.  
   
@@ -68,7 +69,7 @@ HRESULT LoadLibrary(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

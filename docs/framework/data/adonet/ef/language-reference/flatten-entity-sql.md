@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: FLATTEN (Entity SQL)'
 title: FLATTEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
-ms.openlocfilehash: 36ae2b2b1264150bc66d09366ee33723ed7b28a8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3701fbdf481024c799b4cdc6f109bae9fc226609
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786360"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN (Entity SQL)
 
@@ -38,6 +39,6 @@ FLATTEN ( collection )
   
  [!code-sql[DP EntityServices Concepts#FLATTEN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#flatten)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
