@@ -1,29 +1,30 @@
 ---
+description: 'Más información acerca de cómo: Mostrar LINQ to SQL comandos'
 title: Procedimiento para mostrar comandos de LINQ to SQL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: e703ea9be3ead50afae9b8f42aaa4f54a292c23c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 480e7c1cbcceb09f0d727d03569d6277e0dd754b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169445"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785996"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="7dd55-102">Procedimiento para mostrar comandos de LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="7dd55-102">How to: Display LINQ to SQL Commands</span></span>
+# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="64c79-103">Procedimiento para mostrar comandos de LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="64c79-103">How to: Display LINQ to SQL Commands</span></span>
 
-<span data-ttu-id="7dd55-103">Utilice <xref:System.Data.Linq.DataContext.GetCommand%2A> para mostrar comandos SQL y otra información.</span><span class="sxs-lookup"><span data-stu-id="7dd55-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
+<span data-ttu-id="64c79-104">Utilice <xref:System.Data.Linq.DataContext.GetCommand%2A> para mostrar comandos SQL y otra información.</span><span class="sxs-lookup"><span data-stu-id="64c79-104">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7dd55-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7dd55-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="64c79-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="64c79-105">Example</span></span>  
 
- <span data-ttu-id="7dd55-105">En el ejemplo siguiente, la ventana de la consola muestra el resultado de la consulta, seguido de los comandos SQL que se generan, el tipo de los comandos y el tipo de la conexión.</span><span class="sxs-lookup"><span data-stu-id="7dd55-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
+ <span data-ttu-id="64c79-106">En el ejemplo siguiente, la ventana de la consola muestra el resultado de la consulta, seguido de los comandos SQL que se generan, el tipo de los comandos y el tipo de la conexión.</span><span class="sxs-lookup"><span data-stu-id="64c79-106">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
  [!code-vb[DLinqDebuggingSupport#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
   
- <span data-ttu-id="7dd55-106">El resultado se muestra de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="7dd55-106">Output appears as follows:</span></span>  
+ <span data-ttu-id="64c79-107">El resultado se muestra de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="64c79-107">Output appears as follows:</span></span>  
   
 ```console  
 Customers from London:  
@@ -50,6 +51,6 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7dd55-107">Consulte también</span><span class="sxs-lookup"><span data-stu-id="7dd55-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="64c79-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="64c79-108">See also</span></span>
 
-- [<span data-ttu-id="7dd55-108">Capacidad de depuración</span><span class="sxs-lookup"><span data-stu-id="7dd55-108">Debugging Support</span></span>](debugging-support.md)
+- [<span data-ttu-id="64c79-109">Capacidad de depuración</span><span class="sxs-lookup"><span data-stu-id="64c79-109">Debugging Support</span></span>](debugging-support.md)
