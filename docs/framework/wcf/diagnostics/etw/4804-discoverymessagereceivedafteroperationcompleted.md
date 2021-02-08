@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 4804-DiscoveryMessageReceivedAfterOperationCompleted'
 title: 4804 - DiscoveryMessageReceivedAfterOperationCompleted
 ms.date: 03/30/2017
 ms.assetid: 61d2791c-e1a2-400a-a57e-66818ac5962e
-ms.openlocfilehash: b9096c24cd0848b931509df5359193956f42caa4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aecbe1ce5dc4187e2a62d92684bf222d3b734aec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242596"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788415"
 ---
 # <a name="4804---discoverymessagereceivedafteroperationcompleted"></a>4804 - DiscoveryMessageReceivedAfterOperationCompleted
 
@@ -15,7 +16,7 @@ ms.locfileid: "96242596"
   
 |||  
 |-|-|  
-|ID|4804|  
+|Id.|4804|  
 |Palabras clave|Detección|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

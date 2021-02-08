@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración COR_PRF_STATIC_TYPE'
 title: COR_PRF_STATIC_TYPE (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-ms.openlocfilehash: 2fbcbb6f6115ec48085b533dbf5611054a8235c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b7171fe4e9c536d94109d46ae6cad9201a15bab9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789049"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE (Enumeración)
 
@@ -37,7 +38,7 @@ typedef enum {
 } COR_PRF_STATIC_TYPE;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -57,6 +58,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)

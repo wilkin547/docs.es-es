@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback4:: Movedreferences2 ((método)'
 title: ICorProfilerCallback4::MovedReferences2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d17a065b-5bc6-4817-b3e1-1e413fcb33a8
 topic_type:
 - apiref
-ms.openlocfilehash: 41f7010b6c13327e45a4da7fdae1b9e1fe6e41a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 37bd1c91866a583bf4ba04e3e532d0efe5a11fc9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788740"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>ICorProfilerCallback4::MovedReferences2 (Método)
 
@@ -54,7 +55,7 @@ HRESULT MovedReferences2(
   
  Se especifica un tamaño para cada bloque al que se hace referencia en las matrices `oldObjectIDRangeStart` y `newObjectIDRangeStart`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un recolector de elementos no utilizados con compactación recupera la memoria ocupada por los objetos inactivos y compacta ese espacio liberado. Como resultado, los objetos activos podrían moverse dentro del montón y los valores de `ObjectID` distribuidos por notificaciones anteriores podrían cambiar.  
   
@@ -88,7 +89,7 @@ HRESULT MovedReferences2(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método MovedReferences](icorprofilercallback-movedreferences-method.md)

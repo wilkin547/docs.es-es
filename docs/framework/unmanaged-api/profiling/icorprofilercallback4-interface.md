@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorProfilerCallback4'
 title: ICorProfilerCallback4 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 665f3cfc-cd6f-4880-906c-ea65ad384783
 topic_type:
 - apiref
-ms.openlocfilehash: 942ee8234b79c6579acc009960f4571801fc3185
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 882f234cb94ccd65203b42ed213aab6355250af8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788753"
 ---
 # <a name="icorprofilercallback4-interface"></a>ICorProfilerCallback4 (Interfaz)
 
@@ -48,7 +49,7 @@ Proporciona métodos de devolución de llamada que el Common Language Runtime (C
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostAssemblyStore::P método rovideAssembly'
 title: IHostAssemblyStore::ProvideAssembly (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-ms.openlocfilehash: db65519579104dd01816bb6d7cacaec947f24f53
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f8917cb28dd3898343a7b6ee08bd54096df8cfa7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680874"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789507"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly (Método)
 
@@ -68,7 +69,7 @@ HRESULT ProvideAssembly (
 |COR_E_FILENOTFOUND (0x80070002)|No se pudo encontrar el ensamblado solicitado.|  
 |E_NOT_SUFFICIENT_BUFFER|El tamaño de búfer especificado por `pAssemblyId` no es lo suficientemente grande como para contener el identificador que el host desea devolver.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor de identidad devuelto por `pAssemblyId` se especifica mediante el host. Los identificadores deben ser únicos dentro de la duración de un proceso. CLR usa este valor como un identificador único para la secuencia. Comprueba cada valor con los valores `pAssemblyId` devueltos por otras llamadas a `ProvideAssembly` . Si el host devuelve el mismo `pAssemblyId` valor para otro `IStream` , CLR comprueba si ya se ha asignado el contenido de la secuencia. En ese caso, el tiempo de ejecución carga la copia existente de la imagen en lugar de asignar una nueva.  
   
@@ -82,7 +83,7 @@ HRESULT ProvideAssembly (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager (Interfaz)](ihostassemblymanager-interface.md)

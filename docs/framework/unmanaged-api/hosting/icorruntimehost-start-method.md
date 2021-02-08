@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorRuntimeHost:: Start (método)'
 title: ICorRuntimeHost::Start (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: bc647ad025b5e22187b476383ed0128761cb632f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d07c0144c7192bc2f57927c294ea472cd6b47f9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721041"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789611"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start (Método)
 
@@ -41,7 +42,7 @@ HRESULT Start ();
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Normalmente no es necesario llamar al `Start` método, ya que CLR se inicia automáticamente tras la primera solicitud para ejecutar el código administrado.  
   
@@ -55,6 +56,6 @@ HRESULT Start ();
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

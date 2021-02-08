@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback4:: Rejitcompilationstarted ((método)'
 title: ICorProfilerCallback4::ReJITCompilationStarted (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-ms.openlocfilehash: 43db4ce0ba7a95a029e6c4928f55a99df9085164
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7656f68ff6b10dcd58e48df212a036a590d0c3b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730258"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788714"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted (Método)
 
@@ -46,7 +47,7 @@ HRESULT ReJITCompilationStarted(
  `fIsSafeToBlock`  
  [in] `true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false` para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución. Un valor de no `true` perjudica al tiempo de ejecución, pero puede afectar a los resultados de la generación de perfiles.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Es posible recibir más de un par de `ReJITCompilationStarted` llamadas al método [rejitcompilationfinished (](icorprofilercallback4-rejitcompilationfinished-method.md) y para cada función debido al modo en que el Runtime controla los constructores de clase. Por ejemplo, el tiempo de ejecución comienza a volver a compilar el método A, pero es necesario ejecutar el constructor de clase de la clase B. Por consiguiente, el tiempo de ejecución vuelve a compilar el constructor de la clase B y lo ejecuta. Mientras se ejecuta el constructor, realiza una llamada al método a, que hace que se vuelva a compilar el método a. En este escenario, se detiene la primera recompilación del método A. Sin embargo, ambos intentos de volver a compilar el método A se registran con eventos de recompilación JIT.  
   
@@ -62,7 +63,7 @@ HRESULT ReJITCompilationStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 (Interfaz)](icorprofilercallback4-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo:: Endinprocdebugging ((método)'
 title: ICorProfilerInfo::EndInprocDebugging (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35bc1188-9767-4141-8038-60ea015b99ac
 topic_type:
 - apiref
-ms.openlocfilehash: e929c74ba0f1f33ddbb28476b3c9e0a512567ac6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5e172abaa99e0a64031a9c1ec1beac5f23386d1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95669060"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788623"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>ICorProfilerInfo::EndInprocDebugging (Método)
 
@@ -38,7 +39,7 @@ HRESULT EndInprocDebugging(
  `dwProfilerContext`  
  de Valor que identifica la sesión de depuración. Este valor debe ser el mismo que el recibido en el método [ICorProfilerInfo:: BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Debe llamar a [ICorProfilerInfo:: BeginInprocDebugging](icorprofilerinfo-begininprocdebugging-method.md) y `EndInprocDebugging` dentro del mismo método de devolución de llamada.  
   
@@ -54,6 +55,6 @@ HRESULT EndInprocDebugging(
   
  **Versión de .NET Framework:** 1,0  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

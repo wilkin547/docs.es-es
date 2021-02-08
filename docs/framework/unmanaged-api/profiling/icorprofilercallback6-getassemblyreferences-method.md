@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback6:: GetAssemblyReferences (método)'
 title: ICorProfilerCallback6::GetAssemblyReferences (Método)
 ms.date: 03/30/2017
 dev_langs:
@@ -13,12 +14,12 @@ api_type:
 ms.assetid: 8b391afb-d79f-41bd-94ce-43ce62c6b5fc
 topic_type:
 - apiref
-ms.openlocfilehash: c9e973009f46ef7e554ee2df63493464f4956342
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 27c2b5e0ed935501de551bac32b6d229d5c59f79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725487"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788649"
 ---
 # <a name="icorprofilercallback6getassemblyreferences-method"></a>ICorProfilerCallback6::GetAssemblyReferences (Método)
 
@@ -46,7 +47,7 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
 
  Los valores devueltos de esta devolución de llamada se pasan por alto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta devolución de llamada se controla estableciendo la marca de máscara de eventos [COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES](cor-prf-high-monitor-enumeration.md) al llamar al método [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) . Si el generador de perfiles se registra para el método de devolución de llamada [ICorProfilerCallback6:: GetAssemblyReferences](icorprofilercallback6-getassemblyreferences-method.md) , el tiempo de ejecución pasa la ruta de acceso y el nombre del ensamblado que se va a cargar, junto con un puntero a un objeto de interfaz [ICorProfilerAssemblyReferenceProvider](icorprofilerassemblyreferenceprovider-interface.md) a ese método. Después, el generador de perfiles puede llamar al método [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) con un `COR_PRF_ASSEMBLY_REFERENCE_INFO` objeto para cada ensamblado de destino al que tiene previsto hacer referencia desde el ensamblado especificado en la `GetAssemblyReferences` devolución de llamada.  
   
@@ -66,7 +67,7 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback6 (Interfaz)](icorprofilercallback6-interface.md)
 - [Método ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)

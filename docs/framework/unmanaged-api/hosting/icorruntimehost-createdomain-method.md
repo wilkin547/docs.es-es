@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorRuntimeHost:: CreateDomain (método)'
 title: ICorRuntimeHost::CreateDomain (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b96c5ef3-a9df-4c7c-9952-432d3272cb5c
 topic_type:
 - apiref
-ms.openlocfilehash: c495ce47b699d2e32d1f02e4afcf0444a9930c34
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6173d74d97ddb9dec619db8583036ec763a9e293
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723914"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789715"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>ICorRuntimeHost::CreateDomain (Método)
 
@@ -66,7 +67,7 @@ HRESULT CreateDomain (
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

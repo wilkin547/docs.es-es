@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback4:: Survivingreferences2 ((método)'
 title: ICorProfilerCallback4::SurvivingReferences2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02b51888-5d89-4e50-a915-45b7e329aad9
 topic_type:
 - apiref
-ms.openlocfilehash: fb10057a406bd2192e0da61f916f81697dfa4a7d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d092729c77b0c4feb253bb2f54968f7ff8bdbb2a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689321"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788688"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 (Método)
 
@@ -52,7 +53,7 @@ HRESULT SurvivingReferences2(
   
  Se especifica un tamaño para cada bloque al que se hace referencia en la matriz `objectIDRangeStart`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los elementos de las matrices `objectIDRangeStart` y `cObjectIDRangeLength` deben interpretarse del siguiente modo para determinar si un objeto ha sobrevivido a la recolección de elementos no utilizados. Supongamos que un valor `ObjectID` (`ObjectID`) se encuentra dentro del intervalo siguiente:  
   
@@ -80,7 +81,7 @@ HRESULT SurvivingReferences2(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)

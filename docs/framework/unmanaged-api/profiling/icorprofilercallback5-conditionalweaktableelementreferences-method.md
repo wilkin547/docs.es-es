@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback5:: Conditionalweaktableelementreferences ((método)'
 title: ICorProfilerCallback5::ConditionalWeakTableElementReferences (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: 17fbc99b30921f795c1f7ff882ec73432aade8c6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40114f6e1d80719eceaf2dbc398b74c1e790c76a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788675"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences (Método)
 
@@ -78,9 +79,9 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 }
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Un generador de perfiles para el .NET Framework 4,5 o versiones posteriores implementa la interfaz [ICorProfilerCallback5](icorprofilercallback5-interface.md) y registra las dependencias especificadas por el `ConditionalWeakTableElementReferences` método. `ICorProfilerCallback5`proporciona el conjunto completo de dependencias entre los objetos activos que representan `ConditionalWeakTable` las entradas. Estas dependencias y las referencias de campo de miembro especificadas por el método [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) permiten a un generador de perfiles administrado generar el gráfico de objeto completo de objetos activos.
+Un generador de perfiles para el .NET Framework 4,5 o versiones posteriores implementa la interfaz [ICorProfilerCallback5](icorprofilercallback5-interface.md) y registra las dependencias especificadas por el `ConditionalWeakTableElementReferences` método. `ICorProfilerCallback5` proporciona el conjunto completo de dependencias entre los objetos activos que representan `ConditionalWeakTable` las entradas. Estas dependencias y las referencias de campo de miembro especificadas por el método [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) permiten a un generador de perfiles administrado generar el gráfico de objeto completo de objetos activos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -90,6 +91,6 @@ Un generador de perfiles para el .NET Framework 4,5 o versiones posteriores impl
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback5 (interfaz)](icorprofilercallback5-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostTaskManager:: Switchtotask ((método)'
 title: IHostTaskManager::SwitchToTask (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35d0c27e-4b14-49ce-810d-7ab2120177e8
 topic_type:
 - apiref
-ms.openlocfilehash: bf3ddd91a58669540ef310e268162ec78408494f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6333dcdf7e1bbe6bde575f53f4743a1300c770f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702034"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789364"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask (Método)
 
@@ -50,7 +51,7 @@ HRESULT SwitchToTask (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host puede cambiar en otra tarea según sea necesario o si es necesario.  
   
@@ -67,7 +68,7 @@ HRESULT SwitchToTask (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

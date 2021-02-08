@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRSyncManager::D método eleteRWLockOwnerIterator'
 title: ICLRSyncManager::DeleteRWLockOwnerIterator (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fcfd340a-b7d6-44e4-8167-2c05b789d483
 topic_type:
 - apiref
-ms.openlocfilehash: db651e3fe51f90b84449874f2c60a12050b0350e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7968f326f1ad92fe6e3a0f91749fb7e462e81c04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789780"
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a>ICLRSyncManager::DeleteRWLockOwnerIterator (Método)
 
@@ -50,7 +51,7 @@ HRESULT DeleteRWLockOwnerIterator (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host puede llamar a este método y `CreateRWLockOwnerIterator` asegurarse de que su implementación de subprocesos permanece sincronizada.  
   
@@ -64,7 +65,7 @@ HRESULT DeleteRWLockOwnerIterator (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)

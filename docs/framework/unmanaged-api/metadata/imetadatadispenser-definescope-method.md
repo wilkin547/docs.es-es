@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataDispenser::D método efineScope'
 title: IMetaDataDispenser::DefineScope (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 87a39350986cb7bb62f76b0d9a6a9aae8f82e2f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b7a7870ec06af4c08a4ef3609077eb93f74da776
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726098"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789247"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope (Método)
 
@@ -53,7 +54,7 @@ HRESULT DefineScope (
  `ppIUnk`  
  enuncia Puntero a la interfaz devuelta.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `DefineScope` crea un conjunto de tablas de metadatos en memoria, genera un GUID único (identificador de versión de módulo o MVID) para los metadatos y crea una entrada en la tabla de módulos para la unidad de compilación que se emite.  
   
@@ -69,7 +70,7 @@ HRESULT DefineScope (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataDispenser (Interfaz)](imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx (Interfaz)](imetadatadispenserex-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostAutoEvent (interfaz)'
 title: IHostAutoEvent (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c1d15c1-a80a-4ee9-b1e4-6e859db6575a
 topic_type:
 - apiref
-ms.openlocfilehash: 6893b019c7e86d3f359cf64752d30f7896203786
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4aea282dbe2067d50214b237650ba01fb8bf22a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680877"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789494"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent (Interfaz)
 
@@ -42,7 +43,7 @@ Proporciona una representación de la implementación del host de un evento de r
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostManualEvent (Interfaz)](ihostmanualevent-interface.md)

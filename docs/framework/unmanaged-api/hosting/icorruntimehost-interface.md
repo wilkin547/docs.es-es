@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorRuntimeHost (interfaz)'
 title: ICorRuntimeHost (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd50d31668b2dd0718dbe644343bfe314a0afdbe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720625"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789663"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost (Interfaz)
 
@@ -45,8 +46,8 @@ Proporciona métodos que permiten al host iniciar y detener explícitamente el C
 |[Método LocksHeldByLogicalThread](icorruntimehost-locksheldbylogicalthread-method.md)|No debe usarse.|  
 |[Método MapFile](icorruntimehost-mapfile-method.md)|Asigna el archivo especificado a la memoria. Este método está obsoleto.|  
 |[Método NextDomain](icorruntimehost-nextdomain-method.md)|Obtiene un puntero de interfaz al siguiente dominio en la enumeración.|  
-|[Método Start](icorruntimehost-start-method.md)|Inicia el CLR.|  
-|[Método Stop](icorruntimehost-stop-method.md)|Detiene la ejecución de código en tiempo de ejecución para el proceso actual.|  
+|[Start (método)](icorruntimehost-start-method.md)|Inicia el CLR.|  
+|[STOP (método)](icorruntimehost-stop-method.md)|Detiene la ejecución de código en tiempo de ejecución para el proceso actual.|  
 |[Método SwitchInLogicalThreadState](icorruntimehost-switchinlogicalthreadstate-method.md)|No debe usarse.|  
 |[Método SwitchOutLogicalThreadState](icorruntimehost-switchoutlogicalthreadstate-method.md)|No debe usarse.|  
 |[Método UnloadDomain](icorruntimehost-unloaddomain-method.md)|Descarga el dominio de aplicación especificado del proceso actual.|  
@@ -61,7 +62,7 @@ Proporciona métodos que permiten al host iniciar y detener explícitamente el C
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.AppDomain>
 - [Hospedar aplicaciones de WPF](index.md)

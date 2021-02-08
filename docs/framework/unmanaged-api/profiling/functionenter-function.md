@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: FunctionEnter ((función)'
 title: FunctionEnter (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 9bc88d7dd5b00213da634dc9f511cfe0d39b42f1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07b91a81480e453be16e840b89fa822cb91002ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729842"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788961"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (Función)
 
@@ -42,7 +43,7 @@ void __stdcall FunctionEnter (
 
   \[in] el identificador de la función a la que se pasa el control.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `FunctionEnter` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec` `naked` atributo de clase de almacenamiento ().  
   
@@ -66,7 +67,7 @@ void __stdcall FunctionEnter (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Isvalidtoken ((método)'
 title: IMetaDataImport::IsValidToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aeb0fc63-9eff-4384-9284-cb9900572d74
 topic_type:
 - apiref
-ms.openlocfilehash: b4dc1e60f3d29e2671882d1900a1c49e56969601
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 68589496213c93f81cfbd0992f9b210e03d6f178
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702867"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789065"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken (Método)
 
@@ -53,7 +54,7 @@ BOOL IsValidToken (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

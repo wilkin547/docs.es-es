@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorProfilerCallback5'
 title: ICorProfilerCallback5 (interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61d2e9ef-5f1f-4771-8847-239616e35d84
 topic_type:
 - apiref
-ms.openlocfilehash: 8e94aebc489fff1c81593e54b17c471e7228d810
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b80b27dc994ad556381228370ece92935d89d293
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689295"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788662"
 ---
 # <a name="icorprofilercallback5-interface"></a>ICorProfilerCallback5 (interfaz)
 
@@ -27,7 +28,7 @@ Complementa la información para ayudar a un generador de perfiles a identificar
   
  Un generador de perfiles de memoria administrado debe implementar `ICorProfilerCallback5` para suscribirse a las notificaciones relativas a los controladores de dependencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="methods"></a>Métodos  
   
@@ -43,7 +44,7 @@ Complementa la información para ayudar a un generador de perfiles a identificar
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)

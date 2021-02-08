@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración COR_PRF_REJIT_FLAGS'
 title: COR_PRF_REJIT_FLAGS (Enumeración)
 ms.date: 08/06/2019
 api_name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 09349674e0cf80649cc948e25a1c476c6f8097e4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a27b6d90b51254560f25fbadb18ac95fe838ab2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716374"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789026"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS (Enumeración)
 
@@ -36,7 +37,7 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -53,6 +54,6 @@ typedef enum
   
  **.NET Framework versiones:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)

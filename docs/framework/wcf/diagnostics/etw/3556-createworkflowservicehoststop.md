@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3556-CreateWorkflowServiceHostStop'
 title: 3556 - CreateWorkflowServiceHostStop
 ms.date: 03/30/2017
 ms.assetid: bac6387b-1096-4e17-9907-8e464ee780db
-ms.openlocfilehash: 29abd546c8607ec56b3d85ca5ec805029d8c24e6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dc2d809f38cf9f0741aa58f2239f6d23baf39aa0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294487"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788480"
 ---
 # <a name="3556---createworkflowservicehoststop"></a>3556 - CreateWorkflowServiceHostStop
 
@@ -15,7 +16,7 @@ ms.locfileid: "96294487"
   
 |||  
 |-|-|  
-|ID|3556|  
+|Id.|3556|  
 |Palabras clave|WebHost|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorRuntimeHost:: Createevidence ((método)'
 title: ICorRuntimeHost::CreateEvidence (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-ms.openlocfilehash: 6627fce519934177aefd26a612e5b00ca1941d02
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34694f7e867066430a28120b412237ef9c64c740
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789676"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence (Método)
 
@@ -48,7 +49,7 @@ HRESULT CreateEvidence (
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, el Common Language Runtime (CLR) ya no se puede usar en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método devuelve una colección vacía que no se puede rellenar desde código nativo. En su lugar, debe utilizar el <xref:System.Security.Policy.Evidence> método.  
   
@@ -62,7 +63,7 @@ HRESULT CreateEvidence (
   
  **Versión de .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

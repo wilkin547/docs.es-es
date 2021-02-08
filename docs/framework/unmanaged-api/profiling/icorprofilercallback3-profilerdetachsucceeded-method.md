@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerCallback3::P método rofilerDetachSucceeded'
 title: ICorProfilerCallback3::ProfilerDetachSucceeded (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05164966-16ce-4cc9-a530-43a640c00711
 topic_type:
 - apiref
-ms.openlocfilehash: b9b284de102dc75a637803ca5be0f2769da452ec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bc80b5bd5301bb5b0278534cfba6ac23e5968620
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788779"
 ---
 # <a name="icorprofilercallback3profilerdetachsucceeded-method"></a>ICorProfilerCallback3::ProfilerDetachSucceeded (Método)
 
@@ -36,7 +37,7 @@ HRESULT ProfilerDetachSucceeded();
 
  Se omite el valor devuelto por esta devolución de llamada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La devolución de llamada `ProfilerDetachSucceeded` se emite después de que todos los subprocesos han salido del código del generador de perfiles. Cuando se llama a este método, el generador de perfiles debe realizar tareas de última hora que no son adecuadas para su destructor, tales como notificar a su interfaz de usuario o registrar componentes. Sin embargo, el generador de perfiles no debe llamar a las funciones de las interfaces proporcionadas por el CLR durante esta devolución de llamada (como la [ICorProfilerInfo](icorprofilerinfo-interface.md) o las `IMetaData*` interfaces).  
   
@@ -54,7 +55,7 @@ HRESULT ProfilerDetachSucceeded();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de metadatos](../metadata/metadata-interfaces.md)
 - [ICorProfilerInfo3 (Interfaz)](icorprofilerinfo3-interface.md)
