@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRDataTarget:: GetPointerSize ((método)'
 title: ICLRDataTarget::GetPointerSize (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-ms.openlocfilehash: 077aa50465d99c9098f26e67b3852feb0d399142
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c6e5ab9b919d1c5d2d6e2267a48d46a11cccc09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703530"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801337"
 ---
-# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="55563-102">ICLRDataTarget::GetPointerSize (Método)</span><span class="sxs-lookup"><span data-stu-id="55563-102">ICLRDataTarget::GetPointerSize Method</span></span>
+# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="dea70-103">ICLRDataTarget::GetPointerSize (Método)</span><span class="sxs-lookup"><span data-stu-id="dea70-103">ICLRDataTarget::GetPointerSize Method</span></span>
 
-<span data-ttu-id="55563-103">Obtiene el tamaño, en bytes, del tipo de puntero que utiliza el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="55563-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="55563-104">El servicio de acceso a datos de Common Language Runtime llama a este método.</span><span class="sxs-lookup"><span data-stu-id="55563-104">This method is called by the common language runtime data access services.</span></span>  
+<span data-ttu-id="dea70-104">Obtiene el tamaño, en bytes, del tipo de puntero que utiliza el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="dea70-104">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="dea70-105">El servicio de acceso a datos de Common Language Runtime llama a este método.</span><span class="sxs-lookup"><span data-stu-id="dea70-105">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55563-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="55563-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dea70-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="dea70-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetPointerSize (  
@@ -34,25 +35,25 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="55563-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="55563-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dea70-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="dea70-107">Parameters</span></span>  
 
  `pointerSize`  
- <span data-ttu-id="55563-107">enuncia Un puntero a un valor entero que especifica el tamaño, en bytes, de un puntero en el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="55563-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
+ <span data-ttu-id="dea70-108">enuncia Un puntero a un valor entero que especifica el tamaño, en bytes, de un puntero en el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="dea70-108">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="55563-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="55563-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dea70-109">Observaciones</span><span class="sxs-lookup"><span data-stu-id="dea70-109">Remarks</span></span>  
 
- <span data-ttu-id="55563-109">Este método lo implementa el escritor de la aplicación de depuración.</span><span class="sxs-lookup"><span data-stu-id="55563-109">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="dea70-110">Este método lo implementa el escritor de la aplicación de depuración.</span><span class="sxs-lookup"><span data-stu-id="dea70-110">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55563-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="55563-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dea70-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dea70-111">Requirements</span></span>  
 
- <span data-ttu-id="55563-111">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55563-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="dea70-112">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dea70-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55563-112">**Encabezado:** ClrData. idl, ClrData. h</span><span class="sxs-lookup"><span data-stu-id="55563-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="dea70-113">**Encabezado:** ClrData. idl, ClrData. h</span><span class="sxs-lookup"><span data-stu-id="dea70-113">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="55563-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55563-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dea70-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dea70-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="55563-114">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55563-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dea70-115">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dea70-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55563-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="55563-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dea70-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="dea70-116">See also</span></span>
 
-- [<span data-ttu-id="55563-116">ICLRDataTarget (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="55563-116">ICLRDataTarget Interface</span></span>](iclrdatatarget-interface.md)
+- [<span data-ttu-id="dea70-117">ICLRDataTarget (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="dea70-117">ICLRDataTarget Interface</span></span>](iclrdatatarget-interface.md)

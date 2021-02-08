@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Cordebuggctype ('
 title: CorDebugGCType (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: 6b3075613af0403527ecf67d574c0f5733a5cd8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4be835a9a028a882fa050991beb31d2a8dec5354
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801662"
 ---
-# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="2aa57-102">CorDebugGCType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="2aa57-102">CorDebugGCType Enumeration</span></span>
+# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="c4e4f-103">CorDebugGCType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="c4e4f-103">CorDebugGCType Enumeration</span></span>
 
-<span data-ttu-id="2aa57-103">Indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.</span><span class="sxs-lookup"><span data-stu-id="2aa57-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
+<span data-ttu-id="c4e4f-104">Indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.</span><span class="sxs-lookup"><span data-stu-id="c4e4f-104">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2aa57-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2aa57-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4e4f-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c4e4f-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugGCType {  
@@ -34,27 +35,27 @@ typedef enum CorDebugGCType {
 } CorDebugGCType;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2aa57-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2aa57-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4e4f-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c4e4f-106">Parameters</span></span>  
   
-## <a name="members"></a><span data-ttu-id="2aa57-106">Miembros</span><span class="sxs-lookup"><span data-stu-id="2aa57-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c4e4f-107">Members</span><span class="sxs-lookup"><span data-stu-id="c4e4f-107">Members</span></span>  
   
-|<span data-ttu-id="2aa57-107">Nombre del miembro</span><span class="sxs-lookup"><span data-stu-id="2aa57-107">Member name</span></span>|<span data-ttu-id="2aa57-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="2aa57-108">Description</span></span>|  
+|<span data-ttu-id="c4e4f-108">Nombre del miembro</span><span class="sxs-lookup"><span data-stu-id="c4e4f-108">Member name</span></span>|<span data-ttu-id="c4e4f-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="c4e4f-109">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|<span data-ttu-id="2aa57-109">El recolector de elementos no utilizados se está ejecutando en una estación de trabajo.</span><span class="sxs-lookup"><span data-stu-id="2aa57-109">The garbage collector is running on a workstation.</span></span>|  
-|`CorDebugServerGC`|<span data-ttu-id="2aa57-110">El recolector de elementos no utilizados se está ejecutando en un servidor.</span><span class="sxs-lookup"><span data-stu-id="2aa57-110">The garbage collector is running on a server.</span></span>|  
+|`CorDebugWorkstationGC`|<span data-ttu-id="c4e4f-110">El recolector de elementos no utilizados se está ejecutando en una estación de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c4e4f-110">The garbage collector is running on a workstation.</span></span>|  
+|`CorDebugServerGC`|<span data-ttu-id="c4e4f-111">El recolector de elementos no utilizados se está ejecutando en un servidor.</span><span class="sxs-lookup"><span data-stu-id="c4e4f-111">The garbage collector is running on a server.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2aa57-111">Observaciones</span><span class="sxs-lookup"><span data-stu-id="2aa57-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c4e4f-112">Observaciones</span><span class="sxs-lookup"><span data-stu-id="c4e4f-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2aa57-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2aa57-112">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4e4f-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c4e4f-113">Requirements</span></span>  
 
- <span data-ttu-id="2aa57-113">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2aa57-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="c4e4f-114">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4e4f-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2aa57-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2aa57-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c4e4f-115">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c4e4f-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2aa57-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2aa57-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c4e4f-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4e4f-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2aa57-116">**.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2aa57-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="c4e4f-117">**.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4e4f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2aa57-117">Consulte también</span><span class="sxs-lookup"><span data-stu-id="2aa57-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4e4f-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="c4e4f-118">See also</span></span>
 
-- [<span data-ttu-id="2aa57-118">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="2aa57-118">Debugging Enumerations</span></span>](debugging-enumerations.md)
+- [<span data-ttu-id="c4e4f-119">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="c4e4f-119">Debugging Enumerations</span></span>](debugging-enumerations.md)

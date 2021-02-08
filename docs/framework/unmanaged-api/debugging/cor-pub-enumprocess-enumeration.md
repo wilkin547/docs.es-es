@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración COR_PUB_ENUMPROCESS'
 title: COR_PUB_ENUMPROCESS (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 5d3ada6e-feea-47da-a7ed-b664107c137f
 topic_type:
 - apiref
-ms.openlocfilehash: 30a522fbf96aebaa96f33f4a1dc381683f183871
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 66bbd08aabb9d2c93e385ed098bae54754a85b85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801792"
 ---
-# <a name="cor_pub_enumprocess-enumeration"></a><span data-ttu-id="ddcea-102">COR_PUB_ENUMPROCESS (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="ddcea-102">COR_PUB_ENUMPROCESS Enumeration</span></span>
+# <a name="cor_pub_enumprocess-enumeration"></a><span data-ttu-id="6759a-103">COR_PUB_ENUMPROCESS (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="6759a-103">COR_PUB_ENUMPROCESS Enumeration</span></span>
 
-<span data-ttu-id="ddcea-103">Identifica el tipo de proceso que se va a enumerar.</span><span class="sxs-lookup"><span data-stu-id="ddcea-103">Identifies the type of process to be enumerated.</span></span>  
+<span data-ttu-id="6759a-104">Identifica el tipo de proceso que se va a enumerar.</span><span class="sxs-lookup"><span data-stu-id="6759a-104">Identifies the type of process to be enumerated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ddcea-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ddcea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6759a-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6759a-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -33,26 +34,26 @@ typedef enum {
 } COR_PUB_ENUMPROCESS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ddcea-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="ddcea-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6759a-106">Members</span><span class="sxs-lookup"><span data-stu-id="6759a-106">Members</span></span>  
   
-|<span data-ttu-id="ddcea-106">Nombre del miembro</span><span class="sxs-lookup"><span data-stu-id="ddcea-106">Member name</span></span>|<span data-ttu-id="ddcea-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="ddcea-107">Description</span></span>|  
+|<span data-ttu-id="6759a-107">Nombre del miembro</span><span class="sxs-lookup"><span data-stu-id="6759a-107">Member name</span></span>|<span data-ttu-id="6759a-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="6759a-108">Description</span></span>|  
 |-----------------|-----------------|  
-|`COR_PUB_MANAGEDONLY`|<span data-ttu-id="ddcea-108">Un proceso administrado.</span><span class="sxs-lookup"><span data-stu-id="ddcea-108">A managed process.</span></span>|  
+|`COR_PUB_MANAGEDONLY`|<span data-ttu-id="6759a-109">Un proceso administrado.</span><span class="sxs-lookup"><span data-stu-id="6759a-109">A managed process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ddcea-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ddcea-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6759a-110">Observaciones</span><span class="sxs-lookup"><span data-stu-id="6759a-110">Remarks</span></span>  
 
- <span data-ttu-id="ddcea-110">La versión actual de la API de depuración no administrada solo enumera los procesos administrados.</span><span class="sxs-lookup"><span data-stu-id="ddcea-110">The current version of the unmanaged debugging API enumerates only managed processes.</span></span>  
+ <span data-ttu-id="6759a-111">La versión actual de la API de depuración no administrada solo enumera los procesos administrados.</span><span class="sxs-lookup"><span data-stu-id="6759a-111">The current version of the unmanaged debugging API enumerates only managed processes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ddcea-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ddcea-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6759a-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6759a-112">Requirements</span></span>  
 
- <span data-ttu-id="ddcea-112">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ddcea-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="6759a-113">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6759a-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ddcea-113">**Encabezado:** CorPub. idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="ddcea-113">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="6759a-114">**Encabezado:** CorPub. idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="6759a-114">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="ddcea-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ddcea-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6759a-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6759a-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ddcea-115">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddcea-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6759a-116">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6759a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ddcea-116">Consulte también</span><span class="sxs-lookup"><span data-stu-id="ddcea-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6759a-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="6759a-117">See also</span></span>
 
-- [<span data-ttu-id="ddcea-117">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="ddcea-117">Debugging Enumerations</span></span>](debugging-enumerations.md)
+- [<span data-ttu-id="6759a-118">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="6759a-118">Debugging Enumerations</span></span>](debugging-enumerations.md)
