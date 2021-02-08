@@ -1,4 +1,5 @@
 ---
+description: "Más información sobre: BC30560: ' <name> ' es ambiguo en el espacio de nombres '<namespacename>"
 title: "'<name>' es ambiguo en el espacio de nombres '<namespacename>'"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
-ms.openlocfilehash: 7607e4cd9d5b628d3dd6404e9329594143b9beef
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 54dcb023606363d6e5ef95c9764c05d51b91f145
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795773"
 ---
 # <a name="bc30560-name-is-ambiguous-in-the-namespace-namespacename"></a>BC30560: ' \<name> ' es ambiguo en el espacio de nombres ' \<namespacename> '
 

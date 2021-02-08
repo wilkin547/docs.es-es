@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: objeto necesario (Visual Basic)'
 title: Se requiere un objeto
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-ms.openlocfilehash: 5384dc603d51b31c252c9cad0775a453210f29ff
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b5f213641d9b7c52db15c47afbcf767f040c04f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873635"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795591"
 ---
 # <a name="object-required-visual-basic"></a>Se requiere un objeto (Visual Basic)
 
@@ -25,6 +26,6 @@ Las referencias a las propiedades y los métodos requieren a menudo un calificad
   
 4. Compruebe la documentación del objeto y asegúrese de que la acción es válida.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de errores](../../programming-guide/language-features/error-types.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)

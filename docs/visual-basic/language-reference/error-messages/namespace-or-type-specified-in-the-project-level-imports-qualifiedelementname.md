@@ -1,4 +1,5 @@
 ---
+description: "Más información acerca de: BC40057: el espacio de nombres o tipo especificado en las importaciones de nivel de proyecto ' <qualifiedelementname> ' no contiene ningún miembro público o no se encuentra"
 title: El espacio de nombres o tipo especificado en las importaciones del proyecto '<qualifiedelementname>' no tiene miembros públicos o no se encuentra
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 54ee046cda998be8bd70e531918d6ab2a67d0494
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 66ae40ca6a2feff78f80bdbc8886387e801f7db2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795695"
 ---
 # <a name="bc40057-namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>BC40057: el espacio de nombres o tipo especificado en las importaciones de nivel de proyecto ' \<qualifiedelementname> ' no contiene ningún miembro público o no se encuentra.
 
@@ -38,7 +39,7 @@ El espacio de nombres o tipo especificado en las importaciones de nivel de proye
 
 3. Compruebe que el elemento contenedor expone al menos un `Public` miembro.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Página Referencias, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

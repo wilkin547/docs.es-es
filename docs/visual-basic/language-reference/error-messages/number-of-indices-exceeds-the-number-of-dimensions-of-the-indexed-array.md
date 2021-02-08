@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: BC30106: el número de índices supera el número de dimensiones de la matriz indizada'
 title: El número de índices sobrepasa el número de dimensiones de la matriz indizada
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: 9a191ff7ec3ad6a607e6509cc143c359f64f21ea
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 35ec1ea106e67022046179412b142cd92712c822
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159916"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795616"
 ---
 # <a name="bc30106-number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>BC30106: el número de índices supera el número de dimensiones de la matriz indizada
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: BC40039: el nombre del <namespacename> espacio de nombres raíz <fullnamespacename> no es conforme a CLS'
 title: El nombre <namespacename> del espacio de nombres raíz <fullnamespacename> no es compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 48e020cb74641279a4f402e47034514d78dfc4fc
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 2560c5c056c70909a08a48a0ff8b2859b178cc8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795734"
 ---
 # <a name="bc40039-name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>BC40039: el nombre del \<namespacename> espacio de nombres raíz \<fullnamespacename> no es conforme a CLS
 

@@ -1,4 +1,5 @@
 ---
+description: "Más información sobre: BC33107: el primer operando de una expresión ' if ' binaria debe admitir valores NULL o un tipo de referencia"
 title: El primer operando de una expresión 'If' binaria debe ser un tipo que acepte valores NULL o un tipo de referencia
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: bca9b74a68815b4e5a3bb2dc114b9031cdf24099
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 4a0037680e31a8220cb796e6d8f3215139e01b20
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796254"
 ---
 # <a name="bc33107-first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>BC33107: el primer operando de una expresión ' if ' binaria debe admitir valores NULL o un tipo de referencia
 
