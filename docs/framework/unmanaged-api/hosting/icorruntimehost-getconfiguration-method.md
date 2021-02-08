@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorRuntimeHost:: GetConfiguration (método)'
 title: ICorRuntimeHost::GetConfiguration (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c431617a-b055-44a0-8730-48b7a86d9610
 topic_type:
 - apiref
-ms.openlocfilehash: 2a50814a67be5a01a7413050683a915355665f3c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d3e3f065c3957fb29daa11ed7c46858a53865c91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784839"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>ICorRuntimeHost::GetConfiguration (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetConfiguration(
  `pConfiguration`  
  enuncia Puntero a la dirección de un objeto [ICorConfiguration](icorconfiguration-interface.md) que se puede usar para configurar el CLR.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR se debe configurar antes de su inicialización; de lo contrario, el `GetConfiguration` método devuelve un valor HRESULT que indica un error.  
   
@@ -53,6 +54,6 @@ HRESULT GetConfiguration(
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

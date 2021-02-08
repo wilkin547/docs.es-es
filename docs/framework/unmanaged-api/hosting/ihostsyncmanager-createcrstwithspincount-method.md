@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostSyncManager:: CreateCrstWithSpinCount ((método)'
 title: IHostSyncManager::CreateCrstWithSpinCount (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-ms.openlocfilehash: 6b2f57c7147cc8ff2abff848bd1e4661c2f5e728
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c43f1a3d52eb7174844ecb4079cf54413f20853
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784826"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount (Método)
 
@@ -55,7 +56,7 @@ HRESULT CreateCrstWithSpinCount (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear la sección crítica solicitada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un recuento de giros solo se utiliza en un sistema de varios procesadores. El recuento de giros especifica el número de veces que un subproceso de llamada debe girar antes de realizar una operación de espera en un semáforo que está asociado a una sección crítica no disponible. Si la sección crítica se vuelve gratuita durante la operación de giro, el subproceso que realiza la llamada evita la operación de espera. `CreateCrstWithSpinCount` refleja la función de Win32 `InitializeCriticalSectionAndSpinCount` .  
   
@@ -69,7 +70,7 @@ HRESULT CreateCrstWithSpinCount (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostSemaphore (Interfaz)](ihostsemaphore-interface.md)

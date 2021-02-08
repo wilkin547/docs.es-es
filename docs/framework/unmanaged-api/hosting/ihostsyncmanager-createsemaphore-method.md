@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostSyncManager:: Createsemaphore ((método)'
 title: IHostSyncManager::CreateSemaphore (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-ms.openlocfilehash: 9af38a58ce8786c56d9f50089605dc994167497e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a03ef7532e2ac8357ec015b40cc54942f5420e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784748"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore (Método)
 
@@ -59,7 +60,7 @@ HRESULT CreateSemaphore (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear el objeto de evento solicitado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `CreateSemaphore` refleja la función de Win32 que tiene el mismo nombre. Los `dwInitial` `dwMax` parámetros y usan la misma semántica para el recuento de semáforos que los `lInitialCount` parámetros y de Win32 `lMaximumCount` , respectivamente. `dwInitial` debe estar entre cero y `dwMax` , ambos incluidos. `dwMax` debe ser mayor que cero.  
   
@@ -73,7 +74,7 @@ HRESULT CreateSemaphore (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostSemaphore (Interfaz)](ihostsemaphore-interface.md)

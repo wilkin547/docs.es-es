@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostSyncManager:: CreateMonitorEvent ((método)'
 title: IHostSyncManager::CreateMonitorEvent (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 524c7fd3-9b5c-46e7-99ba-555fd2fe33f0
 topic_type:
 - apiref
-ms.openlocfilehash: 7fc431861ac8f5c0e47e12e688f4ca004313c062
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b48d0417e614cf04c3ab150f0bdda73408b7a273
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704453"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784787"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>IHostSyncManager::CreateMonitorEvent (Método)
 
@@ -55,7 +56,7 @@ HRESULT CreateMonitorEvent (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear el objeto de evento solicitado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `CreateMonitorEvent` Devuelve un `IHostAutoEvent` que CLR usa en su implementación del <xref:System.Threading.Monitor?displayProperty=nameWithType> tipo administrado. Este método refleja la `CreateEvent` función de Win32, con un valor de `false` especificado para el `bManualReset` parámetro.  
   
@@ -71,7 +72,7 @@ HRESULT CreateMonitorEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostAutoEvent (Interfaz)](ihostautoevent-interface.md)

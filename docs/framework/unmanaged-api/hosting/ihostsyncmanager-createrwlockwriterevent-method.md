@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostSyncManager:: Createrwlockwriterevent ((método)'
 title: IHostSyncManager::CreateRWLockWriterEvent (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70e488c2-cf53-4dc0-ba52-74372d215c41
 topic_type:
 - apiref
-ms.openlocfilehash: 5b5faf14337f78d9b176787528ae8947f5810ba6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 509f18ff49966e5da3a25e39258d33caf69249a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704375"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784761"
 ---
 # <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a>IHostSyncManager::CreateRWLockWriterEvent (Método)
 
@@ -55,7 +56,7 @@ HRESULT CreateRWLockWriterEvent (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear el objeto de evento solicitado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR llama al `CreateRWLockWriterEvent` método para obtener una referencia a una `IHostAutoEvent` instancia de que se va a utilizar en su implementación de un bloqueo de escritor. El host puede usar la cookie especificada para determinar qué tareas están esperando en el bloqueo mediante una llamada a los métodos de iteración de la interfaz [ICLRSyncManager](iclrsyncmanager-interface.md) .  
   
@@ -69,7 +70,7 @@ HRESULT CreateRWLockWriterEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostAutoEvent (Interfaz)](ihostautoevent-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostTaskManager:: EndDelayAbort (método)'
 title: IHostTaskManager::EndDelayAbort (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e02facb-2504-4356-9af5-0cee1f8436a7
 topic_type:
 - apiref
-ms.openlocfilehash: 6add3cf4d83796b2d95de46cb64f5880a835b6ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e0d1c4231d381baf2ff92d187d33714f1c6f3003
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784566"
 ---
 # <a name="ihosttaskmanagerenddelayabort-method"></a>IHostTaskManager::EndDelayAbort (Método)
 
@@ -44,7 +45,7 @@ HRESULT EndDelayAbort ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_UNEXPECTED|`EndDelayAbort` se llamó a sin una llamada correspondiente a `BeginDelayAbort` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR realiza una llamada correspondiente a `BeginDelayAbort` en la tarea actual antes de llamar a `EndDelayAbort` . En ausencia de esta llamada correspondiente, la implementación del host de [IHostTaskManager](ihosttaskmanager-interface.md) debe devolver E_UNEXPECTED de `EndDelayAbort` y no debe realizar ninguna acción.  
   
@@ -58,7 +59,7 @@ HRESULT EndDelayAbort ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading>
 - [ICLRTask (Interfaz)](iclrtask-interface.md)

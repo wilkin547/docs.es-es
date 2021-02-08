@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostTaskManager:: BeginDelayAbort (método)'
 title: IHostTaskManager::BeginDelayAbort (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 75f42a8b-ed68-4718-a030-a179cfba7d72
 topic_type:
 - apiref
-ms.openlocfilehash: f72cc15904d098e159dd7f75f673d43ae987998d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f991690af4f7e634c8d845bdbd09f690b4ea3af7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727333"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784618"
 ---
 # <a name="ihosttaskmanagerbegindelayabort-method"></a>IHostTaskManager::BeginDelayAbort (Método)
 
@@ -44,7 +45,7 @@ HRESULT BeginDelayAbort ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_UNEXPECTED|`BeginDelayAbort` ya se ha llamado a, pero aún no se ha recibido la llamada correspondiente a [EndDelayAbort](ihosttaskmanager-enddelayabort-method.md) .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host no debe anular la tarea actual hasta que `EndDelayAbort` se llame a. Si se realiza otra llamada a `BeginDelayAbort` sin una llamada intermedia a `EndDelayAbort` , el host debe devolver E_UNEXPECTED de `BeginDelayAbort` y no debe realizar ninguna acción.  
   
@@ -58,7 +59,7 @@ HRESULT BeginDelayAbort ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

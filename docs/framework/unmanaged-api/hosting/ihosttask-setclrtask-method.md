@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostTask:: SetCLRTask ((método)'
 title: IHostTask::SetCLRTask (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e9d39c80-41a1-49e7-bb5e-ea3433bfb5d7
 topic_type:
 - apiref
-ms.openlocfilehash: e6b9a4015a6139d6c8d7101fa7811c7ad9134e4c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 381b7827f043b6ef1d4a6698f5eb103233c9af55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720469"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784683"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask (Método)
 
@@ -50,7 +51,7 @@ HRESULT SetCLRTask (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR llama `SetCLRTask` a para asociar una `ICLRTask` instancia de a la `IHostTask` instancia actual, que se creó mediante una llamada a [IHostTaskManager:: CreateTask](ihosttaskmanager-createtask-method.md).  
   
@@ -64,7 +65,7 @@ HRESULT SetCLRTask (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

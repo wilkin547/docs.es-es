@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostSyncManager:: CreateManualEvent ((método)'
 title: IHostSyncManager::CreateManualEvent (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 68661fbd-09cf-46dc-890b-e694f8a3880a
 topic_type:
 - apiref
-ms.openlocfilehash: 67af8f125b2be39138bac5d51148215f3a3acf86
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 300d6cbf9555eb331a470767cdfb2745da300bb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784800"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent (Método)
 
@@ -55,7 +56,7 @@ HRESULT CreateManualEvent (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear el objeto de evento solicitado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `CreateManualEvent` crea un `IHostManualEvent` objeto, un objeto de evento de restablecimiento manual que requiere una llamada al método [IHostManualEvent:: RESET](ihostmanualevent-reset-method.md) para establecerlo en un estado no señalado. `CreateManualEvent` refleja la `CreateEvent` función de Win32 con el valor `true` especificado para el `bManualReset` parámetro.  
   
@@ -69,7 +70,7 @@ HRESULT CreateManualEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostManualEvent (Interfaz)](ihostmanualevent-interface.md)

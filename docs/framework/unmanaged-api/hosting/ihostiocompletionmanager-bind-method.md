@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostIoCompletionManager:: BIND (método)'
 title: IHostIoCompletionManager::Bind (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acd74cb5-7e22-4a07-83c3-82288e1abd9f
 topic_type:
 - apiref
-ms.openlocfilehash: 5231db8de6129ed593e4e0d508b312b7034c01f0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2105bf06c23f70588d0c1bc0cd849b8e810d121e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784865"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind (Método)
 
@@ -54,7 +55,7 @@ HRESULT Bind (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Se crea un puerto de finalización de e/s mediante una llamada a `CreateIoCompletionPort` . CLR llama `Bind` a para enlazar un identificador a ese puerto.  
   
@@ -71,6 +72,6 @@ HRESULT Bind (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRIoCompletionManager (Interfaz)](iclriocompletionmanager-interface.md)

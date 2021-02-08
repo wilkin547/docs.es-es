@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRTask:: SwitchOut (método)'
 title: ICLRTask::SwitchOut (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6fb168c-b24b-4ecf-a390-2b5ba3317ae6
 topic_type:
 - apiref
-ms.openlocfilehash: 1b27983b3f10eba225442dcd2f5df02062e53ed4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6c491c4d9005fb850c5adecd025730f1ea71f513
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784943"
 ---
 # <a name="iclrtaskswitchout-method"></a>ICLRTask::SwitchOut (Método)
 
@@ -43,7 +44,7 @@ HRESULT SwitchOut ();
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un host llama `SwitchOut` a para informar a CLR de que ha detenido temporalmente la ejecución de la tarea que `ICLRTask` representa la instancia actual y volverá a programar la tarea.  
   
@@ -57,7 +58,7 @@ HRESULT SwitchOut ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

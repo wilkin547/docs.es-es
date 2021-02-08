@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRTask:: Yieldtask ((método)'
 title: ICLRTask::YieldTask (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8eb4095-3a8f-4be3-9446-63e9893dce7d
 topic_type:
 - apiref
-ms.openlocfilehash: 7b9b47daa96ffcb1f66b462ff8e227250c5a81ca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b72b31b0a1c10a2b0b1e2ad379b140ff33419fa1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720287"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784930"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask (Método)
 
@@ -43,7 +44,7 @@ HRESULT YieldTask ();
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un host llama `YieldTask` a para solicitar recursos del procesador para otras tareas o procesos. Este método está pensado principalmente para permitir que el código de ejecución prolongada deje tiempo de CPU. El motor en tiempo de ejecución intenta colocar la tarea que la `ICLRTask` instancia actual representa en un estado en el que puede producir el tiempo de procesamiento, pero no garantiza el éxito.  
   
@@ -57,7 +58,7 @@ HRESULT YieldTask ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

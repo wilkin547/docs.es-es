@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostTask:: SetPriority (método)'
 title: IHostTask::SetPriority (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd8c379b-c7a0-434f-8e23-899bd26be75d
 topic_type:
 - apiref
-ms.openlocfilehash: 80b4bb2f6a547250acbc16a89e7396c60cc50d87
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c3e8fee954e5cbea2d084141a4b2d22d2fa5e95b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720456"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784644"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority (Método)
 
@@ -50,7 +51,7 @@ HRESULT SetPriority (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  A los subprocesos se les concede el tiempo de procesamiento mediante un sistema Round Robin que se basa parcialmente en el nivel de prioridad de un subproceso. `SetPriority` permite que CLR establezca el nivel de prioridad de subproceso para la tarea actual. `newPriority`Se admiten los valores siguientes.  
   
@@ -85,7 +86,7 @@ HRESULT SetPriority (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Thread>
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
