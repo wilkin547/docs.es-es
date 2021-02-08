@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: comportamiento de las transacciones de servicio'
 title: Comportamiento de transacción de servicio
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 0be5bf0dbe6416febb898fb5150c5a516c8b0969
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f8b76de250ef87ec5ca2d4ea4353a9a28bac248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591532"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793069"
 ---
 # <a name="service-transaction-behavior"></a>Comportamiento de transacción de servicio
 
@@ -213,13 +214,13 @@ El resultado en cualquiera de estos casos es que no se confirma ninguna de las o
 
 3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).
 
-Si ejecuta el ejemplo en los equipos, debe configurar Microsoft Coordinador de transacciones distribuidas (MSDTC) para habilitar el flujo de transacciones de red y usar la herramienta WsatConfig. exe para habilitar la compatibilidad de red de las transacciones de Windows Communication Foundation (WCF).
+Si ejecuta el ejemplo en los equipos, debe configurar Microsoft Coordinador de transacciones distribuidas (MSDTC) para habilitar el flujo de transacciones de red y utilizar la herramienta de WsatConfig.exe para habilitar la compatibilidad de red de las transacciones de Windows Communication Foundation (WCF).
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Para configurar MSDTC de forma que admita la ejecución del ejemplo en varios equipos
 
 1. En el equipo de servicio, configure MSDTC para permitir las transacciones de red entrantes.
 
-    1. En el menú **Inicio** , vaya a **Panel de control**, **herramientas administrativas**y servicios de **componentes**.
+    1. En el menú **Inicio** , vaya a **Panel de control**, **herramientas administrativas** y servicios de **componentes**.
 
     2. Haga clic con el botón derecho en **mi PC** y seleccione **propiedades**.
 
@@ -239,13 +240,13 @@ Si ejecuta el ejemplo en los equipos, debe configurar Microsoft Coordinador de t
 
     3. Desplácese a la carpeta C:\WINDOWS\System32.
 
-    4. Seleccione MSDTC. exe y haga clic en **abrir**.
+    4. Seleccione Msdtc.exe y haga clic en **abrir**.
 
     5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Agregar programa** y haga clic en **Aceptar** de nuevo para cerrar el applet Firewall de Windows.
 
 3. En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:
 
-    1. En el menú **Inicio** , vaya a **Panel de control**, **herramientas administrativas**y servicios de **componentes**.
+    1. En el menú **Inicio** , vaya a **Panel de control**, **herramientas administrativas** y servicios de **componentes**.
 
     2. Haga clic con el botón derecho en **mi PC** y seleccione **propiedades**.
 

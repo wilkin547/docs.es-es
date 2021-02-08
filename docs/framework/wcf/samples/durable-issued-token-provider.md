@@ -1,19 +1,20 @@
 ---
+description: 'Más información sobre: proveedor de tokens emitidos durable'
 title: Proveedor de token emitido duradero
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 7e0025eb4bc4918b977d9d8c4e2b1435b0425973
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dfde4efa961704659d9d1de6010b16616467a779
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291679"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793277"
 ---
 # <a name="durable-issued-token-provider"></a>Proveedor de token emitido duradero
 
 Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  Un proveedor de tokens en Windows Communication Foundation (WCF) se usa para proporcionar credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con un proveedor de tokens de CardSpace. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
   

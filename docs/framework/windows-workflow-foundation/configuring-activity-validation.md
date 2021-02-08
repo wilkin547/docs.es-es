@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo configurar la validación de actividades
 title: Configurar la validación de actividades
 ms.date: 03/30/2017
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
-ms.openlocfilehash: c3e10fc096b16ef2cf7a6c7533ac9bad8c5ec205
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9e40842a18dd2afd9a5ec0104d66e8971d691b5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288962"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792757"
 ---
 # <a name="configuring-activity-validation"></a>Configurar la validación de actividades
 

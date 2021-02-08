@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: escenarios de implementación admitidos'
 title: Escenarios de implementación admitidos
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 299c8f2e29806a123e0a8b6e1e70d8cc13daa7bf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 090f0912660fc113bad8640afb1360b64071fa78
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793368"
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 

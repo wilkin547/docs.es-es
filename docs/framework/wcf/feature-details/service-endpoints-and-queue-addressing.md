@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: puntos de conexión de servicio y direccionamiento de colas'
 title: Extremos de servicio y direccionamiento de la cola
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: f7c3221d466d2599139eb29a8358d726c2b4edda
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 61b4e35de6bd89f45aa9f5e54a55beaf8536b74b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253926"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793563"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Extremos de servicio y direccionamiento de la cola
 
@@ -80,8 +81,8 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
 |Dirección de cola basada en URI WCF|Utilizar la propiedad de Active Directory|Propiedad del protocolo de transferencia de la cola|Nombres de formato de MSMQ resultantes|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |`Net.msmq://<machine-name>/private/abc`|False (valor predeterminado)|Native (valor predeterminado)|`DIRECT=OS:machine-name\private$\abc`|  
-|`Net.msmq://<machine-name>/private/abc`|False|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
-|`Net.msmq://<machine-name>/private/abc`|True|Nativa|`PUBLIC=some-guid` (el GUID de la cola)|  
+|`Net.msmq://<machine-name>/private/abc`|Falso|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
+|`Net.msmq://<machine-name>/private/abc`|Verdadero|Nativa|`PUBLIC=some-guid` (el GUID de la cola)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Leer los mensajes de la cola de mensajes no enviados o la cola de mensajes dudosos  
 

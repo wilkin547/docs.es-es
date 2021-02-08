@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)'
 title: Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: dbd33869de6b1ecee6406dfeede88afc4eca07f1
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 8b315e5aa5df23a4d9bb032db41b7067accfa010
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720496"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792965"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 
@@ -19,9 +20,9 @@ La utilidad de configuración de WS-AtomicTransaction se utiliza para configurar
 wsatConfig [Options]  
 ```  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
- Esta herramienta de línea de comandos se puede usar para configurar los valores básicos de WS-AT solo en un equipo local. Si tiene que configurar los valores en los equipos locales y remotos, debe usar el complemento MMC como se describe en configuración de la [compatibilidad con transacciones WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).  
+ Esta herramienta de línea de comandos se puede usar para configurar los valores básicos de WS-AT solo en un equipo local. Si tiene que configurar los valores en los equipos locales y remotos, debe usar el complemento MMC como se describe en configuración de la [compatibilidad con transacciones de WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md).  
   
  La herramienta de línea de comandos se puede encontrar en la ubicación de instalación de Windows SDK:
   

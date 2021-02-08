@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF'
 title: Procedimiento para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 4ed3e5269be5b636b348ff0efe44c49dae5335e2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aeb03e0dad6c63c463db419027f5556922b2f160
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793537"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedimiento para crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
 

@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: atributos de transacción de ServiceModel'
 title: Atributos de transacción de ServiceModel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-ms.openlocfilehash: d4b7482431404241577111d8dd3841319b65696e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0b443fc6b9503007574608afe03c5e0508f666d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793485"
 ---
 # <a name="servicemodel-transaction-attributes"></a>Atributos de transacción de ServiceModel
 
-Windows Communication Foundation (WCF) proporciona las propiedades en tres estándar <xref:System.ServiceModel> atributos que le permiten configurar el comportamiento de transacciones para un servicio WCF:
+Windows Communication Foundation (WCF) proporciona propiedades de tres <xref:System.ServiceModel> atributos estándar que permiten configurar el comportamiento de las transacciones para un servicio WCF:
 
 - <xref:System.ServiceModel.TransactionFlowAttribute>
 
@@ -23,7 +24,7 @@ Windows Communication Foundation (WCF) proporciona las propiedades en tres está
 
 ## <a name="transactionflowattribute"></a>TransactionFlowAttribute
 
-El atributo <xref:System.ServiceModel.TransactionFlowAttribute> especifica la predisposición de una operación en un contrato de servicio para aceptar las transacciones entrantes de un cliente. El atributo proporciona este control con la siguiente propiedad: Las transacciones usan el <xref:System.ServiceModel.TransactionFlowOption> enumeración para especificar si una transacción entrante es <xref:System.ServiceModel.TransactionFlowOption.Mandatory>, <xref:System.ServiceModel.TransactionFlowOption.Allowed>, o <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>.
+El atributo <xref:System.ServiceModel.TransactionFlowAttribute> especifica la predisposición de una operación en un contrato de servicio para aceptar las transacciones entrantes de un cliente. El atributo proporciona la propiedad siguiente a este control: las transacciones utilizan la enumeración <xref:System.ServiceModel.TransactionFlowOption> para especificar si una transacción entrante es <xref:System.ServiceModel.TransactionFlowOption.Mandatory>, <xref:System.ServiceModel.TransactionFlowOption.Allowed>o <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>.
 
 Éste es el único atributo que relaciona las operaciones de servicio con las interacciones externas con un cliente. Los atributos descritos en las siguientes secciones se relacionan con el uso de transacciones dentro de la ejecución de la operación.
 
@@ -41,7 +42,7 @@ El atributo <xref:System.ServiceModel.ServiceBehaviorAttribute> especifica el co
 
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 
-El atributo <xref:System.ServiceModel.OperationBehaviorAttribute> especifica los comportamientos de los métodos en la implementación del servicio. Puede utilizarlo para indicar el comportamiento de ejecución concreto de la operación. Propiedades de este atributo no afectan a la descripción del lenguaje de descripción de servicios Web (WSDL) del contrato de servicio y son meramente elementos del modelo de programación de WCF que habilitan características comunes que los desarrolladores en caso contrario, tendrían que implementar.
+El atributo <xref:System.ServiceModel.OperationBehaviorAttribute> especifica los comportamientos de los métodos en la implementación del servicio. Puede utilizarlo para indicar el comportamiento de ejecución concreto de la operación. Las propiedades de este atributo no afectan a la descripción del lenguaje de descripción de servicios web (WSDL) del contrato de servicio y son meramente elementos del modelo de programación de WCF que permiten características comunes que los desarrolladores tienen que implementar por sí mismos.
 
 Este atributo tiene las siguientes propiedades específicas de transacciones:
 

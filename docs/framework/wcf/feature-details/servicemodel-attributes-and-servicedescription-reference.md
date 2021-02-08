@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: atributos de ServiceModel y referencia de ServiceDescription'
 title: Atributos ServiceModel y referencia ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: db2824d7452f1ec4c675782e18ad25bd4be6a483
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 52d800d1aab7fc7d60f0b1234065aa876944ea3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253874"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793511"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atributos ServiceModel y referencia ServiceDescription
 
@@ -25,7 +26,7 @@ El *árbol de Descripción* es la jerarquía de tipos (a partir de la <xref:Syst
   
 |Propiedad ServiceBehaviorAttribute|Valor del árbol de descripción afectado|  
 |---------------------------------------|-------------------------------------|  
-|Name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
+|Nombre|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
 |IgnoreExtensionDataObject|Establece la propiedad <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> para todas las operaciones.|  
@@ -49,7 +50,7 @@ El *árbol de Descripción* es la jerarquía de tipos (a partir de la <xref:Syst
 |IsOneWay|Se asigna a una sola <xref:System.ServiceModel.Description.MessageDescription> en <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|NOMBRE|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|Nombre|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> y posiblemente niveles secundarios de protección. Para obtener más información acerca de la jerarquía de nivel de protección, vea [Descripción del nivel de protección](../understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> para el mensaje de salida o de entrada, dependiendo del contrato/contrato de devolución de llamada.|  
   
@@ -57,7 +58,7 @@ El *árbol de Descripción* es la jerarquía de tipos (a partir de la <xref:Syst
 |----------------------------------|-------------------------------------|  
 |Acción|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> dependiendo del contrato/contrato de devolución de llamada.|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
-|Name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
+|Nombre|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
   
@@ -84,34 +85,34 @@ El *árbol de Descripción* es la jerarquía de tipos (a partir de la <xref:Syst
 |----------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|NOMBRE|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Retransmisión|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |Valor MessageBodyMemberAttribute|Valor del árbol de descripción afectado|  
 |--------------------------------------|-------------------------------------|  
-|NOMBRE|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Pedido de|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Pedido|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |Valor MessageHeaderArrayAttribute|Valor del árbol de descripción afectado|  
 |---------------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
-|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|Nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
 |Retransmisión|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
 |Valor MessagePropertyAttribute|Valor del árbol de descripción afectado|  
 |------------------------------------|-------------------------------------|  
-|NOMBRE|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|Nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
 |Valor MessageParameterAttribute|Valor del árbol de descripción afectado|  
 |-------------------------------------|-------------------------------------|  
-|NOMBRE|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  Para obtener más información sobre cómo se convierten los valores del árbol de descripción en metadatos, vea [ServiceDescription y referencia de WSDL](servicedescription-and-wsdl-reference.md).  
   

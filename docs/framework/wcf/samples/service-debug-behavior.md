@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: comportamiento de depuración de servicio'
 title: Comportamiento de depuración de servicio
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 53f21129860c644d09d1a2eb9cb956aecf8ab0ad
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3aae4a4cca53fce50bff8ec02896e748f430166f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596648"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793108"
 ---
 # <a name="service-debug-behavior"></a>Comportamiento de depuración de servicio
 
@@ -32,7 +33,7 @@ El archivo Web.config para el servidor define el comportamiento de depuración d
 </behaviors>
 ```
 
-[\<serviceDebug>](../../configure-apps/file-schema/wcf/servicedebug.md)es el elemento de configuración que permite cambiar las propiedades de comportamiento de depuración del servicio. El usuario puede modificar este comportamiento para lograr lo siguiente:
+[\<serviceDebug>](../../configure-apps/file-schema/wcf/servicedebug.md) es el elemento de configuración que permite cambiar las propiedades de comportamiento de depuración del servicio. El usuario puede modificar este comportamiento para lograr lo siguiente:
 
 - Permite al servicio devolver cualquier excepción producida por el código de aplicación aun cuando la excepción no se declare mediante <xref:System.ServiceModel.FaultContractAttribute>. Se ha hecho configurando `includeExceptionDetailInFaults` como `true`. Este valor es útil al depurar los casos donde el servidor produce una excepción inesperada.
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: bloqueo de seguridad de PII'
 title: Bloqueo de seguridad PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 0b4ec820cd57e3dfaff035dc8e5ce1ef4b463df5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4225ef208f711f9c027fdc52f82b4a281613067f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793199"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueo de seguridad PII
 
@@ -28,7 +29,7 @@ En este ejemplo se muestra cómo controlar varias características relacionadas 
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  Cada una de estas características puede utilizarse por separado o conjuntamente para controlar los aspectos de la seguridad de un servicio. No se trata de una guía definitiva para proteger un servicio WCF.  
   

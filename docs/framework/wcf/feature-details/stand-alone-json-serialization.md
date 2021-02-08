@@ -1,18 +1,19 @@
 ---
-title: Serialización de JSON independiente mediante DataContractJsonSerializer
+description: 'Más información sobre: Stand-Alone la serialización de JSON mediante DataContractJsonSerializer'
+title: Stand-Alone la serialización de JSON mediante DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 5561cddb22a02fdae9f792b1d1ec71d01c4fc916
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c88a996eeac7e9e62caa7797bc0bf7cd68dfd67b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793420"
 ---
-# <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Serialización de JSON independiente mediante DataContractJsonSerializer
+# <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Stand-Alone la serialización de JSON mediante DataContractJsonSerializer
 
 > [!NOTE]
-> Este artículo trata acerca de <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . Para la mayoría de los escenarios que implican la serialización y deserialización de JSON, se recomiendan las API en el [espacio de nombres System. Text. JSON](../../../standard/serialization/system-text-json-overview.md).
+> Este artículo trata acerca de <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . Para la mayoría de los escenarios que implican la serialización y deserialización de JSON, se recomiendan las API del [System.Text.Jsen el espacio de nombres](../../../standard/serialization/system-text-json-overview.md).
 
 JSON (JavaScript Object Notation) es un formato de datos diseñado específicamente para usarse por código JavaScript que se ejecute en páginas web dentro del explorador. Es el formato de datos predeterminado que usan los servicios de ASP.NET AJAX creados en Windows Communication Foundation (WCF).
 
@@ -34,7 +35,7 @@ En la siguiente tabla se muestra la correspondencia entre los tipos .NET y los t
 |<xref:System.String>, <xref:System.Char>|String|--|
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|El formato de estos tipos en JSON es el mismo que en XML (esencialmente, TimeSpan en el formato de duración ISO 8601, GUID en el formato "12345678-ABCD-ABCD-ABCD-1234567890AB" y el URI en su forma de cadena natural como " http://www.example.com "). Para obtener información precisa, vea [referencia de esquema de contrato de datos](data-contract-schema-reference.md).|
 |<xref:System.Xml.XmlQualifiedName>|String|El formato es "nombre:espaciodenombres" (cualquier cosa antes de los primeros dos puntos es el nombre). Puede que falte el nombre o el espacio de nombres. Si no hay ningún espacio de nombres, también se pueden omitir los dos puntos.|
-|<xref:System.Array>de tipo<xref:System.Byte>|Matriz de números|Cada número representa el valor de un byte.|
+|<xref:System.Array> de tipo <xref:System.Byte>|Matriz de números|Cada número representa el valor de un byte.|
 |<xref:System.DateTime>|DateTime (fecha y hora) o cadena|Vea Fechas/horas y JSON más adelante en este tema.|
 |<xref:System.DateTimeOffset>|Tipo complejo|Vea Fechas/horas y JSON más adelante en este tema.|
 |Tipos XML y ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Matrices de <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Consulte la sección Tipos XML y JSON en este tema.|
@@ -275,7 +276,7 @@ Las colecciones asignadas a objetos se serializan como si fueran colecciones que
 
 Al volver a deserializar en <xref:System.Object>:
 
-- `Shape`debe estar en la lista de tipos conocidos. Tener <xref:System.Collections.Generic.List%601> un tipo `Shape` en tipos conocidos no tiene ningún efecto. Tenga en cuenta que, en este caso, no tiene que agregar `Shape` a tipos conocidos en la serialización; esto se hace automáticamente.
+- `Shape` debe estar en la lista de tipos conocidos. Tener <xref:System.Collections.Generic.List%601> un tipo `Shape` en tipos conocidos no tiene ningún efecto. Tenga en cuenta que, en este caso, no tiene que agregar `Shape` a tipos conocidos en la serialización; esto se hace automáticamente.
 
 - La colección se deserializa como un <xref:System.Array> de tipo <xref:System.Object> que contiene `Shape` instancias de.
 

@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo configurar el seguimiento para un flujo de trabajo
 title: Configurar seguimiento para un flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 098b295be00b1b8283e26e79ea14e78634fdb504
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 061a0edf107296e04d86ed1a50b9a8bfefd7bfce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792770"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurar seguimiento para un flujo de trabajo
 
@@ -148,15 +149,15 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Visualizar los registros de seguimiento en el Visor de eventos
 
-Hay dos registros del Visor de eventos que resultan de especial interés para ver la ejecución del seguimiento de WF: el registro analítico y el registro de depuración. Ambos residen en el nodo servidor de aplicaciones de Microsoft&#124;Windows&#124;-aplicaciones. Los registros de esta sección contienen eventos de una única aplicación en lugar de los eventos que afectan a todo el sistema.
+Hay dos registros del Visor de eventos que resultan de especial interés para ver la ejecución del seguimiento de WF: el registro analítico y el registro de depuración. Ambos residen en el nodo Server-Applications de aplicación de Microsoft&#124;Windows&#124;. Los registros de esta sección contienen eventos de una única aplicación en lugar de los eventos que afectan a todo el sistema.
 
 Los eventos de seguimiento de depuración se escriben en el registro de depuración. Para recopilar eventos de seguimiento de depuración de WF en el Visor de eventos, habilite el registro de depuración.
 
-1. Para abrir Visor de eventos, haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar.** En el cuadro de diálogo Ejecutar, escriba `eventvwr` .
+1. Para abrir Visor de eventos, haga clic en **Inicio** y, a continuación, haga clic en **Ejecutar.** En el cuadro de diálogo Ejecutar, escriba `eventvwr` .
 
 2. En el cuadro de diálogo Visor de eventos, expanda el nodo **registros de aplicaciones y servicios** .
 
-3. Expanda los nodos **Microsoft**, **Windows**y **servidor de aplicaciones-aplicaciones** .
+3. Expanda los nodos **Microsoft**, **Windows** y **servidor de aplicaciones-aplicaciones** .
 
 4. Haga clic con el botón secundario en el nodo **depurar** del nodo **servidor de aplicaciones-aplicaciones** y seleccione **Habilitar registro**.
 
@@ -168,11 +169,11 @@ WF 4 proporciona un participante de seguimiento que escribe registros de seguimi
 
 Para ver los registros de seguimiento, siga estos pasos.
 
-1. Para abrir Visor de eventos, haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar.** En el cuadro de diálogo Ejecutar, escriba `eventvwr` .
+1. Para abrir Visor de eventos, haga clic en **Inicio** y, a continuación, haga clic en **Ejecutar.** En el cuadro de diálogo Ejecutar, escriba `eventvwr` .
 
 2. En el cuadro de diálogo Visor de eventos, expanda el nodo **registros de aplicaciones y servicios** .
 
-3. Expanda los nodos **Microsoft**, **Windows**y **servidor de aplicaciones-aplicaciones** .
+3. Expanda los nodos **Microsoft**, **Windows** y **servidor de aplicaciones-aplicaciones** .
 
 4. Haga clic con el botón secundario en el nodo **análisis** del nodo **servidor de aplicaciones-aplicaciones** y seleccione **Habilitar registro**.
 
@@ -196,7 +197,7 @@ Si es necesario escribir eventos en un determinado registro de aplicaciones, sig
     </system.serviceModel>
     ```
 
-2. Copie el archivo de manifiesto de%windir%\Microsoft.NET\Framework \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.Man en una ubicación temporal y cambie su nombre a Microsoft. Windows. ApplicationServer. Applications_Provider1. Man.
+2. Copie el archivo de manifiesto de%windir%\Microsoft.NET\Framework \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.Man en una ubicación temporal y cambie su nombre a Microsoft.Windows.ApplicationServer.Applications_Provider1. Man.
 
 3. Cambie el GUID del archivo de manifiesto por el nuevo GUID.
 

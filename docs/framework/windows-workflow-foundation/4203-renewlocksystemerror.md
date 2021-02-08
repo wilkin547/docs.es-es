@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 4203-RenewLockSystemError'
 title: 4203 - RenewLockSystemError
 ms.date: 03/30/2017
 ms.assetid: 6ec9ec6f-4ae2-45cf-b99b-02cdb9dc9ec9
-ms.openlocfilehash: 17617e25c5cf8cecae608438529e9ce1a7d506f7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0e62c501391fcaec56f2016631707832170775ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792783"
 ---
 # <a name="4203---renewlocksystemerror"></a>4203 - RenewLockSystemError
 
@@ -15,7 +16,7 @@ ms.locfileid: "96251274"
   
 |||  
 |-|-|  
-|ID|4203|  
+|Id.|4203|  
 |Palabras clave|WFInstanceStore|  
 |Nivel|Error|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

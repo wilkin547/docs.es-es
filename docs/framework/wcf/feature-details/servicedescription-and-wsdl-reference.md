@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ServiceDescription y referencia WSDL'
 title: ServiceDescription y referencias WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 11a5d65026d13db56d1d349c130861094c3e123b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0ce3dc49d71eda1f9fe36940f153735b43be917b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253887"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793524"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription y referencias WSDL
 
@@ -83,7 +84,7 @@ En este tema se describe cómo Windows Communication Foundation (WCF) asigna doc
 |`SessionMode`|`wsdl:portType` /@msc:usingSession Valor del contrato. Este atributo es una extensión WCF para WSDL 1,1.|  
 |`Operations`|Las definiciones `wsdl:operation` para el contrato.|  
   
-### <a name="operations"></a>Operations  
+### <a name="operations"></a>Operaciones  
 
  Una <xref:System.ServiceModel.Description.OperationDescription> instancia de se asigna a un `wsdl:portType` / `wsdl:operation` . `OperationDescription` contiene una colección de instancias `MessageDescription` que describen los mensajes para la operación.  
   
