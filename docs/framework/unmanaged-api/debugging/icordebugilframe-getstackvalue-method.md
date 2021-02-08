@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugILFrame:: Getstackvalue ((método)'
 title: ICorDebugILFrame::GetStackValue (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 397a4d72-6a87-4f0b-8813-af31af91d68f
 topic_type:
 - apiref
-ms.openlocfilehash: 55ed00cfdb6b2dba90ad11b34496bfa646e4419c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ccc4a5eb3ae6137e1a099af450e92f60eb0cbf8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721366"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791340"
 ---
-# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="badd0-102">ICorDebugILFrame::GetStackValue (Método)</span><span class="sxs-lookup"><span data-stu-id="badd0-102">ICorDebugILFrame::GetStackValue Method</span></span>
+# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="9d395-103">ICorDebugILFrame::GetStackValue (Método)</span><span class="sxs-lookup"><span data-stu-id="9d395-103">ICorDebugILFrame::GetStackValue Method</span></span>
 
-<span data-ttu-id="badd0-103">Este método no está implementado.</span><span class="sxs-lookup"><span data-stu-id="badd0-103">This method has not been implemented.</span></span>  
+<span data-ttu-id="9d395-104">Este método no está implementado.</span><span class="sxs-lookup"><span data-stu-id="9d395-104">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="badd0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="badd0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d395-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9d395-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStackValue (  
@@ -35,6 +36,6 @@ HRESULT GetStackValue (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="badd0-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="badd0-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d395-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9d395-106">Requirements</span></span>  
 
- <span data-ttu-id="badd0-106">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="badd0-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+ <span data-ttu-id="9d395-107">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9d395-107">**Header:** CorDebug.idl, CorDebug.h</span></span>
