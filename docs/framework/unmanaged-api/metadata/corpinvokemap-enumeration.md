@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorPinvokeMap ('
 title: CorPinvokeMap (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: da3ee54b1c3361149c11a9cfad8bdb07a5007ecf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8285632725096b4e6afc85fe54a89f12fc899dd1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784267"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap (Enumeración)
 
@@ -62,7 +63,7 @@ typedef enum  CorPinvokeMap {
 } CorPinvokeMap;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -79,9 +80,9 @@ typedef enum  CorPinvokeMap {
 |`pmThrowOnUnmappableCharUseAssem`|Reservado.|  
 |`pmThrowOnUnmappableCharEnabled`|Produce una excepción cuando el serializador de interoperabilidad encuentra un carácter que no se pudo asignar.|  
 |`pmThrowOnUnmappableCharDisabled`|No inicie una excepción cuando el serializador de interoperabilidad encuentre un carácter no asignable.|  
-|`pmThrowOnUnmappableCharMask`|Reservada|  
+|`pmThrowOnUnmappableCharMask`|Reservado|  
 |`pmSupportsLastError`|Permita que el destinatario llame a la `SetLastError` función de Win32 antes de volver del método con atributos.|  
-|`pmCallConvMask`|Reservada|  
+|`pmCallConvMask`|Reservado|  
 |`pmCallConvWinapi`|Usar la Convención de llamada de plataforma predeterminada. Por ejemplo, en Windows el valor predeterminado es `StdCall` y en Windows CE .net es `Cdecl` .|  
 |`pmCallConvCdecl`|Utilice la `Cdecl` Convención de llamada. En este caso, el autor de la llamada limpia la pila. Esto permite llamar a funciones con `varargs` (es decir, funciones que aceptan un número variable de parámetros).|  
 |`pmCallConvStdcall`|Utilice la `StdCall` Convención de llamada. En este caso, el destinatario limpia la pila. Esta es la convención predeterminada para la llamada a funciones no administradas con invocación de plataforma.|  
@@ -97,6 +98,6 @@ typedef enum  CorPinvokeMap {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para metadatos](metadata-enumerations.md)

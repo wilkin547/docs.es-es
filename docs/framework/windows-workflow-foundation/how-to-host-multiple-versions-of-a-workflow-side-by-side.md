@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: hospedar varias versiones de un flujo de trabajo en paralelo'
 title: Procedimiento para hospedar varias versiones de un flujo de trabajo en paralelo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: e47440110215d8e60744c26c6351211a2ac08f3a
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 7662aa6375467e6bc283e1e743488439c8bf087a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98191162"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777676"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procedimiento para hospedar varias versiones de un flujo de trabajo en paralelo
 

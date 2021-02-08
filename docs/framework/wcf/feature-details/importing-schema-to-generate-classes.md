@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo importar el esquema para generar clases
 title: Importación del esquema para generar clases
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 7f7c13cda2dcaeec16ad1ee49ff3dddf369906e5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 787d2a40db6de8181c7e4d27df72fbc4ac032da2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280531"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802871"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importación del esquema para generar clases
 

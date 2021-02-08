@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICLRGCManager'
 title: ICLRGCManager (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-ms.openlocfilehash: dbe3df6bb20e5ad8f9eb534a366405eb9c33984f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 648b2b131e28da8aabc7028b6d745351cae772fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790001"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager (Interfaz)
 
@@ -36,7 +37,7 @@ Proporciona métodos que permiten a un host interactuar con el sistema de recole
 |[GetStats (Método)](iclrgcmanager-getstats-method.md)|Obtiene un conjunto de estadísticas actuales sobre el sistema de recolección de elementos no utilizados.|  
 |[Método SetGCStartupLimits](iclrgcmanager-setgcstartuplimits-method.md)|Establece el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El Common Language Runtime (CLR) implementa su mecanismo de recolección de elementos no utilizados con el <xref:System.GC> tipo administrado. Para obtener más información sobre el sistema de recolección de elementos no utilizados, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).  
   
@@ -50,7 +51,7 @@ Proporciona métodos que permiten a un host interactuar con el sistema de recole
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS (Estructura)](cor-gc-stats-structure.md)

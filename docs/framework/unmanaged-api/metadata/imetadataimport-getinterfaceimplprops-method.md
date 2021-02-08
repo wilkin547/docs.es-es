@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Getinterfaceimplprops ((método)'
 title: IMetaDataImport::GetInterfaceImplProps (Método)
 ms.date: 02/25/2019
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: e81816ce2194c2c1862cb997ad2c6e5baf301231
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b3c9394bcf37f700c84e1fda0b785dc0c3f4713
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783916"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps (Método)
 
@@ -47,7 +48,7 @@ HRESULT GetInterfaceImplProps (
  `ptkIface`  
  enuncia Token de metadatos que representa la interfaz que define el método implementado.  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
  Para obtener el valor de `iImpl` , se llama al método [enuminterfaceimpls (](imetadataimport-enuminterfaceimpls-method.md) .
 
@@ -84,7 +85,7 @@ Recuerde que el token es un valor de 4 bytes:
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

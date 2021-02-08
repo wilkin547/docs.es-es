@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: anuncios de detección y cliente de anuncio'
 title: Anuncios de detección y cliente de anuncio
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-ms.openlocfilehash: 4ad0b3ea5c257fa3117c426391bd59ad7b560d4f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2076b4dbdc57bd3de47fccdb4a51ef9e6fc48366
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040183"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802975"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Anuncios de detección y cliente de anuncio
 
@@ -18,7 +19,7 @@ La característica de detección de WCF permite a los componentes anunciar su di
 Cuando un servicio configurado para anuncios se une a una red y se vuelve reconocible, envía un mensaje de Hola que anuncia su disponibilidad a los clientes que realizan escuchas. El mensaje contiene información relacionada con la detección sobre el servicio, como el contrato, la dirección del punto de conexión y los ámbitos asociados. Puede especificar dónde se envía el mensaje de anuncio mediante la clase <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>. Si el punto de conexión del anuncio es una clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, el hola y el adiós se transmiten de forma adecuada o, si el punto de conexión del anuncio es una unidifusión, los mensajes se envían directamente al punto de conexión especificado.
 
 > [!NOTE]
-> Los anuncios se envían cuando el host de servicio se abre y se cierra. Si estas llamadas no finalizan correctamente, no se puede mandar el mensaje del anuncio. Por ejemplo, si el servicio falla, no se envía el mensaje de anuncio de adiós.
+> Los anuncios se envían cuando el host de servicio se abre y se cierra. Si estas llamadas no finalizan correctamente, es posible que no se envíe el mensaje de anuncio. Por ejemplo, si se produce un error en el servicio, no se envía el mensaje de anuncio adiós.
 
 > [!TIP]
 > Puede personalizar la funcionalidad del anuncio para enviar los anuncios cuando lo desee.
@@ -62,7 +63,7 @@ Los ejemplos anteriores configuran un servicio para enviar mensajes de anuncio a
 
 ### <a name="announcements-on-the-client"></a>Anuncios en el cliente
 
-Una aplicación cliente debe hospedar un servicio de anuncio para responder a los mensajes de hola y de adiós y suscribe a los eventos <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> y <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived>. En el ejemplo siguiente se muestra cómo hacerlo.
+Una aplicación cliente debe hospedar un servicio de anuncio para responder a los mensajes de hola y de adiós y suscribe a los eventos <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> y <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived>. El ejemplo siguiente muestra cómo hacerlo.
 
 ```csharp
 // Create an AnnouncementService instance

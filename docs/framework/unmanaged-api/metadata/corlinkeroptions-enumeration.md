@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Corlinkeroptions ('
 title: CorLinkerOptions (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a656aad6-cc7e-4994-8251-004a6a45e18f
 topic_type:
 - apiref
-ms.openlocfilehash: 188301d31b2fcfaf7b1c6139111e8f1296ccf7e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40f8ba6382fc937a072e01f9b3f6f89056f628db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784436"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions (Enumeración)
 
@@ -34,7 +35,7 @@ typedef enum CorLinkerOptions {
 } CorLinkerOptions;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -49,6 +50,6 @@ typedef enum CorLinkerOptions {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para metadatos](metadata-enumerations.md)

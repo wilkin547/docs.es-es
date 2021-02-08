@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo8:: GetFunctionFromIP3 (método)'
 title: ICorProfilerInfo8::GetFunctionFromIP3
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 6822757608429ca5f4ef9520ab7574d440b67b26
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3ce0a0964e26254ab09e515826b6bceb657e07bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495261"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783838"
 ---
 # <a name="icorprofilerinfo8getfunctionfromip3-method"></a>ICorProfilerInfo8:: GetFunctionFromIP3 (método)
 
@@ -44,7 +45,7 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
 
   \[out] la identidad de la versión recompilada con JIT de la función.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Este método funciona para los métodos dinámicos y no dinámicos. Es un supraconjunto de [getfunctionfromip2 (](icorprofilerinfo4-getfunctionfromip2-method.md), que solo funciona con funciones con metadatos.
 
@@ -58,6 +59,6 @@ Este método funciona para los métodos dinámicos y no dinámicos. Es un suprac
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 - [Interface ICorProfilerInfo8](icorprofilerinfo8-interface.md)

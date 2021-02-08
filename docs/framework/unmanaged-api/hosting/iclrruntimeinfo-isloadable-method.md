@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeInfo:: Isloadable ((método)'
 title: ICLRRuntimeInfo::IsLoadable (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 205ca53b-e78e-49b2-9a46-2a7823e96b8c
 topic_type:
 - apiref
-ms.openlocfilehash: 2236e815211168d8e7105375b75f30128f7f209a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf63212350bfbd18e2a312add72818b163c32d0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714979"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789793"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable (Método)
 
@@ -47,7 +48,7 @@ HRESULT IsLoadable(
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`pbLoadable` es null.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si ya se ha cargado otro Runtime en el proceso y el tiempo de ejecución asociado a esta interfaz se puede cargar para la ejecución en paralelo en proceso, `pbLoadable` devuelve `true` . Si los dos tiempos de ejecución no se pueden ejecutar en paralelo, `pbLoadable` devuelve `false` . Por ejemplo, la versión 4 de Common Language Runtime (CLR) se puede ejecutar en paralelo en el mismo proceso con la versión de CLR 2,0 o la versión 1,1 de CLR. Sin embargo, la versión de CLR 1,1 y la versión de CLR 2,0 no se pueden ejecutar en paralelo.  
   
@@ -63,7 +64,7 @@ HRESULT IsLoadable(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

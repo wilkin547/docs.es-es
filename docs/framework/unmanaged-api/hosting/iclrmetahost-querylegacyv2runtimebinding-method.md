@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRMetaHost:: Querylegacyv2runtimebinding ((método)'
 title: ICLRMetaHost::QueryLegacyV2RuntimeBinding (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-ms.openlocfilehash: d65191e515db9c302cef669a824ffd08327faf34
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ae825c2b2dfe2ce5b75ac9b82511215704fa357f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789858"
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>ICLRMetaHost::QueryLegacyV2RuntimeBinding (Método)
 
@@ -64,7 +65,7 @@ HRESULT QueryLegacyV2RuntimeBinding (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRMetaHost (Interfaz)](iclrmetahost-interface.md)
 - [Hospedar aplicaciones de WPF](index.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: mensajes de error en Visual Basic'
 title: Visual Basic mensajes de error
 titleSuffix: ''
 ms.date: 10/13/2020
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - errors [Visual Basic]
 - error messages
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: 70973b6d34ed1a84a38af3694e144dfcefa61c20
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 28e59a47c47ff7905dfec93b057f7cb534842b91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163381"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796072"
 ---
 # <a name="error-messages-in-visual-basic"></a>Mensajes de error en Visual Basic
 

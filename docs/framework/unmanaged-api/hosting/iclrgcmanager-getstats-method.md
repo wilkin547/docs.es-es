@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRGCManager:: Getstats ((método)'
 title: ICLRGCManager::GetStats (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 70fe8b132f03925c41b6bc7aae8e60fea1b05202
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94b20fb313f06d73f1e7fafd1f46fefb0da3fe95
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678303"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790027"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats (Método)
 
@@ -50,7 +51,7 @@ HRESULT GetStats (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR calcula y devuelve solo las estadísticas especificadas por el `Flags` campo de `pStats` .  
   
@@ -74,7 +75,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS (Estructura)](cor-gc-stats-structure.md)

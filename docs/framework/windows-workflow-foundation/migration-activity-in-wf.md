@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de la actividad de migración en WF
 title: Actividad de migración en WF
 ms.date: 03/30/2017
 ms.assetid: 4ad46db7-5744-410e-8fac-6c3b325b1dd0
-ms.openlocfilehash: 38d57223f8703a0ca971cf1d532f82b2e131056a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0ef653a3a429928fedf7ff6fc6fc730588f24c31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275029"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777689"
 ---
 # <a name="migration-activity-in-wf"></a>Actividad de migración en WF
 
