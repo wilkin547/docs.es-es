@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: literal de instrucción de procesamiento XML (Visual Basic)'
 title: Literal de instrucción de procesamiento XML
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 3d18e58cb643fa075f6eb08eb6fe909d27a6737b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5037aab343cbe50ebc48614991e96da8198a481f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866410"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787531"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>Literal de instrucción de procesamiento XML (Visual Basic)
 
@@ -28,22 +29,22 @@ Literal que representa un <xref:System.Xml.Linq.XProcessingInstruction> objeto.
 ## <a name="parts"></a>Partes  
 
  `<?`  
- Obligatorio. Denota el inicio del literal de instrucción de procesamiento XML.  
+ Necesario. Denota el inicio del literal de instrucción de procesamiento XML.  
   
  `piName`  
- Obligatorio. Nombre que indica la aplicación a la que se destina la instrucción de procesamiento. No puede comenzar por "XML" o "XML".  
+ Necesario. Nombre que indica la aplicación a la que se destina la instrucción de procesamiento. No puede comenzar por "XML" o "XML".  
   
  `piData`  
  Opcional. Cadena que indica cómo la aplicación de destino `piName` debe procesar el documento XML.  
   
  `?>`  
- Obligatorio. Denota el final de la instrucción de procesamiento.  
+ Necesario. Denota el final de la instrucción de procesamiento.  
   
 ## <a name="return-value"></a>Valor devuelto  
 
- Un objeto <xref:System.Xml.Linq.XProcessingInstruction>.  
+ Objeto <xref:System.Xml.Linq.XProcessingInstruction>.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los literales de instrucciones de procesamiento XML indican cómo deben procesar las aplicaciones un documento XML. Cuando una aplicación carga un documento XML, la aplicación puede comprobar las instrucciones de procesamiento XML para determinar cómo procesar el documento. La aplicación interpreta el significado de `piName` y `piData` .  
   
@@ -65,7 +66,7 @@ Literal que representa un <xref:System.Xml.Linq.XProcessingInstruction> objeto.
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - [Literal de documento XML](xml-document-literal.md)

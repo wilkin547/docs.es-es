@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: esquema de base de datos de persistencia'
 title: Esquema de base de datos de persistencia
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 40c47c5bfcb6c974eab6f2f2c926e0fa13054a38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246100"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787843"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de datos de persistencia
 
@@ -30,9 +31,9 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 |CurrentMachine|Nvarchar(128)|Indica el nombre del equipo que tiene la instancia de flujo de trabajo actualmente cargada en memoria.|  
 |LastMachine|Nvarchar(450)|Indica el último equipo que cargó la instancia de flujo de trabajo.|  
 |ExecutionStatus|Nvarchar(450)|Indica el estado de ejecución actual del flujo de trabajo. Entre los Estados posibles se incluyen la **ejecución**, **inactividad**, **cerrada**.|  
-|IsInitialized|Bit|Indica si se ha inicializado la instancia de flujo de trabajo. Una instancia de flujo de trabajo inicializada es una instancia de flujo de trabajo que se ha guardado al menos una vez.|  
-|IsSuspended|Bit|Indica si se ha suspendido la instancia de flujo de trabajo.|  
-|IsCompleted|Bit|Indica si la instancia de flujo de trabajo ha completado la ejecución. **Nota:**  IIF la propiedad **InstanceCompletionAction** se establece en **DeleteAll**, las instancias se quitan de la vista al completarse.|  
+|IsInitialized|bit|Indica si se ha inicializado la instancia de flujo de trabajo. Una instancia de flujo de trabajo inicializada es una instancia de flujo de trabajo que se ha guardado al menos una vez.|  
+|IsSuspended|bit|Indica si se ha suspendido la instancia de flujo de trabajo.|  
+|IsCompleted|bit|Indica si la instancia de flujo de trabajo ha completado la ejecución. **Nota:**  IIF la propiedad **InstanceCompletionAction** se establece en **DeleteAll**, las instancias se quitan de la vista al completarse.|  
 |EncodingOption|TinyInt|Describe la codificación utilizada para serializar las propiedades de datos.<br /><br /> -0: sin codificación<br />-1: GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Cada propiedad primitiva es un tipo CLR nativo, lo que significa que no se necesita ningún ensamblado especial para deserializar el objeto binario.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que no se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Cada propiedad primitiva es un tipo CLR nativo, lo que significa que no se necesita ningún ensamblado especial para deserializar el objeto binario.|  
@@ -40,9 +41,9 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 |WriteOnlyComplexDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que no se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Un deserializador requeriría conocimiento sobre todos los tipos de objeto almacenados en este objeto binario.|  
 |IdentityName|Nvarchar(max)|Nombre de la definición de flujo de trabajo.|  
 |IdentityPackage|Nvarchar(max)|Información de paquete indicada cuando se creó el flujo de trabajo (como el nombre del ensamblado).|  
-|Compilar|BigInt|Número de compilación de la versión de flujo de trabajo.|  
-|Major|BigInt|Número principal de la versión de flujo de trabajo.|  
-|Secundaria|BigInt|Número secundario de la versión de flujo de trabajo.|  
+|Build|BigInt|Número de compilación de la versión de flujo de trabajo.|  
+|Principal|BigInt|Número principal de la versión de flujo de trabajo.|  
+|Minor|BigInt|Número secundario de la versión de flujo de trabajo.|  
 |Revisión|BigInt|Número de revisión de la versión de flujo de trabajo.|  
   
 > [!CAUTION]

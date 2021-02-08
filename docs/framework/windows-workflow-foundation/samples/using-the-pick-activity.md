@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo usar la actividad Pick
 title: Uso de la actividad Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: df8570a61c7bfbfacc00b0896156135ecf2a0c32
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3c7a96c6250db8b9301dfeba858568d5638a29f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267476"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787752"
 ---
 # <a name="using-the-pick-activity"></a>Uso de la actividad Pick
 
@@ -21,7 +22,7 @@ En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.S
 
  Actividad <xref:System.Activities.Statements.Pick>.
 
-## <a name="discussion"></a>Discusión
+## <a name="discussion"></a>Debate
 
  En este ejemplo se incluyen un flujo de trabajo de diseñador y un flujo de trabajo codificado.
 

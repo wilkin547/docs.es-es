@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: Tutorial: usar solo procedimientos almacenados (Visual Basic)'
 title: 'Tutorial: Usar solo procedimientos almacenados (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 57ae5dba89a299365e1ce3c2d54d844da0102f31
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b368bdd5717c0f424192c3eabb8058d633cac61e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791769"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Tutorial: Usar solo procedimientos almacenados (Visual Basic)
 
@@ -26,7 +27,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
  Este tutorial se escribió con la configuración de desarrollo de Visual Basic.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
 
  En este tutorial se requiere lo siguiente:  
   
@@ -68,13 +69,13 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 1. En el menú **Archivo** de Visual Studio, haga clic en **Nuevo proyecto**.  
   
-2. En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto** , expanda **Visual Basic**y, a continuación, haga clic en **Windows**.  
+2. En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto** , expanda **Visual Basic** y, a continuación, haga clic en **Windows**.  
   
 3. En el panel **Plantillas** , haga clic en **Aplicación de Windows Forms**.  
   
 4. En el cuadro **nombre** , escriba **SprocOnlyApp**.  
   
-5. Haga clic en **OK**.  
+5. Haga clic en **Aceptar**.  
   
      Se abre el Diseñador de Windows Forms.  
   
@@ -86,7 +87,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 1. En **Explorador de soluciones**, haga clic en **Mostrar todos los archivos**.  
   
-2. En **Explorador de soluciones**, haga clic con el botón secundario en **referencias**y, a continuación, haga clic en **Agregar referencia**.  
+2. En **Explorador de soluciones**, haga clic con el botón secundario en **referencias** y, a continuación, haga clic en **Agregar referencia**.  
   
 3. En el cuadro de diálogo **Agregar referencia** , haga clic en **.net**, haga clic en el ensamblado System. Data. Linq y, a continuación, haga clic en **Aceptar**.  
   
@@ -110,7 +111,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 ### <a name="to-create-the-database-connection"></a>Para crear la conexión a la base de datos  
   
-1. En **Explorador de soluciones**, haga clic con el botón secundario en **Form1. VB**y, a continuación, haga clic en **Ver código**.  
+1. En **Explorador de soluciones**, haga clic con el botón secundario en **Form1. VB** y, a continuación, haga clic en **Ver código**.  
   
      `Class Form1` aparece en el editor de código.  
   
@@ -137,7 +138,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      Organice los controles como en la ilustración anexa. Expanda **Form1** para que los controles se ajusten fácilmente.  
   
-4. Haga clic con el botón secundario en **Label1**y, a continuación, haga clic en **propiedades**.  
+4. Haga clic con el botón secundario en **Label1** y, a continuación, haga clic en **propiedades**.  
   
 5. Cambie la propiedad **Text** de **Label1** a **Enter OrderID:**.  
   
@@ -201,7 +202,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 
  Puede mejorar este proyecto realizando algunos cambios. Por ejemplo, podría enumerar los procedimientos almacenados disponibles en un cuadro de lista y permitir que el usuario seleccione qué procedimientos debe ejecutar. También podría transmitir el resultado de los informes a un archivo de texto.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Aprender con tutoriales](learning-by-walkthroughs.md)
 - [Procedimientos almacenados](stored-procedures.md)

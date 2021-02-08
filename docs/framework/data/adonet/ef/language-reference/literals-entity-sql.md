@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: literales (Entity SQL)'
 title: Literales (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 4402f4c6ee38432a0f606e39dd4a18639076ce04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cae2ec7ab8cf19166dc3100a85473fca2ed0a7be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161781"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791886"
 ---
 # <a name="literals-entity-sql"></a>Literales (Entity SQL)
 
@@ -64,7 +65,7 @@ DATETIME'2006-10-1 23:11'
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
   
-## <a name="time"></a>Time  
+## <a name="time"></a>Hora  
 
  Un literal time es independiente de la configuración regional y está compuesto de una hora exclusivamente. La hora debe aparecer y no hay ningún valor predeterminado. Debe tener el formato HH:MM[:SS[.fffffff]], donde HH es el valor correspondiente a la hora comprendido entre 0 y 23, MM es el valor correspondiente a los minutos comprendido entre 0 y 59, SS es el valor correspondiente a los segundos comprendido entre 0 y 59, y fffffff es el valor correspondiente a la fracción de segundo comprendido entre 0 y 9999999. Todos los intervalos de valores incluyen los valores extremos. Las fracciones de segundo son opcionales. Los segundos son opcionales a menos que se especifiquen fracciones de segundo; en este caso, los segundos son necesarios. Cuando no se especifican segundos o fracciones de segundo, se usa el valor cero predeterminado.  
   

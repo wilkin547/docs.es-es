@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: con... End with (instrucción Visual Basic)'
 title: Instrucción With...End With
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 50f3bd0c6e96254274b429794901e2e4ac719ad0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86393d5dee7a03b2b8396b34b31326d1b0ea3c28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401386"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787570"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With (Instrucción, Visual Basic)
 
@@ -83,7 +84,7 @@ En el ejemplo siguiente se anidan las instrucciones `With…End With`. En la ins
 
 [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Collections.Generic.List%601>
 - [Estructuras de control anidadas](../../programming-guide/language-features/control-flow/nested-control-structures.md)

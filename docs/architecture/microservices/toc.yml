@@ -142,7 +142,7 @@
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
         - name: Implementación del patrón de interruptor
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
-        - name: Supervisión del estado
+        - name: Seguimiento de estado
           href: implement-resilient-applications/monitor-app-health.md
     - name: Proteger microservicios y aplicaciones web de .NET
       href: secure-net-microservices-web-applications/index.md

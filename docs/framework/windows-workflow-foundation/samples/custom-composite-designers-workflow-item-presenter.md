@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: diseñadores compuestos personalizados: moderador de elementos de flujo de trabajo'
 title: Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: d1047b8be35545e83eaa8788b53751b6b0056984
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 20a3bddf7efd69b6138d6b8a5caae250aa377999
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787817"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 
-La <xref:System.Activities.Presentation.WorkflowItemPresenter> es un tipo de clave en el modelo de programación del diseñador de WF que permite la creación de una "zona de colocación" donde se puede colocar una actividad arbitraria. En este ejemplo se muestra cómo crear un diseñador de actividad que se represente como una "zona de colocación".
+<xref:System.Activities.Presentation.WorkflowItemPresenter>Es un tipo de clave en el modelo de programación del diseñador de WF que permite la creación de una "zona de colocación" donde se puede colocar una actividad arbitraria. En este ejemplo se muestra cómo crear un diseñador de actividad que se represente como una "zona de colocación".
 
-En este ejemplo se explica cómo:
+En este ejemplo se muestra:
 
 - Crear un diseñador de actividad personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemPresenter>.
 
@@ -76,7 +77,7 @@ El código de este ejemplo muestra:
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`
 

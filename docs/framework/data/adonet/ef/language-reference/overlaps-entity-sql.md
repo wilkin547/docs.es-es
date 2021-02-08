@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: superposiciones (Entity SQL)'
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 6902a44af343c37ccb26412738d9f96b28551814
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dd2f4a0925c57edcc3dd2d1264d00921b092525a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204429"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791912"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 
@@ -46,6 +47,6 @@ expression OVERLAPS expression
   
  [!code-sql[DP EntityServices Concepts#OVERLAPS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#overlaps)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)

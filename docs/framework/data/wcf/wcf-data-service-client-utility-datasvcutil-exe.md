@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: utilidad de cliente de WCF Data Service (DataSvcUtil.exe)'
 title: Utilidad del cliente de Servicio de datos de WCF (DataSvcUtil.exe)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,16 +7,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 600cb9a4f91ff2051f60ee86d4cb80cc5b404c61
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e232538284072d82eed3f1b9e8d41f2ae950adf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791704"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilidad del cliente de Servicio de datos de WCF (DataSvcUtil.exe)
 
-DataSvcUtil.exe es una herramienta de línea de comandos proporcionada por WCF Data Services que utiliza una fuente de Open Data Protocol (OData) y genera las clases de servicio de datos de cliente necesarias para tener acceso a un servicio de datos desde una aplicación cliente de .NET Framework. Esta utilidad puede generar las clases de datos utilizando los siguientes orígenes de metadatos:
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+DataSvcUtil.exe es una herramienta de línea de comandos proporcionada por Servicios de datos de WCF que utiliza una fuente de Open Data Protocol (OData) y genera las clases de servicio de datos de cliente necesarias para tener acceso a un servicio de datos desde una aplicación cliente de .NET Framework. Esta utilidad puede generar las clases de datos utilizando los siguientes orígenes de metadatos:
 
 - El URI de la raíz de un servicio de datos. La utilidad solicita el documento de metadatos de servicio, que describe el modelo de datos expuesto por el servicio de datos. Para obtener más información, consulte [AtomPub (RFC5023)](https://tools.ietf.org/html/rfc5023#section-8).
 

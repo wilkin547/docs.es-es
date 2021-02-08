@@ -1,4 +1,5 @@
 ---
+description: "Más información sobre: BC30007: referencia necesaria para el ensamblado ' <assemblyname> ' que contiene la clase base '<classname>"
 title: Es necesaria una referencia al ensamblado '<assemblyname>' que contenga la clase base '<classname>'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: d2fb3498219dfe3318ec418ede250de818874ba9
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: f01795d3e8147015f9f46697b047a8c63099ff32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162341"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792055"
 ---
 # <a name="bc30007-reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>BC30007: referencia necesaria para el ensamblado ' \<assemblyname> ' que contiene la clase base ' \<classname> '
 
@@ -26,7 +27,7 @@ Es necesaria una referencia al ensamblado ' \<assemblyname> ' que contiene la cl
 
 - Incluya el nombre de la DLL o el ensamblado no referenciados en las referencias del proyecto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)
 - [Solucionar problemas de referencias rotas](/visualstudio/ide/troubleshooting-broken-references)

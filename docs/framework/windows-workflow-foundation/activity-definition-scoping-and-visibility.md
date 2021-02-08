@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ámbito y visibilidad de la definición de actividad'
 title: Ámbito y visibilidad de la definición de actividad
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: c7f656fee4960a8c43ac58abafba400ed9b35bc1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ab779fe36473a8888ee0fb0c1b94f1ea6324f991
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289170"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787973"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Ámbito y visibilidad de la definición de actividad
 
@@ -64,7 +65,7 @@ El ámbito y visibilidad de la definición de actividad,  como el ámbito y la v
 |Tipo de miembro|NativeActivity|Actividad|CodeActivity/ AsyncCodeActivity|  
 |-----------------|--------------------|--------------|--------------------------------------|  
 |Argumentos|Público/ privado|Público|no aplicable|  
-|Variables|Público/ privado|Público|no aplicable|  
+|variables|Público/ privado|Público|no aplicable|  
 |Actividades secundarias|Público/ privado|Público, uno elemento secundario privado definido en Implementación.|no aplicable|  
 |ActivityDelegates|Público/ privado|Público|no aplicable|  
   

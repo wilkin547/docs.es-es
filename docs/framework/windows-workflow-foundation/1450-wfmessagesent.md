@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 1450-WfMessageSent'
 title: 1450 - WfMessageSent
 ms.date: 03/30/2017
 ms.assetid: 1acc8b92-a76d-479b-a6fe-328affff5f3d
-ms.openlocfilehash: 9e0af754ead3102627e8621ff714104b2ddcc21e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ded3acafa222b6b323db897897cb4430ac27d057
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788025"
 ---
 # <a name="1450---wfmessagesent"></a>1450 - WfMessageSent
 
@@ -15,7 +16,7 @@ ms.locfileid: "96294617"
   
 |||  
 |-|-|  
-|ID|1450|  
+|Id.|1450|  
 |Palabras clave|WFServices|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: información general sobre la generación de perfiles'
 title: Información general sobre la generación de perfiles
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: cf29260c36437aaf679498f648d0fcac5d65f321
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f83a4435f6a4a62a190383543cf824c76a54a838
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558334"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798919"
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
 
@@ -67,7 +68,7 @@ Por ejemplo, un generador de perfiles podría medir el rendimiento del código a
 
 Las otras interfaces principales implicadas en la generación de perfiles son [ICorProfilerInfo](icorprofilerinfo-interface.md) e [ICorProfilerInfo2](icorprofilerinfo2-interface.md). El generador de perfiles llama a estas interfaces según es necesario para obtener más información como ayuda para su análisis. Por ejemplo, cada vez que CLR llama a la función [FunctionEnter2](functionenter2-function.md) , proporciona un identificador de función. El generador de perfiles puede obtener más información sobre esa función llamando al método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) para detectar la clase primaria de la función, su nombre, etc.
 
-## <a name="supported-features"></a>Características admitidas
+## <a name="supported-features"></a>Funciones admitidas
 
 La API de generación de perfiles proporciona información sobre diversos eventos y acciones que se producen en Common Language Runtime. Puede usar esta información para supervisar los mecanismos internos de los procesos y para analizar el rendimiento de la aplicación .NET Framework.
 

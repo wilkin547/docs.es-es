@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de la creación de actividades de control de flujo personalizadas
 title: Crear actividades de control de flujo personalizadas
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: 92d98d33b10e431248c4c482fcd26f3036c4c330
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c59bff08fe5b4d891a512de296f35de0ade34655
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787921"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Crear actividades de control de flujo personalizadas
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: SELECT (Entity SQL)'
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 860e2a9a3e484e8d09cad282be8c0126c8235b46
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7feaf1d9a5101cb745e67afeba8d608104430e7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202219"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791873"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 
@@ -107,7 +108,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
  [!code-sql[DP EntityServices Concepts#LESS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#less)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Expresiones de consulta](query-expressions-entity-sql.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)

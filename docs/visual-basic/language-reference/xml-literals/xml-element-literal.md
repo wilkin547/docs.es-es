@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: literal de elemento XML (Visual Basic)'
 title: Literal de elemento XML
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: d6a91de4e279816bafd29f46bb4f5422cbd934ff
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dfc78beded5c6f472b67fa272835ef0aa29d0187
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400194"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787544"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Literal de elemento XML (Visual Basic)
 
@@ -165,7 +166,7 @@ Este código muestra el siguiente texto:
 
 Observe que el compilador ha convertido el prefijo del espacio de nombres XML global en una definición de prefijo para el espacio de nombres XML. El \<ns:middle> elemento redefine el prefijo del espacio de nombres XML para el \<ns:inner1> elemento. Sin embargo, el \<ns:inner2> elemento utiliza el espacio de nombres definido por la `Imports` instrucción.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Linq.XElement>
 - [Nombres de atributos y elementos XML declarados](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

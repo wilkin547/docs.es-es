@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: instrucción yield (Visual Basic)'
 title: Instrucción Yield
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: 783785f2a078b6ad8f975846c44ee4e716a12773
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: cd07c271722a715beeddfddf660cec3e05127db8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866507"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787557"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield (Instrucción) (Visual Basic)
 
@@ -31,7 +32,7 @@ Yield expression
 |---|---|  
 |`expression`|Obligatorio. Una expresión que se pueda convertir implícitamente al tipo de la función de iterador o `Get` descriptor de acceso que contiene la `Yield` instrucción.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `Yield` instrucción devuelve un elemento de una colección a la vez. La `Yield` instrucción se incluye en una función de iterador o `Get` descriptor de acceso, que realiza iteraciones personalizadas en una colección.  
   

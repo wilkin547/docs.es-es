@@ -1,19 +1,20 @@
 ---
+description: 'Más información sobre: instancias de flujo de trabajo no persistentes'
 title: Instancias de flujo de trabajo no persistentes
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
-ms.openlocfilehash: 315d791585ace6ce4adf281abbba0a4c8c72d75a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0ee5968426a6bb800b9e70ac592c6da191c22511
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663044"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787908"
 ---
 # <a name="non-persisted-workflow-instances"></a>Instancias de flujo de trabajo no persistentes
 
 Cuando se crea una nueva instancia de un flujo de trabajo cuyo estado persiste en <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, el host del servicio crea una entrada inicial para ese servicio en el almacén de instancias. Posteriormente, cuando la instancia de flujo de trabajo persiste por primera vez, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> almacena el estado de la instancia actual. Si el flujo de trabajo se hospeda en el Servicio de activación de procesos de Windows, los datos de implementación del servicio también se escriben en el almacén de la instancia cuando la instancia persiste por primera vez.
 
-Siempre y cuando la instancia de flujo de trabajo no ha persistido, está en un **no persistentes** estado. Mientras se encuentra en este estado, la instancia de flujo de trabajo no se puede recuperar después de un reciclaje del dominio de aplicación, error del host o error del equipo.
+Siempre que la instancia de flujo de trabajo no se haya conservado, se encuentra en un estado **no persistente** . Mientras se encuentra en este estado, la instancia de flujo de trabajo no se puede recuperar después de un reciclaje del dominio de aplicación, error del host o error del equipo.
 
 ## <a name="the-non-persisted-state"></a>El estado no persistente
 
@@ -23,9 +24,9 @@ Las instancias del flujo de trabajo que no han persistido permanecen en un estad
 
 - La instancia de flujo de trabajo experimenta una excepción antes de ser guardada por primera vez. Dependiendo de lo que devolvió <xref:System.Activities.UnhandledExceptionAction>, se producen los siguientes escenarios:
 
-  - <xref:System.Activities.UnhandledExceptionAction> se establece en <xref:System.Activities.UnhandledExceptionAction.Abort>: Cuando se produce una excepción, se escribe información de implementación de servicio en el almacén de instancias y la instancia de flujo de trabajo se descarga de la memoria. La instancia de flujo de trabajo permanece en un estado no persistente y no se puede recargar.
+  - <xref:System.Activities.UnhandledExceptionAction> se establece en <xref:System.Activities.UnhandledExceptionAction.Abort>: cuando se produce una excepción, la información de la implementación del servicio se escribe en el almacén de la instancia y la instancia de flujo de trabajo se descarga desde la memoria. La instancia de flujo de trabajo permanece en un estado no persistente y no se puede recargar.
 
-  - <xref:System.Activities.UnhandledExceptionAction> se establece en <xref:System.Activities.UnhandledExceptionAction.Cancel> o <xref:System.Activities.UnhandledExceptionAction.Terminate>: Cuando se produce una excepción, se escribe información de implementación de servicio en el almacén de instancias y el estado de la instancia de actividad está establecido en <xref:System.Activities.ActivityInstanceState.Closed>.
+  - <xref:System.Activities.UnhandledExceptionAction> se establece en <xref:System.Activities.UnhandledExceptionAction.Cancel> o en <xref:System.Activities.UnhandledExceptionAction.Terminate>: cuando se produce una excepción, la información de la implementación del servicio se escribe en el almacén de la instancia y la instancia de actividad se establece en <xref:System.Activities.ActivityInstanceState.Closed>.
 
 Para minimizar el riesgo de encontrar descargadas instancias de flujo de trabajo no persistentes, recomendamos conservar el flujo de trabajo temprano en su ciclo de vida.
 

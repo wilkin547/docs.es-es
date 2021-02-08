@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: usar el ámbito de edición'
 title: Usar el ámbito de edición
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 738ed7a21d28963e9e37c24f2e14887d00b9533b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9d91c787bb1b44d5cd07245fe48bd31ed2ccab3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267642"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787778"
 ---
 # <a name="using-editing-scope"></a>Usar el ámbito de edición
 
@@ -17,7 +18,7 @@ Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se
 
  Editar el ámbito y Deshacer/Rehacer.  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  En este ejemplo se muestra cómo procesar por lotes un conjunto de cambios en el árbol de <xref:System.Activities.Presentation.Model.ModelItem> dentro de una unidad única de trabajo. Tenga en cuenta que al enlazar directamente con los valores <xref:System.Activities.Presentation.Model.ModelItem> desde un diseñador de WPF, los cambios se aplican automáticamente. En este ejemplo se muestra lo que se debe hacer cuando se realizan mediante código imperativo varias modificaciones que se van a procesar por lotes, en lugar de un único cambio.  
   

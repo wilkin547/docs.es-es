@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Qué puede hacer con LINQ to SQL'
 title: Qué puede hacer con LINQ to SQL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: a2e65cb558eec3cec21ea0efbcc66bb8c56ec7b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: adf1d8dfab69db27d15634a12dbdfbfa287dbb4c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163926"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791756"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Qué puede hacer con LINQ to SQL
 
@@ -55,7 +56,7 @@ ms.locfileid: "91163926"
  [!code-csharp[DLinqGettingStarted#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#4)]
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Guía de programación](programming-guide.md)
 - [El modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)

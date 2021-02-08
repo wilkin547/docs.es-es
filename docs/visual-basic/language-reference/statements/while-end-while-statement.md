@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: while... End while (instrucción Visual Basic)'
 title: Instrucción While...End While
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: e3ab95f43e101a9ad8abe6fa61b94ae7542e409c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ab452e2d9446c9c44b952c6ebf026f7a6f9080cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869475"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787583"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>Instrucción While...End While (Visual Basic)
 
@@ -40,9 +41,9 @@ End While
 |`statements`|Opcional. Una o varias instrucciones siguientes `While` , que se ejecutan cada vez `condition` `True` .|  
 |`Continue While`|Opcional. Transfiere el control a la siguiente iteración del `While` bloque.|  
 |`Exit While`|Opcional. Transfiere el control fuera del `While` bloque.|  
-|`End While`|Obligatorio. Termina la definición del bloque `While`.|  
+|`End While`|Necesario. Termina la definición del bloque `While`.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Use una `While...End While` estructura cuando desee repetir un conjunto de instrucciones un número indefinido de veces, siempre y cuando se mantenga una condición `True` . Si desea más flexibilidad con el punto de prueba de la condición o el resultado para probarlo, puede que prefiera la [acción... Instrucción Loop](do-loop-statement.md). Si desea repetir las instrucciones un número establecido de veces, la instrucción [for... La siguiente instrucción](for-next-statement.md) suele ser una mejor opción.  
   
@@ -87,7 +88,7 @@ End While
   
  [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de bucle](../../programming-guide/language-features/control-flow/loop-structures.md)
 - [Instrucción Do...Loop](do-loop-statement.md)

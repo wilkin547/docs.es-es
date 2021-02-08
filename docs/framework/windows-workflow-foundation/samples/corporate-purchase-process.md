@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: proceso de compra corporativo'
 title: Proceso de compra corporativa
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: aa2ca2577eb68204ffcb755ce1b16b9354348ee3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c26b1f46f29b7a6ec06acf5d19381b5c8f460433
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293473"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787869"
 ---
 # <a name="corporate-purchase-process"></a>Proceso de compra corporativa
 
@@ -108,7 +109,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 
  La siguiente tabla contiene una descripción de las clases más importantes dentro del proyecto Común.  
   
-|Clase|Descripción|  
+|Class|Descripción|  
 |-----------|-----------------|  
 |Vendor|Un proveedor que envía propuestas en una solicitud de propuestas.|  
 |RequestForProposal|Una solicitud de propuestas (RFP) es una invitación para que los proveedores envíen propuestas para un artículo o un servicio concretos.|  

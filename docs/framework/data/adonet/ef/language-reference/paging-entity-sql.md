@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: paginación (Entity SQL)'
 title: Paginación (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
-ms.openlocfilehash: 42f685e0b84109f3099b501b2a75e681af1ea1bb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c32474b772be359dbf2ffd46e5489cc0b4b2abb8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177480"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791860"
 ---
 # <a name="paging-entity-sql"></a>Paginación (Entity SQL)
 
@@ -27,7 +28,7 @@ La paginación física se puede realizar mediante las subcláusulas [SKIP](skip-
   
 - [ORDER BY](order-by-entity-sql.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
 - [Información general sobre Entity SQL](entity-sql-overview.md)
