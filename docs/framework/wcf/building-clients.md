@@ -1,33 +1,34 @@
 ---
+description: 'Más información sobre: compilar clientes'
 title: Creación de clientes
 ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-ms.openlocfilehash: 228981f7d8aef0f2d3be562d01bab8e40975cbcd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4b9a08521c5b56a67e399fd1a7e283d80516dcb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781134"
 ---
-# <a name="building-clients"></a><span data-ttu-id="8dc11-102">Creación de clientes</span><span class="sxs-lookup"><span data-stu-id="8dc11-102">Building Clients</span></span>
+# <a name="building-clients"></a><span data-ttu-id="0806c-103">Creación de clientes</span><span class="sxs-lookup"><span data-stu-id="0806c-103">Building Clients</span></span>
 
-<span data-ttu-id="8dc11-103">En los temas de esta sección se muestra cómo crear y usar un cliente de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="8dc11-103">The topics in this section demonstrate how to create and use a Windows Communication Foundation (WCF) client.</span></span>  
+<span data-ttu-id="0806c-104">En los temas de esta sección se muestra cómo crear y usar un cliente de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0806c-104">The topics in this section demonstrate how to create and use a Windows Communication Foundation (WCF) client.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8dc11-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="8dc11-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0806c-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="0806c-105">In This Section</span></span>  
 
- [<span data-ttu-id="8dc11-105">Introducción a un cliente WCF</span><span class="sxs-lookup"><span data-stu-id="8dc11-105">WCF Client Overview</span></span>](wcf-client-overview.md)  
- <span data-ttu-id="8dc11-106">Proporciona información general de los clientes de WCF y cómo funcionan.</span><span class="sxs-lookup"><span data-stu-id="8dc11-106">Provides an overview of WCF clients and how they work.</span></span>  
+ [<span data-ttu-id="0806c-106">Introducción a un cliente WCF</span><span class="sxs-lookup"><span data-stu-id="0806c-106">WCF Client Overview</span></span>](wcf-client-overview.md)  
+ <span data-ttu-id="0806c-107">Proporciona información general de los clientes de WCF y cómo funcionan.</span><span class="sxs-lookup"><span data-stu-id="0806c-107">Provides an overview of WCF clients and how they work.</span></span>  
   
- [<span data-ttu-id="8dc11-107">Acceso a los servicios mediante un cliente WCF</span><span class="sxs-lookup"><span data-stu-id="8dc11-107">Accessing Services Using a WCF Client</span></span>](accessing-services-using-a-wcf-client.md)  
- <span data-ttu-id="8dc11-108">Describe el método básico para crear un objeto de cliente de WCF para su uso en una aplicación cliente.</span><span class="sxs-lookup"><span data-stu-id="8dc11-108">Outlines the basic method of creating a WCF client object for use in a client application.</span></span>  
+ [<span data-ttu-id="0806c-108">Acceso a los servicios mediante un cliente WCF</span><span class="sxs-lookup"><span data-stu-id="0806c-108">Accessing Services Using a WCF Client</span></span>](accessing-services-using-a-wcf-client.md)  
+ <span data-ttu-id="0806c-109">Describe el método básico para crear un objeto de cliente de WCF para su uso en una aplicación cliente.</span><span class="sxs-lookup"><span data-stu-id="0806c-109">Outlines the basic method of creating a WCF client object for use in a client application.</span></span>  
   
- [<span data-ttu-id="8dc11-109">Protección de clientes</span><span class="sxs-lookup"><span data-stu-id="8dc11-109">Securing Clients</span></span>](securing-clients.md)  
- <span data-ttu-id="8dc11-110">Describe cómo configurar la seguridad para los clientes de WCF.</span><span class="sxs-lookup"><span data-stu-id="8dc11-110">Describes how to configure security for WCF clients.</span></span>  
+ [<span data-ttu-id="0806c-110">Protección de clientes</span><span class="sxs-lookup"><span data-stu-id="0806c-110">Securing Clients</span></span>](securing-clients.md)  
+ <span data-ttu-id="0806c-111">Describe cómo configurar la seguridad para los clientes de WCF.</span><span class="sxs-lookup"><span data-stu-id="0806c-111">Describes how to configure security for WCF clients.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="8dc11-111">Referencia</span><span class="sxs-lookup"><span data-stu-id="8dc11-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0806c-112">Referencia</span><span class="sxs-lookup"><span data-stu-id="0806c-112">Reference</span></span>  
 
  <xref:System.ServiceModel.ClientBase%601>  
   
@@ -43,8 +44,8 @@ ms.locfileid: "96272348"
   
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
-## <a name="related-sections"></a><span data-ttu-id="8dc11-112">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="8dc11-112">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="0806c-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="0806c-113">Related Sections</span></span>  
 
- [<span data-ttu-id="8dc11-113">Servicios de hospedaje</span><span class="sxs-lookup"><span data-stu-id="8dc11-113">Hosting Services</span></span>](hosting-services.md)  
+ [<span data-ttu-id="0806c-114">Servicios de hospedaje</span><span class="sxs-lookup"><span data-stu-id="0806c-114">Hosting Services</span></span>](hosting-services.md)  
   
- [<span data-ttu-id="8dc11-114">Diseño e implementación de servicios</span><span class="sxs-lookup"><span data-stu-id="8dc11-114">Designing and Implementing Services</span></span>](designing-and-implementing-services.md)
+ [<span data-ttu-id="0806c-115">Diseño e implementación de servicios</span><span class="sxs-lookup"><span data-stu-id="0806c-115">Designing and Implementing Services</span></span>](designing-and-implementing-services.md)
