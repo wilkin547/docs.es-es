@@ -1,13 +1,13 @@
 ---
 title: Proceso de desarrollo de aplicaciones basadas en Docker
 description: Obtenga una introducción general de las opciones para desarrollar aplicaciones basadas en Docker. Elija entre Visual Studio para Windows, Visual Studio para Mac o Visual Studio Code para la compatibilidad con varias plataformas (Windows, macOS y Linux).
-ms.date: 01/13/2021
-ms.openlocfilehash: 3a4f4078e745c52e8eca46473668e3319917bfd2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: e979fcd5277fb07f3b614b79fa8a384d61e08c47
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188301"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719661"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Proceso de desarrollo de aplicaciones basadas en Docker
 
@@ -19,7 +19,7 @@ ms.locfileid: "98188301"
 
 Tanto si quiere un IDE eficaz y completo como si prefiere un editor ligero y ágil, Microsoft dispone de herramientas que puede usar para desarrollar aplicaciones de Docker.
 
-**Visual Studio (para Windows).** El desarrollo de aplicaciones .NET 5 basadas en Docker con Visual Studio requiere la versión 16.4 o posterior de Visual Studio 2019. Visual Studio 2019 incluye herramientas para Docker ya integradas. Las herramientas de Docker permiten desarrollar, ejecutar y validar las aplicaciones directamente en el entorno de Docker de destino. Puede presionar F5 para ejecutar y depurar la aplicación (de un solo contenedor o de varios contenedores) directamente en un host de Docker, o bien presionar CTRL+F5 para editar y actualizar la aplicación sin tener que volver a compilar el contenedor. Este IDE es la opción de desarrollo más eficaz para aplicaciones basadas en Docker.
+**Visual Studio (para Windows).** El desarrollo de aplicaciones .NET 5 basadas en Docker con Visual Studio requiere la versión 16.8 o posterior de Visual Studio 2019. Visual Studio 2019 incluye herramientas para Docker ya integradas. Las herramientas de Docker permiten desarrollar, ejecutar y validar las aplicaciones directamente en el entorno de Docker de destino. Puede presionar F5 para ejecutar y depurar la aplicación (de un solo contenedor o de varios contenedores) directamente en un host de Docker, o bien presionar CTRL+F5 para editar y actualizar la aplicación sin tener que volver a compilar el contenedor. Este IDE es la opción de desarrollo más eficaz para aplicaciones basadas en Docker.
 
 **Visual Studio para Mac.** Se trata de un IDE, la evolución de Xamarin Studio, que se ejecuta en macOS. Para el desarrollo en .NET 5, se requiere la versión 8.4 o posterior. Esta herramienta también debe ser la opción preferida para los desarrolladores que trabajan en equipos macOS y que también quieran usar un IDE eficaz.
 

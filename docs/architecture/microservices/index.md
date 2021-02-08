@@ -1,17 +1,17 @@
 ---
 title: Microservicios de .NET. Arquitectura para aplicaciones .NET en contenedor
 description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Los microservicios son servicios modulares que se pueden implementar de forma independiente. Los contenedores de Docker (para Linux y Windows) simplifican la implementación y las pruebas mediante la unión de un servicio y sus dependencias en una sola unidad que, después, se ejecuta en un entorno aislado.
-ms.date: 01/13/2021
-ms.openlocfilehash: a9017d2e9acbcbb861a35f0187632dc90c52e171
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: e9862445414dbe0bf9a1c5d36d790b57710028f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188379"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665318"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor
 
-![Portada del libro](./media/cover-small.png)
+![Portada del libro](./media/cover-large.png)
 
 **EDICIÓN v5.0**: actualizada a ASP.NET Core 5.0
 
@@ -68,9 +68,9 @@ También le resultará útil si es el responsable de tomar decisiones técnicas 
 
 ### <a name="how-to-use-this-guide"></a>Cómo usar esta guía
 
-La primera parte de esta guía presenta los contenedores de Docker, describe cómo elegir entre .NET Core y .NET Framework como marco de desarrollo y proporciona una visión general de los microservicios. Este contenido está destinado a arquitectos y responsables de la toma de decisiones técnicas que quieren obtener información general pero que no necesitan centrarse en los detalles de la implementación de código.
+La primera parte de esta guía presenta los contenedores de Docker, describe cómo elegir entre .NET 5 y .NET Framework como marco de desarrollo y proporciona una visión general de los microservicios. Este contenido está destinado a arquitectos y responsables de la toma de decisiones técnicas que quieren obtener información general pero que no necesitan centrarse en los detalles de la implementación de código.
 
-La segunda parte de la guía comienza con la sección [Proceso de desarrollo de aplicaciones basadas en Docker](./docker-application-development-process/index.md). Se centra en los patrones de desarrollo y microservicios empleados en la implementación de aplicaciones que usan .NET Core y Docker. Esta sección será de gran interés para los desarrolladores y los arquitectos que quieran centrarse en el código, en los patrones y los detalles de implementación.
+La segunda parte de la guía comienza con la sección [Proceso de desarrollo de aplicaciones basadas en Docker](./docker-application-development-process/index.md). Se centra en los patrones de desarrollo y microservicios empleados en la implementación de aplicaciones que usan .NET y Docker. Esta sección será de gran interés para los desarrolladores y los arquitectos que quieran centrarse en el código, en los patrones y los detalles de implementación.
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Aplicación de referencia relacionada de microservicios y basada en contenedor: eShopOnContainers
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 de Microsoft Corporation
+Copyright © 2021 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
