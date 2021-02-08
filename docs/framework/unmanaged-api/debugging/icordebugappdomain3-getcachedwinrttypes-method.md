@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugAppDomain3:: Getcachedwinrttypes ((método)'
 title: ICorDebugAppDomain3::GetCachedWinRTTypes (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9afd0e04-a403-41e2-9528-a6dcbcdcbd4d
 topic_type:
 - apiref
-ms.openlocfilehash: 5e0df443e691292817ff37900fbc87204a8325ab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 813fb6c05d5e1e5f119424c6e983b86b3ff5889d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684504"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772242"
 ---
-# <a name="icordebugappdomain3getcachedwinrttypes-method"></a><span data-ttu-id="cd998-102">ICorDebugAppDomain3::GetCachedWinRTTypes (Método)</span><span class="sxs-lookup"><span data-stu-id="cd998-102">ICorDebugAppDomain3::GetCachedWinRTTypes Method</span></span>
+# <a name="icordebugappdomain3getcachedwinrttypes-method"></a><span data-ttu-id="ef8e0-103">ICorDebugAppDomain3::GetCachedWinRTTypes (Método)</span><span class="sxs-lookup"><span data-stu-id="ef8e0-103">ICorDebugAppDomain3::GetCachedWinRTTypes Method</span></span>
 
-<span data-ttu-id="cd998-103">Obtiene un enumerador para todos los tipos de Windows Runtime almacenados en caché.</span><span class="sxs-lookup"><span data-stu-id="cd998-103">Gets an enumerator for all cached Windows Runtime types.</span></span>  
+<span data-ttu-id="ef8e0-104">Obtiene un enumerador para todos los tipos de Windows Runtime almacenados en caché.</span><span class="sxs-lookup"><span data-stu-id="ef8e0-104">Gets an enumerator for all cached Windows Runtime types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cd998-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cd998-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef8e0-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ef8e0-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCachedWinRTTypes (
@@ -34,21 +35,21 @@ HRESULT GetCachedWinRTTypes (
 ;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cd998-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="cd998-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef8e0-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ef8e0-106">Parameters</span></span>  
 
  `ppGuidToTypeEnum`  
- <span data-ttu-id="cd998-106">enuncia Un puntero a un objeto de interfaz [icordebugguidtotypeenum (](icordebugguidtotypeenum-interface.md) que puede enumerar las representaciones administradas de Windows Runtime tipos cargados actualmente en el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="cd998-106">[out] A pointer to an [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of Windows Runtime types currently loaded in the application domain.</span></span>  
+ <span data-ttu-id="ef8e0-107">enuncia Un puntero a un objeto de interfaz [icordebugguidtotypeenum (](icordebugguidtotypeenum-interface.md) que puede enumerar las representaciones administradas de Windows Runtime tipos cargados actualmente en el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="ef8e0-107">[out] A pointer to an [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of Windows Runtime types currently loaded in the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cd998-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cd998-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef8e0-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ef8e0-108">Requirements</span></span>  
 
- <span data-ttu-id="cd998-108">**Plataformas:** Windows Runtime</span><span class="sxs-lookup"><span data-stu-id="cd998-108">**Platforms:** Windows Runtime</span></span>  
+ <span data-ttu-id="ef8e0-109">**Plataformas:** Windows Runtime</span><span class="sxs-lookup"><span data-stu-id="ef8e0-109">**Platforms:** Windows Runtime</span></span>  
   
- <span data-ttu-id="cd998-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cd998-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ef8e0-110">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ef8e0-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cd998-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cd998-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ef8e0-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ef8e0-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cd998-111">**.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd998-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="ef8e0-112">**.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef8e0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd998-112">Consulte también</span><span class="sxs-lookup"><span data-stu-id="cd998-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef8e0-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="ef8e0-113">See also</span></span>
 
-- [<span data-ttu-id="cd998-113">ICorDebugAppDomain3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="cd998-113">ICorDebugAppDomain3 Interface</span></span>](icordebugappdomain3-interface.md)
+- [<span data-ttu-id="ef8e0-114">ICorDebugAppDomain3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ef8e0-114">ICorDebugAppDomain3 Interface</span></span>](icordebugappdomain3-interface.md)
