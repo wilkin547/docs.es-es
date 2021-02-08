@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugILFrame4'
 title: ICorDebugILFrame4 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: 1e739183-3e05-49e5-846f-4075256e41de
 topic_type:
 - apiref
-ms.openlocfilehash: 7d0f3661c7941c5f2f85fa5b0b67af213de75f05
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f2d29229f039509ed7799399f0d4d701e8cafba7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724954"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791210"
 ---
 # <a name="icordebugilframe4-interface"></a>ICorDebugILFrame4 (Interfaz)
 
@@ -31,7 +32,7 @@ ms.locfileid: "95724954"
 |[GetCodeEx (método)](icordebugilframe4-getcodeex-method.md)|Devuelve el código que este marco de pila está ejecutando.|  
 |[GetLocalVariableEx (método)](icordebugilframe4-getlocalvariableex-method.md)|Devuelve el valor de una variable local en el marco de IL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Estos métodos ofrecen funcionalidad además de la que proporcionan los métodos [enumeratelocalvariables (](icordebugilframe-enumeratelocalvariables-method.md), [getCode](icordebugframe-getcode-method.md)y [getlocalvariable (](icordebugilframe-getlocalvariable-method.md) . Cada método incluye un parámetro `flags` que especifica si otras variables locales o código definidos por una solicitud ReJIT del generador de perfiles son visibles.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "95724954"
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

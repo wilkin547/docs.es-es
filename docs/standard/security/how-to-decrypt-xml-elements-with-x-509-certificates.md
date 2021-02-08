@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: descifrar elementos XML con certificados X. 509'
 title: Procedimiento para descifrar elementos XML con certificados X.509
 ms.date: 07/14/2020
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-ms.openlocfilehash: 02a4a4ada6dcc242a96d630699797f2ea76987e3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 40006ca1d3e76dbbc0899c0c22090b27c2cfb0de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820285"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792380"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Procedimiento para descifrar elementos XML con certificados X.509
 

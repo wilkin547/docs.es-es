@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugModule3:: Createreaderforinmemorysymbols ((método)'
 title: ICorDebugModule3::CreateReaderForInMemorySymbols (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 44f4c59f95c28f9982d67875584e2f9803c0ed3b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: af037cc891e83f53fd94bad290f40286ed665e6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709575"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790781"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols (Método)
 
@@ -56,7 +57,7 @@ HRESULT CreateReaderForInMemorySymbols (
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede crear el lector.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método también se puede usar para crear un objeto de lector de símbolos para los módulos en memoria (no dinámicos), pero solo después de que los símbolos estén disponibles por primera vez (indicados por la devolución de llamada del [método updatemodulesymbols (](icordebugmanagedcallback-updatemodulesymbols-method.md) ).  
   
@@ -74,7 +75,7 @@ HRESULT CreateReaderForInMemorySymbols (
   
  **.NET Framework versiones:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugRemoteTarget (Interfaz)](icordebugremotetarget-interface.md)
 - [ICorDebug (Interfaz)](icordebug-interface.md)

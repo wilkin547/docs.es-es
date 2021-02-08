@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugVariableHome:: GetRegister (método)'
 title: 'ICorDebugVariableHome:: GetRegister (método)'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-ms.openlocfilehash: 7f912f4b13620b567f5aa097604e98112d85f02d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c394d455048cf7451b8320ed72a6aa7adfb3518e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711759"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790664"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome:: GetRegister (método)
 
@@ -58,7 +59,7 @@ HRESULT GetRegister(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeración VariableLocationType](variablelocationtype-enumeration.md)
 - [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: comunicación asincrónica'
 title: Comunicación asincrónica
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: db5a8f415479967d7579357bd0c8058c7fb961c5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3e824c03a07682faaf60d8434f6af1a26742ead7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792601"
 ---
 # <a name="asynchronous-communication"></a>Comunicación asincrónica
 
@@ -17,7 +18,7 @@ Este ejemplo muestra cómo la comunicación entre dos servicios de Windows Workf
 
  Comunicación asincrónica entre servicios de [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  En este ejemplo se muestra cómo la comunicación entre aplicaciones de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] se realiza de forma asincrónica utilizando las actividades de mensajería proporcionadas por .NET Framework.  
   

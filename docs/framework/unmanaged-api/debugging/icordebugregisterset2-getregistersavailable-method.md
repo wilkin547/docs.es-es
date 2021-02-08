@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugRegisterSet2:: Getregistersavailable ((método)'
 title: ICorDebugRegisterSet2::GetRegistersAvailable (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-ms.openlocfilehash: cb56ea817d4045c19793a6290d68ae8b6236f14a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3839647e69efd63aefd1aa154c457f292e684336
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790729"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable (Método)
 
@@ -43,7 +44,7 @@ HRESULT GetRegistersAvailable (
  `availableRegChunks`  
  enuncia Matriz de bytes, cada bit de la que corresponde a un registro. Si hay un registro disponible, se establece el bit correspondiente del registro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los valores de la enumeración CorDebugRegister (especifican los registros de distintos microprocesadores. Los cinco bits superiores de cada valor son el índice de la `availableRegChunks` matriz de bytes. Los tres bits inferiores de cada valor identifican la posición de bit dentro del byte indexado. Dado un `CorDebugRegister` valor que especifica un registro determinado, la posición del registro en la máscara se determina de la manera siguiente:  
   
@@ -65,7 +66,7 @@ HRESULT GetRegistersAvailable (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugRegisterSet2 (Interfaz)](icordebugregisterset2-interface.md)
 - [ICorDebugRegisterSet (Interfaz)](icordebugregisterset-interface.md)

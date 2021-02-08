@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugMutableDataTarget'
 title: Interfaz ICorDebugMutableDataTarget
 ms.date: 03/30/2017
 ms.assetid: 14aad5b3-84ab-4bbc-94e3-1eb92e258d10
-ms.openlocfilehash: cd22707832504ca2f08299872bc39bca2af782bb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 387c5317bea015459e306994c36761571b427628
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790703"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a>Interfaz ICorDebugMutableDataTarget
 
@@ -21,7 +22,7 @@ Extiende la interfaz [ICorDebugDataTarget](icordebugdatatarget-interface.md) par
 |[Método SetThreadContext](icordebugmutabledatatarget-setthreadcontext-method.md)|Establece el contexto (valores de registro) para un subproceso.|  
 |[Método WriteVirtual](icordebugmutabledatatarget-writevirtual-method.md)|Escribe la memoria en el espacio de direcciones de procesos de destino.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta extensión de la interfaz [ICorDebugDataTarget](icordebugdatatarget-interface.md) se puede implementar mediante herramientas de depuración que deseen modificar el proceso de destino (por ejemplo, para realizar una depuración invasiva en directo).  
   
@@ -39,7 +40,7 @@ Extiende la interfaz [ICorDebugDataTarget](icordebugdatatarget-interface.md) par
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

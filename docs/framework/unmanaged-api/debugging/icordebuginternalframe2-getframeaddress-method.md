@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugInternalFrame2:: Getframeaddress ((método)'
 title: ICorDebugInternalFrame2::GetFrameAddress (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-ms.openlocfilehash: 05a9ab58acb3bf5829fd231ae6d8bcc96ae06da6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bb745424680c5b9a5277badfbe2d96db46e2e3d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724876"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791119"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress (Método)
 
@@ -47,7 +48,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |E_FAIL|No se pudo devolver la dirección del marco interno.|  
 |E_INVALIDARG|`pAddress` es `null`.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor devuelto en `pAddress` se puede utilizar para determinar la ubicación del marco interno con respecto a otros marcos de la pila. Incluso en equipos basados en IA-64, el marco interno solo vive en la pila y no hay ningún puntero correspondiente a la memoria auxiliar.  
   
@@ -61,7 +62,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugInternalFrame2 (Interfaz)](icordebuginternalframe2-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

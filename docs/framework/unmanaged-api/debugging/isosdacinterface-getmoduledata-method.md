@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISOSDacInterface:: GetModuleData (método)'
 title: 'ISOSDacInterface:: GetModuleData (método)'
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b302100eb6cbfa83896cd358762c496ea01f7509
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c01f55d55d5ee9082dee4b3adb3022bb17807aa2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420986"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790391"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface:: GetModuleData (método)
 
@@ -56,7 +57,7 @@ El método proporcionado forma parte de la `ISOSDacInterface` interfaz y corresp
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)
 - [Interfaz ISOSDacInterface](isosdacinterface-interface.md)

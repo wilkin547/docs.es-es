@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugManagedCallback::D método ebuggerError'
 title: ICorDebugManagedCallback::DebuggerError (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-ms.openlocfilehash: eb95bf779e54742cd2cc4b688c24a49e6d85a40d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2f73e07711f7d2ce865aab8f90862563e767fd16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731909"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791012"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError (Método)
 
@@ -47,7 +48,7 @@ HRESULT DebuggerError (
  `errorCode`  
  de Un entero que especifica el error de CLR.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El proceso se puede poner en modo de paso a través, dependiendo de la naturaleza del error.  
   
@@ -63,6 +64,6 @@ HRESULT DebuggerError (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

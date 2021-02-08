@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ICorDebugModuleDebugEvent:: GetModule (método)'
 title: Método ICorDebugModuleDebugEvent::GetModule
 ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
-ms.openlocfilehash: ec23cda02ff689a3365fe96fb5280054a9795caa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6d7171da231576ff90f54aaefe4b473af0afd40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709510"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790742"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>Método ICorDebugModuleDebugEvent::GetModule
 
@@ -26,7 +27,7 @@ HRESULT GetModule(
  `ppModule`  
  [out] Puntero a la dirección de un objeto ICorDebugModule que representa el módulo de combinación que se acaba de cargar o descargar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede llamar al método [GetEventKind](icordebugdebugevent-geteventkind-method.md) para determinar si el módulo se ha cargado o descargado.  
   
@@ -43,7 +44,7 @@ HRESULT GetModule(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugModuleDebugEvent](icordebugmoduledebugevent-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

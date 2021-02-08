@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipo de datos ULong (Visual Basic)'
 title: Tipo de datos ULong
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: ee9297ae917345d44d8e630bd09beea2245b56da
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9082fc9444f0754c60a6aa3f9b58db1d833349b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792094"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong (tipo de datos) (Visual Basic)
 
@@ -74,14 +75,14 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 - **Ampliación.** El `ULong` tipo de datos se amplía a `Decimal` , `Single` y `Double` . Esto significa que puede convertir `ULong` en cualquiera de estos tipos sin que se produzca un <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **Caracteres de tipo.** Anexar los caracteres de tipo literal `UL` a un literal lo convierte al `ULong` tipo de datos. `ULong`no tiene ningún carácter de tipo de identificador.
+- **Caracteres de tipo.** Anexar los caracteres de tipo literal `UL` a un literal lo convierte al `ULong` tipo de datos. `ULong` no tiene ningún carácter de tipo de identificador.
 
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt64?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.UInt64>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)
 - [Resumen de las conversiones](../keywords/conversion-summary.md)
 - [Procedimiento Llamada una función de Windows que adopta tipos sin signo](../../programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

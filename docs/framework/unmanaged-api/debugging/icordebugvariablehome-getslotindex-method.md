@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugVariableHome:: Getslotindex ((método)'
 title: 'ICorDebugVariableHome:: Getslotindex ((método)'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: 4b071bd8e9d96084848c1553385eec5f8beca624
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7f6ee01c2bfcee4c78f8463a7cefac1f90a3295f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790651"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome:: Getslotindex ((método)
 
@@ -48,7 +49,7 @@ HRESULT GetSlotIndex(
 |`S_OK`|La llamada al método devolvió un valor de índice de ranura en `pSlotIndex` .|  
 |`E_FAIL`|La instancia de [ICorDebugVariableHome](icordebugvariablehome-interface.md) actual representa un argumento de función.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Se puede usar el índice de ranura para recuperar los metadatos de esta variable local.  
   
@@ -62,6 +63,6 @@ HRESULT GetSlotIndex(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)

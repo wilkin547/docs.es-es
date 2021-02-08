@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugILFrame:: Enumeratelocalvariables ((método)'
 title: ICorDebugILFrame::EnumerateLocalVariables (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-ms.openlocfilehash: 968ceec53aade3d04c500c8247d397ffb71382c1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 275cf7fcad32c452e6e7ebdd0774d64708a2398c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703211"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791392"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables (Método)
 
@@ -39,7 +40,7 @@ HRESULT EnumerateLocalVariables(
  `ppValueEnum`  
  [out] Puntero a la dirección de un objeto ICorDebugValueEnum que es el enumerador de las variables locales en este marco.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `EnumerateLocalVariables` Obtiene un enumerador que puede enumerar las variables locales disponibles en el marco de llamada representado por este objeto ICorDebugILFrame. La lista puede no incluir todas las variables locales de la función en ejecución, porque algunas de ellas pueden no estar activas.  
   

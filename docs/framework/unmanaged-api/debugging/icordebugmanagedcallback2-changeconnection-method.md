@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugManagedCallback2:: ChangeConnection ((método)'
 title: ICorDebugManagedCallback2::ChangeConnection (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 4ba04b1a4815587b40d03819fdac795dcc7f2c4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 854ea7f40cad9bce613b4034afe7688f4aaf4e52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697277"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790924"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection (Método)
 
@@ -43,7 +44,7 @@ HRESULT ChangeConnection (
  `dwConnectionId`  
  de IDENTIFICADOR de la conexión que cambió.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una `ChangeConnection` devolución de llamada se desencadenará en cualquiera de los siguientes casos:  
   
@@ -63,7 +64,7 @@ HRESULT ChangeConnection (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugManagedCallback2 (Interfaz)](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

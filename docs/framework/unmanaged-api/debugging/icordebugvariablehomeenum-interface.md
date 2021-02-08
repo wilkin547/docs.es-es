@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugVariableHomeEnum'
 title: Interfaz ICorDebugVariableHomeEnum
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c312ae6d-c8dc-48d6-9f1e-ead515c88fdf
 topic_type:
 - apiref
-ms.openlocfilehash: 8e8caad9f0fc60121dbd1c738a6024da3e4d02f6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c56c68a6b5f9d329fe8af23f47b40fa629bfe3ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790625"
 ---
 # <a name="icordebugvariablehomeenum-interface"></a>Interfaz ICorDebugVariableHomeEnum
 
@@ -29,9 +30,9 @@ Proporciona un enumerador para las variables locales y los argumentos de una fun
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (Método)](icordebugvariablehomeenum-next-method.md)|Obtiene el número especificado de instancias de [ICorDebugVariableHome](icordebugvariablehome-interface.md) que contienen información sobre las variables locales y los argumentos de una función.|  
+|[Next (método)](icordebugvariablehomeenum-next-method.md)|Obtiene el número especificado de instancias de [ICorDebugVariableHome](icordebugvariablehome-interface.md) que contienen información sobre las variables locales y los argumentos de una función.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `ICorDebugVariableHomeEnum` interfaz implementa la interfaz ICorDebugEnum.  
   
@@ -47,7 +48,7 @@ Proporciona un enumerador para las variables locales y los argumentos de una fun
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

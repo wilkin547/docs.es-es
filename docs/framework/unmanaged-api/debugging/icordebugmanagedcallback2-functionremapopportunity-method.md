@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugManagedCallback2:: Functionremapopportunity ((método)'
 title: ICorDebugManagedCallback2::FunctionRemapOpportunity (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: 50fabec08a63d348b0a1934f029582ae1446519e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 901a9432ddf17efabd96153581b816f653ff501d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729062"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790872"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity (Método)
 
@@ -55,7 +56,7 @@ HRESULT FunctionRemapOpportunity (
  `oldILOffset`  
  de Desplazamiento del lenguaje intermedio de Microsoft (MSIL) del puntero de instrucción en la versión anterior de la función.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta devolución de llamada proporciona al depurador una oportunidad para reasignar el puntero de instrucción a su lugar adecuado en la nueva versión de la función especificada llamando al método [ICorDebugILFrame2:: remapfunction (](icordebugilframe2-remapfunction-method.md) . Si el depurador no llama a `RemapFunction` antes de llamar al método [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) , el tiempo de ejecución continuará ejecutando el código antiguo y activará otra `FunctionRemapOpportunity` devolución de llamada en el siguiente punto de secuencia.  
   
@@ -71,7 +72,7 @@ HRESULT FunctionRemapOpportunity (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugManagedCallback2 (Interfaz)](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorPublishProcess:: IsManaged ((método)'
 title: ICorPublishProcess::IsManaged (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-ms.openlocfilehash: dfe247bda75c3695c7c09b85729b4e057c13c62d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 55f620a896efd87c2f154ac68ef2db1a1b0a1ebc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95692636"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790508"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged (Método)
 
@@ -39,7 +40,7 @@ HRESULT IsManaged (
  `pbManaged`  
  enuncia Un puntero a un valor booleano que indica si el proceso tiene código administrado. El valor es `true` si el proceso tiene código administrado; de lo contrario, es `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Dado que la versión actual de `ICorPublishProcess` solo permite el acceso a los procesos que tienen código administrado, `IsManaged` siempre devuelve `true` .  
   
@@ -53,6 +54,6 @@ HRESULT IsManaged (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorPublishProcess (Interfaz)](icorpublishprocess-interface.md)

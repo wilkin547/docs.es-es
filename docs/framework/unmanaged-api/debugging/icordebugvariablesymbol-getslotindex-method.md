@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugVariableSymbol:: Getslotindex ((método)'
 title: ICorDebugVariableSymbol::GetSlotIndex (método)
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-ms.openlocfilehash: fc42517cb95dfc14c472b5bb9111ebd70639cee7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b5cba06a5e80ffa323d2e6521e9ec4666f6f5f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790560"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex (método)
 
@@ -30,7 +31,7 @@ HRESULT GetSlotIndex(
 
  `S_OK` si se realiza correctamente. `E_FAIL` si la variable es un argumento de función.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El índice de ranura administrado de una variable local puede utilizarse para recuperar información de metadatos de la variable  
   
@@ -47,7 +48,7 @@ HRESULT GetSlotIndex(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

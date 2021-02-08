@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugHeapValue3:: GetMonitorEventWaitList ((método)'
 title: ICorDebugHeapValue3::GetMonitorEventWaitList (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-ms.openlocfilehash: 21bf0122039a720ff8a1d38d62e77c2560dcc435
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ffc849e83151719062133382989344a8f0057caf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726540"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791457"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList (Método)
 
@@ -72,7 +73,7 @@ HRESULT GetMonitorEventWaitList (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

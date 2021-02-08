@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugManagedCallback2:: CreateConnection (método)'
 title: ICorDebugManagedCallback2::CreateConnection (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: 5a4ebf65dfaaa487e87f3fd78e54c468c7e24a89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c7ac91217d43531505dc27a20da9cf4534366119
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790911"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection (Método)
 
@@ -47,7 +48,7 @@ HRESULT CreateConnection (
  `pConnName`  
  de Puntero al nombre de la nueva conexión.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una `CreateConnection` devolución de llamada se desencadenará en cualquiera de los siguientes casos:  
   
@@ -65,7 +66,7 @@ HRESULT CreateConnection (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugManagedCallback2 (Interfaz)](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

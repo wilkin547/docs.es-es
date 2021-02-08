@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugManagedCallback:: CreateProcess (método)'
 title: ICorDebugManagedCallback::CreateProcess (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-ms.openlocfilehash: cd24e672c65769586dc618c21503dbb344566974
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 564c9862dd90431f0626204fdfe49e59b85a124d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791054"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>ICorDebugManagedCallback::CreateProcess (Método)
 
@@ -39,7 +40,7 @@ HRESULT CreateProcess (
  `pProcess`  
  de Un puntero a un objeto ICorDebugProcess que representa el proceso que se ha adjuntado o iniciado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  No se llama a este método hasta que se inicializa el Common Language Runtime. La mayoría de los métodos [ICorDebug](icordebug-interface.md) devolverán CORDBG_E_NOTREADY antes de la `CreateProcess` devolución de llamada.  
   
@@ -53,6 +54,6 @@ HRESULT CreateProcess (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

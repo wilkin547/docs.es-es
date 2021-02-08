@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: tipo de datos SByte (Visual Basic)'
 title: Tipo de datos SByte
 ms.date: 04/20/2017
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: e7d45c74056ce5b6aa66674c99e48b5ab60015f0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6e314a34469083433289c0fff9b404d4549824d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415575"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792172"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte (tipo de datos, Visual Basic)
 
@@ -68,14 +69,14 @@ Si el literal entero está fuera del intervalo de `SByte` (es decir, si es infer
 
 - **Ampliación.** El `SByte` tipo de datos se amplía a `Short` , `Integer` , `Long` , `Decimal` , `Single` y `Double` . Esto significa que puede convertir `SByte` en cualquiera de estos tipos sin que se produzca un <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **Caracteres de tipo.** `SByte`no tiene un carácter de tipo literal o un carácter de tipo de identificador.
+- **Caracteres de tipo.** `SByte` no tiene un carácter de tipo literal o un carácter de tipo de identificador.
 
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.SByte?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.SByte?displayProperty=nameWithType>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)
 - [Resumen de las conversiones](../keywords/conversion-summary.md)
 - [Tipo de datos Short](short-data-type.md)

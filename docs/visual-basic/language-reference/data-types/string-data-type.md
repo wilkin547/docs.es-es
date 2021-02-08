@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: tipo de datos de cadena (Visual Basic)'
 title: String (Tipo de datos)
 ms.date: 07/20/2015
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: cd4b64c101ae56928e84a04649e49c17b6f4023c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6597a5c4b8ee0eb961d3e33bee52ae493068da35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415510"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792120"
 ---
 # <a name="string-data-type-visual-basic"></a>String (Tipo de datos, Visual Basic)
 
@@ -43,7 +44,7 @@ Contiene secuencias de puntos de código sin signo de 16 bits (2 bytes) que van 
   
 ## <a name="format-requirements"></a>Requisitos de formato  
 
- Debe incluir un `String` literal entre comillas ( `" "` ). Si debe incluir una comilla tipográfica como uno de los caracteres de la cadena, utilice dos comillas contiguas ( `""` ). Esto se ilustra en el siguiente ejemplo.  
+ Debe incluir un `String` literal entre comillas ( `" "` ). Si debe incluir una comilla tipográfica como uno de los caracteres de la cadena, utilice dos comillas contiguas ( `""` ). Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Dim j As String = "Joe said ""Hello"" to me."  
@@ -79,14 +80,14 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 - **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para el .NET Framework, por ejemplo, objetos de automatización o COM, recuerde que los caracteres de cadena tienen un ancho de datos diferente (8 bits) en otros entornos. Si va a pasar un argumento de cadena de caracteres de 8 bits a este componente, declárelo como `Byte()` , una matriz de `Byte` elementos, en lugar de `String` en el nuevo código de Visual Basic.  
   
-- **Caracteres de tipo.** Anexar el carácter de tipo `$` de identificador a cualquier identificador lo convierte al `String` tipo de datos. `String`no tiene ningún carácter de tipo literal. Sin embargo, el compilador trata los literales entre comillas ( `" "` ) como `String` .  
+- **Caracteres de tipo.** Anexar el carácter de tipo `$` de identificador a cualquier identificador lo convierte al `String` tipo de datos. `String` no tiene ningún carácter de tipo literal. Sin embargo, el compilador trata los literales entre comillas ( `" "` ) como `String` .  
   
 - **Tipo de Framework.** El tipo correspondiente en el .NET Framework es la <xref:System.String?displayProperty=nameWithType> clase.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.String?displayProperty=nameWithType>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Tipo de datos Char](char-data-type.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)
 - [Resumen de las conversiones](../keywords/conversion-summary.md)

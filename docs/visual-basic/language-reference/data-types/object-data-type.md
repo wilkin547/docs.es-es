@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: tipo de datos de objeto'
 title: Object Data Type
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 14770e74a0169dba3a45a04845dd32323e6201e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b1f169e4e590335a0879f5ecd9b68507a3fa2ccb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415588"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792159"
 ---
 # <a name="object-data-type"></a>Object Data Type
 
@@ -29,7 +30,7 @@ El valor predeterminado de `Object` es `Nothing` (una referencia nula).
 
 ## <a name="data-types"></a>Tipo de datos
 
-Puede asignar una variable, una constante o una expresión de cualquier tipo de datos a una `Object` variable. Para determinar el tipo de datos `Object` al que hace referencia actualmente una variable, puede utilizar el <xref:System.Type.GetTypeCode%2A> método de la <xref:System.Type?displayProperty=nameWithType> clase. Esto se ilustra en el siguiente ejemplo.
+Puede asignar una variable, una constante o una expresión de cualquier tipo de datos a una `Object` variable. Para determinar el tipo de datos `Object` al que hace referencia actualmente una variable, puede utilizar el <xref:System.Type.GetTypeCode%2A> método de la <xref:System.Type?displayProperty=nameWithType> clase. Esto se ilustra en el siguiente ejemplo:
 
 ```vb
 Dim myObject As Object
@@ -56,7 +57,7 @@ Sea cual sea el tipo de datos al que hace referencia, una `Object` variable no c
 
   Sin embargo, si se convierte entre tipos de valor y `Object` , Visual Basic realiza operaciones denominadas *conversión boxing y conversión* *unboxing*, lo que hace que la ejecución sea más lenta.
 
-- **Caracteres de tipo.** `Object`no tiene un carácter de tipo literal o un carácter de tipo de identificador.
+- **Caracteres de tipo.** `Object` no tiene un carácter de tipo literal o un carácter de tipo de identificador.
 
 - **Tipo de Framework.** El tipo correspondiente en el .NET Framework es la <xref:System.Object?displayProperty=nameWithType> clase.
 
@@ -71,10 +72,10 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Object>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)
 - [Resumen de las conversiones](../keywords/conversion-summary.md)
 - [Uso eficiente de los tipos de datos](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

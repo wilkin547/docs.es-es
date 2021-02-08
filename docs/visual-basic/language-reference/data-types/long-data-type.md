@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: tipo de datos Long (Visual Basic)'
 title: Tipo de datos Long
 ms.date: 01/31/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 7c076cd2198c85560f7c63c69e051697966c9524
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cb4a22fa3b9d1440f755c8a3412aa3a918b7f261
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792185"
 ---
 # <a name="long-data-type-visual-basic"></a>Long (tipo de datos) (Visual Basic)
 
@@ -76,10 +77,10 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int64?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Int64>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Tipo de datos Integer](integer-data-type.md)
 - [Tipo de datos Short](short-data-type.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)

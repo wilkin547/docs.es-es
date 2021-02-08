@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo modelar el comportamiento de cancelación en flujos de trabajo
 title: Modelar el comportamiento de la cancelación en los flujos de trabajo
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-ms.openlocfilehash: 157bff0d24b00f293fd551dd52fe693d36dfad61
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 971e044336eb0aed41e773e03f6e0fb70d959094
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792653"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modelar el comportamiento de la cancelación en los flujos de trabajo
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugVariableHomeEnum:: Next (método)'
 title: 'ICorDebugVariableHomeEnum:: Next (método)'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 4ef4ed19033b0857b9970ee8103bbd92f383898c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0aa0174e67bceaa724ddfeadc2560d12e112b859
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790612"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum:: Next (método)
 
@@ -56,7 +57,7 @@ HRESULT Next(
 |`S_OK`|El método se completó correctamente.|  
 |`S_FALSE`|El número real de instancias recuperadas, como se refleja en `pceltFetched` , es menor que el número de instancias solicitadas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El método [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) recupera un máximo de  `celt` objetos a partir de la posición actual del enumerador. Cuando el método vuelve, `pceltFetched` contiene el número real de objetos recuperados.  
   
@@ -70,7 +71,7 @@ HRESULT Next(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)
 - [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)

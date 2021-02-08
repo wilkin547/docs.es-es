@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugILFrame4:: Getcodeex ((método)'
 title: ICorDebugILFrame4::GetCodeEx (Método)
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: a88bb02626dc125c494e4bbe68bfe6ed8bfd3b7b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d17dfa531354b8a4b0dd3c0d3d2eb47206900cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719650"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791236"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx (Método)
 
@@ -42,7 +43,7 @@ HRESULT GetCodeEx(
  `ppCode`  
  enuncia Puntero a la dirección de un objeto "ICorDebugCode" que representa el código que está ejecutando este marco de pila.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método es similar al método [ICorDebugFrame:: getCode](icordebugframe-getcode-method.md) , salvo que, de manera opcional, tiene acceso al código definido por la solicitud ReJIT del generador de perfiles. Llamar a este método con un `flags` valor de `ILCODE_ORIGINAL_IL` es equivalente a llamar a [getCode](icordebugframe-getcode-method.md); si el método está instrumentado, no se podrá acceder a su Il. `ILCODE_REJIT_IL` permite al depurador acceder al IL definido por la solicitud ReJIT del generador de perfiles+. Si el IL no está instrumentado, `ppCode` es **null** y el método devuelve `S_OK` .  
   
@@ -56,7 +57,7 @@ HRESULT GetCodeEx(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugILFrame4 (Interfaz)](icordebugilframe4-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

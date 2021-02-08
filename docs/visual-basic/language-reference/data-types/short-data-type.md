@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: tipo de datos Short (Visual Basic)'
 title: Tipo de datos Short
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: 176d27c86127dac1d9c9c0231790f7a5c2a2fefc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8c6bee45355548b3a32d74d059159918b4009fbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415562"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792146"
 ---
 # <a name="short-data-type-visual-basic"></a>Short (tipo de datos) (Visual Basic)
 
@@ -66,14 +67,14 @@ Dim number = &H_3264S
 
 - **Ampliación.** El `Short` tipo de datos se amplía a `Integer` , `Long` , `Decimal` , `Single` o `Double` . Esto significa que puede convertir un tipo de datos `Short` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=nameWithType>.  
   
-- **Caracteres de tipo.** Al agregar el carácter de tipo literal `S` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Short`. `Short`no tiene ningún carácter de tipo de identificador.  
+- **Caracteres de tipo.** Al agregar el carácter de tipo literal `S` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Short`. `Short` no tiene ningún carácter de tipo de identificador.  
   
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int16?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Int16?displayProperty=nameWithType>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)
 - [Resumen de las conversiones](../keywords/conversion-summary.md)
 - [Tipo de datos Integer](integer-data-type.md)

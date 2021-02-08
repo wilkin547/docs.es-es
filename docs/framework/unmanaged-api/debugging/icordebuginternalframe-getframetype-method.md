@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugInternalFrame (:: GetFrameType ((método)'
 title: ICorDebugInternalFrame::GetFrameType (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-ms.openlocfilehash: c675ba4b56cecd1990184cd2f0e805250c3dfeb7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ea96f032ebfa5914503287d124242b74a84ea11f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724889"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791184"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetFrameType (
  `pType`  
  enuncia Un puntero a un valor de la enumeración CorDebugInternalFrameType (que indica el tipo de marco interno representado por este `ICorDebugInternalFrame` objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El tipo de marco interno nunca se STUBFRAME_NONE. Los depuradores deben omitir correctamente los tipos de Marcos internos no reconocidos.  
   

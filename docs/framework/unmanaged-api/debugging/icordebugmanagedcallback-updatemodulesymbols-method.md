@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugManagedCallback:: Updatemodulesymbols ((método)'
 title: ICorDebugManagedCallback::UpdateModuleSymbols (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-ms.openlocfilehash: 1615d00a9a25cd2f4aa7d9b84de54b5e7670a3fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e20ee50cdbe0b36d0677051f1fe2b1c777e6cd6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730590"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790937"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols (Método)
 
@@ -47,7 +48,7 @@ HRESULT UpdateModuleSymbols (
  `pSymbolStream`  
  de Un puntero a un objeto COM Win32 `IStream` que contiene los símbolos modificados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método proporciona una oportunidad para actualizar la vista del depurador de los símbolos de un módulo llamando a [ISymUnmanagedReader:: UpdateSymbolStore (](../diagnostics/isymunmanagedreader-updatesymbolstore-method.md) o [ISymUnmanagedReader:: replacesymbolstore (](../diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
   
@@ -65,6 +66,6 @@ HRESULT UpdateModuleSymbols (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)
