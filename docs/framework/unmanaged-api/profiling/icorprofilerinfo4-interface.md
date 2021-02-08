@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorProfilerInfo4'
 title: ICorProfilerInfo4 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80a5308e-c22f-4201-ba89-31cc8562515b
 topic_type:
 - apiref
-ms.openlocfilehash: c3e623b0b5f8b49e043fe3a1aa8311558e573573
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94e33be74ccffea3fa9a0e51e317a6888596606d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794512"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 (Interfaz)
 
@@ -40,7 +41,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
 |[Método RequestReJIT](icorprofilerinfo4-requestrejit-method.md)|Solicita una recompilación con JIT de todas las instancias de las funciones especificadas.|  
 |[Método RequestRevert](icorprofilerinfo4-requestrevert-method.md)|Revierte todas las instancias de las funciones especificadas a sus versiones originales.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El CLR implementa los métodos de la interfaz `ICorProfilerInfo4` usando el modelo de subprocesamiento libre. Cada método devuelve un valor HRESULT para indicar un resultado correcto o erróneo. Para obtener una lista de los posibles códigos devueltos, consulte el archivo CorError.h.  
   
@@ -54,7 +55,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 217-ClientOperationPrepared'
 title: 217 - ClientOperationPrepared
 ms.date: 03/30/2017
 ms.assetid: ad207f04-b038-4f33-95e9-27a361df8ecd
-ms.openlocfilehash: e8aaf65bdff0718e932d07937e052541b7134f11
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: eab6a9a654e6e48a8831f238cdf3a3bf7a9f62d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278887"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794356"
 ---
 # <a name="217---clientoperationprepared"></a>217 - ClientOperationPrepared
 
@@ -15,7 +16,7 @@ ms.locfileid: "96278887"
   
 |||  
 |-|-|  
-|ID|217|  
+|Id.|217|  
 |Palabras clave|Troubleshooting, ServiceModel|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

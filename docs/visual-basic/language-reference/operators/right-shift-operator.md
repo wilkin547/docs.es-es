@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador de  >> (Visual Basic)'
 title: '>> Operator'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 00f43bc9bae6d550ed175906777ac273fc8e9a23
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 125b93f129734d196bd1f7f9c4fde86ab5d66319
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873340"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795305"
 ---
 # <a name="-operator-visual-basic"></a>Operador >> (Visual Basic)
 
@@ -30,7 +31,7 @@ result = pattern >> amount
 ## <a name="parts"></a>Partes  
 
  `result`  
- Obligatorio. Valor numérico entero. Resultado de desplazar el modelo de bits. El tipo de datos es el mismo que el de `pattern`.  
+ Necesario. Valor numérico entero. Resultado de desplazar el modelo de bits. El tipo de datos es el mismo que el de `pattern`.  
   
  `pattern`  
  Obligatorio. Expresión numérica integral. Modelo de bits que se va a desplazar. El tipo de datos debe ser un tipo entero (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` o `ULong`).  
@@ -38,7 +39,7 @@ result = pattern >> amount
  `amount`  
  Obligatorio. Expresión numérica. Número de bits que se va a desplazar el modelo de bits. El tipo de datos debe ser `Integer` o ampliarse a `Integer`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los turnos aritméticos no son circulares, lo que significa que los bits desplazados fuera de un extremo del resultado no se reintroducen en el otro extremo. En un desplazamiento aritmético a la derecha, se descartan los bits desplazados más allá de la posición del bit más a la derecha y el bit de la izquierda (signo) se propaga a las posiciones de bits que quedan a la izquierda. Esto significa que si `pattern` tiene un valor negativo, las posiciones vacías se establecen en uno; de lo contrario, se establecen en cero.  
   
@@ -91,7 +92,7 @@ result = pattern >> amount
   
 - `negresult2` es-1 (el bit de signo se propaga).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operadores de desplazamiento de bits](bit-shift-operators.md)
 - [Operadores de asignación](assignment-operators.md)

@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <factorySettings>'
 title: <factorySettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-ms.openlocfilehash: 9f9183d4c579c4f7c7985e5c7f372604d8d82947
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 766e68bbf2a48725b2603221bfbbcd25b0a83acb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150861"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795071"
 ---
 # \<factorySettings>
 
@@ -60,7 +61,7 @@ Especifica los valores de la memoria caché del generador de canales.
 |-------------|-----------------|  
 |[\<sendMessageChannelCache>](sendmessagechannelcache.md)|Un comportamiento del servicio que permite personalizar los niveles de uso compartido de la memoria caché, la configuración de la memoria caché del generador de canales y la de la memoria caché del canal para los flujos de trabajo que envían mensajes a los extremos de servicio utilizando las actividades de mensajería de Enviar.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este comportamiento del servicio está orientado para los flujos de trabajo que envían mensajes a los extremos de servicio. Estos flujos de trabajo son normalmente flujos de trabajo del cliente pero podrían ser también servicios de flujo de trabajo que se hospedan en <xref:System.ServiceModel.WorkflowServiceHost>.  
   

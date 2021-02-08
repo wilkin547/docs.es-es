@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador (Visual Basic)'
 title: '- Operator'
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: b5129c2dbb361940fa6da2cb424ee23736ba72c5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 858e887fa7c5c0cc6129996c98bddb78bc53045c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795266"
 ---
 # <a name="--operator-visual-basic"></a>- (Operador, Visual Basic)
 
@@ -58,7 +59,7 @@ o
 
  todos los tipos numéricos. Esto incluye los tipos de punto flotante y sin signo y `Decimal` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En el primer uso que se muestra en la sintaxis mostrada anteriormente, el operador `–` es el operador de resta aritmética *binaria* para la diferencia entre dos expresiones numéricas.  
   
@@ -77,7 +78,7 @@ o
   
  Después de la ejecución de estas instrucciones, `binaryResult` contiene 124,45 y `unaryResult` contiene – 334,90.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [-= (Operador) (Visual Basic)](subtraction-assignment-operator.md)
 - [Operadores aritméticos](arithmetic-operators.md)

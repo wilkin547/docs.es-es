@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRDataTarget3:: Getexceptioncontextrecord ((método)'
 title: ICLRDataTarget3::GetExceptionContextRecord (Método)
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 66076ed5-f05c-4114-9788-94cb143abb8a
 topic_type:
 - apiref
-ms.openlocfilehash: 87065b83e0b28eafdf5099f99fd188e2e21e7a12
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c722eaaf0f9935bc7adaa69a1792f934f631a728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723628"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794837"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord (Método)
 
@@ -54,7 +55,7 @@ HRESULT GetExceptionContextRecord(
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|No hay ningún registro de contexto asociado al destino.|  
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|El tamaño del búfer de entrada no es suficientemente grande para alojar el registro de contexto.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El [contexto](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) es una estructura específica de la plataforma que se define en los encabezados proporcionados por el Windows SDK.  
   
@@ -70,7 +71,7 @@ HRESULT GetExceptionContextRecord(
   
  **.NET Framework versiones:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget3 (Interfaz)](iclrdatatarget3-interface.md)
 - [Método GetExceptionRecord](iclrdatatarget3-getexceptionrecord-method.md)

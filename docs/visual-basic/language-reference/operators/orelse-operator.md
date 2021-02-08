@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador OrElse (Visual Basic)'
 title: Operador OrElse
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: edac3eeaef5d0127f10a0d570ca27c8158806ff3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 48ccbda1e0cb4f655b28e902b22fbfe0c3e66ac8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866728"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795331"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse (Operador) (Visual Basic)
 
@@ -39,7 +40,7 @@ result = expression1 OrElse expression2
  `expression2`  
  Obligatorio. Cualquier expresión `Boolean` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Se dice que una operación lógica es *cortocircuitada* si el código compilado puede omitir la evaluación de una expresión en función del resultado de otra expresión. Si el resultado de la primera expresión evaluada determina el resultado final de la operación, no es necesario evaluar la segunda expresión, porque no puede cambiar el resultado final. El cortocircuito puede mejorar el rendimiento si la expresión omitida es compleja o si implica llamadas a procedimientos.  
   
@@ -74,7 +75,7 @@ Para obtener más información, vea [conversiones de tipo booleano](../data-type
   
  [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operadores lógicos y bit a bit (Visual Basic)](logical-bitwise-operators.md)
 - [Prioridad de operador en Visual Basic](operator-precedence.md)

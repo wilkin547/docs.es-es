@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: error de acceso a un archivo o ruta'
 title: Error de acceso a la ruta o al archivo
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: 70de8f9cb33ab3d889f4916ae3d5de48cd218092
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d4fc7e716f025c0a482ab414f4a25a2b521634e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795448"
 ---
 # <a name="pathfile-access-error"></a>Error de acceso a la ruta o al archivo
 
@@ -25,6 +26,6 @@ Durante una operación de acceso a archivos o de acceso al disco, el sistema ope
   
 4. Asegúrese de que no ha intentado cambiar un proyecto de Visual Basic en una base de datos o un documento.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de errores](../../programming-guide/language-features/error-types.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)

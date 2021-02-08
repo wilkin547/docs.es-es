@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugObjectValue (interfaz)'
 title: Interfaz ICorDebugObjectValue
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-ms.openlocfilehash: 2a5a618491bf2c624669728d97a690cca315bff8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a2af438bbb4c2f56eb1a72151e339b6b0a978eec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724681"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794780"
 ---
 # <a name="icordebugobjectvalue-interface"></a>Interfaz ICorDebugObjectValue
 
@@ -37,7 +38,7 @@ Subclase de "ICorDebugValue" que representa un valor que contiene un objeto.
 |[Método IsValueClass](icordebugobjectvalue-isvalueclass-method.md)|Obtiene un valor que indica si el objeto al que hace referencia este objeto `ICorDebugObjectValue` es un tipo de valor.|  
 |[Método SetFromManagedCopy](icordebugobjectvalue-setfrommanagedcopy-method.md)|Obsoleto. No llame a este método.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un `ICorDebugObjectValue` sigue siendo válido hasta que continúe el proceso que se está depurando.  
   
@@ -54,6 +55,6 @@ Subclase de "ICorDebugValue" que representa un valor que contiene un objeto.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

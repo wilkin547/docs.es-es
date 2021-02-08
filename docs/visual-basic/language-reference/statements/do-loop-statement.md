@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: hacer... Loop (instrucción Visual Basic)'
 title: Instrucción Do...Loop
 ms.date: 07/20/2015
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 86a702aefeea1e5e359a579a3f29e9c06f1c619c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d170074c44d1692517f6b51abd4a6b3d005941c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865926"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795188"
 ---
 # <a name="doloop-statement-visual-basic"></a>Instrucción Do...Loop (Visual Basic)
 
@@ -62,9 +63,9 @@ Loop { While | Until } condition
 |`statements`|Opcional. Una o varias instrucciones que se repiten mientras, o hasta, `condition` es `True` .|  
 |`Continue Do`|Opcional. Transfiere el control a la siguiente iteración del `Do` bucle.|  
 |`Exit Do`|Opcional. Transfiere el control fuera del `Do` bucle.|  
-|`Loop`|Obligatorio. Finaliza la definición del `Do` bucle.|  
+|`Loop`|Necesario. Finaliza la definición del `Do` bucle.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Use una `Do...Loop` estructura cuando desee repetir un conjunto de instrucciones un número indefinido de veces, hasta que se satisfaga una condición. Si desea repetir las instrucciones un número establecido de veces, la instrucción [for... La siguiente instrucción](for-next-statement.md) suele ser una mejor opción.  
   
@@ -113,7 +114,7 @@ Loop { While | Until } condition
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de bucle](../../programming-guide/language-features/control-flow/loop-structures.md)
 - [Instrucción For...Next](for-next-statement.md)

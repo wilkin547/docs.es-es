@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo agrupar los mensajes en cola en una sesión
 title: Agrupación de los mensajes en cola de una sesión
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 9ad3bd29535e14231d07b9e491e606f8349ca3ac
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5a23133090ebfd5db9f59bb37a69cdca83ce2bc0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290067"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793849"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Agrupación de los mensajes en cola de una sesión
 

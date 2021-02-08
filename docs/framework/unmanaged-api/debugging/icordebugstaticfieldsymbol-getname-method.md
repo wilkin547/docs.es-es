@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ICorDebugStaticFieldSymbol:: GetName (método)'
 title: ICorDebugStaticFieldSymbol::GetName (método)
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
-ms.openlocfilehash: 6284a27921e0ba5bd3cedf07ef9f62348460ad06
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c74de604f5880a69b77c89e56a82ae08517dd69c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794707"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName (método)
 
@@ -34,7 +35,7 @@ HRESULT GetName(
  `szName`  
  [out] Matriz de caracteres que almacena el nombre devuelto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -49,7 +50,7 @@ HRESULT GetName(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugStaticFieldSymbol](icordebugstaticfieldsymbol-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

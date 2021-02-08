@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador TryCast (Visual Basic)'
 title: Operador TryCast
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
-ms.openlocfilehash: dc4807781f9e1aaf894016952911bd7b32c42948
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5b941ec40c4ba0198fced64d0ef039605efad472
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795253"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast (Operador) (Visual Basic)
 
 Introduce una operación de conversión de tipos que no produce una excepción.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se produce un error en una conversión intentada `CType` y `DirectCast` ambos producen un <xref:System.InvalidCastException> error. Esto puede afectar negativamente al rendimiento de la aplicación. `TryCast` no devuelve [nada](../nothing.md), de modo que, en lugar de tener que controlar una posible excepción, solo se necesita probar el resultado devuelto con `Nothing` .  
   
@@ -44,7 +45,7 @@ Introduce una operación de conversión de tipos que no produce una excepción.
   
  [!code-vb[VbVbalrKeywords#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversiones implícitas y explícitas](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 222-OperationFailed'
 title: 222 - OperationFailed
 ms.date: 03/30/2017
 ms.assetid: 6b530ded-8f20-4d78-8bfe-1875276df6ba
-ms.openlocfilehash: 64b41ee78e943ca16eaa791133454ec62ccf6ed8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ea07dbabb651413f213db6789f2af8059d2595c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263092"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794304"
 ---
 # <a name="222---operationfailed"></a>222 - OperationFailed
 
@@ -15,7 +16,7 @@ ms.locfileid: "96263092"
   
 |||  
 |-|-|  
-|ID|222|  
+|Id.|222|  
 |Palabras clave|EndToEndMonitoring, HealthMonitoring, Solución de problemas, ServiceModel|  
 |Nivel|Advertencia|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

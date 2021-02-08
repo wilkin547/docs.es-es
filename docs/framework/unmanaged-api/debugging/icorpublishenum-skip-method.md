@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorPublishEnum:: Skip (método)'
 title: ICorPublishEnum::Skip (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-ms.openlocfilehash: 888cc40c194cb86b0f898f5556ea14b8897e08c7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f0124681c8051a5c05c1caf3edd06c697da486e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794609"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip (Método)
 
@@ -49,6 +50,6 @@ HRESULT Skip (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorPublishEnum (Interfaz)](icorpublishenum-interface.md)

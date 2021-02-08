@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugRegisterSet2:: Getregisters ((método)'
 title: ICorDebugRegisterSet2::GetRegisters (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 71b9d59621efb547713cb4a6c9df7a7142f4a677
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 58af939b0e88185e2be23b69ca70d28e93ff873f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615194"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794798"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2:: Getregisters ((método)
 
@@ -71,7 +72,7 @@ HRESULT GetRegisters (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugRegisterSet2 (Interfaz)](icordebugregisterset2-interface.md)
 - [ICorDebugRegisterSet (Interfaz)](icordebugregisterset-interface.md)

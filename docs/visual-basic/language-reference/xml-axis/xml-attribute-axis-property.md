@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: propiedad de eje de atributo XML (Visual Basic)'
 title: XML Attribute Axis Property
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9eddd132b2d4dd6ffbd935a0c8c57a03a3d65435
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2085ef2151e7aef7c5642e0ba9ac2e6fa90bfd4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869436"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795175"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Propiedad de eje para atributos XML (Visual Basic)
 
@@ -32,21 +33,21 @@ object.@<attribute>
 ## <a name="parts"></a>Partes  
 
  `object`  
- Obligatorio. <xref:System.Xml.Linq.XElement>Objeto o colección de <xref:System.Xml.Linq.XElement> objetos.  
+ Necesario. <xref:System.Xml.Linq.XElement>Objeto o colección de <xref:System.Xml.Linq.XElement> objetos.  
   
  .@  
- Obligatorio. Denota el inicio de una propiedad de eje de atributo.  
+ Necesario. Denota el inicio de una propiedad de eje de atributo.  
   
  <  
  Opcional. Denota el principio del nombre del atributo cuando `attribute` no es un identificador válido en Visual Basic.  
   
  `attribute`  
- Obligatorio. Nombre del atributo al que se va a tener acceso, con el formato [ `prefix` :] `name` .  
+ Necesario. Nombre del atributo al que se va a tener acceso, con el formato [ `prefix` :] `name` .  
   
 |Parte|Descripción|  
 |----------|-----------------|  
 |`prefix`|Opcional. Prefijo de espacio de nombres XML para el atributo. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.|  
-|`name`|Obligatorio. Nombre del atributo local. Vea [nombres de atributos y elementos XML declarados](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`name`|Necesario. Nombre del atributo local. Vea [nombres de atributos y elementos XML declarados](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
  Opcional. Denota el final del nombre del atributo cuando `attribute` no es un identificador válido en Visual Basic.  
@@ -55,7 +56,7 @@ object.@<attribute>
 
  Cadena que contiene el valor de `attribute` . Si el nombre de atributo no existe, `Nothing` se devuelve.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede usar una propiedad de eje de atributo XML para tener acceso al valor de un atributo por nombre desde un <xref:System.Xml.Linq.XElement> objeto o desde el primer elemento de una colección de <xref:System.Xml.Linq.XElement> objetos. Puede recuperar un valor de atributo por nombre o agregar un nuevo atributo a un elemento especificando un nuevo nombre precedido por el identificador @.  
   
@@ -115,7 +116,7 @@ object.@<attribute>
   
  `Phone type: home`  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Linq.XElement>
 - [Propiedades de eje XML](index.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 223-OperationFaulted'
 title: 223 - OperationFaulted
 ms.date: 03/30/2017
 ms.assetid: 2f7d89d7-3a6a-40fe-9610-5424eb6bbf61
-ms.openlocfilehash: 310e91320d27dd9817302fc14ef088d180152b73
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e4155516e07568d4ee4ca76d63754ec4171e1064
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263079"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794291"
 ---
 # <a name="223---operationfaulted"></a>223 - OperationFaulted
 
@@ -15,7 +16,7 @@ ms.locfileid: "96263079"
   
 |||  
 |-|-|  
-|ID|223|  
+|Id.|223|  
 |Palabras clave|EndToEndMonitoring, HealthMonitoring, Solución de problemas, ServiceModel|  
 |Nivel|Advertencia|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

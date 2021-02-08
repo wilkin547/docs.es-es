@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 210-MessageThrottleExceeded'
 title: 210 - MessageThrottleExceeded
 ms.date: 03/30/2017
 ms.assetid: 24ca08ea-c11c-4753-946e-98aa820f8711
-ms.openlocfilehash: a0da1c198700407d8cdf699d1b734247024717a9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e02a115995fa0e18a2ed4582710881d30bb4b846
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267746"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794447"
 ---
 # <a name="210---messagethrottleexceeded"></a>210 - MessageThrottleExceeded
 
@@ -15,7 +16,7 @@ ms.locfileid: "96267746"
   
 |||  
 |-|-|  
-|ID|210|  
+|Id.|210|  
 |Palabras clave|EndToEndMonitoring, HealthMonitoring, Solución de problemas, ServiceModel|  
 |Nivel|Advertencia|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

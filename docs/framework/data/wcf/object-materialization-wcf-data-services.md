@@ -1,22 +1,25 @@
 ---
+description: 'Más información acerca de: materialización de objetos (Servicios de datos de WCF)'
 title: Materialización de objetos (Servicios de datos de WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 4beb72b9fb4402ee9a751b870f012bfa2cf15951
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568906"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794980"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materialización de objetos (Servicios de datos de WCF)
 
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
 Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** para consumir una fuente de Open Data Protocol (OData) en una aplicación cliente basada en .NET Framework, se generan clases de datos equivalentes para cada tipo de entidad del modelo de datos expuesto por la fuente. Para obtener más información, vea [generar la biblioteca de cliente del servicio de datos](generating-the-data-service-client-library-wcf-data-services.md). Los datos de entidad devueltos por una consulta se materializan en una instancia de una de estas clases de servicio de datos de cliente generadas. Para obtener información sobre las opciones de combinación y la resolución de identidad para los objetos sometidos a seguimiento, vea [administrar el contexto del servicio de datos](managing-the-data-service-context-wcf-data-services.md).
 
-WCF Data Services también le permite definir sus propias clases de servicio de datos de cliente en lugar de usar las clases de datos generadas por la herramienta. De esta forma, puede usar sus propias clases de datos, que también se conocen como clases de datos "tipos de objetos CLR antiguos sin formato" (POCO). Al utilizar estos tipos de clases de datos personalizadas, debe atribuir la clase de datos con <xref:System.Data.Services.Common.DataServiceKeyAttribute> o <xref:System.Data.Services.Common.DataServiceEntityAttribute> y asegurarse de que los nombres de tipo en el cliente coincidan con los nombres de tipo en el modelo de datos del servicio de datos.
+Servicios de datos de WCF también le permite definir sus propias clases de servicio de datos de cliente en lugar de usar las clases de datos generadas por la herramienta. De esta forma, puede usar sus propias clases de datos, que también se conocen como clases de datos "tipos de objetos CLR antiguos sin formato" (POCO). Al utilizar estos tipos de clases de datos personalizadas, debe atribuir la clase de datos con <xref:System.Data.Services.Common.DataServiceKeyAttribute> o <xref:System.Data.Services.Common.DataServiceEntityAttribute> y asegurarse de que los nombres de tipo en el cliente coincidan con los nombres de tipo en el modelo de datos del servicio de datos.
 
 Una vez que la Biblioteca recibe el mensaje de respuesta de la consulta, materializa los datos devueltos de la fuente de OData en instancias de las clases del servicio de datos del cliente que son del tipo de la consulta. El proceso general para materializar estos objetos es el siguiente:
 

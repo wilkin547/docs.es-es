@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 219-ServiceException'
 title: 219 - ServiceException
 ms.date: 03/30/2017
 ms.assetid: 81e2efac-39aa-4ed2-85a9-97eb8793b844
-ms.openlocfilehash: 832ced406b6079fad8f4b9bea512a6d390bdcc0f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b2ac12d6c5c68517b085b39dd7d0f81c39db9ebd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241946"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794330"
 ---
 # <a name="219---serviceexception"></a>219 - ServiceException
 
@@ -15,7 +16,7 @@ ms.locfileid: "96241946"
   
 |||  
 |-|-|  
-|ID|219|  
+|Id.|219|  
 |Palabras clave|EndToEndMonitoring, HealthMonitoring, Solución de problemas, ServiceModel|  
 |Nivel|Error|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

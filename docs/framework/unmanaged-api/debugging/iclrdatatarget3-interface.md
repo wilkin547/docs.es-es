@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICLRDataTarget3'
 title: ICLRDataTarget3 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: d2711bdf-64b3-404c-a0c3-01ba4907f703
 topic_type:
 - apiref
-ms.openlocfilehash: 7297bfa5297878dde6867a99029ac88754a05290
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: deea609298563e60897f9bedab9fb1e175dc7b73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723589"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794794"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 (Interfaz)
 
@@ -29,7 +30,7 @@ Subclase de [ICLRDataTarget2](iclrdatatarget2-interface.md) que proporciona acce
 |[Método GetExceptionContextRecord](iclrdatatarget3-getexceptioncontextrecord-method.md)|Los servicios de acceso a datos de CLR llaman a esta función para recuperar el registro de contexto asociado con el proceso de destino.|  
 |[Método GetExceptionThreadID](iclrdatatarget3-getexceptionthreadid-method.md)|Los servicios de acceso a datos de CLR llaman a esta función para obtener el identificador del subproceso que inició la excepción.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, un proceso activo tendría una implementación diferente de la de un volcado de memoria. Puede que el destino no admita la modificación de sus áreas de memoria.  
   
@@ -43,7 +44,7 @@ Subclase de [ICLRDataTarget2](iclrdatatarget2-interface.md) que proporciona acce
   
  **.NET Framework versiones:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget (Interfaz)](iclrdatatarget-interface.md)
 - [ICLRDataTarget2 (Interfaz)](iclrdatatarget2-interface.md)

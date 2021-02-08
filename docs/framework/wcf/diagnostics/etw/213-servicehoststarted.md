@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 213-ServiceHostStarted'
 title: 213 - ServiceHostStarted
 ms.date: 03/30/2017
 ms.assetid: a6f7facc-342f-46bb-9d52-a470178ba6bb
-ms.openlocfilehash: 87a98d30f5ecde6f81580a95e337df22341c23d4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5e2b5b7c633ef053c449ad62c4f8fee40798a386
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794421"
 ---
 # <a name="213---servicehoststarted"></a>213 - ServiceHostStarted
 
@@ -15,7 +16,7 @@ ms.locfileid: "96279030"
   
 |||  
 |-|-|  
-|ID|213|  
+|Id.|213|  
 |Palabras clave|EndToEndMonitoring, HealthMonitoring, Solución de problemas, ServiceHost|  
 |Nivel|LogAlways|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

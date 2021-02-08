@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorPublishProcess:: EnumAppDomains ((método)'
 title: ICorPublishProcess::EnumAppDomains (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-ms.openlocfilehash: 2acf8fb507ab617e066a31c9c2657b1ef0d18e47
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c7834b23967ab467c1589ee31929bf346b4b3b8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794616"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains (Método)
 
@@ -39,7 +40,7 @@ HRESULT EnumAppDomains (
  `ppEnum`  
  enuncia Un puntero a la dirección de una instancia de [ICorPublishAppDomainEnum (](icorpublishappdomainenum-interface.md) que permite la iteración a través de la colección de dominios de aplicación en este proceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La lista de dominios de aplicación se basa en una instantánea de los dominios de aplicación que existen cuando `EnumAppDomains` se llama al método. Este método se puede llamar más de una vez para crear una nueva lista actualizada. Las llamadas subsiguientes de este método no afectarán a las listas existentes.  
   
@@ -55,6 +56,6 @@ HRESULT EnumAppDomains (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorPublishProcess (Interfaz)](icorpublishprocess-interface.md)

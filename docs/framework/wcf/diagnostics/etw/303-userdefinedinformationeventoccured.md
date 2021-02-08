@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 303-UserDefinedInformationEventOccured'
 title: 303 - UserDefinedInformationEventOccured
 ms.date: 03/30/2017
 ms.assetid: 5ed5acaf-3755-4417-92c4-4ebc8e854ca1
-ms.openlocfilehash: 8597d84184caea9fc5dc7778cfc6d05e7dc592db
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 51c4acd5d10a2d563dd7fbcebf90b75c64ff20ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243435"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794239"
 ---
 # <a name="303---userdefinedinformationeventoccured"></a>303 - UserDefinedInformationEventOccured
 
@@ -15,7 +16,7 @@ ms.locfileid: "96243435"
   
 |||  
 |-|-|  
-|ID|303|  
+|Id.|303|  
 |Palabras clave|Solución de problemas, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
@@ -32,6 +33,6 @@ ms.locfileid: "96243435"
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
 |--------------------|--------------------|-----------------|  
-|NOMBRE|`xs:string`|El nombre del evento definido por el usuario.|  
+|Nombre|`xs:string`|El nombre del evento definido por el usuario.|  
 |HostReference|`xs:string`|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web. Su formato se define como ' ruta de acceso virtual de la aplicación de nombre de sitio web&#124;ruta de acceso virtual del servicio&#124;ServiceName '. Ejemplo: ' sitio web predeterminado/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService '.|  
 |Carga|`xs:string`|La carga del evento definida por el usuario.|

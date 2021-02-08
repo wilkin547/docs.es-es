@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: hospedar un servicio de flujo de trabajo con Windows Server App fabric'
 title: Procedimiento para hospedar un servicio de flujo de trabajo con Windows Server App Fabric
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 2cf77753a0540e75ae6778065f7fa006729f8d6a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 057e81c50844d1a36e32fe899de3469f024d775b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555990"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793810"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Procedimiento para hospedar un servicio de flujo de trabajo con Windows Server App Fabric
 
@@ -35,23 +36,23 @@ Hospedar servicios de flujo de trabajo en App Fabric es parecido al hospedaje en
   
 4. Seleccione la pestaña **General** para mostrar información general sobre la aplicación, tal como se muestra en la captura de pantalla siguiente.  
   
-     ![Pestaña general del cuadro de diálogo de configuración de App Fabric](media/appfabricconfiguration-general.gif "AppFabricConfiguration-general")  
+     ![Pestaña general del cuadro de diálogo de configuración de App Fabric](media/appfabricconfiguration-general.gif "AppFabricConfiguration-General")  
   
 5. Seleccione la pestaña **supervisión** . Esto muestra varios valores de supervisión, tal como se muestra en la captura de pantalla siguiente.  
   
-     ![Pestaña de supervisión de configuración de App Fabric](media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration: supervisión")  
+     ![Pestaña de supervisión de configuración de App Fabric](media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-Monitoring")  
   
      Para más información sobre cómo configurar la supervisión del servicio de flujo de trabajo en App fabric, consulte [configuración de la supervisión con App fabric](/previous-versions/appfabric/ee677384(v=azure.10)).  
   
 6. Seleccione la pestaña **persistencia del flujo de trabajo** . Esto le permite configurar la aplicación para que use el proveedor de persistencia predeterminado de App fabric, tal como se muestra en la captura de pantalla siguiente.  
   
-     ![Persistencia de configuración de App fabric &#45;](media/appfabricconfiguration-persistence.gif "AppFabricConfiguration: persistencia")  
+     ![Persistencia de configuración de App fabric &#45;](media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-Persistence")  
   
      Para obtener más información sobre la configuración de la persistencia del flujo de trabajo en Windows Server App fabric, consulte [configuración de la persistencia del flujo de trabajo en App fabric](/previous-versions/appfabric/ee677353(v=azure.10)).  
   
 7. Seleccione la pestaña **Administración de host de flujo de trabajo** . Esto le permite especificar Cuándo se deben descargar y conservar las instancias de servicio de flujo de trabajo inactivas, tal y como se muestra en la captura de pantalla siguiente.  
   
-     ![Configuración de App fabric administración de host de flujo de trabajo](media/appfabricconfiguration-management.gif "Administración de AppFabricConfiguration")  
+     ![Configuración de App fabric administración de host de flujo de trabajo](media/appfabricconfiguration-management.gif "AppFabricConfiguration-Management")  
   
      Para más información sobre la configuración de administración de host de flujo de trabajo, consulte [configuración de administración de host de flujo de trabajo en App fabric](/previous-versions/appfabric/ff383424(v=azure.10)).  
   
@@ -69,7 +70,7 @@ Hospedar servicios de flujo de trabajo en App Fabric es parecido al hospedaje en
   
 10. Seleccione la pestaña **seguridad** . Esto le permite configurar opciones de seguridad para la aplicación, tal como se muestra en la captura de pantalla siguiente.  
   
-     ![Configuración de la seguridad de App Fabric](media/appfabricconfiguration-security.gif "AppFabricConfiguration-seguridad")  
+     ![Configuración de la seguridad de App Fabric](media/appfabricconfiguration-security.gif "AppFabricConfiguration-Security")  
   
      Para obtener más información sobre la configuración de la seguridad con Windows Server App fabric, consulte [configuración de la seguridad con App fabric](/previous-versions/appfabric/ee677278(v=azure.10)).  
   

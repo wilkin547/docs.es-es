@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: filtrado'
 title: Filtrado
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: cc95852a5eb191befe7e3cd563939c340ef16e06
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d5f2abc1050ece8ebf2bed53a1c963134afad43a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268487"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793875"
 ---
 # <a name="filtering"></a>Filtrado
 

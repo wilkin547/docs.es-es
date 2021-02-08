@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICoreClrDebugTarget:: Enumruntimes ((método)'
 title: ICoreClrDebugTarget::EnumRuntimes (Método)
 ms.date: 03/30/2017
 api_name:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 093f49508e8e96a4003f1aab8eed59e2fd196ba9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 675747106b2acec2e8be3fcdf15831958bea7c7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679278"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794629"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes (Método)
 
@@ -63,7 +64,7 @@ HRESULT EnumRuntimes (
  E_FAIL (u otros códigos devueltos de E_)  
  Otros errores.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para liberar la memoria asignada por este método, llame al método [ICoreClrDebugTarget:: FreeMemory (](icoreclrdebugtarget-freememory-method.md) .  
   
@@ -77,6 +78,6 @@ HRESULT EnumRuntimes (
   
  **.NET Framework versiones:** 3,5 SP1  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICoreClrDebugTarget (Interfaz)](icoreclrdebugtarget-interface.md)

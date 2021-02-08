@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <Crst_DisableSpinWait elemento>'
 title: Elemento <Crst_DisableSpinWait>
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-ms.openlocfilehash: 45052d99bb297ac39d058fa405fe57a7c991f738
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fca6fed2dabc3d1319ad030bb13bbb35a561b9aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151355"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795110"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait> (elemento)
 
@@ -38,7 +39,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |1|Deshabilitar el giro en espera cuando no se puede adquirir una sección crítica.|  
 |0|No deshabilite la espera de giro cuando no se pueda adquirir una sección crítica. Este es el valor predeterminado.|  

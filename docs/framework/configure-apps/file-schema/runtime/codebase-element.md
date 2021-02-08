@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <codeBase> elemento'
 title: <codeBase> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 714392444d3ee3db9126e9fe67832cb5f0bf5e3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70971884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795123"
 ---
 # <a name="codebase-element"></a>\<codeBase> (Elemento)
 
@@ -64,7 +65,7 @@ Ninguno.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`System.web`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Para que el motor en tiempo de ejecución use la **\<codeBase>** configuración de un archivo de configuración del equipo o un archivo de directiva de edición, el archivo también debe redirigir la versión del ensamblado. Los archivos de configuración de la aplicación pueden tener una configuración de código base sin redirigir la versión del ensamblado. Después de determinar la versión de ensamblado que se va a usar, el tiempo de ejecución aplica la configuración de código base del archivo que determina la versión. Si no se indica ningún código base, el tiempo de ejecución sondea el ensamblado de la manera habitual.
 
@@ -92,7 +93,7 @@ En el ejemplo siguiente se muestra cómo especificar dónde puede encontrar un e
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de configuración en tiempo de ejecución](index.md)
 - [Esquema del archivo de configuración](../index.md)

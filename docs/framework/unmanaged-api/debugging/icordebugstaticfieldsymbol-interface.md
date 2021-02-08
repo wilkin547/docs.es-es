@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugStaticFieldSymbol'
 title: Interfaz ICorDebugStaticFieldSymbol
 ms.date: 03/30/2017
 ms.assetid: c0b93609-631e-4b15-878a-189ede922631
-ms.openlocfilehash: fcf3bb61ccd903f2dd375e638814247a98aaf7b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3aa9c98cef4cdc7edc519b06b6cf9b4b2192b4e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794681"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>Interfaz ICorDebugStaticFieldSymbol
 
@@ -18,10 +19,10 @@ Representa la información de símbolos de depuración para un campo estático.
 |Método|Descripción|  
 |------------|-----------------|  
 |[Método GetAddress](icordebugstaticfieldsymbol-getaddress-method.md)|Obtiene la dirección del campo estático.|  
-|[GetName (Método)](icordebugstaticfieldsymbol-getname-method.md)|Obtiene el nombre del campo estático.|  
+|[Método GetName](icordebugstaticfieldsymbol-getname-method.md)|Obtiene el nombre del campo estático.|  
 |[Método GetSize](icordebugstaticfieldsymbol-getsize-method.md)|Obtiene el tamaño del campo estático, en bytes.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La interfaz `ICorDebugStaticFieldSymbol` se utiliza para recuperar la información de símbolos de depuración para un campo estático.  
   
@@ -38,7 +39,7 @@ Representa la información de símbolos de depuración para un campo estático.
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugInstanceFieldSymbol](icordebuginstancefieldsymbol-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

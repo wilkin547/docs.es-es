@@ -1,19 +1,22 @@
 ---
+description: 'Más información sobre: proveedor de reflexión (Servicios de datos de WCF)'
 title: Proveedor de reflexión (Data Services de WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 0eeb223093d709cfe2722c2ad7cf622164eab32f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: e09c9a86bb940681d8de24f5082919aea897795d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794928"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Proveedor de reflexión (Data Services de WCF)
 
-Además de exponer los datos de un modelo de datos a través de la Entity Framework, WCF Data Services puede exponer datos que no estén definidos estrictamente en un modelo basado en entidad. El proveedor de reflexión expone los datos en clases que devuelven tipos que implementan la interfaz <xref:System.Linq.IQueryable%601>. WCF Data Services usa la reflexión para deducir un modelo de datos para estas clases y puede convertir las consultas basadas en direcciones en recursos en consultas basadas en Language Integrated Query (LINQ) en los tipos de <xref:System.Linq.IQueryable%601> expuestos.
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Además de exponer los datos de un modelo de datos a través de la Entity Framework, Servicios de datos de WCF puede exponer datos que no estén definidos estrictamente en un modelo basado en entidad. El proveedor de reflexión expone los datos en clases que devuelven tipos que implementan la interfaz <xref:System.Linq.IQueryable%601>. Servicios de datos de WCF usa la reflexión para deducir un modelo de datos para estas clases y puede convertir las consultas basadas en direcciones en recursos en consultas basadas en Language Integrated Query (LINQ) en los <xref:System.Linq.IQueryable%601> tipos expuestos.
 
 > [!NOTE]
 > Puede utilizar el método <xref:System.Linq.Queryable.AsQueryable%2A> para devolver una interfaz de <xref:System.Linq.IQueryable%601> de cualquier clase que implemente la interfaz de <xref:System.Collections.Generic.IEnumerable%601>. Esto permite usar tipos de colección más genéricos como origen de datos para un servicio de datos.
@@ -46,7 +49,7 @@ Al crear el servicio de datos, el proveedor deduce el modelo de datos por medio 
   - Si el tipo devuelto de la propiedad es un tipo de valor, la propiedad representa un tipo complejo.
 
 > [!NOTE]
-> A diferencia de un modelo de datos que está basado en el modelo de entidad-relación, los modelos que están basados en el proveedor de reflexión no entienden los datos relacionales. Debe utilizar el Entity Framework para exponer datos relacionales a través de WCF Data Services.
+> A diferencia de un modelo de datos que está basado en el modelo de entidad-relación, los modelos que están basados en el proveedor de reflexión no entienden los datos relacionales. Debe utilizar el Entity Framework para exponer datos relacionales a través de Servicios de datos de WCF.
 
 ## <a name="data-type-mapping"></a>Asignación de tipos de datos
 
@@ -73,7 +76,7 @@ Cuando un modelo de datos se deduce de las clases de .NET Framework, los tipos p
 
 ## <a name="enabling-updates-in-the-data-model"></a>Habilitar las actualizaciones en el modelo de datos
 
-Para permitir las actualizaciones de los datos que se exponen a través de este tipo de modelo de datos, el proveedor de reflexión define una interfaz <xref:System.Data.Services.IUpdatable>. Esta interfaz indica al servicio de datos cómo conservar las actualizaciones de los tipos expuestos. Para permitir las actualizaciones de los recursos que define el modelo de datos, la clase de contenedor de entidades debe implementar la interfaz de <xref:System.Data.Services.IUpdatable>. Para obtener un ejemplo de una implementación de la interfaz de <xref:System.Data.Services.IUpdatable>, vea [Cómo: crear un servicio de datos mediante un origen de datos de LINQ to SQL](create-a-data-service-using-linq-to-sql-wcf.md).
+Para permitir las actualizaciones de los datos que se exponen a través de este tipo de modelo de datos, el proveedor de reflexión define una interfaz <xref:System.Data.Services.IUpdatable>. Esta interfaz indica al servicio de datos cómo conservar las actualizaciones de los tipos expuestos. Para permitir las actualizaciones de los recursos que define el modelo de datos, la clase de contenedor de entidades debe implementar la interfaz de <xref:System.Data.Services.IUpdatable>. Para obtener un ejemplo de una implementación de la <xref:System.Data.Services.IUpdatable> interfaz, vea [Cómo: crear un servicio de datos mediante un origen de datos de LINQ to SQL](create-a-data-service-using-linq-to-sql-wcf.md).
 
 La interfaz <xref:System.Data.Services.IUpdatable> necesita la implementación de los siguientes miembros para que las actualizaciones puedan propagarse al origen de datos por medio del proveedor de reflexión:
 
@@ -94,11 +97,11 @@ La interfaz <xref:System.Data.Services.IUpdatable> necesita la implementación d
 
 ## <a name="handling-concurrency"></a>Administrar la simultaneidad
 
-WCF Data Services admite un modelo de simultaneidad optimista al permitirle definir un token de simultaneidad para una entidad. El servicio de datos utiliza este token de simultaneidad, que incluye una o más propiedades de la entidad, para determinar si se ha producido un cambio en los datos que se solicitan, que se están actualizando o eliminando. Cuando los valores de token obtenidos de la eTag de la solicitud difieren de los valores actuales de la entidad, el servicio de datos inicia una excepción. <xref:System.Data.Services.ETagAttribute> se aplica a un tipo de entidad para definir un token de simultaneidad en el proveedor de reflexión. El token de simultaneidad no puede incluir ninguna propiedad clave ni de navegación. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).
+Servicios de datos de WCF admite un modelo de simultaneidad optimista al permitirle definir un token de simultaneidad para una entidad. El servicio de datos utiliza este token de simultaneidad, que incluye una o más propiedades de la entidad, para determinar si se ha producido un cambio en los datos que se solicitan, que se están actualizando o eliminando. Cuando los valores de token obtenidos de la eTag de la solicitud difieren de los valores actuales de la entidad, el servicio de datos inicia una excepción. <xref:System.Data.Services.ETagAttribute> se aplica a un tipo de entidad para definir un token de simultaneidad en el proveedor de reflexión. El token de simultaneidad no puede incluir ninguna propiedad clave ni de navegación. Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).
 
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Usar LINQ to SQL con el proveedor de reflexión
 
-Dado que el Entity Framework se admite de forma nativa de forma predeterminada, es el proveedor de datos recomendado para usar datos relacionales con WCF Data Services. Sin embargo, puede utilizar el proveedor de reflexión para usar las clases LINQ to SQL con un servicio de datos. Los conjuntos de resultados de <xref:System.Data.Linq.Table%601> devueltos por los métodos en el <xref:System.Data.Linq.DataContext> generados por la LINQ to SQL Object Relational Designer (O/R Designer) implementan la interfaz <xref:System.Linq.IQueryable%601>. Esto permite que el proveedor de reflexión tenga acceso a estos métodos y datos de entidades devueltos en SQL Server utilizando las clases LINQ to SQL generadas. Sin embargo, dado que LINQ to SQL no implementa la interfaz de <xref:System.Data.Services.IUpdatable>, necesita agregar una clase parcial que extiende la clase parcial existente <xref:System.Data.Linq.DataContext> para agregar la implementación <xref:System.Data.Services.IUpdatable>. Para obtener más información, vea [Cómo: crear un servicio de datos mediante un origen de datos de LINQ to SQL](create-a-data-service-using-linq-to-sql-wcf.md).
+Dado que el Entity Framework se admite de forma nativa de forma predeterminada, es el proveedor de datos recomendado para usar datos relacionales con Servicios de datos de WCF. Sin embargo, puede utilizar el proveedor de reflexión para usar las clases LINQ to SQL con un servicio de datos. Los <xref:System.Data.Linq.Table%601> conjuntos de resultados devueltos por los métodos en el <xref:System.Data.Linq.DataContext> generado por el LINQ to SQL Object Relational Designer (Object Relational Designer) implementan la <xref:System.Linq.IQueryable%601> interfaz. Esto permite que el proveedor de reflexión tenga acceso a estos métodos y datos de entidades devueltos en SQL Server utilizando las clases LINQ to SQL generadas. Sin embargo, dado que LINQ to SQL no implementa la interfaz de <xref:System.Data.Services.IUpdatable>, necesita agregar una clase parcial que extiende la clase parcial existente <xref:System.Data.Linq.DataContext> para agregar la implementación <xref:System.Data.Services.IUpdatable>. Para obtener más información, vea [Cómo: crear un servicio de datos mediante un origen de datos de LINQ to SQL](create-a-data-service-using-linq-to-sql-wcf.md).
 
 ## <a name="see-also"></a>Vea también
 

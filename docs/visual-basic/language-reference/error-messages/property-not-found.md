@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: propiedad no encontrada'
 title: Propiedad no encontrada
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID422
 ms.assetid: 127e0f5f-0997-4ac5-b9af-2e6a2eb513a2
-ms.openlocfilehash: bb30e8e4d15f6425805f110caea76bb601b8b07d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 194510205aedf1dd0cf743578a9836b6da654268
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871034"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795344"
 ---
 # <a name="property-not-found"></a>Propiedad no encontrada
 
@@ -21,6 +22,6 @@ Este objeto no admite la propiedad especificada.
   
 2. Compruebe la documentación del objeto para asegurarse de que no está intentando obtener acceso a algo como una propiedad de "texto" cuando el objeto realmente admite una "leyenda" o una propiedad con el mismo nombre.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de errores](../../programming-guide/language-features/error-types.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)

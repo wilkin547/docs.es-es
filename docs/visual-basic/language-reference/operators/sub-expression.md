@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: sub Expression (Visual Basic)'
 title: Expresión Sub
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: e564fa3f717fc1a9f4e9961d9b3e961912a4d56b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e47aa8f9707701b5fd9d90fb3fabb31e9c052b53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873330"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795292"
 ---
 # <a name="sub-expression-visual-basic"></a>Subexpresión (Visual Basic)
 
@@ -32,10 +33,10 @@ End Sub
 |Término|Definición|  
 |---|---|  
 |`parameterlist`|Opcional. Una lista de nombres de variables locales que representan los parámetros del procedimiento. Los paréntesis deben estar presentes incluso cuando la lista esté vacía. Para obtener más información, consulta [Parameter List](../statements/parameter-list.md).|  
-|`statement`|Obligatorio. Una única instrucción.|  
-|`statements`|Obligatorio. Una lista de instrucciones.|  
+|`statement`|Necesario. Una única instrucción.|  
+|`statements`|Necesario. Una lista de instrucciones.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una *expresión lambda* es una subrutina que no tiene un nombre y que ejecuta una o más instrucciones. Puede usar una expresión lambda en cualquier lugar en el que pueda usar un tipo de delegado, excepto como argumento para `RemoveHandler` . Para obtener más información sobre los delegados y el uso de expresiones lambda con delegados, vea [instrucción Delegate](../statements/delegate-statement.md) y [conversión de delegado relajado](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
@@ -61,7 +62,7 @@ End Sub
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Sub](../statements/sub-statement.md)
 - [Expresiones lambda](../../programming-guide/language-features/procedures/lambda-expressions.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: StrongNameTokenFromAssembly ((función)'
 title: StrongNameTokenFromAssembly (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a4b47ee-02f6-4a98-864e-a6f11ca3f2d9
 topic_type:
 - apiref
-ms.openlocfilehash: 0feb180befd575dce20a83ddc89ebf13f87f3810
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3646d441da4885624c15d5e53670a8dd8db45160
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794486"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly (Función)
 
@@ -52,7 +53,7 @@ BOOLEAN StrongNameTokenFromAssembly (
 
  `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un token de nombre seguro es la forma abreviada de una clave pública. El token es un hash de 64 bits que se crea a partir de la clave pública utilizada para firmar el ensamblado. El token es una parte del nombre seguro del ensamblado y se puede leer desde los metadatos del ensamblado.  
   
@@ -70,7 +71,7 @@ BOOLEAN StrongNameTokenFromAssembly (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
 - [Método StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)

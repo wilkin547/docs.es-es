@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Strongnamesignatureverificationfromimage ((función)'
 title: StrongNameSignatureVerificationFromImage (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fb144d2-07e0-4a0e-8e05-907bbb6c9e03
 topic_type:
 - apiref
-ms.openlocfilehash: b90cc6fe99cf592f1b3fd117888462a957e4ce35
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dca8d0b221dfe8959be2de9b8347b95d3802a0e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794499"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage (Función)
 
@@ -70,7 +71,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
 
  `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si la `StrongNameSignatureVerificationFromImage` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
@@ -84,7 +85,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameSignatureVerificationFromImage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
 - [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

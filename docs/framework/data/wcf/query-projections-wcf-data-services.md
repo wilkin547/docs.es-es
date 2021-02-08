@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: proyecciones de consultas (Servicios de datos de WCF)'
 title: Proyecciones de consultas (Data Services de WCF)
 ms.date: 03/30/2017
 dev_langs:
@@ -10,14 +11,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 35427a4bc74691f366711c30cfa7af23de1caa35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794967"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proyecciones de consultas (Data Services de WCF)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 La proyección proporciona un mecanismo en el Open Data Protocol (OData) para reducir la cantidad de datos en la fuente devuelta por una consulta especificando que solo se devuelvan determinadas propiedades de una entidad en la respuesta. Para obtener más información, vea la sección 4,8. Seleccione la opción de consulta del sistema ($select) en [convenciones de URI (versión 2,0 de oData)](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
@@ -25,7 +28,7 @@ En este tema se describen la definición de la proyección de una consulta, cuá
 
 ## <a name="defining-a-query-projection"></a>Definir una proyección de consultas
 
-Puede Agregar una cláusula de proyección a una consulta mediante la opción de consulta `$select` en un URI o mediante la cláusula [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) en Visual Basic) en una consulta LINQ. Los datos de entidad devueltos se pueden proyectar en tipos de entidad o en tipos que no son de entidad en el cliente. Los ejemplos de este tema muestran cómo usar la cláusula `select` en una consulta LINQ.
+Puede Agregar una cláusula de proyección a una consulta mediante la `$select` opción de consulta en un URI o mediante la cláusula [Select](../../../csharp/language-reference/keywords/select-clause.md) ([Select](../../../visual-basic/language-reference/queries/select-clause.md) en Visual Basic) en una consulta LINQ. Los datos de entidad devueltos se pueden proyectar en tipos de entidad o en tipos que no son de entidad en el cliente. Los ejemplos de este tema muestran cómo usar la cláusula `select` en una consulta LINQ.
 
 > [!IMPORTANT]
 > Se puede producir una pérdida de datos en el servicio de datos cuando se guardan actualizaciones efectuadas en tipos proyectados. Para obtener más información, consulte [consideraciones de proyección](#considerations).
@@ -38,7 +41,7 @@ Los tipos de entidad deben tener una o varias propiedades de entidad que constit
 
 - Cuando el tipo tiene una propiedad denominada `ID`.
 
-- Cuando el tipo tiene una propiedad denominada *type*`ID`, donde *Type* es el nombre del tipo.
+- Cuando el tipo tiene una propiedad denominada *Type* `ID` , donde *Type* es el nombre del tipo.
 
 De forma predeterminada, cuando proyecte los resultados de la consulta en un tipo definido en el cliente, las propiedades solicitadas en la proyección deben existir en el tipo de cliente. Sin embargo, cuando especifica un valor de `true` para la propiedad <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> de la clase <xref:System.Data.Services.Client.DataServiceContext>, es necesario que se produzcan las propiedades especificadas en la proyección en el tipo de cliente.
 
@@ -81,7 +84,7 @@ A continuación se describen los comportamientos al proyectar los resultados en 
    [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
    [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
-- Tipo de entidad: se genera un <xref:System.NotSupportedException>.
+- Tipo de entidad: <xref:System.NotSupportedException> se genera.
 
 - Tipo que no es de entidad: compatible
 
@@ -112,7 +115,7 @@ Se aplican las siguientes consideraciones adicionales cuando se define una proye
 
 - Cuando una proyección incluya una propiedad de navegación, los objetos relacionados se cargan implícitamente sin tener que llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>. No se admite el método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> para su uso en una consulta proyectada.
 
-- Las consultas de proyecciones de consultas en el cliente se traducen para usar la opción de consulta `$select` en el URI de solicitud. Cuando se ejecuta una consulta con proyección en una versión anterior de WCF Data Services que no admite la opción de consulta `$select`, se devuelve un error. Esto también puede ocurrir cuando se establece la propiedad <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> de la clase <xref:System.Data.Services.DataServiceBehavior> para el servicio de datos en el valor de la enumeración <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).
+- Las consultas de proyecciones de consultas en el cliente se traducen para usar la opción de consulta `$select` en el URI de solicitud. Cuando se ejecuta una consulta con proyección en una versión anterior de Servicios de datos de WCF que no admite la `$select` opción de consulta, se devuelve un error. Esto también puede ocurrir cuando se establece la propiedad <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> de la clase <xref:System.Data.Services.DataServiceBehavior> para el servicio de datos en el valor de la enumeración <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obtener más información, vea [control de versiones del servicio de datos](data-service-versioning-wcf-data-services.md).
 
 Para obtener más información, vea [Cómo: proyectar los resultados](how-to-project-query-results-wcf-data-services.md)de una consulta.
 

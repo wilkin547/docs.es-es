@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRDataTarget3:: Getexceptionthreadid ((método)'
 title: ICLRDataTarget3::GetExceptionThreadID (Método)
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 307d6ac7-4a86-45f3-999d-6b47004a68f2
 topic_type:
 - apiref
-ms.openlocfilehash: 0a8b7a90cd909379f870f6a501a940386d2e1451
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8202b6d83d0c81853111c5da7cfb8deec4d4e222
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723602"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794824"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>ICLRDataTarget3::GetExceptionThreadID (Método)
 
@@ -45,7 +46,7 @@ HRESULT GetExceptionThreadID(
 |`S_OK`|El método se realizó correctamente.|  
 |`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|No se pudo encontrar un identificador de subproceso válido para la excepción.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método lo implementa el escritor de la aplicación de depuración.  
   
@@ -59,7 +60,7 @@ HRESULT GetExceptionThreadID(
   
  **.NET Framework versiones:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget3 (Interfaz)](iclrdatatarget3-interface.md)
 - [Método GetExceptionContextRecord](iclrdatatarget3-getexceptioncontextrecord-method.md)

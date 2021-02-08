@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRDataTarget:: Getimagebase ((método)'
 title: ICLRDataTarget::GetImageBase (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: f1b9f55a383f1deb867c6b3e2fa385a82158d1e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34e8341b219aaa184b4894c631f854e0a31921d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794876"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase (Método)
 
@@ -43,7 +44,7 @@ HRESULT GetImageBase (
  `baseAddress`  
  enuncia Puntero a un CLRDATA_ADDRESS que almacena la dirección base de la imagen.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El nombre del archivo de imagen puede tener o no una ruta de acceso. Si se especifica una ruta de acceso, la coincidencia se realiza en toda la ruta de acceso; de lo contrario, la búsqueda de coincidencias se realiza solo en el nombre de archivo.  
   
@@ -57,6 +58,6 @@ HRESULT GetImageBase (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget (Interfaz)](iclrdatatarget-interface.md)

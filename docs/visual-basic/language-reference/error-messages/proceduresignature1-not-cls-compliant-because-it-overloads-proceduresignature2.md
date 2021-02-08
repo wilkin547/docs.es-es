@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: BC40035: <proceduresignature1> no es conforme a CLS porque sobrecarga <proceduresignature2> que solo difiere de él en la matriz de tipos de parámetro de matriz o en el rango de los tipos de parámetro de matriz'
 title: <proceduresignature1> no es compatible con CLS porque sobrecarga a <proceduresignature2>, que difiere de ella solo en la matriz de tipos de parámetro de matriz o el rango de los tipos de parámetro de matriz
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 5376f0513b1180da511a508cf8e0e754e8938384
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 056683033a4eacdc6ad783f5056b639e849e3507
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795396"
 ---
 # <a name="bc40035-proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>BC40035: \<proceduresignature1> no es conforme a CLS porque sobrecarga \<proceduresignature2> que difiere de él solo en la matriz de tipos de parámetro de matriz o en el rango de los tipos de parámetro de matriz
 
