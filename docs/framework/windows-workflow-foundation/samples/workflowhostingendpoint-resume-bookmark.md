@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: WorkflowHostingEndpoint resume Bookmark'
 title: Reanudar marcador WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: a708064f-50b0-4751-b44e-d5410d08d451
-ms.openlocfilehash: b7f701c012c05dcc7e05c56123436af3dbacf4c4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3da4579a7c0c09122cacaa5e3db39359b8e62936
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267447"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798139"
 ---
 # <a name="workflowhostingendpoint-resume-bookmark"></a>Reanudar marcador WorkflowHostingEndpoint
 
@@ -17,7 +18,7 @@ En este ejemplo se muestra cómo se puede utilizar <xref:System.ServiceModel.Act
 
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  Este ejemplo usa <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> para crear una instancia de flujo de trabajo hospedada mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> es un punto de extensibilidad para <xref:System.ServiceModel.Activities.WorkflowServiceHost> que se puede usar en los escenarios siguientes:  
   

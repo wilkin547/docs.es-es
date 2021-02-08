@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorThreadpool:: Corbindiocompletioncallback ((método)'
 title: ICorThreadpool::CorBindIoCompletionCallback (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b159225-f09c-42f1-aa7c-44087e121249
 topic_type:
 - apiref
-ms.openlocfilehash: 7baf144f5d14a8757101bdb29a8bc81ff3a05231
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f9e62fd8947c3ab80c4434814ee7e95b5327a24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799439"
 ---
 # <a name="icorthreadpoolcorbindiocompletioncallback-method"></a>ICorThreadpool::CorBindIoCompletionCallback (Método)
 
@@ -45,6 +46,6 @@ HRESULT CorBindIoCompletionCallback (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorThreadpool (Interfaz)](icorthreadpool-interface.md)

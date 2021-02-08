@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: estructuras de almacén de símbolos de diagnósticos'
 title: Estructuras de almacén de símbolos de diagnósticos
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - diagnostics symbol store structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
-ms.openlocfilehash: df62ec39f781f24a81a9c768a5920eded99880c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 584e7840a5160ff8fcad3731cd6c4f6cae79d407
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725175"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800401"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Estructuras de almacén de símbolos de diagnósticos
 

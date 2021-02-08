@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IXCLRDataProcess:: EndEnumModules (método)'
 title: 'IXCLRDataProcess:: EndEnumModules (método)'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 9a7a23e53f5c2bc7d643046830cf335fec780f11
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 454d4fa3616f9ba8312dc3d1ac02c228625aa488
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420843"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800713"
 ---
 # <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess:: EndEnumModules (método)
 
@@ -50,7 +51,7 @@ El método proporcionado forma parte de la `IXCLRDataProcess` interfaz y corresp
 **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 **Encabezado:** Ninguna **biblioteca:** ninguna **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)
 - [Interfaz IXCLRDataProcess](ixclrdataprocess-interface.md)

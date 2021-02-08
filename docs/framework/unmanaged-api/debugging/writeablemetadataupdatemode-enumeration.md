@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Writeablemetadataupdatemode ('
 title: WriteableMetadataUpdateMode (Enumeración)
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 6758f4d3-6bc7-4c99-8582-e9be00566784
 topic_type:
 - apiref
-ms.openlocfilehash: 1553e18da10844da28bbaf84ba76bc5c34ca49b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b8136963e315c429643bd0ebf4bdb509d5173bec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725305"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800518"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a>WriteableMetadataUpdateMode (Enumeración)
 
@@ -34,14 +35,14 @@ typedef enum WriteableMetadataUpdateMode {
 } WriteableMetadataUpdateMode;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
 |`LegacyCompatPolicy`|Mantiene la compatibilidad con versiones anteriores de .NET Framework al hacer que las actualizaciones en memoria de los metadatos sean visibles. Vea la sección Comentarios para obtener más información.|  
 |`AlwaysShowUpdates`|Hace que las actualizaciones en memoria de los metadatos sean visibles para el depurador.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un miembro de la `WriteableMetadataUpdateMode` enumeración se puede pasar al método [setwriteablemetadataupdatemode (](icordebugprocess7-setwriteablemetadataupdatemode-method.md) para controlar si el depurador puede ver las actualizaciones en memoria de los metadatos en el proceso de destino.  
   
@@ -57,7 +58,7 @@ typedef enum WriteableMetadataUpdateMode {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)
 - [SetWriteableMetadataUpdateMode (método)](icordebugprocess7-setwriteablemetadataupdatemode-method.md)

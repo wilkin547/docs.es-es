@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración LoggingLevelEnum ('
 title: LoggingLevelEnum (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 389edbeb746fbeaf60d88bf9ee2a3a0731822e55
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c9676fef83ea44f45a25350a2b3d325c1c22f98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672024"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800622"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum (Enumeración)
 
@@ -45,7 +46,7 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -63,7 +64,7 @@ typedef enum LoggingLevelEnum {
 |`LErrorLevel`|El mensaje es un nivel de error.|  
 |`LPanicLevel`|El mensaje es un nivel de pánico.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El Common Language Runtime (CLR) llama al método [ICorDebugManagedCallback:: LogMessage](icordebugmanagedcallback-logmessage-method.md) para notificar al depurador que un subproceso administrado ha registrado un evento. El CLR pasa un valor de la `LoggingLevelEnum` enumeración para indicar el nivel de gravedad del mensaje que el subproceso administrado escribió en el registro de eventos.  
   
@@ -77,7 +78,7 @@ typedef enum LoggingLevelEnum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.EventLog>
 - [Enumeraciones de depuración](debugging-enumerations.md)

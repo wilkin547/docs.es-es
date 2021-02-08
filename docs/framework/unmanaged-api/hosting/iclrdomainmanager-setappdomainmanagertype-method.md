@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRDomainManager:: Setappdomainmanagertype ((método)'
 title: ICLRDomainManager::SetAppDomainManagerType (Método)
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-ms.openlocfilehash: 7c6b328793e6437682ad8d642e611be30e7b0fe6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 479e6596982d21c4e9ae445a7d4453235dbef729
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702153"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799764"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType (Método)
 
@@ -54,7 +55,7 @@ HRESULT SetAppDomainManagerType(
 |S_OK|El método se completó correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Actualmente, el único valor definido para `dwInitializeDomainFlags` es `eInitializeNewDomainFlags_NoSecurityChanges` , que indica al Common Language Runtime (CLR) que el administrador del dominio de aplicación no modificará la configuración de seguridad durante la ejecución del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método. Esto permite que CLR optimice la carga de ensamblados que tienen el <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo condicional (APTCA). Esto puede dar lugar a una mejora significativa en el tiempo de inicio si el cierre transitivo de este conjunto de ensamblados es grande.  
   
@@ -73,7 +74,7 @@ HRESULT SetAppDomainManagerType(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Hospedar aplicaciones de WPF](index.md)
 - [ICLRDomainManager (Interfaz)](iclrdomainmanager-interface.md)

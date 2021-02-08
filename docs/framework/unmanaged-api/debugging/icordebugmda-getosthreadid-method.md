@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugMDA:: Getosthreadid ((método)'
 title: ICorDebugMDA::GetOSThreadId (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ca7c364-ade4-4219-b434-9f6ae2359be6
 topic_type:
 - apiref
-ms.openlocfilehash: 80248bba6d11b8af07aa0517cb41c8a4f783b5e0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f965585a6e6060a14f0cbc2a80b46124b2751e0e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710901"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801155"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>ICorDebugMDA::GetOSThreadId (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetOSThreadId (
  `pOsTid`  
  enuncia Puntero al identificador del subproceso del sistema operativo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El subproceso del sistema operativo se usa en lugar de una expresión ICorDebugThread para permitir situaciones en las que se desencadena un MDA en un subproceso nativo o en un subproceso administrado que todavía no ha entrado en código administrado.  
   
@@ -53,7 +54,7 @@ HRESULT GetOSThreadId (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugMDA (Interfaz)](icordebugmda-interface.md)
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

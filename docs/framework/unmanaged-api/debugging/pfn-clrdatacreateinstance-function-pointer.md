@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: PFN_CLRDataCreateInstance puntero a función'
 title: puntero a la función PFN_CLRDataCreateInstance
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-ms.openlocfilehash: 68a5b8bb1568f10699653479357b02b2e847cc02
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc048f840084eff0270944d3190ccbb153bf22d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800635"
 ---
 # <a name="pfn_clrdatacreateinstance-function-pointer"></a>puntero a la función PFN_CLRDataCreateInstance
 
@@ -46,7 +47,7 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  `iface`  
  enuncia Puntero a la dirección del objeto de interfaz devuelto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `ICLRDataTarget` escritor de la aplicación de depuración implementa el objeto. La implementación depende del tipo de elemento de destino que se está representando. El elemento de destino puede ser un proceso, un volcado de memoria, una máquina remota, etc.  
   
@@ -60,6 +61,6 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales para la depuración](debugging-global-static-functions.md)

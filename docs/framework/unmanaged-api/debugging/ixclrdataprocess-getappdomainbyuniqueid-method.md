@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IXCLRDataProcess:: GetAppDomainByUniqueId (método)'
 title: 'IXCLRDataProcess:: GetAppDomainByUniqueId (método)'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: bb02ffed09cbcc31e653bfd3165050c247908c5d
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 7087362efbb810fcb6e1b6f7eb9f23c54c38fade
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420791"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800674"
 ---
 # <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess:: GetAppDomainByUniqueId (método)
 
@@ -54,7 +55,7 @@ El método proporcionado forma parte de la `IXCLRDataProcess` interfaz y corresp
 **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 **Encabezado:** Ninguna **biblioteca:** ninguna **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)
 - [Interfaz IXCLRDataProcess](ixclrdataprocess-interface.md)

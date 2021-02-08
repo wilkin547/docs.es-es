@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: EnumUnresolvedMethods ((método)'
 title: IMetaDataImport::EnumUnresolvedMethods (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-ms.openlocfilehash: 6b5e7bbe2303a200d7829fea12e228a513595f97
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e894ecdde91a2263783234d73fa50d890a13e413
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716560"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799335"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods (Método)
 
@@ -58,7 +59,7 @@ HRESULT EnumUnresolvedMethods (
 |`S_OK`|`EnumUnresolvedMethods` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcTokens` es cero.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un método sin resolver es aquel que se ha declarado pero no se ha implementado. Un método se incluye en la enumeración si el método está marcado `miForwardRef` y `mdPinvokeImpl` o `miRuntime` está establecido en cero. En otras palabras, un método sin resolver es un método de clase que se marca `miForwardRef` pero que no se implementa en código no administrado (se alcanza a través de PInvoke) ni lo implementa internamente el propio Runtime.  
   
@@ -74,7 +75,7 @@ HRESULT EnumUnresolvedMethods (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

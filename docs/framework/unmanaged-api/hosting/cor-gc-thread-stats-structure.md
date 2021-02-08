@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de COR_GC_THREAD_STATS'
 title: COR_GC_THREAD_STATS (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-ms.openlocfilehash: 25a90965dc5466b7cf1a07140705424cf2ba4cd9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 179eb335e9f8c118ee98d4b777c347f3758ee0c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799790"
 ---
 # <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS (Estructura)
 
@@ -34,14 +35,14 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`PerThreadAllocation`|El número de bytes de memoria asignados en el subproceso que está asociado a la `COR_GC_THREAD_STATS` instancia actual. Este número se borra a cero cada vez que se produce una recolección de elementos no utilizados de generación cero.|  
 |`Flags`|Número de bytes promocionados a una generación superior en la recolección de elementos no utilizados más reciente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  [ICLRTask:: getmemstats (](iclrtask-getmemstats-method.md) toma un parámetro de salida de tipo `COR_GC_THREAD_STATS` .  
   
@@ -55,7 +56,7 @@ typedef struct _COR_GC_THREAD_STATS {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de hospedaje](hosting-structures.md)
 - [IHostTask (Interfaz)](ihosttask-interface.md)

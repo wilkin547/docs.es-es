@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRStrongName:: StrongNameKeyDelete ((método)'
 title: ICLRStrongName::StrongNameKeyDelete (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0163412f-f617-4428-89e0-03992fec31e8
 topic_type:
 - apiref
-ms.openlocfilehash: 46345ae570673c9c9c0c58fb6edea1464ba8dd91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5b782785921eb24394db53d29a66600a3867b489
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671699"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799582"
 ---
 # <a name="iclrstrongnamestrongnamekeydelete-method"></a>ICLRStrongName::StrongNameKeyDelete (Método)
 
@@ -43,7 +44,7 @@ HRESULT StrongNameKeyDelete (
 
  `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Use el método [ICLRStrongName:: StrongNameKeyInstall (](iclrstrongname-strongnamekeyinstall-method.md) para importar un par de claves pública y privada en un contenedor.  
   
@@ -57,7 +58,7 @@ HRESULT StrongNameKeyDelete (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameKeyInstall](iclrstrongname-strongnamekeyinstall-method.md)
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

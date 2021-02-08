@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ICorDebugVariableSymbol:: SetValue (método)'
 title: ICorDebugVariableSymbol::SetValue (método)
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: 3ef9b9b9a095d6d6026ffc38873661355d660488
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa36712defcf44039f17fe846113c15814549e09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800856"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue (método)
 
@@ -46,7 +47,7 @@ HRESULT SetValue(
  `pValue`  
  [in] Búfer que contiene el valor que se va a establecer.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -61,7 +62,7 @@ HRESULT SetValue(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

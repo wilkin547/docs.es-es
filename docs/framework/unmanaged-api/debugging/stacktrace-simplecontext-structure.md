@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de StackTrace_SimpleContext'
 title: StackTrace_SimpleContext (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: 30775b4a6f904d06b9c77e6b2b64aec693c446d7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 22a0acada5ef2d392dfdef5326953be137280d7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671803"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800570"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext (Estructura)
 
@@ -37,7 +38,7 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -45,7 +46,7 @@ struct StackTrace_SimpleContext
 |`FrameOffset`|El desplazamiento del marco o el registro EBP en las plataformas x86.|  
 |`InstructionOffset`|El puntero de instrucción o el puntero de instrucción Enter (EIP) en las plataformas x86.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Dado que las funciones de seguimiento de pila normalmente solo necesitan devolver la dirección, el desplazamiento del marco y la dirección de la pila, también puede usar la `SimpleContext` estructura en lugar de una `CONTEXT` estructura grande.  
   
@@ -57,7 +58,7 @@ struct StackTrace_SimpleContext
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

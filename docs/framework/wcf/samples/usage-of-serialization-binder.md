@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: uso del enlazador de serialización'
 title: Uso del enlazador de serialización
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 061afb94d97e3d8a1222e6de9932344fb3ebbe59
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee00d8049ae644525f8013801dc7c453b9ad5aeb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294903"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798178"
 ---
 # <a name="usage-of-serialization-binder"></a>Uso del enlazador de serialización
 
@@ -17,7 +18,7 @@ Este ejemplo muestra cómo utilizar <xref:System.Runtime.Serialization.Serializa
 
  <xref:System.Runtime.Serialization.SerializationBinder>, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
   
-## <a name="discussion"></a>Discusión  
+## <a name="discussion"></a>Debate  
 
  Este ejemplo muestra cómo dos entidades que tienen como destino versiones diferentes del .NET Framework pueden comunicarse mediante el formateador binario y el enlazador de serialización.  
   

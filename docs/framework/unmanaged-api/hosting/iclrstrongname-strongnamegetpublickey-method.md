@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRStrongName:: StrongNameGetPublicKey ((método)'
 title: ICLRStrongName::StrongNameGetPublicKey (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a31dcaa9-a404-4c1d-8cc7-081827c52935
 topic_type:
 - apiref
-ms.openlocfilehash: 5bd314b2b63474d2a1d159f74564e2d4ca13aef6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7be64e145f1e26a1260e2b23fd9fe5f97e289478
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799608"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>ICLRStrongName::StrongNameGetPublicKey (Método)
 
@@ -63,7 +64,7 @@ HRESULT StrongNameGetPublicKey (
 
  `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La clave pública está contenida en una estructura [PublicKeyBlob](../strong-naming/publickeyblob-structure.md) .  
   
@@ -77,7 +78,7 @@ HRESULT StrongNameGetPublicKey (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)
 - [PublicKeyBlob (Estructura)](../strong-naming/publickeyblob-structure.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: la clase no admite Automation o no admite la interfaz esperada'
 title: Esta clase no admite automatización o no admite la interfaz esperada
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
-ms.openlocfilehash: aa97ae420a0a289979fe86db373c635361dc6475
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: cc5ae539064b8d049e2808d916f9f4b75f7e94c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796800"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>Esta clase no admite automatización o no admite la interfaz esperada
 
@@ -21,7 +22,7 @@ La clase especificada en la llamada a la función `GetObject` o a la función `C
   
 2. Si cambió un proyecto de .dll a .exe o a la inversa, deberá eliminar manualmente el registro del antiguo .dll o .exe.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de errores](../../programming-guide/language-features/error-types.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)
 - [Hable con nosotros](/visualstudio/ide/feedback-options)

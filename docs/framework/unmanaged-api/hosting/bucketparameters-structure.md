@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura Bucketparameters ('
 title: BucketParameters (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-ms.openlocfilehash: 8b54cb30ec96ad0fb7851af6f2d465fe771886ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e2d701caa0e2374cb6b44d5fb5537f2ecc7e34fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677861"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799972"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters (Estructura)
 
@@ -35,7 +36,7 @@ typedef struct _BucketParameters {
 } BucketParameters;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -51,6 +52,6 @@ typedef struct _BucketParameters {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de hospedaje](hosting-structures.md)

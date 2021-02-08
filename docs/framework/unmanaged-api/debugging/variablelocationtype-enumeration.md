@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración VariableLocationType'
 title: Enumeración VariableLocationType
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 1c65efa006a8b2f4fb4db257b4ad2cde99c4e75e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8561077b9f3f4d318eeb743d51538b2a9a22a217
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725266"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800531"
 ---
 # <a name="variablelocationtype-enumeration"></a>Enumeración VariableLocationType
 
@@ -36,7 +37,7 @@ typedef enum VariableLocationType
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -44,7 +45,7 @@ typedef enum VariableLocationType
 |`VLT_REGISTER_RELATIVE`|La variable está en una ubicación de memoria relativa de registro.|  
 |`VLT_INVALID`|La variable no se almacena en un registro o en una ubicación de memoria relativa al registro.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `VariableLocationType`El método [ICorDebugVariableHome:: GetLocationType](icordebugvariablehome-getlocationtype-method.md) devuelve un miembro de la enumeración.  
   
@@ -58,6 +59,6 @@ typedef enum VariableLocationType
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

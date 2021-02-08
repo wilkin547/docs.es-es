@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz IXCLRDataMethodInstance'
 title: Interfaz IXCLRDataMethodInstance
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0b1c982b25af9edea76a038b4314b4bd608f07df
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 4e9ad57988420ff14b297c693c31c0dc5b3b181c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800791"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>Interfaz IXCLRDataMethodInstance
 
@@ -46,7 +47,7 @@ Esta interfaz reside dentro del tiempo de ejecución y no se expone a través de
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)
 - [Interfaces para depuración](debugging-interfaces.md)

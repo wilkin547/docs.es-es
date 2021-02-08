@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugType (interfaz)'
 title: Interfaz ICorDebugType
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 9407dda7aab337f667cd5043b562d0eac94f0f04
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4cd668263906ef21e1bb665795425ca3a239c2bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711928"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800895"
 ---
 # <a name="icordebugtype-interface"></a>Interfaz ICorDebugType
 
@@ -37,7 +38,7 @@ Representa un tipo, ya sea básico o complejo (es decir, definido por el usuario
 |[Método GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md)|Obtiene un puntero de interfaz a un ICorDebugValue que contiene el valor del campo estático al que hace referencia el token de campo especificado en el marco de pila especificado.|  
 |[Método GetType](icordebugtype-gettype-method.md)|Obtiene un valor de CorElementType que describe el tipo nativo del Common Language Runtime <xref:System.Type> al que hace referencia este `ICorDebugType` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el tipo es genérico, `ICorDebugClass` representa el tipo sin instancia. La `ICorDebugType` interfaz representa un tipo genérico con instancias. Por ejemplo, la tabla hash \<K, V> se representará mediante `ICorDebugClass` , mientras que la tabla hash \<Int32, String> se representará mediante `ICorDebugType` .  
   
@@ -56,6 +57,6 @@ Representa un tipo, ya sea básico o complejo (es decir, definido por el usuario
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

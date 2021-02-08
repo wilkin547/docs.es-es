@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz IXCLRDataProcess'
 title: Interfaz IXCLRDataProcess
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 376ec2b840bc17c79ed1f27c17a8ddd22c37a0f4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b611491e5c9a5957c07a305a3f395b67ad208649
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800648"
 ---
 # <a name="ixclrdataprocess-interface"></a>Interfaz IXCLRDataProcess
 
@@ -41,7 +42,7 @@ Proporciona métodos para consultar información sobre un proceso.
 | [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Enumera las instancias de método de este proceso a partir de un desplazamiento de dirección.                  |
 | [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Libera los recursos utilizados por los iteradores internos utilizados durante la enumeración de la instancia.             |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta interfaz reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Sin embargo, es una interfaz COM que se deriva de `IUnknown` con `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` el GUID que se puede obtener a través de los mecanismos com habituales.
 

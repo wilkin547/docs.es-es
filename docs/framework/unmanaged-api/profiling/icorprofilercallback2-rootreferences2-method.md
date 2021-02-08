@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método ICorProfilerCallback2:: Rootreferences2 ('
 title: ICorProfilerCallback2::RootReferences2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: 9e53e7bcecd900bb6c71d0a822e9b63ff6726e58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a599014cc9fb47b103a136b9e5569d38031c9377
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729527"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799088"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 (Método)
 
@@ -56,7 +57,7 @@ HRESULT RootReferences2(
   
  Si el tipo de la raíz es una pila, el identificador raíz es para la función que contiene la variable. Si el identificador raíz es 0, la función es una función sin nombre que es interna de CLR. Si el tipo de la raíz es un identificador, el identificador raíz es para el identificador de recolección de elementos no utilizados. Para los demás tipos raíz, el ID. es un valor opaco y debe omitirse.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Las `rootRefIds` `rootKinds` matrices,, `rootFlags` y `rootIds` son matrices paralelas. Es decir,,, `rootRefIds[i]` `rootKinds[i]` `rootFlags[i]` y `rootIds[i]` afectan a la misma raíz.  
   
@@ -76,7 +77,7 @@ HRESULT RootReferences2(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)

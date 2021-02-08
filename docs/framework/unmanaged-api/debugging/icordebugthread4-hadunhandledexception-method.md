@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugThread4:: HadUnhandledException ((método)'
 title: ICorDebugThread4::HadUnhandledException (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: 4e368b2c63e8e43b5c392bec4b79daac8bae249d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd0ccdbdd68c37b5fbdbd705da7136e5d36baa60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678547"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800934"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException (Método)
 
@@ -48,7 +49,7 @@ HRESULT GetBlockingObjects (
 |S_OK|El subproceso ha tenido una excepción no controlada desde su creación.|  
 |S_FALSE|El subproceso nunca ha tenido una excepción no controlada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método indica si el subproceso ha tenido alguna vez una excepción no controlada. En el momento en que se desencadena la devolución de llamada de excepción no controlada o se inicia la Asociación JIT nativa, se garantiza que este método devuelve S_OK. No hay ninguna garantía de que el método [ICorDebugThread. GetCurrentException (](icordebugthread-getcurrentexception-method.md) devuelva la excepción no controlada. sin embargo, si el proceso aún no se ha continuado después de obtener la devolución de llamada de excepción no controlada o después de la Asociación JIT nativa. Además, es posible (aunque improbable) tener más de un subproceso con una excepción no controlada en el momento en que se desencadena la Asociación JIT nativa. En tal caso, no hay ninguna manera de determinar qué excepción desencadenó la Asociación JIT.  
   
@@ -62,7 +63,7 @@ HRESULT GetBlockingObjects (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugThread4 (Interfaz)](icordebugthread4-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

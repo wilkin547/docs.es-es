@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Enumtypespecs ((método)'
 title: IMetaDataImport::EnumTypeSpecs (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-ms.openlocfilehash: 38c9f8df12b0fc83a236d2cb7c32d1198be7096d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7446bbf3296ffb6cfa3a20f594b4a7da22acff5c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799348"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs (Método)
 
@@ -58,7 +59,7 @@ HRESULT EnumTypeSpecs (
 |`S_OK`|`EnumTypeSpecs` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcTypeSpecs` es cero.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El método [IMetaDataEmit:: GetTokenFromTypeSpec (](imetadataemit-gettokenfromtypespec-method.md) crea los tokens TypeSpec.  
   
@@ -72,7 +73,7 @@ HRESULT EnumTypeSpecs (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

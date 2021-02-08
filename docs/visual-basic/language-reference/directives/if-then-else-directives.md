@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: #If... Then... #Else directivas'
 title: '#Directivas If...Then...#Else'
 ms.date: 04/11/2018
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 7054a6ada4583c5d89e020437eb622a59d3eb17a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fd95d259315e0bd6fd6ab2a3f222288bb4726ce6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410015"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797255"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else (Directivas)
 
@@ -84,7 +85,7 @@ En este ejemplo se usa la `#If...Then...#Else` construcción para determinar si 
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [#Const (directiva)](const-directive.md)
 - [Instrucción If...Then...Else](../statements/if-then-else-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugThread3:: GetActiveInternalFrames ((método)'
 title: ICorDebugThread3::GetActiveInternalFrames (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: 2ca3bf94298b45e404c930ffe52e101085ee482d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f228dd84708478bb364ac09407a68df3e8d971b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800986"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames (Método)
 
@@ -81,7 +82,7 @@ HRESULT GetActiveInternalFrames
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

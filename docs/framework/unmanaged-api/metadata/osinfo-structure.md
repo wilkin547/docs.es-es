@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: OSINFO (estructura)'
 title: OSINFO (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-ms.openlocfilehash: 49e29cc0367d5162dffcd641b163fd7b9a56ffd0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5027ef5cf4137aa1e781134b325407e1251fdd31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799114"
 ---
 # <a name="osinfo-structure"></a>OSINFO (Estructura)
 
@@ -35,7 +36,7 @@ typedef struct {
 } OSINFO;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -43,7 +44,7 @@ typedef struct {
 |`dwOSMajorVersion`|La versión principal del sistema operativo o un valor NULL para indicar cualquier versión.|  
 |`dwOSMinorVersion`|La versión secundaria del sistema operativo o un valor NULL para indicar cualquier versión.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `OSINFO` se basa en la `OSVERSIONINFOEX` estructura que se utiliza en las llamadas a la función de la plataforma Microsoft Windows `GetVersionEx` . La estructura ASSEMBLYMETADATA (usa esta estructura para indicar su compatibilidad con el sistema operativo.  
   
@@ -57,7 +58,7 @@ typedef struct {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de metadatos](metadata-structures.md)
 - [IMetaDataAssemblyEmit (Interfaz)](imetadataassemblyemit-interface.md)

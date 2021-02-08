@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: INotifyConnection2:: Registernotifysource ((método)'
 title: INotifyConnection2::RegisterNotifySource (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-ms.openlocfilehash: 1286dd970e437af0a8b607ed050ab4838f73a41f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 97aacf7f2005a1e9f21acebd6c5f5ed65867b245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720053"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800323"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource (Método)
 
@@ -52,7 +53,7 @@ HRESULT RegisterNotifySource
 
  **Encabezado:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [INotifyConnection2 (Interfaz)](inotifyconnection2-interface.md)
 - [INotifySource2 (Interfaz)](inotifysource2-interface.md)

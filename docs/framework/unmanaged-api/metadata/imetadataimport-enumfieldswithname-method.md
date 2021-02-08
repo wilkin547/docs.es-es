@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: EnumFieldsWithName ((método)'
 title: IMetaDataImport::EnumFieldsWithName (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: 0a254587282dea43a3507fbbeca35bd7aa9604f3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88096b2b12a9571eb05d4550e6e26a348e28cfd2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711577"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799375"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName (Método)
 
@@ -59,7 +60,7 @@ HRESULT EnumFieldsWithName (
  `pcTokens`  
  enuncia Número real de tokens de FieldDef devueltos en `rFields` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  A diferencia de [IMetaDataImport:: EnumFields](imetadataimport-enumfields-method.md), `EnumFieldsWithName` descarta todos los tokens de campo que no tienen el nombre especificado.  
   
@@ -80,7 +81,7 @@ HRESULT EnumFieldsWithName (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

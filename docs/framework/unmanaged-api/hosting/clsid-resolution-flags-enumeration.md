@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración CLSID_RESOLUTION_FLAGS'
 title: CLSID_RESOLUTION_FLAGS (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-ms.openlocfilehash: 19731f34d259757e6de62dd4b4f0d4735d1c2e61
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 54d334147e13217f8ce20dae1b139cdc6d11a3b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706169"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799881"
 ---
 # <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS (Enumeración)
 
@@ -34,7 +35,7 @@ typedef enum {
 } CLSID_RESOLUTION_FLAGS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -49,6 +50,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para hosts](hosting-enumerations.md)

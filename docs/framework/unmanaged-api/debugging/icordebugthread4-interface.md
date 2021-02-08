@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugThread4'
 title: ICorDebugThread4 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8c7719a-322b-4133-8566-4c27218dc104
 topic_type:
 - apiref
-ms.openlocfilehash: 5c108420772be9e6d0932f3759f18da9446f99d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ad587cee81ce635df0a8917b7a6d68e60aaf0b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800921"
 ---
 # <a name="icordebugthread4-interface"></a>ICorDebugThread4 (Interfaz)
 
@@ -33,7 +34,7 @@ Proporciona información de bloqueo de subprocesos.
 |[Método HadUnhandledException](icordebugthread4-hadunhandledexception-method.md)|Indica si el subproceso ha tenido alguna vez una excepción no controlada.|  
 |[Método GetCurrentCustomDebuggerNotification](icordebugthread4-getcurrentcustomdebuggernotification-method.md)|Obtiene el objeto [ICorDebugManagedCallback3 (:: customnotification (](icordebugmanagedcallback3-customnotification-method.md) actual en el subproceso actual.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta interfaz es una extensión lógica de las interfaces ICorDebugThread, ICorDebugThread2 y [ICorDebugThread3](icordebugthread3-interface.md) .  
   
@@ -50,7 +51,7 @@ Proporciona información de bloqueo de subprocesos.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

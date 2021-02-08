@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz IInstallReferenceItem ('
 title: IInstallReferenceItem (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66df494d-1a2f-4441-8ee6-cfed0217b4e6
 topic_type:
 - apiref
-ms.openlocfilehash: 27839dda657a6bedf3cc65bb843caaaaa63006d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28b08975e91ab3221efa120052e63ff31b526d1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800089"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem (Interfaz)
 
@@ -39,7 +40,7 @@ Representa un elemento instalado en la caché global de ensamblados.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de Fusion](fusion-interfaces.md)
 - [FUSION_INSTALL_REFERENCE (Estructura)](fusion-install-reference-structure.md)

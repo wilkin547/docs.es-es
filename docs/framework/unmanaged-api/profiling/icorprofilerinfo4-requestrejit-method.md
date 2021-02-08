@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo4:: Requestrejit ((método)'
 title: ICorProfilerInfo4::RequestReJIT (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 781ed736-f30c-4816-920e-3552e36542c6
 topic_type:
 - apiref
-ms.openlocfilehash: 92e2901b2c228e4b774fbb1dbcc66cd0b4f82087
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2da65c2db5722f689f1a8588169ea099aff71be6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799023"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT (Método)
 
@@ -59,7 +60,7 @@ HRESULT RequestReJIT (
 |||  
 |E_OUTOFMEMORY|El CLR no pudo completar la solicitud porque se quedó sin memoria.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Llame a `RequestReJIT` para que el tiempo de ejecución recompile un conjunto especificado de funciones. Un generador de perfiles de código puede utilizar la interfaz [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) para ajustar el código que se genera cuando se vuelven a compilar las funciones. Esto no afecta a las funciones actualmente en ejecución, solo a futuras llamadas a funciones. Si alguna de las funciones especificadas ya se había recompilado con JIT, la solicitud de recompilación equivale a revertir y recompilar la función. Para conservar la reversibilidad, cuando el compilador JIT compila la versión original de una función, solo tiene en cuenta las versiones originales de los destinatarios para las decisiones de inserción. Cuando el compilador JIT recompila una función, tiene en cuenta las versiones actuales (recompiladas u originales) de los destinatarios para la inserción.  
   
@@ -75,7 +76,7 @@ HRESULT RequestReJIT (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo4 (Interfaz)](icorprofilerinfo4-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

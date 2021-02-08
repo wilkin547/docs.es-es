@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Isframeworkassembly ((función)'
 title: IsFrameworkAssembly (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-ms.openlocfilehash: 828c7660d6c006e700302d119ce4caf7d76e5d84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8f264df7b1ae5c494298b11ebd94cc93aed5543a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728568"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800024"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly (Función)
 
@@ -50,7 +51,7 @@ HRESULT IsFrameworkAssembly (
  `pccSize`  
  [in] Tamaño de `pwzFrameworkAssemblyIdentity`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `pwzAssemblyReference` parámetro es un puntero a una cadena de caracteres que contiene el nombre de un ensamblado.  
   
@@ -62,6 +63,6 @@ HRESULT IsFrameworkAssembly (
 
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Prebindassemblyex ((función)'
 title: PreBindAssemblyEx (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-ms.openlocfilehash: a729249f7b0681941a0b1a478dbe2c0d9d6cd01c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e94bd7c335555e8109df60a00cadc76f7e13434b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723966"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800011"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx (Función)
 
@@ -60,7 +61,7 @@ HRESULT PreBindAssemblyEx (
  `pvReserved`  
  [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `ppNamePostPolicy` parámetro de salida se establece solo si la función devuelve HRESULT FUSION_E_REF_DEF_MISMATCH. En caso contrario, es null.  
   
@@ -74,6 +75,6 @@ HRESULT PreBindAssemblyEx (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: modo de archivo incorrecto'
 title: Modo de archivo incorrecto
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 99b84902ddf032f2ecb6e26400e200bea862dfdf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: da792407fb37f5c206be7ff39da14d314ef1e2d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797086"
 ---
 # <a name="bad-file-mode"></a>Modo de archivo incorrecto
 
@@ -35,7 +36,7 @@ Las instrucciones usadas para manipular el contenido del archivo deben ser adecu
   
 - Use la funcionalidad disponible en el objeto `My.Computer.FileSystem` .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.FileSystem>
 - [Solución del problema: leer y escribir en archivos de texto](../../developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

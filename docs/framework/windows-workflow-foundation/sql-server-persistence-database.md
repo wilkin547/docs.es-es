@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: SQL Server la base de datos de persistencia'
 title: Base de datos de persistencia de SQL Server
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-ms.openlocfilehash: 536ab2c90dc67e30a8fb7c83f9da5b55d1aab9d1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9d893d497ed8de15267a4a7d45cc9d22ecc7a788
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261740"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798087"
 ---
 # <a name="sql-server-persistence-database"></a>Base de datos de persistencia de SQL Server
 

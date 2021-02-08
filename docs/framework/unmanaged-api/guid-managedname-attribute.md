@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: GUID_ManagedName atributo'
 title: GUID_ManagedName (Atributo)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11e18095-e444-47bc-aff6-b887ac5dc01e
 topic_type:
 - apiref
-ms.openlocfilehash: 0127b6894f1095521f1b24fc8c0424dc7db824b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c139e8bdc00aa3b008a706de0c42cfbf8e3510c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721054"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799998"
 ---
 # <a name="guid_managedname-attribute"></a>GUID_ManagedName (Atributo)
 
@@ -47,7 +48,7 @@ Define un atributo de interfaz personalizada que especifica el nombre de espacio
 EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1, 0x10, 0xe6, 0xd2, 0xf9);  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un atributo de interfaz personalizada define los metadatos de un objeto en la biblioteca de tipos.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRTask2:: EndPreventAsyncAbort ((método)'
 title: ICLRTask2::EndPreventAsyncAbort (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d8013659-e3df-44b3-814f-a6b534ce62f8
 topic_type:
 - apiref
-ms.openlocfilehash: 7f8963403c60815bbf1cd3008ed7fec73d849fea
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 964a68c1ad6d5aa6a95560d2870e135640283590
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720261"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799504"
 ---
 # <a name="iclrtask2endpreventasyncabort-method"></a>ICLRTask2::EndPreventAsyncAbort (Método)
 
@@ -41,7 +42,7 @@ HRESULT EndPreventAsyncAbort();
 |S_OK|El método se completó correctamente.|  
 |HOST_E_INVALIDOPERATION|Se llamó al método en un subproceso que no es el subproceso actual.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Al llamar a este método, se reduce el contador Delay-Thread-Abort del subproceso actual en uno.  
   
@@ -59,7 +60,7 @@ HRESULT EndPreventAsyncAbort();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método BeginPreventAsyncAbort](iclrtask2-beginpreventasyncabort-method.md)
 - [ICLRTask2 (Interfaz)](iclrtask2-interface.md)

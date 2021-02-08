@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRStrongName:: StrongNameKeyGenEx ((método)'
 title: ICLRStrongName::StrongNameKeyGenEx (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-ms.openlocfilehash: 9ba50616b25f9c7c592f19947c82a890ae6b5a4a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3ea2bef5cc6a45066d010fc925f8866e8129faaa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799569"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx (Método)
 
@@ -63,7 +64,7 @@ HRESULT StrongNameKeyGenEx (
 
  `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Las versiones .NET Framework 1,0 y 1,1 requieren un `dwKeySize` de 1024 bits para firmar un ensamblado con un nombre seguro; la versión 2,0 agrega admite claves de 2048 bits.  
   
@@ -79,7 +80,7 @@ HRESULT StrongNameKeyGenEx (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameKeyGen](iclrstrongname-strongnamekeygen-method.md)
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

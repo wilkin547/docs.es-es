@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Directiva de #ExternalSource'
 title: '#Directiva ExternalSource'
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: e4c7704c32c3a6c73e069d0b7129d5386696b438
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1f2e73aa152fbe2d97edcde912626696faacd5af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797242"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource (Directiva)
 
@@ -53,6 +54,6 @@ Indica una asignación entre líneas específicas de código fuente y texto exte
   
  Las directivas de origen externo no tienen ningún efecto en la compilación y no se pueden anidar. Están pensadas para uso interno de la aplicación únicamente.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Compilación condicional](../../programming-guide/program-structure/conditional-compilation.md)

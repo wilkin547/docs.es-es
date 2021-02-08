@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: EnumUserStrings ((método)'
 title: IMetaDataImport::EnumUserStrings (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-ms.openlocfilehash: c7dcc740dcf9b228713693a57dc8ef96d215ebad
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a4ead696f3d924fef9ebfed5c4f1eb97eb13e14e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716569"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799322"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings (Método)
 
@@ -58,7 +59,7 @@ HRESULT EnumUserStrings (
 |`S_OK`|`EnumUserStrings` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcStrings` es cero.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los tokens de cadena se crean mediante el método [IMetaDataEmit::D efineuserstring](imetadataemit-defineuserstring-method.md) . Este método está diseñado para que lo use un explorador de metadatos en lugar de un compilador.  
   
@@ -72,7 +73,7 @@ HRESULT EnumUserStrings (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

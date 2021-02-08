@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de IDENTITY_ATTRIBUTE'
 title: IDENTITY_ATTRIBUTE (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-ms.openlocfilehash: da4b1d6f2a7079ef33859fce29c9555ac06fcfc2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 52610961ab202fc79351073eac1846a1a63889e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725656"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800180"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE (Estructura)
 
@@ -35,7 +36,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
 } IDENTITY_ATTRIBUTE;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -43,7 +44,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszName`|Puntero a una cadena de caracteres terminada en null que contiene el nombre del atributo.|  
 |`pszValue`|Puntero a una cadena de caracteres terminada en null que contiene el valor del atributo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `IDENTITY_ATTRIBUTE` estructura contiene tres punteros a cadenas de caracteres terminadas en NULL. Estas tres cadenas describen un atributo.  
   
@@ -57,7 +58,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IDefinitionIdentity (Interfaz)](idefinitionidentity-interface.md)
 - [IDENTITY_ATTRIBUTE_BLOB (Estructura)](identity-attribute-blob-structure.md)

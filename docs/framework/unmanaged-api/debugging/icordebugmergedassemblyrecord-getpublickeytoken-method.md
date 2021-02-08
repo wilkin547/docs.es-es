@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugMergedAssemblyRecord:: Getpublickeytoken ((método)'
 title: ICorDebugMergedAssemblyRecord::GetPublicKeyT (método)
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-ms.openlocfilehash: c642d8af7e84288d3aa8912372a2f169b8f22503
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ff870355ddf521012e93ed01a63e32358ca95cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710576"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801072"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyT (método)
 
@@ -34,7 +35,7 @@ HRESULT GetPublicKeyToken(
  `pbPublicKeyToken`  
  [out] Puntero a una matriz de bytes que contiene el token de clave pública del ensamblado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El token de clave pública de un ensamblado son los últimos ocho bytes de un hash SHA1 de su clave pública.  
   
@@ -51,7 +52,7 @@ HRESULT GetPublicKeyToken(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

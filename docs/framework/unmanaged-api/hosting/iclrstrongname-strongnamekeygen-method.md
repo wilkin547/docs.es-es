@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRStrongName:: Strongnamekeygen ((método)'
 title: ICLRStrongName::StrongNameKeyGen (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac5c1245-9acf-4271-9c08-3d9b7c670df3
 topic_type:
 - apiref
-ms.openlocfilehash: 42a9fc1a05e97bbd893f0a2e77087e6524ad844f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c445e1f0290d907f7820c0000f602f2668f59103
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799566"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen (Método)
 
@@ -59,7 +60,7 @@ HRESULT StrongNameKeyGen (
 
  `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El método [ICLRStrongName:: strongnamekeygen (](iclrstrongname-strongnamekeygen-method.md) crea una clave de 1024 bits. Una vez recuperada la clave, debe llamar al método [ICLRStrongName:: StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md) para liberar la memoria asignada.  
   
@@ -73,7 +74,7 @@ HRESULT StrongNameKeyGen (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameKeyGenEx](iclrstrongname-strongnamekeygenex-method.md)
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

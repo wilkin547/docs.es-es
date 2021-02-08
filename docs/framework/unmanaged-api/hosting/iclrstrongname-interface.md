@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICLRStrongName'
 title: ICLRStrongName (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5565e864d35e68e714602b291a724a0ad9999a28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733638"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799673"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName (Interfaz)
 
@@ -55,7 +56,7 @@ Proporciona funciones estáticas globales básicas para firmar ensamblados con n
 |[Método StrongNameTokenFromAssemblyEx](iclrstrongname-strongnametokenfromassemblyex-method.md)|Crea un token de nombre seguro desde el archivo de ensamblado especificado y devuelve la clave pública.|  
 |[Método StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)|Obtiene un token que representa una clave pública.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede obtener una instancia de llamando al `ICLRStrongName` método [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) usando `CLSID_CLRStrongName` y `IID_ICLRStrongName` como parámetros.  
   
@@ -69,7 +70,7 @@ Proporciona funciones estáticas globales básicas para firmar ensamblados con n
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)
 - [Hospedar aplicaciones de WPF](index.md)

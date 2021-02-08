@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de COR_GC_STATS'
 title: COR_GC_STATS (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 53a70c53a06ac55a2dab7c646018d63189ee0b36
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9b1002f462fb9b447e521cd1b3e5c78297eefc04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726228"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799814"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS (Estructura)
 
@@ -43,7 +44,7 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -59,7 +60,7 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen0`|Tamaño, en kilobytes, de los objetos promovidos de la generación cero a la generación uno.|  
 |`KBytesPromotedFromGen1`|Tamaño, en kilobytes, de los objetos promovidos de la generación de uno a la generación dos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El método [ICLRGCManager:: getstats (](iclrgcmanager-getstats-method.md) requiere que el `Flags` campo de la `COR_GC_STATS` estructura se establezca en uno o más valores de la enumeración [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md) para especificar qué estadísticas se van a establecer.  
   
@@ -87,7 +88,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de hospedaje](hosting-structures.md)
 - [Administración automática de la memoria](../../../standard/automatic-memory-management.md)

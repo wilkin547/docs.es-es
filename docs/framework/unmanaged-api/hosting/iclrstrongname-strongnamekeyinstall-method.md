@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRStrongName:: StrongNameKeyInstall ((método)'
 title: ICLRStrongName::StrongNameKeyInstall (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-ms.openlocfilehash: 7e0c689dad0c288e3af3a3d64ee1bba1c44053c1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8f9e7bfebff555a6430a3970c8ee1c481e341f58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799517"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall (Método)
 
@@ -51,7 +52,7 @@ HRESULT StrongNameKeyInstall (
 
  `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Use el método [ICLRStrongName:: StrongNameKeyDelete (](iclrstrongname-strongnamekeydelete-method.md) para eliminar el contenedor de claves.  
   
@@ -65,7 +66,7 @@ HRESULT StrongNameKeyInstall (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameKeyDelete](iclrstrongname-strongnamekeydelete-method.md)
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

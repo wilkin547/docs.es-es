@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeHost:: ExecuteInAppDomain ((método)'
 title: ICLRRuntimeHost::ExecuteInAppDomain (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-ms.openlocfilehash: 4c28c4a5cc64b20c9ac9c57e1aef5e7b90a20e01
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6640713b55e05817f39af819d5e41ee1f2a10b68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728893"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799751"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain (Método)
 
@@ -58,7 +59,7 @@ HRESULT ExecuteInAppDomain(
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `ExecuteInAppDomain` permite que el host ejerza el control sobre <xref:System.AppDomain> el que se debe ejecutar el método administrado especificado. Puede obtener el valor del identificador de un dominio de aplicación, que se corresponde con el valor de la <xref:System.AppDomain.Id%2A> propiedad, llamando al [método GetCurrentAppDomainId (](iclrruntimehost-getcurrentappdomainid-method.md).  
   
@@ -72,6 +73,6 @@ HRESULT ExecuteInAppDomain(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRRuntimeHost (Interfaz)](iclrruntimehost-interface.md)

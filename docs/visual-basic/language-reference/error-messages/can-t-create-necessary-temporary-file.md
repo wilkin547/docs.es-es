@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: no se puede crear el archivo temporal necesario'
 title: No se puede crear el archivo temporal necesario
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
-ms.openlocfilehash: c6d8e471796a0fb745289df8b3d1b156265949ca
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 52d68b720d9f8797183cf773da45f02ceca0224d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796826"
 ---
 # <a name="cant-create-necessary-temporary-file"></a>No se puede crear el archivo temporal necesario
 
@@ -25,6 +26,6 @@ La unidad está llena que contiene el directorio especificado por la variable de
   
 4. Quite la restricción de solo lectura de la unidad o el directorio especificado actualmente.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de errores](../../programming-guide/language-features/error-types.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)

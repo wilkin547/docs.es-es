@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IXCLRDataMethodDefinition:: StartEnumInstances (método)'
 title: 'IXCLRDataMethodDefinition:: StartEnumInstances (método)'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: b0c37c666f23f04239ed827246b87c43ee8d5ad9
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 74de6360c90766cfec17e6b88a495fe2a70858b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420934"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800830"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition:: StartEnumInstances (método)
 
@@ -56,7 +57,7 @@ El método proporcionado forma parte de la `IXCLRDataMethodDefinition` interfaz 
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Enumeración CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Depuración](index.md)

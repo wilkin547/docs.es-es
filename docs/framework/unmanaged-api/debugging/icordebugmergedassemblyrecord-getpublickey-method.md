@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugMergedAssemblyRecord:: GetPublicKey ((método)'
 title: ICorDebugMergedAssemblyRecord::GetPublicKey (método)
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-ms.openlocfilehash: e89ecca25edb0d7eae3a7e65f9585d71ad4ace4d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 15175b0d02773bcbce46bfaec9ce1de3021b7dde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710602"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801103"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKey (método)
 
@@ -33,7 +34,7 @@ HRESULT GetPublicKey(
  `pbPublicKey`  
  [out] Puntero a una matriz de bytes que contiene la clave pública del ensamblado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -48,7 +49,7 @@ HRESULT GetPublicKey(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

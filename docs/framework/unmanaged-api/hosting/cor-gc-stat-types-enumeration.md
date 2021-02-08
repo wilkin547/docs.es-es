@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración COR_GC_STAT_TYPES'
 title: COR_GC_STAT_TYPES (enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-ms.openlocfilehash: c14e27b67fc600e2684f8c967af30bb9a5cee126
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c4ea3175c777d49a5d6cffdf506f42e479784971
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716749"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799816"
 ---
 # <a name="cor_gc_stat_types-enumeration"></a>COR_GC_STAT_TYPES (enumeración)
 
@@ -34,11 +35,11 @@ typedef enum {
 } COR_GC_STAT_TYPES;  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta enumeración especifica qué estadísticas de la estructura de [COR_GC_STATS](cor-gc-stats-structure.md) se van a establecer mediante el método [ICLRGCManager:: getstats (](iclrgcmanager-getstats-method.md) .  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -53,7 +54,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [COR_GC_STATS (Estructura)](cor-gc-stats-structure.md)
 - [Enumeraciones para hosts](hosting-enumerations.md)
