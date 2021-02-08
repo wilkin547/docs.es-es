@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <netMsmqBinding>'
 title: <security> de <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 32b066fdf4d8edbbd36fdff7b14bdec87ddc970d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1b60d9e390e371555f4c3abf4988e79bb0f04fe8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170082"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786855"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<security> de \<netMsmqBinding>
 
@@ -56,7 +57,7 @@ Define la configuración de seguridad de un enlace MSMQ. Especifica si se habili
 |-------------|-----------------|  
 |binding|El elemento de enlace del [\<netMsmqBinding>](netmsmqbinding.md)|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>
 - <xref:System.ServiceModel.NetMsmqBinding.Security%2A>

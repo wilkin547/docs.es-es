@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <remove> del <claimTypeRequirements> elemento'
 title: <remove> del <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 773f37156969f64f02711e6a60764aeb7e50a840
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2ec917d27966954382e5b091fd538168b48b5ffb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181328"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786907"
 ---
 # <a name="remove-of-claimtyperequirements-element"></a>\<remove> del \<claimTypeRequirements> elemento
 
@@ -51,7 +52,7 @@ Especifica los tipos de notificaciones que se van a quitar en la credencial alia
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|Especifica una colección de tipos de notificación requeridos. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>

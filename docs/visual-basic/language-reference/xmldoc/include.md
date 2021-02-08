@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <include> (Visual Basic)'
 title: <include>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: df8749ca9d6c92cf9ef95f03eea2704812ff495a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8207b74ed74bd529f2da865777e287320b23d293
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787466"
 ---
 # <a name="include-visual-basic"></a>\<include> (Visual Basic)
 
@@ -25,18 +26,18 @@ Hace referencia a otro archivo que describe los tipos y miembros en el código f
 ## <a name="parameters"></a>Parámetros  
 
  `filename`  
- Obligatorio. El nombre del archivo que contiene la documentación. El nombre de archivo se puede calificar con una ruta de acceso. Escribir `filename` entre comillas dobles ("").  
+ Necesario. El nombre del archivo que contiene la documentación. El nombre de archivo se puede calificar con una ruta de acceso. Escribir `filename` entre comillas dobles ("").  
   
  `tagpath`  
- Obligatorio. La ruta de acceso de las etiquetas de `filename` que conduce a la etiqueta `name`. Escriba la ruta de acceso entre comillas dobles ("").  
+ Necesario. La ruta de acceso de las etiquetas de `filename` que conduce a la etiqueta `name`. Escriba la ruta de acceso entre comillas dobles ("").  
   
  `name`  
- Obligatorio. Especificador de nombre en la etiqueta que precede a los comentarios. `Name` tendrá una `id` .  
+ Necesario. Especificador de nombre en la etiqueta que precede a los comentarios. `Name` tendrá una `id` .  
   
  `id`  
- Obligatorio. El identificador de la etiqueta que precede a los comentarios. Incluya el identificador entre comillas simples (' ').  
+ Necesario. El identificador de la etiqueta que precede a los comentarios. Incluya el identificador entre comillas simples (' ').  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Use la `<include>` etiqueta para hacer referencia a los comentarios de otro archivo que describen los tipos y miembros en el código fuente. Esto es una alternativa a colocar los comentarios de documentación directamente en el archivo de código fuente.  
   
@@ -63,6 +64,6 @@ Hace referencia a otro archivo que describe los tipos y miembros en el código f
 </Docs>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Etiquetas de comentario XML](index.md)

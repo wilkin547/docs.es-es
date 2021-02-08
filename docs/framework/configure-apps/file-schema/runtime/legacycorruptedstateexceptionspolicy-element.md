@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <legacyCorruptedStateExceptionsPolicy> elemento'
 title: <legacyCorruptedStateExceptionsPolicy> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-ms.openlocfilehash: f36e27a1b85cff2ba8c7e838bace37890a5aa760
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 34082c0779b09400a875894359cf7cf501173508
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151212"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786959"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> (Elemento)
 
@@ -38,7 +39,7 @@ Especifica si el Common Language Runtime permite al código administrado detecta
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`false`|La aplicación no detectará errores de excepción de estado dañados, como infracciones de acceso. Este es el valor predeterminado.|  
 |`true`|La aplicación detectará errores de excepción de estado dañados, como infracciones de acceso.|  
@@ -54,7 +55,7 @@ Especifica si el Common Language Runtime permite al código administrado detecta
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En la .NET Framework versión 3,5 y versiones anteriores, el Common Language Runtime permitía que el código administrado detectara las excepciones que se producían con Estados de proceso dañados. Una infracción de acceso es un ejemplo de este tipo de excepción.  
   

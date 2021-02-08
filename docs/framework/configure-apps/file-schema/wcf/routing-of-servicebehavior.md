@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <routing> de <serviceBehavior>'
 title: <routing> de <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: cd53b720bad5752189f1c30d9e4acd3a66830396
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1d8a056d708b3c42aeccf3e46a0703b3fc78a17d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150887"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786894"
 ---
 # <a name="routing-of-servicebehavior"></a>\<routing> de \<serviceBehavior>
 
@@ -43,7 +44,7 @@ Proporciona acceso en tiempo de ejecución al servicio de enrutamiento para perm
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |filterTable|Cadena que especifica el nombre de la tabla de enrutamiento que contiene filtros que va a evaluar el servicio del enrutamiento. Este valor debe coincidir con el `name` atributo de un [\<filterTable>](filtertable.md) elemento de la [\<filterTables>](filtertables.md) sección.|  
-|routeOnHeaderOnly|Valor booleano que especifica si el filtro examinará el cuerpo del mensaje y el encabezado, o solo el encabezado. El valor predeterminado es `true`.|  
+|routeOnHeaderOnly|Valor booleano que especifica si el filtro examinará el cuerpo del mensaje y el encabezado, o solo el encabezado. De manera predeterminada, es `true`.|  
 |soapProcessingEnabled|Valor booleano que especifica si se debe producir el procesamiento SOAP.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -56,7 +57,7 @@ Proporciona acceso en tiempo de ejecución al servicio de enrutamiento para perm
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Cuando se agrega a la configuración del comportamiento del servicio, este elemento de configuración habilita el enrutamiento para el servicio. Puede especificar la tabla de enrutamiento real que va a usar el servicio en este elemento.  
   

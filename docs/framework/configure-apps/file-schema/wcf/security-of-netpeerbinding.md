@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <netPeerBinding>'
 title: <security> de <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 543c57d6b2dba1ff5934b49e0e219cf2e5cad153
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f67cfa445a5a605b99783cfd67dd1bae6e17b51e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786842"
 ---
 # <a name="security-of-netpeerbinding"></a>\<security> de \<netPeerBinding>
 
@@ -46,7 +47,7 @@ Define la configuración de seguridad de [\<netPeerTcpBinding>](netpeertcpbindin
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Mensaje|La seguridad SOAP proporciona autenticación, integridad y confidencialidad.|  
+|Message|La seguridad SOAP proporciona autenticación, integridad y confidencialidad.|  
 |None|La seguridad está deshabilitada.|  
 |Transporte|La seguridad se proporciona utilizando HTTPS.|  
 |TransportWithMessageCredential|HTTPS proporciona autenticación y confidencialidad. Los mensajes SOAP proporcionan tipos de credencial enriquecidos.|  
@@ -67,7 +68,7 @@ Define la configuración de seguridad de [\<netPeerTcpBinding>](netpeertcpbindin
 
  La seguridad puede ser específica de los mensajes o del transporte.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>

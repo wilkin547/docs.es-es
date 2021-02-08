@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <etwEnable> elemento'
 title: <etwEnable> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
 - <etwEnable> element
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
-ms.openlocfilehash: 1c3e42dfbc2c27841ed065e90bad24575e4fb2b1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 224784f47d15788ded41a5756e1d179a5a25907b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178273"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787050"
 ---
 # <a name="etwenable-element"></a>\<etwEnable> (Elemento)
 
@@ -73,7 +74,7 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

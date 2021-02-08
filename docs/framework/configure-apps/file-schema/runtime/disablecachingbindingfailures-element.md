@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <disableCachingBindingFailures> elemento'
 title: <disableCachingBindingFailures> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-ms.openlocfilehash: c9e608bfd54b641564a9095076455e10dd8653fb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b1f36f6a8fc7c78a0dc90ecc78ad725b677fdf40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787115"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> (Elemento)
 
@@ -83,7 +84,7 @@ Especifica si se va a deshabilitar el almacenamiento en caché de errores de enl
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <security> de <peerTransport>'
 title: <security> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: f37c336b0e42993e1eef3f06e2f919705f425a2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 592f886377a2d5f2008be900a9e7586385fb3782
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169965"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786829"
 ---
 # <a name="security-of-peertransport"></a>\<security> de \<peerTransport>
 
@@ -60,7 +61,7 @@ Contiene la configuración de seguridad asociada con un canal del mismo nivel, i
 |-------------|-----------------|  
 |[\<peerTransport>](peertransport.md)|Define un transporte del mismo nivel para un enlace personalizado.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings>

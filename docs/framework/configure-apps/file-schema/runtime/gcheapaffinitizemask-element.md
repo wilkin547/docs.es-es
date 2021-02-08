@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: <GCHeapAffinitizeMask> elemento'
 title: Elemento GCHeapAffinitizeMask
 ms.date: 11/08/2019
 helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
-ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ea6be3fa3d973f228576db69d0700b1f7ddba585
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73978424"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786985"
 ---
 # <a name="gcheapaffinitizemask-element"></a>Elemento \<GCHeapAffinitizeMask>
 
@@ -53,7 +54,7 @@ Ninguno.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 De forma predeterminada, los subprocesos de GC de servidor son afinidad cons con su CPU respectiva, de modo que hay un montón de GC, un subproceso de GC de servidor y un subproceso de GC de servidor en segundo plano para cada procesador. A partir de .NET Framework 4.6.2, puede usar el elemento **GCHeapAffinitizeMask** para controlar la afinidad entre los montones y los procesadores de GC del servidor cuando el número de montones está limitado por el elemento **GCHeapCount** .
 
@@ -85,7 +86,7 @@ En el ejemplo siguiente se indica que una aplicación usa un GC de servidor con 
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [Elemento GCNoAffinitize](gcnoaffinitize-element.md)

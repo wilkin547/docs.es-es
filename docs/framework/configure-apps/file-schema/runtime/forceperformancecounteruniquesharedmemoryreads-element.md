@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <forcePerformanceCounterUniqueSharedMemoryReads> elemento'
 title: <forcePerformanceCounterUniqueSharedMemoryReads> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-ms.openlocfilehash: 719448ba3de2aca0621fc17b9fadbdd3b8588f2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 63fe695cc993faa851a9ea3196294397d2992c45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787037"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> (Elemento)
 
@@ -66,7 +67,7 @@ enabled="true|false"/>
 > [!NOTE]
 > Al habilitar el elemento no se `<forcePerformanceCounterUniqueSharedMemoryReads>` garantiza que se utilice la memoria compartida específica de la categoría. Establecer habilitado `true` solo hace que PerfCounter.dll haga referencia al valor del Registro CategoryOptions. La configuración predeterminada de CategoryOptions es usar la memoria compartida específica de la categoría. sin embargo, puede cambiar CategoryOptions para indicar que se debe usar la memoria compartida global.  
   
- La clave del registro que contiene el valor de CategoryOptions es HKEY_LOCAL_MACHINE \System\CurrentControlSet\Services \\<categoryName \> \Performance. De forma predeterminada, CategoryOptions se establece en 3, lo que indica a PerfCounter.dll que use la memoria compartida específica de la categoría. Si CategoryOptions se establece en 0, PerfCounter.dll usa la memoria compartida global. Los datos de instancia se reutilizarán solo si el nombre de la instancia que se va a crear es idéntico a la instancia que se va a reutilizar. Todas las versiones podrán escribir en la categoría. Si CategoryOptions está establecido en 1, se usa la memoria compartida global, pero se pueden volver a usar los datos de instancia si el nombre de la categoría tiene la misma longitud que la categoría que se va a reutilizar.  
+ La clave del registro que contiene el valor de CategoryOptions es HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\<categoryName \> \Performance. De forma predeterminada, CategoryOptions se establece en 3, lo que indica a PerfCounter.dll que use la memoria compartida específica de la categoría. Si CategoryOptions se establece en 0, PerfCounter.dll usa la memoria compartida global. Los datos de instancia se reutilizarán solo si el nombre de la instancia que se va a crear es idéntico a la instancia que se va a reutilizar. Todas las versiones podrán escribir en la categoría. Si CategoryOptions está establecido en 1, se usa la memoria compartida global, pero se pueden volver a usar los datos de instancia si el nombre de la categoría tiene la misma longitud que la categoría que se va a reutilizar.  
   
  Los valores 0 y 1 pueden dar lugar a pérdidas de memoria y al rellenar la memoria del contador de rendimiento.  
   
@@ -82,7 +83,7 @@ enabled="true|false"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

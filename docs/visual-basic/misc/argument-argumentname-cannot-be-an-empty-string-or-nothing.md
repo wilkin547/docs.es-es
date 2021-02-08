@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: el argumento <argumentname> no puede ser una cadena vacía ni nada'
 title: El argumento '<argumentname>' no puede ser una cadena vacía ni Nothing
 ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_ArgumentEmptyOrNothing_Name
 ms.assetid: 2c458944-1bdf-4ea7-9caf-560ca7582cc0
-ms.openlocfilehash: a0367405979fd79f01b069d6b0e5bb0c4b530788
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 13e7b420ef84eb6ff050dee6046297b77a51b6e1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787284"
 ---
 # <a name="argument-argumentname-cannot-be-an-empty-string-or-nothing"></a>El argumento '\<argumentname>' no puede ser una cadena vacía ni Nothing
 
@@ -21,6 +22,6 @@ El argumento requiere un valor que no sea una cadena vacía ("") ni tener el val
   
 ## <a name="see-also"></a>Vea también
 
-- [Tipos de errores](../programming-guide/language-features/error-types.md)
+- [Tipos de error](../programming-guide/language-features/error-types.md)
 - [Nothing](../language-reference/nothing.md)
 - <xref:System.NullReferenceException>

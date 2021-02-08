@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <gcAllowVeryLargeObjects> elemento'
 title: gcAllowVeryLargeObjects (elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-ms.openlocfilehash: 1e54b0780ffb5bbe81ab1be2b376ff7a038ee05c
-ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
+ms.openlocfilehash: ff8380a13c4284cc24178e185344207c3b9a39b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2021
-ms.locfileid: "98058134"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787024"
 ---
 # <a name="gcallowverylargeobjects-element"></a>Elemento \<gcAllowVeryLargeObjects>
 
@@ -34,7 +35,7 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
   
 ### <a name="enabled-attribute"></a>atributo Enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`false`|Las matrices con un tamaño total superior a 2 GB no están habilitadas. Este es el valor predeterminado.|  
 |`true`|Las matrices con un tamaño total superior a 2 GB se habilitan en plataformas de 64 bits.|  
@@ -50,7 +51,7 @@ Ninguno.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El uso de este elemento en el archivo de configuración de la aplicación permite utilizar matrices con un tamaño superior a 2 GB, pero no cambia otros límites de tamaño de objetos o matrices:  
   
@@ -79,7 +80,7 @@ Ninguno.
 
 .NET Framework 4,5 y versiones posteriores
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

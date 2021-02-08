@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <enforceFIPSPolicy> elemento'
 title: <enforceFIPSPolicy> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <enforceFIPSPolicy> element
 - Federal Information Processing Standards (FIPS)
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
-ms.openlocfilehash: 864a371d4ad10585e672452ad85cc09d4b684068
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d445570db634867a15b6d97d4e20186bd0641c2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158843"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787076"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy> (Elemento)
 
@@ -56,7 +57,7 @@ Especifica si se debe exigir un requisito de configuración del equipo que indiq
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  A partir del .NET Framework 2,0, la creación de clases que implementan algoritmos criptográficos se controla mediante la configuración del equipo. Si el equipo está configurado para requerir que los algoritmos sean compatibles con FIPS, y una clase implementa un algoritmo que no es compatible con FIPS, cualquier intento de crear una instancia de esa clase produce una excepción. Los constructores producen una <xref:System.InvalidOperationException> excepción y `Create` los métodos producen una <xref:System.Reflection.TargetInvocationException> excepción con una <xref:System.InvalidOperationException> excepción interna.  
   
@@ -74,7 +75,7 @@ Especifica si se debe exigir un requisito de configuración del equipo que indiq
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <EnableAmPmParseAdjustment> elemento'
 title: <EnableAmPmParseAdjustment> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-ms.openlocfilehash: f935f213e1bca8dac7a5401970bc6183575e2301
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 86fd04ab536f44f0cffdb5a37f4718fc03698485
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167234"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787063"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment> (Elemento)
 
@@ -80,7 +81,7 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
   
 |Nombre de referencia cultural|habilitado = "0"|habilitado = "1"|  
 |------------------|------------------|------------------|  
-|en-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
+|es-ES|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Vea también

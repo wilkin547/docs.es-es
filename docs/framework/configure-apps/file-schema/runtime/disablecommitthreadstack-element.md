@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <disableCommitThreadStack> elemento'
 title: <disableCommitThreadStack> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <disableCommitThreadStack> element
 - disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-ms.openlocfilehash: f717f57fe8670b126ed1468713a2114aaa772762
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f80a23b12f67b9f3df1ddb010edb735225f6f7a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787102"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack> (Elemento)
 
@@ -76,7 +77,7 @@ Especifica si se confirma la pila de subprocesos completa cuando se inicia un su
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
