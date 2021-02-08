@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Personalizar proyectos y ampliar My con Visual Basic'
 title: Personalización de proyectos y extensión de My
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: e6ed43aeff90295f71590bcee180ca1e0f88e5ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 69a8bdff78fcfda03ab03ef89b7407fb230c17bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330341"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775466"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizar proyectos y ampliar My con Visual Basic
 

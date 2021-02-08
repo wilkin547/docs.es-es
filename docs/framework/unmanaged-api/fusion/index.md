@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Fusión (Referencia de la API no administrada)'
 title: Fusión (Referencia de la API no administrada)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], fusion
 - fusion [.NET Framework], using the unmanaged API
 ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
-ms.openlocfilehash: ae3e3dd09a8509665f70527371afcc73adef049b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ee1d8c22ce5db8c13b22ed84dbf981803993fa56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728594"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800063"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusión (Referencia de la API no administrada)
 
