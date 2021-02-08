@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: importar WSDL personalizado'
 title: Procedimiento para importar el WSDL personalizado
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: c5aa554394743314a91afd6a5cdf86f9974e81f8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f21e5cace532bd6d20d409f297480f65bb23cbf4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249090"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780744"
 ---
 # <a name="how-to-import-custom-wsdl"></a>Procedimiento para importar el WSDL personalizado
 

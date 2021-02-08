@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: StrongNameKeyDelete ((función)'
 title: StrongNameKeyDelete (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 313e71e4-1790-4d2f-b68b-5040ebd1c149
 topic_type:
 - apiref
-ms.openlocfilehash: d37f990241ae704abef55d863da0f40a31284837
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9314d961f79e673925125c2362308f9ab4533e75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141586"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781212"
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete (Función)
 
@@ -42,13 +43,13 @@ de Nombre del contenedor de claves que se va a eliminar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-`true` cuando se complete correctamente; de lo contrario, `false`.
+`true` Cuando se complete correctamente; en caso contrario, `false` .
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Utilice la función [StrongNameKeyInstall (](strongnamekeyinstall-function.md) para importar un par de claves pública y privada en un contenedor.
 
-Si la función `StrongNameKeyDelete` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.
+Si la `StrongNameKeyDelete` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,12 +57,12 @@ Si la función `StrongNameKeyDelete` no se completa correctamente, llame a la fu
 
 **Encabezado:** StrongName. h
 
-**Biblioteca:** Se incluye como recurso en MsCorEE. dll
+**Biblioteca:** Se incluye como un recurso en MsCorEE.dll
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Vea también
 
-- [StrongNameKeyDelete (método)](../hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [StrongNameKeyInstall (método)](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [Método StrongNameKeyInstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe)'
 title: Herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: ee0fb5f08446b03485f97de0037e898415016fea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 81bfcbd468cb5401646a49967b6381b48e2f7cf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781069"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe)
 
@@ -22,7 +23,7 @@ La herramienta de línea de comandos de configuración del modelo de servicios C
 ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | ApplicationName>] [/contract:<ClassID | ProgID | *,InterfaceID | InterfaceName | *>] [/hosting:<complus | was>] [/webSite:<WebsiteName>] [/webDirectory:<WebDirectoryName>] [/mex] [/id] [/nologo] [/verbose] [/help] [/partial]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Debe ser un administrador en el equipo local para utilizar ComSvcConfig.exe.  

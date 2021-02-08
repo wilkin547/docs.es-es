@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. Channels. MsmqEnteredBatch'
 title: System.ServiceModel.Channels.MsmqEnteredBatch
 ms.date: 03/30/2017
 ms.assetid: 5b787c18-1962-4083-93d1-adb680295189
-ms.openlocfilehash: 1683c688a2ded0ecea1563408645a4f66ef7cc01
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 280e0938fbc812ddf27ea6e4b65ab2fca97fad1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252704"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781017"
 ---
 # <a name="systemservicemodelchannelsmsmqenteredbatch"></a>System.ServiceModel.Channels.MsmqEnteredBatch
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Strongnamehashsize ((función)'
 title: StrongNameHashSize (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 738c98d7-a60c-45fe-a296-220af05e6991
 topic_type:
 - apiref
-ms.openlocfilehash: 1116fcde754f966a783f4fdca85df8bd3ca1b0ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e6700bfce3ba480814f3837011c5f8f7107bbd5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724447"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781251"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize (Función)
 
@@ -48,7 +49,7 @@ BOOLEAN StrongNameHashSize (
 
  `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si la `StrongNameHashSize` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
@@ -62,7 +63,7 @@ BOOLEAN StrongNameHashSize (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameHashSize](../hosting/iclrstrongname-strongnamehashsize-method.md)
 - [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

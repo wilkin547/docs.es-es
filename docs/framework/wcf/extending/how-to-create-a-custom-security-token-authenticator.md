@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: crear un autenticador de tokens de seguridad personalizado'
 title: 'Cómo: crear un autenticador de tokens de seguridad personalizado'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: 667dc82502ba881b067b5588271947f7c18c8810
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dd1dbd413638ab8693ec5ac3454d9fac9b26565b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249259"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780757"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Cómo: crear un autenticador de tokens de seguridad personalizado
 
@@ -26,9 +27,9 @@ En este tema se muestra cómo crear un autenticador de tokens de seguridad perso
   
 1. Defina una clase nueva derivada de la clase <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>.  
   
-2. Invalide el método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A>. El método devuelve `true` o `false` en función de si el autenticador personalizado puede validar el tipo de token entrante o no.  
+2. Invalide el método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> . El método devuelve `true` o `false` en función de si el autenticador personalizado puede validar el tipo de token entrante o no.  
   
-3. Invalide el método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. Este método necesita validar adecuadamente el contenido del token. Si el token pasa la fase de la validación, devuelve una colección de instancias <xref:System.IdentityModel.Policy.IAuthorizationPolicy>. El ejemplo siguiente utiliza una implementación de la directiva de autorización personalizada que se creará en el procedimiento siguiente.  
+3. Invalide el método <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> . Este método necesita validar adecuadamente el contenido del token. Si el token pasa la fase de la validación, devuelve una colección de instancias <xref:System.IdentityModel.Policy.IAuthorizationPolicy>. El ejemplo siguiente utiliza una implementación de la directiva de autorización personalizada que se creará en el procedimiento siguiente.  
   
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
