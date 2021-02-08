@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorProfilerCallback9'
 title: Interfaz ICorProfilerCallback9
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 23b91a2a58c6e76b31b94e0fa3661dfbc8e18e33
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4bfcaf6f8985909ef9142ef4d08535a19facd7e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712773"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781654"
 ---
 # <a name="icorprofilercallback9-interface"></a>Interfaz ICorProfilerCallback9
 
@@ -35,7 +36,7 @@ ms.locfileid: "95712773"
   
 **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [Interfaz ICorProfilerCallback8](icorprofilercallback9-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerCallback8::D ynamicMethodJITCompilationStarted (método)'
 title: ICorProfilerCallback8::D método ynamicMethodJITCompilationStarted
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 46a25fc6e9119481f728275e0569429cc6c46dc9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 186b41564e0aabb069b06356b8eccbe90296ec4b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725435"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781706"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D método ynamicMethodJITCompilationStarted
 
@@ -44,7 +45,7 @@ Identificador de la función en memoria para la que se inicia la compilación JI
 
 [in] `cbILHeader` Número de bytes del encabezado IL.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
 Esta devolución de llamada se desencadena cada vez que se compila un método dinámico. Esto incluye varios códigos auxiliares de IL y métodos LCG. Su objetivo es proporcionar a los escritores de Profiler información suficiente para identificar el método compilado para los usuarios.
 
@@ -63,7 +64,7 @@ El `pILHeader` puntero solo es válido durante la devolución de llamada.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [Interfaz ICorProfilerCallback8](icorprofilercallback8-interface.md)

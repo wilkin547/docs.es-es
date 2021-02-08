@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerFunctionControl:: Setcodegenflags ((método)'
 title: ICorProfilerFunctionControl::SetCodegenFlags (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2d5daa5-b990-4ae5-bf2a-c0862fe58bd7
 topic_type:
 - apiref
-ms.openlocfilehash: 3593b07759b4d6feee239042e5aabaf0876fdd1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 61fa8be0993a06a3b2d352af408ac47b7b30e385
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716309"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781628"
 ---
 # <a name="icorprofilerfunctioncontrolsetcodegenflags-method"></a>ICorProfilerFunctionControl::SetCodegenFlags (Método)
 
@@ -38,7 +39,7 @@ HRESULT SetCodegenFlags(
  `flags`  
  de Una o varias marcas de la enumeración [COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El generador de perfiles obtiene una instancia de esta interfaz a través de la devolución de llamada [ICorProfilerCallback4:: getrejitparameters (](icorprofilercallback4-getrejitparameters-method.md) . `SetCodegenFlags` permite al generador de perfiles controlar la generación de código para la función recompilada. Como con todos los demás parámetros de recompilación JIT, las marcas de generación de código se aplican a todas las instancias de la función.  
   
@@ -54,6 +55,6 @@ HRESULT SetCodegenFlags(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerFunctionControl (Interfaz)](icorprofilerfunctioncontrol-interface.md)

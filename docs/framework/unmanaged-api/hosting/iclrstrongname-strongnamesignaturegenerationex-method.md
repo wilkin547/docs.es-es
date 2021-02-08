@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRStrongName:: StrongNameSignatureGenerationEx ((método)'
 title: ICLRStrongName::StrongNameSignatureGenerationEx (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 78cc043953e6288df136b43590831569d112afef
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 911f55aa509c25eb0d95d6d2a31c9f715af2080d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781875"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx (Método)
 
@@ -77,7 +78,7 @@ HRESULT StrongNameSignatureGenerationEx (
 
  `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Especifique NULL para `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
@@ -97,7 +98,7 @@ HRESULT StrongNameSignatureGenerationEx (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

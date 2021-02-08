@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRStrongName:: Strongnamesignatureverification ((método)'
 title: ICLRStrongName::StrongNameSignatureVerification (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 734dc4d1-0a76-4736-b5ac-cb4253b3dd49
 topic_type:
 - apiref
-ms.openlocfilehash: 2d53eebcc272ab87a2af5b3c081ca37dde5c74b9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 985a00ffe464f2dd6a92c299dae14206fd37a898
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674481"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781849"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification (Método)
 
@@ -75,7 +76,7 @@ HRESULT StrongNameSignatureVerification (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameSignatureVerificationEx](iclrstrongname-strongnamesignatureverificationex-method.md)
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRTask:: Needspriorityscheduling ((método)'
 title: ICLRTask::NeedsPriorityScheduling (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c9db3f3-26bf-4317-88de-5eb926a22a1d
 topic_type:
 - apiref
-ms.openlocfilehash: 86e0899b883f09f2e7b27c0f957e943deb73bb66
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e6e1b93b38d86259dc2f405f8512ec1063fe7b3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690803"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781771"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling (Método)
 
@@ -50,7 +51,7 @@ HRESULT NeedsPriorityScheduling (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En situaciones en las que la tarea está próxima a ser recopilada por el recolector de elementos no utilizados, CLR establece el valor de `pbNeedsPriorityScheduling` en `true` , lo que indica una reprogramación de prioridad alta. Esto permite que el host vuelva a programar la tarea rápidamente, con lo que se reduce la posibilidad de retrasos en la recolección de elementos no utilizados y se habilita el host y el tiempo de ejecución para cooperar en la reserva de recursos de memoria.  
   
@@ -64,7 +65,7 @@ HRESULT NeedsPriorityScheduling (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

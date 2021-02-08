@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRPolicyManager:: SetTimeout (método)'
 title: ICLRPolicyManager::SetTimeout (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 954404fd-d52d-4e68-b582-8692f3a5f608
 topic_type:
 - apiref
-ms.openlocfilehash: 459c5bc0699487b62d5dcf76f1044faf53ebab8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5fb65e93cc6eea7826498ff6b03147773f06e0b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732468"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781901"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout (Método)
 
@@ -73,7 +74,7 @@ HRESULT SetTimeout (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EClrOperation (Enumeración)](eclroperation-enumeration.md)
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)
