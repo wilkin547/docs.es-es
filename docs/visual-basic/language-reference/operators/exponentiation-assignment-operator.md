@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ^ = (operador) (Visual Basic)'
 title: ^= (Operador)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: a956ffdaa3456ed09443f25c3383b6aab52fb5bf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5894fdbedb411c6324a9355bd2d335bb6c6c5867
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773893"
 ---
 # <a name="-operator-visual-basic"></a>^= (Operador, Visual Basic)
 
@@ -29,12 +30,12 @@ variableorproperty ^= expression
 ## <a name="parts"></a>Partes  
 
  `variableorproperty`  
- Obligatorio. Cualquier variable o propiedad numérica.  
+ Necesario. Cualquier variable o propiedad numérica.  
   
  `expression`  
  Obligatorio. Cualquier expresión numérica.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El elemento del lado izquierdo del `^=` operador puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o la propiedad no pueden ser de [solo lectura](../modifiers/readonly.md).  
   
@@ -54,7 +55,7 @@ variableorproperty ^= expression
   
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [^ (Operador)](exponentiation-operator.md)
 - [Operadores de asignación](assignment-operators.md)

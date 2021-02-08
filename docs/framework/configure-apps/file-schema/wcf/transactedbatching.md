@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <transactedBatching>'
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9a57226c3a2f2b026c69324e37b00e87fd3dd693
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399414"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773698"
 ---
 # \<transactedBatching>
 
@@ -46,7 +47,7 @@ Ninguno.
 |-------------|-----------------|
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Un transporte que se configura con procesamiento por lotes de la transacción intenta realizar varias operaciones de recepción en una transacción. Haciendo esto, el costo relativamente alto de crear una transacción y confirmarla se evita en cada operación de recepción.
 
@@ -89,7 +90,7 @@ El ejemplo siguiente muestra cómo agregar el comportamiento por lotes llevado a
 </system.serviceModel>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.TransactedBatchingElement>
 - <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

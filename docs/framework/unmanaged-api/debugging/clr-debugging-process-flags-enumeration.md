@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración CLR_DEBUGGING_PROCESS_FLAGS'
 title: CLR_DEBUGGING_PROCESS_FLAGS (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85b85fde-1f87-490b-ba8d-d604670959c3
 topic_type:
 - apiref
-ms.openlocfilehash: dd148d23d6e29f03052d3bbf1fcd5d02fb332a0a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 81510bde123ef9a8adefaec5b0708086dacbbf2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772814"
 ---
 # <a name="clr_debugging_process_flags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS (Enumeración)
 
@@ -35,14 +36,14 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
 }  CLR_DEBUGGING_PROCESS_FLAGS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Este Runtime tiene un evento de depurador administrado que no es de puesta en marcha para enviar. Vea la sección Comentarios para ver la distinción entre eventos de puesta al día y de no puesta al día.|  
 |`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|El evento administrado que está pendiente es una <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> solicitud.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los eventos de puesta al día incluyen notificaciones de creación de procesos, dominios de aplicación, ensamblados, módulos y subprocesos que ponen el depurador al estado actual una vez que se ha adjuntado a un proceso. Los eventos que no son de puesta al día, que se indican mediante la `CLR_DEBUGGING_MANAGED_EVENT_PENDING` marca, incluyen todos los demás eventos del depurador, como las excepciones y las notificaciones del Asistente para la depuración administrada (MDA).  
   
@@ -58,7 +59,7 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)
 - [Depuración](index.md)

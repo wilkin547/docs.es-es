@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de los tipos de datos de los resultados de los operadores (Visual Basic)
 title: Tipos de datos de los resultados de los operadores
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: f7a1249cec159f98ede48b960fadc5e2ff4a75f3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ebc99d5d735c30124feb52232e28a5fe6fe5fd50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867095"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773932"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipos de datos de resultados de operador (Visual Basic)
 
@@ -50,7 +51,7 @@ Visual Basic determina el tipo de datos de resultado de una operación en funci�
   
  Si alguno de los operandos de una `+` `–` operación,,, `*` `/` o `Mod` es `Decimal` y el otro no es `Single` o `Double` , Visual Basic amplía el otro operando a `Decimal` . Realiza la operación en `Decimal` y el tipo de datos del resultado es `Decimal` .  
   
-## <a name="floating-point-arithmetic"></a>Aritmética de punto flotante  
+## <a name="floating-point-arithmetic"></a>Floating-Point aritmética  
 
  Visual Basic realiza la mayoría de la aritmética de punto flotante en [Double](../data-types/double-data-type.md), que es el tipo de datos más eficaz para dichas operaciones. Sin embargo, si un operando es [único](../data-types/single-data-type.md) y el otro no `Double` , Visual Basic realiza la operación en `Single` . Amplía cada operando según sea necesario para el tipo de datos adecuado antes de la operación y el resultado tiene ese tipo de datos.  
   
@@ -63,10 +64,10 @@ Visual Basic determina el tipo de datos de resultado de una operación en funci�
 ||||||  
 |---|---|---|---|---|  
 ||`Decimal`|`Single`|`Double`|Cualquier tipo entero|  
-|`Decimal`|Decimal|Single|Doble|Decimal|  
+|`Decimal`|Decimal|Single|Double|Decimal|  
 |`Single`|Single|Single|Doble|Single|  
-|`Double`|Doble|Double|Double|Double|  
-|Cualquier tipo entero|Decimal|Single|Doble|Double|  
+|`Double`|Double|Double|Double|Double|  
+|Cualquier tipo entero|Decimal|Single|Double|Double|  
   
  El `^` operador solo se define para el `Double` tipo de datos. Visual Basic amplía cada operando según sea necesario `Double` antes de la operación, y el tipo de datos del resultado siempre es `Double` .  
   
@@ -190,7 +191,7 @@ Visual Basic determina el tipo de datos de resultado de una operación en funci�
   
  El `Like` operador solo se define para la coincidencia de patrones de `String` operandos. Visual Basic intenta convertir cada operando según sea necesario `String` antes de la operación. El tipo de datos del resultado es siempre `Boolean` .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tipo de datos](../data-types/index.md)
 - [Operadores y expresiones](../../programming-guide/language-features/operators-and-expressions/index.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <transport> de <basicHttpBinding>'
 title: <transport> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: d575b7e282775e2e2c498ac94bb54a563b8d125e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6148bbd5fa234adb51266714fff818e72f0abf40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773542"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<transport> de \<basicHttpBinding>
 
@@ -49,7 +50,7 @@ Define las propiedades que controlan los parámetros de autenticación para el t
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|clientCredentialType|: Especifica el tipo de credencial que se va a usar al realizar la autenticación del cliente mediante la autenticación HTTP.  El valor predeterminado es `None`. Este atributo es del tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|clientCredentialType|: Especifica el tipo de credencial que se va a usar al realizar la autenticación del cliente mediante la autenticación HTTP.  De manera predeterminada, es `None`. Este atributo es del tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |proxyCredentialType|: Especifica el tipo de credencial que se va a usar al realizar la autenticación de cliente desde dentro de un dominio mediante un proxy a través de HTTP. Este atributo solo es aplicable cuando el atributo `mode` del elemento `security` primario es `Transport` o `TransportCredentialsOnly`. Este atributo es del tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
 |realm|Una cadena que especifica el dominio kerberos utilizado por el esquema de autenticación de HTTP para la autenticación básica o implícita. El valor predeterminado es una cadena vacía.|  
 |policyEnforcement|Esta enumeración especifica cuándo se debe aplicar <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1. Never: la Directiva nunca se aplica (la protección ampliada está deshabilitada).<br />2. WhenSupported: la Directiva solo se aplica si el cliente admite la protección ampliada.<br />3. Always: siempre se aplica la Directiva. Los clientes que no admitan la protección extendida no podrán autenticarse.|  
@@ -122,7 +123,7 @@ Define las propiedades que controlan los parámetros de autenticación para el t
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>

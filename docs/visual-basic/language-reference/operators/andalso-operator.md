@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: operador AndAlso (Visual Basic)'
 title: Operador AndAlso
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: aff4621b8f415b9441ad1edf537b9b0736892bb8
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: dcf6c2685bf8f9ffee27b00543786cd3b315b327
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774270"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso (Operador, Visual Basic)
 
@@ -36,7 +37,7 @@ result = expression1 AndAlso expression2
 |`expression1`|Obligatorio. Cualquier expresión `Boolean` .|  
 |`expression2`|Obligatorio. Cualquier expresión `Boolean` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Se dice que una operación lógica es *cortocircuitada* si el código compilado puede omitir la evaluación de una expresión en función del resultado de otra expresión. Si el resultado de la primera expresión evaluada determina el resultado final de la operación, no es necesario evaluar la segunda expresión, porque no puede cambiar el resultado final. El cortocircuito puede mejorar el rendimiento si la expresión omitida es compleja o si implica llamadas a procedimientos.  
   
@@ -71,7 +72,7 @@ Para obtener más información, vea [conversiones de tipo booleano](../data-type
   
  [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operadores lógicos y bit a bit (Visual Basic)](logical-bitwise-operators.md)
 - [Prioridad de operador en Visual Basic](operator-precedence.md)

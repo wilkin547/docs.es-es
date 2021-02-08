@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operadores de asignación (Visual Basic)'
 title: Operadores de asignación
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 29b0083508d10758f0fbb75b3d0e8ee5f9dd2591
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 049edada0c228e0b74dd42d1687df665589e5b6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874812"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774179"
 ---
 # <a name="assignment-operators-visual-basic"></a>Operadores de asignación (Visual Basic)
 
@@ -38,7 +39,7 @@ A continuación se muestran los operadores de asignación definidos en Visual Ba
   
  [&= (operador)](and-assignment-operator.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Prioridad de operador en Visual Basic](operator-precedence.md)
 - [Lista de operadores según funcionalidad](operators-listed-by-functionality.md)

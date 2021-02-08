@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de CLR_DEBUGGING_VERSION'
 title: CLR_DEBUGGING_VERSION (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-ms.openlocfilehash: 8a2abe847728a2bb1f1345ef73e55b58e4704001
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2d274a91948b98dc309cd5670c3dd3bf6cd01e2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729816"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772788"
 ---
 # <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION (Estructura)
 
@@ -38,7 +39,7 @@ typedef struct _CLR_DEBUGGING_VERSION
 } CLR_DEBUGGING_VERSION;
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -48,7 +49,7 @@ typedef struct _CLR_DEBUGGING_VERSION
 |`wBuild`|Número de compilación.|  
 |`wRevision`|Número de revisión.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `CLR_DEBUGGING_VERSION` estructura es la misma que la estructura de COR_VERSION, sin embargo, la `CLR_DEBUGGING_VERSION` estructura proporciona un campo de versión de la estructura adicional ( `wStructVersion` ). Actualmente, este campo debe establecerse en cero.  
   
@@ -62,7 +63,7 @@ typedef struct _CLR_DEBUGGING_VERSION
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

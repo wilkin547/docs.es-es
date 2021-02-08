@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador DirectCast (Visual Basic)'
 title: Operador DirectCast
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 7b070b8eba240440821f7984a9336c2ecaf61706
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: be1eb4885940571788769bae968b1a094e256c79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867091"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773906"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast (Operador) (Visual Basic)
 
 Introduce una operación de conversión de tipos basada en la herencia o la implementación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `DirectCast` no utiliza las rutinas auxiliares en tiempo de ejecución de Visual Basic para la conversión, por lo que puede proporcionar un rendimiento algo mejor que `CType` al convertir a y desde el tipo de datos `Object` .  
   
@@ -46,7 +47,7 @@ Introduce una operación de conversión de tipos basada en la herencia o la impl
   
  En el ejemplo anterior, el tipo en tiempo de ejecución de `q` es `Double` . `CType` se realiza correctamente porque `Double` se puede convertir en `Integer` . Sin embargo, el primer `DirectCast` error en el tiempo de ejecución porque el tipo en tiempo de ejecución de `Double` no tiene ninguna relación de herencia con `Integer` , aunque exista una conversión. La segunda operación `DirectCast` se realiza correctamente porque convierte de tipo <xref:System.Windows.Forms.Form> al tipo <xref:System.Windows.Forms.Control> , desde el que <xref:System.Windows.Forms.Form> hereda.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>
 - [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

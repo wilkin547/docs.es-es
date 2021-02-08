@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: &amp; = (operador) (Visual Basic)'
 title: '&amp;= (Operador)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: 9b77c44aa77afd59e36e1d21451205d3929ef527
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ffc4de352ee29f4c7d18a257dd3699b37c668db7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874881"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774322"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;Operador = (Visual Basic)
 
@@ -30,12 +31,12 @@ variableorproperty &= expression
 ## <a name="parts"></a>Partes  
 
  `variableorproperty`  
- Obligatorio. Cualquier `String` variable o propiedad.  
+ Necesario. Cualquier `String` variable o propiedad.  
   
  `expression`  
  Obligatorio. Cualquier expresión `String` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El elemento del lado izquierdo del `&=` operador puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o la propiedad no pueden ser de [solo lectura](../modifiers/readonly.md). El `&=` operador concatena la `String` expresión de su derecha a la `String` variable o propiedad de su izquierda, y asigna el resultado a la variable o propiedad de su izquierda.  
   
@@ -49,7 +50,7 @@ variableorproperty &= expression
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [& (operador)](concatenation-operator.md)
 - [Operador + =](addition-assignment-operator.md)

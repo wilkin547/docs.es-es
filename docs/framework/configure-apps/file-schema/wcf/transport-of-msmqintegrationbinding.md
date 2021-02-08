@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <transport> de <msmqIntegrationBinding>'
 title: <transport> de <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 03e6236d1e89f16a460860f5dffff19b7bed8a0a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bcca714320f333a16d518248531efe8039ff566e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169835"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773529"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<transport> de \<msmqIntegrationBinding>
 
@@ -59,7 +60,7 @@ Define la configuración de seguridad para el transporte de integración de Mess
 
  Este elemento encapsula la configuración de seguridad para el transporte de integración de Message Queuing. La configuración es la misma para la integración de Message Queuing y los transportes en cola. Le permite establecer el Modo de autenticación, Algoritmo de cifrado, Algoritmo hash seguro y Nivel de protección.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>

@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: operadores de concatenación (Visual Basic)'
 title: Operadores de concatenación
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-ms.openlocfilehash: 282747043197ad2fded6f5cccc85ec7eaadbe2bf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 168cf28749d8e9fd166ad1f1ef3e99827ca9e1fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774049"
 ---
 # <a name="concatenation-operators-visual-basic"></a>Operadores de concatenación (Visual Basic)
 
@@ -20,7 +21,7 @@ A continuación se muestran los operadores de concatenación definidos en Visual
   
  [+ (Operador)](addition-operator.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>

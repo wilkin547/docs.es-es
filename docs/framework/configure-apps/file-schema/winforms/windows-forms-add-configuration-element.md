@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Windows Forms Agregar elemento de configuración'
 title: Windows Forms Agregar elemento de configuración
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-ms.openlocfilehash: dc1786f1f2dcc7bd01488dd24c6ef454f7e1cfbd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a0db81e0dd86f9ee6f2a47183100645ece78280c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557637"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773262"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Agregar elemento de configuración
 
@@ -59,7 +60,7 @@ Ninguno.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](index.md) | Configura la compatibilidad con las nuevas características de la aplicación Windows Forms. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 A partir de .NET Framework 4.7, el elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar las aplicaciones de Windows Forms para aprovechar las características agregadas en versiones recientes de .NET Framework.
 

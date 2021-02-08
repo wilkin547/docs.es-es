@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: My. Forms (objeto)'
 title: My.Forms (Objeto)
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 001f6fbfae2467ea0af5e98ca041b694d1e7b8f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 18ef8ee475163ff7eb177dfee590d959a242a88e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372445"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774413"
 ---
 # <a name="myforms-object"></a>My.Forms (Objeto)
 
@@ -35,7 +36,7 @@ El objeto y sus propiedades solo están disponibles para las aplicaciones de Win
 Cada propiedad del `My.Forms` objeto proporciona acceso a una instancia de un formulario en el proyecto actual. El nombre de la propiedad es el mismo que el nombre del formulario al que tiene acceso la propiedad y el tipo de propiedad es el mismo que el tipo del formulario.
 
 > [!NOTE]
-> Si hay un conflicto de nombres, el nombre de la propiedad para tener acceso a un formulario es *RootNamespace*_*espacio de nombres* \_ *formName*. Por ejemplo, considere dos formularios denominados `Form1.` si uno de estos formularios está en el espacio de nombres raíz `WindowsApplication1` y en el espacio de nombres `Namespace1` , tendría acceso a ese formulario a través de `My.Forms.WindowsApplication1_Namespace1_Form1` .
+> Si hay un conflicto de nombres, el nombre de la propiedad para tener acceso a un formulario es *RootNamespace* _ *espacio de nombres* \_ *formName*. Por ejemplo, considere dos formularios denominados `Form1.` si uno de estos formularios está en el espacio de nombres raíz `WindowsApplication1` y en el espacio de nombres `Namespace1` , tendría acceso a ese formulario a través de `My.Forms.WindowsApplication1_Namespace1_Form1` .
 
 El `My.Forms` objeto proporciona acceso a la instancia del formulario principal de la aplicación que se creó en el inicio. En el caso de todos los demás formularios, el `My.Forms` objeto crea una nueva instancia del formulario cuando se tiene acceso a él y lo almacena. Los intentos posteriores de obtener acceso a esa propiedad devuelven esa instancia del formulario.
 
@@ -75,7 +76,7 @@ Este código solo funcionará en un proyecto de aplicación de Windows.
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Form.Close%2A>
-- [Objects](index.md)
-- [Operador is](../operators/is-operator.md)
+- [Objetos](index.md)
+- [Operador Is](../operators/is-operator.md)
 - [Operador IsNot](../operators/isnot-operator.md)
 - [Acceso ad los formularios de la aplicación](../../developing-apps/programming/accessing-application-forms.md)

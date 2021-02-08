@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador and (Visual Basic)'
 title: Operador And
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: b4d6d08cca2907befeab2e31c6804b69849c9e38
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 238ef0b2f14f2014da6e65684bfac183e03d963e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874867"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774283"
 ---
 # <a name="and-operator-visual-basic"></a>And (Operador, Visual Basic)
 
@@ -41,7 +42,7 @@ result = expression1 And expression2
  `expression2`  
  Obligatorio. Cualquier expresión numérica o de tipo `Boolean`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En la comparación booleana, `result` es `True` si y solo si `expression1` y `expression2` se evalúan como `True` . En la tabla siguiente se muestra cómo `result` se determina.  
   
@@ -92,7 +93,7 @@ result = expression1 And expression2
   
  En el ejemplo anterior se generan los resultados de 8, 2 y 0, respectivamente.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operadores lógicos y bit a bit (Visual Basic)](logical-bitwise-operators.md)
 - [Prioridad de operador en Visual Basic](operator-precedence.md)

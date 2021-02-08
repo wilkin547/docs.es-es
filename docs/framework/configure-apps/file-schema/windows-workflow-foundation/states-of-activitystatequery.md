@@ -1,14 +1,15 @@
 ---
+description: 'Más información sobre: <states> de <activityStateQuery>'
 title: <states> de <activityStateQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7cc2018-2b79-44f1-825a-bb7ca08690a3
-ms.openlocfilehash: e56df08813c091a9c9390db6fc19a7c39f2e8592
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 16a0af865508f0ebc50d16728c35188310c95043
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169705"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773282"
 ---
 # <a name="states-of-activitystatequery"></a>\<states> de \<activityStateQuery>
 
@@ -80,7 +81,7 @@ Una colección de elementos de configuración que contienen los estados de la ac
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
