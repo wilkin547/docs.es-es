@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de cómo: obtener un certificado (WCF)'
 title: Cómo obtener un certificado (WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 20e936feb5839a7e71f6579583d558abfc2fd9cf
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2ca40c9646bbdeb6c29a94966fd24ec00d9b5306
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234497"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793706"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Cómo obtener un certificado (WCF)
 

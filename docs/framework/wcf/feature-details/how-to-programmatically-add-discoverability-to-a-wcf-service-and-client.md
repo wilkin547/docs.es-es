@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Cómo: agregar detectabilidad a un servicio y un cliente WCF mediante programación'
 title: Procedimiento para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 1226f02dd96b8ab1502869cb319c6efe1ad09d4f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ad192c6fcc57a36d7001f230c98b1193c42262aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295566"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793719"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedimiento para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 
