@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: control de errores de Web HTTP de WCF'
 title: Controlar errores de web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: cfbf98c69370764a9526c32459d43521177476e3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 88483c249bc1b6b866517ca10b348c0885fc34fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239034"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779485"
 ---
 # <a name="wcf-web-http-error-handling"></a>Controlar errores de web HTTP de WCF
 

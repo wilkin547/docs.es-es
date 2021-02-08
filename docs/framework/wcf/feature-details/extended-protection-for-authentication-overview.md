@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: información general sobre protección ampliada para la autenticación'
 title: Información general sobre la protección extendida para la autenticación
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 0537e6147a7b43dabcb4c3612fc58da11dfd4d6d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5f79092d71266176af3916e919be0018793959ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255551"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780276"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Información general sobre la protección extendida para la autenticación
 

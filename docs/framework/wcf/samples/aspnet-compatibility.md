@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: compatibilidad con ASP.NET'
 title: Compatibilidad de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: b1d1a72b9ac3041a1547ac42a33eb7d3e1f87a63
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a5685481a16d87715d4fc9096055af5be479f459
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553216"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778859"
 ---
 # <a name="aspnet-compatibility"></a>Compatibilidad de ASP.NET
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Introducción al enrutamiento'
 title: Introducción al enrutamiento
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 8ce98aab2ed14401fa7c2cbf43eb92a633fa96b0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 86f5b5dcc0bea067ac3dcfc8a87331da42c642aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746468"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779899"
 ---
 # <a name="routing-introduction"></a>Introducción al enrutamiento
 
@@ -17,9 +18,9 @@ Este tema está dirigido a aquellos usuarios que se están iniciando en el servi
 
 ## <a name="configuration"></a>Configuración
 
-El servicio de enrutamiento se implementa como un servicio de WCF que expone uno o varios puntos de conexión de servicio. Estos puntos de conexión reciben mensajes de aplicaciones cliente y los enrutan a uno o más puntos de conexión de destino. El servicio proporciona <xref:System.ServiceModel.Routing.RoutingBehavior>, que se aplica a los puntos de conexión de servicio que expone el servicio. Este comportamiento se utiliza para configurar varios aspectos del funcionamiento del servicio. Para facilitar la configuración cuando se usa un archivo de configuración, los parámetros se especifican en **RoutingBehavior**. En escenarios basados en código, estos parámetros se especifican como parte de un objeto <xref:System.ServiceModel.Routing.RoutingConfiguration>, que se puede pasar a continuación a un **RoutingBehavior**.
+El servicio de enrutamiento se implementa como un servicio de WCF que expone uno o varios puntos de conexión de servicio. Estos puntos de conexión reciben mensajes de aplicaciones cliente y los enrutan a uno o más puntos de conexión de destino. El servicio proporciona <xref:System.ServiceModel.Routing.RoutingBehavior>, que se aplica a los puntos de conexión de servicio que expone el servicio. Este comportamiento se utiliza para configurar varios aspectos del funcionamiento del servicio. Para facilitar la configuración cuando se usa un archivo de configuración, los parámetros se especifican en **RoutingBehavior**. En escenarios basados en código, estos parámetros se especifican como parte de un <xref:System.ServiceModel.Routing.RoutingConfiguration> objeto, que se puede pasar a continuación a un **RoutingBehavior**.
 
-Al iniciarse, este comportamiento agrega el objeto <xref:System.ServiceModel.Routing.SoapProcessingBehavior>, que se utiliza para realizar el procesamiento de SOAP de mensajes, a los puntos de conexión de cliente. Esto permite al servicio de enrutamiento transmitir mensajes a los puntos de conexión que requieren un **MessageVersion** diferente que el punto de conexión en el que se recibió el mensaje. **RoutingBehavior** también registra una extensión de servicio, la <xref:System.ServiceModel.Routing.RoutingExtension>, que proporciona un punto de accesibilidad para modificar la configuración del servicio de enrutamiento en tiempo de ejecución.
+Al iniciarse, este comportamiento agrega el objeto <xref:System.ServiceModel.Routing.SoapProcessingBehavior>, que se utiliza para realizar el procesamiento de SOAP de mensajes, a los puntos de conexión de cliente. Esto permite al servicio de enrutamiento transmitir mensajes a los puntos de conexión que requieren un **MessageVersion** diferente que el punto de conexión en el que se recibió el mensaje. **RoutingBehavior** también registra una extensión de servicio, <xref:System.ServiceModel.Routing.RoutingExtension> que proporciona un punto de accesibilidad para modificar la configuración del servicio de enrutamiento en tiempo de ejecución.
 
 La clase **RoutingConfiguration** proporciona un medio coherente para configurar y actualizar la configuración del servicio de enrutamiento.  Contiene parámetros que actúan como la configuración para el servicio de enrutamiento y se usa para configurar el **RoutingBehavior** cuando se inicia el servicio o se pasa a **RoutingExtension** para modificar la configuración de enrutamiento en tiempo de ejecución.
 
@@ -101,7 +102,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));
 ```
 
-En este ejemplo se configura el servicio de enrutamiento para exponer un punto de conexión único con una dirección de `http://localhost:8000/routingservice/router`, que se usa para recibir los mensajes que se van a enrutar. Dado que los mensajes se enrutan a puntos de conexión solicitud-respuesta, el punto de conexión de servicio utiliza el contrato <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Esta configuración también define un punto de conexión de cliente único de `http://localhost:8000/servicemodelsample/service` a la que se enrutan los mensajes. La tabla de filtros (no se muestra) denominada "routingTable1" contiene la lógica de enrutamiento que se usa para enrutar los mensajes y está asociada al punto de conexión de servicio mediante **RoutingBehavior** (para un archivo de configuración) o **RoutingConfiguration** (para la configuración mediante programación).
+En este ejemplo se configura el servicio de enrutamiento para exponer un punto de conexión único con una dirección de `http://localhost:8000/routingservice/router` , que se utiliza para recibir los mensajes que se van a enrutar. Dado que los mensajes se enrutan a puntos de conexión solicitud-respuesta, el punto de conexión de servicio utiliza el contrato <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Esta configuración también define un punto de conexión de cliente único de `http://localhost:8000/servicemodelsample/service` al que se enrutan los mensajes. La tabla de filtros (no se muestra) denominada "routingTable1" contiene la lógica de enrutamiento que se usa para enrutar los mensajes y está asociada al punto de conexión de servicio mediante **RoutingBehavior** (para un archivo de configuración) o **RoutingConfiguration** (para la configuración mediante programación).
 
 ### <a name="routing-logic"></a>Lógica de enrutamiento
 
@@ -164,7 +165,7 @@ Aunque muchas configuraciones del servicio de enrutamiento utilizan una lógica 
 
 - Varios filtros deben devolver `true` al evaluar el mensaje.
 
-Si se cumplen estas condiciones, el mensaje se enruta a todos los puntos de conexión de todos los filtros que se evalúan como `true`. En el ejemplo siguiente se define una configuración de enrutamiento que hace que los mensajes se enruten a ambos puntos de conexión si la dirección del punto de conexión en el mensaje se `http://localhost:8000/routingservice/router/rounding`.
+Si se cumplen estas condiciones, el mensaje se enruta a todos los puntos de conexión de todos los filtros que se evalúan como `true`. En el ejemplo siguiente se define una configuración de enrutamiento que hace que los mensajes se enruten a ambos extremos si la dirección del punto de conexión en el mensaje es `http://localhost:8000/routingservice/router/rounding` .
 
 ```xml
 <!--ROUTING SECTION -->
@@ -194,7 +195,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 
 ### <a name="soap-processing"></a>Procesamiento de SOAP
 
-Para admitir el enrutamiento de mensajes entre protocolos distintos, **RoutingBehavior** agrega de forma predeterminada el <xref:System.ServiceModel.Routing.SoapProcessingBehavior> a todos los extremos de cliente a los que se enrutan los mensajes. Este comportamiento crea automáticamente un nuevo **messageversion** antes de enrutar el mensaje al punto de conexión, así como la creación de un **messageversion** compatible para cualquier documento de respuesta antes de devolverlo a la aplicación cliente que lo solicita.
+Para admitir el enrutamiento de mensajes entre protocolos distintos, **RoutingBehavior** agrega de forma predeterminada <xref:System.ServiceModel.Routing.SoapProcessingBehavior> a todos los extremos de cliente a los que se enrutan los mensajes. Este comportamiento crea automáticamente un nuevo **messageversion** antes de enrutar el mensaje al punto de conexión, así como la creación de un **messageversion** compatible para cualquier documento de respuesta antes de devolverlo a la aplicación cliente que lo solicita.
 
 Los pasos que se llevan a cabo para crear un nuevo **MessageVersion** para el mensaje de salida son los siguientes:
 
@@ -206,7 +207,7 @@ Los pasos que se llevan a cabo para crear un nuevo **MessageVersion** para el me
 
 - Cree un nuevo mensaje con la misma acción, el lector del cuerpo y un nuevo **MessageVersion**.
 
-- Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing. None**, copie los encabezados to, from, FaultTo y latest en el nuevo mensaje.
+- Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copie los encabezados to, from, FaultTo y latest en el nuevo mensaje.
 
 - Copie todas las propiedades del mensaje en el nuevo mensaje.
 
@@ -222,13 +223,13 @@ Los pasos que se llevan a cabo para crear un nuevo **MessageVersion** para el me
 
 - Cree un nuevo mensaje de respuesta con la misma acción, el lector del cuerpo y el **MessageVersion** del mensaje de solicitud original.
 
-- Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing. None**, copie los encabezados to, from, FaultTo y latest en el nuevo mensaje.
+- Si <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copie los encabezados to, from, FaultTo y latest en el nuevo mensaje.
 
 - Copie las propiedades del mensaje en el nuevo mensaje.
 
 - Devuelva el nuevo mensaje de respuesta.
 
-De forma predeterminada, el **SoapProcessingBehavior** se agrega automáticamente a los extremos de cliente por el <xref:System.ServiceModel.Routing.RoutingBehavior> cuando se inicia el servicio; sin embargo, puede controlar si el procesamiento de SOAP se agrega a todos los extremos de cliente mediante la propiedad <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>. También puede agregar el comportamiento directamente a un punto de conexión específico, y habilitar o deshabilitar este comportamiento en los puntos de conexión si se requiere un control de procesamiento de SOAP más granular.
+De forma predeterminada, cuando se inicia el servicio, el **SoapProcessingBehavior** se agrega automáticamente a los puntos de conexión de cliente <xref:System.ServiceModel.Routing.RoutingBehavior> ; sin embargo, puede controlar si el procesamiento de SOAP se agrega a todos los extremos de cliente mediante la <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> propiedad. También puede agregar el comportamiento directamente a un punto de conexión específico, y habilitar o deshabilitar este comportamiento en los puntos de conexión si se requiere un control de procesamiento de SOAP más granular.
 
 > [!NOTE]
 > Si el procesamiento de SOAP está deshabilitado para un extremo que requiere un valor MessageVersion diferente al del mensaje de solicitud original, debe proporcionar un mecanismo personalizado para que realice todas las modificaciones de SOAP que sean necesarias antes de enviar el mensaje al extremo de destino.
@@ -252,11 +253,11 @@ RoutingConfiguration rc = new RoutingConfiguration();
 rc.SoapProcessingEnabled = false;
 ```
 
-### <a name="dynamic-configuration"></a>configuración dinámica
+### <a name="dynamic-configuration"></a>Configuración dinámica
 
 Al agregar puntos de conexión de cliente adicionales, o bien cuando necesite modificar los filtros que se utilizan para enrutar los mensajes, debe encontrar una forma de actualizar dinámicamente la configuración en tiempo de ejecución para evitar la interrupción del servicio en los puntos de conexión que estén recibiendo mensajes a través del servicio de enrutamiento en ese momento. Modificar un archivo de configuración o el código de la aplicación host no siempre es suficiente, porque todos los métodos necesitan que se recicle la aplicación y esto conduciría a la pérdida potencial de todos los mensajes que estuvieran en tránsito en ese momento, así como a un posible tiempo de inactividad mientras se aguarda al reinicio del servicio.
 
-Solo puede modificar el **RoutingConfiguration** mediante programación. Aunque puede configurar inicialmente el servicio mediante un archivo de configuración, solo puede modificar la configuración en tiempo de ejecución si crea un nuevo **RoutingConfiguration** y lo pasa como parámetro al método <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> expuesto por la extensión de servicio <xref:System.ServiceModel.Routing.RoutingExtension>. Los mensajes que se encuentran actualmente en tránsito continúan siendo enrutados con la configuración anterior, mientras que los mensajes recibidos después de la llamada a **ApplyConfiguration** usan la nueva configuración. En el siguiente ejemplo, se muestra cómo crear una instancia del servicio de enrutamiento y cómo modificar después la configuración.
+Solo puede modificar el **RoutingConfiguration** mediante programación. Aunque puede configurar inicialmente el servicio mediante un archivo de configuración, solo puede modificar la configuración en tiempo de ejecución si crea un nuevo **RoutingConfiguration** y lo pasa como parámetro al <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> método expuesto por la <xref:System.ServiceModel.Routing.RoutingExtension> extensión de servicio. Los mensajes que se encuentran actualmente en tránsito continúan siendo enrutados con la configuración anterior, mientras que los mensajes recibidos después de la llamada a **ApplyConfiguration** usan la nueva configuración. En el siguiente ejemplo, se muestra cómo crear una instancia del servicio de enrutamiento y cómo modificar después la configuración.
 
 ```csharp
 RoutingConfiguration routingConfig = new RoutingConfiguration();
@@ -287,12 +288,12 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 
 ## <a name="error-handling"></a>Tratamiento de errores
 
-Si se encuentra algún valor <xref:System.ServiceModel.CommunicationException> al intentar enviar un mensaje, tiene lugar el control de errores. Estas excepciones indican normalmente que se encontró un problema al intentar establecer comunicación con el extremo de cliente definido, como <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>. El código de control de errores también detectará e intentará volver a realizar el envío cuando se produzca una <xref:System.TimeoutException>, que es otra excepción común que no se deriva de **CommunicationException**.
+Si se encuentra algún valor <xref:System.ServiceModel.CommunicationException> al intentar enviar un mensaje, tiene lugar el control de errores. Estas excepciones indican normalmente que se encontró un problema al intentar establecer comunicación con el extremo de cliente definido, como <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>. El código de control de errores también detectará e intentará volver a realizar el envío cuando <xref:System.TimeoutException> se produzca una, que es otra excepción común que no se deriva de **CommunicationException**.
 
 Cuando se produce una de las excepciones anteriores, el servicio de enrutamiento no puede establecer comunicación con una lista de puntos de conexión de reserva. Si se produce un error de comunicación en todos los puntos de conexión de reserva, o bien si un punto de conexión devuelve una excepción que indica un error dentro del servicio de destino, el servicio de enrutamiento devuelve un error a la aplicación cliente.
 
 > [!NOTE]
-> La funcionalidad del control de errores captura y administra excepciones que se producen al intentar enviar un mensaje y al intentar cerrar un canal. El código de control de errores no está diseñado para detectar o administrar excepciones creadas por los puntos de conexión de la aplicación con los que se comunica; un <xref:System.ServiceModel.FaultException> producido por un servicio aparece en el servicio de enrutamiento como **FaultMessage** y se devuelve al cliente.
+> La funcionalidad del control de errores captura y administra excepciones que se producen al intentar enviar un mensaje y al intentar cerrar un canal. El código de control de errores no está diseñado para detectar o administrar excepciones creadas por los puntos de conexión de la aplicación con los que se comunica; un <xref:System.ServiceModel.FaultException> Iniciado por un servicio aparece en el servicio de enrutamiento como **FaultMessage** y se devuelve al cliente.
 >
 > Si se produce un error cuando el servicio de enrutamiento intenta retransmitir un mensaje, puede obtener un objeto <xref:System.ServiceModel.FaultException> en el lado cliente, en lugar del <xref:System.ServiceModel.EndpointNotFoundException> que obtendría normalmente en ausencia del servicio de enrutamiento. Un servicio de enrutamiento puede por tanto enmascarar las excepciones y no proporcionar una transparencia completa a menos que se examinen las excepciones anidadas.
 
@@ -413,8 +414,8 @@ Para usar la suplantación de ASP.NET con el servicio de enrutamiento, habilite 
 
 Para usar la suplantación de la credencial de Windows con el servicio de enrutamiento, necesita configurar las credenciales y el servicio. El objeto de credenciales de cliente (<xref:System.ServiceModel.Security.WindowsClientCredential>, accesible desde <xref:System.ServiceModel.ChannelFactory>) define una propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> que se debe establecer para permitir la suplantación. Finalmente, en el servicio se debe configurar el comportamiento <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> para establecer `ImpersonateCallerForAllOperations` en `true`. El servicio de enrutamiento usa esta marca para decidir si crear los clientes para reenviar mensajes con la suplantación habilitada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Filtros de mensajes](message-filters.md)
-- [Enrutamiento de contratos](routing-contracts.md)
-- [Elección de un filtro](choosing-a-filter.md)
+- [Enrutar contratos](routing-contracts.md)
+- [Elegir un filtro](choosing-a-filter.md)

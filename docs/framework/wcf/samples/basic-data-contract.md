@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: contrato de datos básico'
 title: Contrato de datos básico
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: 66df6a1d7c2df17e79925490644891c0a536b1cd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 332b9325e87c91be70e1ddd708902c4cef3777b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585498"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778872"
 ---
 # <a name="basic-data-contract"></a>Contrato de datos básico
 
@@ -96,7 +97,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-La implementación del cliente también utiliza números complejos. Tanto el contrato de servicio como el contrato de datos se definen en el archivo de código fuente generatedClient.cs, generado por la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) a partir de los metadatos del servicio.
+La implementación del cliente también utiliza números complejos. El contrato de servicio y el contrato de datos se definen en el archivo de código fuente generatedClient.cs, generado por la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) a partir de los metadatos del servicio.
 
 ```csharp
 // Create a client.

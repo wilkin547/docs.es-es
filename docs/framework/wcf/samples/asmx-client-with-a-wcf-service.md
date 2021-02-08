@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: cliente ASMX con un servicio WCF'
 title: Cliente ASMX con un servicio WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: fd13d4907f1be09440387a36e14ecdc4926ba7e7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9f561f6651c591556f821478c4c4bfd7d7da23d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594782"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778924"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX con un servicio WCF
 
@@ -35,7 +36,7 @@ public interface ICalculator
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Xml.Serialization.XmlSerializer> asignan los tipos CLR a una representación XML. <xref:System.Runtime.Serialization.DataContractSerializer> interpreta algunas representaciones XML de manera diferente a XmlSerializer. Los generadores de proxy que no son de WCF, como WSDL. exe, generan una interfaz más utilizable cuando se utiliza XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute>Se aplica a la `ICalculator` interfaz para asegurarse de que se utiliza XmlSerializer para asignar tipos CLR a XML. La implementación del servicio calcula y devuelve el resultado adecuado.
+<xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Xml.Serialization.XmlSerializer> asignan los tipos CLR a una representación XML. <xref:System.Runtime.Serialization.DataContractSerializer> interpreta algunas representaciones XML de manera diferente a XmlSerializer. Los generadores de proxy que no son de WCF, como Wsdl.exe, generan una interfaz más utilizable cuando se usa XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute>Se aplica a la `ICalculator` interfaz para asegurarse de que se utiliza XmlSerializer para asignar tipos CLR a XML. La implementación del servicio calcula y devuelve el resultado adecuado.
 
 El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración (Web.config). El punto de conexión está compuesto por una dirección, un enlace y un contrato. El servicio expone el extremo en la dirección base proporcionada por el host de Internet Information Services (IIS). El atributo `binding` está definido en basicHttpBinding, que proporciona las comunicaciones HTTP usando SOAP 1.1, que es conforme a WS-I BasicProfile 1.1, tal y como se muestra en la configuración del ejemplo siguiente.
 
@@ -51,7 +52,7 @@ El servicio expone un extremo único para comunicarse con el servicio, que se de
 </services>
 ```
 
-El cliente ASMX se comunica con el servicio WCF mediante un proxy con tipo generado por la utilidad WSDL (lenguaje de descripción de servicios web) (WSDL. exe). El proxy con tipo se encuentra en el archivo generatedClient.cs. La utilidad WSDL recupera los metadatos para el servicio especificado y genera un proxy con tipo para que un cliente lo utilice para comunicarse. De forma predeterminada, el marco no expone ningún metadato. Para exponer los metadatos necesarios para generar el proxy, debe agregar [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) y establecer su `httpGetEnabled` atributo en `True` tal y como se muestra en la configuración siguiente.
+El cliente ASMX se comunica con el servicio WCF mediante un proxy con tipo generado por la utilidad de lenguaje de descripción de servicios web (WSDL) (Wsdl.exe). El proxy con tipo se encuentra en el archivo generatedClient.cs. La utilidad WSDL recupera los metadatos para el servicio especificado y genera un proxy con tipo para que un cliente lo utilice para comunicarse. De forma predeterminada, el marco no expone ningún metadato. Para exponer los metadatos necesarios para generar el proxy, debe agregar [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) y establecer su `httpGetEnabled` atributo en `True` tal y como se muestra en la configuración siguiente.
 
 ```xml
 <behaviors>

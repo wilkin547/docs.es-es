@@ -1,13 +1,14 @@
 ---
-title: Creación de un servicio WCF con AJAX habilitado y un cliente de ASP.NET en Visual Studio
+description: Más información sobre cómo crear un servicio WCF AJAX-Enabled y un cliente de ASP.NET que tenga acceso al servicio.
+title: Creación de un servicio WCF AJAX-Enabled y un cliente de ASP.NET en Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 0bfe55c68f68bfef7b7ec2034413b53d41b0c785
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 59b0cab9b28dd68b27529b5d880138cc283144a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780354"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Cómo crear un servicio WFC con AJAX habilitado y un cliente ASP.NET que tiene acceso al servicio
 
@@ -19,7 +20,7 @@ En este tema se muestra cómo usar Visual Studio para crear un servicio de Windo
 
 1. En el menú **archivo** , seleccione **nuevo**  >  **proyecto** .
 
-1. En el cuadro de diálogo **nuevo proyecto** , **Installed**expanda la  >  categoría Web de**Visual C#** instalado  >  **Web** y, a continuación, seleccione **aplicación Web de ASP.net (.NET Framework)**.
+1. En el cuadro de diálogo **nuevo proyecto** , expanda la  >  categoría Web de **Visual C#** instalado  >   y, a continuación, seleccione **aplicación Web de ASP.net (.NET Framework)**.
 
 1. Asigne al proyecto el nombre **SandwichServices** y haga clic en **Aceptar**.
 
@@ -31,7 +32,7 @@ En este tema se muestra cómo usar Visual Studio para crear un servicio de Windo
 
 1. Haga clic con el botón derecho en el proyecto SandwichServices en **Explorador de soluciones** y seleccione **Agregar**  >  **nuevo elemento**.
 
-1. En el cuadro de diálogo **Agregar nuevo elemento** , expanda la **Installed**  >  categoría Web de**Visual C#** instalado  >  **Web** y, a continuación, seleccione la plantilla de **formulario web** .
+1. En el cuadro de diálogo **Agregar nuevo elemento** , expanda la   >  categoría Web de **Visual C#** instalado  >   y, a continuación, seleccione la plantilla de **formulario web** .
 
 1. Acepte el nombre predeterminado (**WebForm1**) y, a continuación, seleccione **Agregar**.
 
@@ -49,7 +50,7 @@ En este tema se muestra cómo usar Visual Studio para crear un servicio de Windo
 
 1. Haga clic con el botón derecho en el proyecto SandwichServices en **Explorador de soluciones** y seleccione **Agregar**  >  **nuevo elemento**.
 
-1. En el cuadro de diálogo **Agregar nuevo elemento** , expanda la **Installed**  >  categoría Web de**Visual C#** instalado  >  **Web** y, a continuación, seleccione la plantilla **servicio WCF (habilitado para Ajax)** .
+1. En el cuadro de diálogo **Agregar nuevo elemento** , expanda la   >  categoría Web de **Visual C#** instalado  >   y, a continuación, seleccione la plantilla **servicio WCF (habilitado para Ajax)** .
 
    ![Plantilla de elementos de servicio WCF (AJAX habilitado) en Visual Studio](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 

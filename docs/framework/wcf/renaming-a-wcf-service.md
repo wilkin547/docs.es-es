@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo cambiar el nombre de un servicio WCF
 title: Cambiar el nombre de un servicio WCF
 ms.date: 03/30/2017
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-ms.openlocfilehash: 25f9201253f02f368ccf95ddf1f7a7d78d2e1b2f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8d75e43f4bda97e8ee6de34b039eb1236d6c4a6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249727"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779171"
 ---
 # <a name="renaming-a-wcf-service"></a>Cambiar el nombre de un servicio WCF
 

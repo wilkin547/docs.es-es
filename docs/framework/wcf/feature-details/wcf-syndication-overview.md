@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: información general sobre la sindicación de WCF'
 title: Información general de distribución de WCF
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
-ms.openlocfilehash: 8ffc42987ff03b074e35f594491a0ca5a3adbe46
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ac5b00488d1e9cd6469b619ec6a5e71e8c94441d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239060"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779522"
 ---
 # <a name="wcf-syndication-overview"></a>Información general de distribución de WCF
 

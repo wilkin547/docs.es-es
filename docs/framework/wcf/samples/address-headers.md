@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: encabezados de direcciones'
 title: Encabezados de dirección
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: 133826bbbea62b660bdcdd884ce657528ad30873
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a0b421776e1b6b792fa237e0cd65f9686198194e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576010"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779197"
 ---
 # <a name="address-headers"></a>Encabezados de dirección
 
@@ -42,7 +43,7 @@ Ahora cuando el cliente llama a `Console.WriteLine(client.Hello());`, el servici
 
 `Hello, John`
 
-## <a name="server"></a>Server
+## <a name="server"></a>Servidor
 
 La implementación de la operación del servicio`Hello()` utiliza el `OperationContext` actual para inspeccionar los valores de los encabezados en el mensaje entrante.
 
