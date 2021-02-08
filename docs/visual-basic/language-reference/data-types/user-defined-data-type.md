@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: User-Defined tipo de datos'
 title: Tipo de datos definido por el usuario
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: fbd9536a54d7fb471d6cb2e130b14a84e40a4940
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6eb94b38e2d29a4bbdfcf94de307bbe07a2c1b0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415497"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774972"
 ---
 # <a name="user-defined-data-type"></a>Tipo de datos definido por el usuario
 
@@ -76,11 +77,11 @@ El paradigma siguiente muestra el contorno de la declaración de una estructura.
 End Structure
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)
 - [Resumen de las conversiones](../keywords/conversion-summary.md)
 - [Structure (Instrucción)](../statements/structure-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipo de datos UShort (Visual Basic)'
 title: Tipo de datos UShort
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: ee31156e00059699125fd72a7f091afbb21beab0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9c709e2110aef4281c348f697408044a191314c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415484"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774985"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Tipo de datos UShort (Visual Basic)
 
@@ -70,14 +71,14 @@ Dim number = &H_5826us
   
 - **Ampliación.** El `UShort` tipo de datos se amplía a `Integer` , `UInteger` , `Long` ,,, `ULong` `Decimal` `Single` y `Double` . Esto significa que puede convertir `UShort` en cualquiera de estos tipos sin que se produzca un <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
-- **Caracteres de tipo.** Anexar los caracteres de tipo literal `US` a un literal lo convierte al `UShort` tipo de datos. `UShort`no tiene ningún carácter de tipo de identificador.  
+- **Caracteres de tipo.** Anexar los caracteres de tipo literal `US` a un literal lo convierte al `UShort` tipo de datos. `UShort` no tiene ningún carácter de tipo de identificador.  
   
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt16?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.UInt16>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)
 - [Resumen de las conversiones](../keywords/conversion-summary.md)
 - [Procedimiento Llamada una función de Windows que adopta tipos sin signo](../../programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

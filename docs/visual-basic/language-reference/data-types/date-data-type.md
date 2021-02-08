@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipo de datos de fecha (Visual Basic)'
 title: Tipo de datos Date
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 46c25e14db56d4cc3c6d59ec7649b37c35676e2e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6ea6aa99339d13824477bba99ecd211f826a3ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775024"
 ---
 # <a name="date-data-type-visual-basic"></a>Date (Tipo de datos, Visual Basic)
 
@@ -40,9 +41,9 @@ Debe delimitar cualquier literal `Date` con signos de número (`# #`). Debe espe
 
 El motivo de esta restricción es que el significado del código nunca debe cambiar en función de la configuración regional en que se ejecuta la aplicación. Suponga que codifica un literal `Date` de `#3/4/1998#` con la intención de que signifique el 4 de marzo de 1998. En una configuración regional que use el formato mm/dd/aaaa, 3/4/1998 se compila tal como desea. Pero supongamos que implementa la aplicación en muchos países o regiones. En una configuración regional que use el formato dd/mm/aaaa, el literal incluido en el código se compilará como 3 de abril de 1998. En una configuración local que utilice el formato aaaa/mm/dd, el literal no sería válido (1998 de abril de 0003) y generaría un error de compilación.
 
-## <a name="workarounds"></a>Soluciones alternativas
+## <a name="workarounds"></a>Soluciones
 
-Para convertir un literal `Date` al formato de la configuración regional o a un formato personalizado, proporcione el literal a la función <xref:Microsoft.VisualBasic.Strings.Format%2A> especificando un formato de fecha predefinido o uno especificado por el usuario. El ejemplo siguiente demuestra este patrón.
+Para convertir un literal `Date` al formato de la configuración regional o a un formato personalizado, proporcione el literal a la función <xref:Microsoft.VisualBasic.Strings.Format%2A> especificando un formato de fecha predefinido o uno especificado por el usuario. En el siguiente ejemplo se muestra cómo hacerlo.
 
 ```vb
 MsgBox("The formatted date is " & Format(#5/31/1993#, "dddd, d MMM yyyy"))
@@ -70,22 +71,22 @@ Si convierte un valor `Date` al tipo `String`, Visual Basic representa la fecha 
 
 - **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para .NET Framework, por ejemplo, objetos de automatización o COM, tenga presente que los tipos de fecha y hora definidos en otros entornos no son compatibles con el tipo `Date` de Visual Basic. Al pasar un argumento de fecha y hora a esos componentes, declárelo en el código de Visual Basic como `Double` en lugar de como `Date`, y use los métodos de conversión <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> y <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.
 
-- **Caracteres de tipo.** `Date`no tiene un carácter de tipo literal o un carácter de tipo de identificador. Sin embargo, el compilador trata los literales incluidos entre caracteres de signo de número (`# #`) como `Date`.
+- **Caracteres de tipo.** `Date` no tiene un carácter de tipo literal o un carácter de tipo de identificador. Sin embargo, el compilador trata los literales incluidos entre caracteres de signo de número (`# #`) como `Date`.
 
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.DateTime?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Ejemplo
 
-Una variable o constante del tipo de datos `Date` contiene la fecha y la hora. Esto se ilustra en el siguiente ejemplo.
+Una variable o constante del tipo de datos `Date` contiene la fecha y la hora. Esto se ilustra en el siguiente ejemplo:
 
 ```vb
 Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.DateTime?displayProperty=nameWithType>
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Cadenas con formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md)
 - [Cadenas con formato de fecha y hora personalizado](../../../standard/base-types/custom-date-and-time-format-strings.md)
 - [Type Conversion Functions](../functions/type-conversion-functions.md)
