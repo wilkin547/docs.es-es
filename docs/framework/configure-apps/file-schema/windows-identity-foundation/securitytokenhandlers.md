@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <securityTokenHandlers>'
 title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: d892fbd802ed366ca7af9b85fbf5c23d4d27e0f1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 14937f6763644f9b7f43c0f7be71ea2352b21402
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157010"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782031"
 ---
 # \<securityTokenHandlers>
 
@@ -55,7 +56,7 @@ Especifica una colección de controladores de tokens de seguridad que se registr
 |-------------|-----------------|  
 |[\<identityConfiguration>](identityconfiguration.md)|Especifica la configuración de identidad de nivel de servicio.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede especificar una o varias colecciones con nombre de controladores de token de seguridad en una configuración de servicio. Puede especificar un nombre para una colección mediante el `name` atributo. Los únicos nombres que controla el marco de trabajo son "ActAs" y "Onbehalfof". Si existen controladores en estas colecciones, un servicio de token de seguridad (STS) los usa en lugar de los controladores predeterminados al procesar `ActAs` los `OnBehalfOf` tokens y.  
   

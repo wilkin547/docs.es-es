@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <states>'
 title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: e759f86e7746eaf3fdd72ed923612b24ef9b0c23
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9a66a1ce460db1f5f55fb99a191368635220f32f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150822"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781979"
 ---
 # \<states>
 
@@ -63,7 +64,7 @@ Representa una colección de estados suscritos de la instancia de flujo de traba
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](workflowinstancequery.md)|Una consulta que realiza el seguimiento de los cambios del ciclo de vida de la instancia de flujo de trabajo, como por ejemplo, un evento iniciado o completado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los registros devueltos se filtran por los estados de esta colección.  
   

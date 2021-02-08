@@ -1,15 +1,16 @@
 ---
-title: <faultPropagationQuery>de WCF
+description: 'Más información sobre: <faultPropagationQuery> de WCF'
+title: <faultPropagationQuery> de WCF
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: a6ef4e198caec4a1f21cedf2ff46d390aeaa2d3b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cd26bf76fec54371ef0455b93c98650bdab19068
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855331"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782070"
 ---
-# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery>de WCF
+# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery> de WCF
 
 Representa una consulta que se usa para realizar el seguimiento del control de los errores que se producen dentro de una actividad.  Este evento se produce cada vez que un FaultHandler procesa un error. Debería usar tal consulta para realizar el seguimiento del control de errores que se producen dentro de una actividad. La consulta es necesaria que un participante del seguimiento se suscriba a los registros de propagación de errores.
 
@@ -62,7 +63,7 @@ Ninguno.
 |-------------|-----------------|
 |[\<faultPropagationQueries>](faultpropagationqueries-of-wcf.md)|Representa una lista de elementos de configuración que se utilizan para realizar el seguimiento del control de errores que se producen dentro de una actividad.  Este evento se produce cada vez que un FaultHandler procesa un error.|
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>

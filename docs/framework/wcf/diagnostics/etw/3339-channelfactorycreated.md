@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3339-ChannelFactoryCreated'
 title: 3339 - ChannelFactoryCreated
 ms.date: 03/30/2017
 ms.assetid: 97a395dd-d0d4-471b-b42f-eb4368cd15e4
-ms.openlocfilehash: 35f3ebca1776919ecc33ce9ed04a88a35fbeb7f0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bea32fe6826c0475a5bf3d8e3d062ae0dd41dcc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268721"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783682"
 ---
 # <a name="3339---channelfactorycreated"></a>3339 - ChannelFactoryCreated
 
@@ -15,7 +16,7 @@ ms.locfileid: "96268721"
   
 |||  
 |-|-|  
-|ID|3339|  
+|Id.|3339|  
 |Palabras clave|ServiceModel|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

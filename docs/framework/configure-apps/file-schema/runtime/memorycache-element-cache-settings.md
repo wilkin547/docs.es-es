@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <memoryCache> elemento (configuración de caché)'
 title: Elemento <memoryCache> (configuración de caché)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 14480682c5d221216df5da3844897855d1d92a0d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1d46a156a222a0dc54e27cf56a5eb06cb1a908be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192430"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782343"
 ---
 # <a name="memorycache-element-cache-settings"></a>Elemento \<memoryCache> (configuración de caché)
 
@@ -21,7 +22,7 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 &nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<memoryCache>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```xml  
 <memoryCache>
@@ -96,7 +97,7 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - [\<system.runtime.caching> (Elemento, configuración de caché)](system-runtime-caching-element-cache-settings.md)

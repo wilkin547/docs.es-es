@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <compositeDuplex>'
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: a5209efddd489f8cb04b3266e6ba0bb033eeae6c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a9ec47027618a5f4fb30b627ccb9ad04c547f48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176024"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782187"
 ---
 # \<compositeDuplex>
 
@@ -34,7 +35,7 @@ Define el elemento de enlace que se usa cuando el cliente debe exponer un punto 
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|clientBaseAddress|Un URI que establece la dirección del canal secundario en modo de dúplex. El servicio usa esta dirección para hacer contacto y establecer una conexión con el cliente.<br /><br /> Si no se establece este atributo, se genera una dirección predeterminada " `full qualified name+default port\TemporaryIndigoAddress\guid` ". El valor predeterminado es `null`.|  
+|clientBaseAddress|Un URI que establece la dirección del canal secundario en modo de dúplex. El servicio usa esta dirección para hacer contacto y establecer una conexión con el cliente.<br /><br /> Si no se establece este atributo, se genera una dirección predeterminada " `full qualified name+default port\TemporaryIndigoAddress\guid` ". De manera predeterminada, es `null`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
 
@@ -58,7 +59,7 @@ Define el elemento de enlace que se usa cuando el cliente debe exponer un punto 
 <compositeDuplex clientBaseAddress="http://www.contoso.com" />
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>

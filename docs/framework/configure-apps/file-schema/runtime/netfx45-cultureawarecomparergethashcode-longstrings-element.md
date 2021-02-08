@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <NetFx45_CultureAwareComparerGetHashCode_LongStrings elemento>'
 title: Elemento <NetFx45_CultureAwareComparerGetHashCode_LongStrings>
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GetHashCode method
 - hash codes, calculating
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
-ms.openlocfilehash: 413eb6c6e61b509135601c65cf045eabd849e8b3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ca4099d3bf812cb25e6a611b9b51b3752b1ad361
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74802119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782291"
 ---
 # <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings> (Elemento)
 
@@ -56,14 +57,14 @@ Ninguno.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 De forma predeterminada, Common Language Runtime asigna una cantidad de memoria variable para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> y puede que se inicie una excepción <xref:System.ArgumentException> cuando el método intenta calcular el código hash de cadenas muy grandes (con millones de caracteres o más). Al agregar este elemento a un archivo de configuración de la aplicación y establecer su atributo `enabled` en "1", puede especificar que el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> use un algoritmo alternativo que asigne una cantidad de memoria fija para el cálculo de códigos hash.
 
 > [!IMPORTANT]
 > El `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` elemento no se utiliza en Windows 8 ni en versiones posteriores.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - [Esquema de la configuración de Common Language Runtime](index.md)

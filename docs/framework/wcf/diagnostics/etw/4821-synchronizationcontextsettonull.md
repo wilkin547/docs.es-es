@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 4821-SynchronizationContextSetToNull'
 title: 4821 - SynchronizationContextSetToNull
 ms.date: 03/30/2017
 ms.assetid: 0fbff6f6-752a-4a4a-b5a3-3adb5e688527
-ms.openlocfilehash: f3dc5f96331d40f04b589cc21846ad42f436a094
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f632d78812487a5ab9cc744008c4ff0e3a30384e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240165"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783591"
 ---
 # <a name="4821---synchronizationcontextsettonull"></a>4821 - SynchronizationContextSetToNull
 
@@ -15,7 +16,7 @@ ms.locfileid: "96240165"
   
 |||  
 |-|-|  
-|ID|4821|  
+|Id.|4821|  
 |Palabras clave|Detección|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

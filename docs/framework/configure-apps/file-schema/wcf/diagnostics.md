@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <diagnostics>'
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 775ec3a4d3dd8709c61fb46155b5085a3343d218
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d1651d949cdc095e630e9cde0bacbe51a5eb6062
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782161"
 ---
 # \<diagnostics>
 
@@ -51,7 +52,7 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 |---------------|-----------------|  
 |etwProviderId|Cadena que especifica el identificador del proveedor de la traza de eventos, que escribe los eventos en las sesiones de ETW.|  
 |performanceCounters|Especifica si se habilitan los contadores de rendimiento para el ensamblado. Los valores válidos son<br /><br /> -OFF: los contadores de rendimiento están deshabilitados.<br />-ServiceOnly: solo se habilitan los contadores de rendimiento relevantes para este servicio.<br />-All: los contadores de rendimiento se pueden ver en tiempo de ejecución.<br />-Default: se crea una instancia de contador de rendimiento única _WCF_Admin. Esta instancia se utiliza para habilitar la colección de datos de SQM usados por la infraestructura. Ninguno de los valores de contador para esta instancia está actualizado y por consiguiente permanecerá a cero. Éste es el valor predeterminado si ninguna configuración está presente para WCF.|  
-|wmiProviderEnabled|Un valor booleano que especifica si el proveedor de WMI para el ensamblado está habilitado. El proveedor de WMI se requiere para que el usuario obtenga acceso en tiempo de ejecución a las características de control e inspección de Windows Communication Foundation (WCF). El valor predeterminado es `false`.|  
+|wmiProviderEnabled|Un valor booleano que especifica si el proveedor de WMI para el ensamblado está habilitado. El proveedor de WMI se requiere para que el usuario obtenga acceso en tiempo de ejecución a las características de control e inspección de Windows Communication Foundation (WCF). De manera predeterminada, es `false`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -88,7 +89,7 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

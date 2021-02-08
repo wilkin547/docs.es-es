@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 4820-SynchronizationContextReset'
 title: 4820 - SynchronizationContextReset
 ms.date: 03/30/2017
 ms.assetid: 8a5c1597-5270-4b0a-9c8c-bf5f07f7e816
-ms.openlocfilehash: 92fb8fea5d8053b89a00bbf14c0225af407ec340
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b261bbf966402f772d33270be1d388ed3db3e5b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295254"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783617"
 ---
 # <a name="4820---synchronizationcontextreset"></a>4820 - SynchronizationContextReset
 
@@ -15,7 +16,7 @@ ms.locfileid: "96295254"
   
 |||  
 |-|-|  
-|ID|4820|  
+|Id.|4820|  
 |Palabras clave|Detección|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

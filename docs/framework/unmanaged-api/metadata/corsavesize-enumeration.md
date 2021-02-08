@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorSaveSize ('
 title: CorSaveSize (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 81d47a3e4d72f991dc15924e7ff1ecc8df2e7322
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 47e2d4d77f58f8f1c2135da5867dfa47cedfd83d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706065"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784228"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize (Enumeración)
 
@@ -35,7 +36,7 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -53,6 +54,6 @@ typedef enum CorSaveSize {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para metadatos](metadata-enumerations.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: <PreferComInsteadOfManagedRemoting> elemento'
 title: <PreferComInsteadOfManagedRemoting> (Elemento)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-ms.openlocfilehash: 2fb0d94f91d28f9d9d4f247411d273f786f7b63b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b621af9b584d1ea2623ffe5a44f74b5b7bd520e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782278"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting> (Elemento)
 
@@ -76,7 +77,7 @@ Especifica si el tiempo de ejecución usará la interoperabilidad COM en lugar d
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

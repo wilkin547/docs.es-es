@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataAssemblyImport:: Getassemblyprops ((método)'
 title: IMetaDataAssemblyImport::GetAssemblyProps (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-ms.openlocfilehash: 1e1a86cdf55812197aae653dca256fb910a7f168
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9cd3674dcd640bce27ae5d399d0f7de0c2eeca48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784150"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps (Método)
 
@@ -81,6 +82,6 @@ HRESULT GetAssemblyProps (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataAssemblyImport (Interfaz)](imetadataassemblyimport-interface.md)
