@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de COR_HEAPOBJECT'
 title: COR_HEAPOBJECT (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-ms.openlocfilehash: 54af02b48dabdf2042763954805f0d454323ac89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f41e02e7c528063f4b7ed485cbadbabb4d3e5ca7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726371"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801805"
 ---
 # <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT (Estructura)
 
@@ -35,7 +36,7 @@ typedef struct _COR_HEAPOBJECT {
 } COR_HEAPOBJECT;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -43,7 +44,7 @@ typedef struct _COR_HEAPOBJECT {
 |`size`|Tamaño total del objeto, en bytes.|  
 |`type`|[COR_TYPEID](cor-typeid-structure.md) token que representa el tipo del objeto.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `COR_HEAPOBJECT` las instancias pueden recuperarse mediante la enumeración de un objeto de interfaz [icordebugheapenum (](icordebugheapenum-interface.md) que se rellena llamando al método [ICorDebugProcess5:: enumerateheap (](icordebugprocess5-enumerateheap-method.md) .  
   
@@ -65,7 +66,7 @@ typedef struct _COR_HEAPOBJECT {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

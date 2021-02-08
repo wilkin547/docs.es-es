@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: divulgación de información'
 title: Divulgación de información
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: a58ac4dd3715052031c7fb5c1da480c0d01396ea
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 420437703fab883698cdd7217efb14c214a1f529
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596869"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802858"
 ---
 # <a name="information-disclosure"></a>Divulgación de información
 
@@ -70,6 +71,6 @@ Si se especifica el dominio, pero se especifica un nombre principal de servicio 
 - [Consideraciones sobre la seguridad](security-considerations-in-wcf.md)
 - [Elevación de privilegios](elevation-of-privilege.md)
 - [Denegación de servicio](denial-of-service.md)
-- [Alteración de datos](tampering.md)
+- [Manipulación](tampering.md)
 - [Escenarios no admitidos](unsupported-scenarios.md)
 - [Ataques por repetición](replay-attacks.md)

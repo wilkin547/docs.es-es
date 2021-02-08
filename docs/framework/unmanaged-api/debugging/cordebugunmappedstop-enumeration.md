@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Cordebugunmappedstop ('
 title: CorDebugUnmappedStop (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: e251bf67adcaf2bbd6565eda068d487eb0d70efd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c4f70c5de451689f98a1c08627fd6df5128fdbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725782"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801532"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop (Enumeración)
 
@@ -39,7 +40,7 @@ typedef enum CorDebugUnmappedStop {
 } CorDebugUnmappedStop;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -51,7 +52,7 @@ typedef enum CorDebugUnmappedStop {
 |`STOP_UNMANAGED`|Detenga el código no administrado. Este valor solo es válido con la depuración de interoperabilidad.|  
 |`STOP_ALL`|Detenga en todos los tipos de código sin asignar.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Use el método [ICorDebugStepper:: setunmappedstopmask (](icordebugstepper-setunmappedstopmask-method.md) para establecer las marcas que especifican el código no asignado en el que se detendrá el stepper.  
   
@@ -65,6 +66,6 @@ typedef enum CorDebugUnmappedStop {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

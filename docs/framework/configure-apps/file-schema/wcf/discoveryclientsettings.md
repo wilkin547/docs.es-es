@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <discoveryClientSettings>'
 title: <discoveryClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
-ms.openlocfilehash: 6e3f273af807eb362f005fef63246013ecc88581
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c2fda0dea33ffd6dbca24881eefab2e54e361f92
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802299"
 ---
 # \<discoveryClientSettings>
 
@@ -69,7 +70,7 @@ Contiene la configuración que necesita una aplicación para participar en el pr
 |-------------|-----------------|  
 |[\<standardEndpoints>](standardendpoints.md)|Define un punto de conexión estándar que contiene información para permitir que una aplicación funcione como un programa cliente que pueda buscar la dirección del punto de conexión dinámicamente en tiempo de ejecución.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>
 - <xref:System.ServiceModel.Discovery.Configuration.DiscoveryClientSettingsElement>

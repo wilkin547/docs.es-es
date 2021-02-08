@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <localClientSettings> elemento'
 title: <localClientSettings> (elemento)
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 19eaea71fdaad1b945524cca5cf15634e0b0fa14
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6393a460b5a58ab9bf7933df8643df3530da5f14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158739"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802221"
 ---
 # <a name="localclientsettings-element"></a>Elemento \<localClientSettings>
 
@@ -47,9 +48,9 @@ Especifica la configuración de seguridad de un cliente local para este enlace.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`cacheCookies`|Un valor booleano que especifica si el almacenamiento en caché de cookies está habilitado. El valor predeterminado es `false`.|  
+|`cacheCookies`|Un valor booleano que especifica si el almacenamiento en caché de cookies está habilitado. De manera predeterminada, es `false`.|  
 |`cookieRenewalThresholdPercentage`|Un entero que especifica el porcentaje máximo de cookies que se pueden renovar. Este valor debe estar comprendido entre 0 y 100, ambos inclusive. El valor predeterminado es 90.|  
-|`detectReplays`|Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente. El valor predeterminado es `false`.|  
+|`detectReplays`|Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente. De manera predeterminada, es `false`.|  
 |`maxClockSkew`|Un <xref:System.TimeSpan> que especifica la diferencia máxima de tiempo entre los relojes del sistema de las dos partes en comunicación. El valor predeterminado es "00:05:00".<br /><br /> Cuando este valor se establece en el valor predeterminado, el receptor acepta los mensajes con marcas de tiempo de envío de hasta cinco minutos antes o después de que se haya recibido el mensaje. Se rechazan los mensajes que no pasan las pruebas de hora de envío. Esta configuración se usa junto con la atributo `replayWindow`.|  
 |`maxCookieCachingTime`|<xref:System.TimeSpan> que especifica la duración máxima de las cookies. El valor predeterminado es "10675199.02:48:05.4775807".|  
 |`reconnectTransportOnFailure`|Un valor booleano que especifica si las conexiones que usan mensajería WS de confianza intentan volverse a conectar después de los errores de transporte. El valor predeterminado es `true`, que significa que habrá intentos infinitos de volverse a conectar. El ciclo sólo se rompe mediante el tiempo de espera de inactividad, que hace que el canal inicie una excepción si no se puede volver a conectar.|  
@@ -70,7 +71,7 @@ Especifica la configuración de seguridad de un cliente local para este enlace.
 |[\<security>](security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Especifica los valores predeterminados usados para iniciar un servicio de conversación seguro.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La configuración es local en el sentido que no es la configuración derivada de la directiva de seguridad del servicio.  
   

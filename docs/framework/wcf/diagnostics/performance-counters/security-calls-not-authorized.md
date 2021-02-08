@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: llamadas de seguridad no autorizadas'
 title: Llamadas de seguridad no autorizadas
 ms.date: 03/30/2017
 ms.assetid: cb6acdcd-7336-42e1-9ae8-ac891336cd58
-ms.openlocfilehash: 5575b108353e9c434ff01e76edc127e8691f0bf4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 80dc161f2be5a678e80860410f1b6adbde7bfb71
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276131"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803417"
 ---
 # <a name="security-calls-not-authorized"></a>Llamadas de seguridad no autorizadas
 

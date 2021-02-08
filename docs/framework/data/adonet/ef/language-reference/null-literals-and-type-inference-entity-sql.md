@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: literales null e inferencia de tipos (Entity SQL)'
 title: Literales NULL e inferencia de tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 5797c9f55b1a1c89cc27787af6f9ad7bfffc5767
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3b3474ea9841a34970d2269173d263fda2eb1789
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185072"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802143"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Literales NULL e inferencia de tipos (Entity SQL)
 
@@ -43,6 +44,6 @@ Los literales null son compatibles con cualquier tipo del sistema de tipos [!INC
   
  Los literales null flotantes no se pueden utilizar en otros escenarios. Por ejemplo, no se puede utilizar como argumentos para un constructor row.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general sobre Entity SQL](entity-sql-overview.md)

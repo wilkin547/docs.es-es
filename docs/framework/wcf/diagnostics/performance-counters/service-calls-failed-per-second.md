@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: servicio: errores de llamadas por segundo'
 title: 'Servicio: Errores en llamadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: c97e4b0c6c2c71756a9bed7b1a2359ad0c118a98
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b271d5076d0f0c89c4d33b124e0184584795466a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252977"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803365"
 ---
 # <a name="service-calls-failed-per-second"></a>Servicio: Errores en llamadas por segundo
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura de COR_TYPE_LAYOUT'
 title: COR_TYPE_LAYOUT (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43a7addd-f25a-4049-9907-abec3eb17af2
 topic_type:
 - apiref
-ms.openlocfilehash: f33c8f5cf218979404063342d9b1cc5123839f83
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07bed0c526aae38cb380b57da505a3f02bdf4aae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801770"
 ---
 # <a name="cor_type_layout-structure"></a>COR_TYPE_LAYOUT (Estructura)
 
@@ -37,7 +38,7 @@ typedef struct COR_TYPE_LAYOUT {
 } COR_TYPE_LAYOUT;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -47,7 +48,7 @@ typedef struct COR_TYPE_LAYOUT {
 |`boxOffset`|Si se aplica la conversión boxing a este tipo, el desplazamiento inicial de los campos de un objeto. Este campo solo es válido para tipos de valor como primitivas y estructuras.|  
 |`type`|El CorElementType al que pertenece este tipo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si `numFields` es mayor que cero, puede llamar al método [ICorDebugProcess5:: gettypefields (](icordebugprocess5-gettypefields-method.md) para obtener información sobre los campos de este tipo. Si `type` es `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY` o `ELEMENT_TYPE_SZARRAY`, el tamaño de los objetos de este tipo es variable y se puede pasar la estructura [COR_TYPEID](cor-typeid-structure.md) al método [ICorDebugProcess5::GetArrayLayout](icordebugprocess5-getarraylayout-method.md).  
   
@@ -61,7 +62,7 @@ typedef struct COR_TYPE_LAYOUT {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca <message> de: elemento de <netTcpBinding>'
 title: <message> elemento de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: ab767a5a1179de81bf9a8adc61799ede2d915ac1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 10c1f2897bc880ca1f328b546357d3cf7cdb26a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204910"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802182"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<message> elemento de \<netTcpBinding>
 
@@ -84,7 +85,7 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
 
  Seguridad de nivel del mensaje para la integridad y confidencialidad del mensaje SOAP, así como para la autenticación mutua de los sistemas de comunicación del mismo nivel. Si este modo de seguridad está seleccionado en un enlace, la pila del canal se configura con elementos de enlace de seguridad de mensaje. Los mensajes SOAP se protegen conforme a los estándares de WS-Security*.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>

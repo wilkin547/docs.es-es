@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorDebugRecordFormat'
 title: Enumeración CorDebugRecordFormat
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: b3a22d7b32eb258263d373ae91b3fb7fbc9aae99
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 856522497a8f858abdb39ac232fb3034d4d91dfc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696393"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801571"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>Enumeración CorDebugRecordFormat
 
@@ -30,14 +31,14 @@ typedef enum CorDebugRecordFormat {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD32`|Los datos son un registro de excepciones de Windows de 32 bits.|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Los datos son un registro de excepciones de Windows de 64 bits.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un miembro de la `CorDebugRecordFormat` enumeración se pasa al método [DecodeEvent](icordebugprocess6-decodeevent-method.md) para indicar el formato de la matriz de bytes en su `pRecord` argumento.  
   
@@ -54,6 +55,6 @@ typedef enum CorDebugRecordFormat {
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

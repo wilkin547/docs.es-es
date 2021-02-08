@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ICorDebugLoadedModule:: GetName (método)'
 title: Método de ICorDebugLoadedModule::GetName
 ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
-ms.openlocfilehash: c18af45184f5a9485e13b9d4789bff2c570834cc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40a0715b513115177cabac01727ce9166a40d50b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801259"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>Método de ICorDebugLoadedModule::GetName
 
@@ -35,7 +36,7 @@ HRESULT GetName(
  `szName`  
  [out] Matriz de caracteres que contiene el nombre del módulo cargado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -50,7 +51,7 @@ HRESULT GetName(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz de ICorDebugLoadedModule](icordebugloadedmodule-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

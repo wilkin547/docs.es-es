@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <Subtypes> elemento (.net Native)'
 title: <Subtypes> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: 7484152c351f59ee84b601584bd84347186628a3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d30bb482e784d912d3f5d61f688ed2b824e45f27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801961"
 ---
 # <a name="subtypes-element-net-native"></a>\<Subtypes> Elemento (.NET Native)
 
@@ -49,7 +50,7 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
   
 ## <a name="all-attributes"></a>Todos los atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -63,7 +64,7 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El elemento `<Subtypes>` aplica la directiva a todos los subtipos de su tipo contenedor. Se usa cuando se quieren aplicar directivas distintas a los tipos derivados y sus clases base.  
   

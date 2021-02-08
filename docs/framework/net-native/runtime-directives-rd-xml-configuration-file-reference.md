@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: directivas de tiempo de ejecución (rd.xml) referencia del archivo de configuración'
 title: Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c995bd831f01e47c651d015895398e1ad42633d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76738410"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802000"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
 
@@ -453,7 +454,7 @@ Estas directivas no tienen efecto sobre los campos o métodos.
 
 Para más información, vea la sección "Diferencias en los serializadores" en [Migrar la aplicación de la Tienda Windows a .NET Native](migrating-your-windows-store-app-to-net-native.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
 - [Reflexión y .NET Native](reflection-and-net-native.md)

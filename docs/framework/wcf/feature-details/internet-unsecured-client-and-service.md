@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: servicio y cliente sin protección de Internet'
 title: Cliente y servicio de Internet no protegidos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 32c08daaacb482aa98a58d7f8882da2c9389293d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8b402b276c80b2e1c148de0837d8644aad7a2d4a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802780"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Cliente y servicio de Internet no protegidos
 
@@ -22,7 +23,7 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
 |--------------------|-----------------|  
 |Modo de seguridad|None|  
 |Transporte|HTTP|  
-|Enlaces|<xref:System.ServiceModel.BasicHttpBinding> en el código o [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) en el elemento de configuración.|  
+|Enlace|<xref:System.ServiceModel.BasicHttpBinding> en el código o [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) en el elemento de configuración.|  
 |Interoperabilidad|Con clientes de servicios Web existentes y servicios|  
 |Authentication|Ninguno|  
 |Integridad|None|  
@@ -30,7 +31,7 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
   
 ## <a name="service"></a>Servicio  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -73,7 +74,7 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
   
 ## <a name="client"></a>Cliente  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   

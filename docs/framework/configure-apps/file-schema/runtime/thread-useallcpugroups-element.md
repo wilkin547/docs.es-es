@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <Thread_UseAllCpuGroups elemento>'
 title: Elemento <Thread_UseAllCpuGroups>
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3f11ba6855caab25bd261de71c80c78232f2690f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115410"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802416"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups> (Elemento)
 
@@ -52,7 +53,7 @@ Ninguno.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cuando un equipo tiene varios grupos de CPU, la habilitación de este elemento hace que el tiempo de ejecución distribuya los subprocesos administrados en todos los grupos de CPU. Para usar esta característica, también debe habilitar el [\<GCCpuGroup>](gccpugroup-element.md) elemento, que extiende la recolección de elementos no utilizados a todos los grupos de CPU y tiene en cuenta todos los núcleos al crear y equilibrar los montones. Para habilitar el elemento, es [\<GCCpuGroup>](gccpugroup-element.md) necesario habilitar el [\<gcServer>](gcserver-element.md) elemento. Si estos elementos no están habilitados, la habilitación del `<Thread_UseAllCpuGroups>` elemento no tiene ningún efecto.
 
@@ -70,8 +71,8 @@ En el ejemplo siguiente se muestra cómo habilitar la compatibilidad con varios 
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [\<GCCpuGroup>Element](gccpugroup-element.md)
+- [Elemento \<GCCpuGroup>](gccpugroup-element.md)

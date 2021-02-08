@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz Icordebuggcreferenceenum ('
 title: ICorDebugGCReferenceEnum (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f3c91c9-c035-454f-96cc-011cab1ea06b
 topic_type:
 - apiref
-ms.openlocfilehash: 12ce800cb83ef4f79710aa441b50be860526023c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ad4a61cdc2b30fb4c8e2be500eae878327c6b449
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728126"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801298"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum (Interfaz)
 
@@ -29,9 +30,9 @@ Proporciona un enumerador para los objetos que se recolectarán como elementos n
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (Método)](icordebuggcreferenceenum-next-method.md)|Obtiene el número especificado de instancias de [COR_GC_REFERENCE](cor-gc-reference-structure.md) que contienen información sobre los objetos que se van a recolectar como elementos no utilizados.|  
+|[Next (método)](icordebuggcreferenceenum-next-method.md)|Obtiene el número especificado de instancias de [COR_GC_REFERENCE](cor-gc-reference-structure.md) que contienen información sobre los objetos que se van a recolectar como elementos no utilizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `ICorDebugGCReferenceEnum` interfaz implementa la interfaz "ICorDebugEnum".  
   
@@ -55,6 +56,6 @@ Proporciona un enumerador para los objetos que se recolectarán como elementos n
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

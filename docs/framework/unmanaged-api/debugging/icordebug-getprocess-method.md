@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebug:: GetProcess (método)'
 title: ICorDebug::GetProcess (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-ms.openlocfilehash: 46c2b444984c5a0062f1cfbc0cd29dbe409b16fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a24bb0ec645a337b1202b954c165a76bcf8fad9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723446"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801311"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess (Método)
 
@@ -53,6 +54,6 @@ HRESULT GetProcess (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebug (Interfaz)](icordebug-interface.md)

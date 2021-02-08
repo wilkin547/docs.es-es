@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: almacenamiento en caché del plan de consulta (Entity SQL)'
 title: Almacenamiento en caché del plan de consulta [Entity SQL]
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 51c5de8365819065f8e505468f37a47370ec502f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eee8e3afcd6f97b7e6021389d59a8ce03507fb9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175557"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802104"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Almacenamiento en caché del plan de consulta [Entity SQL]
 
@@ -53,6 +54,6 @@ var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";
   
 - Cambios en el texto incluido en los comentarios.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general sobre Entity SQL](entity-sql-overview.md)

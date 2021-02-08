@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <TypeInstantiation> elemento (.net Native)'
 title: <TypeInstantiation> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8939767e016283ea525fbd74554fe30b1cca952a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801935"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> Elemento (.NET Native)
 
@@ -53,19 +54,19 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*type_name*|Nombre del tipo. Si este `<TypeInstantiation>` elemento es el elemento secundario de un [\<Namespace>](namespace-element-net-native.md) elemento, un [\<Type>](type-element-net-native.md) elemento u otro `<TypeInstantiation>` elemento, *type_name* puede especificar el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo. El nombre de tipo no es representativo. Por ejemplo, para un objeto <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, el elemento `<TypeInstantiation>` puede aparecer del siguiente modo:<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>Arguments (atributo)  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*type_argument*|Especifica los argumentos de tipo genérico. Si hay varios argumentos, se separan mediante coma. Cada argumento debe contener el nombre de tipo completo.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se aplica a este tipo de directiva para el tipo genérico construido. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -93,7 +94,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un tipo genérico co
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
 |`<TypeInstantiation>`|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La reflexión, la serialización y los atributos de interoperabilidad son opcionales. Sin embargo, al menos uno debe estar presente.  
   

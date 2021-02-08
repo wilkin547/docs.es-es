@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura Cordebugehclause ('
 title: CorDebugEHClause (Estructura)
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: 225523280a2e1e0d8f51321e9dd865d901e725ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecb00e2a110719ab82de32fb1f1c861e2033a528
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801675"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause (Estructura)
 
@@ -39,7 +40,7 @@ typedef struct _CorDebugEHClause {
 } CorDebugEHClause;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -51,7 +52,7 @@ typedef struct _CorDebugEHClause {
 |`ClassToken`|Token de metadatos para un controlador de excepciones basado en tipos.|  
 |`FilterOffset`|Desplazamiento, en bytes, desde el principio del cuerpo del método para un controlador de excepciones basado en filtros.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `CoreDebugEHClause`El método [getehclauses (](icordebugilcode-getehclauses-method.md) devuelve una matriz de valores.  
   
@@ -76,7 +77,7 @@ typedef struct _CorDebugEHClause {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetEHClauses](icordebugilcode-getehclauses-method.md)
 - [Estructuras de depuración](debugging-structures.md)

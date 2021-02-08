@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <Type> elemento (.net Native)'
 title: <Type> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9a0304049c5b8f97c30a85de1c6ed60cde111df1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287714"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801948"
 ---
 # <a name="type-element-net-native"></a>\<Type> Elemento (.NET Native)
 
@@ -51,13 +52,13 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="name-attribute"></a>Name (atributo)
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |*type_name*|Nombre del tipo. Si este `<Type>` elemento es el elemento secundario de un [\<Namespace>](namespace-element-net-native.md) elemento u otro `<Type>` elemento, *type_name* puede incluir el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo.|
 
 ## <a name="all-other-attributes"></a>Resto de atributos
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|
 
@@ -88,7 +89,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |`<Type>`|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La reflexión, la serialización y los atributos de interoperabilidad son opcionales. Si ninguno de ellos está presente, el elemento `<Type>` actúa como un contenedor cuyos tipos secundarios definen directivas para los miembros individuales.
 

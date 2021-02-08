@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <localServiceSettings> elemento'
 title: <localServiceSettings> (elemento)
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 3043c07afd316d90cc5525a67bef144f33d9b136
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ee3306588d6a86ed9ced9c66624cd34f18e2c5c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204936"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802208"
 ---
 # <a name="localservicesettings-element"></a>Elemento \<localServiceSettings>
 
@@ -50,7 +51,7 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`detectReplays`|Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente. El valor predeterminado es `false`.|  
+|`detectReplays`|Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente. De manera predeterminada, es `false`.|  
 |`inactivityTimeout`|Un positivo <xref:System.TimeSpan> que especifica la duración de inactividad que el canal espera antes de que se agote el tiempo de espera. El valor predeterminado es "01:00:00".|  
 |`issuedCookieLifeTime`|<xref:System.TimeSpan> que especifica la duración emitida a todas las nuevas cookies de seguridad. Las cookies que superan su duración se reciclan y se negocian de nuevo. El valor predeterminado es "10:00:00".|  
 |`maxCachedCookies`|Un entero positivo que especifica el número máximo de cookies que pueden estar almacenadas en memoria caché. El valor predeterminado es 1000.|  
@@ -92,7 +93,7 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
   
  En una sesión de conversación segura, tenga en cuenta que tanto el atributo `inactivityTimeout` como el atributo `receiveTimeout` del enlace afectan al tiempo de espera de la sesión. El más corto de los dos determina cuándo se agota el tiempo de espera.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>

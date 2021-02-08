@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugMDA:: GetFlags (método)'
 title: ICorDebugMDA::GetFlags (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87ce7c5b-fd82-453e-bf55-c8a32150b183
 topic_type:
 - apiref
-ms.openlocfilehash: 38a5c2da900530b6bf78f24e224714496ceaa62c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 53476da06252771627d4883ef9056eb7f945e1b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710966"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801181"
 ---
 # <a name="icordebugmdagetflags-method"></a>ICorDebugMDA::GetFlags (Método)
 
@@ -49,7 +50,7 @@ HRESULT GetFlags (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugMDA (Interfaz)](icordebugmda-interface.md)
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

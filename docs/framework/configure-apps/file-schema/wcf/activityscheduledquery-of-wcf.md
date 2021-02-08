@@ -1,15 +1,16 @@
 ---
-title: <activityScheduledQuery>de WCF
+description: 'Más información sobre: <activityScheduledQuery> de WCF'
+title: <activityScheduledQuery> de WCF
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: b173964cf5d691f4b9300bca69ca4a1fe1ea7e11
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b1b5f971dccfbc650ee12a08a9ae2fa7b745db50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850464"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802364"
 ---
-# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery>de WCF
+# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery> de WCF
 
 Representa una colección de consultas que se utilizan para realizar el seguimiento de una actividad programada para su ejecución por parte de una actividad primaria. La consulta es necesaria para que un participante de seguimiento se suscriba a los registros programados de la actividad.  
   
@@ -62,7 +63,7 @@ Ninguno.
 |-------------|-----------------|  
 |[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|Colección de consultas que se usan para realizar el seguimiento de una actividad programada para su ejecución mediante una actividad primaria.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>

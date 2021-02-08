@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <idn> elemento (configuración de URI)'
 title: Elemento <idn> (configuración de URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a53afd59b713a804d5b969521f468000dbbad6e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802481"
 ---
 # <a name="idn-element-uri-settings"></a>Elemento \<idn> (configuración de URI)
 
@@ -92,7 +93,7 @@ En el ejemplo siguiente se muestra una configuración utilizada por la <xref:Sys
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Getstartupnotificationevent ((función)'
 title: GetStartupNotificationEvent (Función)
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-ms.openlocfilehash: 1c6ad35cd42760a4d88cf78bb084a25cf58a1064
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 49b0e3f9b2acec87e419bae03086a7e437f45f98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676093"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801389"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent (Función)
 
@@ -56,7 +57,7 @@ HRESULT GetStartupNotificationEvent
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede obtener el identificador del evento de notificación de inicio.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de procesos del sistema operativo.  
   

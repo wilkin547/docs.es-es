@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: integración con aplicaciones COM+ información general'
 title: Integración en la información general de las aplicaciones COM+
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 1b9b7e57760c2aba0a8e9eadd53ca8e72529b787
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c24ce95651aff222b8374243143afc7166406fcf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248973"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802793"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
 
@@ -92,7 +93,7 @@ Windows Communication Foundation (WCF) proporciona un entorno completo para crea
   
      La lógica del servicio web y de la aplicación COM+ se hospedan dentro del proceso de trabajo del servidor web. Esto proporciona la activación automática del modo de hospedaje en web sin producir un salto del proceso para las solicitudes del servicio web. El inconveniente es que no se puede tener acceso a la aplicación de servidor a través de DCOM.  
   
-### <a name="security-considerations"></a>Consideraciones de seguridad  
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad  
 
  Al igual que otros servicios de WCF, la configuración de seguridad para el servicio expuesto se administra a través de los valores de configuración del canal de WCF. No se exige la configuración de seguridad de DCOM tradicional, como los valores de permisos de  equipo de DCOM. Para exigir las funciones de aplicación COM+, la autorización de “comprobaciones de acceso de nivel de componente” ha de estar habilitada para el componente.  
   

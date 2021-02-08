@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Corgcreferencetype ('
 title: CorGCReferenceType (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: e2903637faa11a3c0a62080cc6fafcf1fc668a56
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a1f534f9fe4b9ba4ede0bef94f35cf1688fe1817
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801519"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType (Enumeración)
 
@@ -47,7 +48,7 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
@@ -65,7 +66,7 @@ typedef enum {
 |`CorHandleWeakOnly`|Devuelve solo las referencias débiles de la tabla de identificadores. Este valor solo lo usa el método [ICorDebugProcess5:: enumeratehandles (](icordebugprocess5-enumeratehandles-method.md) .|  
 |`CorHandleAll`|Devuelve todas las referencias de la tabla de identificadores. Este valor solo lo usa el método [ICorDebugProcess5:: enumeratehandles (](icordebugprocess5-enumeratehandles-method.md) .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `CorGCReferenceType` enumeración se usa como se indica a continuación:  
   
@@ -83,6 +84,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

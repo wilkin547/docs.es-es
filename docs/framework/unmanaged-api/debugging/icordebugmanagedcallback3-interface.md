@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz Icordebugmanagedcallback3 ('
 title: ICorDebugManagedCallback3 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a95389d3-cf2e-47a4-9805-61426acc6b65
 topic_type:
 - apiref
-ms.openlocfilehash: e04f5be6d2612b26bf7d71807753d170e6a5a7a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9fb3d44b1d793935ac997e8e4d8d86de4466f7b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723303"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801194"
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>ICorDebugManagedCallback3 (Interfaz)
 
@@ -31,7 +32,7 @@ Proporciona un método de devolución de llamada que indica que se ha producido 
 |------------|-----------------|  
 |[Método CustomNotification](icordebugmanagedcallback3-customnotification-method.md)|Indica que se ha generado una notificación de depurador personalizada habilitada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta interfaz es una extensión lógica de las interfaces [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) e [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) .  
   
@@ -48,7 +49,7 @@ Proporciona un método de devolución de llamada que indica que se ha producido 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)
 - [ICorDebugManagedCallback2 (Interfaz)](icordebugmanagedcallback2-interface.md)

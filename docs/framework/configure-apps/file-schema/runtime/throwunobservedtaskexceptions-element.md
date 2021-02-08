@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <ThrowUnobservedTaskExceptions> elemento'
 title: <ThrowUnobservedTaskExceptions> (Elemento)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 53f3f1275ea8419bed52fd73726c043e1c49eed7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183928"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802403"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> (Elemento)
 
@@ -73,7 +74,7 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
   
 - Estableciendo la variable de entorno `COMPlus_ThrowUnobservedTaskExceptions` ( `set COMPlus_ThrowUnobservedTaskExceptions=1` ).  
   
-- Estableciendo el valor DWORD del registro ThrowUnobservedTaskExceptions = 1 en el HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \\ . Clave NETFramework.  
+- Estableciendo el valor DWORD del registro ThrowUnobservedTaskExceptions = 1 en el HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\ . Clave NETFramework.  
   
 ## <a name="example"></a>Ejemplo  
 
@@ -94,7 +95,7 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración COR_PUB_ENUMPROCESS'
 title: COR_PUB_ENUMPROCESS (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d3ada6e-feea-47da-a7ed-b664107c137f
 topic_type:
 - apiref
-ms.openlocfilehash: 30a522fbf96aebaa96f33f4a1dc381683f183871
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 66bbd08aabb9d2c93e385ed098bae54754a85b85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801792"
 ---
 # <a name="cor_pub_enumprocess-enumeration"></a>COR_PUB_ENUMPROCESS (Enumeración)
 
@@ -33,13 +34,13 @@ typedef enum {
 } COR_PUB_ENUMPROCESS;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
 |`COR_PUB_MANAGEDONLY`|Un proceso administrado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La versión actual de la API de depuración no administrada solo enumera los procesos administrados.  
   
@@ -53,6 +54,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

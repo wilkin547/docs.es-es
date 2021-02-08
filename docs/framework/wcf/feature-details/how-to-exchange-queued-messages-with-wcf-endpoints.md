@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: intercambiar mensajes en cola con puntos de conexión de WCF'
 title: Procedimiento para intercambiar mensajes en cola con puntos de conexión de WCF
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 3f69286a2b4d4ec55f18931f9156c20a38da9c34
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fe7195719c57454cb0035c1b6f06134cf3380a46
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96265432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802897"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedimiento para intercambiar mensajes en cola con puntos de conexión de WCF
 

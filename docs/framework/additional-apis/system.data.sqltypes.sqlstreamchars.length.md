@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: SqlStreamChars. length (propiedad)'
 title: Propiedad SqlStreamChars. length (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
@@ -13,16 +14,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 2171b10d1c0eb7bcad894cc44c5103bdab18b0a5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b0a9686cadc6d4018c7f291f0326b71195fd5cf5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802598"
 ---
 # <a name="sqlstreamcharslength-property"></a>SqlStreamChars. length (propiedad)
 
-Cuando se reemplaza en una clase derivada, obtiene la longitud de la secuencia actual. El ensamblado que contiene esta propiedad tiene una relación de confianza con SQLAccess. dll. Está pensado para su uso por SQL Server. En el caso de otras bases de datos, use el mecanismo de hospedaje proporcionado por esa base de datos.
+Cuando se reemplaza en una clase derivada, obtiene la longitud de la secuencia actual. El ensamblado que contiene esta propiedad tiene una relación de confianza con SQLAccess.dll. Está pensado para su uso por SQL Server. En el caso de otras bases de datos, use el mecanismo de hospedaje proporcionado por esa base de datos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,12 +34,12 @@ public abstract long Length { get; }
 ## <a name="property-value"></a>Valor de propiedad
 
 <xref:System.Int64>\
-Longitud de la secuencia.
+Longitud del flujo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!WARNING]
-> La propiedad `SqlStreamChars.Length` es privada y no está diseñada para usarse directamente en el código.
+> La `SqlStreamChars.Length` propiedad es privada y no está diseñada para usarse directamente en el código.
 >
 > Microsoft no admite el uso de esta propiedad en una aplicación de producción bajo ninguna circunstancia.
 
@@ -46,6 +47,6 @@ Longitud de la secuencia.
 
 **Espacio de nombres:** <xref:System.Data.SqlTypes>
 
-**Ensamblado:** System. Data (en System. Data. dll)
+**Ensamblado:** System.Data (en System.Data.dll)
 
 **.NET Framework versiones:** Disponible desde 2,0.

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugMDA:: GetName (método)'
 title: ICorDebugMDA::GetName (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-ms.openlocfilehash: 516fcf8a97b92eac8dfff9eae34199caa97c2d2f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ea39f062071073684a20d8f60875fbaaab43a2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710940"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801174"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName (Método)
 
@@ -48,7 +49,7 @@ HRESULT GetName (
  `szName`  
  enuncia Matriz en la que se va a almacenar el nombre.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los nombres de MDA son valores únicos. El `GetName` método es una alternativa de rendimiento adecuada para obtener la secuencia XML y extraer el nombre de la secuencia basada en el esquema.  
   
@@ -62,7 +63,7 @@ HRESULT GetName (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugMDA (Interfaz)](icordebugmda-interface.md)
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

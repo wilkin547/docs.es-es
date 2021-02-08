@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: SqlStreamChars. Seek (Int64, SeekOrigin) (método)'
 title: Método SqlStreamChars. Seek (Int64, SeekOrigin) (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
@@ -12,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: db8aba0a86c140ba62af8056011226532d415951
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 00f71aff95045d566b7932aec3f7e18259b4dfa0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802572"
 ---
 # <a name="sqlstreamcharsseekint64-seekorigin-method"></a>SqlStreamChars. Seek (Int64, SeekOrigin) (método)
 
-Cuando se reemplaza en una clase derivada, se establece la posición dentro de la secuencia actual. El ensamblado que contiene este método tiene una relación de confianza con SQLAccess. dll. Está pensado para su uso por SQL Server. En el caso de otras bases de datos, use el mecanismo de hospedaje proporcionado por esa base de datos.
+Cuando se reemplaza en una clase derivada, se establece la posición dentro de la secuencia actual. El ensamblado que contiene este método tiene una relación de confianza con SQLAccess.dll. Está pensado para su uso por SQL Server. En el caso de otras bases de datos, use el mecanismo de hospedaje proporcionado por esa base de datos.
 
 ```csharp
 public abstract long Seek (long offset, System.IO.SeekOrigin origin);
@@ -30,20 +31,20 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 ## <a name="parameters"></a>Parámetros
 
 `offset`\
-Desplazamiento en bytes en relación con `origin`.
+Desplazamiento de bytes relacionado con `origin`.
 
 `origin`\
 Uno de los valores de enumeración que indica el punto de referencia del que se va a obtener la nueva posición.
 
-## <a name="returns"></a>Valores devueltos
+## <a name="returns"></a>Devoluciones
 
 <xref:System.Int32>\
 La nueva posición dentro de la secuencia actual.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!WARNING]
-> El método `SqlStreamChars.Seek` es privado y no está diseñado para usarse directamente en el código.
+> El `SqlStreamChars.Seek` método es privado y no está diseñado para usarse directamente en el código.
 >
 > Microsoft no admite el uso de este método en una aplicación de producción bajo ninguna circunstancia.
 
@@ -51,6 +52,6 @@ La nueva posición dentro de la secuencia actual.
 
 **Espacio de nombres:** <xref:System.Data.SqlTypes>
 
-**Ensamblado:** System. Data (en System. Data. dll)
+**Ensamblado:** System.Data (en System.Data.dll)
 
 **.NET Framework versiones:** Disponible desde 2,0.

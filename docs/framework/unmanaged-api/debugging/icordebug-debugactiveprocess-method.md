@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebug::D método ebugActiveProcess'
 title: ICorDebug::DebugActiveProcess (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-ms.openlocfilehash: 1713623fa575bea6df649106b37212f7aeaee6db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c3a212adf962f96fd2c7345fe8b580b6af3b544
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723472"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801324"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess (Método)
 
@@ -47,7 +48,7 @@ HRESULT DebugActiveProcess (
  `ppProcess`  
  enuncia Puntero a la dirección de un objeto "ICorDebugProcess" que representa el proceso al que se ha adjuntado el depurador.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  No se admite la depuración de interoperabilidad en las plataformas Win9x y no x86, como las plataformas basadas en IA-64 y AMD64.  
   
@@ -61,6 +62,6 @@ HRESULT DebugActiveProcess (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebug (Interfaz)](icordebug-interface.md)

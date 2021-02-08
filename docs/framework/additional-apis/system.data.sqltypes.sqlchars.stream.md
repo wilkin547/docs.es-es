@@ -1,5 +1,6 @@
 ---
-title: Propiedad SqlChars.Stream (System.Data.SqlTypes)
+description: 'Más información sobre: SqlChars. Stream (propiedad)'
+title: Propiedad SqlChars. Stream (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -14,16 +15,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7485f462ec19a20a4bc6989c2f1b576b0f991009
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9af0df98b268a749d890ab1b40dddbbe98ced8d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802650"
 ---
 # <a name="sqlcharsstream-property"></a>Propiedad SqlChars.Stream
 
-Obtiene o establece la secuencia de caracteres. El ensamblado que contiene esta propiedad tiene una relación de confianza con SQLAccess.dll. Está pensado para su uso con SQL Server. Para otras bases de datos, utilice el mecanismo de hospedaje proporcionado por esa base de datos.
+Obtiene o establece la secuencia de caracteres. El ensamblado que contiene esta propiedad tiene una relación de confianza con SQLAccess.dll. Está pensado para su uso por SQL Server. En el caso de otras bases de datos, use el mecanismo de hospedaje proporcionado por esa base de datos.
 
 ```csharp
 internal SqlStreamChars Stream { get; set; }
@@ -32,12 +33,12 @@ internal SqlStreamChars Stream { get; set; }
 ## <a name="property-value"></a>Valor de propiedad
 
 `System.Data.SqlTypes.SqlStreamChars`\
-La secuencia de caracteres.
+El flujo de caracteres.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!WARNING]
-> El `SqlChars.Stream` propiedad es interna y no está pensada para usarse directamente en el código.
+> La `SqlChars.Stream` propiedad es interna y no está diseñada para usarse directamente en el código.
 >
 > Microsoft no admite el uso de esta propiedad en una aplicación de producción bajo ninguna circunstancia.
 
@@ -47,4 +48,4 @@ La secuencia de caracteres.
 
 **Ensamblado:** System.Data (en System.Data.dll)
 
-**Versiones de .NET framework:** Disponible desde la versión 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

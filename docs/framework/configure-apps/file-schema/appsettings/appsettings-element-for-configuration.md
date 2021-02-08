@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <appSettings> elemento para <configuration>'
 title: Elemento <appSettings> para <configuration>
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: 66260d15768781b7fa3d9397b8e8a7d9ad68ab95
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 74a25bb0dffd97057cda45575745b6f51ad2a675
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802494"
 ---
 # <a name="appsettings-element-for-configuration"></a>Elemento \<appSettings> para \<configuration>
 
@@ -21,7 +22,7 @@ Contiene la configuración de la aplicación personalizada. Se trata de una secc
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<appSettings>**
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxis
 
 ```xml
 <appSettings>
@@ -49,7 +50,7 @@ Contiene la configuración de la aplicación personalizada. Se trata de una secc
 | [**\<clear>**](clear-element-for-appsettings.md) | Borra todos los valores de configuración de la aplicación definidos previamente. |
 | [**\<remove>**](remove-element-for-appsettings.md) | Quita una configuración de aplicación definida previamente. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El **\<appSettings>** elemento almacena información de configuración de la aplicación personalizada, como cadenas de conexión de base de datos, rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. Se tiene acceso a los pares clave-valor especificados en el **\<appSettings>** elemento en el código mediante la <xref:System.Configuration.ConfigurationSettings> clase.
 
@@ -82,6 +83,6 @@ En el ejemplo siguiente se muestra un archivo de configuración de la aplicació
 
 Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine.config*) y *Web.config* archivos que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema del archivo de configuración para el .NET Framework](../index.md)
