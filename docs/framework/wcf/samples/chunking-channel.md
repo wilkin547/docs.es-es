@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: canal de fragmentación'
 title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 7a5e5292bcb37e83de21458716e34887a0557d91
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 826db33186aa8e01ade9123d6b0d8b696b7e77ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585550"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778781"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 
@@ -256,7 +257,7 @@ Detalles que se han de tener en cuenta:
 
 - El tiempo de espera pasado a Send se utiliza como tiempo de espera para la operación de envío al completo, la cual incluye el envío de todos los fragmentos.
 
-- El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos un personalizado <xref:System.Xml.XmlDictionaryWriter> que se pasa a `message.WriteBodyContents` . Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.
+- El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos un personalizado  <xref:System.Xml.XmlDictionaryWriter> que se pasa a `message.WriteBodyContents` . Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.
 
 ## <a name="implementing-the-receive-operation"></a>Implementar la operación Receive
 
@@ -308,7 +309,7 @@ Detalles que se han de tener en cuenta:
 
 `ChunkingBindingElement` es el responsable de crear el `ChunkingChannelFactory` y `ChunkingChannelListener`. `ChunkingBindingElement`Comprueba si T en `CanBuildChannelFactory` \<T> y `CanBuildChannelListener` \<T> es de tipo `IDuplexSessionChannel` (el único canal que admite el canal de fragmentación) y que los otros elementos de enlace del enlace admiten este tipo de canal.
 
-`BuildChannelFactory`\<T>en primer lugar, comprueba que el tipo de canal solicitado se puede compilar y, a continuación, obtiene una lista de acciones de mensaje que se van a fragmentar. Para más información, consulte la sección siguiente. Crea a continuación un nuevo `ChunkingChannelFactory` que le pasa el generador de canales interno (tal y como se devolvió desde `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la lista de acciones de mensaje, y el número máximo de fragmentos para almacenar en búfer. El número máximo de fragmentos procede de una propiedad llamada `MaxBufferedChunks` expuesta por el `ChunkingBindingElement`.
+`BuildChannelFactory`\<T> en primer lugar, comprueba que el tipo de canal solicitado se puede compilar y, a continuación, obtiene una lista de acciones de mensaje que se van a fragmentar. Para más información, consulte la sección siguiente. Crea a continuación un nuevo `ChunkingChannelFactory` que le pasa el generador de canales interno (tal y como se devolvió desde `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la lista de acciones de mensaje, y el número máximo de fragmentos para almacenar en búfer. El número máximo de fragmentos procede de una propiedad llamada `MaxBufferedChunks` expuesta por el `ChunkingBindingElement`.
 
 `BuildChannelListener<T>` tiene una implementación similar para crear `ChunkingChannelListener` y pasarle el agente de escucha de canal interno.
 

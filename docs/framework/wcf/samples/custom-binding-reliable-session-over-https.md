@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: la sesión confiable de enlace personalizado a través de HTTPS'
 title: Sesión confiable de enlace personalizado mediante HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: aec9bc11fab71a8e3adfe60e0c19b0ac4a9e3699
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ed02ce8ea199b5e7ae744fb0eacf168ea5fa85df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778300"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Sesión confiable de enlace personalizado mediante HTTPS
 

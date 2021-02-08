@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ejemplo de configuración'
 title: Ejemplo de configuración
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 927aab30ab122d281b4f3577ec05a2035c08f2fc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e11237fbc32b203c9b661288dbccab01745928d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264340"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778391"
 ---
 # <a name="configuration-sample"></a>Ejemplo de configuración
 
