@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugAppDomain:: GetId (método)'
 title: ICorDebugAppDomain::GetId (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-ms.openlocfilehash: 88866d75cc97d40c827359450e8e7bdbe13ef3ab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ea660aa08e93e4ce2d97f1e7ae05b261db91118f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772492"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetID (
  `pId`  
  enuncia Identificador único del dominio de aplicación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El identificador del dominio de aplicación es único en el proceso contenedor.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugAppDomain:: GetName (método)'
 title: ICorDebugAppDomain::GetName (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 501a4543940437bfe2a6cb0952aed8184107150c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 56995f544e1576534e35b899a659ed409972305f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672167"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772437"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName (Método)
 
@@ -48,7 +49,7 @@ HRESULT GetName (
  `szName`  
  enuncia Matriz que almacena el nombre del dominio de aplicación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un depurador llama al `GetName` método una vez para obtener el tamaño de un búfer necesario para el nombre. El depurador asigna el búfer y, a continuación, llama al método una segunda vez para rellenar el búfer. La primera llamada, para obtener el tamaño del nombre, se conoce como modo de *consulta*.  
   

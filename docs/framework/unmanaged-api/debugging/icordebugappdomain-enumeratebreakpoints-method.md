@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugAppDomain:: EnumerateBreakpoints ((método)'
 title: ICorDebugAppDomain::EnumerateBreakpoints (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 206069c5-25cb-4794-9d69-67c5aa7ed0af
 topic_type:
 - apiref
-ms.openlocfilehash: 20c8a1987e48a88a3b8c92cf9f36fb58166cda9e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4bd9857b9c662bc76c7c9481f306b20e823e446f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772488"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>ICorDebugAppDomain::EnumerateBreakpoints (Método)
 
@@ -39,7 +40,7 @@ HRESULT EnumerateBreakpoints (
  `ppBreakpoints`  
  enuncia Puntero a la dirección de un objeto ICorDebugBreakpointEnum (que es el enumerador de todos los puntos de interrupción activos en el dominio de aplicación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El enumerador incluye todos los tipos de puntos de interrupción, incluidos los puntos de interrupción de función y los puntos de interrupción de datos.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugAppDomain:: Isattached ((método)'
 title: ICorDebugAppDomain::IsAttached (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af0c67c7-f53e-47c9-b84b-be50bd04903e
 topic_type:
 - apiref
-ms.openlocfilehash: 898398b731832e698a43eb270bbdc63bb3867bb8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 79427d08be9ffea253695b67767d68589edf6979
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702178"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772391"
 ---
 # <a name="icordebugappdomainisattached-method"></a>ICorDebugAppDomain::IsAttached (Método)
 
@@ -39,7 +40,7 @@ HRESULT IsAttached (
  `pbAttached`  
  [out] `true` Si el depurador está asociado al dominio de aplicación; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los métodos ICorDebugController no se pueden usar hasta que el depurador se asocie al dominio de aplicación.  
   
