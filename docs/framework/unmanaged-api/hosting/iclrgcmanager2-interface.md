@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz Iclrgcmanager2 ('
 title: ICLRGCManager2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-ms.openlocfilehash: d2873b5e1f8229e8a16dfaacf1c9737ac47405bb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 455b3a99d10fa43bf325e9f7075d255dd55ae38b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672804"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789962"
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2 (Interfaz)
 
@@ -31,7 +32,7 @@ Proporciona métodos que permiten a un host interactuar con el sistema de recole
 |------------|-----------------|  
 |[SetGCStartupLimitsEx (Método)](iclrgcmanager2-setgcstartuplimitsex-method.md)|Establece el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados. Habilita la generación 0 y los tamaños de segmento mayores que `DWORD` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta interfaz hereda de la [interfaz ICLRGCManager](iclrgcmanager-interface.md).  
   
@@ -47,7 +48,7 @@ Proporciona métodos que permiten a un host interactuar con el sistema de recole
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS (Estructura)](cor-gc-stats-structure.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRPolicyManager:: Setactiononfailure ((método)'
 title: ICLRPolicyManager::SetActionOnFailure (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: 8f44247ca7904a40f5ebc092d95c2e08b6048438
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67d3ca5d7924caf0a768b4de53b4b24f1c72fa27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725578"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789806"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure (Método)
 
@@ -55,7 +56,7 @@ HRESULT SetActionOnFailure (
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_INVALIDARG|No se puede establecer una acción de directiva para la operación especificada o se especificó una acción de Directiva no válida para la operación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  De forma predeterminada, CLR produce una excepción cuando no puede asignar un recurso como memoria. `SetActionOnFailure` permite que el host Invalide este comportamiento especificando la acción de la Directiva que se realizará en caso de error. En la tabla siguiente se muestran las combinaciones de los valores [eclrfailure (](eclrfailure-enumeration.md) y [EPolicyAction](epolicyaction-enumeration.md) que se admiten. (El prefijo FAIL_ se omite de los valores de [eclrfailure (](eclrfailure-enumeration.md) ).  
   
@@ -82,7 +83,7 @@ HRESULT SetActionOnFailure (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EClrFailure (Enumeración)](eclrfailure-enumeration.md)
 - [EPolicyAction (Enumeración)](epolicyaction-enumeration.md)

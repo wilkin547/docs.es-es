@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: interfaz ISymUnmanagedAsyncMethodPropertiesWriter'
 title: ISymUnmanagedAsyncMethodPropertiesWriter (Interfaz)
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-ms.openlocfilehash: 779b737da43f61d1023a0a640dce936e11c4704c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c8b1bc037485e22160af28b59d751859a157499
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707040"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790196"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter (Interfaz)
 
@@ -33,6 +34,6 @@ Permite definir información de método asincrónico opcional para cada símbolo
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)

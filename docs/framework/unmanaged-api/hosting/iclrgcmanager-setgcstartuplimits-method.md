@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRGCManager:: Setgcstartuplimits ((método)'
 title: ICLRGCManager::SetGCStartupLimits (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: 169d344975762b97f89e8dc32d72f2b9c95fea11
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5614b41cfd7a7938cdb653d879119ddbd9560b9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678186"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789988"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits (Método)
 
@@ -61,7 +62,7 @@ HRESULT SetGCStartupLimits (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los valores que `SetGCStartupLimits` establece solo se pueden especificar una vez. Las llamadas posteriores a `SetGCStartupLimits` se omiten.  
   
@@ -75,7 +76,7 @@ HRESULT SetGCStartupLimits (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
 - [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)

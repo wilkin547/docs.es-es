@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLROnEventManager:: Unregisteractiononevent ((método)'
 title: ICLROnEventManager::UnregisterActionOnEvent (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-ms.openlocfilehash: ca3c7fe813f22d3beab3087414100b3d8e5814ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8131c58669ff7be0fdc2b2e063c70d3b370921e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789819"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent (Método)
 
@@ -64,7 +65,7 @@ HRESULT UnregisterActionOnEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EClrEvent (Enumeración)](eclrevent-enumeration.md)
 - [IActionOnCLREvent (Interfaz)](iactiononclrevent-interface.md)

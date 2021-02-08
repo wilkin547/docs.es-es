@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRMetaHostPolicy:: GetRequestedRuntime (método)'
 title: ICLRMetaHostPolicy::GetRequestedRuntime (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-ms.openlocfilehash: 37167b7a9aefa6cd9d5e4df043e8bbc1b0514261
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0e11694b0cb66ad7fc28abf7bb9f7fc8c6931a19
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504126"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789845"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime (Método)
 
@@ -57,7 +58,7 @@ HRESULT GetRequestedRuntime(
 |`riid`|de Especifica el identificador de interfaz IID_ICLRRuntimeInfo para la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) solicitada.|
 |`ppRuntime`|enuncia Cuando `GetRequestedRuntime` devuelve, contiene un puntero a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) correspondiente.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cuando este método se ejecuta correctamente, tiene el efecto secundario de combinar marcas adicionales con las marcas de inicio predeterminadas actuales de la interfaz en tiempo de ejecución devuelta, solo si existen uno o varios de los siguientes elementos en la secuencia de configuración dentro de la sección `<configuration><runtime>`:
 
@@ -87,11 +88,11 @@ Este método devuelve los siguientes HRESULT específicos y los errores HRESULT 
 
 **Encabezado:** Metahost. h
 
-**Biblioteca:** Se incluye como recurso en MSCorEE. dll
+**Biblioteca:** Se incluye como un recurso en MSCorEE.dll
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 - [ICLRMetaHostPolicy (Interfaz)](iclrmetahostpolicy-interface.md)
 - [Interfaces de hospedaje de CLR agregadas en .NET Framework 4 y 4.5](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)

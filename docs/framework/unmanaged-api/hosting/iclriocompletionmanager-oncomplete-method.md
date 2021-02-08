@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRIoCompletionManager:: alcomplete (método)'
 title: ICLRIoCompletionManager::OnComplete (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 003f6974-9727-4322-bed5-e330d1224d0b
 topic_type:
 - apiref
-ms.openlocfilehash: 15119974acf74b49669e5ffbee59fbff9e5c84c9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d54b189debdfc2959676b53fd3fb51b2c10dce17
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789895"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete (Método)
 
@@ -64,7 +65,7 @@ HRESULT OnComplete (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el host implementa una abstracción de finalización de e/s, el CLR realiza solicitudes de e/s a través del host mediante el uso de métodos de [IHostIoCompletionManager](ihostiocompletionmanager-interface.md). Después, el host llama al `OnComplete` método para notificar al tiempo de ejecución el resultado de dichas solicitudes.  
   
@@ -78,7 +79,7 @@ HRESULT OnComplete (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRIoCompletionManager (Interfaz)](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager (Interfaz)](ihostiocompletionmanager-interface.md)

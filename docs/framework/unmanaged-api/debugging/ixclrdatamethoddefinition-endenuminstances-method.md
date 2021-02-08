@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IXCLRDataMethodDefinition:: EndEnumInstances (método)'
 title: 'IXCLRDataMethodDefinition:: EndEnumInstances (método)'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7271c9594a679af205c404f59ff6731821aa0acf
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bfdcb9046b4983e6686410bf2ceadf7119b89e74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790378"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition:: EndEnumInstances (método)
 
@@ -52,7 +53,7 @@ El método proporcionado forma parte de la `IXCLRDataMethodDefinition` interfaz 
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)
 - [Interfaz IXCLRDataMethodDefinition](ixclrdatamethoddefinition-interface.md)

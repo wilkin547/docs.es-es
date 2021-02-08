@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: CorBindToRuntime (función)'
 title: CorBindToRuntime (Función)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-ms.openlocfilehash: 426e95281b648217642ca06f04dfbd9ec991221e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 727abdccd692a431960d293404025cf9ccc1d7ee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733781"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790092"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime (Función)
 
@@ -65,7 +66,7 @@ HRESULT CorBindToRuntime (
  `ppv`  
  [out] Puntero de interfaz devuelto a `riid`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si `pwszVersion` especifica una versión del runtime que no existe, `CorBindToRuntimeEx` devuelve un valor HRESULT de CLR_E_SHIM_RUNTIMELOAD.  
   
@@ -85,7 +86,7 @@ HRESULT CorBindToRuntime (
   
      El modo de compatibilidad de la versión 1 se aplica a todo el proceso y a todos los dominios de aplicación del proceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  [CorBindToRuntimeEx](corbindtoruntimeex-function.md) y `CorBindToRuntime` realizan la misma operación, pero la `CorBindToRuntimeEx` función permite establecer marcas para especificar el comportamiento de CLR.  
   
@@ -99,7 +100,7 @@ HRESULT CorBindToRuntime (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CorBindToCurrentRuntime (Función)](corbindtocurrentruntime-function.md)
 - [CorBindToRuntimeByCfg (Función)](corbindtoruntimebycfg-function.md)

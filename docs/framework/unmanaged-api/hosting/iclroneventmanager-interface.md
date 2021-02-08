@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLROnEventManager (interfaz)'
 title: ICLROnEventManager (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e15a0c1-8ab6-43d0-ae28-6ec7a4edd913
 topic_type:
 - apiref
-ms.openlocfilehash: 1948075d87b5a44397a1eaab3adb4edbc96d7143
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a9c0beec5083bc93f5361bb0e701da5beeedea2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789832"
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager (Interfaz)
 
@@ -32,7 +33,7 @@ Proporciona métodos que permiten al host registrar y anular el registro de devo
 |[Método RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)|Registra un puntero de devolución de llamada para el evento especificado.|  
 |[Método UnregisterActionOnEvent](iclroneventmanager-unregisteractiononevent-method.md)|Anula el registro de un puntero de devolución de llamada registrado previamente para el evento especificado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para registrar y anular el registro de las devoluciones de llamada de eventos, el host obtiene una referencia a llamando al `ICLROnEventManager` método [ICLRControl:: GetCLRManager (](iclrcontrol-getclrmanager-method.md) .  
   
@@ -49,7 +50,7 @@ Proporciona métodos que permiten al host registrar y anular el registro de devo
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EClrEvent (Enumeración)](eclrevent-enumeration.md)
 - [IActionOnCLREvent (Interfaz)](iactiononclrevent-interface.md)
