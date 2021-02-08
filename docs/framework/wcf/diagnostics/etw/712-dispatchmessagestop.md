@@ -1,31 +1,32 @@
 ---
+description: 'Más información acerca de: 712-DispatchMessageStop'
 title: 712 - DispatchMessageStop
 ms.date: 03/30/2017
 ms.assetid: 5e1894a6-9c44-4533-aaec-64063a2cbb06
-ms.openlocfilehash: e0451c439e45c46753521273989522de2ae96bdc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4693c888068ffbd1eb35aad16ee87e6ebaaa85d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788207"
 ---
-# <a name="712---dispatchmessagestop"></a><span data-ttu-id="1ca18-102">712 - DispatchMessageStop</span><span class="sxs-lookup"><span data-stu-id="1ca18-102">712 - DispatchMessageStop</span></span>
+# <a name="712---dispatchmessagestop"></a><span data-ttu-id="29112-103">712 - DispatchMessageStop</span><span class="sxs-lookup"><span data-stu-id="29112-103">712 - DispatchMessageStop</span></span>
 
-## <a name="properties"></a><span data-ttu-id="1ca18-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="1ca18-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="29112-104">Propiedades</span><span class="sxs-lookup"><span data-stu-id="29112-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="1ca18-104">ID</span><span class="sxs-lookup"><span data-stu-id="1ca18-104">ID</span></span>|<span data-ttu-id="1ca18-105">712</span><span class="sxs-lookup"><span data-stu-id="1ca18-105">712</span></span>|  
-|<span data-ttu-id="1ca18-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="1ca18-106">Keywords</span></span>|<span data-ttu-id="1ca18-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="1ca18-107">ServiceModel</span></span>|  
-|<span data-ttu-id="1ca18-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="1ca18-108">Level</span></span>|<span data-ttu-id="1ca18-109">Información</span><span class="sxs-lookup"><span data-stu-id="1ca18-109">Information</span></span>|  
-|<span data-ttu-id="1ca18-110">Canal</span><span class="sxs-lookup"><span data-stu-id="1ca18-110">Channel</span></span>|<span data-ttu-id="1ca18-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="1ca18-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="29112-105">Id.</span><span class="sxs-lookup"><span data-stu-id="29112-105">ID</span></span>|<span data-ttu-id="29112-106">712</span><span class="sxs-lookup"><span data-stu-id="29112-106">712</span></span>|  
+|<span data-ttu-id="29112-107">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="29112-107">Keywords</span></span>|<span data-ttu-id="29112-108">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="29112-108">ServiceModel</span></span>|  
+|<span data-ttu-id="29112-109">Nivel</span><span class="sxs-lookup"><span data-stu-id="29112-109">Level</span></span>|<span data-ttu-id="29112-110">Información</span><span class="sxs-lookup"><span data-stu-id="29112-110">Information</span></span>|  
+|<span data-ttu-id="29112-111">Canal</span><span class="sxs-lookup"><span data-stu-id="29112-111">Channel</span></span>|<span data-ttu-id="29112-112">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="29112-112">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="1ca18-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="1ca18-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="29112-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="29112-113">Description</span></span>  
 
- <span data-ttu-id="1ca18-113">Este evento se genera cuando el envío del mensaje se ha completado.</span><span class="sxs-lookup"><span data-stu-id="1ca18-113">This event is emitted when message dispatching is completed.</span></span>  
+ <span data-ttu-id="29112-114">Este evento se genera cuando el envío del mensaje se ha completado.</span><span class="sxs-lookup"><span data-stu-id="29112-114">This event is emitted when message dispatching is completed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="1ca18-114">Message</span><span class="sxs-lookup"><span data-stu-id="1ca18-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="29112-115">Message</span><span class="sxs-lookup"><span data-stu-id="29112-115">Message</span></span>  
 
- <span data-ttu-id="1ca18-115">Distribución de mensajes completada.</span><span class="sxs-lookup"><span data-stu-id="1ca18-115">Message dispatching completed.</span></span>  
+ <span data-ttu-id="29112-116">Distribución de mensajes completada.</span><span class="sxs-lookup"><span data-stu-id="29112-116">Message dispatching completed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="1ca18-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="1ca18-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="29112-117">Detalles</span><span class="sxs-lookup"><span data-stu-id="29112-117">Details</span></span>
