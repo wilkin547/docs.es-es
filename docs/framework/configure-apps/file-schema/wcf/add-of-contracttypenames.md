@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> de <contractTypeNames>'
 title: <add> de <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 69a0bbbc8774251dbdc062875bb06453f355c882
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0708aa277b4250cb4134a98ddf7af661840981a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804002"
 ---
 # <a name="add-of-contracttypenames"></a>\<add> de \<contractTypeNames>
 
@@ -58,7 +59,7 @@ Un elemento de configuración que especifica el nombre del contrato de los servi
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |name|Cadena que especifica el nombre del tipo de contrato.|  
-|namespace|Cadena que especifica el espacio de nombres del tipo de contrato.|  
+|espacio de nombres|Cadena que especifica el espacio de nombres del tipo de contrato.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
 

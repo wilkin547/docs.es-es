@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: interfaz ICorDebugHeapValue'
 title: Interfaz ICorDebugHeapValue
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: ee3ea319360bba1a113c15daf8cf143ea512e5cd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c65cbce530f0d1f00d8610031fb604a0118ee29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733326"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803690"
 ---
 # <a name="icordebugheapvalue-interface"></a>Interfaz ICorDebugHeapValue
 
@@ -32,7 +33,7 @@ Subclase de "ICorDebugValue" que representa un objeto recopilado por el recolect
 |[Método CreateRelocBreakpoint](icordebugheapvalue-createrelocbreakpoint-method.md)|Sin implementar.|  
 |[Método IsValid](icordebugheapvalue-isvalid-method.md)|Obtiene un valor que indica si el objeto representado por este objeto `ICorDebugHeapValue` es válido o si lo ha reclamado el recolector de elementos no utilizados. Este método está en desuso en la versión .NET Framework 2,0.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -47,6 +48,6 @@ Subclase de "ICorDebugValue" que representa un objeto recopilado por el recolect
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

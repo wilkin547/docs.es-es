@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> de <backupList>'
 title: <add> de <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 6d8fd26170059226583a300b1b48b849666db929
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9855d93be011b4eaa2890c4d24392fde3b65d05a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181627"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804080"
 ---
 # <a name="add-of-backuplist"></a>\<add> de \<backupList>
 
@@ -52,6 +53,6 @@ Representa un elemento de configuración que define un elemento de extremo de re
 |-------------|-----------------|  
 |[\<routing>](routing.md)|Contiene una lista de extremos que le gustaría que usara el servicio de enrutamiento en caso de que no se pudiera alcanzar el extremo primario.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType>

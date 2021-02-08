@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Icordebugheapvalue2 (:: CreateHandle (método)'
 title: ICorDebugHeapValue2::CreateHandle (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-ms.openlocfilehash: 278120c6e1bc87a061a3f81f71bdb7b89cd421be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d93fee71441b9c510d517acb9582b8d1d9ce9e10
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726566"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803664"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle (Método)
 
@@ -43,7 +44,7 @@ HRESULT CreateHandle (
  `ppHandle`  
  enuncia Puntero a la dirección de un objeto ICorDebugHandleValue que representa el nuevo identificador para este valor de montón.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El identificador se creará en el dominio de aplicación que está asociado con el valor del montón y dejará de ser válido si se descarga el dominio de aplicación.  
   

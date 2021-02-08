@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <TypeParameter> elemento (.net Native)'
 title: <TypeParameter> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-ms.openlocfilehash: dc04115914b7571b677c6d069d2d4b820b895d59
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 182cd62dc0584991b8ef0f5757d6005173d6d7a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803651"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter> Elemento (.NET Native)
 
@@ -51,13 +52,13 @@ Aplica la directiva al tipo representado por un argumento de tipo pasado a un m�
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*parameter_name*|Nombre del parámetro de tipo <xref:System.Type>. Por ejemplo, en la firma de método `Type.GetInterfaceMap(Type interfaceType)`, el valor del atributo `Name` es "interfaceType".|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -71,7 +72,7 @@ Aplica la directiva al tipo representado por un argumento de tipo pasado a un m�
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `<TypeParameter>` elemento es similar al [\<Parameter>](parameter-element-net-native.md) elemento, salvo que solo se puede aplicar a parámetros de tipo <xref:System.Type> . Aplica la directiva a cualquier tipo que se represente en tiempo de ejecución mediante el argumento de tipo especificado por el atributo `Name`.  
   

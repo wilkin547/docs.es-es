@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> de <claimTypeRequirements>'
 title: <add> de <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 00699a6fa5d0de7ac554db6ef8d0bbe511a85c0a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 63cdbce62c20cda1cabe18bbd7b045e2b9a109d5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804028"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<add> de \<claimTypeRequirements>
 
@@ -53,7 +54,7 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](claimtyperequirements-element.md)|Especifica una colección de tipos de notificación requeridos.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Este requisito se manifiesta en una directiva de seguridad. Cuando un cliente solicita las credenciales de un servicio aliado (por ejemplo, CardSpace), coloca los requisitos en una solicitud del token (RequestSecurityToken) para que el servicio aliado pueda emitir las credenciales que satisfacen según los requisitos.  
   

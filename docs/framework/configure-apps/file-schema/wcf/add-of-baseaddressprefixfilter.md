@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <add> de <baseAddressPrefixFilter>'
 title: <add> de <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: fefe85381aec113da123e6f2246aee340b0cf97a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f3abdf59223921a56c96e02dd95babc54f91dc03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804054"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> de \<baseAddressPrefixFilter>
 
@@ -84,7 +85,7 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 > El filtro no admite ningún carácter comodín. Además, las direcciones base proporcionadas por IIS pueden tener direcciones enlazadas a otros esquemas no presentes en la lista `baseAddressPrefixFilters`. Estas direcciones no se filtran.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>

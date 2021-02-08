@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugStepper:: Setinterceptmask ((método)'
 title: ICorDebugStepper::SetInterceptMask (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6245e2ae-5cc2-43ff-8cc1-71953d12113a
 topic_type:
 - apiref
-ms.openlocfilehash: 814bf87039ef57056f13994af1b873f8f57c7804
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 33a42b154d063a29022034fd8061599a5e0e5503
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718220"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803553"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>ICorDebugStepper::SetInterceptMask (Método)
 
@@ -39,7 +40,7 @@ HRESULT SetInterceptMask (
  `mask`  
  de Combinación de valores de la enumeración Cordebugintercept (que especifica los tipos de código.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se establece el bit de un interceptor, el stepper se completará cuando se encuentre el tipo de código de interceptación especificado. Si el bit está desactivado, se omitirá el código de intercepción.  
   

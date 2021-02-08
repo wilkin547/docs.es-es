@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: operadores de secuencia'
 title: Operadores de secuencia
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: a2394ed57335431fe0246f66219392af5cc0e6b1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cf118c7038bae922f94abcefe0d13f6af8078037
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173450"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803799"
 ---
 # <a name="sequence-operators"></a>Operadores de secuencia
 
@@ -47,6 +48,6 @@ Generalmente hablando, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdli
 
  Todos los operadores de secuencia admitidos funcionan como es de esperar en Common Language Runtime (CLR), salvo `Average`. `Average` devuelve un valor del mismo tipo que el tipo para el que se calcula el promedio, mientras que en CLR `Average` siempre devuelve <xref:System.Double> o <xref:System.Decimal>. Si el argumento de origen se convierte explícitamente en double o decimal o el selector se convierte en double o decimal, el código SQL resultante también tendrá este tipo de conversión y el resultado será el esperado.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tipos de datos y funciones](data-types-and-functions.md)

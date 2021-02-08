@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugStepper (interfaz)'
 title: Interfaz ICorDebugStepper
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 8b5bbb65034e5b715532397c9ecc650da9aee912
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a16df9d25b4d87b0638448c1fdf8fec4759261d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803599"
 ---
 # <a name="icordebugstepper-interface"></a>Interfaz ICorDebugStepper
 
@@ -38,7 +39,7 @@ Representa un paso en la ejecución del código realizado por un depurador, act�
 |[Método StepOut](icordebugstepper-stepout-method.md)|Hace que esto `ICorDebugStepper` se lleve a cabo de un solo paso a través de su subproceso contenedor y que se complete cuando el fotograma actual devuelva el control al marco que realiza la llamada.|  
 |[Método StepRange](icordebugstepper-steprange-method.md)|Hace que esto `ICorDebugStepper` pase de un solo paso a través de su subproceso contenedor y que devuelva cuando llegue al código más allá del último de los intervalos especificados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `ICorDebugStepper` interfaz sirve para los siguientes fines:  
   
@@ -65,6 +66,6 @@ Representa un paso en la ejecución del código realizado por un depurador, act�
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

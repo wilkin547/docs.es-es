@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <declaredTypes>'
 title: <declaredTypes>
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: 281d9d7d7e51a837de4f86f85472815956a20319
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e5f60209dd556edc7cf47b01b1a58c1f17d74eac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153916"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803937"
 ---
 # \<declaredTypes>
 
@@ -64,7 +65,7 @@ Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContract
 |-------------|-----------------|  
 |[\<dataContractSerializer>](datacontractserializer-of-system-runtime-serialization.md)|Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener más información sobre los tipos conocidos, vea [tipos conocidos de contratos de datos](../../../wcf/feature-details/data-contract-known-types.md) y <xref:System.Runtime.Serialization.DataContractSerializer> .  
   

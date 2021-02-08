@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <add> del <declaredTypes> elemento'
 title: <add> del <declaredTypes> elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 9af47848b03074ec88f38a5884089bc50239ee50
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8e2be6e553ee5dc5c96bcae81d1c1c6bf609afed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201673"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803989"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<add> del \<declaredTypes> elemento
 
@@ -79,7 +80,7 @@ Agrega un tipo usado por <xref:System.Runtime.Serialization.DataContractSerializ
 </add>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [Tipos conocidos de contratos de datos](../../../wcf/feature-details/data-contract-known-types.md)

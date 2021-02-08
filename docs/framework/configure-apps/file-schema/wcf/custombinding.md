@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <customBinding>'
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4d297750d107648aa10b349c6febc1a8929a30b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140798"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803950"
 ---
 # \<customBinding>
 
@@ -205,7 +206,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |-------------|-----------------|
 |enlaces|Contiene todos los enlaces para las aplicaciones de Windows Communication Foundation.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los enlaces personalizados proporcionan el control completo sobre la pila de mensajería WCF. Los enlaces diseñados especialmente se pueden crear agregando los elementos de configuración para las entidades concretas. Por ejemplo, el usuario puede combinar la sección `httpsTransport`, sección `reliableSession` y la sección `security` para crear https fiables y seguros basados en el enlace.
 
@@ -291,9 +292,9 @@ La tabla siguiente resume las opciones de cada nivel.
 
 Además, puede definir sus propios elementos de enlace e insertarlos entre cualquiera de las capas definidas anteriores.
 
-Para obtener información sobre cómo utilizar un enlace personalizado para modificar un enlace proporcionado por el sistema, consulte [Cómo: personalizar un enlace proporcionado por el sistema](../../../wcf/extending/how-to-customize-a-system-provided-binding.md).
+Para obtener información sobre cómo utilizar un enlace personalizado para modificar un enlace proporcionado por el sistema, consulte [Cómo: personalizar un enlace de System-Provided](../../../wcf/extending/how-to-customize-a-system-provided-binding.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: asignación de tipos de SQL-CLR'
 title: Asignación de tipos entre CLR y SQL
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 313fd81bd84a99e4a2d32925a7d3bb4776f8472b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 59d3594287ceb20f5c3887c58a0f5527df35218a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203545"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803742"
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 
@@ -284,7 +285,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  LINQ to SQL no admite ninguna otra asignación de tipos para estos tipos varios.  Para obtener más información, vea la matriz de comportamiento de la [asignación de tipos en tiempo de ejecución](#BehaviorMatrix).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Asignación basada en atributos](attribute-based-mapping.md)
 - [Asignación externa](external-mapping.md)

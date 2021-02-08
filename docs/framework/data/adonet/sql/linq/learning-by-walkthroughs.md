@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: aprendizaje por tutoriales'
 title: Aprender con tutoriales
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f3d313fd50108420b631cff783708191f97a8b04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a0163e03ee7e992d75c8f8864a6a2b256c40a7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158245"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803833"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprender con tutoriales
 
@@ -58,7 +59,7 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>Para comprobar o cambiar el inicio de sesión de base de datos  
   
-1. En el menú **Inicio** de Windows, seleccione **todos los programas** **Microsoft SQL Server 2005**, seleccione **herramientas de configuración**y, a continuación, haga clic en **Administrador de configuración de SQL Server**.  
+1. En el menú **Inicio** de Windows, seleccione **todos los programas** **Microsoft SQL Server 2005**, seleccione **herramientas de configuración** y, a continuación, haga clic en **Administrador de configuración de SQL Server**.  
   
 2. En el panel izquierdo del **Administrador de configuración de SQL Server**, haga clic en **SQL Server 2005 Services**.  
   
@@ -76,7 +77,7 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Para habilitar el protocolo Canalizaciones con nombre  
   
-1. En el panel izquierdo del **Administrador de configuración de SQL Server**, expanda **SQL Server configuración de red 2005**y, a continuación, haga clic en **protocolos para SQLEXPRESS**.  
+1. En el panel izquierdo del **Administrador de configuración de SQL Server**, expanda **SQL Server configuración de red 2005** y, a continuación, haga clic en **protocolos para SQLEXPRESS**.  
   
 2. En el panel derecho, asegúrese de que el protocolo **canalizaciones con nombre** está habilitado. Si no lo está, haga clic con el botón secundario en **canalizaciones de nombre** y, a continuación, haga clic en **Habilitar**.  
   
