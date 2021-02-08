@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataEmit2:: Setgenericparamprops ((método)'
 title: IMetaDataEmit2::SetGenericParamProps (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-ms.openlocfilehash: 8858e692d66f7b34a66334bd4e8b906dd12962ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c6946bbd301450203bc6fb2b1202352119dc792
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701996"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771657"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps (Método)
 
@@ -65,7 +66,7 @@ HRESULT SetGenericParamProps (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)

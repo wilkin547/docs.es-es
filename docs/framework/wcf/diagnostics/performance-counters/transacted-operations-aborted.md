@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: operaciones de transacción anuladas'
 title: Operaciones de transacción anuladas
 ms.date: 03/30/2017
 ms.assetid: d0ff844c-a33c-4ecf-8be5-b5b33635914a
-ms.openlocfilehash: 623eff3bc19b844aeeda31f190626b7df0a76332
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b8169578602cf8c9168232ee52f481724ef1affc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250039"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771176"
 ---
 # <a name="transacted-operations-aborted"></a>Operaciones de transacción anuladas
 

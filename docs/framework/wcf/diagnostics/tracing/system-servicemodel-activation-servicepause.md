@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. Activation. ServicePause'
 title: System.ServiceModel.Activation.ServicePause
 ms.date: 03/30/2017
 ms.assetid: 3aeef78f-835e-4a72-b759-bf3e25dd8412
-ms.openlocfilehash: 07e9c47d041166fbcafabe9d8f7a25d8403b0330
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 499d02ea2b3762a5d3265e4d28cf6c59bbd53dfd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253679"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770162"
 ---
 # <a name="systemservicemodelactivationservicepause"></a>System.ServiceModel.Activation.ServicePause
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataEmit:: SetParent (método)'
 title: IMetaDataEmit::SetParent (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: cef817b52718acfbc4360e9d3742a5a78abd3afe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9025d4a37de85a0e657059f63ef781dc4377c036
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675053"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772008"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent (Método)
 
@@ -53,7 +54,7 @@ HRESULT SetParent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

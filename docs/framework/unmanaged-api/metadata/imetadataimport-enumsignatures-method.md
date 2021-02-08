@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Enumsignatures ((método)'
 title: IMetaDataImport::EnumSignatures (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-ms.openlocfilehash: 3021124184ab0491337a07144e6f77b5bfea3681
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ed41dd42151791e3d27950f30b10d91217ad7e7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721977"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771631"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures (Método)
 
@@ -58,7 +59,7 @@ HRESULT EnumSignatures (
 |`S_OK`|`EnumSignatures` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcSignatures` es cero.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El método [IMetaDataEmit:: GetTokenFromSig (](imetadataemit-gettokenfromsig-method.md) crea los tokens de firma.  
   
@@ -72,7 +73,7 @@ HRESULT EnumSignatures (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

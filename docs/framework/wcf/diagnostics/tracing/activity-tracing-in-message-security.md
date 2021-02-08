@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: seguimiento de actividades en la seguridad de mensajes'
 title: Seguimiento de actividades en la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-ms.openlocfilehash: 4ab34e3a3ef8487a747c9f9dac71a22006ea515a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 94fb6f60539465dd16e09a968679567e94d6cd24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96265016"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770864"
 ---
 # <a name="activity-tracing-in-message-security"></a>Seguimiento de actividades en la seguridad de mensajes
 
@@ -57,4 +58,4 @@ En este tema se describe el seguimiento de actividades para el procesamiento de 
 ||Hora en la que tiene lugar la autorización|Actividades|Traces|  
 |-|-------------------------------------|----------------|------------|  
 |Local (valor predeterminado)|Después de que se haya descifrado el mensaje en el servidor|Los seguimientos se emiten en la actividad ProcessAction en el servidor.|Usuario autorizado.|  
-|Remote|Después de que se haya descifrado el mensaje en el servidor|Los seguimientos se emiten en una nueva actividad invocada por la actividad ProcessAction.|Usuario autorizado.|
+|Control remoto|Después de que se haya descifrado el mensaje en el servidor|Los seguimientos se emiten en una nueva actividad invocada por la actividad ProcessAction.|Usuario autorizado.|
