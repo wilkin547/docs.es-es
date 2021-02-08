@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: MustOverride (Visual Basic)'
 title: MustOverride
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: cf73f07b6e13d524281129e3c5d8dceceb90764c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: df7200a7f7ec4bfda34765747d6318bc50a38dd1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774530"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
 
 Especifica que una propiedad o procedimiento no está implementado en esta clase y se debe invalidar en una clase derivada antes de que se pueda utilizar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Solo se puede usar `MustOverride` en una instrucción de declaración de propiedad o procedimiento. La propiedad o el procedimiento que especifica `MustOverride` debe ser miembro de una clase y la clase debe marcarse como [MustInherit](mustinherit.md).  
   
@@ -48,7 +49,7 @@ Especifica que una propiedad o procedimiento no está implementado en esta clase
   
  [Instrucción Sub](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [NotOverridable](notoverridable.md)
 - [Overridable](overridable.md)

@@ -1,5 +1,6 @@
 ---
-title: Auto
+description: 'Más información acerca de: auto (Visual Basic)'
+title: Automático
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Auto
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: 799a7320b701384dc5f4b4b46fef8544f6b15b02
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9601b6c253d4366c453950b4d8f3c5b2caf3805f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875515"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774686"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
 
@@ -26,7 +27,7 @@ Especifica que Visual Basic debe serializar las cadenas según las reglas de .NE
   
  Si no se especifica ningún modificador de juego de caracteres, `Ansi` es el valor predeterminado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `Auto` modificador se puede usar en este contexto:  
   
@@ -36,8 +37,8 @@ Especifica que Visual Basic debe serializar las cadenas según las reglas de .NE
 
  Esta palabra clave no es compatible.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [ANSI](ansi.md)
+- [Ansi](ansi.md)
 - [Unicode](unicode.md)
 - [Palabras clave](../keywords/index.md)

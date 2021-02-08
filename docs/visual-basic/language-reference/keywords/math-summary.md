@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Resumen de matemáticas (Visual Basic)'
 title: Resumen de funciones matemáticas
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: eb13a5f32ea407bebad576ef063c9def03fc6693
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8d2b03f465e3b215f9377cae70291f0f7b37ca17
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875588"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774764"
 ---
 # <a name="math-summary-visual-basic"></a>Resumen de funciones matemáticas (Visual Basic)
 
@@ -27,7 +28,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Obtener el signo de una expresión.|<xref:System.Math.Sign%2A>|  
 |Ejecutar conversiones numéricas.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones matemáticas derivadas](derived-math-functions.md)
 - [Palabras clave](index.md)

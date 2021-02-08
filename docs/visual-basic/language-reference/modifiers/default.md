@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: predeterminado (Visual Basic)'
 title: Valor predeterminado
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: bc213c3b5564d1833136df8f5b8dab1c6b012296
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fe135df4f29ae3c4064c97d4f2789be7f4f3d8f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875482"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774608"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
 
 Identifica una propiedad como la propiedad predeterminada de su clase, estructura o interfaz.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una clase, estructura o interfaz puede designar como máximo una de sus propiedades como la *propiedad predeterminada*, siempre que esa propiedad tome al menos un parámetro. Si el código hace referencia a una clase o estructura sin especificar un miembro, Visual Basic resuelve esa referencia a la propiedad predeterminada.  
   
@@ -37,7 +38,7 @@ Identifica una propiedad como la propiedad predeterminada de su clase, estructur
   
  [Property Statement](../statements/property-statement.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic](../../programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [Palabras clave](../keywords/index.md)

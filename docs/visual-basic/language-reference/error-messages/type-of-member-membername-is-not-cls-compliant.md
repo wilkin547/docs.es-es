@@ -1,4 +1,5 @@
 ---
+description: "Más información sobre: BC40025: el tipo de miembro ' <membername> ' no es conforme a CLS"
 title: El tipo de miembro '<membername>' no es compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: c8c14a2d6df8804967807af881384bc7d9ccd99f
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 4fe83999a0cb2d678ccc0119509a368160dfc3ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774881"
 ---
 # <a name="bc40025-type-of-member-membername-is-not-cls-compliant"></a>BC40025: el tipo de miembro ' \<membername> ' no es conforme a CLS
 
