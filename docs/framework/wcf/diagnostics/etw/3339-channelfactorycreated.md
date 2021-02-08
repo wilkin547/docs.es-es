@@ -1,31 +1,32 @@
 ---
+description: 'Más información acerca de: 3339-ChannelFactoryCreated'
 title: 3339 - ChannelFactoryCreated
 ms.date: 03/30/2017
 ms.assetid: 97a395dd-d0d4-471b-b42f-eb4368cd15e4
-ms.openlocfilehash: 35f3ebca1776919ecc33ce9ed04a88a35fbeb7f0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bea32fe6826c0475a5bf3d8e3d062ae0dd41dcc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268721"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783682"
 ---
-# <a name="3339---channelfactorycreated"></a><span data-ttu-id="1c30d-102">3339 - ChannelFactoryCreated</span><span class="sxs-lookup"><span data-stu-id="1c30d-102">3339 - ChannelFactoryCreated</span></span>
+# <a name="3339---channelfactorycreated"></a><span data-ttu-id="89cd8-103">3339 - ChannelFactoryCreated</span><span class="sxs-lookup"><span data-stu-id="89cd8-103">3339 - ChannelFactoryCreated</span></span>
 
-## <a name="properties"></a><span data-ttu-id="1c30d-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="1c30d-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="89cd8-104">Propiedades</span><span class="sxs-lookup"><span data-stu-id="89cd8-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="1c30d-104">ID</span><span class="sxs-lookup"><span data-stu-id="1c30d-104">ID</span></span>|<span data-ttu-id="1c30d-105">3339</span><span class="sxs-lookup"><span data-stu-id="1c30d-105">3339</span></span>|  
-|<span data-ttu-id="1c30d-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="1c30d-106">Keywords</span></span>|<span data-ttu-id="1c30d-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="1c30d-107">ServiceModel</span></span>|  
-|<span data-ttu-id="1c30d-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="1c30d-108">Level</span></span>|<span data-ttu-id="1c30d-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="1c30d-109">Verbose</span></span>|  
-|<span data-ttu-id="1c30d-110">Canal</span><span class="sxs-lookup"><span data-stu-id="1c30d-110">Channel</span></span>|<span data-ttu-id="1c30d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="1c30d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="89cd8-105">Id.</span><span class="sxs-lookup"><span data-stu-id="89cd8-105">ID</span></span>|<span data-ttu-id="89cd8-106">3339</span><span class="sxs-lookup"><span data-stu-id="89cd8-106">3339</span></span>|  
+|<span data-ttu-id="89cd8-107">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="89cd8-107">Keywords</span></span>|<span data-ttu-id="89cd8-108">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="89cd8-108">ServiceModel</span></span>|  
+|<span data-ttu-id="89cd8-109">Nivel</span><span class="sxs-lookup"><span data-stu-id="89cd8-109">Level</span></span>|<span data-ttu-id="89cd8-110">Verbose</span><span class="sxs-lookup"><span data-stu-id="89cd8-110">Verbose</span></span>|  
+|<span data-ttu-id="89cd8-111">Canal</span><span class="sxs-lookup"><span data-stu-id="89cd8-111">Channel</span></span>|<span data-ttu-id="89cd8-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="89cd8-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="1c30d-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="1c30d-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="89cd8-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="89cd8-113">Description</span></span>  
 
- <span data-ttu-id="1c30d-113">Este evento se genera cuando se crea el generador de canales.</span><span class="sxs-lookup"><span data-stu-id="1c30d-113">This event is emitted when the channel factory is created.</span></span>  
+ <span data-ttu-id="89cd8-114">Este evento se genera cuando se crea el generador de canales.</span><span class="sxs-lookup"><span data-stu-id="89cd8-114">This event is emitted when the channel factory is created.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="1c30d-114">Message</span><span class="sxs-lookup"><span data-stu-id="1c30d-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="89cd8-115">Message</span><span class="sxs-lookup"><span data-stu-id="89cd8-115">Message</span></span>  
 
- <span data-ttu-id="1c30d-115">Se creó ChannelFactory.</span><span class="sxs-lookup"><span data-stu-id="1c30d-115">ChannelFactory created.</span></span>  
+ <span data-ttu-id="89cd8-116">Se creó ChannelFactory.</span><span class="sxs-lookup"><span data-stu-id="89cd8-116">ChannelFactory created.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="1c30d-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="1c30d-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="89cd8-117">Detalles</span><span class="sxs-lookup"><span data-stu-id="89cd8-117">Details</span></span>
