@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: crear un participante de seguimiento personalizado'
 title: Procedimiento para crear un participante de seguimiento personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 6fc8584b979c606a32e70e971be30a4bed89bdc2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 8b435ac110d286d0582700289079459cca3cf979
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190512"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777845"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Procedimiento para crear un participante de seguimiento personalizado
 
