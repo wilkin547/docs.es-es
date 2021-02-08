@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: el formato del portapapeles no es válido'
 title: Formato del Portapapeles no válido
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID460
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
-ms.openlocfilehash: 429d1e120a0044152a358a87663eb09989f45b0e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 58ba6197a14b005cf61d0783e19cb3f957dd2fca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874589"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796761"
 ---
 # <a name="clipboard-format-is-not-valid"></a>Formato del Portapapeles no válido
 
@@ -25,6 +26,6 @@ El formato del portapapeles especificado es incompatible con el método que se e
   
 - Quite el formato no válido y especifique uno válido.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Portapapeles: agregar otros formatos](/cpp/mfc/clipboard-adding-other-formats)

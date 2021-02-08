@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: no se puede crear el componente ActiveX'
 title: No se puede crear el componente ActiveX
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID429
 ms.assetid: 7fc5a271-8195-40a2-89f9-e05fd71bb8e0
-ms.openlocfilehash: f50fe1664f474b4b61e438f14ff8c3b0b527075b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5650dcd9ab40091ade7f11e8afade4e5692639cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796813"
 ---
 # <a name="cannot-create-activex-component"></a>No se puede crear el componente ActiveX
 
@@ -19,7 +20,7 @@ Intentó poner un control ActiveX en un formulario en el tiempo de diseño o agr
   
 - Puede que la información en el Registro se haya eliminado o esté dañada. Reinstale el control ActiveX o póngase en contacto con el proveedor del control.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de errores](../../programming-guide/language-features/error-types.md)
+- [Tipos de error](../../programming-guide/language-features/error-types.md)
 - [Hable con nosotros](/visualstudio/ide/feedback-options)

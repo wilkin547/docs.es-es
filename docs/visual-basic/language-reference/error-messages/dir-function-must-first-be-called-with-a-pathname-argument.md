@@ -1,15 +1,16 @@
 ---
+description: "Obtenga más información sobre: la función dir ' debe llamarse primero con un argumento ' PathName '"
 title: Se debe llamar primero a la función 'Dir' con un argumento 'Pathname'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrDIR_IllegalCall
 ms.assetid: 7b5d149f-be91-4ac3-8262-86a360894e7d
-ms.openlocfilehash: 7f8191b0ef5452fcf6f3a20c3e0f28ca84ef9c4a
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: ee492a269d41e8c9fe1fddbd59210b59fbe8618c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163433"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796592"
 ---
 # <a name="dir-function-must-first-be-called-with-a-pathname-argument"></a>Se debe llamar primero a la función 'Dir' con un argumento 'Pathname'
 

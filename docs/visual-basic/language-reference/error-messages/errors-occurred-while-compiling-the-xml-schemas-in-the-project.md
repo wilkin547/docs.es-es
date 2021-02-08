@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: BC36810: se produjeron errores al compilar los esquemas XML en el proyecto'
 title: Se produjeron errores al compilar los esquemas XML del proyecto
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 747c2c8cb1e5dc3d4fcae86a9acf84446c4e59c9
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 78e88208c0d3df12e7bad8ab46b1d91bce559923
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162042"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796488"
 ---
 # <a name="bc36810-errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>BC36810: se produjeron errores al compilar los esquemas XML en el proyecto
 
