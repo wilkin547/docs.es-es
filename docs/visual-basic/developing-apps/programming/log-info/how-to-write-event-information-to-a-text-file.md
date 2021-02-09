@@ -1,17 +1,18 @@
 ---
-title: 'Cómo: Escribir información de eventos en un archivo de texto'
+description: 'Más información acerca de: Procedimiento: para escribir información de eventos en un archivo de texto (Visual Basic)'
+title: Procedimiento para escribir información de eventos en un archivo de texto
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: 6e83f8450ca7be8a2dcd5ff43eab3dd2ec0d2f1b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eb6fab9976c010080c0cffa37edd4f790dc73956
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410067"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775141"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Cómo: Escribir información de eventos en un archivo de texto (Visual Basic)
 
@@ -72,4 +73,4 @@ Después de configurar el agente de escucha de registro de archivo para un ensam
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Trabajar con registros de aplicaciones](working-with-application-logs.md)
-- [Registrar excepciones](how-to-log-exceptions.md)
+- [Cómo: Registrar excepciones](how-to-log-exceptions.md)
