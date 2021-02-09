@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 05/18/2020
 zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: eb426b790e0623b0cf233a763e93d2bd501b8034
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: a7b6b66e4cc865d4ec6b7cfc31ac79767935df2f
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100826"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506388"
 ---
 # <a name="order-unit-tests"></a>Ordenación de pruebas unitarias
 
@@ -30,7 +30,7 @@ Con MSTest, las pruebas se ordenan automáticamente por su nombre de prueba.
 > [!NOTE]
 > Una prueba denominada `Test14` se ejecutará antes de `Test2` aunque el número `2` sea inferior a `14`. Esto se debe a que la ordenación de los nombres de las pruebas utiliza el nombre de texto de la prueba.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/MSTest.Project/ByAlphabeticalOrder.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/MSTest.Project/ByAlphabeticalOrder.cs":::
 
 :::zone-end
 :::zone pivot="xunit"
@@ -41,35 +41,35 @@ El marco de pruebas de xUnit permite más nivel de detalle y control del orden d
 
 Para ordenar los casos de prueba por su nombre de método, implemente `ITestCaseOrderer` y proporcione un mecanismo de ordenación.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/Orderers/AlphabeticalOrderer.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/Orderers/AlphabeticalOrderer.cs":::
 
 Después, en una clase de prueba, establezca el orden de los casos de prueba con `TestCaseOrdererAttribute`.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/ByAlphabeticalOrder.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/ByAlphabeticalOrder.cs":::
 
 ## <a name="order-by-collection-alphabetically"></a>Orden alfabético de la colección
 
 Para ordenar las colecciones de pruebas por su nombre para mostrar, implemente `ITestCollectionOrderer` y proporcione un mecanismo de ordenación.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/Orderers/DisplayNameOrderer.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/Orderers/DisplayNameOrderer.cs":::
 
 Como las colecciones de pruebas se ejecutan en paralelo, debe deshabilitar explícitamente la ejecución de pruebas en paralelo de las colecciones con `CollectionBehaviorAttribute`. A continuación, especifique la implementación en `TestCollectionOrdererAttribute`.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/ByDisplayName.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/ByDisplayName.cs":::
 
 ## <a name="order-by-custom-attribute"></a>Orden por atributo personalizado
 
 Para ordenar las pruebas de xUnit con atributos personalizados, primero necesita un atributo en el que confiar. Defina `TestPriorityAttribute` como se indica a continuación:
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/Attributes/TestPriorityAttribute.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/Attributes/TestPriorityAttribute.cs":::
 
 A continuación, tenga en cuenta la siguiente implementación `PriorityOrderer` de la interfaz de `ITestCaseOrderer`.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/Orderers/PriorityOrderer.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/Orderers/PriorityOrderer.cs":::
 
 Después, en una clase de prueba, establezca el orden de los casos de prueba con `TestCaseOrdererAttribute` en `PriorityOrderer`.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/ByPriorityOrder.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/ByPriorityOrder.cs":::
 
 :::zone-end
 :::zone pivot="nunit"
@@ -78,7 +78,7 @@ Después, en una clase de prueba, establezca el orden de los casos de prueba con
 
 Para ordenar las pruebas de forma explícita, NUnit proporciona [`OrderAttribute`](https://github.com/nunit/docs/wiki/Order-Attribute). Las pruebas con este atributo se inician antes que las pruebas sin él. El valor de orden se usa para determinar el orden de ejecución de las pruebas unitarias.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/NUnit.TestProject/ByOrder.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/NUnit.TestProject/ByOrder.cs":::
 
 :::zone-end
 
