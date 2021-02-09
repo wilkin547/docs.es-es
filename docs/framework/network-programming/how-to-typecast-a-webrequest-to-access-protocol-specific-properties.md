@@ -1,22 +1,23 @@
 ---
+description: 'Más información acerca de: Procedimiento: para convertir un elemento WebRequest a propiedades específicas del protocolo de acceso'
 title: 'Cómo: convertir una WebRequest a propiedades específicas del protocolo de acceso'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-ms.openlocfilehash: 09bd551dad77358b1503871c6ee100a869adf75b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 24c07a3f2d77dec180476dec3c58f07b40e00c8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662746"
 ---
-# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a><span data-ttu-id="8851c-102">Cómo: convertir una WebRequest a propiedades específicas del protocolo de acceso</span><span class="sxs-lookup"><span data-stu-id="8851c-102">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>
+# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a><span data-ttu-id="146cf-103">Procedimiento para convertir un elemento WebRequest a propiedades específicas del protocolo de acceso</span><span class="sxs-lookup"><span data-stu-id="146cf-103">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>
 
-<span data-ttu-id="8851c-103">En este ejemplo se muestra cómo convertir una WebRequest de manera que pueda tener acceso a las propiedades específicas del protocolo.</span><span class="sxs-lookup"><span data-stu-id="8851c-103">This example shows how to typecast a WebRequest so that you can access protocol specific properties.</span></span>  
+<span data-ttu-id="146cf-104">En este ejemplo se muestra cómo convertir una WebRequest de manera que pueda tener acceso a las propiedades específicas del protocolo.</span><span class="sxs-lookup"><span data-stu-id="146cf-104">This example shows how to typecast a WebRequest so that you can access protocol specific properties.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8851c-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8851c-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="146cf-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="146cf-105">Example</span></span>  
   
 ```csharp  
 HttpWebRequest httpreq =
@@ -28,6 +29,6 @@ Dim httpreq As HttpWebRequest = _
    CType(WebRequest.Create("http://www.contoso.com/"), HttpWebRequest)  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8851c-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="8851c-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="146cf-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="146cf-106">See also</span></span>
 
-- [<span data-ttu-id="8851c-106">Programar protocolos acoplables</span><span class="sxs-lookup"><span data-stu-id="8851c-106">Programming Pluggable Protocols</span></span>](programming-pluggable-protocols.md)
+- [<span data-ttu-id="146cf-107">Programming Pluggable Protocols (Programar protocolos acoplables)</span><span class="sxs-lookup"><span data-stu-id="146cf-107">Programming Pluggable Protocols</span></span>](programming-pluggable-protocols.md)
