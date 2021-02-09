@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Crear una copia de un archivo en el mismo directorio'
+description: 'Más información acerca de: Procedimiento: para crear una copia de un archivo en el mismo directorio en Visual Basic'
+title: Procedimiento para crear una copia de un archivo en el mismo directorio
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: 741f0c80ba268369ebdd598460e9d5fa13d09571
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 27fecc22a9317dd45e663aa37884c6c1f1e36349
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797619"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Cómo: Crear una copia de un archivo en el mismo directorio en Visual Basic
 
@@ -69,7 +70,7 @@ Use el método `My.Computer.FileSystem.CopyFile` para copiar archivos. Con los p
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
-- [Copiar archivos con un modelo específico en un directorio](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
-- [Crear una copia de un archivo en un directorio diferente](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Copiar un directorio en otro directorio](how-to-copy-a-directory-to-another-directory.md)
-- [Cambiar el nombre de un archivo](how-to-rename-a-file.md)
+- [Procedimiento para copiar archivos con un patrón específico en un directorio](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [Procedimiento para crear una copia de un archivo en otro directorio](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Procedimiento para copiar un directorio en otro](how-to-copy-a-directory-to-another-directory.md)
+- [Procedimiento para cambiar el nombre de un archivo](how-to-rename-a-file.md)

@@ -1,15 +1,16 @@
 ---
-title: 'Cómo: Mover archivos'
+description: 'Más información acerca de: Procedimiento: para mover un archivo en Visual Basic'
+title: Procedimiento para mover un archivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 2dafeb3b5f8b8c3a8976b25c1a57f405aebb32b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 31049d2b7f0516c056fc1f1620a3ad8c1f0a2e1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401607"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797528"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Cómo: Mover un archivo en Visual Basic
 
@@ -54,6 +55,6 @@ El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
-- [Cambiar el nombre de un archivo](how-to-rename-a-file.md)
-- [Crear una copia de un archivo en un directorio diferente](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Analizar rutas de acceso a archivos](how-to-parse-file-paths.md)
+- [Procedimiento para cambiar el nombre de un archivo](how-to-rename-a-file.md)
+- [Procedimiento para crear una copia de un archivo en otro directorio](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Procedimiento para analizar rutas de acceso a archivos](how-to-parse-file-paths.md)

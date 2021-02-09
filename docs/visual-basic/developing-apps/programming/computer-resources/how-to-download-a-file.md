@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Descargar un archivo'
+description: 'Más información acerca de: Procedimiento: para descargar un archivo en Visual Basic'
+title: Procedimiento para descargar un archivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: a5b379da00656f65476e4d9504457bf8b464beac
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dd296a5958431b74ccc8e0fb41a49073f4847ded
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411660"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797697"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Cómo: Descargar un archivo en Visual Basic
 
@@ -59,5 +60,5 @@ Las condiciones siguientes pueden provocar una excepción:
 
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
-- [Cargar un archivo](how-to-upload-a-file.md)
-- [Analizar rutas de acceso a archivos](../drives-directories-files/how-to-parse-file-paths.md)
+- [Procedimiento para cargar un archivo](how-to-upload-a-file.md)
+- [Procedimiento para analizar rutas de acceso a archivos](../drives-directories-files/how-to-parse-file-paths.md)

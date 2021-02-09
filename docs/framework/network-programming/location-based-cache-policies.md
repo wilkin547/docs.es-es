@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: directivas de caché basadas en la ubicación'
 title: directivas de caché basadas en la ubicación
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 22d99111cd22ef24603f3cdd213c9c9afac5a974
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ef770b45f173fee66c80d721766a0be6244bbeb9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662720"
 ---
 # <a name="location-based-cache-policies"></a>directivas de caché basadas en la ubicación
 
@@ -58,6 +59,6 @@ Una directiva de caché basada en la ubicación define la actualización de las 
 
 - [Administración de la memoria caché para aplicaciones de red](cache-management-for-network-applications.md)
 - [Directiva de caché](cache-policy.md)
-- [Time-Based Cache Policies](time-based-cache-policies.md) (Directivas de caché de duración definida)
+- [Directivas de caché de duración definida](time-based-cache-policies.md)
 - [Configurar el almacenamiento en caché de las aplicaciones de red](configuring-caching-in-network-applications.md)
 - [Elemento \<requestCaching> (configuración de red)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

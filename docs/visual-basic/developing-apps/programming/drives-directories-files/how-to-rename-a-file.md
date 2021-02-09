@@ -1,16 +1,17 @@
 ---
-title: 'Cómo: Cambiar el nombre de un archivo'
+description: 'Más información acerca de: Procedimiento: para cambiar el nombre de un archivo en Visual Basic'
+title: Procedimiento para cambiar el nombre de un archivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 3de41ee6627315f0e26964b75f564ff98fe472ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cf182fa94befdfdcb1568052a0193d483670cf49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797411"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Cómo: Cambiar el nombre de un archivo en Visual Basic
 
@@ -22,7 +23,7 @@ Use el método `RenameFile` del objeto `My.Computer.FileSystem` para cambiar el 
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, el fragmento de código se encuentra en **Sistema de archivos - procesamiento de unidades, carpetas y archivos**. Para obtener más información, vea [Code Snippets](/visualstudio/ide/code-snippets).  
+ Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, el fragmento de código se encuentra en **Sistema de archivos - procesamiento de unidades, carpetas y archivos**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Programación sólida  
 
@@ -51,7 +52,7 @@ Use el método `RenameFile` del objeto `My.Computer.FileSystem` para cambiar el 
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
-- [Mover archivos](how-to-move-a-file.md)
+- [Procedimiento para mover un archivo](how-to-move-a-file.md)
 - [Creación, eliminación y movimiento de archivos y directorios](creating-deleting-and-moving-files-and-directories.md)
-- [Crear una copia de un archivo en el mismo directorio](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
-- [Crear una copia de un archivo en un directorio diferente](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Procedimiento para crear una copia de un archivo en el mismo directorio](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [Procedimiento para crear una copia de un archivo en otro directorio](how-to-create-a-copy-of-a-file-in-a-different-directory.md)

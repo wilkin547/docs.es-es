@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Copiar archivos con un modelo específico en un directorio'
+description: 'Más información acerca de: Procedimiento: para copiar archivos con un modelo específico en un directorio en Visual Basic'
+title: Procedimiento para copiar archivos con un patrón específico en un directorio
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 7e263e2c9035db54dbb58c6c78c0647d5442504e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2a5163e6420d747a724fec9b8ede8dbcc6a938be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401711"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797632"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Cómo: Copiar archivos con un modelo específico en un directorio en Visual Basic
 
-El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> devuelve una colección de cadenas de solo lectura que representan los nombres de ruta de acceso de los archivos. Puede usar el parámetro `wildCards` para especificar un patrón concreto.  
+El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> devuelve una colección de solo lectura de cadenas que representan los nombres de ruta de acceso de los archivos. Puede usar el parámetro `wildCards` para especificar un patrón concreto.  
   
  Si no se encuentran archivos coincidentes, se devuelve una colección vacía.  
   
@@ -64,6 +65,6 @@ El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> d
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [Buscar subdirectorios con un modelo concreto](how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Solución de problemas: Leer y escribir en archivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Obtener la colección de archivos de un directorio](how-to-get-the-collection-of-files-in-a-directory.md)
+- [Procedimiento para buscar subdirectorios con un patrón concreto](how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Solución del problema: leer y escribir en archivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Procedimiento para obtener la colección de archivos de un directorio](how-to-get-the-collection-of-files-in-a-directory.md)

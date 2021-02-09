@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: NetworkInformation'
 title: NetworkInformation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: 550555be7cc95cafebabfd3ac230ced024a9202c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9092fd0593d9046f419018b882c08066a6bc654c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261623"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785710"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 
@@ -29,7 +30,7 @@ El espacio de nombres <xref:System.Net.NetworkInformation> permite recopilar inf
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de programación de red](network-programming-samples.md)
+- [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
 
 <!-- to-do: review sample links
 - [Network Information Technology Sample](https://archive.msdn.microsoft.com/nclsamples/Wiki/View.aspx?title=Network%20Information)

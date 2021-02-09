@@ -1,15 +1,16 @@
 ---
-title: 'Cómo: Escribir mensajes de registro'
+description: 'Más información acerca de: Procedimiento: para escribir mensajes de registro (Visual Basic)'
+title: Procedimiento para escribir mensajes de registro
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, writing log messages
 ms.assetid: 972a3e0c-2996-4623-a7a9-d7ebc4d207f8
-ms.openlocfilehash: 28c5fe77e2711dfcac96e621a90fb9506eb74775
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ed455fdb2cebda908981514bef932942adf499ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410054"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797307"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>Cómo: Escribir mensajes de registro (Visual Basic)
 
@@ -33,7 +34,7 @@ Asegúrese de que los datos que se escribe en el registro no incluyen informaci�
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Trabajar con registros de aplicaciones](working-with-application-logs.md)
-- [Registrar excepciones](how-to-log-exceptions.md)
+- [Cómo: Registrar excepciones](how-to-log-exceptions.md)
 - [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](walkthrough-determining-where-my-application-log-writes-information.md)
 - [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](walkthrough-changing-where-my-application-log-writes-information.md)
 - [Tutorial: Filtrar el resultado de My.Application.Log](walkthrough-filtering-my-application-log-output.md)

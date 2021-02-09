@@ -1,5 +1,6 @@
 ---
-title: Procedimiento Lectura de archivos de texto con varios formatos
+description: 'Más información acerca de: Procedimiento: Lectura de archivos de texto con varios formatos en Visual Basic'
+title: 'Procedimiento: Lectura de archivos de texto con varios formatos'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90d981ad051fb395d57604434cf9ba6b74603e7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334572"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797450"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Procedimiento Lectura de archivos de texto con varios formatos en Visual Basic
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Procedimiento: Lectura de archivos de texto con varios formatos en Visual Basic
 
 El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> proporciona una manera fácil y eficaz de analizar archivos de texto estructurados, como registros. Puede procesar un archivo con varios formatos usando el método `PeekChars` para determinar el formato de cada línea a medida que va analizando el archivo.
   
@@ -75,6 +76,6 @@ Las condiciones siguientes pueden provocar una excepción:
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [Cómo: Leer archivos de texto delimitado por comas](how-to-read-from-comma-delimited-text-files.md)
-- [Cómo: Leer archivos de texto de ancho fijo](how-to-read-from-fixed-width-text-files.md)
-- [Análisis de archivos de texto con el objeto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)
+- [Procedimiento para leer archivos de texto delimitado por comas](how-to-read-from-comma-delimited-text-files.md)
+- [Procedimiento para leer archivos de texto de ancho fijo](how-to-read-from-fixed-width-text-files.md)
+- [Analizar archivos de texto con el objeto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)

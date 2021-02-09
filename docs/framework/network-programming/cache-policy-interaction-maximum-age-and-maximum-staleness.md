@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Interacción de la directiva de caché, antigüedad máxima y obsolencia máxima'
 title: Interacción de la directiva de caché, antigüedad máxima y obsolencia máxima
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: bdfa608b5169755b2b4daaaa26e562308ae2be01
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 909a7203d4c9813c90dc0dea9bae7f8a1f7336cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250611"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791665"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Interacción de la directiva de caché, antigüedad máxima y obsolencia máxima
 
@@ -41,6 +42,6 @@ Para garantizar que se devuelva a la aplicación cliente el contenido más actua
 - [Administración de la memoria caché para aplicaciones de red](cache-management-for-network-applications.md)
 - [Directiva de caché](cache-policy.md)
 - [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](location-based-cache-policies.md)
-- [Time-Based Cache Policies](time-based-cache-policies.md) (Directivas de caché de duración definida)
+- [Directivas de caché de duración definida](time-based-cache-policies.md)
 - [Configurar el almacenamiento en caché de las aplicaciones de red](configuring-caching-in-network-applications.md)
 - [Interacción de la directiva de caché, antigüedad máxima y actualización mínima](cache-policy-interaction-maximum-age-and-minimum-freshness.md)

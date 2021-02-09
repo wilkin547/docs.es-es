@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Crear una copia de un archivo en un directorio diferente'
+description: 'Más información acerca de: Procedimiento: para crear una copia de un archivo en un directorio diferente en Visual Basic'
+title: Procedimiento para crear una copia de un archivo en otro directorio
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-ms.openlocfilehash: 3b4b41e105d6bb6a17fbb688aa4718b33c23b9d6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 128a813ec3e5c759d5320d59a1e83f9d66af3bbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797645"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Cómo: Crear una copia de un archivo en un directorio diferente en Visual Basic
 
@@ -61,7 +62,7 @@ El método `My.Computer.FileSystem.CopyFile` le permite copiar archivos. Sus par
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
-- [Copiar archivos con un modelo específico en un directorio](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
-- [Crear una copia de un archivo en el mismo directorio](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
-- [Copiar un directorio en otro directorio](how-to-copy-a-directory-to-another-directory.md)
-- [Cambiar el nombre de un archivo](how-to-rename-a-file.md)
+- [Procedimiento para copiar archivos con un patrón específico en un directorio](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [Procedimiento para crear una copia de un archivo en el mismo directorio](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [Procedimiento para copiar un directorio en otro](how-to-copy-a-directory-to-another-directory.md)
+- [Procedimiento para cambiar el nombre de un archivo](how-to-rename-a-file.md)

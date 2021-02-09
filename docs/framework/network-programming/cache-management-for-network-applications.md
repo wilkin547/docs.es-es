@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Administración de la memoria caché para aplicaciones de red'
 title: Administración de la memoria caché para aplicaciones de red
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 81f0eaa33b185c6bfbc8758e73a68a6bfc248872
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6383403b41440f26b29fbb5a22c5b25ee6aab465
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287571"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791678"
 ---
 # <a name="cache-management-for-network-applications"></a>Administración de la memoria caché para aplicaciones de red
 

@@ -1,15 +1,16 @@
 ---
-title: Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework
+description: 'Más información acerca de: Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)'
+title: Clases usadas en el sistema de archivos y la E/S de archivos en .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2c696d5b8c83ae55caf61e4710630ad1e34c088d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a8cbe476044df92fcdbdd0421b91f3c7c098e063
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666334"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 
@@ -21,7 +22,7 @@ Para obtener una lista más completa, vea [Información general de la biblioteca
 
  En la tabla siguiente se muestran y describen las clases principales usadas para las operaciones de E/S de archivos.  
   
-|Clase|Description|  
+|Class|Descripción|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Proporciona métodos estáticos para crear, mover y enumerar en directorios y subdirectorios.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Proporciona métodos de instancia para crear, mover y enumerar en directorios y subdirectorios.|  
@@ -39,7 +40,7 @@ Para obtener una lista más completa, vea [Información general de la biblioteca
 
  En la tabla siguiente se muestran y describen las clases principales usadas para crear secuencias.  
   
-|Clase|Description|  
+|Class|Descripción|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Agrega una capa de almacenamiento en búfer para las operaciones de lectura y escritura en otra secuencia.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Admite el acceso aleatorio a archivos a través de su método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre los archivos sincrónicamente de manera predeterminada, pero también admite operaciones asincrónicas.|  

@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Registrar mensajes cuando se inicia o se cierra la aplicación'
+description: 'Más información acerca de: Procedimiento: para registrar mensajes cuando se inicia o se cierra la aplicación (Visual Basic)'
+title: Procedimiento para registrar mensajes cuando se inicia o se cierra la aplicación
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, shutdown
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: ac5fb17e527bcbcb55f98ec0ced06c152555ce6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 545a57c3666aa12e3763961d05067face9fe324a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410080"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775193"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Cómo: Registrar mensajes cuando se inicia o se cierra la aplicación (Visual Basic)
 
@@ -60,10 +61,10 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Página Aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Trabajar con registros de aplicaciones](working-with-application-logs.md)

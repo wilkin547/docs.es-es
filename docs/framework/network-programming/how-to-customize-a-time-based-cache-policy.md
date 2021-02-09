@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Procedimientos: Personalización de una directiva de caché de duración definida'
 title: 'Procedimientos: Personalización de una directiva de caché de duración definida'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 1a2ba404e333eeec2a23758c834876d0df5aba81
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb00faa5c2cd3170a0f56b74032867d489c1fb8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73040633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747457"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Procedimientos: Personalización de una directiva de caché de duración definida
 
@@ -77,7 +78,7 @@ Para la invocación siguiente:
 CreateMinFreshPolicy(new TimeSpan(1,0,0));
 ```
 
-El resultado es el siguiente:
+La salida es la siguiente:
 
 ```output
 Level:Default MinFresh:3600
@@ -110,7 +111,7 @@ Para la invocación siguiente:
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
 ```  
 
-El resultado es el siguiente:
+La salida es la siguiente:
   
 ```output
 Level:Default MaxAge:36000 MinFresh:18000  

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información (Visual Basic)'
 title: Cambiar el lugar en el que My.Application.Log escribe la información
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aa4e1b8ce33e2afd8dd51c68340feb3e85eb8966
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731427"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información (Visual Basic)
 
@@ -18,7 +19,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-El objeto `Log` puede escribir información en varios agentes de escucha de registro. Debe determinar la configuración actual de los agentes de escucha de registro antes de cambiar las configuraciones. Para obtener más información, consulta [Walkthrough: Determining Where My.Application.Log Writes Information](walkthrough-determining-where-my-application-log-writes-information.md).
+El objeto `Log` puede escribir información en varios agentes de escucha de registro. Debe determinar la configuración actual de los agentes de escucha de registro antes de cambiar las configuraciones. Para obtener más información, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](walkthrough-determining-where-my-application-log-writes-information.md).
 
 Es posible que quiera consultar [Cómo: Escribir información de eventos en un archivo de texto](how-to-write-event-information-to-a-text-file.md) o [Cómo: Escribir el registro de eventos de una aplicación](how-to-write-to-an-application-event-log.md).
 
@@ -189,5 +190,5 @@ Es posible que quiera consultar [Cómo: Escribir información de eventos en un a
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Escribir información de eventos en un archivo de texto](how-to-write-event-information-to-a-text-file.md)
+- [Cómo: Escribir información de eventos en un archivo de texto](how-to-write-event-information-to-a-text-file.md)
 - [Cómo: Escribir el registro de eventos de una aplicación](how-to-write-to-an-application-event-log.md)

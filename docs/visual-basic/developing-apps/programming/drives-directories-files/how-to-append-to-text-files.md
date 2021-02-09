@@ -1,17 +1,18 @@
 ---
-title: 'Cómo: Anexar a archivos de texto'
+description: 'Más información acerca de: Procedimiento: para anexar a archivos de texto en Visual Basic'
+title: Procedimiento para anexar a archivos de texto
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: 53b2e4c9030e9d1dd81a4121ad3f92aad796e3e1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f66e1cb4ba299ee89f0d84d17d01af67650c9340
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359960"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797671"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Cómo: Anexar a archivos de texto en Visual Basic
 

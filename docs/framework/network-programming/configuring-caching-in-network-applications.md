@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: Configurar el almacenamiento en caché de las aplicaciones de red'
 title: Configurar el almacenamiento en caché de las aplicaciones de red
 ms.date: 03/30/2017
 helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-ms.openlocfilehash: 63340e6d7d8ef6b695050e24bc47cf1f0b9244c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cf15e7aeb98e2a5c83264d51d8bb335afbcf7f1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791613"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Configurar el almacenamiento en caché de las aplicaciones de red
 

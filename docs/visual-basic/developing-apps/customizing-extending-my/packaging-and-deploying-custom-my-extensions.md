@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Empaquetar e implementar extensiones personalizadas de My (Visual Basic)'
 title: Empaquetado e implementación de extensiones personalizadas de My
 ms.date: 08/14/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: 6d2cc2b01b04b30bd3b1a4371352ded20ea8664b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7037cc72951fc5228ae47998f39dca3455bf57de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775414"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Empaquetar e implementar extensiones personalizadas de My (Visual Basic)
 

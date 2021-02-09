@@ -1,17 +1,18 @@
 ---
-title: 'Cómo: Escribir texto en archivos con StreamReader'
+description: 'Más información acerca de: Procedimiento: para escribir texto en archivos con un objeto StreamWriter en Visual Basic'
+title: Procedimiento para escribir texto en archivos con StreamReader
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
 - text, writing to files
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-ms.openlocfilehash: 373f3bd07ea61263ddd81037d8cbbb06f789e599
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d5528d0b5e7de40062558d29c0d3bebc227583a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797359"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Cómo: Escribir texto en archivos con un objeto StreamWriter en Visual Basic
 
@@ -39,5 +40,5 @@ Este ejemplo abre un objeto <xref:System.IO.StreamWriter> con el método `My.Com
 
 - <xref:System.IO.StreamWriter>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
-- [Leer de archivos de texto](how-to-read-from-text-files.md)
+- [Cómo: Leer de archivos de texto](how-to-read-from-text-files.md)
 - [Escritura en archivos](writing-to-files.md)

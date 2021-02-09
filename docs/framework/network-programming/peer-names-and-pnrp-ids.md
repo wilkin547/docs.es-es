@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Nombres de mismo nivel e identificadores PNRP'
 title: Nombres de mismo nivel e identificadores PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: a56200d599d417dac549af000b35024338d43796
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ff9f77917ef05754f2373369d623b66e66b5a753
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239229"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801870"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nombres de mismo nivel e identificadores PNRP
 
@@ -23,11 +24,11 @@ Un nombre de mismo nivel representa un punto de conexión para la comunicación,
   
 ## <a name="pnrp-ids"></a>Identificadores PNRP  
 
- ![Identificador de PNRP](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![Id. PNRP](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  Los identificadores PNRP se componen de lo siguiente:  
   
-- Los 128 bits de ordenación alta, conocidos como el identificador de punto a punto (P2P), son un hash de un nombre de mismo nivel asignado al punto de conexión. El nombre del mismo nivel tiene el formato siguiente: *Authority.Classifier*. Para los nombres seguros, *Authority* es el hash de Algoritmo hash seguro 1 (SHA1) de la clave pública del nombre de mismo nivel en caracteres hexadecimales. Para los nombres no seguros, *Authority* es el carácter "0" único. *Classifier* es una cadena que identifica la aplicación. Ningún clasificador de nombre de mismo nivel puede ser mayor que 149 caracteres, incluido el terminador `null`.  
+- Los 128 bits de ordenación alta, conocidos como el identificador de punto a punto (P2P), son un hash de un nombre de mismo nivel asignado al punto de conexión. El nombre de mismo nivel tiene el formato siguiente: *Authority.Classifier*. Para los nombres seguros, *Authority* es el hash de Algoritmo hash seguro 1 (SHA1) de la clave pública del nombre de mismo nivel en caracteres hexadecimales. Para los nombres no seguros, *Authority* es el carácter "0" único. *Classifier* es una cadena que identifica la aplicación. Ningún clasificador de nombre de mismo nivel puede ser mayor que 149 caracteres, incluido el terminador `null`.  
   
 - Los 128 bits de orden inferior se usan para la ubicación del servicio, que es un número generado que identifica las diferentes instancias del mismo identificador P2P en la misma nube.  
   

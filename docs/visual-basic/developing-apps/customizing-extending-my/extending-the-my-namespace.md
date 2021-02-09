@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Extensión del espacio de nombres `My` en Visual Basic'
 title: Extensión del espacio de nombres de My
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 2a7b0b84061fccd9a333a68e4a19477bd19ca4ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 896e85da14e6e8a417c93560b1d3b78a5954b769
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330309"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797970"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Extensión del espacio de nombres `My` en Visual Basic
 

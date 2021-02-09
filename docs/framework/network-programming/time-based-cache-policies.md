@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: directivas de caché de duración definida'
 title: directivas de caché de duración definida
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 372621ce55891cb87594e6d059c7bbeeb99f6468
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 42a76be0da664899295a583d72477de0698cc39e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239424"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712303"
 ---
 # <a name="time-based-cache-policies"></a>directivas de caché de duración definida
 
@@ -43,7 +44,7 @@ Una directiva de caché de duración definida define la actualización de las en
 > [!NOTE]
 > No se debe confundir el uso de la directiva predeterminada de caché de duración definida con la configuración de una directiva de caché predeterminada para la aplicación. La directiva predeterminada de duración definida es una directiva específica que se puede usar a nivel de solicitud o de aplicación. La directiva de caché predeterminada para la aplicación es una directiva (de duración definida o basada en la ubicación) que surte efecto cuando no hay ninguna directiva establecida en una solicitud. Para obtener más información sobre cómo configurar una directiva de caché predeterminada para la aplicación, vea <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
   
-### <a name="maximum-age"></a>Antigüedad máxima  
+### <a name="maximum-age"></a>Maximum Age  
 
  El criterio de directiva de antigüedad máxima especifica el tiempo durante el que se puede usar una copia en caché de un recurso. Si la copia en caché del recurso es anterior a la fecha especificada, el recurso se deberá volver a validar comprobándolo con el contenido del servidor. Si la antigüedad máxima permite que el recurso se use una vez expirado, no se respetará este criterio, a menos que también se especifique un valor de obsolescencia máxima.  
   
@@ -63,7 +64,7 @@ Una directiva de caché de duración definida define la actualización de las en
   
  Los temas siguientes proporcionan información sobre los efectos de combinar los criterios de directiva de caché de duración definida:  
   
-- [Interacción de la directiva de caché: antigüedad máxima y obsolescencia máxima](cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [Interacción de la directiva de caché, antigüedad máxima y obsolencia máxima](cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
 - [Interacción de la directiva de caché, antigüedad máxima y actualización mínima](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   

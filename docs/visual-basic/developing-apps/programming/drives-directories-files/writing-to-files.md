@@ -1,5 +1,6 @@
 ---
-title: Escribir en archivos
+description: 'Más información acerca de: Escribir en archivos en Visual Basic'
+title: Escritura en archivos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 06809ce8a846ea06ff2decdd87f304d1b26a7750
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c56714a0f8c2679a99fd0851999d886b426e62fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775284"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Escribir en archivos en Visual Basic
 
@@ -21,19 +22,19 @@ En esta sección se explica cómo realizar tareas relacionadas con la escritura 
   
 ## <a name="in-this-section"></a>En esta sección  
 
- [Escribir texto en archivos](how-to-write-text-to-files.md)  
+ [Procedimiento para escribir texto en archivos](how-to-write-text-to-files.md)  
  Explica cómo se puede escribir en archivos de texto.  
   
- [Anexar a archivos de texto](how-to-append-to-text-files.md)  
+ [Procedimiento para anexar a archivos de texto](how-to-append-to-text-files.md)  
  Explica cómo se puede anexar texto a un archivo de texto.  
   
- [Escribir en archivos binarios](how-to-write-to-binary-files.md)  
+ [Procedimiento para escribir en archivos binarios](how-to-write-to-binary-files.md)  
  Explica cómo se puede escribir en un archivo binario.  
   
- [Escribir texto en archivos del directorio Mis documentos](how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ [Procedimiento para escribir texto en archivos del directorio Mis documentos](how-to-write-text-to-files-in-the-my-documents-directory.md)  
  Explica cómo se puede crear un archivo de texto en el directorio **Mis documentos** y cómo se puede escribir en él.  
   
- [Escribir texto en archivos con StreamReader](how-to-write-text-to-files-with-a-streamwriter.md)  
+ [Procedimiento para escribir texto en archivos con StreamReader](how-to-write-text-to-files-with-a-streamwriter.md)  
  Explica cómo se puede escribir en un archivo con un objeto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Referencia  
@@ -52,7 +53,7 @@ En esta sección se explica cómo realizar tareas relacionadas con la escritura 
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
- [Leer archivos](reading-from-files.md)  
+ [Lectura de archivos](reading-from-files.md)  
  Explica cómo realizar tareas relacionadas con la lectura de archivos.  
   
  [Creación, eliminación y movimiento de archivos y directorios](creating-deleting-and-moving-files-and-directories.md)  

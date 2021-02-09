@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: NAT Traversal mediante IPv6 y Teredo'
 title: NAT Traversal mediante IPv6 y Teredo
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: a6448ddf117e1f454338869820751ae5d9e0070e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4ff7f273c01ef52f4d307cbd3e0698c5cc2ead4d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785749"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>NAT Traversal mediante IPv6 y Teredo
 
@@ -15,7 +16,7 @@ Se han realizado mejoras que proporcionan compatibilidad con la traducción de d
   
  Estos cambios pueden afectar a las aplicaciones cliente y servidor que tienen previsto usar tecnologías de túnel IP.  
   
- Los cambios para admitir NAT transversal{1}{2}solo están disponibles para las aplicaciones que usan .NET Framework versión 4. Estas características no están disponibles en versiones anteriores de .NET Framework.  
+ Los cambios para admitir NAT transversalsolo están disponibles para las aplicaciones que usan .NET Framework versión 4. Estas características no están disponibles en versiones anteriores de .NET Framework.  
   
 ## <a name="overview"></a>Información general  
 
@@ -27,13 +28,13 @@ Se han realizado mejoras que proporcionan compatibilidad con la traducción de d
   
  El protocolo IPv6 definía una dirección IPv4 con una longitud de 128 bits. Como resultado, IPv6 admite un gran espacio de direcciones IP de 3,2 x 10^38 direcciones únicas (2^128). Con un espacio de direcciones de este tamaño, es posible que todos los dispositivos conectados a Internet obtengan una dirección única. A pesar de ello, existe una serie de problemas. En gran parte del mundo se sigue usando solo IPv4. En concreto, muchos de los enrutadores y puntos de acceso inalámbrico usados por los hogares, las organizaciones y las pequeñas empresas no admiten IPv6. Además, algunos de los proveedores de servicios de Internet que atienden a estos clientes no admiten IPv6 o no han configurado la compatibilidad con IPv6.  
   
- Se han desarrollado varias tecnologías de transición de IPv6 para tunelizar las direcciones IPv6 en un paquete IPv4. Estas tecnologías incluyen 6to4, ISATAP y túneles Teredo, que proporcionan la asignación de direcciones y la tunelización automática de host a host para el tráfico IPv6 de unidifusión cuando los hosts IPv6 deben atravesar redes IP4 para llegar a otras redes IPv6. Los paquetes IPv6 se envían mediante túneles como paquetes IPv4. Se están usando varias técnicas de tunelización que permiten NAT transversal{1}{2}para direcciones IPv6 a través de un dispositivo NAT.  
+ Se han desarrollado varias tecnologías de transición de IPv6 para tunelizar las direcciones IPv6 en un paquete IPv4. Estas tecnologías incluyen 6to4, ISATAP y túneles Teredo, que proporcionan la asignación de direcciones y la tunelización automática de host a host para el tráfico IPv6 de unidifusión cuando los hosts IPv6 deben atravesar redes IP4 para llegar a otras redes IPv6. Los paquetes IPv6 se envían mediante túneles como paquetes IPv4. Se están usando varias técnicas de tunelización que permiten NAT transversalpara direcciones IPv6 a través de un dispositivo NAT.  
   
  Teredo es una de las tecnologías de transición IPv6 que ofrece conectividad IPv6 en redes IPv4. Las especificaciones de Teredo están documentadas en RFC 4380, publicado por Internet Engineering Task Force (IETF). Windows XP SP2 y versiones posteriores proporcionan compatibilidad con un adaptador Teredo virtual que puede proporcionar una dirección IPv6 pública en el intervalo 2001:0::/32. Esta dirección IPv6 puede usarse para escuchar las conexiones entrantes procedentes de Internet y puede proporcionarse a los clientes habilitados para IPv6 que quieren conectar con el servicio de escucha. Esto hace que una aplicación no tenga que preocuparse por cómo dirigirse a un equipo tras un dispositivo NAT, dado que la aplicación solo se puede conectar a él mediante su dirección Teredo IPv6.  
   
-## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>Mejoras para admitir NAT transversal{1}{2}y Teredo  
+## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>Mejoras para admitir NAT transversaly Teredo  
 
- Se han agregado mejoras a los espacios de nombres <xref:System.Net>, <xref:System.Net.NetworkInformation> y <xref:System.Net.Sockets> para admitir NAT transversal{4}{5}mediante IPv6 y Teredo.  
+ Se han agregado mejoras a los espacios de nombres ,  y  para admitir NAT transversalmediante IPv6 y Teredo.  
   
  Se han agregado varios métodos a la clase <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType> para obtener la lista de direcciones IP de unidifusión en el host. El método <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> inicia una solicitud asincrónica para recuperar la tabla de direcciones IP de unidifusión estables del equipo local. El método <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> finaliza una solicitud asincrónica pendiente para recuperar la tabla de direcciones IP de unidifusión estables del equipo local. El método <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> es una solicitud sincrónica para recuperar la tabla de direcciones IP de unidifusión estables del equipo local, que espera hasta que la tabla de direcciones se estabilice, si es necesario.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Solución de problemas: Leer y escribir en archivos de texto (Visual Basic)'
 title: 'Solución de problemas: Leer y escribir en archivos de texto'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - writing to files [Visual Basic], troubleshooting
 - reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-ms.openlocfilehash: 8af4160d09f39f2622a007aef793173d614a8b44
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c01f7673ef021759a9c1892f685aa90ef1acdf6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406630"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675343"
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Solución de problemas: Leer y escribir en archivos de texto (Visual Basic)
 
 En este tema se tratan problemas habituales que surgen cuando se trabaja con archivos de texto y se sugiere un enfoque para cada uno.  
   
-## <a name="common-problems"></a>Problemas habituales  
+## <a name="common-problems"></a>Problemas comunes  
 
  Entre los problemas más frecuentes que se producen al trabajar con archivos de texto se incluyen excepciones de seguridad, codificaciones de archivos o rutas de acceso no válidas.  
   
@@ -39,6 +40,6 @@ En este tema se tratan problemas habituales que surgen cuando se trabaja con arc
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
-- [Leer archivos](reading-from-files.md)
+- [Lectura de archivos](reading-from-files.md)
 - [Escritura en archivos](writing-to-files.md)
-- [Análisis de archivos de texto con el objeto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)
+- [Analizar archivos de texto con el objeto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)

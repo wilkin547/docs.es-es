@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Tutorial: Manipular archivos y directorios en Visual Basic'
 title: Manipulación de archivos y directorios
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4b77618e5cd525cf3ad012405f402681aa5bb52c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 315635ee43ee4d4956fc35b7f9bc635b374646f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406669"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775388"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Tutorial: Manipular archivos y directorios en Visual Basic
 
 En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en Visual Basic. En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio. Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido. Existe una opción para escribir información en un archivo de registro.  
   
- En este tutorial se usan los miembros del elemento `My.Computer.FileSystem Object`, que están disponibles en Visual Basic. Vea <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obtener más información. Al final del tutorial, se incluye un ejemplo equivalente que usa clases del espacio de nombres <xref:System.IO>.  
+ En este tutorial se usan los miembros del elemento `My.Computer.FileSystem Object`, que están disponibles en Visual Basic. Consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obtener más información. Al final del tutorial, se incluye un ejemplo equivalente que usa clases del espacio de nombres <xref:System.IO>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -44,13 +45,13 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
 4. Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
   
-    |Control|Property|Valor|  
+    |Control|Propiedad|Value|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Name**|`filesListBox`|  
-    |**Button**|**Name**<br /><br /> **Text**|`browseButton`<br /><br /> **Examinar**|  
-    |**Button**|**Name**<br /><br /> **Text**|`examineButton`<br /><br /> **Examine** (Examinar)|  
-    |**CheckBox**|**Name**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Guardar resultados**|  
-    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Nombre**|`filesListBox`|  
+    |**Button**|**Nombre**<br /><br /> **Texto**|`browseButton`<br /><br /> **Browse**|  
+    |**Button**|**Nombre**<br /><br /> **Texto**|`examineButton`<br /><br /> **Examine (Examinar)**|  
+    |**CheckBox**|**Nombre**<br /><br /> **Texto**|`saveCheckBox`<br /><br /> **Guardar resultados**|  
+    |**FolderBrowserDialog**|**Nombre**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Para seleccionar una carpeta y enumerar archivos en una carpeta  
   
@@ -72,7 +73,7 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
      Las cadenas devueltas por el método `GetFiles` se agregan luego al elemento **ListBox**.  
   
-4. Ejecute la aplicación. Haga clic en el botón **Examinar**. En el cuadro de diálogo **Buscar carpeta**, busque una carpeta que contenga archivos .txt y, luego, selecciónela y haga clic en **Aceptar**.  
+4. Ejecute la aplicación. Haga clic en el botón **Examinar** . En el cuadro de diálogo **Buscar carpeta**, busque una carpeta que contenga archivos .txt y, luego, selecciónela y haga clic en **Aceptar**.  
   
      El elemento `ListBox` contiene una lista de archivos .txt de la carpeta seleccionada.  
   
@@ -98,7 +99,7 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
      El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> lee el contenido del archivo en <xref:System.IO.StreamReader>. La primera línea del contenido se obtiene de `StreamReader` y se agrega a `StringBuilder`.  
   
-4. Ejecute la aplicación. Haga clic en **Examinar** y busque una carpeta que contenga archivos .txt. Haga clic en **Aceptar**.  
+4. Ejecute la aplicación. Haga clic en **Examinar** y busque una carpeta que contenga archivos .txt. Haga clic en **OK**.  
   
      Seleccione un archivo en `ListBox` y, luego, haga clic en **Examine** (Examinar). La información del archivo se muestra en un `MessageBox`.  
   
@@ -167,4 +168,4 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Tutorial: Manipulación de archivos utilizando métodos de .NET Framework](walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Tutorial: Manipulación de archivos mediante métodos de .NET Framework](walkthrough-manipulating-files-by-using-net-framework-methods.md)

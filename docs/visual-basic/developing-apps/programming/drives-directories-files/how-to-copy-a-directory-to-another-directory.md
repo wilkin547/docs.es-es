@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Copiar un directorio en otro directorio'
+description: 'Más información acerca de: Procedimiento: para copiar un directorio en otro directorio en Visual Basic'
+title: Procedimiento para copiar un directorio en otro
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: e28f50f6a812188ac7af801cea691818488bd6cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 37eb63449ce355382c5ed058fda6c1142b7d3e3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401724"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797658"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Cómo: Copiar un directorio en otro directorio en Visual Basic
 
@@ -26,7 +27,7 @@ Al copiar archivos en un directorio, pueden iniciarse excepciones producidas por
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema de archivos - procesamiento de unidades, carpetas y archivos**. Para obtener más información, vea [Code Snippets](/visualstudio/ide/code-snippets).
+    Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema de archivos - procesamiento de unidades, carpetas y archivos**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).
 
 ## <a name="robust-programming"></a>Programación sólida
 
@@ -65,5 +66,5 @@ Las condiciones siguientes pueden provocar una excepción:
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
-- [Buscar subdirectorios con un modelo concreto](how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Obtener la colección de archivos de un directorio](how-to-get-the-collection-of-files-in-a-directory.md)
+- [Procedimiento para buscar subdirectorios con un patrón concreto](how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Procedimiento para obtener la colección de archivos de un directorio](how-to-get-the-collection-of-files-in-a-directory.md)

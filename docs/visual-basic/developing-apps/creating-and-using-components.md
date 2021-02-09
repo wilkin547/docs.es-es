@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: Crear y utilizar componentes en Visual Basic'
 title: Creación y uso de componentes
 ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 106b8791ee5cb3db95759ccca2fddd799661ef3c
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: f59b4774556d95dcbc1befb16409d68a51c50535
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666594"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Crear y utilizar componentes en Visual Basic
 

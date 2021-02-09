@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Metadatos y componentes autodescriptivos'
 title: Metadatos y componentes autodescriptivos
 ms.date: 03/30/2017
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: c597c1ae6153050f08ed2976f7ee6102cdd3c797
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5f043a1e204c019f83fb15705ca44562a82ad6a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702215"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadatos y componentes autodescriptivos
 

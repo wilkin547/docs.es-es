@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Obtener acceso a datos en aplicaciones de Visual Basic'
 title: Obtener acceso a datos en aplicaciones de Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: c9094e1550ad837444b7670cf54226322583be79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 751705a1375782fae1f7ed3aa8590c377ac93d9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641595"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Obtener acceso a datos en aplicaciones de Visual Basic
 

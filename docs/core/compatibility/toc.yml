@@ -28,6 +28,8 @@
                   href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
             - name: Windows Forms
               items:
+                - name: Las API inician la excepción ArgumentNullException
+                  href: windows-forms/6.0/apis-throw-argumentnullexception.md
                 - name: Longitud máxima de texto de NotifyIcon.Text aumentada
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: Las propiedades de TableLayoutSettings producen una excepción InvalidEnumArgumentException.
@@ -574,6 +576,8 @@
           items:
             - name: ".NET\_6.0"
               items:
+                - name: Las API inician la excepción ArgumentNullException
+                  href: windows-forms/6.0/apis-throw-argumentnullexception.md
                 - name: Longitud máxima de texto de NotifyIcon.Text aumentada
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: Las propiedades de TableLayoutSettings producen una excepción InvalidEnumArgumentException.

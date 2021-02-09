@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Personalizar los objetos que están disponibles en My (Visual Basic)'
 title: Personalizar los objetos que están disponibles en My
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 5245c129281bc8c7c1c6fe9215a221889380a901
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 065f7e645a5530db1e485ee3f8ea50f8a163f9e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731440"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizar los objetos que están disponibles en My (Visual Basic)
 

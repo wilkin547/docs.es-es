@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Leer texto de archivos con StreamReader'
+description: 'Más información acerca de: Procedimiento: para leer texto de archivos con StreamReader (Visual Basic)'
+title: Procedimiento para leer texto de archivos con StreamReader
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading files [Visual Basic], text
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: 5ec161f5146d5bea7f34d4a5b6c154f6c45b1cf4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9a2eb08209a2a65f7be846c8cb5357978a48ed73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546502"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797424"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Cómo: Leer texto de archivos con StreamReader (Visual Basic)
 
@@ -34,7 +35,7 @@ El objeto `My.Computer.FileSystem` proporciona métodos para abrir un <xref:Syst
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
 
- Para leer un archivo, el ensamblado requiere un nivel de privilegios concedido por la clase <xref:System.Security.Permissions.FileIOPermission>. Si realiza una ejecución en un contexto de confianza parcial, el código podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código). El usuario también necesita acceso al archivo. Para obtener más información, vea [Información general sobre la tecnología ACL](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
+ Para leer un archivo, el ensamblado requiere un nivel de privilegios concedido por la clase <xref:System.Security.Permissions.FileIOPermission>. Si realiza una ejecución en un contexto de confianza parcial, el código podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Conceptos básicos sobre la seguridad de acceso del código](../../../../framework/misc/code-access-security-basics.md). El usuario también necesita acceso al archivo. Para obtener más información, vea [Información general sobre la tecnología ACL](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -42,5 +43,5 @@ El objeto `My.Computer.FileSystem` proporciona métodos para abrir un <xref:Syst
 - <xref:System.Windows.Forms.OpenFileDialog>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>
-- [SaveFileDialog (componente)](/dotnet/desktop/winforms/controls/savefiledialog-component-windows-forms)
-- [Leer archivos](reading-from-files.md)
+- [Componente SaveFileDialog](/dotnet/desktop/winforms/controls/savefiledialog-component-windows-forms)
+- [Lectura de archivos](reading-from-files.md)

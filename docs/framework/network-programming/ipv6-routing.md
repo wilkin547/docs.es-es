@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Enrutamiento de IPv6'
 title: Enrutamiento de IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: 646eef4ec178472a99f60de4785fd53381296c3a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 75499a7380ab0ea7c38c83a6407a0c2a269b5fce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258340"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672041"
 ---
 # <a name="ipv6-routing"></a>Enrutamiento de IPv6
 

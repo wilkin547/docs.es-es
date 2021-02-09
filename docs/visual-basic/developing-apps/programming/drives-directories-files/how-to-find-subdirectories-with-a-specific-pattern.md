@@ -1,16 +1,17 @@
 ---
-title: 'Cómo: Buscar subdirectorios con un modelo concreto'
+description: 'Más información acerca de: Procedimiento: para buscar subdirectorios con un modelo concreto en Visual Basic'
+title: Procedimiento para buscar subdirectorios con un patrón concreto
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: 5b57914a518b568732955e5c73bb2031824c84dd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aaf1fe0e844c6a3db2b011289613a80dbd1b43fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797554"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Cómo: Buscar subdirectorios con un modelo concreto en Visual Basic
 
@@ -49,4 +50,4 @@ Las condiciones siguientes pueden provocar una excepción:
 ## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
-- [Buscar archivos con un modelo concreto](how-to-find-files-with-a-specific-pattern.md)
+- [Procedimiento para buscar archivos con un patrón concreto](how-to-find-files-with-a-specific-pattern.md)

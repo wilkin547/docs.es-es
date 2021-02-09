@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Trabajar con registros de aplicaciones en Visual Basic'
 title: Trabajar con registros de aplicaciones
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: e33efac8f65832c87d5c9271eba25c2ca1d1803b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0c05bd63cfbae668c58a87aa39651b6c3ef166ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387600"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792276"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabajar con registros de aplicaciones en Visual Basic
 
@@ -31,7 +32,7 @@ Puede cambiar el archivo de configuración de la aplicación para modificar el c
 
 ## <a name="where-messages-are-logged"></a>Dónde se registran los mensajes
 
-Si el ensamblado no tiene ningún archivo de configuración, los objetos `My.Application.Log` y `My.Log` escriben en la salida de depuración de la aplicación (a través de la clase <xref:System.Diagnostics.DefaultTraceListener> ). Además, el objeto `My.Application.Log` escribe en el archivo de registro del ensamblado (a través de la clase <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>), mientras que el objeto `My.Log` escribe en la salida de la página web ASP.NET (a través de la clase <xref:System.Web.WebPageTraceListener>).
+Si el ensamblado no tiene ningún archivo de configuración, los objetos `My.Application.Log` y `My.Log` escriben en la salida de depuración de la aplicación (a través de la clase <xref:System.Diagnostics.DefaultTraceListener> ). Además, el objeto `My.Application.Log` escribe en el archivo de registro del ensamblado (a través de la clase <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> ), mientras que el objeto `My.Log` escribe en la salida de la página web ASP.NET (a través de la clase <xref:System.Web.WebPageTraceListener> ).
 
 La salida de depuración se puede ver en la ventana **Salida** de Visual Studio al ejecutar la aplicación en modo de depuración. Para abrir la ventana **Salida** , haga clic en el elemento de menú **Depurar** , seleccione **Windows**, y, después, haga clic en **Salida**. En la ventana **Salida** , seleccione **Depurar** desde el cuadro **Mostrar resultados desde** .
 
@@ -45,11 +46,11 @@ C:\Documents and Settings\\`username`\Application Data
 
 Los valores de `CompanyName`, `ProductName`y `ProductVersion` proceden de la información de ensamblado de la aplicación. El formato del nombre de archivo de registro es *nombreDeEnsamblado*.log, donde *nombreDeEnsamblado* es el nombre de archivo del ensamblado sin la extensión. Si se necesita más de un archivo de registro, por ejemplo, si el registro original no está disponible cuando la aplicación intenta escribir en el registro, el formato del nombre de archivo de registro es *nombreDeEnsamblado*-*iteration*.log, donde `iteration` es un `Integer`.
 
-Para invalidar el comportamiento predeterminado, puede agregar o cambiar los archivos de configuración del equipo y de la aplicación. Para obtener más información, vea [Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información](walkthrough-changing-where-my-application-log-writes-information.md).
+Para invalidar el comportamiento predeterminado, puede agregar o cambiar los archivos de configuración del equipo y de la aplicación. Para obtener más información, consulta [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](walkthrough-changing-where-my-application-log-writes-information.md).
 
 ## <a name="configuring-log-settings"></a>Configurar el registro
 
-El objeto `Log` tiene una implementación predeterminada que funciona sin un archivo de configuración de la aplicación, app.config. Para cambiar los valores predeterminados, debe agregar un archivo de configuración con la nueva configuración. Para obtener más información, vea [Tutorial: Filtrar el resultado de My.Application.Log](walkthrough-filtering-my-application-log-output.md).
+El objeto `Log` tiene una implementación predeterminada que funciona sin un archivo de configuración de la aplicación, app.config. Para cambiar los valores predeterminados, debe agregar un archivo de configuración con la nueva configuración. Para obtener más información, consulta [Walkthrough: Filtering My.Application.Log Output](walkthrough-filtering-my-application-log-output.md).
 
 Las secciones de configuración de registro se encuentran en el nodo `<system.diagnostics>` del nodo principal `<configuration>` del archivo app.config. La información de registro se define en varios nodos:
 
@@ -94,7 +95,7 @@ Cuando la aplicación ejecuta el código que crea una instancia de una clase por
 
 En una aplicación implementada, el código de seguimiento se habilita volviendo a configurar los objetos modificadores antes de que se inicie la aplicación. Normalmente, esto implica activar y desactivar los objetos modificadores. Para ello, se deben cambiar los niveles de seguimiento y, luego, reiniciar la aplicación.
 
-## <a name="security-considerations"></a>Consideraciones de seguridad
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad
 
 Tenga en cuenta lo siguiente al escribir datos en el registro:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Procedimiento: para leer archivos de texto en Visual Basic'
 title: Procedimiento para leer archivos de texto
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 76f8bbbb7a0064818d324fc6dd9f1f37f7271401
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411621"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797437"
 ---
-# <a name="how-to-read-from-text-files-in-visual-basic"></a>Procedimiento para leer archivos de texto en Visual Basic
+# <a name="how-to-read-from-text-files-in-visual-basic"></a>Cómo: Leer archivos de texto en Visual Basic
 
 El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> del objeto `My.Computer.FileSystem` permite leer de un archivo de texto. Se puede especificar la codificación del archivo si el contenido del mismo utiliza una codificación como ASCII o UTF-8.
 
@@ -64,10 +65,10 @@ Compruebe todas las entradas antes de utilizar los datos en la aplicación. Pued
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
-- [Leer archivos](reading-from-files.md)
-- [Cómo: Leer archivos de texto delimitado por comas](how-to-read-from-comma-delimited-text-files.md)
-- [Cómo: Leer archivos de texto de ancho fijo](how-to-read-from-fixed-width-text-files.md)
-- [Cómo: Leer archivos de texto con varios formatos](how-to-read-from-text-files-with-multiple-formats.md)
-- [Solución de problemas: Leer y escribir en archivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Lectura de archivos](reading-from-files.md)
+- [Procedimiento para leer archivos de texto delimitado por comas](how-to-read-from-comma-delimited-text-files.md)
+- [Procedimiento para leer archivos de texto de ancho fijo](how-to-read-from-fixed-width-text-files.md)
+- [Procedimiento para leer archivos de texto con varios formatos](how-to-read-from-text-files-with-multiple-formats.md)
+- [Solución del problema: leer y escribir en archivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)
 - [Tutorial: Manipulación de archivos y directorios en Visual Basic](walkthrough-manipulating-files-and-directories.md)
 - [Codificaciones de archivos](file-encodings.md)

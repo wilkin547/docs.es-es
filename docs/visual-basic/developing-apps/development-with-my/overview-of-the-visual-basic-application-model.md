@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Información general sobre el modelo de aplicaciones de Visual Basic'
 title: Información general sobre el modelo de aplicaciones de Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 46177d0af7e5df767eb8421caf424880baac615e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ead4912d3796a5826453945419510088d87c6e90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411732"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797957"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Información general sobre el modelo de aplicaciones de Visual Basic
 

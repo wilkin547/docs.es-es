@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Acceso a archivos con Visual Basic'
 title: Acceso a archivos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: 3b2042862ae81a52d62374e35a456766ed47edc9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b3ea742185e7219ce7fdfb8eee987fd9c17e3a88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401737"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666321"
 ---
 # <a name="file-access-with-visual-basic"></a>Acceso a archivos con Visual Basic
 
@@ -27,7 +28,7 @@ El objeto `My.Computer.FileSystem` proporciona herramientas para trabajar con ar
   
 ## <a name="in-this-section"></a>En esta sección  
 
- [Leer archivos](reading-from-files.md)  
+ [Lectura de archivos](reading-from-files.md)  
  Enumera temas que tratan sobre el uso del objeto `My.Computer.FileSystem` para leer desde archivos  
   
  [Escritura en archivos](writing-to-files.md)  
@@ -36,14 +37,14 @@ El objeto `My.Computer.FileSystem` proporciona herramientas para trabajar con ar
  [Creación, eliminación y movimiento de archivos y directorios](creating-deleting-and-moving-files-and-directories.md)  
  Enumera temas que tratan sobre el uso del objeto `My.Computer.FileSystem` para crear, copiar, eliminar y mover archivos y carpetas.  
   
- [Análisis de archivos de texto con el objeto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)  
+ [Analizar archivos de texto con el objeto TextFieldParser](parsing-text-files-with-the-textfieldparser-object.md)  
  Explica cómo usar `TextFieldReader` para analizar archivos de texto como los registros.  
   
  [Codificaciones de archivos](file-encodings.md)  
  Explica codificaciones de archivos y su uso.  
   
- [Tutorial: Manipular archivos y directorios en Visual Basic](walkthrough-manipulating-files-and-directories.md)  
+ [Tutorial: Manipulación de archivos y directorios en Visual Basic](walkthrough-manipulating-files-and-directories.md)  
  Muestra cómo crear una utilidad que presenta información sobre archivos y carpetas.  
   
- [Solución de problemas: Leer y escribir en archivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)  
+ [Solución del problema: leer y escribir en archivos de texto](troubleshooting-reading-from-and-writing-to-text-files.md)  
  Enumera problemas habituales detectados al leer y escribir en archivos de texto y sugiere soluciones para cada uno.

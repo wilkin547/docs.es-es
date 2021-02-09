@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)'
 title: Determinar el lugar en el que My.Application.Log escribe la información
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 00b543dbe96ca99446f6797a13b66ee62c422b93
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4ddb5777bcbdde07069efd2fd3a66f0c220ee135
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792289"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)
 
@@ -55,7 +56,7 @@ Para obtener más información sobre las ubicaciones de salida predeterminadas, 
 
     - Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> escribe en un registro de archivos, como se describe en la introducción.
 
-    - Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> que escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData` . Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
+    - Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> que escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData` . Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [Eventos de ETW en .NET Framework](../../../../framework/performance/etw-events.md).
 
     - Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> escriben en el archivo especificado en el parámetro `initializeData` .
 
@@ -73,8 +74,8 @@ Para obtener más información sobre las ubicaciones de salida predeterminadas, 
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
 - [Trabajar con registros de aplicaciones](working-with-application-logs.md)
-- [Registrar excepciones](how-to-log-exceptions.md)
-- [Escribir mensajes de registro](how-to-write-log-messages.md)
-- [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](walkthrough-changing-where-my-application-log-writes-information.md)
-- [Eventos ETW en .NET Framework](../../../../framework/performance/etw-events.md)
-- [Solución de problemas: Agentes de escucha de registro](troubleshooting-log-listeners.md)
+- [Cómo: Registrar excepciones](how-to-log-exceptions.md)
+- [Cómo: Escribir mensajes de registro](how-to-write-log-messages.md)
+- [Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información](walkthrough-changing-where-my-application-log-writes-information.md)
+- [Eventos de ETW en .NET Framework](../../../../framework/performance/etw-events.md)
+- [Solución de problemas: agentes de escucha de registro predeterminados](troubleshooting-log-listeners.md)

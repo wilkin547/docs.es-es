@@ -1,5 +1,6 @@
 ---
-title: 'Cómo: Escribir el registro de eventos de una aplicación'
+description: 'Más información acerca de: Procedimiento: para escribir en el registro de eventos de una aplicación (Visual Basic)'
+title: Procedimiento para escribir en el registro de eventos de una aplicación
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: 298d6d85f8b21176b72db8e676617577eb03fada
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ea53ff84f1fcf175912e35eb7433ece26886cf44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410041"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797294"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Cómo: Escribir en el registro de eventos de una aplicación (Visual Basic)
 
@@ -20,7 +21,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para escribir informació
 
 No se puede escribir en el registro de seguridad. Para poder escribir en el registro del sistema, debe ser miembro de la cuenta LocalSystem o Administrador.
 
-Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
+Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [Eventos de ETW en .NET Framework](../../../../framework/performance/etw-events.md).
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>Para agregar y configurar el agente de escucha de registro de eventos
 
@@ -73,5 +74,5 @@ Después de configurar el agente de escucha de registro de eventos para un ensam
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Trabajar con registros de aplicaciones](working-with-application-logs.md)
-- [Registrar excepciones](how-to-log-exceptions.md)
+- [Cómo: Registrar excepciones](how-to-log-exceptions.md)
 - [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](walkthrough-determining-where-my-application-log-writes-information.md)

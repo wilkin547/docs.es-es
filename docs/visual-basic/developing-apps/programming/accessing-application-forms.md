@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Acceso a los formularios de aplicaciones (Visual Basic)'
 title: Acceso a los formularios de las aplicaciones
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 44f98632fd2fd6c4c087a78b805d5b7da750df87
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dae73700434f9cdbb145ebea605c87c33f7c0c73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797905"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Acceso a los formularios de aplicaciones (Visual Basic)
 
@@ -23,7 +24,7 @@ El objeto `My.Forms` proporciona una manera fácil de tener acceso a una instanc
 
  En la siguiente tabla se incluyen ejemplos que muestran cómo acceder a los formularios de una aplicación.  
   
-|Para|Vea|  
+|En|Vea|  
 |---|---|  
 |Tener acceso a un formulario desde otro formulario de una aplicación.|[My.Forms (objeto)](../../language-reference/objects/my-forms-object.md)|  
 |Mostrar los títulos de todos los formularios abiertos de la aplicación.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  

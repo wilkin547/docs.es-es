@@ -1,18 +1,19 @@
 ---
+description: 'Más información acerca de: Procedimiento: para asignar la información de usuario para agrupar conexiones'
 title: 'Cómo: asignar la información de usuario para agrupar conexiones'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 01b686702250c68131e8a46b410ce05e67e7c950
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2af901b91c561f5f46c63ed627cbd0053d30e624
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729268"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Cómo: asignar la información de usuario para agrupar conexiones
+# <a name="how-to-assign-user-information-to-group-connections"></a>Procedimiento para asignar la información de usuario para agrupar conexiones
 
  En el ejemplo siguiente se muestra cómo asignar la información del usuario para agrupar las conexiones, presuponiendo que la aplicación establece las variables *UserName*, *SecurelyStoredPassword* y *Domain* antes de que se llame a esta sección del código y que *UserName* es único.  
   
@@ -109,5 +110,5 @@ MyWebResponse.Close()
   
 ## <a name="see-also"></a>Vea también
 
-- [Administración de conexiones](managing-connections.md)
+- [Administrar conexiones](managing-connections.md)
 - [Agrupación de conexiones](connection-grouping.md)

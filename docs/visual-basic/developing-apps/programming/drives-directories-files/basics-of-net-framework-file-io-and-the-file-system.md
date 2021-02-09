@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)'
 title: Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 187a20617ec901e722a30ebfa571e4a55ed0b5c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78ab7f572f0e2cc6255af470f73a549a4d7f274a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401802"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666360"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 
@@ -55,18 +56,18 @@ Hay muchos tipos de secuencias, pero para trabajar con la entrada/salida (E/S) d
 
 - <xref:System.IO.MemoryStream>
 
-- <xref:System.Net.Sockets.NetworkStream>Operador
+- <xref:System.Net.Sockets.NetworkStream>.
 
 En la tabla siguiente se enumeran las tareas que se suelen realizar con una secuencia:
 
-|Para|Vea|
+|En|Vea|
 |---|---|
 |Leer y escribir en un archivo de datos|[Cómo: Leer y escribir en un archivo de datos recién creado](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|Leer texto de un archivo|[Cómo: Leer texto de un archivo](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|Leer texto desde un archivo|[Cómo: Leer texto de un archivo](../../../../standard/io/how-to-read-text-from-a-file.md)|
 |Escribir texto en un archivo|[Cómo: Escribir texto en un archivo](../../../../standard/io/how-to-write-text-to-a-file.md)|
-|Leer caracteres de una cadena|[Cómo: Leer caracteres de una cadena](../../../../standard/io/how-to-read-characters-from-a-string.md)|
-|Escribir caracteres en una cadena|[Cómo: Escribir caracteres en una cadena](../../../../standard/io/how-to-write-characters-to-a-string.md)|
-|Cifrar datos|[Cifrar datos](../../../../standard/security/encrypting-data.md)|
+|Leer caracteres de una cadena|[Procedimiento para leer caracteres de una cadena](../../../../standard/io/how-to-read-characters-from-a-string.md)|
+|Escribir caracteres en una cadena|[Procedimiento para escribir caracteres en una cadena](../../../../standard/io/how-to-write-characters-to-a-string.md)|
+|Cifrado de datos|[Cifrar datos](../../../../standard/security/encrypting-data.md)|
 |Descifrar datos|[Descifrar datos](../../../../standard/security/decrypting-data.md)|
 
 ## <a name="file-access-and-attributes"></a>Acceso a archivos y atributos
@@ -77,14 +78,14 @@ La enumeración <xref:System.IO.FileAttributes> permite la recopilación de info
 
 En la tabla siguiente se enumeran las tareas que implican acceso a archivos y atributos de archivo:
 
-|Para|Vea|
+|En|Vea|
 |---|---|
 |Abrir y anexar texto a un archivo de registro|[Cómo: Abrir y anexar a un archivo de registro](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |Determinar los atributos de un archivo|<xref:System.IO.FileAttributes>|
 
 ## <a name="file-permissions"></a>Permisos de archivo
 
-Es posible controlar el acceso a archivos y directorios mediante la clase <xref:System.Security.Permissions.FileIOPermission>. Esto puede ser especialmente importante para los desarrolladores que trabajan con formularios Web Forms, que, de forma predeterminada, se ejecutan en el contexto de una cuenta de usuario local especial denominada ASPNET, creada como parte de las instalaciones de ASP.NET y .NET Framework. Cuando este tipo de aplicación solicita acceso a un recurso, la cuenta de usuario ASPNET tiene permisos limitados, que pueden impedir que el usuario realice acciones como escribir en un archivo desde una aplicación web. Para obtener más información, consulta <xref:System.Security.Permissions.FileIOPermission>.
+Es posible controlar el acceso a archivos y directorios mediante la clase <xref:System.Security.Permissions.FileIOPermission>. Esto puede ser especialmente importante para los desarrolladores que trabajan con formularios Web Forms, que, de forma predeterminada, se ejecutan en el contexto de una cuenta de usuario local especial denominada ASPNET, creada como parte de las instalaciones de ASP.NET y .NET Framework. Cuando este tipo de aplicación solicita acceso a un recurso, la cuenta de usuario ASPNET tiene permisos limitados, que pueden impedir que el usuario realice acciones como escribir en un archivo desde una aplicación web. Para obtener más información, vea <xref:System.Security.Permissions.FileIOPermission>.
 
 ## <a name="isolated-file-storage"></a>Almacenamiento aislado de archivos
 
@@ -92,7 +93,7 @@ El almacenamiento aislado es un intento de resolver los problemas creados al tra
 
 En la tabla siguiente se enumeran las tareas que suelen estar asociadas con el almacenamiento aislado de archivos.
 
-|Para|Vea|
+|En|Vea|
 |---|---|
 |Crear un almacenamiento aislado|[Cómo: Obtener los almacenes de almacenamiento aislado](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |Enumerar almacenamientos aislados|[Cómo: Enumerar los almacenes de almacenamiento aislado](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|

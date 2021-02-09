@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Colaboración de punto a punto'
 title: Colaboración de punto a punto
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 7cf92f6bf3c269e584cb8b3cdcf910be5b89fd7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 824ab3152c1ad765c2d19f5c6e719242255f606d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047381"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738285"
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboración de punto a punto
 

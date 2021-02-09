@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Procedimiento: para leer la configuración de la aplicación en Visual Basic'
 title: Procedimiento para leer la configuración de la aplicación
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: 9b326341c54d652479776e3ab93a2b140f4531e0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 30b5a3b0cdf3565fc8c1f0dfa19e7717a714c350
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797827"
 ---
-# <a name="how-to-read-application-settings-in-visual-basic"></a>Procedimiento para leer la configuración de la aplicación en Visual Basic
+# <a name="how-to-read-application-settings-in-visual-basic"></a>Cómo: Leer la configuración de la aplicación en Visual Basic
 
 Puede leer la configuración de un usuario accediendo a la propiedad de configuración del objeto `My.Settings`.  
   
- El objeto `My.Settings` expone cada configuración como una propiedad. El nombre de propiedad es el mismo que el nombre de la configuración y el tipo de propiedad es el mismo que el tipo de configuración. El **Ámbito** de la configuración indica si la propiedad es de solo lectura. La propiedad de una configuración con ámbito **Aplicación** es de solo lectura, mientras que la propiedad de una configuración con ámbito **Usuario** es de lectura y escritura. Para más información, consulte [My.Settings (Objeto)](../../../language-reference/objects/my-settings-object.md).  
+ El objeto `My.Settings` expone cada configuración como una propiedad. El nombre de propiedad es el mismo que el nombre de la configuración y el tipo de propiedad es el mismo que el tipo de configuración. El **Ámbito** de la configuración indica si la propiedad es de solo lectura. La propiedad de una configuración con ámbito **Aplicación** es de solo lectura, mientras que la propiedad de una configuración con ámbito **Usuario** es de lectura y escritura. Para obtener más información, vea [My.Settings (Objeto)](../../../language-reference/objects/my-settings-object.md).  
   
 ## <a name="example"></a>Ejemplo  
 
@@ -25,7 +26,7 @@ Puede leer la configuración de un usuario accediendo a la propiedad de configur
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
- Para que este ejemplo funcione, la aplicación debe tener una configuración `Nickname` de tipo `String`. Para obtener más información, consulte [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+ Para que este ejemplo funcione, la aplicación debe tener una configuración `Nickname` de tipo `String`. Para obtener más información, vea [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="see-also"></a>Vea también
 
