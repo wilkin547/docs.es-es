@@ -1,54 +1,55 @@
 ---
+description: 'Más información acerca de: Atributos'
 title: Atributos
 ms.date: 10/22/2008
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: c02c41244fa74b686277c2f3c3940405fe2d95ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.openlocfilehash: 1557ba0945da0c8498c67f70ba4a01dd0bbe432e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701372"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642427"
 ---
 # <a name="attributes"></a>Atributos
 
 <xref:System.Attribute?displayProperty=nameWithType> es una clase base que se usa para definir atributos personalizados.
 
- Los atributos son anotaciones que se pueden agregar a elementos de programación como ensamblados, tipos, miembros y parámetros. Se almacenan en los metadatos del ensamblado y se puede tener acceso a ellos en tiempo de ejecución mediante las API de reflexión. Por ejemplo, el marco de trabajo define <xref:System.ObsoleteAttribute> , que se puede aplicar a un tipo o un miembro para indicar que el tipo o miembro está en desuso.
+ Los atributos son anotaciones que se pueden agregar a elementos de programación como ensamblados, tipos, miembros y parámetros. Se almacenan en los metadatos del ensamblado y se puede tener acceso a ellos en tiempo de ejecución mediante las API de reflexión. Por ejemplo, el marco define el atributo <xref:System.ObsoleteAttribute>, que se puede aplicar a un tipo o un miembro para indicar que el tipo o miembro está en desuso.
 
- Los atributos pueden tener una o varias propiedades que contienen datos adicionales relacionados con el atributo. Por ejemplo, `ObsoleteAttribute` podría incluir información adicional sobre la versión en la que un tipo o un miembro quedó en desuso y la descripción de las nuevas API que reemplazan a la API obsoleta.
+ Los atributos pueden tener una o varias propiedades que contienen datos adicionales relacionados con el atributo. Por ejemplo, `ObsoleteAttribute` podría incluir información adicional sobre en qué versión un tipo o un miembro quedó en desuso, así como la descripción de las nuevas API que reemplazan a la API obsoleta.
 
- Se deben especificar algunas propiedades de un atributo cuando se aplica el atributo. Estas se conocen como las propiedades requeridas o los argumentos necesarios, porque se representan como parámetros de constructor posicional. Por ejemplo, la <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> propiedad de <xref:System.Diagnostics.ConditionalAttribute> es una propiedad obligatoria.
+ Se deben especificar algunas propiedades de un atributo cuando se aplica el atributo. Estas se conocen como "propiedades requeridas" o "argumentos necesarios", porque se representan como parámetros del constructor posicional. Por ejemplo, la propiedad <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> del atributo <xref:System.Diagnostics.ConditionalAttribute> es una propiedad obligatoria.
 
- Las propiedades que no tienen que especificarse necesariamente cuando se aplica el atributo se denominan propiedades opcionales (o argumentos opcionales). Se representan mediante propiedades que se pueden establecer. Los compiladores proporcionan una sintaxis especial para establecer estas propiedades cuando se aplica un atributo. Por ejemplo, la <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> propiedad representa un argumento opcional.
+ Las propiedades que no tienen que especificarse necesariamente cuando se aplica el atributo se denominan "propiedades opcionales" (o "argumentos opcionales"). Se representan mediante propiedades que se pueden establecer. Los compiladores proporcionan una sintaxis especial para establecer estas propiedades cuando se aplica un atributo. Por ejemplo, la propiedad <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> representa un argumento opcional.
 
  ✔️ Asigne un nombre a las clases de atributos personalizados con el sufijo "Attribute".
 
- ✔️ Aplique a los <xref:System.AttributeUsageAttribute> atributos personalizados.
+ ✔️ Aplique el atributo <xref:System.AttributeUsageAttribute> a los atributos personalizados.
 
- ✔️ proporcionan propiedades que se pueden establecer para los argumentos opcionales.
+ ✔️ Proporcione propiedades que se pueden establecer para los argumentos opcionales.
 
- ✔️ proporcionan propiedades Get-Only para los argumentos requeridos.
+ ✔️ Proporcione propiedades get-only para los argumentos requeridos.
 
- ✔️ proporcionan parámetros de constructor para inicializar las propiedades correspondientes a los argumentos necesarios. Cada parámetro debe tener el mismo nombre (aunque con distintas mayúsculas y minúsculas) que la propiedad correspondiente.
+ ✔️ Proporcione parámetros de constructor para inicializar las propiedades correspondientes a los argumentos necesarios. Cada parámetro debe tener el mismo nombre (aunque con distinto uso de mayúsculas y minúsculas) que la propiedad correspondiente.
 
- ❌ Evite proporcionar parámetros de constructor para inicializar las propiedades correspondientes a los argumentos opcionales.
+ ❌ EVITE proporcionar parámetros de constructor para inicializar las propiedades correspondientes a los argumentos opcionales.
 
- En otras palabras, no tiene propiedades que se puedan establecer con un constructor y un establecedor. Esta instrucción hace que sea muy explícito qué argumentos son opcionales y cuáles son necesarios, y evita tener dos maneras de hacer lo mismo.
+ En otras palabras, no tenga propiedades que se puedan establecer con un constructor y un establecedor. Esta instrucción consigue que resulte evidente qué argumentos son opcionales y cuáles necesarios, y evita tener dos formas de hacer lo mismo.
 
- ❌ Evite sobrecargar los constructores de atributos personalizados.
+ ❌ EVITE sobrecargar los constructores de atributos personalizados.
 
- Tener un solo constructor se comunica claramente al usuario qué argumentos son obligatorios y cuáles son opcionales.
+ Tener un solo constructor comunica claramente al usuario qué argumentos son obligatorios y cuáles opcionales.
 
- ✔️ DEBE sellar las clases de atributos personalizados, si es posible. Esto hace que la búsqueda del atributo sea más rápida.
+ ✔️ Selle las clases de atributos personalizados, si es posible. De esta forma, la búsqueda de atributos será más rápida.
 
- *Partes &copy; 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
+ *Portions &copy; 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Directrices de diseño de marco](index.md)
+- [Instrucciones de diseño de .NET Framework](index.md)
 - [Instrucciones de uso](usage-guidelines.md)
