@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: ordenar los resultados de una consulta mediante LINQ (Visual Basic)'
 title: Procedimiento para ordenar los resultados de una consulta mediante LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 94c2907f05aa9b5b2bc8659cef6f523187f1ef6b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dbf792423c53602d5d36937590d6f3ec8931f5ac
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071799"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469414"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Cómo: Ordenar los resultados de una consulta mediante LINQ (Visual Basic)
 

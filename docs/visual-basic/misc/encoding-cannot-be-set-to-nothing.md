@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: la codificación no se puede establecer en nada'
 title: La codificación no se puede establecer en Nothing
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
-ms.openlocfilehash: 0356098ca3fb41804ea396b0ff792cf2990b3340
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4fa9cbd9488501b5295da8d8ace41ef06a706c12
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077545"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463000"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>La codificación no se puede establecer en Nothing
 
@@ -19,7 +20,7 @@ Error en un intento de leer un archivo o escribir en él porque el parámetro `e
   
 - Proporcione un valor válido para el parámetro `encoding` .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Codificaciones de archivos](../developing-apps/programming/drives-directories-files/file-encodings.md)
 - [Lectura de archivos](../developing-apps/programming/drives-directories-files/reading-from-files.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipos de errores (Visual Basic)'
 title: Tipos de errores
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: caeaab9a358e3e3a995c1df7274d16daaff7a667
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cc4fce5e0ce77a4e402ba832fd6f4e36e6feed07
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084000"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423776"
 ---
 # <a name="error-types-visual-basic"></a>Tipos de error (Visual Basic)
 
@@ -28,7 +29,7 @@ En Visual Basic, los errores se dividen en una de estas tres categorías: errore
 > [!NOTE]
 > La `Option Explicit` instrucción es un medio para evitar errores de sintaxis. Obliga a declarar, de antemano, todas las variables que se van a usar en la aplicación. Por lo tanto, cuando esas variables se usan en el código, los errores tipográficos se detectan inmediatamente y se pueden corregir.
 
-## <a name="run-time-errors"></a>Errores en tiempo de ejecución
+## <a name="run-time-errors"></a>Errores de Run-Time
 
  Los *errores en tiempo de ejecución* son aquellos que aparecen solo después de compilar y ejecutar el código. Estos incluyen código que puede parecer correcto en que no tiene errores de sintaxis, pero que no se ejecutará. Por ejemplo, puede escribir correctamente una línea de código para abrir un archivo. Pero si el archivo no existe, la aplicación no puede abrir el archivo y produce una excepción. Puede corregir la mayoría de los errores en tiempo de ejecución volviendo a escribir el código defectuoso o usando el [control de excepciones](../../language-reference/statements/try-catch-finally-statement.md)y, a continuación, volviendo a compilarlo y volver a ejecutarlo.
   
@@ -38,5 +39,5 @@ En Visual Basic, los errores se dividen en una de estas tres categorías: errore
 
 ## <a name="see-also"></a>Vea también
 
-- [Instrucción Try...Catch...Finally](../../language-reference/statements/try-catch-finally-statement.md)
+- [Try...Catch...Finally (instrucción)](../../language-reference/statements/try-catch-finally-statement.md)
 - [Conceptos básicos del depurador](/visualstudio/debugger/debugger-feature-tour)

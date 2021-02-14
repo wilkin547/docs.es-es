@@ -1,5 +1,5 @@
 ---
-description: "Más información acerca de: BC30561: ' <name1> ' es ambiguo, se ha importado de los espacios de nombres o tipos '<name2>"
+description: "Más información acerca de: BC30561: ' <name1> ' es ambiguo, se ha importado de los espacios de nombres o tipos ' <name2> '"
 title: "'<name1>' es ambiguo y se ha importado de los espacios de nombres o tipos '<name2>'"
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: fab7c8242c9f388948caf5cd70beadc6c28284b7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d338d16c563be988c215dd19ac59174d79a8c7a7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99795721"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483578"
 ---
 # <a name="bc30561-name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>BC30561: ' \<name1> ' es ambiguo y se ha importado de los espacios de nombres o tipos ' \<name2> '
 
@@ -27,7 +27,7 @@ Se proporcionó un nombre que es ambiguo y, por tanto, entra en conflicto con ot
 
 - Use el nombre completo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucción Imports (Tipo y espacio de nombres de .NET)](../statements/imports-statement-net-namespace-and-type.md)
 - [Espacios de nombres en Visual Basic](../../programming-guide/program-structure/namespaces.md)
