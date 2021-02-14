@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: operadores lógicos y bit a bit en Visual Basic'
 title: Operadores lógicos y bit a bit
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: c15b9337f262563941699c0ff8fe5219ca6a5c93
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 55d9567813a9114573e1e3f70fe181cb8621b350
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086002"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472727"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Operadores lógicos y bit a bit en Visual Basic
 
@@ -50,13 +51,13 @@ Los operadores lógicos comparan `Boolean` expresiones y devuelven un `Boolean` 
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>Operaciones lógicas de cortocircuito  
+## <a name="short-circuiting-logical-operations"></a>Short-Circuiting operaciones lógicas  
 
  El [operador AndAlso](../../../language-reference/operators/andalso-operator.md) es muy similar al `And` operador, ya que también realiza una conjunción lógica de dos `Boolean` expresiones. La diferencia clave entre ambos es que `AndAlso` exhibe *un comportamiento de cortocircuito* . Si la primera expresión de una `AndAlso` expresión se evalúa como `False` , la segunda expresión no se evalúa porque no puede modificar el resultado final y `AndAlso` devuelve `False` .  
   
  Del mismo modo, el [operador OrElse](../../../language-reference/operators/orelse-operator.md) realiza una disyunción lógica de cortocircuito en dos `Boolean` expresiones. Si la primera expresión de una `OrElse` expresión se evalúa como `True` , la segunda expresión no se evalúa porque no puede modificar el resultado final y `OrElse` devuelve `True` .  
   
-### <a name="short-circuiting-trade-offs"></a>Equilibrio de cortocircuito  
+### <a name="short-circuiting-trade-offs"></a>Short-Circuiting Trade-Offs  
 
  El cortocircuito puede mejorar el rendimiento al no evaluar una expresión que no pueda modificar el resultado de la operación lógica. Sin embargo, si esa expresión realiza acciones adicionales, el cortocircuito omite esas acciones. Por ejemplo, si la expresión incluye una llamada a un `Function` procedimiento, no se llama a ese procedimiento si la expresión se cortocircuita y no se ejecuta ningún código adicional incluido en `Function` . Por lo tanto, la función puede ejecutarse solo ocasionalmente y no se puede probar correctamente. O la lógica del programa podría depender del código del `Function` .  
   
@@ -101,7 +102,7 @@ Los operadores lógicos comparan `Boolean` expresiones y devuelven un `Boolean` 
 > [!NOTE]
 > Las operaciones bit a bit solo se pueden realizar en tipos enteros. Los valores de punto flotante se deben convertir en tipos enteros antes de que pueda continuar la operación bit a bit.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Operadores lógicos y bit a bit (Visual Basic)](../../../language-reference/operators/logical-bitwise-operators.md)
 - [Expresiones booleanas](boolean-expressions.md)

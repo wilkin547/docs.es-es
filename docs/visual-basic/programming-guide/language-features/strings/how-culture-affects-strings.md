@@ -1,22 +1,23 @@
 ---
+description: Más información acerca de cómo afecta la referencia cultural a las cadenas en Visual Basic
 title: Cómo afecta la referencia cultural a las cadenas
 ms.date: 07/20/2015
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 878e028f7c7f0e93752765272e93baa3ffe1426d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e1d330c9bf879ad174f58d7a91c0ddac7e68c0dd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059224"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459973"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Cómo afecta la referencia cultural a las cadenas en Visual Basic
 
 En esta página de ayuda se describe cómo Visual Basic usa la información de referencia cultural para realizar conversiones de cadenas y comparaciones.  
   
-## <a name="when-to-use-culture-specific-strings"></a>Cuándo usar cadenas específicas de la referencia cultural  
+## <a name="when-to-use-culture-specific-strings"></a>Cuándo usar cadenas de Culture-Specific  
 
  Normalmente, debe usar cadenas específicas de la referencia cultural para todos los datos presentados y leídos de los usuarios, y usar cadenas de referencia cultural invariable para los datos internos de la aplicación.  
   
@@ -24,7 +25,7 @@ En esta página de ayuda se describe cómo Visual Basic usa la información de r
   
  Sin embargo, si la aplicación carga la fecha en un servidor central, debe dar formato a la cadena según una referencia cultural concreta, para evitar confusiones entre formatos de fecha potencialmente diferentes.  
   
-## <a name="culture-sensitive-functions"></a>Funciones que tienen en cuenta la referencia cultural  
+## <a name="culture-sensitive-functions"></a>Funciones de Culture-Sensitive  
 
  Todas las funciones de conversión de cadenas de Visual Basic (excepto las `Str` `Val` funciones y) usan la información de referencia cultural de la aplicación para asegurarse de que las conversiones y comparaciones son adecuadas para la referencia cultural del usuario de la aplicación.  
   
@@ -80,11 +81,11 @@ En esta página de ayuda se describe cómo Visual Basic usa la información de r
 |`CurrentCulture` o `CurrentCultureIgnoreCase`|Comparación basada en la interpretación de las cadenas en la referencia cultural actual.|Use estos valores al comparar: datos que se muestran al usuario, la mayoría de los datos proporcionados por el usuario y otros datos que requieren interpretación lingüística.|  
 |`InvariantCulture` o `InvariantCultureIgnoreCase`|Comparación basada en la interpretación de las cadenas en la referencia cultural de todos los idiomas.<br /><br /> Es diferente de `Ordinal` y `OrdinalIgnoreCase` , porque la referencia cultural de todos los idiomas trata los caracteres que están fuera del intervalo aceptado como caracteres invariables equivalentes.|Utilice estos valores solo al comparar datos persistentes o Mostrar datos pertinentes lingüísticamente que requieran un criterio de ordenación fijo.|  
   
-### <a name="security-considerations"></a>Consideraciones de seguridad  
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad  
 
  Si la aplicación toma decisiones de seguridad basadas en el resultado de una comparación o de una operación de cambio de mayúsculas y minúsculas, la operación debe utilizar el <xref:System.String.Compare%2A?displayProperty=nameWithType> método y pasar `Ordinal` o `OrdinalIgnoreCase` para el `comparisonType` argumento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Globalization.CultureInfo>
 - [Introducción a las cadenas en Visual Basic](introduction-to-strings.md)

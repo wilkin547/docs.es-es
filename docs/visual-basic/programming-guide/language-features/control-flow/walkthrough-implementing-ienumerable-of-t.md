@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Tutorial: implementar IEnumerable (of T) en Visual Basic'
 title: Implementar IEnumerable
 ms.date: 07/31/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: f1f0036c38299f2392f8c8705e67b7bb6b7db068
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 87905e4f110d3a9d95b1cad642296ea8105f32f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058643"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428147"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Tutorial: Implementar IEnumerable(Of T) en Visual Basic
 
@@ -36,7 +37,7 @@ La <xref:System.Collections.Generic.IEnumerable%601> interfaz la implementan las
 
 1. En **Explorador de soluciones**, haga clic con el botón secundario en el archivo Class1. VB y haga clic en **cambiar nombre**. Cambie el nombre del archivo a `StreamReaderEnumerable.vb` y pulse ENTRAR. Al cambiar el nombre del archivo también se cambiará el nombre de la clase a `StreamReaderEnumerable`. Esta clase implementará la interfaz `IEnumerable(Of String)`.
 
-1. Haga clic con el botón secundario en el proyecto StreamReaderEnumerable, seleccione **Agregar**y, a continuación, haga clic en **nuevo elemento**. Seleccione la plantilla **clase** . En el cuadro **Nombre**, escriba `StreamReaderEnumerator.vb` y haga clic en **Aceptar**.
+1. Haga clic con el botón secundario en el proyecto StreamReaderEnumerable, seleccione **Agregar** y, a continuación, haga clic en **nuevo elemento**. Seleccione la plantilla **clase** . En el cuadro **nombre** , escriba `StreamReaderEnumerator.vb` y haga clic en **Aceptar**.
 
  La primera clase de este proyecto es la clase Enumerable e implementará la `IEnumerable(Of String)` interfaz. Esta interfaz genérica implementa la <xref:System.Collections.IEnumerable> interfaz y garantiza que los consumidores de esta clase puedan tener acceso a los valores con tipo `String` .  
   
@@ -76,11 +77,11 @@ La <xref:System.Collections.Generic.IEnumerable%601> interfaz la implementan las
 
      [!code-vb[VbVbalrIteratorWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#6)]
 
-5. El `MoveNext` método de la `IEnumerator` interfaz navega al siguiente elemento del archivo de texto y actualiza el valor devuelto por la `Current` propiedad. Si no hay más elementos para leer, el `MoveNext` método devuelve `False` ; de lo contrario, el `MoveNext` método devuelve `True` . Agregue el código siguiente al método `MoveNext` .
+5. El `MoveNext` método de la `IEnumerator` interfaz navega al siguiente elemento del archivo de texto y actualiza el valor devuelto por la `Current` propiedad. Si no hay más elementos para leer, el `MoveNext` método devuelve `False` ; de lo contrario, el `MoveNext` método devuelve `True` . Agregue el siguiente código al método `MoveNext`.
 
      [!code-vb[VbVbalrIteratorWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#7)]
 
-6. El `Reset` método de la `IEnumerator` interfaz dirige el iterador para que apunte al inicio del archivo de texto y borra el valor del elemento actual. Agregue el código siguiente al método `Reset` .
+6. El `Reset` método de la `IEnumerator` interfaz dirige el iterador para que apunte al inicio del archivo de texto y borra el valor del elemento actual. Agregue el siguiente código al método `Reset`.
 
      [!code-vb[VbVbalrIteratorWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#8)]
 
@@ -94,7 +95,7 @@ La <xref:System.Collections.Generic.IEnumerable%601> interfaz la implementan las
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a LINQ en Visual Basic](../linq/introduction-to-linq.md)
 - [Flujo de control](index.md)

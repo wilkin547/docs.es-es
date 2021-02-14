@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: programación orientada a objetos (Visual Basic)'
 title: Programación orientada a objetos
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: f7e222cde8ce80d4c52cc8b4b111c576eb4041b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af2fbac16bfefc90876bf22bb8c67de162ee6459
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413198"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486802"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Programación orientada a objetos (Visual Basic)
 
@@ -22,7 +23,7 @@ Visual Basic proporciona compatibilidad total con la programación orientada a o
  En esta sección se describen los conceptos siguientes:
 
 - [Clases y objetos](#classes-and-objects)
-  - [Miembros de la clase](#class-members)
+  - [Miembros de clase](#class-members)
     - [Propiedades y campos](#properties-and-fields)
     - [Métodos](#methods)
     - [Constructores](#constructors)
@@ -59,7 +60,7 @@ Structure SampleStructure
 End Structure
 ```
 
-Para obtener más información, vea:
+Para obtener más información, consulte:
 
 - [Instrucción Class](../../language-reference/statements/class-statement.md)
 - [Structure (Instrucción)](../../language-reference/statements/structure-statement.md)
@@ -222,7 +223,7 @@ Están disponibles los siguientes modificadores de acceso:
 |[Público](../../language-reference/modifiers/public.md)|Puede obtener acceso al tipo o miembro cualquier otro código del mismo ensamblado o de otro ensamblado que haga referencia a éste.|
 |[Privado](../../language-reference/modifiers/private.md)|Solamente puede obtener acceso al tipo o miembro el código de la misma clase.|
 |[Contra](../../language-reference/modifiers/protected.md)|Solamente puede obtener acceso al tipo o miembro el código de la misma clase o de una clase derivada.|
-|[Respecto](../../language-reference/modifiers/friend.md)|Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado, pero no de un ensamblado distinto.|
+|[Friend](../../language-reference/modifiers/friend.md)|Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado, pero no de un ensamblado distinto.|
 |`Protected Friend`|Puede obtener acceso al tipo o miembro cualquier código del mismo ensamblado o cualquier clase derivada de otro ensamblado.|
 
 Para obtener más información, consulte [niveles de acceso en Visual Basic](../language-features/declared-elements/access-levels.md).
@@ -251,9 +252,9 @@ Dim sampleObject = New SampleClass With
     {.FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Para obtener más información, vea:
+Para obtener más información, consulte:
 
-- [New (operador)](../../language-reference/operators/new-operator.md)
+- [New Operator (Nuevo operador)](../../language-reference/operators/new-operator.md)
 - [Inicializadores de objeto: tipos con nombre y anónimos](../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
 ### <a name="shared-classes-and-members"></a>Clases y miembros compartidos
@@ -326,7 +327,7 @@ MustInherit Class BaseClass
 End Class
 ```
 
-Para obtener más información, vea:
+Para obtener más información, consulte:
 
 - [Inherits Statement](../../language-reference/statements/inherits-statement.md)
 - [NotInheritable](../../language-reference/modifiers/notinheritable.md)
@@ -432,7 +433,7 @@ Para obtener más información, vea:
 
 - [Delegados](../language-features/delegates/index.md)
 - [Delegate (Instrucción)](../../language-reference/statements/delegate-statement.md)
-- [AddressOf (operador)](../../language-reference/operators/addressof-operator.md)
+- [Operador AddressOf](../../language-reference/operators/addressof-operator.md)
 
 ## <a name="see-also"></a>Consulte también
 

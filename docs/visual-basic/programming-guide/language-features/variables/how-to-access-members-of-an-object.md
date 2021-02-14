@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: obtener acceso a los miembros de un objeto (Visual Basic)'
 title: Procedimiento para obtener acceso a los miembros de un objeto
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 2826a3c98b9f19b08cc943d0f67cdd34ac90f526
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b4aed213bbe520b7b7027acc146d0973f7273fd1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410547"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435530"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Cómo: Obtener acceso a los miembros de un objeto (Visual Basic)
 

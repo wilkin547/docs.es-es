@@ -8,21 +8,21 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2cda5a23bbc90ca5dc2305b5d7023e8ea6120b79
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: eb978d6af6695fd2e4b5473ac5c0dc216e726e52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99643077"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459960"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Información general sobre el análisis de código fuente de .NET
 
-Los analizadores de .NET Compiler Platform (Roslyn) inspeccionan el código de C# o Visual Basic para supervisar la calidad del código y verificar si contiene problemas de estilo. A partir de .NET 5,0, estos analizadores se incluyen con el SDK de .NET y no es necesario instalarlos por separado. Si el proyecto tiene como destino .NET 5 o posterior, el análisis de código está habilitado de forma predeterminada. Si el proyecto tiene como destino una implementación de .NET diferente, por ejemplo, .NET Core, .NET Standard o .NET Framework, debe habilitar manualmente el análisis de código estableciendo la propiedad [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) en `true` .
+Los analizadores de .NET Compiler Platform (Roslyn) inspeccionan el código de C# o Visual Basic para los problemas de estilo y calidad del código. A partir de .NET 5,0, estos analizadores se incluyen con el SDK de .NET y no es necesario instalarlos por separado. Si el proyecto tiene como destino .NET 5 o posterior, el análisis de código está habilitado de forma predeterminada. Si el proyecto tiene como destino una implementación de .NET diferente, por ejemplo, .NET Core, .NET Standard o .NET Framework, debe habilitar manualmente el análisis de código estableciendo la propiedad [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) en `true` .
 
-Si no desea pasar al SDK de .NET 5 o si prefiere un modelo basado en paquetes NuGet, los analizadores también están disponibles en el [paquete Nuget Microsoft. CodeAnalysis. NetAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Podría preferir un modelo basado en paquetes para las actualizaciones de versión a petición.
+Si no desea pasar al SDK de .NET 5 +, tiene un proyecto de .NET Framework de estilo de SDK o prefiere un modelo basado en paquetes NuGet, los analizadores también están disponibles en el [paquete Nuget Microsoft. CodeAnalysis. NetAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Podría preferir un modelo basado en paquetes para las actualizaciones de versión a petición.
 
 > [!NOTE]
-> Los analizadores de .NET son independientes de la plataforma de destino. Es decir, el proyecto no necesita tener como destino una implementación de .NET específica. Los analizadores funcionan para los proyectos que tienen `net5.0` como destino, así como las versiones anteriores de .net, como `netcoreapp3.1` y `net472` .
+> Los analizadores de .NET son independientes de la plataforma de destino. Es decir, el proyecto no necesita tener como destino una implementación de .NET específica. Los analizadores funcionan para los proyectos que tienen `net5.0` como destino, así como las versiones anteriores de .net, como `netcoreapp3.1` y `net472` . Sin embargo, para habilitar el análisis de código mediante la propiedad [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) , el proyecto debe hacer referencia a un [SDK de proyecto](../../core/project-sdk/overview.md).
 
 Si un analizador encuentra infracciones de reglas, se les indica como una sugerencia, una advertencia o un error, en función de cómo esté [configurada](configuration-options.md)cada regla. Las infracciones del análisis de código aparecen con el prefijo "CA" o "IDE" para diferenciarlas de los errores del compilador.
 
@@ -40,7 +40,7 @@ Las reglas de *análisis de calidad de código* ("CAxxxx") inspeccionan el códi
 
 Las siguientes reglas están habilitadas de forma predeterminada en .NET 5,0.
 
-| Id. de diagnóstico | Category | Gravedad | Descripción |
+| Id. de diagnóstico | Categoría | Gravedad | Descripción |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | Interoperabilidad | Advertencia | Analizador de compatibilidad de plataformas |
 | [CA1417](/visualstudio/code-quality/ca1417) | Interoperabilidad | Advertencia | No usar `OutAttribute` en parámetros de cadena para P/Invoke |
@@ -58,9 +58,9 @@ Puede cambiar la gravedad de estas reglas para deshabilitarlas o elevarlas a err
 
 ### <a name="enable-additional-rules"></a>Habilitar reglas adicionales
 
-El *modo de análisis* hace referencia a una configuración de análisis de código predefinida en la que ninguna, algunas o todas las reglas están habilitadas. En el modo de análisis predeterminado, solo se habilita un pequeño número de reglas [como advertencias de compilación](#enabled-rules). Puede cambiar el modo de análisis del proyecto estableciendo la propiedad [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) en el archivo de proyecto. Los valores permitidos son:
+El *modo de análisis* hace referencia a una configuración de análisis de código predefinida en la que ninguna, algunas o todas las reglas están habilitadas. En el modo de análisis predeterminado, solo se habilita un pequeño número de reglas [como advertencias de compilación](#enabled-rules). Puede cambiar el modo de análisis del proyecto estableciendo la [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) propiedad en el archivo del proyecto. Los valores permitidos son:
 
-| Value | Descripción |
+| Valor | Descripción |
 | - | - |
 | `AllDisabledByDefault` | Este es el modo más conservador. Todas las reglas están deshabilitadas de forma predeterminada. Puede [incluir](configuration-options.md) de forma selectiva reglas individuales para habilitarlas.<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | Este es el modo más intenso. Todas las reglas se habilitan como advertencias de compilación. Puede [rechazar](configuration-options.md) selectivamente las reglas individuales para deshabilitarlas.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -156,7 +156,7 @@ Para obtener más información y otras formas de suprimir las advertencias, vea 
 
 Además de los analizadores de .NET oficiales, también puede instalar analizadores de terceros, como [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [analizadores de xUnit](https://www.nuget.org/packages/xunit.analyzers/)y [Sónar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de reglas de análisis de calidad de código](quality-rules/index.md)
 - [Referencia de reglas de análisis de estilo de código](style-rules/index.md)

@@ -1,15 +1,16 @@
 ---
+description: "Más información acerca de: no se encontró la ruta de acceso ' <pathname> '"
 title: No se encuentra la ruta de acceso '<pathname>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-ms.openlocfilehash: c9b10aecd906b0a132f3c34d5f4d9c085ff96b32
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5b30a87f2c68ea99a0a6b038db5a4f9d516c29ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078767"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486789"
 ---
 # <a name="path-pathname-not-found"></a>No se encuentra la ruta de acceso '\<pathname>'
 
@@ -19,7 +20,7 @@ El sistema operativo no puede encontrar la ruta de acceso especificada durante l
   
 1. Asegúrese de que la ruta de acceso incluye los elementos necesarios.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Procedimiento para analizar rutas de acceso a archivos](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

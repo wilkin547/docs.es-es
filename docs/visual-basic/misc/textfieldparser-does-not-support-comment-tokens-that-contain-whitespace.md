@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: TextFieldParser no admite tokens de comentarios que contengan espacios en blanco'
 title: TextFieldParser no admite tokens de comentarios que contengan espacios en blanco
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_WhitespaceInToken
 ms.assetid: 55107656-270e-4bbb-841a-478904df8e07
-ms.openlocfilehash: 825f999f8eab3563dd77039ef19ae5e329bb4240
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 27ca19f0a901ca1644d4b121951ed9fdf4d553bd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078507"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455345"
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-white-space"></a>TextFieldParser no admite tokens de comentarios que contengan espacios en blanco
 
@@ -19,7 +20,7 @@ Se ha proporcionado un token de comentario que contiene espacios en blanco. El `
   
 - Proporcione un token de comentario correcto.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Propiedad TextFieldParser.CommentTokens](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.CommentTokens%2A)
 - [Analizar archivos de texto con el objeto TextFieldParser](../developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

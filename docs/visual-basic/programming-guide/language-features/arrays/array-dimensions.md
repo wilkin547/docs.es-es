@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: dimensiones de matriz en Visual Basic'
 title: Dimensiones de matriz
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 055a3efc1410bf80daf3804453adc2c20266733c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413109"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486555"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensiones de matrices en Visual Basic
 
@@ -93,7 +94,7 @@ Tenga en cuenta que, dado que cada índice varía de 0 a su máximo, cada dimens
 > [!NOTE]
 > Puede crear una matriz sin usar la `Dim` instrucción o la `New` cláusula. Por ejemplo, puede llamar al <xref:System.Array.CreateInstance%2A> método u otro componente puede pasar el código a una matriz creada de esta manera. Este tipo de matriz puede tener un límite inferior distinto de 0. Siempre puede probar el límite inferior de una dimensión mediante el <xref:System.Array.GetLowerBound%2A> método o la `LBound` función.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Matrices](index.md)
 - [Solución de problemas de matrices](troubleshooting-arrays.md)

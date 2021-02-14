@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: operadores aritméticos en Visual Basic'
 title: Operadores aritméticos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 023e479736285aa2d04509e05f49fe930cb4721d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3a7005b0a44f9b0358e393d8580a2a19a9a19881
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090084"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465332"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operadores aritméticos en Visual Basic
 
@@ -66,7 +67,7 @@ Los operadores aritméticos se utilizan para realizar muchas de las operaciones 
   
  Al detectar una <xref:System.DivideByZeroException> excepción, puede utilizar sus miembros para ayudarle a controlarla. Por ejemplo, la <xref:System.Exception.Message%2A> propiedad contiene el texto del mensaje para la excepción. Para obtener más información, vea [Instrucción Try...Catch...Finally (Visual Basic)](../../../language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="bit-shift-operations"></a>Operaciones de desplazamiento de bits  
+## <a name="bit-shift-operations"></a>Operaciones de Bit-Shift  
 
  Una operación de desplazamiento de bits realiza un cambio aritmético en un patrón de bits. El patrón se encuentra en el operando de la izquierda, mientras que el operando de la derecha especifica el número de posiciones para desplazar el patrón. Puede desplazar el patrón a la derecha con el [ operador>> ](../../../language-reference/operators/right-shift-operator.md) o a la izquierda con el [ operador<< ](../../../language-reference/operators/left-shift-operator.md).  
   
@@ -100,7 +101,7 @@ Los operadores aritméticos se utilizan para realizar muchas de las operaciones 
   
  Sin embargo, si establece `Option Strict Off` Visual Basic permite que se lleven a cabo conversiones de restricción implícitas, aunque pueden provocar la pérdida inesperada de datos o precisión. Por esta razón, se recomienda usar `Option Strict On` al escribir código de producción. Para obtener más información, consulta [Widening and Narrowing Conversions](../data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Operadores aritméticos](../../../language-reference/operators/arithmetic-operators.md)
 - [Operadores de desplazamiento de bits](../../../language-reference/operators/bit-shift-operators.md)
