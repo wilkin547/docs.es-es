@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)'
 title: Procedimiento para combinar y comparar colecciones de cadenas (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9265750bfc55f60cc683fe0e8235174eee76272c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374867"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424508"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
 

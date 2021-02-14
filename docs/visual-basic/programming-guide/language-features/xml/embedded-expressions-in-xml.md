@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: expresiones incrustadas en XML (Visual Basic)'
 title: Expresiones insertadas en XML
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 44a6c3408b57fa7f89e2834aa677fe8801ef21f3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 52cf8341cb0a55abad230543bbc6367aea071142
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058318"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433192"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Expresiones incrustadas (Visual Basic)
 
@@ -83,7 +84,7 @@ Las expresiones incrustadas le permiten crear literales XML que contienen expres
 > [!NOTE]
 > Al declarar un prefijo de espacio de nombres XML mediante el `xmlns` atributo de espacio de nombres, el valor de atributo debe ser una cadena constante. En este sentido, el uso del `xmlns` atributo es como usar la `Imports` instrucción para declarar un espacio de nombres XML. No se puede usar una expresión insertada para especificar el valor del espacio de nombres XML.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear XML en Visual Basic](creating-xml.md)
 - [Literal de documento XML](../../../language-reference/xml-literals/xml-document-literal.md)

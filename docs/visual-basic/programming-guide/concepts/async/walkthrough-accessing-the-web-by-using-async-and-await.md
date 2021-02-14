@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Tutorial: acceso a la web mediante Async y Await (Visual Basic)'
 title: 'Tutorial: Acceso a web mediante async y await'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 41ededd4d4335b78b8d7a33e8fe387c7d632cbee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 08488d4909e4fbc40cc11213eb293c2693fdec71
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400750"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474166"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Tutorial: Acceso a web usando Async y Await (C# y Visual Basic)
 
@@ -59,7 +60,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 1. En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .
 
-2. Si la ventana **Cuadro de herramientas** no está visible, abra el menú **Vista** y elija **Cuadro de herramientas**.
+2. Si la ventana **cuadro de herramientas** no está visible, abra el menú **Ver** y, a continuación, elija cuadro de **herramientas**.
 
 3. Agregue un control **Botón** y un control **TextBox** a la ventana **MainWindow**.
 
@@ -213,7 +214,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 ## <a name="test-the-synchronous-solution"></a>Probar la solución sincrónica
 
-1. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio**.
+1. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .
 
     Debería aparecer un resultado similar a la lista siguiente:
 
@@ -251,7 +252,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
     Using response As WebResponse = webReq.GetResponseAsync()
     ```
 
-2. `GetResponseAsync` devuelve <xref:System.Threading.Tasks.Task%601>. En este caso, la *variable de devolución de tarea*, `TResult` , tiene el tipo <xref:System.Net.WebResponse> . La tarea es una promesa para generar un objeto `WebResponse` real después de que se descarguen los datos solicitados y la tarea se ejecute hasta completarse.
+2. `GetResponseAsync` devuelve <xref:System.Threading.Tasks.Task%601>. En este caso, la *variable de devolución de tarea*, `TResult`, tiene un tipo <xref:System.Net.WebResponse>. La tarea es una promesa para generar un objeto `WebResponse` real después de que se descarguen los datos solicitados y la tarea se ejecute hasta completarse.
 
     Para recuperar el `WebResponse` valor de la tarea, aplique un operador [Await](../../../language-reference/operators/await-operator.md) a la llamada a `GetResponseAsync` , como se muestra en el código siguiente.
 
@@ -403,7 +404,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 ## <a name="test-the-asynchronous-solution"></a>Probar la solución asincrónica
 
-1. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio**.
+1. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .
 
 2. Deberían aparecer resultados similares a los de la solución sincrónica. No obstante, debe tener en cuenta las siguientes diferencias.
 
@@ -432,7 +433,7 @@ Debe tener Visual Studio 2012 o posterior instalado en el equipo. Para obtener m
 
 3. Quite o marque como comentario el método `GetURLContentsAsync` que escribió.
 
-4. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio**.
+4. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .
 
     El comportamiento de esta versión del proyecto debería coincidir con el comportamiento que se describe en el procedimiento "Para probar la solución asincrónica", pero con incluso menos trabajo por su parte.
 
@@ -658,13 +659,13 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Muestra de Async: obtener acceso al tutorial web [C# y Visual Basic])
-- [Await (operador)](../../../language-reference/operators/await-operator.md)
-- [Asincrónica](../../../language-reference/modifiers/async.md)
+- [Ejemplo de async: Acceso al tutorial web (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Await (Operador)](../../../language-reference/operators/await-operator.md)
+- [Asincrónico](../../../language-reference/modifiers/async.md)
 - [Programación asincrónica con Async y Await (Visual Basic)](index.md)
 - [Async Return Types (Visual Basic)](async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])
-- [Task-based Asynchronous Programming (TAP) (Programación asincrónica basada en tareas [TAP])](https://www.microsoft.com/download/details.aspx?id=19957)
+- [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/download/details.aspx?id=19957) (Programación asincrónica basada en tareas [TAP])
 - [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Ampliación del tutorial de Async mediante Task.WhenAll [Visual Basic])
 - [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Realización de solicitudes web en paralelo mediante Async y Await [Visual Basic])

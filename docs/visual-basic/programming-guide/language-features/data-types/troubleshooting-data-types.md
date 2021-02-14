@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo solucionar problemas de tipos de datos (Visual Basic)
 title: Solución de problemas de los tipos de datos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -19,18 +20,18 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 239e1c2f908a9023aeca6e92aff4633b60f27b69
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 417a71e88dcd0bfb0c6582ee6304a64871640255
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393408"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463850"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Solucionar problemas de tipos de datos (Visual Basic)
 
 En esta página se enumeran algunos problemas comunes que pueden producirse al realizar operaciones en tipos de datos intrínsecos.
 
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Las expresiones de punto flotante no se comparan como iguales
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Floating-Point expresiones no se comparan como iguales
 
 Al trabajar con números de punto flotante ([tipo de datos único](../../../language-reference/data-types/single-data-type.md) y [tipo de datos Double](../../../language-reference/data-types/double-data-type.md)), recuerde que se almacenan como fracciones binarias. Esto significa que no pueden contener una representación exacta de cualquier cantidad que no sea una fracción binaria (de la forma k/(2 ^ n), donde k y n son enteros). Por ejemplo, 0,5 (= 1/2) y 0,3125 (= 5/16) se pueden conservar como valores precisos, mientras que 0,2 (= 1/5) y 0,3 (= 3/10) solo pueden ser aproximaciones.
 
@@ -102,7 +103,7 @@ Siempre hay un riesgo en el uso de conversiones de restricción, ya que pueden p
 
 ## <a name="string-conversion-fails-at-run-time"></a>Error de conversión de cadena en tiempo de ejecución
 
-El [tipo de datos de cadena](../../../language-reference/data-types/string-data-type.md) participa en muy pocas conversiones de ampliación. `String`solo se amplía a sí mismo y `Object` , y solo `Char` y `Char()` (una `Char` matriz) se amplía a `String` . Esto se debe `String` a que las variables y constantes pueden contener valores que otros tipos de datos no pueden contener.
+El [tipo de datos de cadena](../../../language-reference/data-types/string-data-type.md) participa en muy pocas conversiones de ampliación. `String` solo se amplía a sí mismo y `Object` , y solo `Char` y `Char()` (una `Char` matriz) se amplía a `String` . Esto se debe `String` a que las variables y constantes pueden contener valores que otros tipos de datos no pueden contener.
 
 Cuando el modificador de comprobación de tipo ([Option Strict Statement](../../../language-reference/statements/option-strict-statement.md)) es `On` , el compilador no permite todas las conversiones de restricción implícitas. Esto incluye los que implican `String` . El código todavía puede usar palabras clave de conversión como `CStr` y la [función ctype](../../../language-reference/functions/ctype-function.md), que dirigen el .NET Framework para intentar la conversión.
 
@@ -125,10 +126,10 @@ En general, `String` los valores no son significativos en otros tipos de datos y
 
 ## <a name="see-also"></a>Consulte también
 
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Caracteres de tipo](type-characters.md)
 - [Tipos de valor y tipos de referencia](value-types-and-reference-types.md)
 - [Conversiones de tipos en Visual Basic](type-conversions.md)
-- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [Tipo de datos](../../../language-reference/data-types/index.md)
 - [Type Conversion Functions](../../../language-reference/functions/type-conversion-functions.md)
 - [Uso eficiente de los tipos de datos](efficient-use-of-data-types.md)

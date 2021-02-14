@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: conceptos básicos de cadenas en Visual Basic'
 title: Fundamentos de las cadenas
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 44736f4db9977d9f69a0571cc80fa327dcf96581
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 25d76ee177e5b3eaaa8aa6b2b1b1787dc29095a1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072514"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424364"
 ---
 # <a name="string-basics-in-visual-basic"></a>Fundamentos de cadenas en Visual Basic
 
@@ -75,7 +76,7 @@ World]]></xml>.Value
   
  A diferencia de otros tipos de datos intrínsecos, `String` es un tipo de referencia. Cuando una variable de tipo de referencia se pasa como argumento a una función o subrutina, se pasa una referencia a la dirección de memoria donde se almacenan los datos en lugar del valor real de la cadena. Así, en el ejemplo anterior, el nombre de la variable sigue siendo el mismo, pero apunta a una nueva instancia diferente de la clase `String`, que contiene el nuevo valor.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a las cadenas en Visual Basic](introduction-to-strings.md)
 - [String (Tipo de datos)](../../../language-reference/data-types/string-data-type.md)

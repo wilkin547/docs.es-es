@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: etiquetar instrucciones (Visual Basic)'
 title: Procedimiento Instrucciones de etiquetas
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 8f04d592c51b6a0630bfe623fd3574555aef9ff8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4efb320dad7d52f6e9b94f6e6f81730f94b5966b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403218"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433257"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Cómo: Aplicar etiquetas a las instrucciones (Visual Basic)
 

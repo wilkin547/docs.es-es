@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo determinar el tipo de objeto (Visual Basic)
 title: Determinación del tipo de objeto
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: ae338bc9bad9646abc045a652d4ef33a8863354b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0cf64b6dde74b98edaf055537533cb648ed3381a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086067"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434412"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinar tipos de objeto (Visual Basic)
 
@@ -46,7 +47,7 @@ Las variables de objeto genérico (es decir, las variables que se declaran como 
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Llamar a una propiedad o método mediante un nombre de cadena](calling-a-property-or-method-using-a-string-name.md)

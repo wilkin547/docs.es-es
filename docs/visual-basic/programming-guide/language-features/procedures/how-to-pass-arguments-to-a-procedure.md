@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: pasar argumentos a un procedimiento (Visual Basic)'
 title: Procedimiento para pasar argumentos a un procedimiento
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 816d6388a0dbb7ae346074d258ff651c793c5e0e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e4dcdac19699c4b4b1f88327034a9e9d4364f040
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071513"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434334"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Cómo: Pasar argumentos a un procedimiento (Visual Basic)
 
@@ -46,7 +47,7 @@ Cuando se llama a un procedimiento, se sigue el nombre del procedimiento con una
   
      La segunda coma de la lista de argumentos marca el lugar del segundo argumento omitido, y la última cadena se pasa al tercer parámetro opcional de `MsgBox` , que es el texto que se va a mostrar en la barra de título.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos Sub](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
