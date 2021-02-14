@@ -1,30 +1,31 @@
 ---
+description: 'Más información acerca de cómo: comparar el contenido de dos carpetas (LINQ) (Visual Basic)'
 title: Procedimiento para comparar el contenido de dos carpetas (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 63a062c562e2c79ea81ac270651aa16776801b99
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8891617b7b95bf4543603ca40e7b85abb914da34
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410765"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424494"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="d9b0f-102">Cómo: comparar el contenido de dos carpetas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9b0f-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="aa684-103">Cómo: comparar el contenido de dos carpetas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa684-103">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="d9b0f-103">En este ejemplo se muestran tres maneras de comparar dos listados de archivos:</span><span class="sxs-lookup"><span data-stu-id="d9b0f-103">This example demonstrates three ways to compare two file listings:</span></span>
+<span data-ttu-id="aa684-104">En este ejemplo se muestran tres maneras de comparar dos listados de archivos:</span><span class="sxs-lookup"><span data-stu-id="aa684-104">This example demonstrates three ways to compare two file listings:</span></span>
 
-- <span data-ttu-id="d9b0f-104">Mediante la consulta de un valor booleano que especifica si las dos listas de archivos son idénticas.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>
+- <span data-ttu-id="aa684-105">Mediante la consulta de un valor booleano que especifica si las dos listas de archivos son idénticas.</span><span class="sxs-lookup"><span data-stu-id="aa684-105">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>
 
-- <span data-ttu-id="d9b0f-105">Mediante la consulta de la intersección para recuperar los archivos que están en ambas carpetas.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>
+- <span data-ttu-id="aa684-106">Mediante la consulta de la intersección para recuperar los archivos que están en ambas carpetas.</span><span class="sxs-lookup"><span data-stu-id="aa684-106">By querying for the intersection to retrieve the files that are in both folders.</span></span>
 
-- <span data-ttu-id="d9b0f-106">Mediante la consulta de la diferencia de conjuntos para recuperar los archivos que se encuentran en una carpeta, pero no en la otra.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>
+- <span data-ttu-id="aa684-107">Mediante la consulta de la diferencia de conjuntos para recuperar los archivos que se encuentran en una carpeta, pero no en la otra.</span><span class="sxs-lookup"><span data-stu-id="aa684-107">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="d9b0f-107">Las técnicas que se mencionan aquí pueden adaptarse para comparar secuencias de objetos de cualquier tipo.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>
+    > <span data-ttu-id="aa684-108">Las técnicas que se mencionan aquí pueden adaptarse para comparar secuencias de objetos de cualquier tipo.</span><span class="sxs-lookup"><span data-stu-id="aa684-108">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>
 
-<span data-ttu-id="d9b0f-108">La clase `FileComparer` que aparece a continuación muestra cómo usar una clase de comparador personalizada junto con los operadores de consulta estándar.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="d9b0f-109">La clase no está diseñada para su uso en escenarios reales.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="d9b0f-110">Simplemente usa el nombre y la longitud en bytes de cada archivo para determinar si el contenido de cada una de las carpetas es idéntico o no.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="d9b0f-111">En un escenario real, debería modificar este comparador para realizar una comprobación de igualdad más rigurosa.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>
+<span data-ttu-id="aa684-109">La clase `FileComparer` que aparece a continuación muestra cómo usar una clase de comparador personalizada junto con los operadores de consulta estándar.</span><span class="sxs-lookup"><span data-stu-id="aa684-109">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="aa684-110">La clase no está diseñada para su uso en escenarios reales.</span><span class="sxs-lookup"><span data-stu-id="aa684-110">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="aa684-111">Simplemente usa el nombre y la longitud en bytes de cada archivo para determinar si el contenido de cada una de las carpetas es idéntico o no.</span><span class="sxs-lookup"><span data-stu-id="aa684-111">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="aa684-112">En un escenario real, debería modificar este comparador para realizar una comprobación de igualdad más rigurosa.</span><span class="sxs-lookup"><span data-stu-id="aa684-112">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d9b0f-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d9b0f-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="aa684-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="aa684-113">Example</span></span>
 
 ```vb
 Module CompareDirs
@@ -114,11 +115,11 @@ Module CompareDirs
 End Module
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="d9b0f-113">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="d9b0f-113">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="aa684-114">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="aa684-114">Compile the code</span></span>
 
-<span data-ttu-id="d9b0f-114">Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.</span><span class="sxs-lookup"><span data-stu-id="d9b0f-114">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="aa684-115">Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.</span><span class="sxs-lookup"><span data-stu-id="aa684-115">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d9b0f-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="d9b0f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa684-116">Consulte también</span><span class="sxs-lookup"><span data-stu-id="aa684-116">See also</span></span>
 
-- [<span data-ttu-id="d9b0f-116">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9b0f-116">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
-- [<span data-ttu-id="d9b0f-117">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9b0f-117">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+- [<span data-ttu-id="aa684-117">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa684-117">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
+- [<span data-ttu-id="aa684-118">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa684-118">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
