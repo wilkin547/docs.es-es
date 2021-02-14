@@ -4,12 +4,12 @@ description: Obtenga información sobre qué versiones de macOS puede instalar e
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b1434938a8e8e81da81e495a6b99e6c99467aae1
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 871263b820aaf4cc04e573dd4aa3022caa401857
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009363"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506310"
 ---
 # <a name="install-net-on-macos"></a>Instalación de .NET en macOS
 
@@ -53,13 +53,13 @@ Las versiones siguientes de .NET ya ❌ no se admiten. aunque sus descargas sigu
 
 El entorno de ejecución se usa para ejecutar aplicaciones creadas con .NET. Cuando un autor publica una aplicación, puede incluir el tiempo de ejecución. Si no lo hace, el usuario elige si quiere instalar el tiempo de ejecución.
 
-Hay tres tiempos de ejecución distintos que se pueden instalar en macOS:
+Hay dos entornos de ejecución distintos que se pueden instalar en macOS:
 
-*Entorno de ejecución de ASP.NET Core*\
-Ejecuta aplicaciones de ASP.NET Core. Incluye el entorno de ejecución de .NET.
+- *Entorno de ejecución de ASP.NET Core*\
+  Ejecuta aplicaciones de ASP.NET Core. Incluye el entorno de ejecución de .NET.
 
-*Entorno de ejecución de .NET*\
-Este entorno de ejecución es el más sencillo y no incluye ningún otro. Se recomienda encarecidamente instalar el *entorno de ejecución de ASP.NET Core* para conseguir la mejor compatibilidad con las aplicaciones de .NET.
+- *Entorno de ejecución de .NET*\
+  Este entorno de ejecución es el más sencillo y no incluye ningún otro. Se recomienda encarecidamente instalar el *entorno de ejecución de ASP.NET Core* para conseguir la mejor compatibilidad con las aplicaciones de .NET.
 
 > [!div class="button"]
 > [Descarga del entorno de ejecución de .NET](https://dotnet.microsoft.com/download/dotnet-core)
@@ -125,20 +125,15 @@ A continuación, extraiga el archivo descargado y use el comando `export` para e
 
 Para extraer el entorno de ejecución y hacer que los comandos de la CLI de .NET estén disponibles en el terminal, en primer lugar, descargue una versión binaria de .NET. Luego, abra un terminal y ejecute los siguientes comandos desde el directorio donde se guardó el archivo. El nombre del archivo puede ser distinto en función de lo que haya descargado.
 
-**Use el comando siguiente para extraer el entorno de ejecución**:
+**Use los siguientes comandos para extraer el entorno de ejecución o el SDK que descargó**. Recuerde cambiar el valor de `DOTNET_FILE` por el nombre del archivo:
 
 ```bash
-mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-osx-x64.tar.gz -C "$HOME/dotnet"
+DOTNET_FILE=dotnet-sdk-5.0.102-linux-x64.tar.gz
 export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
 
-**Use el comando siguiente para extraer el SDK**:
+mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
 
-```bash
-mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-osx-x64.tar.gz -C "$HOME/dotnet"
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+export PATH=$PATH:$DOTNET_ROOT
 ```
 
 > [!TIP]

@@ -1,5 +1,6 @@
 ---
-title: Uso eficiente de tipos de datos
+description: 'Más información acerca de: uso eficiente de tipos de datos (Visual Basic)'
+title: Uso eficiente de los tipos de datos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - performance, data type efficiency
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 7f446b264dcb5c05ed6ddfba34acbbf66be0e447
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e7660bbdec530ef18d663975e314d90b64e4b055
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084117"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476441"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Uso eficiente de tipos de datos (Visual Basic)
 
@@ -26,7 +27,7 @@ A las variables no declaradas y a las variables declaradas sin un tipo de datos 
 
 ## <a name="strong-typing"></a>Establecimiento fuerte de tipos
 
- La especificación de tipos de datos para todas las variables se conoce como *fuertemente*tipados. El uso de tipos fuertemente tipados tiene varias ventajas:
+ La especificación de tipos de datos para todas las variables se conoce como *fuertemente* tipados. El uso de tipos fuertemente tipados tiene varias ventajas:
 
 - Habilita la compatibilidad con IntelliSense para las variables. Esto le permite ver sus propiedades y otros miembros a medida que escribe en el código.
 
@@ -53,7 +54,7 @@ Protected s As String
 
  Las `AscW` `ChrW` funciones y funcionan en Unicode. Debe utilizarlos en preferencia a `Asc` y `Chr` , que deben traducirse dentro y fuera de Unicode.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>

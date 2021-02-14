@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: instrucciones en Visual Basic'
 title: Instrucciones
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-ms.openlocfilehash: 09fe53f4bc2b6d025b762c6595c5337263456bae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9da27c77c858075e413580047b7ed688b328c87f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401984"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436895"
 ---
 # <a name="statements-in-visual-basic"></a>Instrucciones en Visual Basic
 
@@ -84,7 +85,7 @@ En el ejemplo anterior, la instrucción de asignación almacena el valor literal
 
 El elemento de programación del lado izquierdo del operador de asignación debe ser capaz de aceptar y almacenar un valor. Esto significa que debe ser una variable o propiedad que no sea de [solo lectura](../../language-reference/modifiers/readonly.md)o debe ser un elemento de matriz. En el contexto de una instrucción de asignación, este tipo de elemento a veces se denomina *lvalue*, para "valor izquierdo".
 
-El valor del lado derecho del operador de asignación se genera mediante una expresión, que puede estar formada por cualquier combinación de literales, constantes, variables, propiedades, elementos de matriz, otras expresiones o llamadas a funciones. Esto se ilustra en el siguiente ejemplo.
+El valor del lado derecho del operador de asignación se genera mediante una expresión, que puede estar formada por cualquier combinación de literales, constantes, variables, propiedades, elementos de matriz, otras expresiones o llamadas a funciones. Esto se ilustra en el siguiente ejemplo:
 
 [!code-vb[VbVbalrStatements#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#74)]
 
@@ -128,7 +129,7 @@ Las *conversiones de restricción* (las que no son de ampliación) suponen un ri
 
 ## <a name="putting-multiple-statements-on-one-line"></a>Colocar varias instrucciones en una línea
 
-Puede tener varias instrucciones en una sola línea separadas por el carácter de dos puntos ( `:` ). Esto se ilustra en el siguiente ejemplo.
+Puede tener varias instrucciones en una sola línea separadas por el carácter de dos puntos ( `:` ). Esto se ilustra en el siguiente ejemplo:
 
 [!code-vb[VbVbalrStatements#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#70)]
 

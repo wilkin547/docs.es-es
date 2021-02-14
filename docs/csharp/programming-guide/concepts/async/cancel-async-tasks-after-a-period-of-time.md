@@ -1,15 +1,15 @@
 ---
 title: Cancelación de tareas asincrónicas tras un período de tiempo (C#)
 description: Obtenga información sobre cómo programar la cancelación de cualquier tarea asociada que no se complete en un período de tiempo determinado.
-ms.date: 08/19/2020
+ms.date: 02/03/2021
 ms.topic: tutorial
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: ad9064f8f45a737982ffc35ab4ea2395ddae9016
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 98c42a2df6153d668b99b6dec49ffe380293b205
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811423"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585382"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Cancelar tareas asincrónicas tras un período de tiempo (C#)
 
@@ -52,12 +52,16 @@ static async Task Main()
     {
         Console.WriteLine("\nTasks cancelled: timed out.\n");
     }
+    finally
+    {
+        s_cts.Dispose();
+    }
 
     Console.WriteLine("Application ending.");
 }
 ```
 
-El método actualizado `Main` escribe algunos mensajes informativos en la consola. En la instrucción [try catch](../../../language-reference/keywords/try-catch.md), hace una llamada a <xref:System.Threading.CancellationTokenSource.CancelAfter(System.Int32)?displayProperty=nameWithType> para programar una cancelación. Esto indicará la cancelación pasado un período de tiempo.
+El método actualizado `Main` escribe algunos mensajes informativos en la consola. En la instrucción [try catch](../../../language-reference/keywords/try-catch.md), una llamada a <xref:System.Threading.CancellationTokenSource.CancelAfter(System.Int32)?displayProperty=nameWithType> programa una cancelación. Esto indicará la cancelación pasado un período de tiempo.
 
 Después, se espera al método `SumPageSizesAsync`. Si el procesamiento de todas las direcciones URL se produce más rápido que la cancelación programada, la aplicación finaliza. Pero si la cancelación programada se desencadena antes de que se procesen todas las direcciones URL, se produce una excepción <xref:System.Threading.Tasks.TaskCanceledException>.
 

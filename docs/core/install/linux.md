@@ -4,12 +4,12 @@ description: Obtenga información sobre qué distribuciones de Linux admiten la 
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 3834bd7d977bb13e9543d511bee7170161a755ac
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 27be7151d95810d8cc607564d5c0ce8dfe5b9ed8
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970738"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506284"
 ---
 # <a name="install-net-on-linux"></a>Instalación de .NET en Linux
 
@@ -34,6 +34,16 @@ Las versiones siguientes de .NET ya ❌ no se admiten. Las descargas de estas si
 - 2.0
 
 Estas versiones no admitidas no se detallan en las secciones siguientes y los resultados pueden variar si intenta instalarlas.
+
+## <a name="manual-installation"></a>Instalación manual
+
+Si no desea usar un administrador de paquetes para instalar .NET en Linux, puede instalar .NET de una de las siguientes maneras:
+
+- [Paquete de snaps](linux-snap.md)
+- [Instalación con scripts con _install-dotnet.sh_](linux-scripted-manual.md#scripted-install)
+- [Extracción binaria manual](linux-scripted-manual.md#manual-install)
+
+Asegúrese de comprobar la página de distribución adecuada para obtener más información sobre las dependencias necesarias que puedan faltar al realizar una instalación manual.
 
 ## <a name="alpine"></a>Alpine
 

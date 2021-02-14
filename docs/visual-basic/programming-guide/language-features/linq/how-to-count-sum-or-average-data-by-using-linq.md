@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: recuento, suma o promedio de datos mediante LINQ (Visual Basic)'
 title: Procedimiento para hacer el recuento, la suma o el promedio de datos mediante LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 617c6959e2d3add6d36266b0827ef7281b0c77a9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1759a2f990c2e61a862d032f2a09f29f65a05103
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059254"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422808"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Cómo: Hacer el recuento, la suma o el promedio de datos usando LINQ (Visual Basic)
 
@@ -85,4 +86,4 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de base de
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext (Métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [Aggregate Clause](../../../language-reference/queries/aggregate-clause.md)
-- [Cláusula Group By](../../../language-reference/queries/group-by-clause.md)
+- [Group by (cláusula)](../../../language-reference/queries/group-by-clause.md)

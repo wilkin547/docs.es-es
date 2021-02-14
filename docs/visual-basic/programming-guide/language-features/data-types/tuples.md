@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: tuplas (Visual Basic)'
 title: Tuplas
 ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: b169a1c13b3f20d7b5e2a1386cfb28a9cc093dcd
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: f598facb446b7d50864c0cf9151195cfcde158bb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559094"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454461"
 ---
 # <a name="tuples-visual-basic"></a>Tuplas (Visual Basic)
 
@@ -87,7 +88,7 @@ Una tupla Visual Basic hereda los miembros de su tipo **ValueTuple** . Además d
 | Método | Descripción |
 | ---|---|
 | CompareTo | Compara la tupla actual con otra tupla con el mismo número de elementos. |
-| Equals | Determina si la tupla actual es igual a otra tupla u objeto. |
+| es igual a | Determina si la tupla actual es igual a otra tupla u objeto. |
 | GetHashCode | Calcula el código hash de la instancia actual. |
 | ToString | Devuelve la representación de cadena de esta tupla, que tiene la forma `(Item1, Item2...)` , donde `Item1` y `Item2` representan los valores de los campos de la tupla. |
 

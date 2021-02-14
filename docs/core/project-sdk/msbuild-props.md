@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: e140491c694291438fe1db7fd60d581ffed0319d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98692714"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802676"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -344,7 +344,12 @@ La propiedad `EnableDefaultNoneItems` controla si los elementos `None` (archivos
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
-La propiedad `AnalysisLevel` permite especificar un nivel de análisis de código. Por ejemplo, si quiere acceder a la versión preliminar de los analizadores de código, establezca `AnalysisLevel` en `preview`. El valor predeterminado es `latest`.
+La propiedad `AnalysisLevel` permite especificar un nivel de análisis de código. Por ejemplo, si quiere acceder a la versión preliminar de los analizadores de código, establezca `AnalysisLevel` en `preview`.
+
+Valor predeterminado:
+
+- Si el proyecto tiene como destino .NET 5.0 o posterior, o si ha agregado la propiedad [AnalysisMode](#analysismode), el valor predeterminado es `latest`.
+- De lo contrario, se omite esta propiedad, a menos que se agregue explícitamente al archivo de proyecto.
 
 ```xml
 <PropertyGroup>
@@ -398,9 +403,6 @@ De forma predeterminada, el [análisis de calidad del código de .NET](../../fun
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
-
-> [!TIP]
-> Otra forma de habilitar el análisis de código de .NET en proyectos que tienen como destino versiones de .NET anteriores a .NET 5.0 es establecer la propiedad [AnalysisLevel](#analysislevel) en `latest`.
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 

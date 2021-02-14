@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: los reemplazos son demasiado largos'
 title: Los reemplazos son demasiado largos
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID746
 ms.assetid: 398ff5eb-b580-456f-8f24-b7a8318e1193
-ms.openlocfilehash: e3c9cbdf1c1317ff8bdea073896f4d959ac9908b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f503204de24d983d32fbcead1b45f0ccd5e4cdc9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086678"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454617"
 ---
 # <a name="replacements-too-long"></a>Los reemplazos son demasiado largos
 

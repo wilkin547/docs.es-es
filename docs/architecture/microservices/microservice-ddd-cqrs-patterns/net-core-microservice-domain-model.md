@@ -1,15 +1,15 @@
 ---
 title: Implementación de un modelo de dominio de microservicio con .NET
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación de un modelo de dominio orientado a un DDD.
-ms.date: 01/13/2021
-ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: 87d832101d95f3ab69d1a40bbdc820e1e09af5db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665281"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core
+# <a name="implement-a-microservice-domain-model-with-net"></a>Implementación de un modelo de dominio de microservicio con .NET
 
 En la sección anterior se han explicado los principios y patrones de diseño fundamentales para diseñar un modelo de dominio. Ahora es el momento de analizar las posibles formas de implementar el modelo de dominio mediante .NET (código C\# sin formato) y EF Core. El modelo de dominio solo estará formado por el código. Tiene solo los requisitos del modelo de EF Core, pero no las dependencias reales en EF. En el modelo de dominio no debe haber dependencias fuertes ni referencias a EF Core ni ningún otro ORM.
 

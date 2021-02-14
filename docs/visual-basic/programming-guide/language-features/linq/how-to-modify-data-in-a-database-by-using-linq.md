@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: modificar datos en una base de datos mediante LINQ (Visual Basic)'
 title: Procedimiento para modificar datos en una base de datos mediante LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: eb076d9156fa66858f2e560422eef0dc61ba22b5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b58ca542fbc6f4d63705e45b53edc8ded83ab88b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403490"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422775"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Cómo: Modificar datos en una base de datos usando LINQ (Visual Basic)
 
-Las consultas Language-Integrated Query (LINQ) facilitan el acceso a la información de base de datos y la modificación de los valores de la base de datos.
+Las consultas de Language-Integrated Query (LINQ) facilitan el acceso a la información de base de datos y la modificación de los valores de la base de datos.
 
 En el ejemplo siguiente se muestra cómo crear una nueva aplicación que recupera y actualiza la información en una base de datos de SQL Server.
 
@@ -29,15 +30,15 @@ En los ejemplos de este tema se utiliza la base de datos de ejemplo Northwind. S
 
 ### <a name="to-create-a-connection-to-a-database"></a>Para crear una conexión a una base de datos
 
-1. Para abrir **Explorador de servidores**explorador de bases de datos en Visual Studio, / **Database Explorer** haga clic en el menú **Ver** y, a continuación, seleccione **Explorador de servidores** / **Explorador de bases de datos**.
+1. Para abrir **Explorador de servidores** explorador de bases de datos en Visual Studio, /  haga clic en el menú **Ver** y, a continuación, seleccione **Explorador de servidores** / **Explorador de bases de datos**.
 
-2. Haga clic con el botón secundario en **conexiones de datos** en **Explorador de servidores** / **Explorador de bases de datos**y haga clic en **Agregar conexión**.
+2. Haga clic con el botón secundario en **conexiones de datos** en **Explorador de servidores** / **Explorador de bases de datos** y haga clic en **Agregar conexión**.
 
 3. Especifique una conexión válida a la base de datos de ejemplo Northwind.
 
 ### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Para agregar un proyecto con un archivo LINQ to SQL
 
-1. En Visual Studio, en el menú **archivo** , seleccione **nuevo** y haga clic en **proyecto**. Seleccione Visual Basic **aplicación de Windows Forms** como el tipo de proyecto.
+1. En el menú **Archivo** de Visual Studio, apunte a **Nuevo** y haga clic en **Proyecto**. Seleccione Visual Basic **aplicación de Windows Forms** como el tipo de proyecto.
 
 2. En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**. Seleccione la plantilla de elementos **LINQ to SQL clases** .
 
@@ -65,7 +66,7 @@ En los ejemplos de este tema se utiliza la base de datos de ejemplo Northwind. S
 
      Puede crear una instancia del <xref:System.Data.Linq.DataContext> objeto en el código y consultar y modificar la colección customers especificada por Object Relational Designer. Los cambios que realice en la colección customers no se reflejarán en la base de datos hasta que los envíe llamando al <xref:System.Data.Linq.DataContext.SubmitChanges%2A> método del <xref:System.Data.Linq.DataContext> objeto.
 
-     Haga doble clic en Windows Forms, Form1, para agregar código al <xref:System.Windows.Forms.Form.Load> evento para consultar la tabla Customers que se expone como una propiedad de su <xref:System.Data.Linq.DataContext> . Agregue el código siguiente:
+     Haga doble clic en Windows Forms, Form1, para agregar código al <xref:System.Windows.Forms.Form.Load> evento para consultar la tabla Customers que se expone como una propiedad de su <xref:System.Data.Linq.DataContext> . Agregue el siguiente código:
 
     ```vb
     Private db As northwindDataContext
@@ -89,7 +90,7 @@ En los ejemplos de este tema se utiliza la base de datos de ejemplo Northwind. S
 
 3. En el **cuadro de herramientas**, arrastre tres <xref:System.Windows.Forms.Button> controles al formulario. Seleccione el primer `Button` control. En la ventana **propiedades** , establezca la propiedad `Name` del `Button` control en `AddButton` y `Text` en `Add` . Seleccione el segundo botón y establezca la `Name` propiedad en `UpdateButton` y la `Text` propiedad en `Update` . Seleccione el tercer botón y establezca la `Name` propiedad en `DeleteButton` y la `Text` propiedad en `Delete` .
 
-4. Haga doble clic en el botón **Agregar** para agregar código a su `Click` evento. Agregue el código siguiente:
+4. Haga doble clic en el botón **Agregar** para agregar código a su `Click` evento. Agregue el siguiente código:
 
     ```vb
     Private Sub AddButton_Click(ByVal sender As System.Object,
@@ -114,7 +115,7 @@ En los ejemplos de este tema se utiliza la base de datos de ejemplo Northwind. S
     End Sub
     ```
 
-5. Haga doble clic en el botón **Actualizar** para agregar código a su `Click` evento. Agregue el código siguiente:
+5. Haga doble clic en el botón **Actualizar** para agregar código a su `Click` evento. Agregue el siguiente código:
 
     ```vb
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _
@@ -138,7 +139,7 @@ En los ejemplos de este tema se utiliza la base de datos de ejemplo Northwind. S
     End Sub
     ```
 
-6. Haga doble clic en el botón **eliminar** para agregar código a su `Click` evento. Agregue el código siguiente:
+6. Haga doble clic en el botón **eliminar** para agregar código a su `Click` evento. Agregue el siguiente código:
 
     ```vb
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _
@@ -161,10 +162,10 @@ En los ejemplos de este tema se utiliza la base de datos de ejemplo Northwind. S
 
 7. Presione F5 para ejecutar el proyecto. Haga clic en **Agregar** para agregar un nuevo registro. Haga clic en **Actualizar** para modificar el nuevo registro. Haga clic en **eliminar** para eliminar el nuevo registro.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LINQ](index.md)
 - [Consultas](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext (métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [DataContext (Métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

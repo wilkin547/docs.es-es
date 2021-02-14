@@ -1,7 +1,7 @@
 ---
 title: Tipos numéricos de punto flotante - referencia de C#
 description: 'Información sobre los tipos de punto flotante de C# integrados: float, double y decimal'
-ms.date: 02/10/2020
+ms.date: 02/04/2021
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a086e8de60bbb63408c3f2cd557feb36c4baa0f8
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662672"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585759"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de punto flotante (referencia de C#)
 
@@ -48,7 +48,7 @@ System.Double b = 12.3;
 
 El valor predeterminado de cada tipo de punto flotante es cero, `0`. Cada uno de los tipos de punto flotante tiene las constantes `MinValue` y `MaxValue` que proporcionan el valor finito mínimo y máximo de ese tipo. Los tipos `float` y `double` también brindan constantes que representan valores infinitos y no numéricos. Por ejemplo, el tipo `double` ofrece las siguientes constantes: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> y <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.
 
-Como el tipo `decimal` tiene más precisión y un intervalo más reducido que `float` y `double`, es adecuado para los cálculos financieros y monetarios.
+El tipo de `decimal` es adecuado cuando el grado de precisión requerido viene determinado por el número de dígitos a la derecha del separador decimal. Estos números se utilizan normalmente en aplicaciones financieras, para importes monetarios (por ejemplo, 1,00 $), tasas de interés (por ejemplo, 2,625 %), etc. Los números pares que son precisos únicamente para un dígito decimal se controlan de forma más precisa en el tipo `decimal`: 0,1, por ejemplo, se puede representar exactamente mediante una instancia de `decimal`, mientras que no hay una instancia `double` o `float` que representa exactamente 0,1. Debido a esta diferencia en los tipos numéricos, se pueden producir errores de redondeo inesperados en cálculos aritméticos cuando se usa `double` o `float` para datos decimales. Puede usar `double` en lugar de `decimal` cuando optimizar el rendimiento es más importante que asegurar la precisión. Sin embargo, cualquier diferencia de rendimiento pasaría desapercibida para todas las aplicaciones, salvo las que consumen más cálculos. Otra posible razón para evitar `decimal` es minimizar los requisitos de almacenamiento. Por ejemplo, [ML.NET](../../../machine-learning/how-does-mldotnet-work.md) usa `float` porque la diferencia entre 4 bytes y 16 bytes se acumula para conjuntos de datos muy grandes. Para obtener más información, vea <xref:System.Decimal?displayProperty=nameWithType>.
 
 En una expresión, puede combinar tipos [enteros](integral-numeric-types.md) y tipos `float` y `double`. En este caso, los tipos enteros se convierten implícitamente en uno de los tipos de punto flotante y, si es necesario, el tipo `float` se convierte implícitamente en `double`. La expresión se evalúa de la siguiente forma:
 

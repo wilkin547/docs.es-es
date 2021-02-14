@@ -1,13 +1,13 @@
 ---
 title: Cuándo elegir .NET 5 para contenedores de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Cuándo elegir .NET para contenedores de Docker
-ms.date: 01/13/2021
-ms.openlocfilehash: 61909c91d795582af499456c65ae0d7b4f2911e2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: d0480ac43c0090b72185bd23bbd11ac7e26001e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189283"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653425"
 ---
 # <a name="when-to-choose-net-for-docker-containers"></a>Cuándo elegir .NET para contenedores de Docker
 
@@ -33,7 +33,7 @@ Además de los editores e IDE, puede utilizar la [CLI de .NET](../../../core/too
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Uso de contenedores para nuevos proyectos (green field)
 
-Normalmente los contenedores se usan en combinación con una arquitectura de microservicios, aunque también se pueden usar para contener servicios o aplicaciones web que siguen cualquier patrón de arquitectura. Aunque puede usar .NET Framework en contenedores de Windows, la modularidad y ligereza de .NET 5 lo convierten en la opción perfecta para los contenedores y las arquitecturas de microservicio. Al crear e implementar un contenedor, su imagen es mucho más pequeña con .NET Core que con .NET Framework.
+Normalmente los contenedores se usan en combinación con una arquitectura de microservicios, aunque también se pueden usar para contener servicios o aplicaciones web que siguen cualquier patrón de arquitectura. Aunque puede usar .NET Framework en contenedores de Windows, la modularidad y ligereza de .NET 5 lo convierten en la opción perfecta para los contenedores y las arquitecturas de microservicio. Al crear e implementar un contenedor, su imagen es mucho más pequeña con .NET 5 que con .NET Framework.
 
 ## <a name="create-and-deploy-microservices-on-containers"></a>Creación e implementación de microservicios en contenedores
 

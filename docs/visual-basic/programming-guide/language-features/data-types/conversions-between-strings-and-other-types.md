@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: conversiones entre cadenas y otros tipos (Visual Basic)'
 title: Conversiones entre cadenas y otros tipos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 823931f7d6beb8218e8b99d4a8d45716b7214304
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c0f7f7637d173d039d58b2516fba41ae55b990ac
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077155"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477221"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Conversiones entre cadenas y otros tipos (Visual Basic)
 
@@ -26,7 +27,7 @@ Puede convertir un valor numérico, `Boolean` o de fecha y hora en un `String` .
   
 ## <a name="conversion-of-numbers-to-strings"></a>Conversión de números en cadenas  
 
- Puede usar la `Format` función para convertir un número en una cadena con formato, que puede incluir no solo los dígitos adecuados, sino también símbolos de formato como un signo de moneda (como `$` ), separadores de miles o *símbolos de agrupación de dígitos* (como `,` ) y un separador decimal (como `.` ). `Format` usa automáticamente los símbolos apropiados según la configuración **regional** especificada en el **Panel de control**de Windows.  
+ Puede usar la `Format` función para convertir un número en una cadena con formato, que puede incluir no solo los dígitos adecuados, sino también símbolos de formato como un signo de moneda (como `$` ), separadores de miles o *símbolos de agrupación de dígitos* (como `,` ) y un separador decimal (como `.` ). `Format` usa automáticamente los símbolos apropiados según la configuración **regional** especificada en el **Panel de control** de Windows.  
   
  Tenga en cuenta que el operador de concatenación ( `&` ) puede convertir un número en una cadena implícitamente, como se muestra en el ejemplo siguiente.  
   
@@ -43,7 +44,7 @@ Str = "The total count is " & count
   
  Cuando Visual Basic convierte una cadena en un valor numérico, usa la configuración de **Opciones regionales** especificada en el panel de **control** de Windows para interpretar el separador de miles, el separador decimal y el símbolo de moneda. Esto significa que una conversión podría realizarse con una configuración, pero no con otra. Por ejemplo, `"$14.20"` es aceptable en la configuración regional en inglés (Estados Unidos), pero no en la configuración regional en francés.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Conversiones de tipos en Visual Basic](type-conversions.md)
 - [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md)
