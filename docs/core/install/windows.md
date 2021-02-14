@@ -4,12 +4,12 @@ description: Obtenga información sobre las versiones de Windows en las que pued
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 33492cc6fa6c64ec3a1d745a4fa0c6cc418f87bd
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 55746b29b579a6d3aacb7d11c5604dc601440ab5
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98898793"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506297"
 ---
 # <a name="install-net-on-windows"></a>Instalación de .NET en Windows
 
@@ -37,26 +37,24 @@ Las fechas de fin de servicio de Windows 10 están segmentadas por edición. En
 
 | Sistema operativo            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
 |-----------------------------|---------------|---------------|--------|
-| Windows 10, versión 20H2    | ✔️           | ✔️            | ✔️    |
-| Windows 10, versión 2004    | ✔️           | ✔️            | ✔️    |
-| Windows 10, versión 1909    | ✔️           | ✔️            | ✔️    |
-| Windows 10, versión 1903    | ✔️           | ✔️            | ✔️    |
+| Windows 10 / Windows Server, versión 20H2    | ✔️           | ✔️            | ✔️    |
+| Windows 10 / Windows Server, versión 2004    | ✔️           | ✔️            | ✔️    |
+| Windows 10 / Windows Server, versión 1909    | ✔️           | ✔️            | ✔️    |
+| Windows 10 / Windows Server, versión 1903    | ✔️           | ✔️            | ✔️    |
 | Windows 10, versión 1809    | ✔️           | ✔️            | ✔️    |
 |  Windows 10, versión 1803    | ✔️           | ✔️            | ✔️    |
 | Windows 10, versión 1709    | ✔️           | ✔️            | ✔️    |
 | Windows 10, versión 1607    | ✔️           | ✔️            | ✔️    |
 | Windows 8.1                 | ✔️           | ✔️            | ✔️    |
 | Windows 7 SP1 [ESU][esu]    | ✔️           | ✔️            | ✔️    |
-| Windows 10, versión 1607    | ✔️           | ✔️            | ✔️    |
-| Windows 10, versión 1607    | ✔️           | ✔️            | ✔️    |
-| Windows Server 2012 R2      | ✔️           | ✔️            | ✔️    |
+| Windows Server 2019<br>Windows Server 2016<br>Windows Server 2012 R2<br>      | ✔️           | ✔️            | ✔️    |
 | Windows Server Core 2012 R2 | ✔️           | ✔️            | ✔️    |
 | Nano Server, versión 1809+  | ✔️           | ✔️            | ✔️    |
 | Nano Server, versión 1803   | ✔️           | ✔️            | ❌    |
 
 ## <a name="unsupported-releases"></a>Versiones no admitidas
 
-Las versiones siguientes de .NET ya ❌ no se admiten. Las descargas de estas versiones siguen estando publicadas:
+Las versiones siguientes de .NET ya ❌ no se admiten:
 
 - 3.0
 - 2.2
@@ -68,14 +66,14 @@ El entorno de ejecución se usa para ejecutar aplicaciones creadas con .NET. Cua
 
 Hay tres entornos de ejecución distintos que se pueden instalar en Windows:
 
-*Entorno de ejecución de ASP.NET Core*\
-Ejecuta aplicaciones de ASP.NET Core. Incluye el entorno de ejecución de .NET.
+- *Entorno de ejecución de ASP.NET Core*\
+  Ejecuta aplicaciones de ASP.NET Core. Incluye el entorno de ejecución de .NET.
 
-*Entorno de ejecución de escritorio*\
-Ejecuta aplicaciones de escritorio WPF y Windows Forms de .NET para Windows. Incluye el entorno de ejecución de .NET.
+- *Entorno de ejecución de escritorio*\
+  Ejecuta aplicaciones de escritorio WPF y Windows Forms de .NET para Windows. Incluye el entorno de ejecución de .NET.
 
-*Entorno de ejecución de .NET*\
-Este entorno de ejecución es el más sencillo y no incluye ningún otro. Se recomienda encarecidamente instalar el *entorno de ejecución de ASP.NET Core* y el *entorno de ejecución de escritorio* para conseguir la mejor compatibilidad con las aplicaciones de .NET.
+- *Entorno de ejecución de .NET*\
+  Este entorno de ejecución es el más sencillo y no incluye ningún otro. Se recomienda encarecidamente instalar el *entorno de ejecución de ASP.NET Core* y el *entorno de ejecución de escritorio* para conseguir la mejor compatibilidad con las aplicaciones de .NET.
 
 > [!div class="button"]
 > [Descarga del entorno de ejecución de .NET](https://dotnet.microsoft.com/download/dotnet-core)

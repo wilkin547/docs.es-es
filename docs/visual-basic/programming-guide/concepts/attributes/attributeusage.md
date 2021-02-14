@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: AttributeUsage (Visual Basic)'
 title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 677d49aba38801f2adf42cc745983af30b3eddc5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: afb043c1b16da3e134888a38ec73f0b6f4ec5f58
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400737"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437818"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
@@ -77,7 +78,7 @@ End Class
 
 En este caso, `Attr1` no se aplica a `DClass` a través de la herencia.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 `AttributeUsage` es un atributo de uso único; no se puede aplicar más de una vez a la misma clase. `AttributeUsage` es un alias de <xref:System.AttributeUsageAttribute>.
 
@@ -155,6 +156,6 @@ A2
 - [Guía de programación en Visual Basic](../../index.md)
 - [Atributos](../../../../standard/attributes/index.md)
 - [Reflection (Visual Basic)](../reflection.md) (Reflexión [Visual Basic])
-- [Atributos (Visual Basic)](../../../language-reference/attributes.md)
+- [Atributos de Visual Basic](../../../language-reference/attributes.md)
 - [Creating Custom Attributes (Visual Basic)](creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])
 - [Accessing Attributes by Using Reflection (Visual Basic)](accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])

@@ -1,21 +1,22 @@
 ---
+description: 'Más información acerca de: definición de tipo anónimo (Visual Basic)'
 title: Definición de tipo anónimo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 952eb295cc71eab5d0ad6e18f2b697a9b701b434
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e3f847f5f844e3ed6e036c26efc330a237d193f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404906"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436921"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definición de tipos anónimos (Visual Basic)
 
 En respuesta a la declaración de una instancia de un tipo anónimo, el compilador crea una nueva definición de clase que contiene las propiedades especificadas para el tipo.
 
-## <a name="compiler-generated-code"></a>Código generado por el compilador
+## <a name="compiler-generated-code"></a>Código de Compiler-Generated
 
 En la siguiente definición de `product` , el compilador crea una nueva definición de clase que contiene las propiedades `Name` , `Price` y `OnHand` .
 
@@ -56,7 +57,7 @@ Además, las definiciones de tipos anónimos contienen un constructor sin parám
 
 Si una declaración de tipos anónimos contiene al menos una propiedad de clave, la definición de tipo invalida tres miembros heredados de <xref:System.Object> : <xref:System.Object.Equals%2A> , <xref:System.Object.GetHashCode%2A> y <xref:System.Object.ToString%2A> . Si no se declara ninguna propiedad clave, solo <xref:System.Object.ToString%2A> se invalida. Las invalidaciones proporcionan la siguiente funcionalidad:
 
-- `Equals`Devuelve `True` si dos instancias de tipo anónimo son la misma instancia, o si cumplen las condiciones siguientes:
+- `Equals` Devuelve `True` si dos instancias de tipo anónimo son la misma instancia, o si cumplen las condiciones siguientes:
 
   - Tienen el mismo número de propiedades.
 
@@ -70,9 +71,9 @@ Si una declaración de tipos anónimos contiene al menos una propiedad de clave,
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode`proporciona un algoritmo GetHashCode único y adecuado. El algoritmo solo usa las propiedades de clave para calcular el código hash.
+- `GetHashcode` proporciona un algoritmo GetHashCode único y adecuado. El algoritmo solo usa las propiedades de clave para calcular el código hash.
 
-- `ToString`Devuelve una cadena de valores de propiedad concatenados, tal y como se muestra en el ejemplo siguiente. Se incluyen las propiedades de clave y no clave.
+- `ToString` Devuelve una cadena de valores de propiedad concatenados, tal y como se muestra en el ejemplo siguiente. Se incluyen las propiedades de clave y no clave.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 

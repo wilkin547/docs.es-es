@@ -3,18 +3,20 @@ title: 'Ramas y bucles: tutorial de introducción a C#'
 description: En este tutorial sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d67cfe359634783bb542e9ac34df52a095b45c20
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 1c93c96217abf041b14b94aafcdfe85bb7018528
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396880"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585711"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Obtenga información sobre la lógica condicional con instrucciones de rama y bucle
 
 En este tutorial se enseña a escribir código que analiza variables y cambia la ruta de acceso de ejecución en función de dichas variables. Escriba código de C# y vea los resultados de la compilación y la ejecución. El tutorial contiene una serie de lecciones en las que se analizan las construcciones de bifurcaciones y bucles en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
+## <a name="prerequisites"></a>Requisitos previos
+
+En el tutorial se espera que tenga una máquina configurada para el desarrollo local. En Windows, Linux o macOS, puede usar la CLI de .NET para crear, compilar y ejecutar aplicaciones. En Windows, también puede usar Visual Studio 2019. Para obtener instrucciones de configuración, consulte cómo [configurar el entorno local](local-environment.md).
 
 ## <a name="make-decisions-using-the-if-statement"></a>Toma de decisiones con la instrucción `if`.
 
@@ -24,7 +26,7 @@ Cree un directorio denominado *branches-tutorial*. Conviértalo en el directorio
 dotnet new console -n BranchesAndLoops -o .
 ```
 
-Este comando crea una nueva aplicación de consola de .NET Core en el directorio actual.
+Este comando crea una nueva aplicación de consola de .NET en el directorio actual.
 
 Abra *Program.cs* en su editor favorito y reemplace la línea `Console.WriteLine("Hello World!");` por el código siguiente:
 

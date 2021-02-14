@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: crear una Unión de C/C++ mediante atributos (Visual Basic)'
 title: 'Cómo: crear una Unión de C/C++ mediante atributos'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: ebab0ad947f776932f9379af3969e369eeec1941
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 10717ec97efe866f4c3993cc26789f29d97b148a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400686"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437753"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>How to: Create a C/C++ Union by Using Attributes (Visual Basic) (Creación de uniones de C/C++ mediante la utilización de atributos [Visual Basic])
 
@@ -76,6 +77,6 @@ Los dos campos enteros, `i1` e `i2`, tiene las mismas ubicaciones en la memoria 
 - [Guía de programación en Visual Basic](../../index.md)
 - [Atributos](../../../../standard/attributes/index.md)
 - [Reflection (Visual Basic)](../reflection.md) (Reflexión [Visual Basic])
-- [Atributos (Visual Basic)](../../../language-reference/attributes.md)
+- [Atributos de Visual Basic](../../../language-reference/attributes.md)
 - [Creating Custom Attributes (Visual Basic)](creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])
 - [Accessing Attributes by Using Reflection (Visual Basic)](accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])

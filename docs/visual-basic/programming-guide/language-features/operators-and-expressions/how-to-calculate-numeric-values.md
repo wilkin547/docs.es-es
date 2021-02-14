@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: calcular valores numéricos (Visual Basic)'
 title: Procedimiento para calcular valores numéricos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 452a8392b46f0c25b6ad2a8a30c51071f2ae1d93
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 35acd7b9b1732514a8fe4399b6a815dce62b2468
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071721"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435595"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Cómo: Calcular valores numéricos (Visual Basic)
 
@@ -64,7 +65,7 @@ Puede calcular valores numéricos mediante el uso de expresiones numéricas. Una
   
      Para obtener más información, vea [precedencia de operadores en Visual Basic](../../../language-reference/operators/operator-precedence.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Operadores y expresiones](index.md)
 - [Comparaciones de valores](value-comparisons.md)

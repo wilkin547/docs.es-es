@@ -1,7 +1,7 @@
 ---
 title: Administrar conexiones
 description: Obtenga información sobre cómo las aplicaciones que usan HTTP para los recursos de datos pueden usar las clases ServicePoint y ServicePointManager de .NET Framework para administrar las conexiones.
-ms.date: 03/30/2017
+ms.date: 01/25/2021
 dev_langs:
 - csharp
 - vb
@@ -18,16 +18,19 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 00db05c99cf232a31b10bbd0356e6d43d3bc3e28
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9ea93c3a9c484fd2a3de58b4d484b1e8445da155
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282865"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548063"
 ---
 # <a name="managing-connections"></a>Administrar conexiones
 
 Las aplicaciones que usan HTTP para conectarse a los recursos de datos pueden usar las clases <xref:System.Net.ServicePoint> y <xref:System.Net.ServicePointManager> de .NET Framework para administrar las conexiones a Internet y lograr una escala y un rendimiento óptimos.  
+
+> [!NOTE]
+> `ServicePoint` y `ServicePointManager` se consideran heredados en .NET Core, .NET 5 y versiones posteriores. La mayoría de sus propiedades y métodos no se implementan en estas versiones. Cuando se implementan, no afectan a las API de redes de `HttpClient` ni les hacen ningún seguimiento.
   
  La clase **ServicePoint** proporciona una aplicación con un punto de conexión al que la aplicación puede conectarse para tener acceso a recursos de Internet. Cada **ServicePoint** contiene información que ayuda a optimizar las conexiones con un servidor de Internet mediante el uso compartido de información de optimización entre las conexiones para mejorar el rendimiento.  
   

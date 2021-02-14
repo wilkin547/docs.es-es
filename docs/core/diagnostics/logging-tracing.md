@@ -2,12 +2,12 @@
 title: 'Registro y seguimiento: .NET Core'
 description: Introducción al registro y seguimiento de .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: a8c6d82ddb7bc3f8b4cc9eae9dd7aaf65732a0b8
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753632"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548401"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registro y seguimiento de .NET Core
 
@@ -72,6 +72,10 @@ Las siguientes API están más orientadas a eventos. En lugar de registrar caden
   - Solo Windows.
   - Escribe mensajes en el registro de eventos de Windows.
   - Los administradores del sistema esperan que aparezcan mensajes de error grave de aplicación en el registro de eventos de Windows.
+
+## <a name="distributed-tracing"></a>Seguimiento distribuido
+
+El [seguimiento distribuido](./distributed-tracing.md) es la manera de publicar y observar los datos de seguimiento en un sistema distribuido.
 
 ## <a name="ilogger-and-logging-frameworks"></a>Plataformas de registro y de ILogger
 

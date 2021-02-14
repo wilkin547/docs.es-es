@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: matrices en Visual Basic'
 title: Matrices
 ms.date: 12/06/2017
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: 5093f28f05c5b72294dce9a4e69723acafb31a9f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6e8349fe02e77f12fb827618f84d44288914b62
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413096"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454604"
 ---
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
 
-Una matriz es un conjunto de valores, que son *elementos*denominados, que están relacionados lógicamente entre sí. Por ejemplo, una matriz puede consistir en el número de alumnos de cada grado en una escuela gramatical; cada elemento de la matriz es el número de alumnos en un solo grado. Del mismo modo, una matriz puede constar de las calificaciones de un estudiante para una clase. cada elemento de la matriz es un solo grado.
+Una matriz es un conjunto de valores, que son *elementos* denominados, que están relacionados lógicamente entre sí. Por ejemplo, una matriz puede consistir en el número de alumnos de cada grado en una escuela gramatical; cada elemento de la matriz es el número de alumnos en un solo grado. Del mismo modo, una matriz puede constar de las calificaciones de un estudiante para una clase. cada elemento de la matriz es un solo grado.
 
 Es posible que las variables individuales almacenen cada uno de los elementos de datos. Por ejemplo, si nuestra aplicación analiza las calificaciones de los estudiantes, podemos usar una variable independiente para la calificación de cada estudiante, como `englishGrade1` , `englishGrade2` , etc. Este enfoque tiene tres limitaciones principales:
 
@@ -136,7 +137,7 @@ En el ejemplo siguiente se recorre en iteración una matriz unidimensional media
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-En el ejemplo siguiente se recorre en iteración una matriz multidimensional mediante una [`For...Next`](../../../language-reference/statements/for-next-statement.md) instrucción. El método <xref:System.Array.GetUpperBound%2A> tiene un parámetro que especifica la dimensión. `GetUpperBound(0)`Devuelve el índice más alto de la primera dimensión y `GetUpperBound(1)` devuelve el índice más alto de la segunda dimensión.
+En el ejemplo siguiente se recorre en iteración una matriz multidimensional mediante una [`For...Next`](../../../language-reference/statements/for-next-statement.md) instrucción. El método <xref:System.Array.GetUpperBound%2A> tiene un parámetro que especifica la dimensión. `GetUpperBound(0)` Devuelve el índice más alto de la primera dimensión y `GetUpperBound(1)` devuelve el índice más alto de la segunda dimensión.
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
@@ -262,14 +263,14 @@ En el ejemplo siguiente se divide una matriz de cadenas en dos matrices en funci
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
-## <a name="joining-arrays"></a>Unir matrices
+## <a name="joining-arrays"></a>Combinación de matrices
 
 También puede combinar varias matrices en una sola matriz mayor. Para ello, también se usa el <xref:System.Array.Copy%2A?displayProperty=nameWithType> método.
 
 > [!NOTE]
 > En esta sección no se explica cómo combinar una matriz de cadenas en una sola cadena. Para obtener información sobre cómo combinar una matriz de cadenas, vea el <xref:System.String.Join%2A?displayProperty=nameWithType> método.
 
-Antes de copiar los elementos de cada matriz en la nueva matriz, primero debe asegurarse de que ha inicializado la matriz para que sea lo suficientemente grande como para dar cabida a la nueva matriz. Hay dos maneras de hacerlo:
+Antes de copiar los elementos de cada matriz en la nueva matriz, primero debe asegurarse de que ha inicializado la matriz para que sea lo suficientemente grande como para dar cabida a la nueva matriz. Puede hacerlo de una de las maneras siguientes:
 
 - Use la [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) instrucción para expandir dinámicamente la matriz antes de agregarle nuevos elementos. Esta es la técnica más sencilla, pero puede producir una degradación del rendimiento y un consumo excesivo de memoria cuando se copian matrices de gran tamaño.
 - Calcule el número total de elementos necesarios para la nueva matriz grande y, a continuación, agregue los elementos de cada matriz de origen a él.

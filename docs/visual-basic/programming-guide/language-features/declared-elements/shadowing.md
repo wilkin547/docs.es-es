@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: sombrear en Visual Basic'
 title: Sombreado
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 81e54875a3c1a4bbc5f5631e7ebac649a2e5afaf
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 468ad72808d689016cacb8d2be56fa9f9fcd1eec
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085898"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434828"
 ---
 # <a name="shadowing-in-visual-basic"></a>Sombrear en Visual Basic
 
@@ -35,7 +36,7 @@ Cuando dos elementos de programación comparten el mismo nombre, uno de ellos pu
   
 ## <a name="types-of-shadowing"></a>Tipos de sombreado  
 
- Un elemento puede prevalecer sobre otro elemento de dos maneras diferentes. El elemento de sombreado se puede declarar dentro de una subregión de la región que contiene el elemento sombreado, en cuyo caso la sombra se logra *a través del ámbito*. O una clase derivada puede volver a definir un miembro de una clase base, en cuyo caso la sombra se realiza *a través*de la herencia.  
+ Un elemento puede prevalecer sobre otro elemento de dos maneras diferentes. El elemento de sombreado se puede declarar dentro de una subregión de la región que contiene el elemento sombreado, en cuyo caso la sombra se logra *a través del ámbito*. O una clase derivada puede volver a definir un miembro de una clase base, en cuyo caso la sombra se realiza *a través* de la herencia.  
   
 ### <a name="shadowing-through-scope"></a>Sombreado a través del ámbito  
 
@@ -147,7 +148,7 @@ End Class
   
  En el ejemplo anterior, la variable `basObj` se declara como la clase base. Asignar un `dervCls` objeto a él constituye una conversión de ampliación y, por tanto, es válida. Sin embargo, la clase base no puede tener acceso a la versión de sombreado de la variable `z` en la clase derivada, por lo que el compilador se resuelve `basObj.z` en el valor de la clase base original.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [References to Declared Elements](references-to-declared-elements.md)
 - [Ámbito en Visual Basic](scope.md)

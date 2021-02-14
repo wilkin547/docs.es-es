@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: la ruta de acceso de entrada hace referencia a un archivo, pero termina con un carácter separador de directorio'
 title: La ruta de acceso de entrada hace referencia a un archivo, pero termina con un carácter separador de directorio
 ms.date: 07/20/2015
 ms.assetid: 319181c1-a015-4038-a23f-f53c0d91d806
-ms.openlocfilehash: a23bf75dec58dd07c4cc9ebf30a541ea36e153e0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 30cedf7286fd505bbe11745aaf14ae4bb3859914
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078468"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430812"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>La ruta de acceso de entrada hace referencia a un archivo, pero termina con un carácter separador de directorio
 
@@ -19,7 +20,7 @@ Se intentó una operación que requiere que se proporcione un nombre de archivo,
   
 - Quite el carácter sobrante.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimiento para analizar rutas de acceso a archivos](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [Lectura de archivos](../developing-apps/programming/drives-directories-files/reading-from-files.md)

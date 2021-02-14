@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 34deb802183f20cc92449c21eb7e149cc002850f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2eaa01fad3913272dc90891592d0e35cd89ad2ab
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284227"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506323"
 ---
 # <a name="dependency-loading-in-net-core"></a>Carga de dependencias en .NET Core
 
@@ -40,3 +40,7 @@ En el tutorial [Creación de una aplicación .NET Core con complementos](../tuto
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Uso y depuración de la descargabilidad de ensamblado en .NET Core
 
 El artículo [Uso y depuración de la descargabilidad de ensamblado en .NET Core](../../standard/assembly/unloadability.md) es un tutorial paso a paso. Muestra cómo cargar una aplicación .NET Core, ejecutarla y luego descargarla. En el artículo también se proporcionan sugerencias de depuración.
+
+## <a name="collect-detailed-assembly-loading-information"></a>Recopilación de información detallada de carga de ensamblados
+
+En el artículo [Recopilación de información detallada de carga de ensamblados](collect-details.md) se describe cómo recopilar información detallada sobre la carga de ensamblados administrados en el entorno de ejecución. Usa la herramienta [dotnet-trace](../diagnostics/dotnet-trace.md) para capturar eventos del cargador de ensamblados en un seguimiento de un proceso en ejecución.

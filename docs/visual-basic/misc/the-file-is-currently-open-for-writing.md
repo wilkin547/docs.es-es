@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: el archivo está abierto actualmente para escritura'
 title: El archivo está abierto actualmente para escritura
 ms.date: 07/20/2015
 ms.assetid: 80b3c5e8-3a5c-4d60-b1ac-b7460f0b30b0
-ms.openlocfilehash: 90befbb6131b4db13af6056980a82e0dc2cf8380
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4f0b4b5039d7a31d78c1d4f8649bb7285fbb0d7b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090539"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430838"
 ---
 # <a name="the-file-is-currently-open-for-writing"></a>El archivo está abierto actualmente para escritura
 
@@ -17,7 +18,7 @@ Se intentó acceder a un archivo que está actualmente abierto para escritura.
   
 - Cierre el archivo e intente realizar la operación de nuevo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Security.Permissions.FileIOPermission>
 - [Cómo: Obtener información acerca de un archivo en Visual Basic](/previous-versions/visualstudio/visual-studio-2010/abtzf6f7(v=vs.100))

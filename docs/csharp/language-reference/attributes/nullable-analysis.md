@@ -1,13 +1,13 @@
 ---
 title: 'Atributos reservados de C#: Análisis estático que admite un valor NULL'
-ms.date: 04/14/2020
+ms.date: 02/02/2021
 description: El compilador interpreta estos atributos para proporcionar un mejor análisis estático para los tipos de referencia que aceptan y que no aceptan valores NULL.
-ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c1c3e0a0fe1ee9000e0a1a85ee08e6e966200be5
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955608"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548362"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Los atributos reservados contribuyen al análisis estático del estado NULL del compilador.
 
@@ -16,7 +16,7 @@ En un contexto que admite un valor NULL, el compilador realiza un análisis est�
 - *not null*: el análisis estático determina que a la variable se le asigna un valor distinto de NULL.
 - *maybe null*: el análisis estático no puede determinar que a la variable se le asigna un valor distinto de NULL.
 
-Puede aplicar una serie de atributos que proporcionan información al compilador sobre la semántica de las API. Esa información ayuda al compilador a realizar análisis estáticos y a determinar si una variable no es NULL. En este artículo se proporciona una breve descripción de cada uno de esos atributos y cómo usarlos. En todos los ejemplos se asume el uso de C# 8.0 o una versión más reciente, y que el código se encuentra en un contexto que admite un valor NULL.
+Puede aplicar atributos que proporcionan información al compilador sobre la semántica de las API. Esa información ayuda al compilador a realizar análisis estáticos y a determinar si una variable no es NULL. En este artículo se proporciona una breve descripción de cada uno de esos atributos y cómo usarlos. En todos los ejemplos se asume el uso de C# 8.0 o una versión más reciente, y que el código se encuentra en un contexto que admite un valor NULL.
 
 Para empezar, se usará un ejemplo conocido. Imagine que la biblioteca tiene la siguiente API para recuperar una cadena de recursos:
 
@@ -41,14 +41,16 @@ Es probable que las reglas de las API sean más complicadas, como se ha visto en
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): un valor devuelto que no acepta valores NULL puede ser NULL.
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): un valor devuelto que admite un valor NULL nunca será NULL.
 - [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): un argumento de entrada que no acepta valores NULL puede ser NULL cuando el método devuelve el valor `bool` especificado.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): un argumento de entrada que admite un valor NULL nunca será NULL cuando el método devuelve el valor `bool` especificado.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): un argumento de entrada que admite un valor NULL nunca será NULL cuando el método devuelva el valor `bool` especificado.
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): un valor devuelto no es NULL si el argumento del parámetro especificado no es NULL.
 - [DoesNotReturn](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute): un método nunca devuelve un valor. Es decir, siempre inicia una excepción.
 - [DoesNotReturnIf](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute): este método nunca devuelve un valor si el parámetro `bool` asociado tiene el valor especificado.
+- [MemberNotNull](xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute): el miembro de la lista no será NULL cuando el método devuelva un valor.
+- [MemberNotNullWhen](xref:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute): el miembro de la lista no será NULL cuando el método devuelva el valor `bool` especificado.
 
 Las descripciones anteriores son una referencia rápida a lo que hace cada atributo. En cada una de las secciones siguientes se describen el comportamiento y el significado con más detalle.
 
-Al agregar estos atributos, se proporciona más información al compilador sobre las reglas de la API. Cuando el código que realiza la llamada se compila en un contexto habilitado para aceptar valores NULL, el compilador advertirá a los autores de la llamada cuando infrinjan esas reglas. Estos atributos no habilitan comprobaciones adicionales en la implementación.
+Al agregar estos atributos, se proporciona más información al compilador sobre las reglas de la API. Cuando el código que realiza la llamada se compila en un contexto habilitado para aceptar valores NULL, el compilador advertirá a los autores de la llamada cuando infrinjan esas reglas. Estos atributos no habilitan más comprobaciones en la implementación.
 
 ## <a name="specify-preconditions-allownull-and-disallownull"></a>Especificación de condiciones previas: `AllowNull` y `DisallowNull`
 
@@ -63,7 +65,7 @@ public string ScreenName
 private string _screenName;
 ```
 
-Al compilar el código anterior en un contexto en el que se desconocen los valores NULL, todo es correcto. Una vez que se habilitan los tipos de referencia que admiten un valor NULL, la propiedad `ScreenName` se convierte en una referencia que no acepta valores NULL. Eso es correcto para el descriptor de acceso `get`: nunca devuelve `null`. No es necesario que los autores de la llamada comprueben `null` en la propiedad devuelta. Pero ahora, al establecer la propiedad en `null`, se genera una advertencia. Para continuar admitiendo este tipo de código, agregue el atributo <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> a la propiedad, como se muestra en el código siguiente:
+Al compilar el código anterior en un contexto en el que se desconocen los valores NULL, todo es correcto. Una vez que se habilitan los tipos de referencia que admiten un valor NULL, la propiedad `ScreenName` se convierte en una referencia que no acepta valores NULL. Eso es correcto para el descriptor de acceso `get`: nunca devuelve `null`. No es necesario que los autores de la llamada comprueben `null` en la propiedad devuelta. Pero ahora, al establecer la propiedad en `null`, se genera una advertencia. Para admitir este tipo de código, agregue el atributo <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> a la propiedad, como se muestra en el código siguiente:
 
 ```csharp
 [AllowNull]
@@ -215,7 +217,7 @@ Hay un atributo final que también puede necesitar. En ocasiones, el estado NULL
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-Si el argumento `url` no es NULL, el resultado no es `null`. Una vez que se hayan habilitado las referencias nulas, esa firma funcionará correctamente, siempre que la API no acepte nunca una entrada NULL. Pero si la entrada puede ser NULL, el valor devuelto también podría serlo. Por tanto, podría cambiar la firma por el código siguiente:
+Si el argumento `url` no es NULL, el resultado no es `null`. Una vez que se hayan habilitado las referencias nulas, esa firma funcionará correctamente, siempre que la API no acepte nunca una entrada NULL. Pero si la entrada puede ser NULL, el valor devuelto también podría serlo. Podría cambiar la firma por el código siguiente:
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
@@ -235,6 +237,16 @@ Las condiciones posteriores condicionales se especifican mediante estos atributo
 - [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): un argumento de entrada que no acepta valores NULL puede ser NULL cuando el método devuelve el valor `bool` especificado.
 - [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): un argumento de entrada que admite un valor NULL nunca será NULL cuando el método devuelva el valor `bool` especificado.
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): un valor devuelto no es NULL si el argumento de entrada del parámetro especificado no es NULL.
+
+## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>Métodos auxiliares de constructor: `MemberNotNull` y `MemberNotNullWhen`
+
+Estos atributos especifican su intención cuando se ha refactorizado código común de los constructores en métodos auxiliares. El compilador de C# analiza los constructores y los inicializadores de campo para asegurarse de que todos los campos de referencia que no aceptan valores NULL se han inicializado antes de que se devuelva cada constructor. Sin embargo, el compilador de C# no realiza un seguimiento de las asignaciones de campo a través de todos los métodos auxiliares. El compilador emite una advertencia `CS8618` cuando los campos no se inicializan directamente en el constructor, sino en un método auxiliar. Agrega <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute> a una declaración de método a los campos que se inicializan en un valor distinto de NULL en el método. Por ejemplo, considere el siguiente ejemplo:
+
+:::code language="csharp" source="snippets/InitializeMembers.cs" ID="MemberNotNullExample":::
+
+Puede especificar varios nombres de campo como argumentos para el constructor de atributo `MemberNotNull`.
+
+<xref:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute> tiene un argumento `bool`. Utiliza `MemberNotNullWhen` en situaciones en las que el método auxiliar devuelve `bool`, lo cual indica si el método auxiliar ha inicializado los campos.
 
 ## <a name="verify-unreachable-code"></a>Comprobación de código inaccesible
 
@@ -285,7 +297,7 @@ public void SetState(object containedField)
 
 [!INCLUDE [C# version alert](../../includes/csharp-version-alert.md)]
 
-Agregar tipos de referencia que aceptan valores NULL proporciona un vocabulario inicial para describir las expectativas de las API para las variables que podrían ser `null`. Los atributos adicionales proporcionan un vocabulario más completo para describir el estado NULL de las variables como condiciones previas y posteriores. Estos atributos describen con más claridad las expectativas y proporcionan una mejor experiencia para los desarrolladores que usan las API.
+Agregar tipos de referencia que aceptan valores NULL proporciona un vocabulario inicial para describir las expectativas de las API para las variables que podrían ser `null`. Los atributos proporcionan un vocabulario más completo para describir el estado NULL de las variables como condiciones previas y posteriores. Estos atributos describen con más claridad las expectativas y proporcionan una mejor experiencia para los desarrolladores que usan las API.
 
 A medida que actualice las bibliotecas para un contexto que admite un valor NULL, agregue estos atributos para guiar a los usuarios de las API al uso correcto. Estos atributos ayudan a describir de forma completa el estado NULL de los argumentos de entrada y los valores devueltos:
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: procedimientos de función (Visual Basic)'
 title: Function (procedimientos)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: b0ba96a875fd8785e45eee565beefe4b961ffc9d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4997059fc33fb5d438519356b2c9fdd9e6a27cce
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388756"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436154"
 ---
 # <a name="function-procedures-visual-basic"></a>Procedimientos de función (Visual Basic)
 
@@ -58,7 +59,7 @@ Para obtener más información, vea "Parts" en la [instrucción function](../../
 
 El valor `Function` que un procedimiento devuelve al código de llamada se denomina su valor devuelto. El procedimiento devuelve este valor de una de estas dos maneras:
 
-- Usa la `Return` instrucción para especificar el valor devuelto y devuelve el control inmediatamente al programa que realiza la llamada. Esto se ilustra en el siguiente ejemplo.
+- Usa la `Return` instrucción para especificar el valor devuelto y devuelve el control inmediatamente al programa que realiza la llamada. Esto se ilustra en el siguiente ejemplo:
 
   ```vb
   Function FunctionName [(ParameterList)] As ReturnType
@@ -68,7 +69,7 @@ El valor `Function` que un procedimiento devuelve al código de llamada se denom
   End Function
   ```
 
-- Asigna un valor a su propio nombre de función en una o más instrucciones del procedimiento. El control no vuelve al programa que realiza la llamada hasta que `Exit Function` `End Function` se ejecuta una instrucción o. Esto se ilustra en el siguiente ejemplo.
+- Asigna un valor a su propio nombre de función en una o más instrucciones del procedimiento. El control no vuelve al programa que realiza la llamada hasta que `Exit Function` `End Function` se ejecuta una instrucción o. Esto se ilustra en el siguiente ejemplo:
 
   ```vb
   Function FunctionName [(ParameterList)] As ReturnType
@@ -92,7 +93,7 @@ valor *l* `=` *nombrefunción* `[(` *argumentlist*    `)]`
 
 `If ((`*nombrefunción* `[(` *argumentlist* `)] / 3) <=` *expresión* de  `) Then`
 
-Cuando se llama a un `Function` procedimiento, no es necesario usar su valor devuelto. Si no es así, se realizan todas las acciones de la función, pero se omite el valor devuelto. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>a menudo se llama de esta manera.
+Cuando se llama a un `Function` procedimiento, no es necesario usar su valor devuelto. Si no es así, se realizan todas las acciones de la función, pero se omite el valor devuelto. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> a menudo se llama de esta manera.
 
 ### <a name="illustration-of-declaration-and-call"></a>Ilustración de declaration y Call
 

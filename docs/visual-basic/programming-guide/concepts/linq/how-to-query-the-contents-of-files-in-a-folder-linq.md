@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo consultar el contenido de los archivos de una carpeta (LINQ) (Visual Basic)
 title: 'Cómo: Consultar el contenido de los archivos de una carpeta (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 3ad5fd6c893d590d46be67e6320ac5b915829f4b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5043f64a0bb38811b6155394b18a88f702515cc5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346046"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434997"
 ---
 # <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>Cómo consultar el contenido de los archivos de una carpeta (LINQ) (Visual Basic)
 
@@ -77,7 +78,7 @@ End Module
 
 Cree un proyecto de aplicación de consola de Visual Basic, copie y pegue el ejemplo de código y ajuste el valor del objeto startup en las propiedades del proyecto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ to Objects (Visual Basic)](linq-to-objects.md)
 - [LINQ y directorios de archivos (Visual Basic)](linq-and-file-directories.md)

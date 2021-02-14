@@ -4,12 +4,12 @@ description: Obtenga información sobre qué es una aplicación de archivo únic
 author: lakshanf
 ms.author: lakshanf
 ms.date: 12/17/2020
-ms.openlocfilehash: 10ffc947f6a3adcf2889a03edd2616007ce236f3
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: fb768fa6fe390fbe8390e441f4eb71c3172ad395
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536143"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505431"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implementación de archivo único y ejecutable
 
@@ -168,8 +168,8 @@ Visual Studio crea perfiles de publicación reutilizables que controlan cómo s
 
 01. En el cuadro de diálogo **Configuración de perfil**, establezca las opciones siguientes:
 
-    - Establezca **Modo de implementación** en **Independiente**.
-    - Establezca **Tiempo de ejecución de destino** en la plataforma en la que quiera publicar.
+    - Establezca el **modo de implementación** en **independiente** o **dependiente del marco**.
+    - Establezca **Tiempo de ejecución de destino** en la plataforma en la que quiera publicar. (Debe ser distinto de **portátil**).
     - Seleccione **Producir un único archivo**.
 
     Elija **Guardar** para guardar la configuración y volver al cuadro de diálogo **Publicar**.

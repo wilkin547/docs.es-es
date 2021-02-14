@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: no se puede cambiar el nombre de la carpeta raíz'
 title: No se puede cambiar el nombre de la carpeta raíz
 ms.date: 07/20/2015
 ms.assetid: 325eb73c-d5fe-4b65-8926-5dabff007277
-ms.openlocfilehash: 80765a5b1cea5993d555068a01a77cd093cc341a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a940853341eeeb9c92d29db4f7138323c8db231b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086665"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435621"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>No se puede cambiar el nombre de la carpeta raíz
 
@@ -17,7 +18,7 @@ Se ha intentado cambiar el nombre del directorio raíz. Esto puede deberse a una
   
 - Compruebe que la ruta de acceso de archivo que proporcionó es correcta.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [My. Computer. FileSystem. RenameDirectory](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.RenameDirectory%2A)
 - [My. Computer. FileSystem. Renamefile (](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.RenameFile%2A)

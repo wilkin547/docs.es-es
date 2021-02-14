@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: caracteres de tipo (Visual Basic)'
 title: Caracteres de tipo
 ms.date: 01/31/2018
 helpviewer_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: a48260694c1dfcbbb8f804f220fe89b1663c7319
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d1afccb821d2ffb4dfabe3c38e0db4a7f902c164
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393083"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454552"
 ---
 # <a name="type-characters-visual-basic"></a>Caracteres de tipo (Visual Basic)
 
@@ -79,7 +80,7 @@ La forma de un literal tal como aparece en el código suele determinar su tipo d
 |Forma textual de literal|Tipo de datos predeterminado|Ejemplo|  
 |-----------------------------|-----------------------|-------------|  
 |Numeric, sin parte fraccionaria|`Integer`|`2147483647`|  
-|Numérico, sin parte fraccionaria, demasiado grande para`Integer`|`Long`|`2147483648`|  
+|Numérico, sin parte fraccionaria, demasiado grande para `Integer`|`Long`|`2147483648`|  
 |Numeric, parte fraccionaria|`Double`|`1.2`|  
 |Entre comillas dobles|`String`|`"A"`|  
 |Entre signos de número|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -142,10 +143,10 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="see-also"></a>Consulte también
 
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Tipos de datos básicos](elementary-data-types.md)
 - [Tipos de valor y tipos de referencia](value-types-and-reference-types.md)
 - [Conversiones de tipos en Visual Basic](type-conversions.md)
 - [Solución de problemas de los tipos de datos](troubleshooting-data-types.md)
 - [Declaración de variable](../variables/variable-declaration.md)
-- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [Tipo de datos](../../../language-reference/data-types/index.md)

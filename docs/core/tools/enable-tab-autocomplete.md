@@ -1,22 +1,22 @@
 ---
 title: Habilitación de la finalización con tabulación
-description: En este artículo se describe cómo habilitar la finalización con tabulación para la CLI de .NET en PowerShell, bash y zsh.
+description: En este artículo se describe cómo habilitar la finalización con tabulación para la CLI de .NET en PowerShell, Bash, zsh y fish.
 author: adegeo
 ms.author: adegeo
 ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: 31bf5e74644680fc30ca5b79972fbed6367363e1
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b5b63166faa1762d9fa82a93aa70aebb33167630
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634017"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585564"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-cli"></a>Procedimiento para habilitar la finalización con tabulación para la CLI de .NET
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
-En este artículo se describe cómo configurar la finalización con tabulación para tres shells: PowerShell, Bash y zsh. En el caso de otros shells, consulte la documentación para saber cómo configurar la finalización con tabulación.
+En este artículo se describe cómo configurar la finalización con tabulación para cuatro shells: PowerShell, Bash, zsh y fish. En el caso de otros shells, consulte la documentación para saber cómo configurar la finalización con tabulación.
 
 Una vez que se ha configurado, para desencadenar la finalización con tabulación para la CLI de .NET, escriba un comando `dotnet` en el shell y, después, presione el tabulador. La línea de comandos que se envía al comando `dotnet complete` y los resultados se procesan mediante el shell. Puede probar los resultados sin habilitar la finalización con tabulación si envía algo directamente al comando `dotnet complete`. Por ejemplo:
 
@@ -97,4 +97,12 @@ _dotnet_zsh_complete()
 }
 
 compctl -K _dotnet_zsh_complete dotnet
+```
+
+## <a name="fish"></a>fish
+
+Para agregar la finalización con tabulación al shell de **fish** para la CLI de .NET, agregue el código siguiente al archivo `config.fish`:
+
+```fish
+complete -f -c dotnet -a "(dotnet complete)"
 ```

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: pasar procedimientos a otro procedimiento en Visual Basic'
 title: Procedimiento para pasar procedimientos a otro procedimiento
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: 3a7a653bbf238b50e3c7339da76df0f68ab9b59f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dfd75d1f58519365bfb6ac59892238b5322743f3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085794"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434451"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Cómo: Pasar procedimientos a otro procedimiento en Visual Basic
 
@@ -46,7 +47,7 @@ En este ejemplo se muestra cómo usar delegados para pasar un procedimiento a ot
   
      Cuando `Test` se llama a, primero se muestra el resultado de `AddNumbers` actuar en `5` y `3` , que es 8. A continuación `SubtractNumbers` , se muestra el resultado de actuar en `9` y `3` , que es 6.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Delegados](index.md)
 - [Operador AddressOf](../../../language-reference/operators/addressof-operator.md)

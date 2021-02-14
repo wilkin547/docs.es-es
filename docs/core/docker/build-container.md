@@ -4,12 +4,12 @@ description: En este tutorial obtendrá información sobre cómo incluir una apl
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7605f847a76907f4f9d0a451ba69332d6d174615
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c92f5823f56f74941afdd28638d30e759b2c51c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740761"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Incluir una aplicación de .NET Core en un contenedor
 
@@ -33,7 +33,7 @@ Aprenderá sobre las tareas de compilación e implementación de un contenedor d
 
 Instale estos requisitos previos:
 
-- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download)\
+- [SDK de .NET Core 5.0](https://dotnet.microsoft.com/download)\
 Si tiene instalado .NET Core, use el comando `dotnet --info` para determinar el SDK que está usando.
 - [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 - Una carpeta de trabajo temporal para *Dockerfile* y una aplicación .NET Core de ejemplo. En este tutorial, el nombre *docker-working* se usa como la carpeta de trabajo.
@@ -144,16 +144,16 @@ Antes de agregar la aplicación .NET Core a la imagen de Docker, primero debe pu
 dotnet publish -c Release
 ```
 
-Con este comando se compila la aplicación en la carpeta *publish*. La ruta de acceso a la carpeta *publish* desde la carpeta de trabajo debería ser `.\App\bin\Release\netcoreapp3.1\publish\`.
+Con este comando se compila la aplicación en la carpeta *publish*. La ruta de acceso a la carpeta *publish* desde la carpeta de trabajo debería ser `.\App\bin\Release\net5.0\publish\`.
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 En la carpeta *App*, obtenga un listado de los directorios de la carpeta publish para comprobar que se ha creado el archivo *NetCore.Docker.dll*.
 
 ```powershell
-dir .\bin\Release\netcoreapp3.1\publish\
+dir .\bin\Release\net5.0\publish\
 
-    Directory: C:\Users\dapine\App\bin\Release\netcoreapp3.1\publish
+    Directory: C:\Users\dapine\App\bin\Release\net5.0\publish
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
@@ -169,7 +169,7 @@ Mode                LastWriteTime         Length Name
 Use el comando `ls` para obtener una lista de directorios y comprobar que se ha creado el archivo *NetCore.Docker.dll*.
 
 ```bash
-me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/net5.0/publish
 NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker.runtimeconfig.json
 ```
 
@@ -182,13 +182,13 @@ El archivo *Dockerfile* lo usa el comando `docker build` para crear una imagen d
 Cree un archivo denominado *Dockerfile* en el directorio que contiene el archivo *.csproj* y ábralo en un editor de texto. Este tutorial usa la imagen de runtime de ASP.NET Core (que contiene la imagen de runtime de .NET Core) y corresponde a la aplicación de consola de .NET Core.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 ```
 
 > [!NOTE]
-> Aquí se usa intencionadamente la imagen de runtime de ASP.NET Core, aunque se podría haber usado la imagen de `mcr.microsoft.com/dotnet/runtime:3.1`.
+> Aquí se usa intencionadamente la imagen de runtime de ASP.NET Core, aunque se podría haber usado la imagen de `mcr.microsoft.com/dotnet/runtime:5.0`.
 
-La palabra clave `FROM` requiere un nombre completo de imagen de contenedor de Docker. Microsoft Container Registry (MCR, mcr.microsoft.com) es un sindicato de Docker Hub, que hospeda contenedores accesibles públicamente. El segmento `dotnet/core` es el repositorio de contenedores, donde el segmento de `aspnet` es el nombre de la imagen de contenedor. La imagen está etiquetada con `3.1`, que se usa para el control de versiones. Por lo tanto, `mcr.microsoft.com/dotnet/aspnet:3.1` es el runtime de .NET Core 3.1. Asegúrese de extraer el runtime que coincida con el que el SDK tiene como destino. Por ejemplo, la aplicación creada en la sección anterior usaba el SDK de .NET Core 3.1, y la imagen base a la que se hace referencia en el documento *Dockerfile* se etiqueta con **3.1**.
+La palabra clave `FROM` requiere un nombre completo de imagen de contenedor de Docker. Microsoft Container Registry (MCR, mcr.microsoft.com) es un sindicato de Docker Hub, que hospeda contenedores accesibles públicamente. El segmento `dotnet/core` es el repositorio de contenedores, donde el segmento de `aspnet` es el nombre de la imagen de contenedor. La imagen está etiquetada con `5.0`, que se usa para el control de versiones. Por lo tanto, `mcr.microsoft.com/dotnet/aspnet:5.0` es el entorno de ejecución de .NET Core 5.0. Asegúrese de extraer el runtime que coincida con el que el SDK tiene como destino. Por ejemplo, la aplicación creada en la sección anterior usaba el SDK de .NET Core 5.0, y la imagen base a la que se hace referencia en el documento *Dockerfile* se etiqueta con **5.0**.
 
 Guarde el archivo *Dockerfile*. La estructura de directorios de la carpeta de trabajo debería tener el siguiente aspecto. Algunos de los archivos y carpetas inferiores se han omitido para ahorrar espacio en este artículo:
 
@@ -200,7 +200,7 @@ docker-working
         ├──Program.cs
         ├──bin
         │   └──Release
-        │       └──netcoreapp3.1
+        │       └──net5.0
         │           └──publish
         │               ├──NetCore.Docker.deps.json
         │               ├──NetCore.Docker.exe
@@ -223,13 +223,13 @@ Docker procesará cada línea en el archivo *Dockerfile*. `.` del comando `docke
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              e6780479db63        4 days ago          190MB
-mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         5.0                 e6780479db63        4 days ago          190MB
 ```
 
 Observe que ambas imágenes comparten el mismo valor **IMAGE ID**. El valor es el mismo entre ambas imágenes porque el único comando en *Dockerfile* era basar la imagen nueva en una imagen existente. Agreguemos tres comandos a *Dockerfile*. Cada comando crea una capa de imagen y el comando final que representa la imagen **counter-image** a la que apunta el repositorio.
 
 ```dockerfile
-COPY bin/Release/netcoreapp3.1/publish/ App/
+COPY bin/Release/net5.0/publish/ App/
 WORKDIR /App
 ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```
@@ -245,9 +245,9 @@ Desde el terminal, ejecute `docker build -t counter-image -f Dockerfile .` y, cu
 ```console
 docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
-Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:3.1
+Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:5.0
  ---> e6780479db63
-Step 2/4 : COPY bin/Release/netcoreapp3.1/publish/ App/
+Step 2/4 : COPY bin/Release/net5.0/publish/ App/
  ---> d1732740eed2
 Step 3/4 : WORKDIR /App
  ---> Running in b1701a42f3ff
@@ -263,7 +263,7 @@ Successfully tagged counter-image:latest
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              cd11c3df9b19        41 seconds ago      190MB
-mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         5.0                 e6780479db63        4 days ago          190MB
 ```
 
 Cada comando de *Dockerfile* generó una capa y creó un valor **IMAGE ID**. El valor **IMAGE ID** final (el suyo será distinto) es **cd11c3df9b19** y, después, usted creará un contenedor basado en esta imagen.
@@ -470,7 +470,7 @@ A continuación, elimine las imágenes que ya no quiere tener en la máquina. El
 
 ```console
 docker rmi counter-image:latest
-docker rmi mcr.microsoft.com/dotnet/aspnet:3.1
+docker rmi mcr.microsoft.com/dotnet/aspnet:5.0
 ```
 
 Use el comando `docker images` para ver una lista de las imágenes instaladas.

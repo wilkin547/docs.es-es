@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo deconstruir tuplas y otros tipos.
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 5aaf7157b87de4f67f6e4beba18794a6dd13b6d0
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439708"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585356"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Deconstruir tuplas y otros tipos
 
@@ -81,11 +81,7 @@ En el ejemplo siguiente se sobrecarga el método `Deconstruct` para devolver var
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-Dado que se puede sobrecargar el método `Deconstruct` para reflejar los grupos de datos que se suelen extraer de un objeto, debe tener cuidado y definir métodos `Deconstruct` con firmas que sean distintivas y no resulten ambiguas. Puede resultar confuso usar varios métodos `Deconstruct` que tengan el mismo número de parámetros `out` o el mismo número y tipo de parámetros `out` en un orden diferente.
-
-El método `Deconstruct` sobrecargado del ejemplo siguiente muestra un posible motivo de confusión. La primera sobrecarga devuelve el nombre de pila, el segundo nombre, los apellidos y la edad de un objeto `Person`, en ese orden. La segunda sobrecarga devuelve información sobre el nombre acompañada únicamente de los ingresos anuales, pero el nombre de pila, el segundo nombre y los apellidos están en un orden diferente. Esto hace que se pueda confundir fácilmente el orden de los argumentos cuando se deconstruye una instancia `Person`.
-
-[!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
+Varios métodos de `Deconstruct` que tienen el mismo número de parámetros son ambiguos. Debe tener cuidado al definir métodos `Deconstruct` con distintos números de parámetros o "aridad". No se pueden distinguir los métodos `Deconstruct` con el mismo número de parámetros durante la resolución de sobrecarga.
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>Deconstruir un tipo definido por el usuario con descartes
 

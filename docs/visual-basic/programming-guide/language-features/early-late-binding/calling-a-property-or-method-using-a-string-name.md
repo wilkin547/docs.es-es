@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: llamar a una propiedad o a un método mediante un nombre de cadena (Visual Basic)'
 title: Llamar a una propiedad o método mediante un nombre de cadena
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 9f28548c27545d94dde38cef3e9c56f98a69b259
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ad14f66ef4e3e06b969cb39a0203442cb0a4f1bb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086093"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434425"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)
 
@@ -48,7 +49,7 @@ En la mayoría de los casos, puede detectar las propiedades y los métodos de un
 > [!NOTE]
 > Aunque la `CallByName` función puede ser útil en algunos casos, debe sopesar su utilidad en cuanto a las implicaciones de rendimiento `CallByName` . el uso de para invocar un procedimiento es ligeramente más lento que una llamada enlazada en tiempo de ejecución. Si invoca una función a la que se llama repetidamente, como dentro de un bucle, `CallByName` puede tener un efecto grave en el rendimiento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
 - [Determinación del tipo de objeto](determining-object-type.md)

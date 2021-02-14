@@ -1,20 +1,22 @@
 ---
 title: 'Números en C#: tutorial de introducción a C#'
 description: Aprenda sobre C# mediante la exploración de tipos numéricos, sus usos, propiedades y métodos.
-ms.date: 10/31/2017
+ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 3dc2a5afc6321da45351525a632f586cb84bf7fe
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 253ecbc089722961013d058aff900bdde23fd366
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794617"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585642"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números enteros y de punto flotante en C\#
 
 En este tutorial se explican los tipos numéricos en C# de manera interactiva. Escribirá pequeñas cantidades de código y luego compilará y ejecutará ese código. El tutorial contiene una serie de lecciones que ofrecen información detallada sobre los números y las operaciones matemáticas en C#. En ellas se enseñan los aspectos básicos del lenguaje C#.
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Become familiar with the development tools](local-environment.md) (Familiarizarse con las herramientas de desarrollo) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
+## <a name="prerequisites"></a>Requisitos previos
+
+En el tutorial se espera que tenga una máquina configurada para el desarrollo local. En Windows, Linux o macOS, puede usar la CLI de .NET para crear, compilar y ejecutar aplicaciones. En Windows, también puede usar Visual Studio 2019. Para obtener instrucciones de configuración, consulte cómo [configurar el entorno local](local-environment.md).
 
 ## <a name="explore-integer-math"></a>Análisis de las operaciones matemáticas con enteros
 

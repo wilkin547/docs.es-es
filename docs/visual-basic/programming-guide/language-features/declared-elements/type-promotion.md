@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: promoción de tipos (Visual Basic)'
 title: Promoción de tipos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 6c28ca22e96616ff09e147400bfdb2adb922ff0e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fd8a30fb7e442d82222ae55daabf70bd8e532138
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085807"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434724"
 ---
 # <a name="type-promotion-visual-basic"></a>Promoción de tipos (Visual Basic)
 
@@ -63,7 +64,7 @@ Cuando se declara un elemento de programación en un módulo, Visual Basic promo
   
 - **Calificación completa.** Cuando se trabaja con módulos y otros elementos en el mismo espacio de nombres, el enfoque más seguro es usar siempre la calificación completa de todos los elementos de programación. Si la promoción de tipos es derrota para un miembro del módulo y no se certifica totalmente ese miembro, se podría tener acceso accidentalmente a un elemento de programación diferente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Module (Instrucción)](../../../language-reference/statements/module-statement.md)
 - [Namespace (Instrucción)](../../../language-reference/statements/namespace-statement.md)

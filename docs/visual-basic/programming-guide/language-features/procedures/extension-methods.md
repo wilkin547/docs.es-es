@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: métodos de extensión (Visual Basic)'
 title: Métodos de extensión
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a88756fce9137f89db1b6b8b007d528e98381830
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5a1482502b144524c0be90e1c83a38f49b4a4d26
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341178"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434360"
 ---
 # <a name="extension-methods-visual-basic"></a>Métodos de extensión (Visual Basic)
 
@@ -20,31 +21,31 @@ Los métodos de extensión permiten a los desarrolladores agregar funcionalidad 
 
 ## <a name="remarks"></a>Comentarios
 
-Un método de extensión solo puede ser un procedimiento `Sub` o un procedimiento `Function`. No se puede definir una propiedad de extensión, un campo o un evento. Todos los métodos de extensión se deben marcar con el atributo de extensión `<Extension>` del espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> y deben definirse en un [módulo](../../../language-reference/statements/module-statement.md). Si se define un método de extensión fuera de un módulo, el compilador Visual Basic genera el error [BC36551](../../../misc/bc36551.md), "los métodos de extensión solo se pueden definir en módulos".
+Un método de extensión solo puede ser un `Sub` procedimiento o un `Function` procedimiento. No se puede definir una propiedad de extensión, un campo o un evento. Todos los métodos de extensión se deben marcar con el atributo `<Extension>` de extensión del <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> espacio de nombres y deben definirse en un [módulo](../../../language-reference/statements/module-statement.md). Si se define un método de extensión fuera de un módulo, el compilador Visual Basic genera el error [BC36551](../../../misc/bc36551.md), "los métodos de extensión solo se pueden definir en módulos".
 
 El primer parámetro de una definición de método de extensión especifica qué tipo de datos extiende el método. Cuando se ejecuta el método, el primer parámetro se enlaza a la instancia del tipo de datos que invoca el método.
 
-El atributo `Extension` solo se puede aplicar a un Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md)o [`Function`](../../../language-reference/statements/function-statement.md). Si se aplica a un `Class` o un `Structure`, el compilador de Visual Basic genera el error [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md), el atributo ' Extension ' solo se puede aplicar a las declaraciones ' module ', ' sub ' o ' function '.
+El `Extension` atributo solo se puede aplicar a un Visual Basic [`Module`](../../../language-reference/statements/module-statement.md) , [`Sub`](../../../language-reference/statements/sub-statement.md) o [`Function`](../../../language-reference/statements/function-statement.md) . Si se aplica a un objeto o a un objeto `Class` `Structure` , el compilador Visual Basic genera el error [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md), el atributo ' Extension ' solo se puede aplicar a las declaraciones ' module ', ' sub ' o ' function '.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se define una extensión de `Print` para el tipo de datos <xref:System.String>. El método utiliza `Console.WriteLine` para mostrar una cadena. El parámetro del método `Print`, `aString`, establece que el método extiende la clase <xref:System.String>.
+En el ejemplo siguiente se define una `Print` extensión para el <xref:System.String> tipo de datos. El método utiliza `Console.WriteLine` para mostrar una cadena. El parámetro del `Print` método, `aString` , establece que el método extiende la <xref:System.String> clase.
 
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
-Observe que la definición del método de extensión está marcada con el atributo de extensión `<Extension()>`. Marcar el módulo en el que se define el método es opcional, pero se debe marcar cada método de extensión. se debe importar <xref:System.Runtime.CompilerServices> para tener acceso al atributo de extensión.
+Observe que la definición del método de extensión está marcada con el atributo de extensión `<Extension()>` . Marcar el módulo en el que se define el método es opcional, pero se debe marcar cada método de extensión. <xref:System.Runtime.CompilerServices> se debe importar para tener acceso al atributo de extensión.
 
-Los métodos de extensión se pueden declarar solo dentro de los módulos. Normalmente, el módulo en el que se define un método de extensión no es el mismo módulo que el en el que se llama. En su lugar, se importa el módulo que contiene el método de extensión, si es necesario, para ponerlo en el ámbito. Después de que el módulo que contiene `Print` está en el ámbito, se puede llamar al método como si fuera un método de instancia normal que no toma ningún argumento, como `ToUpper`:
+Los métodos de extensión se pueden declarar solo dentro de los módulos. Normalmente, el módulo en el que se define un método de extensión no es el mismo módulo que el en el que se llama. En su lugar, se importa el módulo que contiene el método de extensión, si es necesario, para ponerlo en el ámbito. Después de que el módulo que contiene `Print` está en el ámbito, se puede llamar al método como si fuera un método de instancia normal que no toma ningún argumento, como `ToUpper` :
 
 [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]
 
-En el ejemplo siguiente, `PrintAndPunctuate`, es también una extensión de <xref:System.String>, esta vez definida con dos parámetros. El primer parámetro, `aString`, establece que el método de extensión extiende <xref:System.String>. El segundo parámetro, `punc`, está pensado para ser una cadena de signos de puntuación que se pasa como argumento cuando se llama al método. El método muestra la cadena seguida de los signos de puntuación.
+En el ejemplo siguiente, `PrintAndPunctuate` , es también una extensión de <xref:System.String> , esta vez definida con dos parámetros. El primer parámetro, `aString` , establece que el método de extensión extiende <xref:System.String> . El segundo parámetro, `punc` , está pensado para ser una cadena de signos de puntuación que se pasa como argumento cuando se llama al método. El método muestra la cadena seguida de los signos de puntuación.
 
 [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]
 
-Se llama al método mediante el envío de un argumento de cadena para `punc`: `example.PrintAndPunctuate(".")`
+Se llama al método mediante el envío de un argumento de cadena para `punc` : `example.PrintAndPunctuate(".")`
 
-En el ejemplo siguiente se muestra `Print` y `PrintAndPunctuate` definidos y denominados. <xref:System.Runtime.CompilerServices> se importa en el módulo de definición para permitir el acceso al atributo de extensión.
+En el ejemplo siguiente se muestra `Print` y se `PrintAndPunctuate` define y se llama a. <xref:System.Runtime.CompilerServices> se importa en el módulo de definición para permitir el acceso al atributo de extensión.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -83,9 +84,9 @@ End Module
 
 Todo lo que se necesita para poder ejecutar estos métodos de extensión o similares es que están dentro del ámbito. Si el módulo que contiene un método de extensión está en el ámbito, es visible en IntelliSense y se puede llamar como si fuera un método de instancia normal.
 
-Tenga en cuenta que cuando se invocan los métodos, no se envía ningún argumento para el primer parámetro. Los `aString` de parámetros de las definiciones de método anteriores se enlazan a `example`, la instancia de `String` que los llama. El compilador usará `example` como argumento enviado al primer parámetro.
+Tenga en cuenta que cuando se invocan los métodos, no se envía ningún argumento para el primer parámetro. El parámetro `aString` de las definiciones de método anteriores se enlaza a `example` , la instancia de `String` que los llama. El compilador usará `example` como el argumento enviado al primer parámetro.
 
-Si se llama a un método de extensión para un objeto que se establece en `Nothing`, se ejecuta el método de extensión. Esto no se aplica a los métodos de instancia normales. Puede comprobar explícitamente si hay `Nothing` en el método de extensión.
+Si se llama a un método de extensión para un objeto que se establece en `Nothing` , se ejecuta el método de extensión. Esto no se aplica a los métodos de instancia normales. Puede comprobar explícitamente `Nothing` en el método de extensión.
 
 ## <a name="types-that-can-be-extended"></a>Tipos que se pueden extender
 
@@ -99,9 +100,9 @@ Puede definir un método de extensión en la mayoría de los tipos que se pueden
 - Parámetros de método genérico
 - Matrices
 
-Dado que el primer parámetro especifica el tipo de datos que extiende el método de extensión, es obligatorio y no puede ser opcional. Por ese motivo, los parámetros de `Optional` y `ParamArray` no pueden ser el primer parámetro de la lista de parámetros.
+Dado que el primer parámetro especifica el tipo de datos que extiende el método de extensión, es obligatorio y no puede ser opcional. Por ese motivo, `Optional` los parámetros y parámetros `ParamArray` no pueden ser el primer parámetro de la lista de parámetros.
 
-Los métodos de extensión no se consideran en el enlace en tiempo de ejecución. En el ejemplo siguiente, la instrucción `anObject.PrintMe()` genera una excepción <xref:System.MissingMemberException>, la misma excepción que se verá si se eliminara la segunda definición de método de extensión `PrintMe`.
+Los métodos de extensión no se consideran en el enlace en tiempo de ejecución. En el ejemplo siguiente, la instrucción `anObject.PrintMe()` genera una <xref:System.MissingMemberException> excepción, la misma excepción que vería si `PrintMe` se eliminara la segunda definición de método de extensión.
 
 [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]
 
@@ -123,11 +124,11 @@ En general, los métodos de extensión que se agregan a tipos que no son de su p
 
 ## <a name="extension-methods-instance-methods-and-properties"></a>Métodos de extensión, métodos de instancia y propiedades
 
-Cuando un método de instancia en el ámbito tiene una firma que es compatible con los argumentos de una instrucción de llamada, se elige el método de instancia en preferencia a cualquier método de extensión. El método de instancia tiene prioridad incluso si el método de extensión es una coincidencia mejor. En el ejemplo siguiente, `ExampleClass` contiene un método de instancia denominado `ExampleMethod` que tiene un parámetro de tipo `Integer`. El método de extensión `ExampleMethod` extiende `ExampleClass`y tiene un parámetro de tipo `Long`.
+Cuando un método de instancia en el ámbito tiene una firma que es compatible con los argumentos de una instrucción de llamada, se elige el método de instancia en preferencia a cualquier método de extensión. El método de instancia tiene prioridad incluso si el método de extensión es una coincidencia mejor. En el ejemplo siguiente, `ExampleClass` contiene un método de instancia denominado `ExampleMethod` que tiene un parámetro de tipo `Integer` . El método `ExampleMethod` de extensión extiende `ExampleClass` y tiene un parámetro de tipo `Long` .
 
 [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]
 
-La primera llamada a `ExampleMethod` en el código siguiente llama al método de extensión, porque `arg1` es `Long` y solo es compatible con el parámetro `Long` en el método de extensión. La segunda llamada a `ExampleMethod` tiene un argumento `Integer`, `arg2`y llama al método de instancia.
+La primera llamada a `ExampleMethod` en el código siguiente llama al método de extensión, porque `arg1` es `Long` y solo es compatible con el `Long` parámetro en el método de extensión. La segunda llamada a `ExampleMethod` tiene un `Integer` argumento, `arg2` , y llama al método de instancia.
 
 [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]
 
@@ -135,11 +136,11 @@ Ahora, invierta los tipos de datos de los parámetros en los dos métodos:
 
 [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]
 
-Esta vez, el código de `Main` llama al método de instancia ambas veces. Esto se debe a que tanto `arg1` como `arg2` tienen una conversión de ampliación a `Long`y el método de instancia tiene prioridad sobre el método de extensión en ambos casos.
+Esta vez, el código de `Main` llama al método de instancia ambas veces. Esto se debe `arg1` a que y `arg2` tienen una conversión de ampliación a `Long` y el método de instancia tiene prioridad sobre el método de extensión en ambos casos.
 
 [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]
 
-Por lo tanto, un método de extensión no puede reemplazar un método de instancia existente. Sin embargo, cuando un método de extensión tiene el mismo nombre que un método de instancia pero las firmas no entran en conflicto, se puede tener acceso a ambos métodos. Por ejemplo, si la clase `ExampleClass` contiene un método denominado `ExampleMethod` que no toma ningún argumento, se permiten métodos de extensión con el mismo nombre pero con firmas diferentes, como se muestra en el código siguiente.
+Por lo tanto, un método de extensión no puede reemplazar un método de instancia existente. Sin embargo, cuando un método de extensión tiene el mismo nombre que un método de instancia pero las firmas no entran en conflicto, se puede tener acceso a ambos métodos. Por ejemplo, si `ExampleClass` la clase contiene un método denominado `ExampleMethod` que no toma ningún argumento, se permiten métodos de extensión con el mismo nombre pero con firmas diferentes, como se muestra en el código siguiente.
 
 [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]
 
@@ -168,14 +169,14 @@ Cuando dos métodos de extensión que tienen firmas idénticas están en el ámb
 
 6. Métodos de extensión definidos dentro de cualquier importación de espacio de nombres de nivel de proyecto.
 
-Si la precedencia no resuelve la ambigüedad, puede usar el nombre completo para especificar el método al que está llamando. Si el método `Print` del ejemplo anterior se define en un módulo denominado `StringExtensions`, el nombre completo es `StringExtensions.Print(example)` en lugar de `example.Print()`.
+Si la precedencia no resuelve la ambigüedad, puede usar el nombre completo para especificar el método al que está llamando. Si el `Print` método del ejemplo anterior se define en un módulo denominado `StringExtensions` , el nombre completo es `StringExtensions.Print(example)` en lugar de `example.Print()` .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [Module (instrucción)](../../../language-reference/statements/module-statement.md)
+- [Module (Instrucción)](../../../language-reference/statements/module-statement.md)
 - [Argumentos y parámetros de procedimiento](procedure-parameters-and-arguments.md)
 - [Parámetros opcionales](optional-parameters.md)
 - [Matrices de parámetros](parameter-arrays.md)
