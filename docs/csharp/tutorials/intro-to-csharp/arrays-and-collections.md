@@ -3,18 +3,20 @@ title: 'Trabajo con colecciones: tutorial de introducción a C#'
 description: Conozca C# a través de la colección de listas que se presenta en este tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: e2282df21420630634911e07f4fb3b94f34a792b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 4ecd2cfebddf460d3766d708d2f6740bd1c6e29a
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414688"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585668"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Obtenga información sobre cómo administrar colecciones de datos mediante el tipo de lista genérico
 
 En este tutorial de presentación se proporciona una introducción al lenguaje C# y se exponen los conceptos básicos de la clase <xref:System.Collections.Generic.List%601>.
 
-En este tutorial se supone que cuenta con una máquina que puede usar para el desarrollo. El tutorial de .NET [Hola mundo en 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) cuenta con instrucciones para configurar el entorno de desarrollo local en Windows, Linux o macOS. En [Familiarización con las herramientas de desarrollo de .NET](local-environment.md) puede obtener información general sobre los comandos que usará, donde hay vínculos que amplían la información.
+## <a name="prerequisites"></a>Requisitos previos
+
+En el tutorial se espera que tenga una máquina configurada para el desarrollo local. En Windows, Linux o macOS, puede usar la CLI de .NET para crear, compilar y ejecutar aplicaciones. En Windows, también puede usar Visual Studio 2019. Para obtener instrucciones de configuración, consulte cómo [configurar el entorno local](local-environment.md).
 
 ## <a name="a-basic-list-example"></a>Un ejemplo de lista básico
 

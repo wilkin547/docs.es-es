@@ -4,12 +4,12 @@ description: En este tutorial avanzado se explica cómo explorar datos mediante 
 ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: c0484a42233466e3a2a70a673aee81fce91fe31b
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90738871"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585408"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
@@ -93,7 +93,7 @@ Un tipo es **contable** si tiene una propiedad denominada `Length` o `Count` con
 
 Por ejemplo, los tipos de .NET siguientes admiten tanto índices como rangos: <xref:System.String>, <xref:System.Span%601> y <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> admite índices, pero no rangos.
 
-<xref:System.Array> tiene un comportamiento con más matices. Así, las matrices de una sola dimensión admiten índices y rangos, mientras que las matrices multidimensionales no. El indexador de una matriz multidimensional tiene varios parámetros, no un parámetro único. Las matrices escalonadas, también denominadas matriz de matrices, admiten tanto intervalos como indexadores. En el siguiente ejemplo se muestra cómo iterar por una subsección rectangular de una matriz escalonada. Se itera por la sección del centro, excluyendo la primera y las últimas tres filas, así como la primera y las dos últimas columnas de cada fila seleccionada:
+<xref:System.Array> tiene un comportamiento con más matices. Así, las matrices de una sola dimensión admiten índices y rangos, Las matrices multidimensionales no admiten indexadores o rangos. El indexador de una matriz multidimensional tiene varios parámetros, no un parámetro único. Las matrices escalonadas, también denominadas matriz de matrices, admiten tanto intervalos como indexadores. En el siguiente ejemplo se muestra cómo iterar por una subsección rectangular de una matriz escalonada. Se itera por la sección del centro, excluyendo la primera y las últimas tres filas, así como la primera y las dos últimas columnas de cada fila seleccionada:
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 
