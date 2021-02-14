@@ -1,13 +1,14 @@
 ---
-title: Programación asincrónica con async y await
+description: 'Más información sobre: programación asincrónica con Async y Await (Visual Basic)'
+title: Programación asincrónica con Async y Await
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: b4f35b482b4ee3fc7e08c296cf3815fb2bdd6874
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e0723490a5f3863dc05acd49d6e3e91133413420
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555385"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474361"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programación asincrónica con Async y Await (Visual Basic)
 
@@ -165,7 +166,7 @@ Un método asincrónico normalmente contiene una o más apariciones de un operad
 `Async` y `Await` son palabras clave contextuales. Para mayor información y ejemplos, vea los siguientes temas:
 
 - [Asincrónico](../../../language-reference/modifiers/async.md)
-- [Await (operador)](../../../language-reference/operators/await-operator.md)
+- [Await (Operador)](../../../language-reference/operators/await-operator.md)
 
 ## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a> Tipos de valor devuelto y parámetros
 
@@ -257,5 +258,5 @@ El código siguiente es el archivo MainWindow.xaml.vb de la aplicación de Windo
 
 ## <a name="see-also"></a>Vea también
 
-- [Await (operador)](../../../language-reference/operators/await-operator.md)
+- [Await (Operador)](../../../language-reference/operators/await-operator.md)
 - [Asincrónico](../../../language-reference/modifiers/async.md)

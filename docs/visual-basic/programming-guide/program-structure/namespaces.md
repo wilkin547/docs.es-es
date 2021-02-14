@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: espacios de nombres en Visual Basic'
 title: Espacios de nombres
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: f4521fa10c3bb9e8e121e3c228a23061becd1741
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2f7c0bfd29bf6fe104252aa125b4ddff1259b50a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072202"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460753"
 ---
 # <a name="namespaces-in-visual-basic"></a>Espacios de nombres en Visual Basic
 
