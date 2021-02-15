@@ -1,5 +1,5 @@
 ---
-description: "Más información acerca de: BC32053: la copia del valor del parámetro ' ByRef ' ' <parametername> ' en el argumento coincidente se reduce del tipo ' <typename1> ' al tipo '<typename2>"
+description: "Obtener más información acerca de: BC32053: el hecho de volver a copiar el valor del parámetro ' ByRef ' ' <parametername> ' en el argumento coincidente se reduce del tipo ' <typename1> ' al tipo ' <typename2> '"
 title: La acción de volver a copiar el valor del parámetro 'ByRef' '<parametername>' en el argumento coincidente restringe del tipo '<typename1>' al tipo '<typename2>'
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: a90e64cd81443831a7b8f934fea646411eb5a220
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 36df6f1c5363a9517c8f3bec4410f5c3d7e38325
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796709"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471050"
 ---
 # <a name="bc32053-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>BC32053: al volver a copiar el valor del parámetro ' ByRef ' ' \<parametername> ' en el argumento coincidente, se reduce el tipo ' \<typename1> ' al tipo ' \<typename2> '
 
@@ -35,7 +35,7 @@ Se llama a un procedimiento con un argumento que se amplía al tipo de parámetr
 
 - Si necesita devolver un valor al argumento de llamada, defina el operador de conversión inversa como [ampliación](../modifiers/widening.md), si es posible.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](../../programming-guide/language-features/procedures/index.md)
 - [Argumentos y parámetros de procedimiento](../../programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)

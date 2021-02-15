@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: crear una variable que no cambie de valor (Visual Basic)'
 title: Procedimiento para crear una variable que no cambia de valor
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 04e08784b5cfbdeb6db73b9b00fe9afa201bd06d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0392a27249de3bf604a73c8f8aaa16caf6f1c3e2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410521"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481940"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Cómo: Crear una variable que no cambia de valor (Visual Basic)
 

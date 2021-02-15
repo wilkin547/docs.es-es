@@ -1,21 +1,22 @@
 ---
+description: Más información acerca de cómo usar la varianza en delegados (Visual Basic)
 title: Uso de la varianza en delegados
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 842392a1342f7d3689d4d1f2a2adb7470eeda05e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d146460c515c1579a9a98d31aa48441f9584b83b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375789"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100482005"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Usar varianza en delegados (Visual Basic)
 
 Al asignar un método a un delegado, la *covarianza* y la *contravarianza* proporcionan flexibilidad para hacer coincidir un tipo de delegado con una firma de método. La covarianza permite que un método tenga un tipo de valor devuelto más derivado que el definido en el delegado. La contravarianza permite un método que tiene tipos de parámetro menos derivados que los del tipo de delegado.
 
-## <a name="example-1-covariance"></a>Ejemplo 1: covarianza
+## <a name="example-1-covariance"></a>Ejemplo 1: Covarianza
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descripción
 
 En este ejemplo se muestra cómo se pueden usar delegados con métodos que tienen tipos de valor devuelto derivados del tipo de valor devuelto en la firma del delegado. El tipo de datos devuelto por `DogsHandler` es de tipo `Dogs`, que se deriva del tipo `Mammals` definido en el delegado.
 
@@ -44,9 +45,9 @@ Class Test
 End Class
 ```
 
-## <a name="example-2-contravariance"></a>Ejemplo 2: contravarianza
+## <a name="example-2-contravariance"></a>Ejemplo 2: Contravarianza
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descripción
 
 En este ejemplo se muestra cómo se pueden usar delegados con métodos que tienen parámetros que son tipos base del tipo de parámetro de la firma del delegado. Con la contravarianza, puede usar un controlador de eventos en lugar de controladores independientes. En el ejemplo siguiente se usan dos delegados:
 
@@ -86,7 +87,7 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Varianza en delegados (Visual Basic)](variance-in-delegates.md)
 - [Usar la varianza para los delegados genéricos Func y Action (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

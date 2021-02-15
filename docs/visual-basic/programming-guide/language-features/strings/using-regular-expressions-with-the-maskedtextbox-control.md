@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: usar expresiones regulares con el control MaskedTextBox en Visual Basic'
 title: Uso de expresiones regulares con el control MaskedTextBox
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 68ffca6761d8f0634634ea2755786d3c0c02a6e2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072436"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471141"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilizar expresiones regulares con el control MaskedTextBox en Visual Basic
 
@@ -32,14 +33,14 @@ En este ejemplo se muestra cómo convertir expresiones regulares simples para tr
 |&|Carácter. Entrada necesaria.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
 |C|Carácter. Entry opcional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |A|Alfabético. Entry opcional.|\W|  
-|.|Marcador de posición decimal apropiado para la referencia cultural.|No está disponible.|  
-|,|Marcador de posición de miles apropiado para la referencia cultural.|No está disponible.|  
-|:|Separador de hora correspondiente a la referencia cultural.|No está disponible.|  
-|/|El separador de fecha correspondiente a la referencia cultural.|No está disponible.|  
-|$|Símbolo de moneda apropiado para la referencia cultural.|No está disponible.|  
-|\<|Convierte todos los caracteres que siguen a minúsculas.|No está disponible.|  
-|>|Convierte todos los caracteres que siguen a mayúsculas.|No está disponible.|  
-|&#124;|Deshace el desplazamiento anterior o el desplazamiento hacia abajo.|No está disponible.|  
+|.|Marcador de posición decimal apropiado para la referencia cultural.|No disponible.|  
+|,|Marcador de posición de miles apropiado para la referencia cultural.|No disponible.|  
+|:|Separador de hora correspondiente a la referencia cultural.|No disponible.|  
+|/|El separador de fecha correspondiente a la referencia cultural.|No disponible.|  
+|$|Símbolo de moneda apropiado para la referencia cultural.|No disponible.|  
+|\<|Convierte todos los caracteres que siguen a minúsculas.|No disponible.|  
+|>|Convierte todos los caracteres que siguen a mayúsculas.|No disponible.|  
+|&#124;|Deshace el desplazamiento anterior o el desplazamiento hacia abajo.|No disponible.|  
 |&#92;|Escapa un carácter de máscara, convirtiéndolo en un literal. " \\ \\ " es la secuencia de escape para una barra diagonal inversa.|&#92;|  
 |Todos los demás caracteres.|Literales. Todos los elementos que no son de máscara aparecerán como ellos mismos en <xref:System.Windows.Forms.MaskedTextBox> .|Todos los demás caracteres.|  
   
@@ -58,7 +59,7 @@ En este ejemplo se muestra cómo convertir expresiones regulares simples para tr
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Estados Unidos número de teléfono, código de área opcional. Si el usuario no desea escribir los caracteres opcionales, puede escribir espacios o colocar el puntero del mouse directamente en la posición de la máscara representada por el primer 0.|  
 |`$\d{6}.00`|`$999,999.00`|Un valor de moneda en el intervalo de 0 a 999999. Los caracteres Currency, milésima y decimal se reemplazarán en tiempo de ejecución por sus equivalentes específicos de la referencia cultural.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>

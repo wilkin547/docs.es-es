@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: inferencia de tipo de local (Visual Basic)'
 title: Inferencia de tipo de variable local
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 3979396d32aa5d3b853aa087d43f70d5987e510b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 50be8544229360287d2aef27f31360d7140640ac
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410404"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481706"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inferencia de tipo de variable local (Visual Basic)
 
@@ -63,7 +64,7 @@ El tipo de una variable también se puede inferir a partir de los valores devuel
 
 ## <a name="option-infer"></a>Option Infer
 
-`Option Infer`permite especificar si se permite la inferencia de tipo de variable local en un archivo determinado. Para habilitar o para bloquear la opción, escriba una de las siguientes instrucciones al principio del archivo.
+`Option Infer` permite especificar si se permite la inferencia de tipo de variable local en un archivo determinado. Para habilitar o para bloquear la opción, escriba una de las siguientes instrucciones al principio del archivo.
 
 `Option Infer On`
 
@@ -78,7 +79,7 @@ Para obtener más información, vea [Option Infer Statement](../../../language-r
 ## <a name="see-also"></a>Consulte también
 
 - [Tipos anónimos](../objects-and-classes/anonymous-types.md)
-- [Enlace anticipado y en tiempo de ejecución](../early-late-binding/index.md)
+- [Enlace en tiempo de compilación y en tiempo de ejecución](../early-late-binding/index.md)
 - [Instrucción For Each...Next](../../../language-reference/statements/for-each-next-statement.md)
 - [Instrucción For...Next](../../../language-reference/statements/for-next-statement.md)
 - [Option Infer (instrucción)](../../../language-reference/statements/option-infer-statement.md)

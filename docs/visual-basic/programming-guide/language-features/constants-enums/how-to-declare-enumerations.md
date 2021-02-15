@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: declarar enumeraciones (Visual Basic)'
 title: Procedimiento para declarar enumeraciones
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: 752b425ba32efe41a1ab1aa75de20039d36f5e50
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 10ce0b16a03b832c5afed4d7a310ffb729338e57
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058903"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471635"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Cómo: Declarar enumeraciones (Visual Basic)
 
@@ -43,7 +44,7 @@ Cree una enumeración con la `Enum` instrucción en la sección de declaraciones
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones y calificación de nombres](enumerations-and-name-qualification.md)
 - [Procedimiento para hacer referencia al miembro de una enumeración](how-to-refer-to-an-enumeration-member.md)

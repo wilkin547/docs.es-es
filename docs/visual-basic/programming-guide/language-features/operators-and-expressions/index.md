@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: operadores y expresiones en Visual Basic'
 title: Operadores y expresiones
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 01e3a53e998774caee8863675b9151a140606852
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 526051e16da29cd139abf587e1393ad331fdcdaa
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071682"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471401"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operadores y expresiones en Visual Basic
 
@@ -65,7 +66,7 @@ Un *operador* es un elemento de código que realiza una operación en uno o más
   
  En el ejemplo anterior, Visual Basic realiza las operaciones en la expresión del lado derecho del operador de asignación ( `=` ) y, a continuación, asigna el valor resultante a la variable `x` de la izquierda. No hay ningún límite práctico al número de operadores que se pueden combinar en una expresión, pero es necesario conocer la [prioridad de operadores en Visual Basic](../../../language-reference/operators/operator-precedence.md) para asegurarse de que se obtienen los resultados esperados.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Operadores](../../../language-reference/operators/index.md)
 - [Combinación eficaz de operadores](efficient-combination-of-operators.md)

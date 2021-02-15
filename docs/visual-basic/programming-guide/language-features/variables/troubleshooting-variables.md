@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo solucionar problemas de variables en Visual Basic
 title: Solución de problemas de variables
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: e2bcf0b779d98ea4b109ea6d33b69a15110d423c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c6348ee8eb13ccd19d83c2809d1684396b94be67
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080171"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481641"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Solucionar problemas de variables en Visual Basic
 
@@ -54,7 +55,7 @@ En esta página se enumeran algunos problemas comunes que pueden producirse al t
 
  Evite usar variables con el mismo nombre pero con un ámbito diferente. Si usa otros ensamblados o proyectos, evite en la medida de lo posible usar nombres definidos en dichos componentes externos. Si tiene más de una variable con el mismo nombre, asegúrese de calificar todas las referencias a esta. Para obtener más información, consulta [References to Declared Elements](../declared-elements/references-to-declared-elements.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Variables](index.md)
 - [Declaración de variable](variable-declaration.md)

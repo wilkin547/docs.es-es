@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)'
 title: Procedimiento para combinar contenido de archivos no similares (LINQ)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 7dac73a16d0d3fbf409f58628bc5c69716dcee14
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a0718463a36e1a3e1e312fbe0c0947e39648846d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398375"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468517"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)
 
@@ -120,7 +121,7 @@ End Class
 ' 12 total names in list
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (Visual Basic)](linq-and-strings.md)
 - [LINQ y directorios de archivos (Visual Basic)](linq-and-file-directories.md)

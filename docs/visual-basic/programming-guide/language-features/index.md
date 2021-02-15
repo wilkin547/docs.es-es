@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: características del lenguaje Visual Basic'
 title: Características del lenguaje
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: ae226520ecd7dff09023bcc88e610ff400c4019d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9d02d6e17c0f2bea852130c5e975a1ed315a0aba
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057863"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468478"
 ---
 # <a name="visual-basic-language-features"></a>Características del lenguaje Visual Basic
 
@@ -56,7 +57,7 @@ En los temas siguientes se presentan y describen los componentes esenciales de V
  Describe qué son las interfaces y cómo usarlas en las aplicaciones.  
   
  [LINQ](linq/index.md)  
- Proporciona vínculos a temas que presentan características de Language-Integrated Query (LINQ) y programación.  
+ Proporciona vínculos a temas que presentan las características y la programación de Language-Integrated Query (LINQ).  
   
  [Objetos y clases](objects-and-classes/index.md)  
  Proporciona información general sobre objetos y clases, cómo se utilizan, las relaciones que mantienen entre sí y las propiedades, los métodos y los eventos que exponen.  
@@ -81,7 +82,7 @@ En los temas siguientes se presentan y describen los componentes esenciales de V
   
 ## <a name="related-sections"></a>Secciones relacionadas
 
- [Recopilaciones](../concepts/collections.md)  
+ [Colecciones](../concepts/collections.md)  
  Describe algunos de los tipos de colecciones proporcionadas por .NET Framework. Muestra cómo usar colecciones sencillas y colecciones de pares clave-valor.  
   
  [Referencia del lenguaje Visual Basic](../../language-reference/index.md)  

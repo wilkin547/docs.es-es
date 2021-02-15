@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: variables en Visual Basic'
 title: Variables
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: bd6417033a6c2626d17ad003de6c637dd1e8adaa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d00907e451fa09c6e9b6be990a24a4d39b386622
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080223"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481719"
 ---
 # <a name="variables-in-visual-basic"></a>Variables en Visual Basic
 
@@ -37,7 +38,7 @@ A menudo tiene que almacenar valores al realizar cálculos con Visual Basic. Por
 
  Al igual que una variable, una *propiedad* representa un valor al que se puede tener acceso, pero es más compleja que una variable. Una propiedad usa bloques de código que controlan cómo establecer y recuperar su valor. Para obtener más información, vea [Differences Between Properties and Variables in Visual Basic](../procedures/differences-between-properties-and-variables.md) (Diferencias entre propiedades y variables en Visual Basic).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Declaración de variable](variable-declaration.md)
 - [Variables de objeto](object-variables.md)
