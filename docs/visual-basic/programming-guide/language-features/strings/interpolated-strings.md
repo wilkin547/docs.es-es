@@ -1,12 +1,13 @@
 ---
+description: 'Más información sobre: cadenas interpoladas (referencia de Visual Basic)'
 title: Cadenas interpoladas
 ms.date: 10/31/2017
-ms.openlocfilehash: c427b48ce58a59ff3878f24f1989db6ac8c8239a
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: c054401070079bdf85181619ef43c246feea5e18
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805283"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429667"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Cadenas interpoladas (referencia de Visual Basic)
 
@@ -30,7 +31,7 @@ La estructura de una cadena interpolada es la siguiente:
 $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."
 ```
 
-Donde:
+donde:
 
 - *field-width* es un entero con signo que indica el número de caracteres del campo. Si es positivo, el campo está alineado a la derecha. Si es negativo, está alineado a la izquierda.
 

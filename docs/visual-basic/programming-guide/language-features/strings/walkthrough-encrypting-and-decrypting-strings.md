@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Tutorial: cifrado y descifrado de cadenas en Visual Basic'
 title: Cifrar y descifrar cadenas
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: e0e3fc332bf9430b1fa56dbb7630f849d3a29c2e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: afc1eeaec85b2e430aead7f16401289b6e2e9e49
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072410"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471089"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Tutorial: Cifrar y descifrar cadenas en Visual Basic
 
@@ -75,7 +76,7 @@ En este tutorial se muestra cómo usar la <xref:System.Security.Cryptography.DES
   
      Al probar la aplicación, tenga en cuenta que no descifrará los datos si proporciona una contraseña incorrecta.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Security.Cryptography>
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>

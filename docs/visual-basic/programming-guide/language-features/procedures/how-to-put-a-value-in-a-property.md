@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: colocar un valor en una propiedad (Visual Basic)'
 title: Procedimiento para establecer un valor en una propiedad
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: 7d85066d4678ee2a53b8339bee2db20374482579
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 62f5552f821fb98bd3a4695505aba5ff73b08fc7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071409"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476207"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Cómo: Establecer un valor en una propiedad (Visual Basic)
 
@@ -35,7 +36,7 @@ Para almacenar un valor en una propiedad, coloque el nombre de la propiedad en e
   
 4. El valor generado en el lado derecho de la instrucción de asignación se almacena en la propiedad.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Procedimientos de propiedad](./property-procedures.md)

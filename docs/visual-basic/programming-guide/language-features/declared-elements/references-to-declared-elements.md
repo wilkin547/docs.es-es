@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: referencias a elementos declarados (Visual Basic)'
 title: References to Declared Elements
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: af5be47335b6d48bd6c0bccc30b8db15c9912807
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 75cc05381f01af00ac75995739647810fb7ff1d7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085885"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471440"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Referencias a elementos declarados (Visual Basic)
 
@@ -200,12 +201,12 @@ Dim xDoc As xD.XmlDocument
 
  Cuando dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *sombrear*, el otro. Un elemento sombreado no está disponible como referencia; en su lugar, cuando el código usa el nombre del elemento con sombra, el compilador Visual Basic lo resuelve en el elemento de sombreado. Para obtener una explicación más detallada de los ejemplos, vea [sombrear en Visual Basic](shadowing.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Declared Element Names](declared-element-names.md)
 - [Características de los elementos declarados](declared-element-characteristics.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
 - [Variables](../variables/index.md)
 - [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New (operador)](../../../language-reference/operators/new-operator.md)
-- [Pública](../../../language-reference/modifiers/public.md)
+- [New Operator (Nuevo operador)](../../../language-reference/operators/new-operator.md)
+- [Público](../../../language-reference/modifiers/public.md)

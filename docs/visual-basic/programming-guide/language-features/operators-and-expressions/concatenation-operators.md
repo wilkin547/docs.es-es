@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: operadores de concatenación en Visual Basic'
 title: Operadores de concatenación
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: c123438a86a2c3293a99770107d970535fcdbdf8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d007a830e4547f87e937cc7313c248485b4b574
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388795"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476402"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operadores de concatenación en Visual Basic
 
@@ -34,7 +35,7 @@ Estos operadores también concatenan variables de `String`, como indica el sigui
 
 El [operador +](../../../language-reference/operators/addition-operator.md) tiene el propósito principal de sumar dos números. aunque también puede concatenar operandos numéricos con operandos de cadena. El operador `+` posee un conjunto de reglas complejo que establecen si hay que sumar, concatenar, señalar un error de compilador o generar una excepción <xref:System.InvalidCastException> en tiempo de ejecución.
 
-El [operador&](../../../language-reference/operators/concatenation-operator.md) solo se define para los `String` operandos y siempre amplía sus operandos a `String` , independientemente de la configuración de `Option Strict` . El uso del operador `&` es recomendable para concatenar cadenas, ya que se está expresamente definido para cadenas y reduce las probabilidades de generar una conversión inintencionada.
+El [ operador&](../../../language-reference/operators/concatenation-operator.md) solo se define para los `String` operandos y siempre amplía sus operandos a `String` , independientemente de la configuración de `Option Strict` . El uso del operador `&` es recomendable para concatenar cadenas, ya que se está expresamente definido para cadenas y reduce las probabilidades de generar una conversión inintencionada.
 
 ## <a name="performance-string-and-stringbuilder"></a>Rendimiento: cadena y StringBuilder
 

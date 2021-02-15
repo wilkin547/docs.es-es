@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Novedades de Visual Basic'
 title: Novedades
 ms.date: 10/24/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 111430bf32debfcb80ea12aa9eb89c52f695d3cb
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 56aa88f9e4ca3c50e7fc3704685ae4ac535db12c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585694"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455241"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 

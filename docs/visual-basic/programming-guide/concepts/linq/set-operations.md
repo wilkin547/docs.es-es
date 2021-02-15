@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: operaciones Set (Visual Basic)'
 title: Operaciones Set
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: b6ff14794343ae7623ee38894cef02cfc0a2a597
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9c75c9e029ba260917f59c7d2ea0341c157bf406
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406825"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471674"
 ---
 # <a name="set-operations-visual-basic"></a>Operaciones Set (Visual Basic)
 
@@ -17,12 +18,12 @@ Los métodos del operador de consulta estándar que realizan operaciones set se 
 
 ## <a name="methods"></a>Métodos
 
-|Nombre del método|Description|Visual Basic sintaxis de expresiones de consulta|Más información|
+|Nombre del método|Descripción|Visual Basic sintaxis de expresiones de consulta|Más información|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Distinct|Quita valores duplicados de una colección.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
-|Except|Devuelve la diferencia de conjuntos, es decir, los elementos de una colección que no aparecen en una segunda colección.|No aplicable.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
-|Intersect|Devuelve la intersección de conjuntos, es decir, los elementos que aparecen en las dos colecciones.|No aplicable.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|
-|Union|Devuelve la unión de conjuntos, es decir, los elementos únicos que aparecen en una de las dos colecciones.|No aplicable.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|
+|Except|Devuelve la diferencia de conjuntos, es decir, los elementos de una colección que no aparecen en una segunda colección.|No es aplicable.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
+|Formar intersección|Devuelve la intersección de conjuntos, es decir, los elementos que aparecen en las dos colecciones.|No es aplicable.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|
+|Unión|Devuelve la unión de conjuntos, es decir, los elementos únicos que aparecen en una de las dos colecciones.|No es aplicable.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|
 
 ## <a name="comparison-of-set-operations"></a>Comparación de operaciones set
 
@@ -38,13 +39,13 @@ En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.E
 
 ![Gráfico que muestra la acción de Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Muestra el comportamiento de Except.")
 
-### <a name="intersect"></a>Intersect
+### <a name="intersect"></a>Formar intersección
 
 En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La secuencia devuelta contiene los elementos que son comunes a las dos secuencias de entrada.
 
 ![Gráfico en el que se muestra la intersección de dos secuencias.](./media/set-operations/intersection-two-sequences.png)
 
-### <a name="union"></a>Union
+### <a name="union"></a>Unión
 
 En la siguiente ilustración se muestra una operación de unión en dos secuencias de caracteres. La secuencia devuelta contiene los elementos únicos de las dos secuencias de entrada.
 

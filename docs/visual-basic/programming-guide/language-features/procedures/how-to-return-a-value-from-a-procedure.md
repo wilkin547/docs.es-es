@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: devolver un valor de un procedimiento (Visual Basic)'
 title: Procedimiento para devolver un valor de un procedimiento
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: cbc785a07aa8a7b299508a093e08d5d0510b838a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c158f15b1e6acb7334d78037d84145981822e177
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071383"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476181"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Cómo: Devolver un valor de un procedimiento (Visual Basic)
 
@@ -45,7 +46,7 @@ Un `Function` procedimiento devuelve un valor al código de llamada mediante la 
   
      Para obtener más información y un ejemplo, vea el tema sobre el valor devuelto en la [instrucción function](../../../language-reference/statements/function-statement.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Procedimientos Sub](./sub-procedures.md)

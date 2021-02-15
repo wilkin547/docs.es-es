@@ -2,12 +2,12 @@
 title: Proveedores de tipos
 description: Obtenga más información sobre los proveedores de tipos de F#, un componente que proporciona tipos, propiedades y métodos para usar en los programas.
 ms.date: 04/02/2018
-ms.openlocfilehash: eae64d2e318ee93f0b8d5b91f0c6da6c91743527
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f01e207407b2282005d5722bed798df1d49d3ef6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202107"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468231"
 ---
 # <a name="type-providers"></a>Proveedores de tipos
 
@@ -29,7 +29,7 @@ Los proveedores de tipos de borrado producen tipos que solo se pueden consumir e
 
 Las siguientes bibliotecas de uso generalizado contienen proveedores de tipos para diferentes usos:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) incluye proveedores de tipos para recursos y formatos de documento JSON, XML, CSV y HTML.
+- FSharp.Data incluye proveedores de tipos para recursos y formatos de documento JSON, XML, CSV y HTML.
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) proporciona acceso fuertemente tipado a bases de datos relacionales a través de la asignación de objetos y consultas LINQ de F# en dichos orígenes de datos.
 - [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) tiene un conjunto de proveedores de tipos para la inserción comprobada en tiempo de compilación de T-SQL en F#.
 - El [proveedor de tipos de Azure Storage](https://fsprojects.github.io/AzureStorageTypeProvider/) ofrece tipos para Azure Blobs, Tables y Queues, lo cual permite acceder a dichos recursos sin necesidad de especificar los nombres de los recursos como cadenas en todo el programa.

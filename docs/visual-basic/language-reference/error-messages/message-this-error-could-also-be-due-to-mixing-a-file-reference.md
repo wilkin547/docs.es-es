@@ -1,5 +1,5 @@
 ---
-description: "Más información acerca de: BC30971: <message> este error también podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '<assemblyname>"
+description: "Más información acerca de: BC30971: <message> este error también podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado ' <assemblyname> '"
 title: <message> Este error también puede ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado "<assemblyname>"
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: c3b7c27c3f253389cd0a8e725ddcae3816c612b5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 73b0e3623bdb5fd7b8ab2110d85436b3f415b4f9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99795851"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470946"
 ---
 # <a name="bc30971-message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>BC30971: \<message> este error también podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado ' \<assemblyname> '
 

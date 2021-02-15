@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Cómo: hacer varias solicitudes web en paralelo mediante Async y Await (Visual Basic)'
 title: Procedimiento para realizar varias solicitudes web en paralelo con async y await
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 40bab392af94ba941c2562e885a8d2e08aeea5b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e1137424911b77ba94a760a4b4b034e45ef83462
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396589"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474348"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic) (Realización de solicitudes web en paralelo mediante Async y Await [Visual Basic])
 

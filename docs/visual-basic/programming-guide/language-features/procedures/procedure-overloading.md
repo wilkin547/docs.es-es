@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: sobrecarga de procedimientos (Visual Basic)'
 title: Sobrecarga de procedimientos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: f8accc74fbdd9b1d8cf9bc3d8f6ddd26f73452b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 27e79e12153bc7ac6a9e3b3b5997a50c1c354195
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363881"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466645"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Sobrecarga de procedimiento (Visual Basic)
 
@@ -50,13 +51,13 @@ Al sobrecargar un procedimiento, se aplican las siguientes reglas:
 
 - **Elementos que no forman parte de la firma**. No se puede sobrecargar un procedimiento sin variar la firma. En concreto, no se puede sobrecargar un procedimiento cambiando solo uno o varios de los siguientes elementos:
 
-  - Palabras clave de modificador de procedimientos, como `Public` , `Shared` y`Static`
+  - Palabras clave de modificador de procedimientos, como `Public` , `Shared` y `Static`
 
   - Nombres de parámetros de tipo o parámetro
 
   - Restricciones de parámetros de tipo (para un procedimiento genérico)
 
-  - Palabras clave de modificador de parámetro, como `ByRef` y`Optional`
+  - Palabras clave de modificador de parámetro, como `ByRef` y `Optional`
 
   - Si devuelve un valor
 
@@ -98,6 +99,6 @@ La ventaja de sobrecargar un procedimiento es la flexibilidad de la llamada. Par
 - [Procedimiento para sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Procedimiento para sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md)
-- [Resolución de sobrecarga](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)
 - [Sobrecargas](../../../language-reference/modifiers/overloads.md)
 - [Tipos genéricos en Visual Basic](../data-types/generic-types.md)

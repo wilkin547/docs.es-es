@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: llamar a un procedimiento que no devuelve un valor (Visual Basic)'
 title: Procedimiento apara llamar a un procedimiento que no devuelve un valor
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 2686a4d9dc10cde209f558771feeb5ba4f4ccb21
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3aaa6b4358f0585323e6c8321eea7dbaa4906a44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075010"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466775"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Cómo: Llamar a un procedimiento que no devuelve un valor (Visual Basic)
 
@@ -29,7 +30,7 @@ Un `Sub` procedimiento no devuelve un valor al código de llamada. Se llama expl
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
