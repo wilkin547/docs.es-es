@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipos genéricos en Visual Basic (Visual Basic)'
 title: Tipos genéricos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1164513825240b1e83fbce2aeb6478430b0bc250
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090266"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428550"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos en Visual Basic (Visual Basic)
 
@@ -129,7 +130,7 @@ Un *tipo genérico* es un elemento de programación único que se adapta para ej
   
 - El argumento de tipo debe exponer un constructor sin parámetros accesible para el código que crea objetos a partir de él.  
   
-- El argumento de tipo debe ser un *tipo de referencia*o debe ser un *tipo de valor*  
+- El argumento de tipo debe ser un *tipo de referencia* o debe ser un *tipo de valor*  
   
  Si necesita imponer más que un requisito, use una *lista de restricciones* separadas por comas entre llaves (`{ }`). Para requerir un constructor accesible, incluya la palabra clave [New Operator](../../../language-reference/operators/new-operator.md) en la lista. Para requerir un tipo de referencia, incluya la palabra clave `Class` ; para requerir un tipo de valor, incluya la palabra clave `Structure` .  
   
@@ -155,7 +156,7 @@ Un *tipo genérico* es un elemento de programación único que se adapta para ej
   
 - *Tipo construido*. Clase, estructura, interfaz, procedimiento o delegado que se declara a partir de un tipo genérico proporcionando argumentos de tipo para sus parámetros de tipo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipo de datos](index.md)
 - [Caracteres de tipo](type-characters.md)

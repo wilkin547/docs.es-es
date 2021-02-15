@@ -16,22 +16,24 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 1fce275204b729b4d23729ca432e06a5a249620d
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: df2cbc8299d853b5730bc39eb25c6f97b6575655
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065140"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429213"
 ---
 # <a name="naming-rules"></a>Reglas de nomenclatura
 
-En el `.editorconfig` archivo, puede definir **reglas de nomenclatura** para el modo en que los elementos de código del lenguaje de programación .net &mdash; , como las clases, las propiedades y los métodos, &mdash; deben tener nombre. Por ejemplo, puede especificar que los miembros públicos deben escribirse en mayúsculas o que los campos privados deban comenzar por `_` .
+En el `.editorconfig` archivo, puede definir **reglas de nomenclatura** que especifiquen y apliquen cómo se deben asignar nombres a los elementos de código del lenguaje de programación .net, como &mdash; clases, propiedades y métodos &mdash; . Por ejemplo, puede especificar que los miembros públicos deben escribirse en mayúsculas o que los campos privados deban comenzar por `_` .
 
 Una regla de nomenclatura tiene tres componentes:
 
-* El **grupo de símbolos al** que &mdash; se aplica la regla.
-* **Estilo de nomenclatura** que se va a asociar a la regla.
+* El **grupo de símbolos** al que se aplica la regla, por ejemplo, los miembros públicos o los campos privados.
+* **Estilo de nomenclatura** que se va a asociar a la regla, por ejemplo, que el nombre debe escribirse en mayúsculas o empezar por un carácter de subrayado.
 * La gravedad para aplicar la Convención.
+
+En primer lugar, debe especificar el grupo de símbolos y el estilo de nomenclatura, y asignar un título a cada uno de ellos. A continuación, especifique la regla de nomenclatura, que vincula todo.
 
 ## <a name="general-syntax"></a>Sintaxis general
 
@@ -170,7 +172,7 @@ dotnet_naming_rule.public_members_must_be_capitalized.style    = first_word_uppe
 dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Reglas del lenguaje](language-rules.md)
 - [Reglas de formato](formatting-rules.md)

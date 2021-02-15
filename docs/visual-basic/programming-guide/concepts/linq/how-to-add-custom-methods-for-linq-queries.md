@@ -1,21 +1,22 @@
 ---
+description: 'Más información acerca de cómo: agregar métodos personalizados para las consultas LINQ (Visual Basic)'
 title: 'Cómo: agregar métodos personalizados para las consultas LINQ'
 ms.date: 08/28/2020
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 7d38a45263135fa10dc53dc0d09b8129838e78e6
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 62acf22a8be9986388233ee34121a97d65a87f43
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89117784"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424533"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Cómo: agregar métodos personalizados para las consultas LINQ (Visual Basic)
 
-Puede extender el conjunto de métodos que utiliza para las consultas LINQ agregando métodos de extensión a la <xref:System.Collections.Generic.IEnumerable%601> interfaz. Por ejemplo, además de las operaciones estándar promedio o máximo, se crea un método de agregado personalizado para calcular un valor único a partir de una secuencia de valores. También creará un método que funciona como un filtro personalizado o una transformación de datos específica para una secuencia de valores y devuelve una nueva secuencia. Ejemplos de dichos métodos son <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Reverse%2A>.
+Para extender el conjunto de métodos que usa para consultas LINQ, agregue métodos de extensión a la interfaz <xref:System.Collections.Generic.IEnumerable%601>. Por ejemplo, además de las operaciones habituales de promedio o de máximo, puede crear un método de agregación personalizado para calcular un solo valor a partir de una secuencia de valores. También puede crear un método que funcione como un filtro personalizado o como una transformación de datos específica para una secuencia de valores y que devuelva una nueva secuencia. Ejemplos de dichos métodos son <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Reverse%2A>.
 
 Si extiende la interfaz <xref:System.Collections.Generic.IEnumerable%601>, puede aplicar los métodos personalizados a cualquier colección enumerable. Para obtener más información, vea [Métodos de extensión](../../language-features/procedures/extension-methods.md).
 
-## <a name="adding-an-aggregate-method"></a>Agregar un método de agregado
+## <a name="adding-an-aggregate-method"></a>Adición de un método de agregación
 
 Un método de agregación calcula un valor único a partir de un conjunto de valores. LINQ proporciona varios métodos de agregación, incluidos <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> y <xref:System.Linq.Enumerable.Max%2A>. Si quiere crear su propio método de agregación, agregue un método de extensión a la interfaz <xref:System.Collections.Generic.IEnumerable%601>.
 

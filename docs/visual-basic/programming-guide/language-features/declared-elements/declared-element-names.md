@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: nombres de elementos declarados (Visual Basic)'
 title: Declared Element Names
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 327a18644c1dc1d8dae59016b8e30600357d2ca9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ba0a6d6b236c0c4e9ce81c37a1cca4e709cc5588
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086184"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425690"
 ---
 # <a name="declared-element-names-visual-basic"></a>Nombres de elementos declarados (Visual Basic)
 
@@ -65,7 +66,7 @@ Cada elemento declarado tiene un nombre, también denominado *identificador*, qu
  `xyz$wv`  
   
 > [!CAUTION]
-> Los nombres de elemento que comienzan por un carácter de subrayado ( `_` ) no forman parte de la [independencia del lenguaje y de los componentes independientes del lenguaje](../../../../standard/language-independence-and-language-independent-components.md) (CLS), por lo que el código conforme a CLS no puede usar un componente que defina dichos nombres. Sin embargo, un carácter de subrayado en cualquier otra posición en un nombre de elemento es conforme a CLS.  
+> Los nombres de elemento que comienzan por un carácter de subrayado ( `_` ) no forman parte de la [independencia del lenguaje y de los componentes de Language-Independent](../../../../standard/language-independence-and-language-independent-components.md) (CLS), por lo que el código conforme a CLS no puede usar un componente que defina dichos nombres. Sin embargo, un carácter de subrayado en cualquier otra posición en un nombre de elemento es conforme a CLS.  
   
 ### <a name="name-length-guidelines"></a>Instrucciones de longitud de nombre  
 
@@ -95,7 +96,7 @@ Cada elemento declarado tiene un nombre, también denominado *identificador*, qu
 
  La comparación de nombres es independiente de la configuración regional. Si dos nombres coinciden en una configuración regional, se garantiza que coincidan en todas las configuraciones regionales.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Elementos declarados](index.md)
 - [Características de los elementos declarados](declared-element-characteristics.md)
