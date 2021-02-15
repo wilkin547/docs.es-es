@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: literales XML y la especificación XML 1,0 (Visual Basic)'
 title: Literales XML y la especificación XML 1.0
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 0a2f4339eab7875b2976e07ed244fac32730be00
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5cc7a66f1ad77f051ae4a5967c9b4db948b5d170
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099000"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100457867"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Literales XML y la especificación XML 1.0 (Visual Basic)
 
@@ -29,7 +30,7 @@ La sintaxis de los literales XML en Visual Basic admite la mayor parte de la esp
   
 - La sintaxis de expresión incrustada permitida en los literales de documento y elemento no es un XML válido.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear XML en Visual Basic](creating-xml.md)
 - [Literal de documento XML](../../../language-reference/xml-literals/xml-document-literal.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: me, My, MyBase y MyClass en Visual Basic'
 title: Me, My, MyBase y MyClass
 ms.date: 07/20/2015
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: cc96f39d9dc37b7f1a5d8205e145869fb1b5ecef
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 04be6cc7063101a59838bf809731a66c27007283
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072241"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432798"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, My, MyBase y MyClass en Visual Basic
 
@@ -63,6 +64,6 @@ ChangeFormColor(Me)
 
  La `MyClass` palabra clave se comporta como una variable de objeto que hace referencia a la instancia actual de una clase como se implementó originalmente. `MyClass` es similar a `Me` , pero todas las llamadas a métodos en él se tratan como si el método fuera `NotOverridable` .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Fundamentos de la herencia](../language-features/objects-and-classes/inheritance-basics.md)

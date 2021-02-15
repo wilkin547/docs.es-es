@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Declaración de variables de objeto (Visual Basic)'
 title: Declaración de variables de objeto
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 74b1401df3dbb2d744de74734d10cbcd92e9689e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 853f9e775976022e52121c164884fd91ef0a831c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077051"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463720"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Declaración de variables de objeto (Visual Basic)
 
@@ -131,13 +132,13 @@ Dim anyForm As System.Windows.Forms.Form
   
  Todos los miembros de una clase base están disponibles para las clases derivadas, pero los miembros adicionales de una clase derivada no están disponibles para la clase base.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Variables de objeto](object-variables.md)
 - [Asignación de variables de objeto](object-variable-assignment.md)
 - [Valores de las variables de objeto](object-variable-values.md)
 - [Cómo: Declarar una variable de objeto y asignarle un objeto en Visual Basic](how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
 - [Procedimiento para obtener acceso a los miembros de un objeto](how-to-access-members-of-an-object.md)
-- [New (operador)](../../../language-reference/operators/new-operator.md)
+- [New Operator (Nuevo operador)](../../../language-reference/operators/new-operator.md)
 - [Option Strict (instrucción)](../../../language-reference/statements/option-strict-statement.md)
 - [Inferencia de tipo de variable local](local-type-inference.md)

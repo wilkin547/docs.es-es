@@ -1,13 +1,14 @@
 ---
+description: Obtener más información sobre cómo habilitar un origen de datos para las consultas LINQ
 title: Habilitar un origen de datos para LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: a60527f0594964ec9642cdd565fd06eb5d46cf85
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b5a325b28c5ac3d3a0adc869ca77d775774fbb2a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078351"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469856"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitar un origen de datos para realizar consultas LINQ
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: ejecutar árboles de expresión (Visual Basic)'
 title: Procedimiento para ejecutar árboles de expresión
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 703a2dc49ba905c81948267f6eec3ca7578fc308
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: debd850f35d8239c20d9b848a43dafd76ac19bbc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077337"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430708"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>How to: Execute Expression Trees (Visual Basic) (Cómo ejecutar árboles de expresión en Visual Basic)
 

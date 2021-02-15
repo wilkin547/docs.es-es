@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: no se puede crear la carpeta porque ya existe un archivo con la misma ruta de acceso'
 title: La carpeta no se puede crear porque ya existe un archivo con la misma ruta de acceso.
 ms.date: 07/20/2015
 ms.assetid: 1085c60d-4d38-4d67-a149-d3923eef0cfd
-ms.openlocfilehash: 216b39bbbd4da478ba1dc4796a0b183d4eb1d9d9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 865596203a82221e884db281105f27d1d7bb423c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090461"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430825"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>La carpeta no se puede crear porque ya existe un archivo con la misma ruta de acceso.
 
@@ -19,7 +20,7 @@ Se ha intentado crear un directorio, pero ya existe un archivo con esa ruta de a
   
 - Quite el archivo redundante si ya no es necesario.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimiento para crear un directorio](../developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)
 - [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

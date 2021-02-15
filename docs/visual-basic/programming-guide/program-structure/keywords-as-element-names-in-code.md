@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Palabras clave como nombres de elemento en el código (Visual Basic)'
 title: Palabras clave como nombres de elementos en el código
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: e895db180dbb44cd4cfe4053d4be429f13324fe8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4782c0f3ea065e3e140d449575c187cf2254cd08
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065754"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433218"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Palabras clave como nombres de elementos en código (Visual Basic)
 
@@ -31,7 +32,7 @@ Cualquier elemento de programa, como una variable, una clase o un miembro, puede
 > [!NOTE]
 > El programa también podría incluir nombres de elementos proporcionados por otros ensamblados a los que se hace referencia. Si estos nombres entran en conflicto con palabras clave restringidas, la colocación de los corchetes hace que Visual Basic los interprete como elementos definidos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Convenciones de nomenclatura de Visual Basic](naming-conventions.md)
 - [Convenciones de código y estructura de programas](program-structure-and-code-conventions.md)
