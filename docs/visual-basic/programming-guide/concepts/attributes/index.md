@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: información general sobre los atributos (Visual Basic)'
 title: Información general de atributos
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: a0a080d44796289cc3562803c84ec915dcedd314
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f25e69452f0af1c89af667619e673f8906704d1f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400711"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437727"
 ---
 # <a name="attributes-overview-visual-basic"></a>Información general sobre los atributos (Visual Basic)
 

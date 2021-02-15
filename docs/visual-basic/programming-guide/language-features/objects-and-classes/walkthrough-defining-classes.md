@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Tutorial: definir clases (Visual Basic)'
 title: Definir clases
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: 646c6ce307131f3edba194af19920eade9c1753c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a97e04b92db3387966afa410d5697a05b482ae09
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84389119"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438793"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>Tutorial: Definir clases (Visual Basic)
 
@@ -34,7 +35,7 @@ En este tutorial se muestra cómo definir clases, que puede usar para crear obje
   
 2. Seleccione aplicación de Windows en la lista de Visual Basic plantillas de proyecto para mostrar el nuevo proyecto.  
   
-3. Agregue una nueva clase al proyecto haciendo clic en **Agregar clase** en el menú **proyecto** . Aparecerá el cuadro de diálogo **Agregar nuevo elemento** .  
+3. Agregue una nueva clase al proyecto haciendo clic en **Agregar clase** en el menú **proyecto** . Aparecerá el cuadro de diálogo **Agregar nuevo elemento**.  
   
 4. Seleccione la plantilla **clase** .  
   

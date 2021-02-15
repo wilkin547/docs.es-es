@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: b61fede9144e554ee68f0b41adac36209adb7288
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ff5ee6569d8526f44ca489ddc48b09b02f6f8804
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177809"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461663"
 ---
 # <a name="net-framework-data-providers"></a>Proveedores de datos .NET Framework
 
@@ -129,7 +129,7 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
-> El proveedor de datos de .NET Framework para ODBC requiere MDAC 2,6 o una versión posterior, y se recomienda MDAC 2,8 SP1. Puede descargar MDAC 2,8 SP1 desde el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=5793).
+> El proveedor de datos de .NET Framework para ODBC requiere MDAC 2,6 o una versión posterior, y se recomienda MDAC 2,8 SP1.
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Proveedor de datos .NET Framework para Oracle  
 
