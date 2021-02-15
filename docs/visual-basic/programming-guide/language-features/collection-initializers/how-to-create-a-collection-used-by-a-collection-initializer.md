@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de cómo: crear una colección usada por un inicializador de colección (Visual Basic)'
 title: Procedimiento para crear una colección usada por un inicializador de colección
 ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: c858db10-424d-47e0-92cd-e08087cc5ebc
-ms.openlocfilehash: b332ffb44ebc20ce8431e586fc380b8c6a29967d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 09928cb0fbeb0346fd0e1148ffcd6ddce54279c0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086379"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460025"
 ---
 # <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a>Cómo: Crear una colección usada por un inicializador de colección (Visual Basic)
 
@@ -27,7 +28,7 @@ Cuando se usa un inicializador de colección para crear una colección, el compi
   
  [!code-vb[VbVbalrCollectionInitializersHowTo2#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo2/VB/Module1.vb#3)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Inicializadores de colección](index.md)
 - [Procedimiento para crear un método de extensión de adiciones usado por un inicializador de colección](how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)

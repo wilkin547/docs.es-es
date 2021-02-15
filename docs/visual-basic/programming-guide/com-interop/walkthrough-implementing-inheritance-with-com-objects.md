@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Tutorial: implementar la herencia con objetos COM (Visual Basic)'
 title: 'Tutorial: Implementación de la herencia mediante objetos COM'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: bdb891e1a150f0d7b79aefcc3db1f18dc8e84be4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc16990f25126cba52ef3ea457e8c3157c987c60
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396732"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438949"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Tutorial: Implementar la herencia mediante objetos COM (Visual Basic)
 
@@ -26,7 +27,7 @@ En el procedimiento siguiente se muestra cómo utilizar Visual Basic 6,0 para cr
 
 1. En Visual Basic 6,0, abra un nuevo proyecto DLL de ActiveX. Se crea un proyecto denominado `Project1` . Tiene una clase denominada `Class1` .
 
-2. En el **Explorador de proyectos**, haga clic con el botón secundario en **Project1**y, a continuación, haga clic en **propiedades de Project1**. Se muestra el cuadro de diálogo **propiedades del proyecto** .
+2. En el **Explorador de proyectos**, haga clic con el botón secundario en **Project1** y, a continuación, haga clic en **propiedades de Project1**. Se muestra el cuadro de diálogo **propiedades del proyecto** .
 
 3. En la pestaña **General** del cuadro de diálogo **propiedades del proyecto** , cambie el nombre del proyecto escribiendo `ComObject1` en el campo **nombre del proyecto** .
 
@@ -67,7 +68,7 @@ En el procedimiento siguiente se muestra cómo utilizar Visual Basic 6,0 para cr
     End Function
     ```
 
-10. Cree y registre el objeto COM; para ello, haga clic en **crear ComObject1. dll** en el menú **archivo** .
+10. Cree y registre el objeto COM; para ello, haga clic en **crear ComObject1.dll** en el menú **archivo** .
 
     > [!NOTE]
     > Aunque también puede exponer una clase creada con Visual Basic como un objeto COM, no es un objeto COM verdadero y no se puede usar en este tutorial. Para obtener más información, consulte [interoperabilidad com en aplicaciones .NET Framework](com-interoperability-in-net-framework-applications.md).
@@ -88,7 +89,7 @@ En el procedimiento siguiente, creará un ensamblado de interoperabilidad, que a
 
 4. En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**.
 
-     Se mostrará el cuadro de diálogo **Agregar nuevo elemento** .
+     Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.
 
 5. En el panel **plantillas** , haga clic en **clase**.
 

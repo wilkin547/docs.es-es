@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: expresiones lambda (Visual Basic)'
 title: Expresiones lambda
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 54a9c0cf275a67c77748c32771c3c5dcbdb916d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: adac7f0d0dbbff575837f691d70c7752eebb39f1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406708"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480094"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda (expresiones) (Visual Basic)
 
@@ -122,15 +123,15 @@ El acceso a las variables locales y los parámetros del ámbito contenedor puede
 
 En el ejemplo siguiente se muestra la amplia gama de derechos de acceso de la expresión lambda anidada. Cuando la expresión lambda devuelta se ejecuta desde `Main` como `aDel` , tiene acceso a estos elementos:
 
-- Campo de la clase en la que se define:`aField`
+- Campo de la clase en la que se define: `aField`
 
-- Propiedad de la clase en la que se define:`aProp`
+- Propiedad de la clase en la que se define: `aProp`
 
-- Parámetro del método `functionWithNestedLambda` , en el que se define:`level1`
+- Parámetro del método `functionWithNestedLambda` , en el que se define: `level1`
 
-- Una variable local de `functionWithNestedLambda` :`localVar`
+- Una variable local de `functionWithNestedLambda` : `localVar`
 
-- Parámetro de la expresión lambda en la que está anidado:`level2`
+- Parámetro de la expresión lambda en la que está anidado: `level2`
 
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
 

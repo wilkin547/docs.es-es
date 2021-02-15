@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de la interoperabilidad de solución de problemas (Visual Basic)
 title: Solución de problemas de interoperabilidad
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 135b121638b92adc5a3b0920aa29d10fd1d62d14
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 49a108e47c9614f11db6f6c1e7ba0b8714e936b2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075998"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438962"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionar problemas de interoperabilidad (Visual Basic)
 
@@ -31,7 +32,7 @@ Al interoperar entre COM y el código administrado del .NET Framework, puede enc
 
  En ocasiones, puede que tenga que usar tipos de datos que no forman parte de la .NET Framework. Los ensamblados de interoperabilidad controlan la mayor parte del trabajo de los objetos COM, pero puede que tenga que controlar los tipos de datos que se utilizan cuando los objetos administrados se exponen a COM. Por ejemplo, las estructuras de las bibliotecas de clases deben especificar el `BStr` tipo no administrado en las cadenas enviadas a los objetos com creados por Visual Basic 6,0 y versiones anteriores. En tales casos, puede usar el <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para que los tipos administrados se expongan como tipos no administrados.  
   
-## <a name="exporting-fixed-length-strings-to-unmanaged-code"></a><a name="vbconinteroperabilitymarshalinganchor2"></a> Exportar cadenas de longitud fija a código no administrado  
+## <a name="exporting-fixed-length-strings-to-unmanaged-code"></a><a name="vbconinteroperabilitymarshalinganchor2"></a> Exportar cadenas de Fixed-Length a código no administrado  
 
  En Visual Basic 6,0 y versiones anteriores, las cadenas se exportan a objetos COM como secuencias de bytes sin un carácter de terminación null. Por compatibilidad con otros lenguajes, Visual Basic .NET incluye un carácter de terminación al exportar cadenas. La mejor manera de abordar esta incompatibilidad es exportar cadenas que no tienen el carácter de terminación como matrices de `Byte` o `Char` .  
   
@@ -115,7 +116,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 - Control de marco de Microsoft Forms 2,0  
   
-- Control de flechas, también conocido como control de número  
+- Up-Down control, también conocido como control de número  
   
 - Control de pestaña Sheridan  
   
@@ -141,7 +142,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Los ensamblados que no se comparten se deben ubicar en paralelo en el directorio con la aplicación que realiza la llamada.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Interoperabilidad COM](index.md)
