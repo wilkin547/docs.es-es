@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipos de relaciones en operaciones de consulta (Visual Basic)'
 title: Relaciones entre tipos en las operaciones de consulta LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 73a287541ddf115510bf6ab5c830eafac370cc3a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6a59308e76afdcf1aaf7084904b9925cd5bef14
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406734"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428225"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relaciones entre tipos en operaciones de consulta (Visual Basic)
 
-Las variables que se usan en las operaciones de consulta de Language-Integrated Query (LINQ) están fuertemente tipadas y deben ser compatibles entre sí. El establecimiento de tipos seguros se usa en el origen de datos, en la propia consulta y en la ejecución de la consulta. En la ilustración siguiente se identifican los términos que se usan para describir una consulta LINQ. Para obtener más información acerca de las partes de una consulta, consulte [operaciones básicas de consulta (Visual Basic)](basic-query-operations.md).
+Las variables usadas en las operaciones de consulta de Language-Integrated (LINQ) están fuertemente tipadas y deben ser compatibles entre sí. El establecimiento de tipos seguros se usa en el origen de datos, en la propia consulta y en la ejecución de la consulta. En la ilustración siguiente se identifican los términos que se usan para describir una consulta LINQ. Para obtener más información acerca de las partes de una consulta, consulte [operaciones básicas de consulta (Visual Basic)](basic-query-operations.md).
 
 ![Captura de pantalla que muestra una consulta de pseudocódigo con elementos resaltados.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
@@ -98,7 +99,7 @@ Sin la inferencia de tipo local, el ejemplo anterior sería más complicado de e
 
 ## <a name="queries-that-require-anonymous-types"></a>Consultas que requieren tipos anónimos
 
-En el ejemplo siguiente se muestra una situación más compleja. En el ejemplo anterior, no era conveniente especificar explícitamente los tipos para todas las variables. En este ejemplo, es imposible. En lugar de seleccionar `Customer` elementos completos del origen de datos, o un único campo de cada elemento, la `Select` cláusula de esta consulta devuelve dos propiedades del objeto original `Customer` : `Name` y `City` . En respuesta a la `Select` cláusula, el compilador define un tipo anónimo que contiene esas dos propiedades. El resultado de ejecutar `nameCityQuery` en el `For Each` bucle es una colección de instancias del nuevo tipo anónimo. Dado que el tipo anónimo no tiene ningún nombre utilizable, no se puede especificar el tipo de `nameCityQuery` o `custInfo` explícitamente. Es decir, con un tipo anónimo, no hay ningún nombre de tipo para usar en lugar de `String` en `IEnumerable(Of String)` . Para obtener más información, vea [Tipos anónimos](../../language-features/objects-and-classes/anonymous-types.md).
+En el ejemplo siguiente se muestra una situación más compleja. En el ejemplo anterior, no era conveniente especificar explícitamente los tipos para todas las variables. En este ejemplo, es imposible. En lugar de seleccionar `Customer` elementos completos del origen de datos, o un único campo de cada elemento, la `Select` cláusula de esta consulta devuelve dos propiedades del objeto original `Customer` : `Name` y `City` . En respuesta a la `Select` cláusula, el compilador define un tipo anónimo que contiene esas dos propiedades. El resultado de ejecutar `nameCityQuery` en el `For Each` bucle es una colección de instancias del nuevo tipo anónimo. Dado que el tipo anónimo no tiene ningún nombre utilizable, no se puede especificar el tipo de `nameCityQuery` o `custInfo` explícitamente. Es decir, con un tipo anónimo, no hay ningún nombre de tipo para usar en lugar de `String` en `IEnumerable(Of String)` . Para obtener más información, consulte [Tipos anónimos](../../language-features/objects-and-classes/anonymous-types.md) (Guía de programación de C#).
 
 ```vb
 ' Method GetTable returns a table of Customer objects.

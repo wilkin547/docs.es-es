@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: el nombre de origen especificado en EventLogSource se registra en un registro distinto del especificado en EventLogName'
 title: El nombre de origen especificado en EventLogSource se registra en un registro distinto del especificado en EventLogName.
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
-ms.openlocfilehash: 1b577e3b0613001b6241dcfdc59c8c84029197d2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d6b9c1265276f94369d37e6ac55604b761fb9bcc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058935"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455462"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>El nombre de origen especificado en EventLogSource se registra en un registro distinto del especificado en EventLogName.
 
@@ -19,7 +20,7 @@ El `EventLog` intenta hacer referencia a un origen que está registrado en un re
   
 - Asegúrese de que el origen está registrado en el registro correcto. Para ello, use el método <xref:System.Diagnostics.EventLog.CreateEventSource%2A> o una de sus sobrecargas para especificar una cadena que identifique de forma única el componente en el registro de eventos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Administrar registros de eventos](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
 - [Referencias del registro de eventos](/previous-versions/visualstudio/visual-studio-2008/k43k9z2a(v=vs.90))

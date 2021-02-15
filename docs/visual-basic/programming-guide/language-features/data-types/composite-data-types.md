@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipos de datos compuestos (Visual Basic)'
 title: Tipos de datos compuestos
 ms.date: 04/25/2017
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 842b74aa7cc99c8196fdfb1eb6c976d9e72a4fa4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 981ee36c416f2524be155b1238f5b306c98aa92b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077168"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456437"
 ---
 # <a name="composite-data-types-visual-basic"></a>Tipos de datos compuestos (Visual Basic)
 
@@ -66,7 +67,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
   
  Para obtener más información sobre las clases, vea [objetos y clases](../objects-and-classes/index.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipo de datos](index.md)
 - [Tipos de datos básicos](elementary-data-types.md)

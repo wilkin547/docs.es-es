@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipos anónimos (Visual Basic)'
 title: Tipos anónimos
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ab3cf8c3c02ff35890f71ad6c7f314b51b87133
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 447ca914726d4b426ad4ba2ec370a4bbe9589b81
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075244"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425625"
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipos anónimos (Visual Basic)
 
@@ -82,7 +83,7 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
   
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
-### <a name="read-only-values"></a>Valores de solo lectura  
+### <a name="read-only-values"></a>Read-Only valores  
 
  No se pueden cambiar los valores de las propiedades de clave. Por ejemplo, en `prod8` el ejemplo anterior, los `Name` campos y `Price` son `read-only` , pero se `OnHand` pueden cambiar.  
   
@@ -134,11 +135,11 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
   
  Para obtener más información sobre el código creado por el compilador y la funcionalidad de los métodos invalidados, vea [definición de tipo anónimo](anonymous-type-definition.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Inicializadores de objeto: tipos con nombre y anónimos](object-initializers-named-and-anonymous-types.md)
 - [Inferencia de tipo de variable local](../variables/local-type-inference.md)
 - [Introducción a LINQ en Visual Basic](../linq/introduction-to-linq.md)
 - [Procedimiento para deducir tipos y nombres de propiedades en declaraciones de tipos anónimos](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Definición de tipo anónimo](anonymous-type-definition.md)
-- [Clave](../../../language-reference/modifiers/key.md)
+- [Key](../../../language-reference/modifiers/key.md)

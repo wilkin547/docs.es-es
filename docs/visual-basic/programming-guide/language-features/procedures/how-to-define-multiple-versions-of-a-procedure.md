@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: definir varias versiones de un procedimiento (Visual Basic)'
 title: Procedimiento para definir varias versiones de un procedimiento
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 2661603ba33dd0bc28ac1a192794a4534225b641
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4b470e478c22c3a827f71b9b28056e16d6d9b7cd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071643"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456034"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Cómo: Definir varias versiones de un procedimiento (Visual Basic)
 
@@ -45,7 +46,7 @@ Puede definir un procedimiento en varias versiones si lo *sobrecarga* , con el m
 
  Asegúrese de que cada una de las versiones sobrecargadas tiene el mismo nombre de procedimiento pero una lista de parámetros diferente.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

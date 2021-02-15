@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: devolver un resultado de consulta LINQ como un tipo específico (Visual Basic)'
 title: Procedimiento para devolver el resultado de una consulta con LINQ como tipo específico
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 249c3eebaeec3d09a297fead07ab056caff1b618
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8abeb3b5f174b1671415cbb55f35952e3bc77e7d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071812"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425664"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Cómo: Devolver el resultado de una consulta con LINQ como tipo específico (Visual Basic)
 

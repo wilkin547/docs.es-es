@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: consultar una ArrayList con LINQ (Visual Basic)'
 title: Procedimiento para consultar un objeto ArrayList con LINQ
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: df7c6e1cee6d8e37074ce209f3bea97a402d8dbe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396472"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428524"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Cómo: consultar una ArrayList con LINQ (Visual Basic)
 
@@ -78,6 +79,6 @@ End Module
 '   Garcia: 97
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LINQ to Objects (Visual Basic)](linq-to-objects.md)

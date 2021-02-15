@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Visual Basic convenciones de nomenclatura'
 title: Convenciones de nomenclatura
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: b25d246bd31147b7a9ba2c72214926fdb5ca8895
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 058d3b06ca1da71c4d8993c6bd451531ec758dbd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072150"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461013"
 ---
 # <a name="visual-basic-naming-conventions"></a>Convenciones de nomenclatura de Visual Basic
 
-Al asignar un nombre a un elemento en la aplicación Visual Basic, el primer carácter de ese nombre debe ser un carácter alfabético o un carácter de subrayado. Sin embargo, tenga en cuenta que los nombres que empiezan por un carácter de subrayado no son compatibles con la [independencia del lenguaje y los componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+Al asignar un nombre a un elemento en la aplicación Visual Basic, el primer carácter de ese nombre debe ser un carácter alfabético o un carácter de subrayado. Sin embargo, tenga en cuenta que los nombres que empiezan por un carácter de subrayado no son compatibles con la [independencia del lenguaje y los componentes de Language-Independent](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Las sugerencias siguientes se aplican a la asignación de nombres.  
   
@@ -41,7 +42,7 @@ Al asignar un nombre a un elemento en la aplicación Visual Basic, el primer car
   
 - Evite usar nombres en un ámbito interno que coincidan con los nombres de un ámbito externo. Se pueden producir errores si se tiene acceso a la variable equivocada. Si se produce un conflicto entre una variable y la palabra clave con el mismo nombre, debe identificar la palabra clave anteponiendo la biblioteca de tipos adecuada. Por ejemplo, si tiene una variable denominada `Date` , solo puede utilizar la función intrínseca `Date` llamando a <xref:System.DateTime.Date%2A?displayProperty=nameWithType> .  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Palabras clave como nombres de elementos en el código](keywords-as-element-names-in-code.md)
 - [Me, My, MyBase y MyClass](me-my-mybase-and-myclass.md)

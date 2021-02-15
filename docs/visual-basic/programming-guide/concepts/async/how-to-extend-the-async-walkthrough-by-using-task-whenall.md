@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: ampliar el tutorial de Async mediante Task. WhenAll (Visual Basic)'
 title: Procedimiento para ampliar el tutorial de async mediante Task.WhenAll
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: fb323852c83b1edf51396a0b800c2d54a833d0c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fc303d6b2ed64cb2003c06724fcd21000d0b3abf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396628"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474387"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic) (Ampliación del tutorial de Async mediante Task.WhenAll [Visual Basic])
 
@@ -26,7 +27,7 @@ El método `Task.WhenAll` se aplica a una colección de tareas. La aplicación d
 
 1. Agregue el `ProcessURLAsync` método a la primera aplicación que se desarrolla en [Tutorial: acceso a la web mediante Async y Await (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md).
 
-    - Si descargó el código de [ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra el proyecto AsyncWalkthrough y, a continuación, agregue `ProcessURLAsync` al archivo MainWindow. Xaml. VB.
+    - Si descargó el código de  [ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra el proyecto AsyncWalkthrough y, a continuación, agregue `ProcessURLAsync` al archivo MainWindow. Xaml. VB.
 
     - Si desarrolló el código completando el tutorial, agregue `ProcessURLAsync` a la aplicación que incluye el método `GetURLContentsAsync`. El archivo MainWindow. Xaml. VB para esta aplicación es el primer ejemplo de la sección "ejemplos de código completo desde el tutorial".
 

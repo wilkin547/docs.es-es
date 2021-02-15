@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructuras (Visual Basic)'
 title: Estructuras
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-ms.openlocfilehash: 04ccb5d39ea7c76a1e75dbeafd9230f2cb604d7c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c79ba7b4ea8e80aced6c2a280c4896ed9f8c9916
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090240"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427627"
 ---
 # <a name="structures-visual-basic"></a>Estructuras (Visual Basic)
 
 Una *estructura* es una generalización del tipo definido por el usuario (UDT) que admiten las versiones anteriores de Visual Basic. Además de los campos, las estructuras pueden exponer propiedades, métodos y eventos. Una estructura puede implementar una o más interfaces, y puede declarar niveles de acceso individuales para cada campo.  
   
- Puede combinar elementos de datos de tipos diferentes para crear una estructura. Una estructura asocia uno o más *elementos* entre sí y con la propia estructura. Cuando se declara una estructura, se convierte en un *tipo de datos compuesto*y se pueden declarar variables de ese tipo.  
+ Puede combinar elementos de datos de tipos diferentes para crear una estructura. Una estructura asocia uno o más *elementos* entre sí y con la propia estructura. Cuando se declara una estructura, se convierte en un *tipo de datos compuesto* y se pueden declarar variables de ese tipo.  
   
  Las estructuras son útiles cuando se desea que una sola variable contenga varios datos relacionados. Por ejemplo, puede que desee conservar el nombre de un empleado, la extensión de teléfono y el salario juntos. Puede usar varias variables para esta información, o puede definir una estructura y utilizarla para una única variable de empleado. La ventaja de la estructura se hace patente cuando tiene muchos empleados y, por tanto, muchas instancias de la variable.  
   

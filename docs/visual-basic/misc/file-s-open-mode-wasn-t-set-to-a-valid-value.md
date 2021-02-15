@@ -1,19 +1,20 @@
 ---
+description: 'Más información sobre: el modo de apertura del archivo no se ha establecido en un valor válido'
 title: El modo de apertura del archivo no se estableció en un valor válido
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: d3ced7efa8169a6f29dfb9c307123699ef42527b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 75026589c18a209f4a512bf4ddb706eae2d51ca8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090825"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429408"
 ---
 # <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>El modo de apertura del archivo no se estableció en un valor válido
 
 El valor proporcionado para el modo de apertura del archivo no era válido. En la siguiente tabla se muestran los valores válidos para la enumeración <xref:Microsoft.VisualBasic.OpenMode> .  
   
-|Valor|Mode|  
+|Value|Modo|  
 |-----------|----------|  
 |1|`OpenMode.Input`|  
 |2|`OpenMode.Output`|  
@@ -25,7 +26,7 @@ El valor proporcionado para el modo de apertura del archivo no era válido. En l
   
 - Compruebe el valor que se proporciona para el modo de apertura del archivo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Lectura de archivos](../developing-apps/programming/drives-directories-files/reading-from-files.md)
