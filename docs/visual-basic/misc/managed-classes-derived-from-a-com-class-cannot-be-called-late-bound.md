@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: las clases administradas derivadas de una clase COM no se pueden llamar enlazadas en tiempo de ejecución.'
 title: No se pueden realizar llamadas enlazadas en tiempo de ejecución a clases administradas derivadas de una clase COM.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrLateboundCallToInheritedComClass
 ms.assetid: 7bc16e84-8d29-4f8e-bc4f-002c65c71099
-ms.openlocfilehash: 401cb5d7194cbef616c87d59e5b1ed7f923fe6f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bde124c3e5c52d4c0dbb0e6e1f7250574c83be8d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402127"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430045"
 ---
 # <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a>No se pueden realizar llamadas enlazadas en tiempo de ejecución a clases administradas derivadas de una clase COM.
 

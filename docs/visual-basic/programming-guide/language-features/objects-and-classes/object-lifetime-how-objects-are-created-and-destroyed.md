@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: duración de los objetos: cómo se crean y destruyen (Visual Basic)'
 title: 'Duración de los objetos: cómo se crean y destruyen'
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: a32a5d075b5b1d02632c80216e7c2c12920bf4a2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 424a5619ea50d9da9bf069488ce7cac16527efbe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544146"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438832"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración de los objetos: cómo se crean y destruyen (Visual Basic)
 
@@ -155,10 +156,10 @@ CLR destruye periódicamente objetos cuando el sistema determina que ya no son n
 
 Otra diferencia entre los sistemas de recolección de elementos no utilizados implica el uso de `Nothing`. Para aprovechar el recuento de referencias de Visual Basic 6.0 y versiones anteriores, los programadores a veces asignaban `Nothing` a variables de objetos para liberar las referencias que incluían dichas variables. Si la variable almacenaba la última referencia al objeto, los recursos del objeto se liberaban inmediatamente. En versiones posteriores de Visual Basic, aunque puede haber casos en los que este procedimiento todavía sea útil, su uso nunca hace que el objeto de referencia libere sus recursos inmediatamente. Para liberar inmediatamente los recursos, utilice el método <xref:System.IDisposable.Dispose%2A> del objeto, si está disponible. El único caso en el que una variable debe establecerse en `Nothing` es cuando su duración sea larga en comparación con el tiempo que tarda el recolector de elementos no utilizados en detectar objetos huérfanos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.IDisposable.Dispose%2A>
 - [Inicialización y finalización de componentes](/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
-- [New (operador)](../../../language-reference/operators/new-operator.md)
+- [New Operator (Nuevo operador)](../../../language-reference/operators/new-operator.md)
 - [Limpieza de recursos no administrados](../../../../standard/garbage-collection/unmanaged.md)
 - [Nothing](../../../language-reference/nothing.md)

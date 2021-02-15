@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: flujo de control en Visual Basic'
 title: Flujo de control
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], control
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
-ms.openlocfilehash: e47a48755c6752dc8c46e35399f1a1efae9c4a08
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 01db948049e0dd964aa94d80b43ba648e296a797
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353929"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480640"
 ---
 # <a name="control-flow-in-visual-basic"></a>Flujo de control en Visual Basic
 
@@ -21,7 +22,7 @@ Si un programa no se regula, procede a través de las instrucciones que contiene
 
  Las estructuras de control permiten regular el flujo de la ejecución del programa. Mediante el uso de estructuras de control, puede escribir Visual Basic código que toma decisiones o que repite las acciones. Otras estructuras de control permiten garantizar la eliminación de un recurso o ejecutar una serie de instrucciones en la misma referencia de objeto.
   
-## <a name="in-this-section"></a>Esta sección
+## <a name="in-this-section"></a>En esta sección
 
  [Estructuras de decisión](decision-structures.md)  
  Describe las estructuras de control que se usan para la bifurcación.
@@ -37,5 +38,5 @@ Si un programa no se regula, procede a través de las instrucciones que contiene
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
- [Resumen de flujo de control](../../../language-reference/keywords/control-flow-summary.md)  
+ [Resumen del flujo de control](../../../language-reference/keywords/control-flow-summary.md)  
  Proporciona vínculos a páginas de referencia del lenguaje sobre este tema.

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: obtener acceso a una variable oculta por una clase derivada (Visual Basic)'
 title: Procedimiento para obtener acceso a una variable que se encuentra oculta por una clase derivada
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: c5ff802a0f6e081acd00d7cdfab4a8296b4daad9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ac1dd8afc8c32c91b748c8316d035d69468d887
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392862"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430058"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Cómo: Obtener acceso a una variable que oculta una clase derivada (Visual Basic)
 
@@ -45,7 +46,7 @@ Si la variable de clase derivada sombrea una variable de la clase base, oculta l
     End Class
     ```
 
-    En el ejemplo anterior se declara la variable `shadowString` en la clase base y se sombrea en la clase derivada. El procedimiento `showStrings` de la clase derivada muestra la versión de sombreado de la cadena cuando el nombre `shadowString` no está calificado. A continuación, muestra la versión sombreada cuando `shadowString` se califica con la `MyBase` palabra clave.
+    En el ejemplo anterior se declara la variable `shadowString` en la clase base y se sombrea en la clase derivada. El procedimiento `showStrings` de la clase derivada muestra la versión de sombreado de la cadena cuando el nombre `shadowString` no está calificado. A continuación, muestra la versión sombreada cuando `shadowString` se califica con la `MyBase`  palabra clave.
 
 ## <a name="robust-programming"></a>Programación sólida
 

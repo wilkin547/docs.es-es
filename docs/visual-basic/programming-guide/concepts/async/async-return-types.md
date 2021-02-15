@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: tipos de valor devueltos Async (Visual Basic)'
 title: Tipos de valor devueltos de Async
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 5d19fc9831580412da24333be0885fce55384658
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12a7f577a89ff8f8037de879f9e37d6fdb917aa8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396719"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438923"
 ---
 # <a name="async-return-types-visual-basic"></a>Async Return Types (Visual Basic) (Tipos de valor devuelto de Async [Visual Basic])
 
@@ -81,7 +82,7 @@ textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
 textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 ```
 
-## <a name="task-return-type"></a><a name="BKMK_TaskReturnType"></a>Tipo de valor devuelto de tarea
+## <a name="task-return-type"></a><a name="BKMK_TaskReturnType"></a> Tipo de valor devuelto de tarea
 
 Los métodos asincrónicos que no contienen una instrucción return o que contienen una instrucción return que no devuelve un operando tienen normalmente un tipo de valor devuelto de <xref:System.Threading.Tasks.Task>. Estos métodos serían procedimientos [Sub](../../language-features/procedures/sub-procedures.md) si se escribieron para ejecutarse de forma sincrónica. Si se usa un tipo de valor devuelto `Task` para un método asincrónico, un método de llamada puede usar un operador `Await` para suspender la finalización del llamador hasta que finalice el método asincrónico llamado.
 
@@ -124,7 +125,7 @@ textBox1.Text &= vbCrLf & "Application can continue working while the Task runs.
 Await simpleTask
 ```
 
-## <a name="void-return-type"></a><a name="BKMK_VoidReturnType"></a>Tipo de valor devuelto void
+## <a name="void-return-type"></a><a name="BKMK_VoidReturnType"></a> Tipo de valor devuelto void
 
 El uso principal de `Sub` los procedimientos está en los controladores de eventos, donde no hay ningún tipo de valor devuelto (denominado tipo de valor devuelto void en otros lenguajes). Un valor devuelto void también se puede usar para invalidar métodos que devuelven void o para los métodos que realizan actividades que se pueden clasificar como "desencadenar y omitir" (dispare y olvídese). Pero se debe devolver `Task` siempre que sea posible, ya que no se puede esperar a un método asincrónico que devuelve void. Cualquier llamador de este método debe poder continuar hasta completarse sin esperar a que finalice el método asincrónico llamado y el llamador debe ser independiente de los valores o las excepciones que genera el método asincrónico.
 
@@ -149,7 +150,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub
 ```
 
-## <a name="complete-example"></a><a name="BKMK_Example"></a>Ejemplo completo
+## <a name="complete-example"></a><a name="BKMK_Example"></a> Ejemplo completo
 
 El siguiente proyecto de Windows Presentation Foundation (WPF) contiene los ejemplos de código de este tema.
 
@@ -161,7 +162,7 @@ El siguiente proyecto de Windows Presentation Foundation (WPF) contiene los ejem
 
      Aparece el cuadro de diálogo **Nuevo proyecto** .
 
-3. En la categoría **instalado**, **plantillas** , elija **Visual Basic**y, a continuación, elija **Windows**. Seleccione **Aplicación WPF** en la lista de tipos de proyecto.
+3. En la categoría **instalado**, **plantillas** , elija **Visual Basic** y, a continuación, elija **Windows**. Seleccione **Aplicación WPF** en la lista de tipos de proyecto.
 
 4. Escriba `AsyncReturnTypes` como el nombre del proyecto y elija el botón **Aceptar**.
 
@@ -277,7 +278,7 @@ El siguiente proyecto de Windows Presentation Foundation (WPF) contiene los ejem
     End Class
     ```
 
-9. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio**.
+9. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .
 
      Debería aparecer el siguiente resultado:
 
@@ -297,10 +298,10 @@ El siguiente proyecto de Windows Presentation Foundation (WPF) contiene los ejem
     All done, exiting button-click event handler.
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [Tutorial: Acceso a web usando Async y Await (C# y Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Control Flow in Async Programs (Visual Basic)](control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [Visual Basic])
-- [Asincrónica](../../../language-reference/modifiers/async.md)
-- [Await (operador)](../../../language-reference/operators/await-operator.md)
+- [Asincrónico](../../../language-reference/modifiers/async.md)
+- [Await (Operador)](../../../language-reference/operators/await-operator.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: <number> la línea no se puede analizar mediante los FieldWidths actuales'
 title: La línea <number> no se puede analizar mediante los FieldWidths actuales
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: bd7c372f3cfee3babe4b3fdf190bf8ed87dab6db
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 58a4da34c33c952c60d65c6cfbaeaa86e902238c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100378"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430175"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>La línea \<number> no se puede analizar mediante los FieldWidths actuales
 
@@ -19,7 +20,7 @@ La línea especificada no se puede analizar porque sus campos tienen anchos dist
   
 - Ajuste `FieldWidths` para que la línea se pueda analizar correctamente o inserte código de control de excepciones para controlar la línea.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimiento para leer archivos de texto con varios formatos](../developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [My. Computer. FileSystem. OpenTextFieldParser](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)

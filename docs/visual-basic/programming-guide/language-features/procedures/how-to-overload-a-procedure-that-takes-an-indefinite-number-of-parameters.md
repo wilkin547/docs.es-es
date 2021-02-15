@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: sobrecargar un procedimiento que toma un número indefinido de parámetros (Visual Basic)'
 title: Procedimiento para sobrecargar un procedimiento que toma un número indefinido de parámetros
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 10cd7d11b0efe9fa5eb3ae24269a4cdbe33bc08a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 97e391c2981760e012d56e1f93c24eb60ce3ebfe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071552"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460051"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Cómo: Sobrecargar un procedimiento que toma un número indefinido de parámetros (Visual Basic)
 
@@ -57,7 +58,7 @@ Si un procedimiento tiene un parámetro [ParamArray](../../../language-reference
 
  Siempre que se trata de una matriz que puede ser indefinidamente grande, existe el riesgo de que se produzca una gran cantidad de capacidad interna de la aplicación. Si acepta una matriz de parámetros, debe comprobar la longitud de la matriz que se le ha pasado al código de llamada y tomar los pasos adecuados si es demasiado grande para la aplicación.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

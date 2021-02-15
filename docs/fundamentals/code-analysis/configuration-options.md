@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 8f76c9c86c202ef1bad23bffe8379b0b93a53f17
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9c09fc381a161a9deea012d98d06ab57f2f7345e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99787726"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480549"
 ---
 # <a name="configuration-options-for-code-analysis"></a>Opciones de configuración para el análisis de código
 
@@ -60,14 +60,14 @@ Las opciones específicas de la regla se pueden aplicar a una sola regla, a un c
 
 En la tabla siguiente se muestran los diferentes niveles de gravedad de la regla que se pueden configurar para todas las reglas del analizador, incluidas las reglas de [calidad de código](quality-rules/index.md) y [estilo de código](style-rules/index.md) .
 
-| Gravedad | Comportamiento en tiempo de compilación |
+| Valor de configuración de gravedad | Comportamiento en tiempo de compilación |
 |-|-|
 | `error` | Las infracciones aparecen como *errores* de compilación y producen errores en las compilaciones.|
 | `warning` | Las infracciones aparecen como *advertencias* de compilación, pero no hacen que se produzca un error en las compilaciones (a menos que tenga una opción establecida para tratar advertencias como errores). |
 | `suggestion` | Las infracciones aparecen como *mensajes* de compilación y como sugerencias en el IDE de Visual Studio. |
 | `silent` | Las infracciones no son visibles para el usuario. |
 | `none` | La regla se suprime por completo. |
-| `default` | Se usa la gravedad predeterminada de la regla. |
+| `default` | Se usa la gravedad predeterminada de la regla. Los niveles de gravedad predeterminados para cada versión de .NET se muestran en el [repositorio Roslyn-analizadores](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md). En esa tabla, "Disabled" corresponde a `none` , "Hidden" corresponde a `silent` y "info" corresponde a `suggestion` . |
 
 > [!TIP]
 > Para obtener información sobre cómo se exponen las gravedades de las reglas en Visual Studio, vea [niveles de gravedad](/visualstudio/ide/editorconfig-language-conventions#severity-levels).
@@ -91,6 +91,12 @@ Para establecer la gravedad de la regla predeterminada para todas las reglas del
 ```ini
 dotnet_analyzer_diagnostic.severity = <severity value>
 ```
+
+> [!IMPORTANT]
+> Cuando se configura el nivel de gravedad para varias reglas con una sola entrada, ya sea para una *categoría* de reglas o para *todas* las reglas, la gravedad solo se aplica a las reglas que están [habilitadas de forma predeterminada](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md). Para habilitar las reglas que están deshabilitadas de forma predeterminada, debe:
+>
+> - Agregue una `dotnet_diagnostic.<rule ID>.severity = <severity>` entrada de configuración explícita para cada regla.
+> - Habilite *todas* las reglas estableciendo [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) en `AllEnabledByDefault` .
 
 #### <a name="precedence"></a>Prioridad
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: controlar el ámbito de una variable (Visual Basic)'
 title: Procedimiento para controlar el ámbito de una variable
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 2ce7c1700eec54542719e6e0880466ca136e86f6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c6da599f76883cba545efbdf9570aa05770602a2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095438"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429876"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Cómo: Controlar el ámbito de una variable (Visual Basic)
 
-Normalmente, una variable está en el *ámbito*o es visible como referencia, en toda la región en la que se declara. En algunos casos, el nivel de *acceso* de la variable puede influir en su ámbito.  
+Normalmente, una variable está en el *ámbito* o es visible como referencia, en toda la región en la que se declara. En algunos casos, el nivel de *acceso* de la variable puede influir en su ámbito.  
   
  Para obtener más información, consulta [Scope in Visual Basic](scope.md).  
   
@@ -91,7 +92,7 @@ Public strMsg As String
 
  Cuanto más estrecho sea el ámbito de una variable, menor será la probabilidad de que el código malintencionado pueda hacer un uso inadecuado de ella.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ámbito en Visual Basic](scope.md)
 - [Período de duración en Visual Basic](lifetime.md)

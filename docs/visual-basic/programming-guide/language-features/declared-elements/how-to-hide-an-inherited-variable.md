@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: ocultar una variable heredada (Visual Basic)'
 title: Procedimiento para ocultar una variable heredada
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: f49bba0497f9f4f2774b01284c815bba9aaed119
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be2de980e27b318151c795ae36bd92a01d47d55e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357275"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429902"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Cómo: Ocultar una variable heredada (Visual Basic)
 
