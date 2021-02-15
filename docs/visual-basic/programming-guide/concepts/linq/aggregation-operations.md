@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: operaciones de agregación (Visual Basic)'
 title: Operaciones de agregación
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 1cf82d8acfdb1f8b0fc33c324064574b0dd01f4a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ef41faf03100814e062ec98afb8fe17b1ef64bc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078403"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462170"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Operaciones de agregación (Visual Basic)
 
@@ -69,7 +70,7 @@ Una operación de agregación calcula un valor único a partir de una colección
   
  [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)

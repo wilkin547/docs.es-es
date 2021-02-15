@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipos de datos de caracteres (Visual Basic)'
 title: Tipos de datos de caracteres
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 5fde5eff40d83bdd7d90cd611bd6749106db6e16
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2197c0210cb0c2287baff9856889334f5f95bd4d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077181"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466398"
 ---
 # <a name="character-data-types-visual-basic"></a>Tipos de datos de caracteres (Visual Basic)
 
@@ -42,7 +43,7 @@ Visual Basic proporciona *tipos de datos de caracteres* para tratar con caracter
   
  Para obtener más información, vea [String (tipo de datos](../../../language-reference/data-types/string-data-type.md)).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipos de datos básicos](elementary-data-types.md)
 - [Tipos de datos compuestos](composite-data-types.md)

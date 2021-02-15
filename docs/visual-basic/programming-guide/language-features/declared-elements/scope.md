@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ámbito en Visual Basic'
 title: Ámbito
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 1bee904996257474b7457b2aefb1f17d250933cb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5b5412f5743162bb91fc3651d08f5c7ff9ba8abd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410739"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480211"
 ---
 # <a name="scope-in-visual-basic"></a>Ámbito en Visual Basic
 
@@ -57,7 +58,7 @@ Un bloque es un conjunto de instrucciones incluidas en las instrucciones de decl
 
 - `Do` y `Loop`
 
-- `For`[ `Each` ] y`Next`
+- `For` [ `Each` ] y `Next`
 
 - `If` y `End If`
 
@@ -126,7 +127,7 @@ Public strMsg As String
 
 El ámbito de espacio de nombres incluye espacios de nombres anidados. Un elemento disponible desde dentro de un espacio de nombres también está disponible en cualquier espacio de nombres anidado dentro de ese espacio de nombres.
 
-Si el proyecto no contiene ninguna [instrucción de espacio de nombres](../../../language-reference/statements/namespace-statement.md), todo el proyecto se encuentra en el mismo espacio de nombres. En este caso, el ámbito del espacio de nombres se puede considerar como ámbito del proyecto. `Public`los elementos de un módulo, clase o estructura también están disponibles para cualquier proyecto que haga referencia a su proyecto.
+Si el proyecto no contiene ninguna [instrucción de espacio de nombres](../../../language-reference/statements/namespace-statement.md), todo el proyecto se encuentra en el mismo espacio de nombres. En este caso, el ámbito del espacio de nombres se puede considerar como ámbito del proyecto. `Public` los elementos de un módulo, clase o estructura también están disponibles para cualquier proyecto que haga referencia a su proyecto.
 
 ## <a name="choice-of-scope"></a>Elección del ámbito
 

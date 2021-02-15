@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: escribir datos de objetos en un archivo XML (Visual Basic)'
 title: Procedimiento para escribir datos de objeto en un archivo XML
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: af62d10b29e76701668fd3d595b967bd1754a22c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c6935fa97ed8813528630f5794e0a8e3e7e77b4d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077233"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486841"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>How to: Write Object Data to an XML File (Visual Basic) (Escritura de datos de objetos en un archivo XML [Visual Basic])
 

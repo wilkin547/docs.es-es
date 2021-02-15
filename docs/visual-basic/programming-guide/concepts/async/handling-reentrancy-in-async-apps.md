@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo controlar la reentrada en aplicaciones asincrónicas (Visual Basic)
 title: Controlar la reentrada en aplicaciones asincrónicas
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 2d1af14016f82b5de875d3638b132e14c7d2280d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aca917c1b22655547f155009c5877140d9ca5e43
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396641"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425807"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Handling Reentrancy in Async Apps (Visual Basic) (Control de reentrada en aplicaciones asincrónicas [Visual Basic])
 
@@ -560,7 +561,7 @@ La sección siguiente proporciona el código para compilar el ejemplo como una a
 
      Aparece el cuadro de diálogo **Nuevo proyecto** .
 
-3. En el panel **plantillas instaladas** , expanda **Visual Basic**y, a continuación, expanda **Windows**.
+3. En el panel **plantillas instaladas** , expanda **Visual Basic** y, a continuación, expanda **Windows**.
 
 4. En la lista de tipos de proyecto, seleccione **Aplicación WPF**.
 

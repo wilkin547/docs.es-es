@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: llamar a un procedimiento almacenado mediante LINQ (Visual Basic)'
 title: Procedimiento para llamar a un procedimiento almacenado mediante LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 7e5fecf0c4c0d3a561ec7d0c4ac03c9d9ce7f759
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f6fca7ac008e5f0d5f68fdf9c192eaadae9412ef
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075140"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466333"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Cómo: Llamar a un procedimiento almacenado usando LINQ (Visual Basic)
 

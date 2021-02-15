@@ -1,13 +1,14 @@
 ---
-title: 'Cómo: Buscar caracteres en una cadena (LINQ)'
+description: 'Más información acerca de cómo: buscar caracteres en una cadena (LINQ) (Visual Basic)'
+title: Procedimiento para buscar caracteres en una cadena (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 2f306a488610aaa5775210eba3d7312b092545a7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: bd8fabc06e88c83ae4e89079378ad67efb13c446
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345521"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425755"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Cómo: buscar caracteres en una cadena (LINQ) (Visual Basic)
 
@@ -58,9 +59,9 @@ End Class
 
 ## <a name="compile-the-code"></a>Compilar el código
 
-Cree un proyecto de aplicación de consola de Visual Basic, con una instrucción de `Imports` para el espacio de nombres System. Linq.
+Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (Visual Basic)](linq-and-strings.md)
 - [Cómo combinar consultas LINQ con expresiones regulares (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)

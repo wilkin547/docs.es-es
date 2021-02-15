@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Tutorial: escribir consultas en Visual Basic'
 title: Creación de consultas
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c2abca183f1241cff314a4367c7bd9f1b9f239ea
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55a1b3382d587b7982b79448334c4688895fa6e6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554598"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466814"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Tutorial: Escribir consultas en Visual Basic
 
@@ -26,7 +27,7 @@ Después de completar este tutorial, estará listo para pasar a los ejemplos y l
 
 1. Inicie Visual Studio.
 
-2. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.
+2. En el menú **Archivo** , elija **Nuevo** y haga clic en **Proyecto**.
 
 3. En la lista **plantillas instaladas** , haga clic en **Visual Basic**.
 
@@ -36,7 +37,7 @@ Después de completar este tutorial, estará listo para pasar a los ejemplos y l
 
 5. En la [Página compilar, diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), asegúrese de que la **opción Infer** está establecida en **on**.
 
-## <a name="add-an-in-memory-data-source"></a>Agregar un origen de datos en memoria
+## <a name="add-an-in-memory-data-source"></a>Agregar un origen de datos de In-Memory
 
 El origen de datos para las consultas de este tutorial es una lista de `Student` objetos. Cada `Student` objeto contiene un nombre, un apellido, un año de clase y un rango académico en el cuerpo del alumno.
 
@@ -149,7 +150,7 @@ Una vez que esté familiarizado con los conceptos básicos sobre cómo trabajar 
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Language-Integrated Query (LINQ) (Visual Basic)](index.md)
 - [Introducción a LINQ en Visual Basic](getting-started-with-linq.md)

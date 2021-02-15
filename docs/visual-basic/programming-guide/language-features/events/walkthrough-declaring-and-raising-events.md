@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Tutorial: declarar y provocar eventos (Visual Basic)'
 title: Declarar y generar eventos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 07ef611b50cfa13f77fa168d58dd3b43e97eeec6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 98e9d2eabd1ace06de9f8cc7931013093d864e7a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057993"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466385"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Tutorial: Declarar y provocar eventos (Visual Basic)
 
@@ -63,7 +64,7 @@ En este tutorial se muestra cómo declarar y generar eventos para una clase deno
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2. Agregue el código siguiente a la clase `Widget`:  
+2. Agregue el siguiente código a la clase `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
@@ -75,7 +76,7 @@ En este tutorial se muestra cómo declarar y generar eventos para una clase deno
   
  Ahora que la `Widget` clase puede generar eventos, puede pasar al siguiente tutorial. [Tutorial: controlar eventos](walkthrough-handling-events.md) muestra cómo utilizar `WithEvents` para asociar un controlador de eventos al `PercentDone` evento.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>

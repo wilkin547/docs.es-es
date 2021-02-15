@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Declaración de variables en Visual Basic'
 title: Declaración de variables
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 8d78509e1604fee4a151608f6166de6fc8ccfdaa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ef0e7bc7a99f320bd40788ef019b05c7ebf4ce46
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080158"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462703"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaración de variable en Visual Basic
 
@@ -38,9 +39,9 @@ Declare una variable para especificar su nombre y sus características. La instr
   
 ### <a name="shared-and-instance-variables"></a>Variables compartidas y de instancia  
 
- En una clase o estructura, la categoría de una variable miembro depende de si es o no compartida. Si se declara con la palabra clave [Shared](../../../language-reference/modifiers/shared.md) , es una *variable compartida*y existe en una sola copia compartida entre todas las instancias de la clase o estructura.  
+ En una clase o estructura, la categoría de una variable miembro depende de si es o no compartida. Si se declara con la palabra clave [Shared](../../../language-reference/modifiers/shared.md) , es una *variable compartida* y existe en una sola copia compartida entre todas las instancias de la clase o estructura.  
   
- En caso contrario, es una *variable de instancia*y se crea una copia independiente de la misma para cada instancia de la clase o estructura. Una copia determinada de una variable de instancia solo está disponible para la instancia de la clase o estructura en la que se creó. Es independiente de una copia de la variable de instancia en cualquier otra instancia de la clase o estructura.  
+ En caso contrario, es una *variable de instancia* y se crea una copia independiente de la misma para cada instancia de la clase o estructura. Una copia determinada de una variable de instancia solo está disponible para la instancia de la clase o estructura en la que se creó. Es independiente de una copia de la variable de instancia en cualquier otra instancia de la clase o estructura.  
   
 ## <a name="declaring-data-type"></a>Declarar el tipo de datos  
 
@@ -83,12 +84,12 @@ Dim l, m As Long, x, y As Single
   
  El nivel de *acceso* de una variable es la extensión del código que tiene permiso de acceso. Esto viene determinado por el modificador de acceso (por ejemplo, [público](../../../language-reference/modifiers/public.md) o [privado](../../../language-reference/modifiers/private.md)) que se usa en la `Dim` instrucción. Para obtener más información, consulte [niveles de acceso en Visual Basic](../declared-elements/access-levels.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimiento para crear una variable](how-to-create-a-new-variable.md)
 - [Procedimiento para introducir y extraer los datos de una variable](how-to-move-data-into-and-out-of-a-variable.md)
 - [Tipo de datos](../../../language-reference/data-types/index.md)
-- [Contra](../../../language-reference/modifiers/protected.md)
+- [Protegido](../../../language-reference/modifiers/protected.md)
 - [Friend](../../../language-reference/modifiers/friend.md)
 - [Estática](../../../language-reference/modifiers/static.md)
 - [Características de los elementos declarados](../declared-elements/declared-element-characteristics.md)

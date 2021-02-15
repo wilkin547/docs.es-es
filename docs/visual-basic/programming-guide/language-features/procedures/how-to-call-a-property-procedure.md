@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: llamar a un procedimiento de propiedad (Visual Basic)'
 title: Procedimiento para llamar a un procedimiento de propiedad
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 0b35751136937d4cee5b3ca9669b43d3fbdf71a1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 541768cb6381aa3d2b1bf75267c5b34a82a3d2ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071959"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466762"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento de propiedad (Visual Basic)
 
@@ -53,7 +54,7 @@ Para llamar a un procedimiento de propiedad, se almacena un valor en la propieda
   
  El valor generado en el lado derecho de la instrucción de asignación se almacena en la propiedad.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos de propiedad](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
