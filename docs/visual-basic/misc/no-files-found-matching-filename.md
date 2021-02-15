@@ -1,15 +1,16 @@
 ---
+description: "Más información sobre: no se encontraron archivos que coincidan con ' <filename> '"
 title: No se encontraron archivos coincidentes con ' <filename> '
 ms.date: 07/20/2015
 f1_keywords:
 - vbrKILL_NoFilesFound1
 ms.assetid: 218808a2-8e36-4f13-a60a-770624e1ace3
-ms.openlocfilehash: 8072aa72f8357cedf3a0bcef24d7fa265dcb95f0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 297b6cc9ca62b8f2500ff89839a5b43e5b3bd6b3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078884"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479145"
 ---
 # <a name="no-files-found-matching-filename"></a>No se encontraron archivos coincidentes con ' \<filename> '
 
@@ -19,6 +20,6 @@ El nombre de archivo es incorrecto o el archivo no existe.
   
 1. Asegúrese de que el nombre de archivo sea correcto.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

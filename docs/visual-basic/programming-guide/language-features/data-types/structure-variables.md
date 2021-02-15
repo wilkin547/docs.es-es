@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: variables de estructura (Visual Basic)'
 title: Variables de estructura
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 270e8ca26185e4a68def3b95f4ce6ab4c57a629c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 64c53b06369bc7d7d0c46bc87d4c73ce90b4011f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393590"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484163"
 ---
 # <a name="structure-variables-visual-basic"></a>Variables de estructura (Visual Basic)
 
-Una vez creada una estructura, puede declarar variables de nivel de procedimiento y de nivel de módulo como ese tipo. Por ejemplo, puede crear una estructura que registre información sobre un sistema informático. El ejemplo siguiente demuestra este patrón.
+Una vez creada una estructura, puede declarar variables de nivel de procedimiento y de nivel de módulo como ese tipo. Por ejemplo, puede crear una estructura que registre información sobre un sistema informático. En el siguiente ejemplo se muestra cómo hacerlo.
 
 ```vb
 Public Structure systemInfo
@@ -57,7 +58,7 @@ Si un elemento de estructura es un tipo de referencia, como `String` una `Object
 
 ## <a name="see-also"></a>Consulte también
 
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Tipos de datos básicos](elementary-data-types.md)
 - [Tipos de datos compuestos](composite-data-types.md)
 - [Tipos de valor y tipos de referencia](value-types-and-reference-types.md)

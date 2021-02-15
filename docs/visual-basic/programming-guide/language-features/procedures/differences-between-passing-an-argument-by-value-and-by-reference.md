@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: diferencias entre pasar un argumento por valor y por referencia (Visual Basic)'
 title: Diferencias entre pasar un argumento por valor y por referencia
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: f9fdb1e98fb827391b615f5fe0afd1ee43c9f8e1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 632895eae82a20c9bcd773da71f88ebef26d786c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075049"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464734"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Diferencias entre pasar un argumento por valor y por referencia (Visual Basic)
 
@@ -44,7 +45,7 @@ Al pasar uno o varios argumentos a un procedimiento, cada argumento corresponde 
 |Tipo de valor (solo contiene un valor)|El procedimiento no puede cambiar la variable ni ninguno de sus miembros.|El procedimiento puede cambiar la variable y sus miembros.|  
 |Tipo de referencia (contiene un puntero a una instancia de clase o estructura)|El procedimiento no puede cambiar la variable, pero puede cambiar los miembros de la instancia a la que señala.|El procedimiento puede cambiar la variable y los miembros de la instancia a la que señala.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo escribir su primera consulta LINQ (Visual Basic)
 title: Escritura de la primera consulta con LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: c7d0595b991bdad6ef05b567f95ead8c7fccdbc2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cb57ae3c22b7e2ee2c3b66a8f033eda6fd72e16a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077285"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477520"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escribir la primera consulta con LINQ (Visual Basic)
 
@@ -125,7 +126,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  También puede hacer que se ejecute una consulta mediante un `IEnumerable` método como el <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> método.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción a LINQ en Visual Basic](getting-started-with-linq.md)
 - [Inferencia de tipo de variable local](../../language-features/variables/local-type-inference.md)
