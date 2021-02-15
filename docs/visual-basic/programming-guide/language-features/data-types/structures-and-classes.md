@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: estructuras y clases (Visual Basic)'
 title: Estructuras y clases
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: e7ca5b9d55611eafad88517e71f9807fe2aa4416
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 129948bd9a16309ffea5b1e4c690d8883c450b74
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086223"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430630"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Estructuras y clases (Visual Basic)
 
@@ -90,7 +91,7 @@ Visual Basic unifica la sintaxis de las estructuras y las clases, con el resulta
   
 - **Determinar.** Las pruebas de igualdad de dos estructuras deben realizarse con una prueba elemento a elemento. Se pueden comparar dos variables de objeto mediante el <xref:System.Object.Equals%2A> método. <xref:System.Object.Equals%2A> indica si las dos variables apuntan a la misma instancia.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipo de datos](index.md)
 - [Tipos de datos compuestos](composite-data-types.md)

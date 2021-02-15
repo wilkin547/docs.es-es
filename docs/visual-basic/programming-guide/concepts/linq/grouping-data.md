@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de la agrupación de datos (Visual Basic)
 title: Agrupar datos
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: aae48543472ee71990d0bc96defa9ad6a6ab4c0d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fa6dbcc22c7d991d48775c3974cfc529840ef933
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084208"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469804"
 ---
 # <a name="grouping-data-visual-basic"></a>Agrupar datos (Visual Basic)
 
@@ -69,6 +70,6 @@ MsgBox(sb.ToString())
 
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)
-- [Cláusula Group By](../../../language-reference/queries/group-by-clause.md)
+- [Group by (cláusula)](../../../language-reference/queries/group-by-clause.md)
 - [Cómo: agrupar archivos por extensión (LINQ) (Visual Basic)](how-to-group-files-by-extension-linq.md)
 - [Cómo: dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

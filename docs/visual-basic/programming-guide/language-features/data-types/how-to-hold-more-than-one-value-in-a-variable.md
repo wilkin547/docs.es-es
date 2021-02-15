@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: contener más de un valor en una variable (Visual Basic)'
 title: Procedimiento Inclusión de más de un valor en una variable
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 399c5909ee6988f96bcc85260b0401f3bd18a0f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5248bc29f58cccf3b8ced95d3fba8f0d39033a83
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393901"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484007"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Cómo: Contener más de un valor en una variable (Visual Basic)
 
@@ -44,7 +45,7 @@ Los [tipos de datos compuestos](composite-data-types.md) incluyen estructuras, m
 
 ## <a name="see-also"></a>Consulte también
 
-- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [Tipo de datos](../../../language-reference/data-types/index.md)
 - [Caracteres de tipo](type-characters.md)
 - [Tipos de datos compuestos](composite-data-types.md)
 - [Estructuras](structures.md)

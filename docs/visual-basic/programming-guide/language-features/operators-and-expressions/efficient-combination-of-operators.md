@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: combinación eficaz de operadores (Visual Basic)'
 title: Combinación eficaz de operadores
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 9ba6be8e1dd03c0589f712b0e9b39258953cd223
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a4d2d0c1caeea95dd8d34b2033a398d26bcf63ef
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077090"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476272"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Combinación eficaz de operadores (Visual Basic)
 
@@ -48,7 +49,7 @@ Las expresiones complejas pueden contener muchos operadores diferentes. Esto se 
   
  En el ejemplo anterior, `z + 2` se evalúa primero y después las demás expresiones entre paréntesis. La exponenciación, que normalmente tiene mayor precedencia que la suma o la multiplicación, se evalúa en último lugar en este ejemplo, ya que las otras expresiones se incluyen entre paréntesis.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Operadores aritméticos en Visual Basic](arithmetic-operators.md)
 - [Comparison Operators in Visual Basic](comparison-operators.md)

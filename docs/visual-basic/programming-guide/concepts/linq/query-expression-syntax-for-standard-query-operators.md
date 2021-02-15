@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: sintaxis de expresiones de consulta para operadores de consulta estándar (Visual Basic)'
 title: Sintaxis de las expresiones de consulta para operadores de consulta estándar
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 57a08f6540cbf3e091ee1b2e202e0e181487e3be
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c891482506f45278d9ecbe037a516b3de3fe97b7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090253"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477494"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Sintaxis de expresiones de consulta para operadores de consulta estándar (Visual Basic)
 
@@ -44,7 +45,7 @@ Algunos de los operadores de consulta estándar que se usan con más frecuencia 
 |<xref:System.Linq.Enumerable.ThenByDescending%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>|`Order By …, … Descending`<br /><br /> (Para obtener más información, vea [cláusula order by](../../../language-reference/queries/order-by-clause.md)).|  
 |<xref:System.Linq.Enumerable.Where%2A>|`Where`<br /><br /> (Para obtener más información, vea la [cláusula WHERE](../../../language-reference/queries/where-clause.md)).|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: inferir nombres y tipos de propiedades en declaraciones de tipos anónimos (Visual Basic)'
 title: Procedimiento para deducir tipos y nombres de propiedades en declaraciones de tipos anónimos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 9ebbbe9d2e6d36f5ab2bc7f7c916d18c9240a06d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e4bff8cd8dd879b97618a3bc69e1eaf1c7c269b7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404893"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483903"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Cómo: Deducir tipos y nombres de propiedades en declaraciones de tipos anónimos (Visual Basic)
 
@@ -131,4 +132,4 @@ Los tipos anónimos también pueden inferir nombres y tipos de propiedad de otro
 - [Inicializadores de objeto: tipos con nombre y anónimos](object-initializers-named-and-anonymous-types.md)
 - [Inferencia de tipo de variable local](../variables/local-type-inference.md)
 - [Tipos anónimos](anonymous-types.md)
-- [Clave](../../../language-reference/modifiers/key.md)
+- [Key](../../../language-reference/modifiers/key.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes (Visual Basic)'
 title: Procedimiento Definición de clases capaces de proporcionar la misma funcionalidad en tipos de datos diferentes
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 268daf333dc5463e5436304cec188a9e6d477166
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 14be6c748ccb311c6a2974e8947b01a1c55a90b6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077129"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469752"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Cómo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes (Visual Basic)
 
@@ -75,7 +76,7 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipo de datos](index.md)
 - [Tipos genéricos en Visual Basic](generic-types.md)

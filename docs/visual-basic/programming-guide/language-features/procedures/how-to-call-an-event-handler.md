@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: cómo llamar a un controlador de eventos en Visual Basic'
 title: Cómo llamar a un controlador de eventos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 no-loc:
 - WithEvents
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 3762c79dd3d883ae2ccfe76b335cf98ac87d4246
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 7e65b36d392211be533bb4881658b1cdb8057d5d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89464966"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476259"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Cómo llamar a un controlador de eventos en Visual Basic
 
@@ -27,7 +28,7 @@ Cuando se produce el evento, Visual Basic llama automáticamente al procedimient
 
 Puede asociar más de un controlador de eventos con el mismo evento. En algunos casos, puede desasociar un controlador de un evento. Para más información, vea [Eventos](../events/index.md).
 
-## <a name="call-an-event-handler-using-no-loc-texthandles-and-no-locwithevents"></a>Llamar a un controlador de eventos mediante :::no-loc text="Handles"::: y WithEvents
+## <a name="call-an-event-handler-using-no-loc-texthandles-and-withevents"></a>Llamar a un controlador de eventos mediante :::no-loc text="Handles"::: y WithEvents
 
 1. Asegúrese de que el evento se declara con una [instrucción de evento](../../../language-reference/statements/event-statement.md).
 
@@ -60,6 +61,6 @@ Puede asociar más de un controlador de eventos con el mismo evento. En algunos 
 - [Procedimientos](index.md)
 - [Procedimientos Sub](sub-procedures.md)
 - [Instrucción Sub](../../../language-reference/statements/sub-statement.md)
-- [AddressOf (operador)](../../../language-reference/operators/addressof-operator.md)
+- [Operador AddressOf](../../../language-reference/operators/addressof-operator.md)
 - [Procedimiento para crear un procedimiento](how-to-create-a-procedure.md)
 - [Procedimiento apara llamar a un procedimiento que no devuelve un valor](how-to-call-a-procedure-that-does-not-return-a-value.md)
