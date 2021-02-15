@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: buscar el valor mínimo o máximo en el resultado de una consulta mediante LINQ (Visual Basic)'
 title: Procedimiento para buscar los valores máximo y mínimo en el resultado de una consulta mediante LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: e397ccd6fe21caaeb9d56ff3b0cc1ce16032639a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e6337b61b01d720bd37390f61e4e285aa150ec3a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084013"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422812"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Cómo: Buscar los valores máximo y mínimo en el resultado de una consulta usando LINQ (Visual Basic)
 

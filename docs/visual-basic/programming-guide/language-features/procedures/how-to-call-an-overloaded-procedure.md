@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: llamar a un procedimiento sobrecargado (Visual Basic)'
 title: Procedimiento para llamar a un procedimiento sobrecargado
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: 68b8a9898cba846b63ed8ce9d8329516f12e90cb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6a67a598bd4a42964fd8fc01bc22b1b919f5e2a9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075179"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472597"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento sobrecargado (Visual Basic)
 
@@ -33,7 +34,7 @@ La ventaja de sobrecargar un procedimiento es la flexibilidad de la llamada. El 
   
      [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

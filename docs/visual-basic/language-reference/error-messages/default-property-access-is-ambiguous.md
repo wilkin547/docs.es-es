@@ -1,5 +1,5 @@
 ---
-description: "Más información sobre: BC30686: el acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz ' <defaultpropertyname> ' de la interfaz ' <interfacename1> ' y ' <defaultpropertyname> ' de la interfaz '<interfacename2>"
+description: "Más información sobre: BC30686: el acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz ' <defaultpropertyname> ' de la interfaz ' <interfacename1> ' y ' <defaultpropertyname> ' de la interfaz ' <interfacename2> '"
 title: Hay un acceso de propiedad Default ambiguo entre los miembros <defaultpropertyname> heredados de la interfaz <interfacename1> y <defaultpropertyname> de la interfaz <interfacename2>
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 5ae5e5b2dc7a61540e26d125e960d4755141d975
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: edf2823fb11184efb2c3101b81119ea1696234db
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796657"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455228"
 ---
 # <a name="bc30686-default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>BC30686: el acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz ' ' \<defaultpropertyname> de la interfaz ' \<interfacename1> ' y ' \<defaultpropertyname> ' de la interfaz ' \<interfacename2> '
 
@@ -65,6 +65,6 @@ Cuando se especifica `testObj(1)` , el compilador intenta resolverlo en la propi
   End Class
   ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces](../../programming-guide/language-features/interfaces/index.md)

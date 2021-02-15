@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: inicializadores de objeto: tipos con nombre y anónimos (Visual Basic)'
 title: 'Inicializadores de objeto: tipos con nombre y anónimos'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 724407fed5bf90ed6e3e470cbabc9e42856cb99a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 47182653e74b16b9911f4b727eb1595bf3eceba6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087484"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455254"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicializadores de objeto: Tipos con nombre y anónimos (Visual Basic)
 
@@ -132,11 +133,11 @@ Los inicializadores de objeto permiten especificar propiedades para un objeto co
   
      Para obtener más información sobre las opciones para definir propiedades en tipos anónimos, vea [Cómo: inferir nombres y tipos de propiedades en declaraciones de tipos anónimos](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Inferencia de tipo de variable local](../variables/local-type-inference.md)
 - [Tipos anónimos](anonymous-types.md)
 - [Introducción a LINQ en Visual Basic](../linq/introduction-to-linq.md)
 - [Procedimiento para deducir tipos y nombres de propiedades en declaraciones de tipos anónimos](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
-- [Clave](../../../language-reference/modifiers/key.md)
+- [Key](../../../language-reference/modifiers/key.md)
 - [Procedimiento para declarar un objeto mediante un inicializador de objeto](how-to-declare-an-object-by-using-an-object-initializer.md)

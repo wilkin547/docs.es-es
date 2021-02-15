@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Expresiones booleanas (Visual Basic)'
 title: Expresiones booleanas
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 51340bf95795d837c055df796424f3cad912adc7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3b752e2146755e1272b261f32931e3022e8ef354
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085755"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465319"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Expresiones booleanas (Visual Basic)
 
@@ -51,9 +52,9 @@ Una *expresión booleana* es una expresión que se evalúa como un valor del [ti
   
  En el ejemplo anterior, el valor de la expresión general depende de los valores de las expresiones de cada lado del `And` operador. Si ambas expresiones son `True` , la expresión general se evalúa como `True` . Si alguna `False` de las expresiones es, toda la expresión se evalúa como `False` .  
   
-## <a name="short-circuiting-operators"></a>Operadores de cortocircuito  
+## <a name="short-circuiting-operators"></a>Operadores de Short-Circuiting  
 
- Los operadores lógicos y el comportamiento de los `AndAlso` `OrElse` exhibes se conocen como cortocircuitos. *short-circuiting* Un operador de cortocircuito evalúa primero el operando izquierdo. Si el operando izquierdo determina el valor de toda la expresión, la ejecución del programa continúa sin evaluar la expresión de la derecha. Esto se ilustra en el siguiente ejemplo:  
+ Los operadores lógicos y el comportamiento de los `AndAlso` `OrElse` exhibes se conocen como cortocircuitos.  Un operador de cortocircuito evalúa primero el operando izquierdo. Si el operando izquierdo determina el valor de toda la expresión, la ejecución del programa continúa sin evaluar la expresión de la derecha. Esto se ilustra en el siguiente ejemplo:  
   
  [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
@@ -73,7 +74,7 @@ Una *expresión booleana* es una expresión que se evalúa como un valor del [ti
 
  Puede usar paréntesis para controlar el orden de evaluación de las Expresiones booleanas. Las expresiones entre paréntesis se evalúan primero. En el caso de varios niveles de anidamiento, la prioridad se concede a las expresiones más anidadas. Entre paréntesis, la evaluación continúa según las reglas de prioridad de los operadores. Para obtener más información, vea [precedencia de operadores en Visual Basic](../../../language-reference/operators/operator-precedence.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Operadores lógicos y bit a bit en Visual Basic](logical-and-bitwise-operators.md)
 - [Comparaciones de valores](value-comparisons.md)

@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Obtenga información sobre los SDK de proyectos de .NET.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: d0eb4291f4def9263f37d2d09f09ef43d40dfbac
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189673"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506401"
 ---
 # <a name="net-project-sdks"></a>SDK de proyectos de .NET
 
@@ -131,6 +131,30 @@ Para resolver los errores, lleve a cabo una de las siguientes acciones:
   ```
 
   Si solo deshabilita los globs `Compile`, el Explorador de soluciones de Visual Studio sigue mostrando elementos \*.cs como parte del proyecto, incluidos como elementos `None`. Para deshabilitar el glob `None` implícito, establezca `EnableDefaultNoneItems` en `false`.
+
+## <a name="implicit-package-references"></a>Referencias implícitas del paquete
+
+Cuando el destino es .NET Core 1.0 - 2.2 o .NET Standard 1.0 - 2.0, el SDK de .NET agrega referencias implícitas a ciertos *metapaquetes*. Un metapaquete es un paquete basado en la plataforma que consta únicamente de dependencias en otros paquetes. Se hace referencia implícitamente a los metapaquetes en función de las plataformas de destino especificadas en la propiedad [TargetFramework](msbuild-props.md#targetframework) o [TargetFrameworks](msbuild-props.md#targetframeworks) del archivo del proyecto.
+
+```xml
+<PropertyGroup>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</PropertyGroup>
+```
+
+```xml
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+</PropertyGroup>
+```
+
+Si es necesario, puede deshabilitar las referencias de paquete implícitas mediante la propiedad [DisableImplicitFrameworkReferences](msbuild-props.md#disableimplicitframeworkreferences) y agregar referencias explícitas solo a los marcos o paquetes que necesite.
+
+Recomendaciones:
+
+- Si el destino es .NET Framework, .NET Core 1.0 - 2.2 o .NET Standard 1.0 - 2.0, no incluya una referencia explícita a los metapaquetes `Microsoft.NETCore.App` o `NETStandard.Library` mediante un elemento `<PackageReference>` en el archivo de proyecto. En los proyectos de .NET Core 1.0 - 2.2 y .NET Standard 1.0 - 2.0 , se hace referencia implícitamente a estos metapaquetes. En los proyectos de .NET Framework, si se necesita alguna versión de `NETStandard.Library` al usar un paquete NuGet basado en .NET Standard, NuGet instala automáticamente esa versión.
+- Si necesita una versión concreta del entorno de ejecución cuando el destino es .NET Core 1.0 - 2.2, use la propiedad `<RuntimeFrameworkVersion>` del proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia al metapaquete. Por ejemplo, podría necesitar una versión específica de revisión del entorno de ejecución de LTS 1.0.0 si usa [implementaciones autocontenidas](../deploying/index.md#publish-self-contained).
+- Si necesita una versión concreta del metapaquete `NETStandard.Library` cuando el destino es .NET Standard 1.0 - 2.0, puede usar la propiedad `<NetStandardImplicitPackageVersion>` y establecer la versión necesaria.
 
 ## <a name="build-events"></a>Eventos de compilación
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: reordenar los campos de un archivo delimitado (LINQ) (Visual Basic)'
 title: Procedimiento para reordenar los campos de un archivo delimitado (LINQ)
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 62c21dfb67ef35591a8ffe214bc132e63a2433bd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bfb06c396dbe33628ea146622c9c4ebe9534aae4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535389"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435010"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Cómo: reordenar los campos de un archivo delimitado (LINQ) (Visual Basic)
 
@@ -75,7 +76,7 @@ End Class
 ' 122, Michael Tucker
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (Visual Basic)](linq-and-strings.md)
 - [LINQ y directorios de archivos (Visual Basic)](linq-and-file-directories.md)

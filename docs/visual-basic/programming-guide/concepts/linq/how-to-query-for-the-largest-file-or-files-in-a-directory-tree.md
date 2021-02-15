@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (Visual Basic)'
 title: Procedimiento para buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 9ae4a1442a0ecbb11d37b56302bec6a387c662aa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5ceebd94ed74f9df05ad8f610d1cc79d6eb45b83
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078273"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435075"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Cómo buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (Visual Basic)
 
@@ -123,7 +124,7 @@ End Module
 
 Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ to Objects (Visual Basic)](linq-to-objects.md)
 - [LINQ y directorios de archivos (Visual Basic)](linq-and-file-directories.md)
