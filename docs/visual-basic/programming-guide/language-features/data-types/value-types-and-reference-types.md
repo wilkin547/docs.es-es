@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: tipos de valor y tipos de referencia'
 title: Tipos de valor y tipos de referencia
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 72cb1455300e1ff00d9d558aa5a9df95f32aa7b0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 22cce68260955545e810f6fefe645b5ad6a37ca5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090123"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462144"
 ---
 # <a name="value-types-and-reference-types"></a>Tipos de valor y tipos de referencia
 
@@ -65,7 +66,7 @@ Dim totals() As Single = New Single(8) {}
   
 - Módulos  
   
-- Events  
+- Eventos  
   
 - Propiedades y procedimientos  
   
@@ -77,11 +78,11 @@ Dim totals() As Single = New Single(8) {}
   
  Puede averiguar si una `Object` variable actúa como un tipo de referencia o un tipo de valor pasándola al <xref:Microsoft.VisualBasic.Information.IsReference%2A> método en la <xref:Microsoft.VisualBasic.Information> clase del <xref:Microsoft.VisualBasic?displayProperty=nameWithType> espacio de nombres. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Devuelve `True` si el contenido de la `Object` variable representa un tipo de referencia.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipos de valor que aceptan valores NULL](nullable-value-types.md)
 - [Conversiones de tipos en Visual Basic](type-conversions.md)
 - [Structure (Instrucción)](../../../language-reference/statements/structure-statement.md)
-- [Uso eficiente de tipos de datos](efficient-use-of-data-types.md)
+- [Uso eficiente de los tipos de datos](efficient-use-of-data-types.md)
 - [Object Data Type](../../../language-reference/data-types/object-data-type.md)
 - [Tipo de datos](index.md)

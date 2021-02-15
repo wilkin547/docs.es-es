@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: llamar a una función de Windows que toma tipos sin signo (Visual Basic)'
 title: Procedimiento Llamada una función de Windows que adopta tipos sin signo
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 5b78c808de4a16060d37844ad0f17e89fa6f6d84
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45851e22db88b9d35e5315398fb4cdbc2a7b920c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548083"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475648"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Cómo: Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 
@@ -70,7 +71,7 @@ Si está consumiendo una clase, un módulo o una estructura que tiene miembros d
     ```
 
     > [!CAUTION]
-    > Los `UInteger` `ULong` tipos de datos,, `UShort` y no forman `SByte` parte de la [independencia del lenguaje y de los componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS), por lo que el código conforme a CLS no puede consumir un componente que los utiliza.
+    > Los `UInteger` `ULong` tipos de datos,, `UShort` y no forman `SByte` parte de la [independencia del lenguaje y de los componentes de Language-Independent](../../../standard/language-independence-and-language-independent-components.md) (CLS), por lo que el código conforme a CLS no puede consumir un componente que los utiliza.
 
     > [!IMPORTANT]
     > La realización de una llamada a código no administrado, como la interfaz de programación de aplicaciones (API) de Windows, expone el código a posibles riesgos de seguridad.
@@ -78,7 +79,7 @@ Si está consumiendo una clase, un módulo o una estructura que tiene miembros d
     > [!IMPORTANT]
     > La llamada a la API de Windows requiere el permiso del código no administrado, lo que puede afectar a su ejecución en situaciones de confianza parcial. Para obtener más información, vea <xref:System.Security.Permissions.SecurityPermission> y [permisos de acceso del código](/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipo de datos](../../language-reference/data-types/index.md)
 - [Tipo de datos Integer](../../language-reference/data-types/integer-data-type.md)

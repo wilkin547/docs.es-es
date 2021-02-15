@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de los tipos de datos de Visual Basic
 title: Tipo de datos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 8cb9642c1d7e6876030efe17f5c09e4888700a24
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f431b501b40d2fafd4422b1f3fa1ea3a2ebf56fb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095595"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483942"
 ---
 # <a name="data-types-in-visual-basic"></a>Tipos de datos en Visual Basic
 
@@ -36,7 +37,7 @@ El *tipo de datos* de un elemento de programación hace referencia al tipo de da
   
  Para ver una lista de los tipos de datos de Visual Basic, consulte [Tipos de datos](../../../language-reference/data-types/index.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Caracteres de tipo](type-characters.md)
 - [Tipos de datos básicos](elementary-data-types.md)
@@ -48,4 +49,4 @@ El *tipo de datos* de un elemento de programación hace referencia al tipo de da
 - [Tuplas](tuples.md)
 - [Solución de problemas de los tipos de datos](troubleshooting-data-types.md)
 - [Tipo de datos](../../../language-reference/data-types/index.md)
-- [Uso eficiente de tipos de datos](efficient-use-of-data-types.md)
+- [Uso eficiente de los tipos de datos](efficient-use-of-data-types.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo forzar que un argumento se pase por valor (Visual Basic)'
 title: Procedimiento para forzar un argumento para que pase como un valor
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 0be49e7d4aacbb30956bda7f6ee8494a7ded8b78
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 471ddbf8993ad671dc4285729a11f5b17a5b19dc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071630"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475427"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Cómo: Forzar un argumento para que pase como un valor (Visual Basic)
 
@@ -57,7 +58,7 @@ La declaración de procedimiento determina el mecanismo de paso. Si un parámetr
 
  Siempre existe un riesgo potencial en permitir que un procedimiento cambie el valor subyacente de un argumento en el código de llamada. Asegúrese de que espera que se cambie este valor y prepárese para comprobar su validez antes de usarlo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

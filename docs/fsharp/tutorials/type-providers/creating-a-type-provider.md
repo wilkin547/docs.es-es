@@ -2,12 +2,12 @@
 title: 'Tutorial: Creación de un proveedor de tipos'
 description: 'Obtenga información sobre cómo crear sus propios proveedores de tipos de F # en F # 3,0 examinando varios proveedores de tipos simples para ilustrar los conceptos básicos.'
 ms.date: 11/04/2019
-ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 803b6ea141ed4404daf5daccd1a53212d8b42234
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739703"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468309"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Creación de un proveedor de tipos
 
@@ -15,7 +15,7 @@ El mecanismo de proveedores de tipos de F # es una parte importante de su compat
 
 El ecosistema de F # contiene una variedad de proveedores de tipo para los servicios de datos empresariales y de Internet que se usan habitualmente. Por ejemplo:
 
-- [FSharp. Data](https://fsharp.github.io/FSharp.Data/) incluye proveedores de tipos para los formatos de documento JSON, XML, csv y HTML.
+- FSharp. Data incluye proveedores de tipos para los formatos de documento JSON, XML, CSV y HTML.
 
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) proporciona acceso fuertemente tipado a las bases de datos SQL a través de una asignación de objetos y consultas LINQ de F # en estos orígenes de datos.
 

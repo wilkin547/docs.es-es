@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: carga diferida frente a carga inmediata'
 title: Carga inmediata y carga diferida
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 4e2cb7c90eb703985cbb1b8673522a9e253564d0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c2237bd726ca79c7c168040e2a701f51ec3d238
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164303"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464760"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Carga inmediata y carga diferida
 
@@ -34,6 +35,6 @@ Al consultar un objeto, en realidad se recupera únicamente el objeto solicitado
   
 - El método <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A>, para filtrar los objetos recuperados para una relación determinada.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Conceptos sobre consultas](query-concepts.md)

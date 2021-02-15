@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: caracteres especiales en el código (Visual Basic)'
 title: Caracteres especiales en el código
 ms.date: 07/20/2015
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 60f815f0d30fa785f4a2166db5a041d3851aa954
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4afadc13cea6cc41480cb1674b7ff6f31629b569
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097831"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468257"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Caracteres especiales en código (Visual Basic)
 
@@ -61,7 +62,7 @@ A veces, es necesario usar caracteres especiales en el código, es decir, caract
   
 ## <a name="concatenation"></a>Concatenación  
 
- Use el `&` operador para la *concatenación*o vincule cadenas. No lo confunda con el `+` operador, que suma los valores numéricos. Si usa el `+` operador para concatenar al trabajar con valores numéricos, puede obtener resultados incorrectos. En el siguiente ejemplo se muestra cómo hacerlo.  
+ Use el `&` operador para la *concatenación* o vincule cadenas. No lo confunda con el `+` operador, que suma los valores numéricos. Si usa el `+` operador para concatenar al trabajar con valores numéricos, puede obtener resultados incorrectos. En el siguiente ejemplo se muestra cómo hacerlo.  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
@@ -94,7 +95,7 @@ A veces, es necesario usar caracteres especiales en el código, es decir, caract
   
  El `!` carácter también se utiliza como `Single` carácter de tipo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Convenciones de código y estructura de programas](program-structure-and-code-conventions.md)
 - [Caracteres de tipo](../language-features/data-types/type-characters.md)
