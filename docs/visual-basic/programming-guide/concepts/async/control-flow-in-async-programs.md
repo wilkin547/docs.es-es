@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: flujo de control en programas Async (Visual Basic)'
 title: Flujo de control en programas Async
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 0c479b9dd2a691b1b353fac54ee3320a895b1c7f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bf0ca6a083971cb02cfb6dff2dfcaaabd5405b36
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396667"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428251"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Control Flow in Async Programs (Visual Basic) (Flujo de control en programas asincrónicos [Visual Basic])
 
@@ -101,7 +102,7 @@ Puede descargar el código que se usa en este tema desde MSDN o crearlo usted mi
 
 ### <a name="download-the-program"></a>Descargar el programa
 
-Puede descargar la aplicación de este tema en [Ejemplo de Async: Controlar el flujo en los programas asincrónicos](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Con los siguientes pasos se abre y se ejecuta el programa.
+Puede descargar la aplicación para este tema en [Ejemplo de Async: Flujo de control en programas asincrónicos](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Con los siguientes pasos se abre y se ejecuta el programa.
 
 1. Descomprima el archivo descargado e inicie Visual Studio.
 
@@ -121,7 +122,7 @@ Para ejecutar el proyecto, realice los pasos siguientes:
 
     Aparece el cuadro de diálogo **Nuevo proyecto** .
 
-3. En el panel **plantillas instaladas** , elija **Visual Basic**y, a continuación, elija **aplicación WPF** en la lista de tipos de proyecto.
+3. En el panel **plantillas instaladas** , elija **Visual Basic** y, a continuación, elija **aplicación WPF** en la lista de tipos de proyecto.
 
 4. Escriba `AsyncTracer` como el nombre del proyecto y elija el botón **Aceptar**.
 
@@ -218,7 +219,7 @@ Para ejecutar el proyecto, realice los pasos siguientes:
     End Class
     ```
 
-10. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio**.
+10. Presione la tecla F5 para ejecutar el programa y elija el botón **Inicio** .
 
     Debería aparecer el siguiente resultado:
 
@@ -256,7 +257,7 @@ Para ejecutar el proyecto, realice los pasos siguientes:
 
 Las dos primeras líneas siguen la ruta de acceso a medida que `startButton_Click` llama a `AccessTheWebAsync` y `AccessTheWebAsync` llama al método <xref:System.Net.Http.HttpClient> asincrónico <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>. En la siguiente imagen se describen las llamadas de método a método.
 
-![Pasos UNO y DOS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![Pasos UNO y DOS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace (pasos UNO y DOS)")
 
 El tipo de valor devuelto de `AccessTheWebAsync` y `client.GetStringAsync` es <xref:System.Threading.Tasks.Task%601>. Para `AccessTheWebAsync`, TResult es un entero. Para `GetStringAsync`, TResult es una cadena. Para obtener más información sobre los tipos de valor devueltos de métodos asincrónicos, vea [tipos de valor devuelto asincrónico (Visual Basic)](async-return-types.md).
 
@@ -288,7 +289,7 @@ Dim urlContents As String = Await getStringTask
 
 En la imagen siguiente se muestra el flujo de control desde `client.GetStringAsync` hasta la asignación hasta la `getStringTask` creación de `getStringTask` a la aplicación de un operador Await.
 
-![Paso tres](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-tres")
+![Paso TRES](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace (paso TRES)")
 
 La expresión await suspende `AccessTheWebAsync` hasta que se devuelva `client.GetStringAsync`. Mientras tanto, el control vuelve al llamador de `AccessTheWebAsync`, `startButton_Click`.
 
@@ -323,7 +324,7 @@ Dim contentLength As Integer = Await getLengthTask
 
 En la siguiente ilustración, las flechas muestran el flujo de control desde la expresión await en `AccessTheWebAsync` hasta la asignación de un valor a `getLengthTask`, seguido del procesamiento normal en `startButton_Click` hasta que se espera a `getLengthTask`.
 
-![Paso cuatro](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-cuatro")
+![Paso CUATRO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace (paso CUATRO)")
 
 ### <a name="step-five"></a>Paso CINCO
 
@@ -340,7 +341,7 @@ El operando de la instrucción de devolución, `urlContents.Length`, se almacena
 
 En la siguiente imagen se muestra la transferencia de control una vez concluido `client.GetStringAsync` (y `getStringTask`).
 
-![Paso CINCO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-cinco")
+![Paso CINCO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace (paso CINCO)")
 
 `AccessTheWebAsync` se ejecuta hasta el final y el control vuelve a `startButton_Click`, que espera la finalización.
 
@@ -365,11 +366,11 @@ Dim contentLength As Integer = Await getLengthTask
 
 En la siguiente imagen se muestra la devolución del control de `AccessTheWebAsync` a `startButton_Click`.
 
-![Paso SEIS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-seis")
+![Paso SEIS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace (paso SEIS)")
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Programación asincrónica con Async y Await (Visual Basic)](index.md)
 - [Async Return Types (Visual Basic)](async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])
 - [Tutorial: Acceso a web usando Async y Await (C# y Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Ejemplo de Async: Controlar el flujo en los programas asincrónicos (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Ejemplo de async: Flujo de control en programas asincrónicos (C# y Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

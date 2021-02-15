@@ -1,5 +1,5 @@
 ---
-description: "Más información sobre: BC30154: <type1> ' <typename> ' debe implementar ' <membername> ' para la interfaz '<interfacename>"
+description: "Más información sobre: BC30154: <type1> ' <typename> ' debe implementar ' <membername> ' para la interfaz ' <interfacename> '"
 title: <type1>"<typename>" debe implementar "<membername>" para la interfaz "<interfacename>"
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: fc47aaef0477638e0e1a566bca23e9c35cf514f9
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fc0cf8544984ddf41f1f91cb0bca90b630d9614d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99641153"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473568"
 ---
 # <a name="bc30154-type1typename-must-implement-membername-for-interface-interfacename"></a>BC30154: \<type1> ' \<typename> ' debe implementar ' \<membername> ' para la interfaz ' \<interfacename> '
 
@@ -37,7 +37,7 @@ ms.locfileid: "99641153"
 
 4. Al implementar una propiedad, declare `Get` `Set` los procedimientos y, según corresponda.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Implements (Instrucción)](../statements/implements-statement.md)
 - [Interfaces](../../programming-guide/language-features/interfaces/index.md)

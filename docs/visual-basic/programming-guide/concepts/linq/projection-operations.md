@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: operaciones de proyección (Visual Basic)'
 title: Operaciones de proyección
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: 4795bdaba53949b34fe380ea9c51025ce43c40db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5531bec915f3a9ee521e0d67941b8f1d49e90524
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396342"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466463"
 ---
 # <a name="projection-operations-visual-basic"></a>Operaciones de proyección (Visual Basic)
 
@@ -17,7 +18,7 @@ Los métodos del operador de consulta estándar que realizan proyecciones se ind
 
 ## <a name="methods"></a>Métodos
 
-|Nombre del método|Description|Visual Basic sintaxis de expresiones de consulta|Más información|
+|Nombre del método|Descripción|Visual Basic sintaxis de expresiones de consulta|Más información|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Seleccionar|Proyecta valores basados en una función de transformación.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
 |SelectMany|Proyecta secuencias de valores que se basan en una función de transformación y después los convierte en una secuencia.|Use varias cláusulas `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|
@@ -175,7 +176,7 @@ Sub SelectVsSelectMany()
 End Sub
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: propiedades y métodos sobrecargados (Visual Basic)'
 title: Propiedades y métodos sobrecargados
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-ms.openlocfilehash: 1672f12773ece012c580253b6dafbf9d0ac8f07c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fb46876d346ad5f391241aee0b07175df290e656
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84389157"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438780"
 ---
 # <a name="overloaded-properties-and-methods-visual-basic"></a>Propiedades y métodos sobrecargados (Visual Basic)
 
@@ -77,7 +78,7 @@ En el ejemplo siguiente se crean métodos sobrecargados que aceptan `String` una
 
 5. Ejecute el proyecto y haga clic en el botón del formulario para probar el procedimiento sobrecargado `ShowTax` .
 
-En tiempo de ejecución, el compilador elige la función sobrecargada adecuada que coincide con los parámetros que se usan. Al hacer clic en el botón, se llama primero al método sobrecargado con un `Price` parámetro que es una cadena y el mensaje, "Price Is a String. Tax es $5,12. `TaxAmount`se llama a con un `Decimal` valor la segunda vez y el mensaje, "Price es un decimal. Tax es $5,12.
+En tiempo de ejecución, el compilador elige la función sobrecargada adecuada que coincide con los parámetros que se usan. Al hacer clic en el botón, se llama primero al método sobrecargado con un `Price` parámetro que es una cadena y el mensaje, "Price Is a String. Tax es $5,12. `TaxAmount` se llama a con un `Decimal` valor la segunda vez y el mensaje, "Price es un decimal. Tax es $5,12.
 
 ## <a name="see-also"></a>Consulte también
 
