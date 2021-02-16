@@ -2,12 +2,12 @@
 title: 'Seguimiento distribuido: .NET'
 description: Una introducción al seguimiento distribuido de .NET.
 ms.date: 02/02/2021
-ms.openlocfilehash: d21d2a978cfe58d89db689dec07107f089363912
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d29c803dfec00474562abdc61ce65ea3f3faa133
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640126"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431443"
 ---
 # <a name="net-distributed-tracing"></a>Seguimiento distribuido de .NET
 
@@ -79,7 +79,7 @@ Las aplicaciones y bibliotecas pueden publicar fácilmente datos de seguimiento 
 El primer paso para publicar datos de seguimiento es crear una instancia de la clase ActivitySource. ActivitySource es la clase que proporciona las API para crear e iniciar objetos Activity y registrar objetos ActivityListener para escuchar los eventos Activity.
 
 ```csharp
-    internal static ActivitySource source = new ActivitySource("MyCompany.MyComponent.SourceName", "v1");
+    private static ActivitySource source = new ActivitySource("MyCompany.MyComponent.SourceName", "v1");
 ```
 
 #### <a name="best-practices"></a>Prácticas recomendadas

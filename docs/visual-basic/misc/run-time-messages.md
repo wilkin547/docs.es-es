@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Visual Basic Run-Time mensajes'
 title: Mensajes en tiempo de ejecución
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: 88c9d341064f5c8d85d4c27b7d9bc79114642610
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6e6367c8094d5a1d3eb3554cbc56e09cc5c8034a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060709"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485814"
 ---
 # <a name="visual-basic-run-time-messages"></a>Mensajes en tiempo de ejecución de Visual Basic
 
@@ -554,6 +555,6 @@ Esta sección contiene los mensajes de error de Visual Basic que se producen en 
   
  [Debe especificar una ruta de acceso que se encuentre en la carpeta actual o en una de sus subcarpetas](you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Mensajes de error](../language-reference/error-messages/index.md)

@@ -2,12 +2,12 @@
 title: Implementación de aplicaciones resistentes
 description: Obtenga información sobre la resistencia, un concepto básico en una arquitectura de microservicios. Debe saber cómo administrar errores transitorios correctamente cuando se produzcan.
 ms.date: 01/30/2020
-ms.openlocfilehash: 46276a6b9b36a494bfae657275692ca9d5554d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ed4474eaa1225e80f05db86965e4ba53b5d2301
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78847237"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429330"
 ---
 # <a name="implement-resilient-applications"></a>Implementación de aplicaciones resistentes
 
@@ -20,7 +20,7 @@ Es todo un desafío diseñar e implementar una aplicación basada en microservic
 Los numerosos componentes individuales de la aplicación también deberían incorporar características de seguimiento de estado. Mediante las directrices descritas en este capítulo, podrá crear una aplicación que funcione sin problemas aunque se produzcan tiempos de inactividad transitorios o las interrupciones típicas de las implementaciones complejas y basadas en la nube.
 
 >[!IMPORTANT]
-> eShopOnContainer ha estado usando la [biblioteca de Polly](http://www.thepollyproject.org/) para implementar resistencia mediante [clientes con tipo](./use-httpclientfactory-to-implement-resilient-http-requests.md) hasta la versión 3.0.0.
+> eShopOnContainer ha estado usando la [biblioteca de Polly](https://thepollyproject.azurewebsites.net/) para implementar resistencia mediante [clientes con tipo](./use-httpclientfactory-to-implement-resilient-http-requests.md) hasta la versión 3.0.0.
 >
 > A partir de la versión 3.0.0, la resistencia de las llamadas HTTP se implementa con una [malla de Linkerd](https://linkerd.io/) que administra los reintentos de forma transparente y configurable dentro de un clúster de Kubernetes, sin tener que controlar esos problemas en el código.
 >

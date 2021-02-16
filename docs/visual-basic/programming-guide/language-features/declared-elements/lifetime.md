@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: duración en Visual Basic'
 title: Período de duración
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 67fe63eecd2aa0c134682708cdeddb21ba06db12
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7c95358209c61b42862f4e995d02a97dfb6e8487
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087497"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471466"
 ---
 # <a name="lifetime-in-visual-basic"></a>Período de duración en Visual Basic
 
@@ -83,7 +84,7 @@ La *duración* de un elemento declarado es el período de tiempo durante el cual
 
  En el ejemplo anterior, puede generar la misma duración declarando `applesSold` en el nivel de módulo. Sin embargo, si cambia el ámbito de una variable de esta manera, el procedimiento ya no tendrá acceso exclusivo a él. Dado que otros procedimientos podían tener acceso `applesSold` y cambiar su valor, el total acumulado podría ser poco confiable y el código podría ser más difícil de mantener.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Compartido](../../../language-reference/modifiers/shared.md)
 - [Nothing](../../../language-reference/nothing.md)

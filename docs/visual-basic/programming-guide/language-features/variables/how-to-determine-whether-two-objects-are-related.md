@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: determinar si dos objetos están relacionados (Visual Basic)'
 title: Procedimiento para determinar si dos objetos están relacionados
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: b33815d58b0ef40f7f75a6a41bb4b1eeef591859
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 79a6dae83cc780a3aed64fd40fb284e7479ffacc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072228"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481914"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Cómo: Determinar si dos objetos están relacionados (Visual Basic)
 
@@ -49,7 +50,7 @@ End Class
 
 Tenga en cuenta la colocación inesperada de las dos variables de objeto en la llamada a <xref:System.Type.IsInstanceOfType%2A> . El tipo base supuesto se usa para generar la <xref:System.Type?displayProperty=nameWithType> clase y el tipo derivado supuesto se pasa como argumento al <xref:System.Type.IsInstanceOfType%2A> método.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>

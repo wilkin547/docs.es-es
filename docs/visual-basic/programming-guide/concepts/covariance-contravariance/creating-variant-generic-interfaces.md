@@ -1,27 +1,28 @@
 ---
+description: Más información sobre cómo crear interfaces genéricas variantes (Visual Basic)
 title: Creación de interfaces genéricas variantes
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 884349159d2738d8481b217f9dab383483616f2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 41da9040709ff053ba05cc7c44be989b7fa39c44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400647"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485268"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Crear interfaces genéricas variantes (Visual Basic)
 
 Puede declarar parámetros de tipo genérico en las interfaces como covariantes o contravariantes. La *covarianza* permite que los métodos de interfaz tengan tipos de valor devuelto más derivados que los que se definen en los parámetros de tipo genérico. La *contravarianza* permite que los métodos de interfaz tengan tipos de argumento menos derivados que los que se especifican en los parámetros genéricos. Las interfaces genéricas que tienen parámetros de tipo genérico covariantes o contravariantes se llaman *variantes*.
 
 > [!NOTE]
-> En .NET Framework 4 se introdujo la compatibilidad con la varianza para varias interfaces genéricas existentes. Para obtener la lista de las interfaces variantes en el .NET Framework, vea [varianza en interfaces genéricas (Visual Basic)](variance-in-generic-interfaces.md).
+> En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes. Para obtener la lista de las interfaces variantes en el .NET Framework, vea [varianza en interfaces genéricas (Visual Basic)](variance-in-generic-interfaces.md).
 
 ## <a name="declaring-variant-generic-interfaces"></a>Declarar interfaces genéricas variantes
 
 Puede declarar interfaces genéricas variantes mediante las palabras clave `in` y `out` para los parámetros de tipo genérico.
 
 > [!IMPORTANT]
-> `ByRef`los parámetros de Visual Basic no pueden ser variantes. Los tipos de valor tampoco admiten la varianza.
+> `ByRef` los parámetros de Visual Basic no pueden ser variantes. Los tipos de valor tampoco admiten la varianza.
 
 Puede declarar un parámetro de tipo genérico covariante mediante la palabra clave `out`. El tipo covariante debe cumplir las siguientes condiciones:
 
@@ -230,7 +231,7 @@ End Sub
 
 En este ejemplo no se especifica cómo elige el método `pets.GetEnumerator` entre `Cat` y `Dog`. Esto podría producir problemas en el código.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Varianza en interfaces genéricas (Visual Basic)](variance-in-generic-interfaces.md)
 - [Usar la varianza para los delegados genéricos Func y Action (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

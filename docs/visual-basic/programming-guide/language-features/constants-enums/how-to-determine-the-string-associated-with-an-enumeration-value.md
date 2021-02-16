@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: determinar la cadena asociada a un valor de enumeración (Visual Basic)'
 title: Procedimiento para determinar la cadena asociada a un valor de enumeración
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - strings [Visual Basic], enumeration values
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
-ms.openlocfilehash: 4138759bfbb049b77406fc536219b40d3ed9e2a5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 391cb097fa8163f7131cc30f85f8a4f85ba826a4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058774"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471609"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>Cómo: Determinar la cadena asociada a un valor de enumeración (Visual Basic)
 
@@ -23,7 +24,7 @@ Los <xref:System.Enum.GetValues%2A> <xref:System.Enum.GetNames%2A> métodos y pe
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Enum.GetValues%2A>
 - <xref:System.Enum.GetNames%2A>

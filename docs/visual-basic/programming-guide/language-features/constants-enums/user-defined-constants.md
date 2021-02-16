@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: constantes de User-Defined (Visual Basic)'
 title: Constantes definidas por el usuario
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: 351bdb6963e278341c13e53ef19aea0876010aa9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 290d4122249315ae3c6dc5e18ca4faefecb72044
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095647"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485229"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Constantes definidas por el usuario (Visual Basic)
 
@@ -36,7 +37,7 @@ Una constante es un nombre significativo que ocupa el lugar de un número o una 
   
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
-## <a name="scope-of-user-defined-constants"></a>Ámbito de las constantes definidas por el usuario  
+## <a name="scope-of-user-defined-constants"></a>Ámbito de User-Defined constantes  
 
  `Const`El ámbito de una instrucción es el mismo que el de una variable declarada en la misma ubicación. Puede especificar el ámbito de cualquiera de las maneras siguientes:  
   
@@ -52,14 +53,14 @@ Una constante es un nombre significativo que ocupa el lugar de un número o una 
   
 ### <a name="avoiding-circular-references"></a>Evitar referencias circulares  
 
- Dado que las constantes se pueden definir en términos de otras constantes, es posible crear accidentalmente un *ciclo*o una referencia circular entre dos o más constantes. Un ciclo se produce cuando hay dos o más constantes públicas, cada una de las cuales se define en términos del otro, como en el ejemplo siguiente:  
+ Dado que las constantes se pueden definir en términos de otras constantes, es posible crear accidentalmente un *ciclo* o una referencia circular entre dos o más constantes. Un ciclo se produce cuando hay dos o más constantes públicas, cada una de las cuales se define en términos del otro, como en el ejemplo siguiente:  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
 [!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
  Si se produce un ciclo, Visual Basic genera un error del compilador.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucción Const](../../../language-reference/statements/const-statement.md)
 - [Tipos de datos constantes y literales](constant-and-literal-data-types.md)
