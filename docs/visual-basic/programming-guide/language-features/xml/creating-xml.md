@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de cómo crear XML en Visual Basic
 title: Creación de XML
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-ms.openlocfilehash: a6a927c8dc1a4f3e38a99a1f730be68a2566d048
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9511253791720d1f45e00669b0abc41a45237f63
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090032"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431651"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Crear XML en Visual Basic
 
@@ -29,6 +30,6 @@ Visual Basic le permite usar *literales XML* directamente en el código. La sint
 |[Procedimiento para insertar expresiones en literales XML](how-to-embed-expressions-in-xml-literals.md)|Describe cómo utilizar expresiones incrustadas en literales XML para crear contenido en tiempo de ejecución.|  
 |[Nombres de atributos y elementos XML declarados](names-of-declared-xml-elements-and-attributes.md)|Describe las directrices para asignar nombres a los elementos y atributos XML.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [XML](index.md)

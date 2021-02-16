@@ -3,13 +3,13 @@ title: Empleo de cobertura de código para pruebas unitarias
 description: Aprenda a usar las capacidades de cobertura de código para pruebas unitarias de .NET.
 author: IEvangelist
 ms.author: dapine
-ms.date: 07/01/2020
-ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/10/2021
+ms.openlocfilehash: 492e036593dcdc81f8256b05183c8f0a9e13b414
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189660"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432665"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Empleo de cobertura de código para pruebas unitarias
 
@@ -271,7 +271,7 @@ A continuación se muestra el archivo de ejemplo *coverage.cobertura.xml*.
 > dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 > ```
 >
-> Se genera el archivo *coverage.cobertura.xml* resultante.  
+> Se genera el archivo *coverage.cobertura.xml* resultante.
 > Puede seguir la guía de integración de msbuild [aquí](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md).
 
 ## <a name="generate-reports"></a>Generación de informes

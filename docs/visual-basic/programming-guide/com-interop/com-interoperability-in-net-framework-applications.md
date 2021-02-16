@@ -1,4 +1,5 @@
 ---
+description: Más información acerca de la interoperabilidad COM en aplicaciones de .NET Framework (Visual Basic)
 title: Interoperabilidad COM en aplicaciones .NET Framework
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ad531ab689db104ff7f1ed8639f3c65eeed717d1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396874"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483734"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Interoperabilidad COM en aplicaciones .NET Framework (Visual Basic)
 
@@ -26,7 +27,7 @@ Los vínculos de esta página proporcionan detalles sobre las interacciones entr
 | | |
 |---------|---------|
 | [Interoperabilidad COM](index.md) | Proporciona vínculos a temas que tratan sobre la interoperabilidad COM en Visual Basic, incluidos objetos COM, controles ActiveX, archivos dll de Win32, objetos administrados y herencia de objetos COM. |
-| [Interoperar con código no administrado](../../../framework/interop/index.md) | Describe brevemente algunos de los problemas de interacción entre el código administrado y no administrado, y proporciona vínculos para seguir estudiando. |
+| [Interoperating with Unmanaged Code](../../../framework/interop/index.md) (Interoperar con código no administrado) | Describe brevemente algunos de los problemas de interacción entre el código administrado y no administrado, y proporciona vínculos para seguir estudiando. |
 | [Contenedores COM](../../../standard/native-interop/com-wrappers.md) | Describe los contenedores a los que se puede llamar en tiempo de ejecución, que permiten que el código administrado llame a métodos COM, y a contenedores COM Invocables, que permiten a los clientes COM llamar a métodos de objeto .NET. |
 | [Interoperabilidad COM avanzada](../../../framework/interop/index.md) | Proporciona vínculos a temas que tratan sobre la interoperabilidad COM con respecto a contenedores, excepciones, herencia, subprocesamiento, eventos, conversiones y serialización. |
 | [TlbImp.exe (Importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Describe la herramienta que se puede usar para convertir las definiciones de tipos que se encuentran en una biblioteca de tipos COM en definiciones equivalentes en un ensamblado de Common Language Runtime. |

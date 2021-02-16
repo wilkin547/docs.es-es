@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: on (Visual Basic)'
 title: Activado
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: fa854c4197f792b8cfd3d3d95b6e824c7a0aba1f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b33ef07e9f7b7e3150b120fa2de547578e1619ea
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084338"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100478885"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
 
@@ -26,7 +27,7 @@ Presenta una respuesta a un error en tiempo de ejecución o activa una opción d
   
  [Cláusula Group Join](../language-reference/queries/group-join-clause.md)  
   
- [Join (cláusula)](../language-reference/queries/join-clause.md)  
+ [Cláusula Join](../language-reference/queries/join-clause.md)  
   
  [Instrucción On Error](../language-reference/statements/on-error-statement.md)  
   
@@ -36,6 +37,6 @@ Presenta una respuesta a un error en tiempo de ejecución o activa una opción d
   
  [Option Strict (instrucción)](../language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Palabras clave](../language-reference/keywords/index.md)

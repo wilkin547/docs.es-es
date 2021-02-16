@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: Cómo: declarar una variable de objeto y asignarle un objeto en Visual Basic'
 title: Procedimiento para declarar una variable de objeto y asignarle un objeto
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-ms.openlocfilehash: d9a8c1fb30bfa5988d48202e41202e7ede0f5f27
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f79cda4507a3dbf2a6946dee7d909b6d1b10802d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410508"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481953"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Cómo: Declarar una variable de objeto y asignarle un objeto en Visual Basic
 

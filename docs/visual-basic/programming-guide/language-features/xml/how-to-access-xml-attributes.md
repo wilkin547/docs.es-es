@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: obtener acceso a atributos XML (Visual Basic)'
 title: Procedimiento para obtener acceso a atributos XML
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: 187364c1b5d89d90d49b9ac05e4456dfeefbaffc
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cd2a0895662e74c836ccc22483a213769758bef9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058526"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433166"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Cómo: Obtener acceso a atributos XML (Visual Basic)
 
@@ -22,7 +23,7 @@ En este ejemplo se muestra cómo utilizar una propiedad de eje de atributo para 
 
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [XML Attribute Axis Property](../../../language-reference/xml-axis/xml-attribute-axis-property.md)

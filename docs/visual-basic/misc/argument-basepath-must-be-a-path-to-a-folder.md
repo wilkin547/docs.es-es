@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: el argumento BasePath debe ser una ruta de acceso a una carpeta'
 title: El argumento BasePath debe ser una ruta de acceso a una carpeta.
 ms.date: 07/20/2015
 ms.assetid: b180ce60-ad57-41a6-a313-491d86d84cc7
-ms.openlocfilehash: 3c8d17db7cc03490ff437c91814db967612942a0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 314ccd8510a286fc7f01518600a625cac48e10af
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079755"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472310"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a>El argumento BasePath debe ser una ruta de acceso a una carpeta.
 
@@ -17,7 +18,7 @@ El argumento `BasePath` debe consistir en una ruta de acceso a una carpeta. Pued
   
 - Compruebe el valor que se proporciona para `BasePath` para asegurarse de que es una ruta válida a una carpeta.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.CodeDom.Compiler.TempFileCollection.BasePath%2A>
 - <xref:System.Resources.ResXResourceWriter.BasePath%2A>

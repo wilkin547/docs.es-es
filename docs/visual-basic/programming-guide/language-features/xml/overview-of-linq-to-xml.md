@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: información general de LINQ to XML en Visual Basic'
 title: Introducción a LINQ to XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 4ec1c96bdca96a6e9b68b240c147b70536514d85
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e70998706f62076a2528ac646df29e0c7081cb3d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099195"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480224"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Información general sobre LINQ to XML en Visual Basic
 
@@ -67,7 +68,7 @@ Visual Basic proporciona compatibilidad con [!INCLUDE[sqltecxlinq](~/includes/sq
   
  [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [XML](index.md)
 - [Crear XML en Visual Basic](creating-xml.md)

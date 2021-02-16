@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: desechar un recurso del sistema (Visual Basic)'
 title: Procedimiento para deshacerse de un recurso del sistema
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c430bc7744f5aefaa65f2a86f3e5e22743ffed57
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6594c9e2eedf756cc7a46c2c17deab58fcba3a8c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077207"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480666"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Cómo: Deshacerse de un recurso del sistema (Visual Basic)
 
@@ -45,7 +46,7 @@ Puede usar un `Using` bloque para garantizar que el sistema desecha un recurso c
   
      Puede usar esta misma técnica en un recurso del sistema, como un identificador de archivo o un contenedor COM. Puede usar un `Using` bloque cuando desee asegurarse de dejar el recurso disponible para otros componentes después de salir del `Using` bloque.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Data.SqlClient.SqlConnection>
 - [Flujo de control](index.md)

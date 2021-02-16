@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: elementos declarados en Visual Basic'
 title: Elementos declarados
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: 9359c8df60d7fdc06e7c8dfa1df82f1b277d7339
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8708b241877947213aeb10dabc28bf80398338d3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075166"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471492"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Elementos declarados en Visual Basic
 
