@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Tutorial: crear objetos COM con Visual Basic'
 title: 'Tutorial: Creación de objetos COM'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 90a21b70b45902a9f4fd559a97e777f26043fffb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 469466189e264253f3588a0a2735afe651bbd36f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075621"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427276"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Tutorial: Crear objetos COM con Visual Basic
 
@@ -92,7 +93,7 @@ Al crear nuevas aplicaciones o componentes, es mejor crear ensamblados de .NET F
     > [!NOTE]
     > Los objetos COM generados con Visual Basic no pueden ser utilizados por otras aplicaciones Visual Basic porque no son objetos COM verdaderos. Los intentos de agregar referencias a estos objetos COM producirán un error. Para obtener más información, consulte [interoperabilidad com en aplicaciones .NET Framework](com-interoperability-in-net-framework-applications.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [Interoperabilidad COM](index.md)

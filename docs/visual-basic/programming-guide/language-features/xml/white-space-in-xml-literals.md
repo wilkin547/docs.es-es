@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: espacio en blanco en literales XML (Visual Basic)'
 title: Espacio en blanco en literales XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 5db8f92117e77d96eab34f28758546393e2afca0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9b4134626c0ad1f7f4be2923573eb6058fa7687f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099104"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428121"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Espacio en blanco en literales XML (Visual Basic)
 
@@ -49,6 +50,6 @@ El compilador de Visual Basic incorpora solo los caracteres de espacio en blanco
 </outer>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Crear XML en Visual Basic](creating-xml.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)'
 title: Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ)
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a1a02382efb31895edb880d2137f08d79dc4e97b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396524"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477559"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)
 
@@ -18,7 +19,7 @@ En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una s
 
 ## <a name="to-create-the-data-file"></a>Para crear el archivo de datos
 
-- Copie los archivos Names. csv y scores. csv en la carpeta del proyecto, tal y como se describe en [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md).
+- Copie los archivos names.csv y scores.csv en la carpeta del proyecto, tal y como se describe en [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -128,6 +129,6 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (Visual Basic)](linq-and-strings.md)

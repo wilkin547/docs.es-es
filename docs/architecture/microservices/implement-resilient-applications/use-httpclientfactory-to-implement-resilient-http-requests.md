@@ -2,12 +2,12 @@
 title: Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 description: Aprenda a utilizar IHttpClientFactory, disponible a partir de .NET Core 2.1, para crear instancias de `HttpClient`, lo que le facilita su uso en sus aplicaciones.
 ms.date: 01/13/2021
-ms.openlocfilehash: 056a8982fe4331e7e680b33cf1f43785b48da7d6
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fc5da088b1ed7573532dff101aff03d39a02a6f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189003"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429317"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 
@@ -27,7 +27,7 @@ Realmente el problema no está en `HttpClient`, sino en el [constructor predeter
 
 Para solucionar estos problemas y hacer que las instancias de `HttpClient` se puedan administrar, .NET Core 2.1 ha incorporado la interfaz <xref:System.Net.Http.IHttpClientFactory>, que se puede usar para configurar y crear instancias de `HttpClient` en una aplicación a través de la inserción de dependencias (DI). También proporciona extensiones para el middleware basado en Polly a fin de aprovechar los controladores de delegación en HttpClient.
 
-[Polly](http://www.thepollyproject.org/) es una biblioteca de control de errores transitorios que ayuda a los desarrolladores a agregar resistencia a sus aplicaciones mediante el uso de directivas predefinidas de manera fluida y segura para subprocesos.
+[Polly](https://thepollyproject.azurewebsites.net/) es una biblioteca de control de errores transitorios que ayuda a los desarrolladores a agregar resistencia a sus aplicaciones mediante el uso de directivas predefinidas de manera fluida y segura para subprocesos.
 
 ## <a name="benefits-of-using-ihttpclientfactory"></a>Ventajas de usar IHttpClientFactory
 
@@ -197,7 +197,7 @@ Hasta ahora, el fragmento de código anterior solo ha mostrado el ejemplo de rea
   <https://github.com/dotnet/extensions/tree/v3.1.8/src/HttpClientFactory>
 
 - **Polly (.NET resilience and transient-fault-handling library) (Polly [Biblioteca de control de errores transitorios y resistencia de .NET])**  
-  <http://www.thepollyproject.org/>
+  <https://thepollyproject.azurewebsites.net/>
   
 - **Uso de IHttpClientFactory sin inserción de dependencias (problema de GitHub)**  
   <https://github.com/dotnet/extensions/issues/1345>

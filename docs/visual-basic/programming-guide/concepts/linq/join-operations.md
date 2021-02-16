@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: operaciones de combinación (Visual Basic)'
 title: Operaciones de combinación
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: e69e060447c0103c3c47be0fb34cad90e88c4516
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d5566de71bf96d2af86329929a5ab6ab34e6d154
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077324"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426782"
 ---
 # <a name="join-operations-visual-basic"></a>Operaciones de combinación (Visual Basic)
 
@@ -28,12 +29,12 @@ Una *combinación* de dos orígenes de datos es la asociación de objetos de un 
 |Join|Combina dos secuencias según las funciones de selector de claves y extrae pares de valores.|`From x In …, y In … Where x.a = y.a`<br /><br /> o bien<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Combina dos secuencias según las funciones de selector de claves y agrupa los resultados coincidentes para cada elemento.|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)
 - [Tipos anónimos](../../language-features/objects-and-classes/anonymous-types.md)
 - [Cómo: Formular combinaciones y consultas entre productos](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
-- [Join (cláusula)](../../../language-reference/queries/join-clause.md)
+- [Cláusula Join](../../../language-reference/queries/join-clause.md)
 - [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)
 - [Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)
