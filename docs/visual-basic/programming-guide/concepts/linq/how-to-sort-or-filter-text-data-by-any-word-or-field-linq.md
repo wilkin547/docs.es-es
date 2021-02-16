@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)'
 title: Procedimiento para ordenar o filtrar datos de texto por palabra o campo (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 798f30d39b4f805001c8c28b9ad6212061550775
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 49fff8df58b41acf7c8a63b94e8d1c85eefec8ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397731"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434932"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)
 
@@ -15,7 +16,7 @@ En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, 
 
 ### <a name="to-create-a-file-that-contains-data"></a>Para crear un archivo que contenga datos
 
-Copie los datos de scores. csv del tema [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md) y guardarlo en la carpeta de la solución.
+Copie los datos de scores.csv del tema [Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md) y guardarlo en la carpeta de la solución.
 
 ## <a name="example"></a>Ejemplo
 
@@ -76,6 +77,6 @@ En este ejemplo también se muestra cómo devolver una variable de consulta desd
 
 Cree un proyecto de aplicación de consola de Visual Basic, con una `Imports` instrucción para el espacio de nombres System. Linq.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [LINQ y cadenas (Visual Basic)](linq-and-strings.md)

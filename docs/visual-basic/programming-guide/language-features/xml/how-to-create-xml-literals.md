@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de cómo: crear literales XML (Visual Basic)'
 title: Procedimiento para crear literales XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: c7ad8d684dde31550b6e1b74c098d152b227f6c1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0e57b037d0567002fd570025e147771c4fab38f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058227"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433296"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Cómo: Crear literales XML (Visual Basic)
 
@@ -53,7 +54,7 @@ Puede crear un documento, fragmento o elemento XML directamente en el código me
   
      `</books>`  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [XML](index.md)
 - [Crear XML en Visual Basic](creating-xml.md)

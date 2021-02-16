@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: debe especificar un nombre de archivo.'
 title: Debe especificar un nombre de archivo.
 ms.date: 07/20/2015
 ms.assetid: e011825a-019f-4c01-8d5b-3194f172e495
-ms.openlocfilehash: bb91318456f25ecb53a31df2928f5386c473ef61
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fd64b433790b989cfc520f4b4d325dffd8e17f8a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100287"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428186"
 ---
 # <a name="you-must-specify-a-file-name"></a>Debe especificar un nombre de archivo.
 
@@ -19,7 +20,7 @@ Intentó una operación, como mover o copiar un archivo, lo que requiere proporc
   
 - Asegúrese de que la ruta de acceso no termina con un carácter separador de directorio ( \\ ).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimiento para analizar rutas de acceso a archivos](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

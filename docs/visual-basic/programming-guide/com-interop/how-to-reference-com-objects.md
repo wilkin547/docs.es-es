@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: hacer referencia a objetos COM desde Visual Basic'
 title: 'Cómo: Hacer referencia a objetos COM desde Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 43ba068663db9f8c3816a6f731395a6682a130e6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f0c08e5be9144bdefc3fe0b4609bad2421889d52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083298"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477572"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Cómo: Hacer referencia a objetos COM desde Visual Basic
 
@@ -53,7 +54,7 @@ En Visual Basic, la adición de referencias a objetos COM que tienen bibliotecas
   
      Puede usar TlbImp para crear ensamblados de interoperabilidad para bibliotecas de tipos, incluso para objetos COM no registrados. Sin embargo, los objetos COM a los que hacen referencia los ensamblados de interoperabilidad deben estar registrados correctamente en el equipo en el que se van a utilizar. Puede registrar un objeto COM mediante la utilidad regsvr32 incluida en el sistema operativo Windows.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interoperabilidad COM](index.md)
 - [TlbImp.exe (Importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)

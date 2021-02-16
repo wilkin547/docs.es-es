@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: información general sobre las constantes (Visual Basic)'
 title: Información general sobre las constantes
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 7f2a2dc140352588246d80a7feb46ce1f609b358
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: af5a64339c04306538fe1b9dc195a044aa89ab9f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086288"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475453"
 ---
 # <a name="constants-overview-visual-basic"></a>Información general sobre las constantes (Visual Basic)
 
@@ -47,7 +48,7 @@ Una constante es un nombre significativo que ocupa el lugar de un número o una 
 |[Instrucción Const](../../../language-reference/statements/const-statement.md)|Describe la `Const` instrucción y su uso.|  
 |[Option Strict (instrucción)](../../../language-reference/statements/option-strict-statement.md)|Describe la `Option Strict` instrucción y su uso.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre las enumeraciones](enumerations-overview.md)
 - [Cómo: Inicializar una variable de matriz en Visual Basic](../arrays/how-to-initialize-an-array-variable.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: utilizar una clase que define operadores (Visual Basic)'
 title: Procedimiento para usar una clase que define operadores
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 083916a420bf4ad182536363ea46448f6b4c1da5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4bf5321fbf1868ad0214d0f4781df30dc8f92ac9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071357"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455748"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Cómo: Utilizar una clase que define operadores (Visual Basic)
 
@@ -26,7 +27,7 @@ Si usa una clase o estructura que define sus propios operadores, puede tener acc
   
 ## <a name="example"></a>Ejemplo  
 
- En el ejemplo siguiente se tiene acceso a la estructura SQL <xref:System.Data.SqlTypes.SqlString> , que define los operadores de conversión ([función ctype](../../../language-reference/functions/ctype-function.md)) en ambas direcciones entre una cadena SQL y una cadena de Visual Basic. Use `CType(` la *expresión de cadena de SQL*para `String)` convertir una cadena de SQL en una cadena de Visual Basic y `CType(` *Visual Basic expresión de cadena*, <xref:System.Data.SqlTypes.SqlString> `)` para convertirla en la otra dirección.  
+ En el ejemplo siguiente se tiene acceso a la estructura SQL <xref:System.Data.SqlTypes.SqlString> , que define los operadores de conversión ([función ctype](../../../language-reference/functions/ctype-function.md)) en ambas direcciones entre una cadena SQL y una cadena de Visual Basic. Use `CType(` la *expresión de cadena de SQL* para `String)` convertir una cadena de SQL en una cadena de Visual Basic y `CType(` *Visual Basic expresión de cadena*, <xref:System.Data.SqlTypes.SqlString> `)` para convertirla en la otra dirección.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
@@ -42,7 +43,7 @@ Si usa una clase o estructura que define sus propios operadores, puede tener acc
   
  El proyecto debe tener referencias a System. Data y System.XML.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos de operador](./operator-procedures.md)
 - [Procedimiento para definir un operador](./how-to-define-an-operator.md)

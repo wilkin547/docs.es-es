@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Introducción a LINQ (Visual Basic)'
 title: Introducción a LINQ
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: e99da74eb69511b92ddccfb42f8002adc7be83d1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b6be93bbf9b458ca19068961617ee08f67601edc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098286"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426795"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Introducción a LINQ (Visual Basic)
 
@@ -35,6 +36,6 @@ Language-Integrated Query (LINQ) es una innovación que se ha presentado en la v
   
 - Colecciones, archivos, cadenas de .NET, etc.: [LINQ to Objects (Visual Basic)](linq-to-objects.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Language-Integrated Query (LINQ) (Visual Basic)](index.md)

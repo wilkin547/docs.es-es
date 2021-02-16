@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: tipos de datos varios (Visual Basic)'
 title: Tipos de datos varios
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 45b44abc24b968f19b456cbe0be0f25efc8f0ce8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3875a3fc3027d573013470cb96c9482a0be6cbbf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095465"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462001"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Tipos de datos variados (Visual Basic)
 
@@ -34,7 +35,7 @@ Visual Basic proporciona varios tipos de datos que no están orientados a númer
   
  La ventaja del `Object` tipo de datos es que se puede usar para almacenar datos de cualquier tipo de datos. El inconveniente es que se incurre en operaciones adicionales que tardan más tiempo de ejecución y hacen que la aplicación funcione más lentamente. Si utiliza una `Object` variable para los tipos de valor, incurrirá en la *conversión boxing* y la conversión *unboxing*. Si se usa para los tipos de referencia, se incurre en el *enlace en tiempo de ejecución*.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Caracteres de tipo](type-characters.md)
 - [Tipos de datos básicos](elementary-data-types.md)

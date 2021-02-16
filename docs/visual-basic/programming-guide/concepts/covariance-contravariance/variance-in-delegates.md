@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: varianza en delegados (Visual Basic)'
 title: Varianza en delegados
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 86ea9f3f744381bcff71a88e9d88485cafa4a568
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d47f05a5ce3f3e59223f1f37ab09fb8a21e6e7ba
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375621"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100458971"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Varianza en delegados (Visual Basic)
 
@@ -152,7 +153,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef`los parámetros de Visual Basic no se pueden marcar como Variant.
+> `ByRef` los parámetros de Visual Basic no se pueden marcar como Variant.
 
 También es posible admitir la varianza y la covarianza en el mismo delegado, pero para parámetros de tipo diferentes. Esta implementación se muestra en el ejemplo siguiente.
 
@@ -211,7 +212,7 @@ End Sub
 
 La conversión de delegado relajado permite más flexibilidad en la coincidencia de firmas de método con tipos de delegado. Por ejemplo, le permite omitir las especificaciones de parámetro y omitir los valores devueltos de función al asignar un método a un delegado. Para obtener más información, vea [conversión de delegado relajado](../../language-features/delegates/relaxed-delegate-conversion.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Genéricos](../../../../standard/generics/index.md)
 - [Usar la varianza para los delegados genéricos Func y Action (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

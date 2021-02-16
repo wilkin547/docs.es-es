@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Procedimiento: Invocación del compilador de la línea de comandos (Visual Basic)'
 title: Procedimiento Invocación del compilador de la línea de comandos
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aca8fe70e252ae9e7fb06f740ce5b7f3c8ca3d5d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408613"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470218"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procedimiento Invocación del compilador de la línea de comandos (Visual Basic)
 

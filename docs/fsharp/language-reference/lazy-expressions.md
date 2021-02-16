@@ -2,12 +2,12 @@
 title: Expresiones diferidas
 description: 'Obtenga información sobre cómo las expresiones de F # Lazy pueden mejorar el rendimiento de las aplicaciones y las bibliotecas.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 71c466ca3b74c9e92b81a3c268e07438ec944905
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0b8496467295ce6793f80c341af88bb1819f4a47
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558093"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425508"
 ---
 # <a name="lazy-expressions"></a>Expresiones diferidas
 
@@ -21,7 +21,7 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, *Expression* es un código que solo se evalúa cuando se requiere un resultado y *Identifier* es un valor que almacena el resultado. El valor es de tipo [`Lazy<'T>`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-lazy-1-0.html) , donde el tipo real que se utiliza para `'T` se determina a partir del resultado de la expresión.
+En la sintaxis anterior, *Expression* es un código que solo se evalúa cuando se requiere un resultado y *Identifier* es un valor que almacena el resultado. El valor es de tipo `Lazy<'T>` , donde el tipo real que se utiliza para `'T` se determina a partir del resultado de la expresión.
 
 Las expresiones diferidas permiten mejorar el rendimiento mediante la restricción de la ejecución de una expresión a solo aquellas situaciones en las que se necesita un resultado.
 

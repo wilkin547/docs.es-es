@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: objetos y clases en Visual Basic'
 title: Objetos y clases
 ms.date: 05/26/2020
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9cefcc117c9dd4ac42940f342dbf75d8ddb4f41d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600417"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462729"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos y clases de Visual Basic
 
@@ -28,7 +29,7 @@ Para comprender la relación entre un objeto y su clase, piense en las galletas 
 
 Debe crear un objeto para poder tener acceso a sus miembros, salvo para [`Shared`](../../../language-reference/modifiers/shared.md) los miembros a los que se puede tener acceso sin un objeto de la clase.
 
-### <a name="create-an-object-from-a-class"></a>Crear un objeto a partir de una clase
+### <a name="create-an-object-from-a-class"></a>Creación de un objeto a partir de una clase
 
 1. Determine en qué clase desea crear un objeto o defina su propia clase. Por ejemplo:
 

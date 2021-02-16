@@ -2,12 +2,12 @@
 title: Implementación de puertas de enlace de API con Ocelot
 description: Obtenga información sobre cómo implementar puertas de enlace de API con Ocelot y cómo usar Ocelot en un entorno basado en contenedores.
 ms.date: 03/02/2020
-ms.openlocfilehash: 5da8533eff394b587d123970742727484a7236ad
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 3f8fcaac162d2bffd221f07b2e5061455d73e1bd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678121"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429304"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -196,7 +196,7 @@ Aquí, lo importante para Ocelot es el archivo `configuration.json` que se debe 
 
 En la configuración hay dos secciones. Una matriz de ReRoutes y un elemento GlobalConfiguration. Los objetos ReRoutes indican a Ocelot cómo tratar una solicitud ascendente. GlobalConfiguration permite invalidaciones de los valores específicos de ReRoute. Es útil si no quiere administrar una gran cantidad de valores específicos de ReRoute.
 
-Este es un ejemplo simplificado del [archivo de configuración de ReRoute](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json) de una de las puertas de enlace de API de eShopOnContainers.
+Este es un ejemplo simplificado del [archivo de configuración de ReRoute](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/ApiGateways/Mobile.Bff.Shopping/apigw/configuration.json) de una de las puertas de enlace de API de eShopOnContainers.
 
 ```json
 {
