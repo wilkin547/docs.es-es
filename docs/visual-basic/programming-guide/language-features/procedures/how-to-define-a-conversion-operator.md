@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: definir un operador de conversión (Visual Basic)'
 title: Procedimiento para definir un operador de conversión
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: 2fabcf6c6ceb38fe77d4eed4f02dcb5a5e447bf1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c090e183e809974163625c4bfcf33536b1082b66
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085677"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481992"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Cómo: Definir un operador de conversión (Visual Basic)
 
@@ -34,7 +35,7 @@ Si ha definido una clase o estructura, puede definir un operador de conversión 
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos de operador](./operator-procedures.md)
 - [Procedimiento para definir un operador](./how-to-define-an-operator.md)

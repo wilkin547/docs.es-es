@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: estructuras y otros elementos de programación (Visual Basic)'
 title: Estructuras y otros elementos de programación
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 26c98adda7305783b0220141db35b08285b21554
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 62052389b617849566a3cd0c475a2eb5da9e61ca
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084091"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430591"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Estructuras y otros elementos de programación (Visual Basic)
 
@@ -127,7 +128,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
  Las estructuras pueden contener otras estructuras para una profundidad arbitraria.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipo de datos](index.md)
 - [Tipos de datos básicos](elementary-data-types.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: diferencias entre argumentos modificables y no modificables (Visual Basic)'
 title: Diferencias entre argumentos modificables y no modificables
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 662ad3039bb3fd5c44847d5b2a97a033a18ad063
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8d83802b4b8830a17412fdef44eabd2e5b8a7f2d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071967"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472636"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Diferencias entre argumentos modificables y no modificables (Visual Basic)
 
@@ -40,7 +41,7 @@ Cuando se llama a un procedimiento, normalmente se pasan uno o más argumentos. 
   
  El procedimiento llamado podría modificar su copia local de un argumento no modificable, pero esa modificación no afecta al elemento subyacente en el código de llamada.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

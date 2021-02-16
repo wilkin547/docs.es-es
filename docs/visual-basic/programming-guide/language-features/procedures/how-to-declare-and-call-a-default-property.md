@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic'
 title: Procedimiento para declarar y llamar a una propiedad predeterminada
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 21aa6e6a9bba23d767b9d1fac610eaac3265550d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2a0e82fe89bb89613996f613930ace1aa6e41b7f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087458"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472454"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic
 
@@ -85,7 +86,7 @@ Una *propiedad predeterminada* es una propiedad de clase o estructura a la que e
   
  Debido a estas desventajas, considere la posibilidad de no definir las propiedades predeterminadas. Para facilitar la lectura del código, también debe considerar la posibilidad de hacer referencia siempre a todas las propiedades explícitamente, incluso a las propiedades predeterminadas.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos de propiedad](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

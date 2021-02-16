@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: Introducción a la interoperabilidad COM (Visual Basic)'
 title: Introducción a la interoperabilidad COM
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 7bfbf0c6de8519e91a458ab4cbb5693024cdbeb2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 86741958e63263f0788384a1261063d71d16df16
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090396"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480796"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Información general sobre la interoperabilidad COM (Visual Basic)
 
@@ -22,7 +23,7 @@ El modelo de objetos componentes (COM) permite a un objeto exponer su funcionali
   
 ## <a name="managed-code-and-data"></a>Código administrado y datos  
 
- El código desarrollado para el .NET Framework se conoce como *código administrado*y contiene metadatos utilizados por el CLR. Los datos utilizados por .NET Framework aplicaciones se denominan *datos administrados* porque el tiempo de ejecución administra tareas relacionadas con datos, como la asignación y la recuperación de memoria y la comprobación de tipos. De forma predeterminada, Visual Basic .NET utiliza código y datos administrados, pero puede tener acceso al código no administrado y a los datos de objetos COM mediante ensamblados de interoperabilidad (que se describen más adelante en esta página).  
+ El código desarrollado para el .NET Framework se conoce como *código administrado* y contiene metadatos utilizados por el CLR. Los datos utilizados por .NET Framework aplicaciones se denominan *datos administrados* porque el tiempo de ejecución administra tareas relacionadas con datos, como la asignación y la recuperación de memoria y la comprobación de tipos. De forma predeterminada, Visual Basic .NET utiliza código y datos administrados, pero puede tener acceso al código no administrado y a los datos de objetos COM mediante ensamblados de interoperabilidad (que se describen más adelante en esta página).  
   
 ## <a name="assemblies"></a>Ensamblados  
 
@@ -58,7 +59,7 @@ El modelo de objetos componentes (COM) permite a un objeto exponer su funcionali
 
  Todas las aplicaciones .NET Framework comparten un conjunto de tipos comunes que permiten la interoperabilidad de objetos, independientemente del lenguaje de programación que se use. Los parámetros y los valores devueltos de los objetos COM a veces utilizan tipos de datos que difieren de los usados en código administrado. El *cálculo de referencias de interoperabilidad* es el proceso de empaquetar parámetros y devolver valores en tipos de datos equivalentes a medida que se mueven a objetos com y desde ellos. Para obtener más información, consulte [serialización de interoperabilidad](../../../framework/interop/interop-marshaling.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interoperabilidad COM](index.md)
 - [Tutorial: Implementación de la herencia mediante objetos COM](walkthrough-implementing-inheritance-with-com-objects.md)

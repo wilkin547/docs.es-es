@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: cambiar el valor de un argumento de procedimiento (Visual Basic)'
 title: Procedimiento para cambiar el valor de un argumento de procedimiento
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 9960dacc053c5dc8d8cfdfd6eaa0ea3258ed0fea
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f8ccc80f7a9cb5d2b090fbc6b7f7e3423e5a1cae
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077077"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472584"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Cómo: Cambiar el valor de un argumento de procedimiento (Visual Basic)
 
@@ -82,7 +83,7 @@ Cuando se llama a un procedimiento, cada argumento proporcionado corresponde a u
 
  Siempre existe un riesgo potencial en permitir que un procedimiento cambie el valor subyacente de un argumento en el código de llamada. Asegúrese de que espera que se cambie este valor y prepárese para comprobar su validez antes de usarlo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

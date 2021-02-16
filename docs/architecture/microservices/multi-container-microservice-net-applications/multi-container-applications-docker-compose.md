@@ -2,12 +2,12 @@
 title: Definir una aplicación de varios contenedores con docker-compose.yml
 description: Cómo se especifica la composición de microservicios para una aplicación de varios contenedores con docker-compose.yml.
 ms.date: 01/13/2021
-ms.openlocfilehash: 224b06c6a10834b42218746964f05b055d947235
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fa8a5736905f6bae7fec8da35638048707bb6fa1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188795"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430565"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml
 
@@ -410,7 +410,7 @@ IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
 
 Las variables de entorno se crean y se inicializan de maneras diferentes, en función de su entorno de host (Linux, Windows, clúster en la nube, etc.), aunque un método práctico consiste en usar un archivo .env. Los archivos docker-compose admiten la declaración de variables de entorno predeterminadas en el archivo .env. Estos valores de las variables de entorno son los valores predeterminados, pero se pueden invalidar con los valores que haya podido definir en cada uno de sus entornos (sistema operativo host o variables de entorno del clúster). Este archivo .env se coloca en la carpeta en la que se ejecuta el comando docker-compose.
 
-En el siguiente ejemplo se muestra un archivo .env como el archivo [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env) para la aplicación eShopOnContainers.
+En el siguiente ejemplo se muestra un archivo .env como el archivo [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/.env) para la aplicación eShopOnContainers.
 
 ```sh
 # .env file
