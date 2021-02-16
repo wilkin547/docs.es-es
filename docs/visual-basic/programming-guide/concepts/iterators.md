@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: iteradores (Visual Basic)'
 title: Iterators
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: e638d35aeb86837d91fb14681d300772e3c2375a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9d12bd436a976e3f84dbd063ca746fc7e3b17bfb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410934"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462157"
 ---
 # <a name="iterators-visual-basic"></a>Iteradores (Visual Basic)
 
@@ -47,7 +48,7 @@ Los iteradores se introdujeron en Visual Basic en Visual Studio 2012.
 
 - [Iterador simple](#BKMK_SimpleIterator)
 
-- [Crear una clase de colección](#BKMK_CollectionClass)
+- [Creación de una clase de colección](#BKMK_CollectionClass)
 
 - [Bloques try](#BKMK_TryBlocks)
 
@@ -64,7 +65,7 @@ Los iteradores se introdujeron en Visual Basic en Visual Studio 2012.
 > [!NOTE]
 > En todos los ejemplos del tema excepto en el ejemplo de iterador simple, incluya instrucciones [Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md) para los `System.Collections` `System.Collections.Generic` espacios de nombres y.
 
-## <a name="simple-iterator"></a><a name="BKMK_SimpleIterator"></a>Iterador simple
+## <a name="simple-iterator"></a><a name="BKMK_SimpleIterator"></a> Iterador simple
 
 El ejemplo siguiente tiene una única `Yield` instrucción que está dentro de un [... Siguiente](../../language-reference/statements/for-next-statement.md) bucle. En `Main`, cada iteración del cuerpo de la instrucción `For Each` crea una llamada a la función de iterador, que continúa a la instrucción `Yield` siguiente.
 
@@ -216,7 +217,7 @@ Public Class Zoo
 End Class
 ```
 
-## <a name="try-blocks"></a><a name="BKMK_TryBlocks"></a>Bloques try
+## <a name="try-blocks"></a><a name="BKMK_TryBlocks"></a> Bloques try
 
 Visual Basic permite una `Yield` instrucción en el `Try` bloque de una instrucción [try... Detectar... Finally](../../language-reference/statements/try-catch-finally-statement.md). Un `Try` bloque que tiene una `Yield` instrucción puede tener `Catch` bloques y puede tener un `Finally` bloque.
 
@@ -257,9 +258,9 @@ Una `Yield` instrucción no puede estar dentro de un `Catch` bloque o un `Finall
 
 Si el `For Each` cuerpo (en lugar del método iterador) produce una excepción, `Catch` no se ejecuta un bloque de la función de iterador, pero `Finally` se ejecuta un bloque en la función de iterador. Un `Catch` bloque dentro de una función de iterador solo detecta las excepciones que se producen dentro de la función de iterador.
 
-## <a name="anonymous-methods"></a><a name="BKMK_AnonymousMethods"></a>Métodos anónimos
+## <a name="anonymous-methods"></a><a name="BKMK_AnonymousMethods"></a> Métodos anónimos
 
-En Visual Basic, una función anónima puede ser una función de iterador. Esto se ilustra en el siguiente ejemplo.
+En Visual Basic, una función anónima puede ser una función de iterador. Esto se ilustra en el siguiente ejemplo:
 
 ```vb
 Dim iterateSequence = Iterator Function() _
@@ -308,7 +309,7 @@ End Function
 
 Si la validación está en su lugar dentro de la función de iterador, no se puede realizar la validación hasta el inicio de la primera iteración del `For Each` cuerpo.
 
-## <a name="using-iterators-with-a-generic-list"></a><a name="BKMK_GenericList"></a>Usar iteradores con una lista genérica
+## <a name="using-iterators-with-a-generic-list"></a><a name="BKMK_GenericList"></a> Usar iteradores con una lista genérica
 
 En el ejemplo siguiente, la clase genérica `Stack(Of T)` implementa la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>. El método `Push` asigna valores a una matriz de tipo `T`. El método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> devuelve los valores de la matriz con la instrucción `Yield`.
 
@@ -419,7 +420,7 @@ Public Class Stack(Of T)
 End Class
 ```
 
-## <a name="syntax-information"></a><a name="BKMK_SyntaxInformation"></a>Información de sintaxis
+## <a name="syntax-information"></a><a name="BKMK_SyntaxInformation"></a> Información de sintaxis
 
 Un iterador se puede producir como un método o como un descriptor de acceso `get`. Un iterador no puede aparecer en un evento, un constructor de instancia, un constructor estático o un destructor estático.
 
@@ -429,7 +430,7 @@ En Visual Basic, un método de iterador no puede tener ningún `ByRef` parámetr
 
 En Visual Basic, "yield" no es una palabra reservada y tiene un significado especial solo cuando se usa en un `Iterator` método o un `get` descriptor de acceso.
 
-## <a name="technical-implementation"></a><a name="BKMK_Technical"></a>Implementación técnica
+## <a name="technical-implementation"></a><a name="BKMK_Technical"></a> Implementación técnica
 
 Aunque un iterador se escribe como un método, el compilador lo traduce a una clase anidada que es, en realidad, una máquina de estados. Esta clase realiza el seguimiento de la posición del iterador mientras el bucle `For Each...Next` continúe en el código de cliente.
 
@@ -443,7 +444,7 @@ Los iteradores no admiten el <xref:System.Collections.IEnumerator.Reset%2A?displ
 
 Para obtener más información, vea la [especificación del lenguaje Visual Basic](../../reference/language-specification/index.md).
 
-## <a name="use-of-iterators"></a><a name="BKMK_UseOfIterators"></a>Uso de iteradores
+## <a name="use-of-iterators"></a><a name="BKMK_UseOfIterators"></a> Uso de iteradores
 
 Los iteradores permiten mantener la simplicidad de un bucle `For Each` cuando se necesita usar código complejo para rellenar una secuencia de lista. Esto puede ser útil si quiere hacer lo siguiente:
 
@@ -453,7 +454,7 @@ Los iteradores permiten mantener la simplicidad de un bucle `For Each` cuando se
 
 - Encapsular la creación de la lista en el iterador. En el método iterador, puede crear la lista y después devolver cada resultado en un bucle.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

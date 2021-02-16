@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de la ordenación de datos (Visual Basic)
 title: Ordenación de datos
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: a5ccff745995ed7f41731cf98fb7c49d3247d994
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 83e05b2af1b3421d004a87630cd5df43f2a21ae4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406799"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468556"
 ---
 # <a name="sorting-data-visual-basic"></a>Ordenar datos (Visual Basic)
 
@@ -21,13 +22,13 @@ Los métodos de operador de consulta estándar que ordenan datos de datos se enu
 
 ## <a name="methods"></a>Métodos
 
-|Nombre del método|Description|Visual Basic sintaxis de expresiones de consulta|Más información|
+|Nombre del método|Descripción|Visual Basic sintaxis de expresiones de consulta|Más información|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|Ordena valores en orden ascendente.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|Ordena valores en orden descendente.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
 |ThenBy|Realiza una ordenación secundaria en orden ascendente.|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|
 |ThenByDescending|Realiza una ordenación secundaria en orden descendente.|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|
-|Reverse|Invierte el orden de los elementos de una colección.|No disponible.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
+|Reverse|Invierte el orden de los elementos de una colección.|No es aplicable.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-examples"></a>Ejemplos de sintaxis de expresiones de consulta
 
@@ -147,10 +148,10 @@ MsgBox(sb.ToString())
 ' brown
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)
-- [Cláusula Order By](../../../language-reference/queries/order-by-clause.md)
+- [Cláusula order by](../../../language-reference/queries/order-by-clause.md)
 - [Cómo: Ordenar los resultados de una consulta](../../language-features/linq/how-to-sort-query-results-by-using-linq.md)
 - [Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

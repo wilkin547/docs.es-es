@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Tutorial: crear e implementar interfaces (Visual Basic)'
 title: Creación e implementación de interfaces
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 89e8f91a04b25b84bc783d5c4f4b91cf12426f72
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 058011d311fdecba626a59228816f9bced319c97
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405072"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468426"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Tutorial: Crear e implementar interfaces (Visual Basic)
 
@@ -83,7 +84,7 @@ Las interfaces describen las características de las propiedades, los métodos y
   
 ### <a name="to-test-the-implementation-of-the-interface"></a>Para probar la implementación de la interfaz
   
-1. Haga clic con el botón secundario en el formulario de inicio del proyecto en el **Explorador de soluciones**y haga clic en **Ver código**. El editor muestra la clase del formulario de inicio. De forma predeterminada, se llama al formulario de inicio `Form1` .  
+1. Haga clic con el botón secundario en el formulario de inicio del proyecto en el **Explorador de soluciones** y haga clic en **Ver código**. El editor muestra la clase del formulario de inicio. De forma predeterminada, se llama al formulario de inicio `Form1` .  
   
 2. Agregue el siguiente `testInstance` campo a la `Form1` clase:  
   

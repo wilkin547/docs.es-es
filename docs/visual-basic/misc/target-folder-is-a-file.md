@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: la carpeta de destino es un archivo'
 title: La carpeta de destino es un archivo
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: 4885c4c5c6162dc527fcbc643f4770cafe00f17a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 52525bc2422e913457e2597086139b19931b510c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078624"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455371"
 ---
 # <a name="target-folder-is-a-file"></a>La carpeta de destino es un archivo
 
@@ -17,7 +18,7 @@ Está especificando un archivo mientras intenta realizar una acción relacionada
   
 - Compruebe la ruta de acceso que está facilitando para asegurarse de que está especificando una carpeta en lugar de un archivo.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimiento para analizar rutas de acceso a archivos](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

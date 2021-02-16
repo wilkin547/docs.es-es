@@ -3,12 +3,12 @@ title: Descartes - Guía de C#
 description: Describe la compatibilidad de C# con descartes, que son variables sin asignar y descartables, así como las maneras en que pueden usarse.
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 7562da880ff3136dfc04ce4061bafa8ed55f5a23
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 3c18fbb0bbb80c2c29c9f5d8334a5dd711b68cc5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426923"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432639"
 ---
 # <a name="discards---c-guide"></a>Descartes - Guía de C#
 
@@ -40,7 +40,7 @@ El método `Deconstruct` de una clase, estructura o interfaz también permite re
 
 Para obtener más información sobre la deconstrucción de tipos definidos por el usuario con descartes, vea [Deconstructing tuples and other types](deconstruct.md#deconstructing-a-user-defined-type-with-discards) (Deconstruir tuplas y otros tipos).
 
-## <a name="pattern-matching-with-switch"></a>Coincidencia de patrones con switch
+## <a name="pattern-matching-with-switch"></a>Coincidencia de patrones con `switch`
 
 El *patrón de descarte* se puede usar en la coincidencia de patrones con la palabra clave [switch](language-reference/keywords/switch.md). Todas las expresiones siempre coinciden con el patrón de descarte. (Se puede utilizar con expresiones [is](language-reference/keywords/is.md). Sin embargo, ese uso es poco frecuente porque el descarte se puede quitar sin cambiar su significado).
 

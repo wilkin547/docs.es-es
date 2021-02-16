@@ -2,12 +2,12 @@
 title: Tipos básicos
 description: 'Descubra los tipos básicos fundamentales que se usan en el lenguaje F #.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 659ac8424c62985affcca1741e1b2a74c9c3ee8d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 2bfc9ba9370cb8ba1fcc1d42369c2551cbb57623
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557703"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456918"
 ---
 # <a name="basic-types"></a>Tipos básicos
 
@@ -34,7 +34,7 @@ En este tema se enumeran los tipos básicos que se definen en el lenguaje F #. E
 |`unit`|no aplicable|Indica la ausencia de un valor real. El tipo solo tiene un valor formal, que se indica `()` . El valor de unidad, `()` , se usa a menudo como un marcador de posición en el que se necesita un valor, pero no hay ningún valor real disponible o tiene sentido.|`()`|
 
 > [!NOTE]
-> Puede realizar cálculos con enteros demasiado grandes para el tipo entero de 64 bits mediante el tipo [BIGINT](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-bigint.html) . `bigint` no se considera un tipo básico; es una abreviatura de `System.Numerics.BigInteger` .
+> Puede realizar cálculos con enteros demasiado grandes para el tipo entero de 64 bits mediante el `bigint` tipo. `bigint` no se considera un tipo básico; es una abreviatura de `System.Numerics.BigInteger` .
 
 ## <a name="see-also"></a>Vea también
 

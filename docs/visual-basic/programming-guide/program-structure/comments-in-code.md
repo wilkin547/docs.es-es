@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: comentarios en el código (Visual Basic)'
 title: Comentarios en código
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b0077bdae3bad1d67c3d26e503d05f318982eb80
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 66e12a18c2532bb5b694affccb84153f01bcddd5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099026"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461936"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentarios en el código (Visual Basic)
 
@@ -59,9 +60,9 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
  Para agregar o quitar símbolos de comentario de un bloque de código, seleccione una o varias líneas de código y elija el **Comentario** ( ![ el Visual Basic botón de comentario en Visual Studio ](./media/comments-in-code/visual-basic-comment-button.gif) ) y **Quite los comentarios** ( ![ el botón Visual Basic quitar comentarios de Visual Studio ](./media/comments-in-code/visual-basic-uncomment-button.gif) ) en la barra de herramientas de **edición** .  
   
 > [!NOTE]
-> También puede agregar comentarios al código poniendo la palabra clave `REM` antes del texto. Sin embargo, los `'` botones de símbolo y de **Comentario** / **Uncomment** son más fáciles de usar y requieren menos espacio y memoria.  
+> También puede agregar comentarios al código poniendo la palabra clave `REM` antes del texto. Sin embargo, los `'` botones de símbolo y de **Comentario** /  son más fáciles de usar y requieren menos espacio y memoria.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instinto básico: documentar el código con comentarios XML](/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [Procedimiento para crear documentación XML](how-to-create-xml-documentation.md)

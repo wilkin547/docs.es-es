@@ -2,12 +2,12 @@
 title: Uso de un servidor de bases de datos que se ejecuta como contenedor
 description: Sirve para comprender la importancia de usar un servidor de base de datos que se ejecuta como contenedor solamente para el desarrollo. Nunca se debe usar para la producción.
 ms.date: 01/13/2021
-ms.openlocfilehash: 1292bf37e3baaeb6284f6fba15b4bc7c9c17b4a7
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: f24e9561c2d3d950fd017403ff91d961e134d11f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188743"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424312"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Uso de un servidor de bases de datos que se ejecuta como contenedor
 
@@ -15,7 +15,7 @@ Puede tener las bases de datos (SQL Server, PostgreSQL, MySQL, etc.) en servidor
 
 ## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server que se ejecuta como un contenedor con una base de datos relacionada con un microservicio
 
-En eShopOnContainers, hay un contenedor denominado `sqldata`, como se define en el archivo [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml), que ejecuta una instancia de SQL Server para Linux con las bases de datos de SQL para todos los microservicios que la necesiten.
+En eShopOnContainers, hay un contenedor denominado `sqldata`, como se define en el archivo [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/docker-compose.yml), que ejecuta una instancia de SQL Server para Linux con las bases de datos de SQL para todos los microservicios que la necesiten.
 
 Un punto clave de los microservicios es que cada uno posee sus datos relacionados, de manera que debería tener su propia base de datos. Sin embargo, las bases de datos pueden encontrarse en cualquier lugar. En este caso, todas están en el mismo contenedor para mantener los requisitos de memoria de Docker tan bajos como sea posible. Tenga en cuenta que esta es una solución suficientemente aceptable para el desarrollo y tal vez para las pruebas, pero no para la producción.
 
