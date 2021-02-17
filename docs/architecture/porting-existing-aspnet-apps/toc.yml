@@ -1,0 +1,68 @@
+- name: "Migración de aplicaciones existentes de ASP.NET a .NET\_Core"
+  href: index.md
+  items:
+    - name: "Introducción a la migración de aplicaciones a .NET\_Core"
+      href: introduction.md
+      items:
+        - name: Consideraciones de migración
+          href: migration-considerations.md
+        - name: "Migración a ASP.NET\_Core\_2.1"
+          href: migrate-aspnet-core-2-1.md
+        - name: "Elección de la versión adecuada de .NET\_Core"
+          href: choose-net-core-version.md
+        - name: Estrategias para migrar incrementalmente
+          href: incremental-migration-strategies.md
+        - name: Estrategias para migrar aplicaciones de ASP.NET Web Forms
+          href: migrate-web-forms.md
+        - name: Estrategias de implementación
+          href: deployment-strategies.md
+        - name: Recursos de migración adicionales
+          href: additional-migration-resources.md
+    - name: "Diferencias arquitectónicas entre ASP.NET\_MVC y ASP.NET\_Core"
+      href: architectural-differences.md
+      items:
+        - name: Diferencias de inicio de la aplicación
+          href: app-startup-differences.md
+        - name: Diferencias de hospedaje
+          href: hosting-differences.md
+        - name: Proporcionar archivos estáticos
+          href: serving-static-files.md
+        - name: Diferencias en la inserción de dependencias
+          href: dependency-injection-differences.md
+        - name: 'Middleware, módulos y controladores'
+          href: middleware-modules-handlers.md
+        - name: Diferencias de configuración
+          href: configuration-differences.md
+        - name: Diferencias de enrutamiento
+          href: routing-differences.md
+        - name: "Comparación de Razor\_Pages con ASP.NET\_MVC"
+          href: comparing-razor-pages-aspnet-mvc.md
+        - name: "Diferencias de Web\_API"
+          href: webapi-differences.md
+        - name: Diferencias de autenticación
+          href: authentication-differences.md
+        - name: Diferencias de identidad
+          href: identity-differences.md
+        - name: Diferencias de controlador
+          href: controller-differences.md
+        - name: Diferencias de Razor
+          href: razor-differences.md
+        - name: Diferencias de SignalR
+          href: signalr-differences.md
+        - name: Diferencias de pruebas
+          href: testing-differences.md
+    - name: Migración de soluciones de gran tamaño
+      href: migrate-large-solutions.md
+      items:
+        - name: Identificación de la secuencia de proyectos que se van a migrar
+          href: identify-migration-sequence.md
+        - name: Descripción y actualización de dependencias
+          href: understand-update-dependencies.md
+        - name: Estrategias para migrar con la ejecución en producción
+          href: strategies-migrating-in-production.md
+    - name: Ejemplo de migración de un proyecto de eShop
+      href: example-migration-eshop.md
+    - name: Escenarios de implementación
+      href: deployment-scenarios.md
+    - name: Resumen
+      href: summary.md
