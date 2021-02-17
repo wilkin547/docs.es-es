@@ -24,8 +24,18 @@
               href: 6.0.md
             - name: ASP.NET Core
               items:
+                - name: 'Blazor: se ha cambiado el de parámetro en el método RequestImageFileAsync'
+                  href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: Atributos de mensaje de registro modificados'
                   href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
+                - name: 'Middleware: el middleware de redireccionamiento de HTTPS inicia una excepción en puertos HTTPS ambiguos'
+                  href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
+                - name: 'Razor: API de RazorEngine marcadas como obsoletas'
+                  href: aspnet-core/6.0/razor-engine-apis-obsolete.md
+            - name: "Bibliotecas de Core\_.NET"
+              items:
+                - name: Cambios en las anotaciones de nulabilidad
+                  href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
             - name: Windows Forms
               items:
                 - name: Las API inician la excepción ArgumentNullException
@@ -306,8 +316,14 @@
           items:
             - name: ".NET\_6.0"
               items:
+                - name: 'Blazor: se ha cambiado el de parámetro en el método RequestImageFileAsync'
+                  href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: Atributos de mensaje de registro modificados'
                   href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
+                - name: 'Middleware: el middleware de redireccionamiento de HTTPS inicia una excepción en puertos HTTPS ambiguos'
+                  href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
+                - name: 'Razor: API de RazorEngine marcadas como obsoletas'
+                  href: aspnet-core/6.0/razor-engine-apis-obsolete.md
             - name: ".NET\_5.0"
               items:
                 - name: Las aplicaciones ASP.NET Core deserializan los números entrecomillados
@@ -406,6 +422,10 @@
                   href: code-analysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md
         - name: "Bibliotecas de Core\_.NET"
           items:
+            - name: ".NET\_6.0"
+              items:
+                - name: Cambios en las anotaciones de nulabilidad
+                  href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
             - name: ".NET\_5.0"
               items:
                 - name: Cambios de API relacionados con ensamblados para la publicación de un solo archivo
