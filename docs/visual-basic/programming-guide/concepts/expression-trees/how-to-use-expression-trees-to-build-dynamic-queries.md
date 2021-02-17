@@ -1,114 +1,146 @@
 ---
-description: 'Más información acerca de cómo: usar árboles de expresión para generar consultas dinámicas (Visual Basic)'
-title: Procedimiento para usar árboles de expresión para crear consultas dinámicas
-ms.date: 07/20/2015
+title: Consultas basadas en el estado de tiempo de ejecución (Visual Basic)
+description: Describe diversas técnicas que el código puede utilizar para consultar dinámicamente según el estado de tiempo de ejecución, mediante la modificación de las llamadas a métodos LINQ o los árboles de expresión pasados a esos métodos.
+ms.date: 02/14/2021
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: bb8abb22749cbf7c15b72632f60a5bd08287378d
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: c9f57950b2c26c0cca798ab632da90bf9f6c519a
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100423100"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584858"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Cómo: usar árboles de expresión para generar consultas dinámicas (Visual Basic)
+# <a name="querying-based-on-runtime-state-visual-basic"></a>Consultas basadas en el estado de tiempo de ejecución (Visual Basic)
 
-En LINQ, los árboles de expresión se usan para representar consultas estructuradas destinadas a orígenes de datos que implementan <xref:System.Linq.IQueryable%601>. Por ejemplo, el proveedor LINQ implementa la interfaz <xref:System.Linq.IQueryable%601> para realizar consultas en almacenes de datos relacionales. El compilador de Visual Basic compila las consultas que tienen como destino estos orígenes de datos en el código que crea un árbol de expresión en tiempo de ejecución. El proveedor de consultas puede después recorrer la estructura de datos del árbol de expresión y convertirla en un lenguaje de consulta adecuado para el origen de datos.
+Considere el código que define un <xref:System.Linq.IQueryable> o un [IQueryable (of T)](<xref:System.Linq.IQueryable%601>) en un origen de datos:
 
-Los arboles de expresión también se usan en LINQ para representar expresiones lambda que se asignan a variables de tipo <xref:System.Linq.Expressions.Expression%601>.
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Initialize":::
 
-En este tema se describe cómo usar árboles de expresión para crear consultas LINQ dinámicas. Las consultas dinámicas son útiles cuando no se conocen los detalles de una consulta en tiempo de compilación. Por ejemplo, es posible que una aplicación proporcione una interfaz de usuario que permita al usuario final especificar uno o más predicados para filtrar los datos. Para poder usar LINQ para realizar consultas, este tipo de aplicación debe usar árboles de expresión para crear la consulta LINQ en tiempo de ejecución.
+Cada vez que ejecute este código, se ejecutará la misma consulta exacta. Esto no suele ser muy útil, ya que puede que desee que el código ejecute consultas diferentes en función de las condiciones en tiempo de ejecución. En este artículo se describe cómo puede ejecutar una consulta diferente en función del estado de tiempo de ejecución.
 
-## <a name="example"></a>Ejemplo
+## <a name="iqueryable--iqueryableof-t-and-expression-trees"></a>IQueryable/IQueryable (of T) y árboles de expresión
 
-En el ejemplo siguiente se muestra cómo usar árboles de expresión para crear una consulta en un origen de datos `IQueryable` y después ejecutarlo. El código crea un árbol de expresión para representar la consulta siguiente:
+Fundamentalmente, un <xref:System.Linq.IQueryable> tiene dos componentes:
 
-`companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`
+* <xref:System.Linq.IQueryable.Expression>&mdash;una representación independiente del lenguaje y del origen de orígenes de los componentes de la consulta actual, en forma de un árbol de expresión.
+* <xref:System.Linq.IQueryable.Provider>&mdash;instancia de un proveedor LINQ, que sabe cómo materializar la consulta actual en un valor o un conjunto de valores.
 
-Los métodos de generador en el espacio de nombres <xref:System.Linq.Expressions> se usan para crear árboles de expresión que representan las expresiones que constituyen la consulta global. Las expresiones que representan llamadas a los métodos de operador de consulta estándar hacen referencia a las implementaciones <xref:System.Linq.Queryable> de estos métodos. El árbol de expresión final se pasa a la implementación <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> del proveedor del origen de datos `IQueryable` para crear una consulta ejecutable de tipo `IQueryable`. Los resultados se obtienen enumerando esa variable de consulta.
+En el contexto de las consultas dinámicas, el proveedor normalmente seguirá siendo el mismo. el árbol de expresión de la consulta variará de una consulta a una consulta.
 
-```vb
-' Add an Imports statement for System.Linq.Expressions.
+Los árboles de expresión son inmutables; Si desea un árbol de expresión diferente &mdash; y, por tanto, una consulta diferente deberá &mdash; traducir el árbol de expresión existente a uno nuevo y, por tanto, a un nuevo <xref:System.Linq.IQueryable> .
 
-Dim companies =
-    {"Consolidated Messenger", "Alpine Ski House", "Southridge Video", "City Power & Light",
-     "Coho Winery", "Wide World Importers", "Graphic Design Institute", "Adventure Works",
-     "Humongous Insurance", "Woodgrove Bank", "Margie's Travel", "Northwind Traders",
-     "Blue Yonder Airlines", "Trey Research", "The Phone Company",
-     "Wingtip Toys", "Lucerne Publishing", "Fourth Coffee"}
+En las secciones siguientes se describen técnicas específicas para realizar consultas de forma diferente en respuesta al estado en tiempo de ejecución:
 
-' The IQueryable data to query.
-Dim queryableData As IQueryable(Of String) = companies.AsQueryable()
+- Usar el estado de tiempo de ejecución desde el árbol de expresión
+- Llamar a métodos LINQ adicionales
+- Variar el árbol de expresión que se pasa a los métodos LINQ
+- Construya un árbol [de expresión de expresión (of TDelegate)](xref:System.Linq.Expressions.Expression%601) mediante los métodos de generador en <xref:System.Linq.Expressions.Expression>
+- Agregar nodos de llamada de método a un <xref:System.Linq.IQueryable> árbol de expresión de
+- Construir cadenas y usar la [biblioteca dinámica de LINQ](https://dynamic-linq.net/)
 
-' Compose the expression tree that represents the parameter to the predicate.
-Dim pe As ParameterExpression = Expression.Parameter(GetType(String), "company")
+## <a name="use-runtime-state-from-within-the-expression-tree"></a>Usar el estado de tiempo de ejecución desde el árbol de expresión
 
-' ***** Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16) *****
-' Create an expression tree that represents the expression: company.ToLower() = "coho winery".
-Dim left As Expression = Expression.Call(pe, GetType(String).GetMethod("ToLower", System.Type.EmptyTypes))
-Dim right As Expression = Expression.Constant("coho winery")
-Dim e1 As Expression = Expression.Equal(left, right)
+Suponiendo que el proveedor LINQ lo admita, la manera más sencilla de consultar dinámicamente es hacer referencia al estado de tiempo de ejecución directamente en la consulta a través de una variable cerrada, como `length` en el ejemplo de código siguiente:
 
-' Create an expression tree that represents the expression: company.Length > 16.
-left = Expression.Property(pe, GetType(String).GetProperty("Length"))
-right = Expression.Constant(16, GetType(Integer))
-Dim e2 As Expression = Expression.GreaterThan(left, right)
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Runtime_state_from_within_expression_tree":::
 
-' Combine the expressions to create an expression tree that represents the
-' expression: company.ToLower() = "coho winery" OrElse company.Length > 16).
-Dim predicateBody As Expression = Expression.OrElse(e1, e2)
+El árbol de expresión interno &mdash; y, por tanto, &mdash; no se ha modificado la consulta; la consulta devuelve valores diferentes solo porque se ha cambiado el valor de `length` .
 
-' Create an expression tree that represents the expression:
-' queryableData.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16)
-Dim whereCallExpression As MethodCallExpression = Expression.Call(
-        GetType(Queryable),
-        "Where",
-        New Type() {queryableData.ElementType},
-        queryableData.Expression,
-        Expression.Lambda(Of Func(Of String, Boolean))(predicateBody, New ParameterExpression() {pe}))
-' ***** End Where *****
+## <a name="call-additional-linq-methods"></a>Llamar a métodos LINQ adicionales
 
-' ***** OrderBy(Function(company) company) *****
-' Create an expression tree that represents the expression:
-' whereCallExpression.OrderBy(Function(company) company)
-Dim orderByCallExpression As MethodCallExpression = Expression.Call(
-        GetType(Queryable),
-        "OrderBy",
-        New Type() {queryableData.ElementType, queryableData.ElementType},
-        whereCallExpression,
-        Expression.Lambda(Of Func(Of String, String))(pe, New ParameterExpression() {pe}))
-' ***** End OrderBy *****
+Por lo general, los [métodos integrados de LINQ](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs) en <xref:System.Linq.Queryable> realizan dos pasos:
 
-' Create an executable query from the expression tree.
-Dim results As IQueryable(Of String) = queryableData.Provider.CreateQuery(Of String)(orderByCallExpression)
+* Ajusta el árbol de expresión actual en un objeto <xref:System.Linq.Expressions.MethodCallExpression> que representa la llamada al método.
+* Vuelva a pasar el árbol de la expresión ajustada al proveedor, ya sea para devolver un valor a través del método del proveedor <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> ; o para devolver un objeto de consulta traducido a través del <xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType> método.
 
-' Enumerate the results.
-For Each company As String In results
-    Console.WriteLine(company)
-Next
+Puede reemplazar la consulta original con el resultado de un método [IQueryable (of T)](xref:System.Linq.IQueryable%601)que devuelve para obtener una nueva consulta. Puede hacerlo condicionalmente en función del estado de tiempo de ejecución, como en el ejemplo siguiente:
 
-' This code produces the following output:
-'
-' Blue Yonder Airlines
-' City Power & Light
-' Coho Winery
-' Consolidated Messenger
-' Graphic Design Institute
-' Humongous Insurance
-' Lucerne Publishing
-' Northwind Traders
-' The Phone Company
-' Wide World Importers
-```
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Added_method_calls":::
 
-En este código se usa un número fijo de expresiones en el predicado que se pasa al método `Queryable.Where`. Pero se puede escribir una aplicación que combine un número variable de expresiones de predicado que dependa de la entrada del usuario. También se pueden variar los operadores de consulta estándar que se llaman en la consulta, dependiendo de la entrada del usuario.
+## <a name="vary-the-expression-tree-passed-into-the-linq-methods"></a>Variar el árbol de expresión que se pasa a los métodos LINQ
 
-## <a name="compile-the-code"></a>Compilar el código
+Puede pasar expresiones diferentes a los métodos LINQ, dependiendo del estado del tiempo de ejecución:
 
-- Cree un nuevo proyecto de **aplicación de consola**.
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Varying_expressions":::
 
-- Incluya el espacio de nombres System.Linq.Expressions.
+También puede que desee crear las distintas subexpresiones mediante una biblioteca de terceros como [PredicateBuilder](http://www.albahari.com/nutshell/predicatebuilder.aspx)de [LinqKit](http://www.albahari.com/nutshell/linqkit.aspx):
 
-- Copie el código del ejemplo y péguelo en el `Main` `Sub` procedimiento.
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Compose_expression":::
+
+## <a name="construct-expression-trees-and-queries-using-factory-methods"></a>Crear árboles de expresión y consultas mediante métodos de generador
+
+En todos los ejemplos hasta este punto, hemos conocido el tipo de elemento en tiempo de compilación &mdash; `String` &mdash; y, por tanto, el tipo de la consulta &mdash; `IQueryable(Of String)` . Es posible que necesite agregar componentes a una consulta de cualquier tipo de elemento o agregar componentes diferentes en función del tipo de elemento. Puede crear árboles de expresión desde el principio, utilizando los métodos de generador en <xref:System.Linq.Expressions.Expression?displayProperty=fullName> y, por tanto, adaptar la expresión en tiempo de ejecución a un tipo de elemento específico.
+
+### <a name="constructing-an-expressionof-tdelegate"></a>Construir una [expresión (de TDelegate)](xref:System.Linq.Expressions.Expression%601)
+
+Cuando se construye una expresión para pasar a uno de los métodos LINQ, en realidad se construye una instancia de [Expression (of TDelegate)](xref:System.Linq.Expressions.Expression%601), donde `TDelegate` es un tipo de delegado como `Func(Of String, Boolean)` , `Action` o un tipo de delegado personalizado.
+
+[Expresión (de TDelegate))](xref:System.Linq.Expressions.Expression%601) hereda de <xref:System.Linq.Expressions.LambdaExpression> , que representa una expresión lambda completa como la siguiente:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Compiler_generated":::
+
+Un <xref:System.Linq.Expressions.LambdaExpression> tiene dos componentes:
+
+* una lista de parámetros &mdash; `(x As String)` &mdash; representada por la <xref:System.Linq.Expressions.LambdaExpression.Parameters> propiedad
+* cuerpo &mdash; `x.StartsWith("a")` &mdash; representado por la <xref:System.Linq.Expressions.LambdaExpression.Body> propiedad.
+
+Los pasos básicos para construir una [expresión (de TDelegate)](xref:System.Linq.Expressions.Expression%601) son los siguientes:
+
+* Defina los <xref:System.Linq.Expressions.ParameterExpression> objetos para cada uno de los parámetros (si existen) en la expresión lambda, mediante el <xref:System.Linq.Expressions.Expression.Parameter%2A> Factory Method.
+
+    :::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_method_parameter":::
+
+* Construya el cuerpo de la <xref:System.Linq.Expressions.LambdaExpression> , utilizando las <xref:System.Linq.Expressions.ParameterExpression> (s) definidas por el usuario y los métodos de generador en <xref:System.Linq.Expressions.Expression> . Por ejemplo, una expresión que representa `x.StartsWith("a")` se podría construir de la siguiente manera:
+
+    :::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_method_body":::
+
+* Ajuste los parámetros y el cuerpo en una expresión de tipo en tiempo de compilación [(de TDelegate)](xref:System.Linq.Expressions.Expression%601), con la <xref:System.Linq.Expressions.Expression.Lambda%2A> sobrecarga de Factory Method adecuada:
+
+    :::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_method_lambda":::
+
+En las secciones siguientes se describe un escenario en el que es posible que desee crear una [expresión (de TDelegate)](xref:System.Linq.Expressions.Expression%601) para pasarla a un método LINQ y proporcionar un ejemplo completo de cómo hacerlo mediante los métodos de generador.
+
+### <a name="scenario"></a>Escenario
+
+Supongamos que tiene varios tipos de entidad:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Entities.vb":::
+
+Para cualquiera de estos tipos de entidad, desea filtrar y devolver solo las entidades que tienen un texto determinado dentro de uno de sus `string` campos. Para `Person` , desea buscar en las `FirstName` `LastName` propiedades y:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="PersonsQry":::
+
+pero para `Car` , querrá buscar solo la `Model` propiedad:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="CarsQry":::
+
+Aunque podría escribir una función personalizada para `IQueryable(Of Person)` y otra para `IQueryable(Of Car)` , la función siguiente agrega este filtrado a cualquier consulta existente, con independencia del tipo de elemento específico.
+
+### <a name="example"></a>Ejemplo
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_methods_expression_of_tdelegate":::
+
+Dado `TextFilter` que la función toma y devuelve un [IQueryable (of T)](xref:System.Linq.IQueryable%601) (y no solo un <xref:System.Linq.IQueryable> ), puede agregar más elementos de consulta con tipo en tiempo de compilación después del filtro de texto.
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_methods_expression_of_tdelegate_usage":::
+
+## <a name="add-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a>Agregar nodos de llamada de método al <xref:System.Linq.IQueryable> árbol de expresión de
+
+Si tiene <xref:System.Linq.IQueryable> en lugar de [IQueryable (of T)](xref:System.Linq.IQueryable%601), no puede llamar directamente a los métodos LINQ genéricos. Una alternativa consiste en crear el árbol de expresión interno como se indicó anteriormente y usar la reflexión para invocar el método LINQ adecuado mientras se pasa el árbol de expresión.
+
+También puede duplicar la funcionalidad del método de LINQ, ajustando todo el árbol en un <xref:System.Linq.Expressions.MethodCallExpression> que representa una llamada al método LINQ:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_methods_lambdaexpression":::
+
+Tenga en cuenta que en este caso no tiene un marcador de posición genérico en tiempo de compilación `T` , por lo que usará la <xref:System.Linq.Expressions.Expression.Lambda%2A> sobrecarga, que no requiere información de tipo en tiempo de compilación, y que genera un <xref:System.Linq.Expressions.LambdaExpression> en lugar de una [expresión (de TDelegate)](xref:System.Linq.Expressions.Expression%601).
+
+## <a name="the-dynamic-linq-library"></a>Biblioteca dinámica de LINQ
+
+La construcción de árboles de expresión mediante métodos de generador es relativamente compleja; es más fácil crear cadenas. La [biblioteca dinámica de LINQ](https://dynamic-linq.net/) expone un conjunto de métodos de extensión en que <xref:System.Linq.IQueryable> corresponden a los métodos estándar de LINQ en <xref:System.Linq.Queryable> y que aceptan cadenas en una [Sintaxis especial](https://dynamic-linq.net/expression-language) en lugar de árboles de expresión. La biblioteca genera el árbol de expresión adecuado a partir de la cadena y puede devolver el resultado traducido <xref:System.Linq.IQueryable> .
+
+Por ejemplo, el ejemplo anterior (incluida la construcción del árbol de expresión) se podría volver a escribir de la siguiente manera:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Dynamic_linq":::
 
 ## <a name="see-also"></a>Consulte también
 
