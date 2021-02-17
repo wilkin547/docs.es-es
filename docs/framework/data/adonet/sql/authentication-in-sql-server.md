@@ -3,12 +3,12 @@ title: Autenticación en SQL Server
 description: Obtenga información sobre la autenticación con SQL Server para ADO.NET, incluido el modo de autenticación de Windows y el modo mixto.
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 2c4f62391a0d9b5ada27f56eef4c3467d99b4c6d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a1ecc0debd584797f72a89318aadc6ccc8a41062
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197539"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100581930"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
 
@@ -69,7 +69,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
  Si tiene que usar la autenticación de modo mixto, debe crear inicios de sesión de SQL Server, que se almacenan en SQL Server. Luego debe proporcionar el nombre de usuario y la contraseña de SQL Server en tiempo de ejecución.  
   
 > [!IMPORTANT]
-> SQL Server se instala con un inicio de sesión de SQL Server denominado `sa` (una abreviatura de "administrador del sistema"). Asigne una contraseña segura al inicio de sesión de `sa` y no use el inicio de sesión `sa` en la aplicación. El inicio de sesión de `sa` se asigna al rol fijo de servidor `sysadmin`, que tiene credenciales administrativas irrevocables en todo el servidor. No hay límites para los posibles daños si un atacante obtiene acceso como administrador del sistema. Todos los miembros del grupo `BUILTIN\Administrators` de Windows (el grupo de administradores locales) son miembros del rol `sysadmin` de forma predeterminada, pero se pueden quitar de ese rol.  
+> SQL Server se instala con un inicio de sesión de SQL Server denominado `sa` (una abreviatura de "administrador del sistema"). Asigne una contraseña segura al inicio de sesión de `sa` y no use el inicio de sesión `sa` en la aplicación. El inicio de sesión de `sa` se asigna al rol fijo de servidor `sysadmin`, que tiene credenciales administrativas irrevocables en todo el servidor. No hay límites para los posibles daños si un atacante obtiene acceso como administrador del sistema.
   
  SQL Server proporciona mecanismos de directiva de contraseñas de Windows para inicios de sesión de SQL Server. Las directivas de complejidad de contraseñas están diseñadas para impedir ataques por fuerza bruta mediante el aumento del número de contraseñas posibles. SQL Server puede aplicar las mismas directivas de complejidad y expiración a las contraseñas que se usan en SQL Server.  
   
@@ -80,7 +80,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 
  Para obtener más información, vea los recursos siguientes.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Entidades de seguridad](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe los inicios de sesión y otras entidades de seguridad de SQL Server.|  
   

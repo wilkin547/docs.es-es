@@ -6,19 +6,19 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: a249f0de00c45b1588762ffa0f826e890f961334
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 45df7b2c4dad1aa84ad39ca38fba8d2ec16c8fb3
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607777"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100585355"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedimiento para crear certificados temporales que puedan usarse durante las operaciones de desarrollo
 
 Al desarrollar un servicio o cliente seguro mediante Windows Communication Foundation (WCF), a menudo es necesario proporcionar un certificado X. 509 que se usará como credencial. El certificado forma normalmente parte de una cadena de certificados con una entidad emisora raíz situada en el almacén de las Entidades emisoras de certificados raíz de confianza del equipo. Tener una cadena de certificados le permite establecer un conjunto de certificados donde normalmente la entidad emisora raíz pertenece a su organización o unidad del negocio. Para emularlo en el momento de desarrollo, puede crear dos certificados para satisfacer los requisitos de seguridad. El primero es un certificado con firma automática que se coloca en el almacén de las Entidades emisoras de certificados raíz de confianza y el segundo certificado se crea a partir del primero y se coloca en el almacén personal de la ubicación del equipo local o en el almacén personal de la ubicación del usuario actual. En este tema se explican los pasos para crear estos dos certificados con el cmdlet [New-SelfSignedCertificate de](/powershell/module/pkiclient/new-selfsignedcertificate) PowerShell.
 
 > [!IMPORTANT]
-> Los certificados generados por el cmdlet New-SelfSignedCertificate se proporcionan solo con fines de prueba. Al implementar un servicio o cliente, asegúrese de usar un certificado adecuado proporcionado por una entidad de certificación. Puede tratarse de un servidor de certificados de Windows Server de su organización o de un tercero.
+> Los certificados generados por el cmdlet New-SelfSignedCertificate se proporcionan únicamente con fines de prueba. Al implementar un servicio o cliente, asegúrese de usar un certificado adecuado proporcionado por una entidad de certificación. Puede tratarse de un servidor de certificados de Windows Server de su organización o de un tercero.
 >
 > De forma predeterminada, el cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) crea certificados que son autofirmados y que estos certificados no son seguros. La colocación de los certificados autofirmados en el almacén de entidades de certificación raíz de confianza le permite crear un entorno de desarrollo que simula de forma más precisa el entorno de implementación.
 
@@ -29,15 +29,15 @@ Al desarrollar un servicio o cliente seguro mediante Windows Communication Found
 El siguiente comando crea un certificado autofirmado con un nombre de sujeto "RootCA" en el almacén personal del usuario actual.
 
 ```powershell
-$rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
+$rootCert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
 Necesitamos exportar el certificado a un archivo PFX para que se pueda importar en el punto en que se necesite en un paso posterior. Cuando se exporta un certificado con la clave privada, se necesita una contraseña para protegerlo. La contraseña se guarda en un `SecureString` y se usa el cmdlet [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) para exportar el certificado con la clave privada asociada a un archivo PFX. También guardamos solo el certificado público en un archivo CRT mediante el cmdlet [Export-Certificate](/powershell/module/pkiclient/export-certificate) .
 
 ```powershell
-[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+[System.Security.SecureString]$rootCertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootCert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootCertPassword
 Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
@@ -53,7 +53,7 @@ Del mismo modo, guardamos el certificado firmado con clave privada en un archivo
 
 ```powershell
 [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootCertPassword
 Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
@@ -113,7 +113,7 @@ Para obtener más información sobre el uso de certificados en WCF, consulte [Wo
 
 Asegúrese de eliminar cualquier los certificados temporales de entidad emisora raíz de las carpetas **Entidades emisoras de certificados raíz de confianza** y **Personal** haciendo clic con el botón secundario en el certificado y, a continuación, haciendo clic en **Eliminar**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Trabajar con certificados](working-with-certificates.md)
 - [Procedimiento para ver certificados con el complemento de MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
