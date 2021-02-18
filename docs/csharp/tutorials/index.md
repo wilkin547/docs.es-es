@@ -2,48 +2,16 @@
 title: Tutoriales de C#
 description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
 ms.date: 10/25/2018
-ms.openlocfilehash: d6eeed2ed5fbf68120c789b7d8203e811fb8608d
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 236954027b121a72368d1183a4456ff610f170b6
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110174"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583683"
 ---
 # <a name="c-tutorials"></a>Tutoriales de C#
 
 Le damos la bienvenida a los tutoriales de C#. Se empieza con lecciones interactivas que se pueden ejecutar en el explorador. Los tutoriales posteriores y más avanzados facilitan el trabajo con las herramientas de desarrollo de .NET para crear programas C# en su máquina.
-
-## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriales interactivos de introducción a C#
-
-Si quiere iniciar la exploración en formato de vídeo, la [serie de vídeos C# 101](https://aka.ms/dotnet3-csharp) proporciona una introducción a C#. Aprenderá los conceptos que puede explorar en estos tutoriales.
-
-En las primeras lecciones se explican los conceptos de C# con la utilización de pequeños fragmentos de código. Aprenderá los datos básicos de la sintaxis de C# y cómo trabajar con tipos de datos como cadenas, números y booleanos. Se trata de material totalmente interactivo, que le permitirá empezar a escribir y ejecutar código en cuestión de minutos. En las primeras lecciones se asume que no dispone de conocimientos previos sobre programación o sobre el lenguaje C#.
-
-## <a name="hello-world"></a>[Hola mundo](intro-to-csharp/hello-world.yml)
-
-En el tutorial [Hola mundo](intro-to-csharp/hello-world.yml), creará el programa de C# más básico. Explorará el tipo `string` y cómo trabajar con texto.
-
-## <a name="numbers-in-c"></a>[Números en C#](intro-to-csharp/numbers-in-csharp.yml)
-
-En el tutorial [Números en C#](intro-to-csharp/numbers-in-csharp.yml), obtendrá información sobre cómo se almacenan los números en los equipos y cómo realizar cálculos con distintos tipos numéricos. Conocerá los datos básicos sobre cómo realizar redondeos y cálculos matemáticos con C#. Este tutorial también está disponible [para ejecutarse localmente en su máquina](intro-to-csharp/numbers-in-csharp-local.md).
-
-En este tutorial se asume que ha completado la lección [Hola mundo](intro-to-csharp/hello-world.yml).
-
-## <a name="branches-and-loops"></a>[Bifurcaciones y bucles](intro-to-csharp/branches-and-loops.yml)
-
-En el tutorial [Ramas y bucles](intro-to-csharp/branches-and-loops.yml) se explican los datos básicos sobre la selección de diferentes rutas de acceso de la ejecución del código en función de los valores almacenados en variables. Aprenderá los datos básicos del flujo de control, es decir, cómo los programas toman decisiones y eligen distintas acciones. Este tutorial también está disponible [para ejecutarse localmente en su máquina](intro-to-csharp/branches-and-loops-local.md).
-
-En este tutorial se supone que ha completado las lecciones [Hola mundo](intro-to-csharp/hello-world.yml) y [Números en C#](intro-to-csharp/numbers-in-csharp.yml).
-
-## <a name="list-collection"></a>[Colección de listas](intro-to-csharp/list-collection.yml)
-
-En la lección [Colección de listas](intro-to-csharp/list-collection.yml) se ofrece información general sobre el tipo de colección de listas que almacena secuencias de datos. Se explica cómo agregar y quitar elementos, buscarlos y ordenar las listas. Explorará los diferentes tipos de listas. Este tutorial también está disponible [para ejecutarse localmente en su máquina](intro-to-csharp/arrays-and-collections.md).
-
-En este tutorial se presupone que ha completado las lecciones que se muestran anteriormente.
-
-## <a name="introduction-to-c----work-locally"></a>[Introducción a C#: trabajo local](intro-to-csharp/local-environment.md)
-
-Todos los tutoriales de introducción posteriores a la lección Hola mundo se encuentran disponibles en el entorno de desarrollo local. Al final de cada tutorial, decida si desea continuar con la siguiente lección en línea o en su propia máquina. Hay vínculos que le ayudarán a configurar el entorno y continuar con el siguiente tutorial en su máquina.
 
 ## <a name="explore-new-features-in-c"></a>Explorar las nuevas características de C\#
 
