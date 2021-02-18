@@ -311,22 +311,16 @@ items:
             tocHref: /dotnet/csharp/
             topicHref: /dotnet/csharp/index
             items:
-              - name: Introducción a C#
-                tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
-                topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
-              - name: Primeros pasos
-                tocHref: /dotnet/csharp/getting-started/
-                topicHref: /dotnet/csharp/getting-started/index
+              - name: Introducción
+                tocHref: /dotnet/csharp/tour-of-csharp/
+                topicHref: /dotnet/csharp/tour-of-csharp/index
                 items:
-                  - name: Paseo por C#
-                    tocHref: /dotnet/csharp/tour-of-csharp/
-                    topicHref: /dotnet/csharp/tour-of-csharp/index
+                  - name: Tutoriales
+                    tocHref: /dotnet/csharp/tour-of-csharp/tutorials/
+                    topicHref: /dotnet/csharp/tour-of-csharp/tutorials/index
               - name: Tutoriales
                 tocHref: /dotnet/csharp/tutorials/
                 topicHref: /dotnet/csharp/tutorials/index
-              - name: Paseo
-                tocHref: /dotnet/csharp/tour-of-csharp/
-                topicHref: /dotnet/csharp/tour-of-csharp/index
               - name: Novedades
                 tocHref: /dotnet/csharp/whats-new/
                 topicHref: /dotnet/csharp/whats-new/index
