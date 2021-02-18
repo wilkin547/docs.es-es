@@ -1,4 +1,5 @@
 ---
+description: Más información sobre -rootnamespace
 title: -rootnamespace
 ms.date: 03/13/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: d9388ace03f654458eb955e989673b7441e72f23
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0e034999a65bf5294e63c8f9cec1a4ce4de39a4b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085144"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474088"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 

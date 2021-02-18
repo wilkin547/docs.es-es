@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 5f0f6b2f35c184b4df8c93af1c85e7169cb0cc95
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c9168bd245e10232a798b3e6f3b9448b24996a77
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283151"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436128"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos que pueden o que no pueden transferirse en bloque de bits
 
@@ -47,13 +47,13 @@ La mayoría de los tipos de datos tienen una representación común en la memori
   
  Los siguientes tipos complejos también son tipos que pueden transferirse en bloque de bits:  
   
-- Las matrices unidimensionales de tipos que pueden transferirse en bloque de bits, como una matriz de enteros. Pero un tipo que contiene una matriz variable de tipos que pueden transferirse en bloque de bits no se puede transferir en bloque de bits.  
+- Matrices unidimensionales de tipos primitivos que pueden transferirse en bloque de bits, como una matriz de enteros. Pero un tipo que contiene una matriz variable de tipos que pueden transferirse en bloque de bits no se puede transferir en bloque de bits.
   
 - Los tipos de valor con formato que solo contienen tipos que pueden transferirse en bloque de bits (y clases si se serializan como tipos con formato). Para obtener más información sobre los tipos de valor con formato, vea [Serialización predeterminada para tipos de valor](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Las referencias a objetos no pueden transferirse en bloque de bits. Esto incluye una matriz de referencias a objetos que pueden transferirse en bloque de bits por sí mismos. Por ejemplo, se puede definir una estructura que puede transferirse en bloque de bits, pero no se puede definir un tipo que puede transferirse en bloque de bits que contiene una matriz de referencias a esas estructuras.  
   
- Como optimización, las matrices de tipos que pueden transferirse en bloque de bits y las clases que solo contienen miembros que pueden transferirse en bloque de bits se [anclan](copying-and-pinning.md) en lugar de copiarse durante la serialización. Estos tipos pueden parecer serializados como parámetros In/Out cuando el autor y el destinatario de la llamada están en el mismo contenedor. Pero estos tipos se serializan realmente como parámetros In y se deben aplicar los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> si se quiere serializar el argumento como un parámetro In/Out.  
+ A modo de optimización, las matrices de tipos primitivos que pueden transferirse en bloque de bits y las clases que solo contienen miembros que pueden transferirse en bloque de bits se [anclan](copying-and-pinning.md) en lugar de copiarse durante la serialización. Estos tipos pueden parecer serializados como parámetros In/Out cuando el autor y el destinatario de la llamada están en el mismo contenedor. Pero estos tipos se serializan realmente como parámetros In y se deben aplicar los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> si se quiere serializar el argumento como un parámetro In/Out.
   
  Algunos tipos de datos administrados requieren una representación diferente en un entorno sin administrar. Estos tipos de datos que no pueden transferirse en bloque de bits se deben convertir a un formato que se pueda serializar. Por ejemplo, las cadenas administradas son tipos que no pueden transferirse en bloque de bits porque se deben convertir en objetos de cadena antes de que se puedan serializar.  
   

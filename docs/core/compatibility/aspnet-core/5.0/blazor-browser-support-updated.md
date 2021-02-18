@@ -4,16 +4,20 @@ description: 'Obtenga información sobre el cambio importante en ASP.NET Core 
 author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 63b35aa8cb73bfb82c565007704375bac3737299
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+no-loc:
+- Blazor
+- Blazor WebAssembly
+- Blazor Server
+ms.openlocfilehash: a14ab8d1afd4b662f61e30136d23e28ffbe2d496
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760255"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431482"
 ---
-# <a name="blazor-updated-browser-support"></a>Blazor: compatibilidad con exploradores actualizada
+# <a name="blazor-updated-browser-support"></a>Blazor; compatibilidad con exploradores actualizada
 
-En ASP.NET Core 5.0 se presentan [nuevas características de Blazor](https://github.com/dotnet/aspnetcore/issues/21514) y algunas son incompatibles con los exploradores más antiguos. La lista de exploradores admitidos por Blazor en ASP.NET Core 5.0 se ha actualizado en consecuencia.
+En ASP.NET Core 5.0 se presentan [nuevas características de Blazor](https://github.com/dotnet/aspnetcore/issues/21514), y algunas son incompatibles con los exploradores más antiguos. La lista de exploradores admitidos por Blazor en ASP.NET Core 5.0 se ha actualizado en consecuencia.
 
 Para obtener información, vea la incidencia de GitHub [n.º 26475 (dotnet/aspnetcore)](https://github.com/dotnet/aspnetcore/issues/26475).
 
@@ -23,11 +27,11 @@ Para obtener información, vea la incidencia de GitHub [n.º 26475 (dotnet/aspn
 
 ## <a name="old-behavior"></a>Comportamiento anterior
 
-Blazor Server es compatible con Microsoft Internet Explorer 11 con polyfill suficientes. Blazor Server y Blazor WebAssembly también funcionan en [Microsoft Edge (versión anterior)](https://support.microsoft.com/help/4533505/what-is-microsoft-edge-legacy).
+Blazor Server es compatible con Microsoft Internet Explorer 11 con elementos polyfill suficientes. Blazor Server y Blazor WebAssembly también funcionan en [Microsoft Edge (versión anterior)](https://support.microsoft.com/help/4533505/what-is-microsoft-edge-legacy).
 
 ## <a name="new-behavior"></a>Comportamiento nuevo
 
-Blazor Server en ASP.NET Core 5.0 no es compatible con Microsoft Internet Explorer 11. Blazor Server y Blazor WebAssembly no son totalmente funcionales en Microsoft Edge (versión anterior).
+Blazor Server en ASP.NET Core 5.0 no es compatible con Microsoft Internet Explorer 11. Blazor Server y Blazor WebAssembly no funcionan de forma completa en Microsoft Edge (versión anterior).
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

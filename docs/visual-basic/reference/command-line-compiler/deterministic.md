@@ -1,16 +1,17 @@
 ---
+description: Más información sobre -deterministic
 title: -deterministic
 ms.date: 04/11/2018
 helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 0cf9aceef54998f269e9e377fe5d0a48492969c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b339b76d4f95ba80f8e92c4961586fa390b0839a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408691"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461520"
 ---
 # <a name="-deterministic"></a>-deterministic
 

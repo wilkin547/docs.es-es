@@ -1,4 +1,5 @@
 ---
+description: Mas información sobre -win32resource
 title: -win32resource
 ms.date: 03/13/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: d146f5967058b05795026cd7726ed5eda7ba3153
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a6f14fd2eb1349940c1e208a5baaa4205647f666
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095413"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433489"
 ---
 # <a name="-win32resource"></a>-win32resource
 

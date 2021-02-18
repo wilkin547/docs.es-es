@@ -1,4 +1,5 @@
 ---
+description: Más información sobre -out (Visual Basic)
 title: -out
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-ms.openlocfilehash: 7c013270c8a6b7c2b28f02766df7437b43075dd2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 82fb43ecf2239c38245f3afe7cacef8bad573175
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098909"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475895"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 

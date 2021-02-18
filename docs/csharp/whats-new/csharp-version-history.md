@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 0f6739ba7a2dd0488c52b917c4a60a1b3f04a930
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110733"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456424"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -70,7 +70,7 @@ Otras características de C# 2.0 agregaron capacidades a las características ex
 
 Aunque puede que C# haya comenzado como un lenguaje genérico orientado a objetos, la versión 2.0 de C# cambió esto enseguida. En cuanto se pusieron con ella, se centraron en algunos puntos problemáticos graves para los desarrolladores. Y lo hicieron a lo grande.
 
-Con los genéricos, los tipos y métodos pueden operar en un tipo arbitrario a la vez que conservan la seguridad de tipos. Por ejemplo, tener <xref:System.Collections.Generic.List%601> nos permite tener `List<string>` o `List<int>` y realizar operaciones de tipo seguro en esas cadenas o en enteros mientras los recorremos en iteración. Usar genéricos es mejor que crear un `ListInt` que derive de `ArrayList` o se convierta desde `Object` en cada operación.
+Con los genéricos, los tipos y métodos pueden operar en un tipo arbitrario a la vez que conservan la seguridad de tipos. Por ejemplo, tener <xref:System.Collections.Generic.List%601> nos permite tener `List<string>` o `List<int>` y realizar operaciones de tipo seguro en esas cadenas o en enteros mientras los recorremos en iteración. Es mejor usar genéricos que crear un tipo `ListInt` que derive de `ArrayList`, o que convertir desde `Object` en cada operación.
 
 C# 2.0 incorporó los iteradores. Para explicarlo brevemente, los iteradores permiten examinar todos los elementos de `List` (u otros tipos enumerables) con un bucle de `foreach`. Tener iteradores como una parte de primera clase del lenguaje mejoró drásticamente la facilidad de lectura del lenguaje y la capacidad de las personas de razonar sobre el código.
 

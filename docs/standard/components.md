@@ -3,12 +3,12 @@ title: Componentes de la arquitectura .NET
 description: Aquí se describen los componentes de la arquitectura .NET, como .NET Standard, las implementaciones de .NET, los entornos de ejecución .NET y las herramientas.
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c5f174034ce0cd0e1cf0b799c7b3f4bff99447a2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819427"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423140"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -106,8 +106,8 @@ Las revisiones posteriores de los estándares las han desarrollado los grupos de
 Los siguientes documentos oficiales de ECMA están disponibles para [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) y la [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
 
 - **El estándar del lenguaje C# (versión 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **Common Language Infrastructure**: disponible en los formatos [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) y [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip).
-- **Información derivada del archivo XML de la parte IV**: disponible en los formatos [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) y [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip).
+- **Common Language Infrastructure**: [ECMA-335.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf).
+- **Información derivada del archivo XML de la parte IV**: Formato [ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf).
 
 Los documentos ISO/IEC oficiales están disponibles en la página ISO/IEC [Estándares disponibles públicamente](https://standards.iso.org/ittf/PubliclyAvailableStandards/). Estos vínculos son directos de esa página:
 

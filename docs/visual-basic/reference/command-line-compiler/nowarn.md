@@ -1,4 +1,5 @@
 ---
+description: Mas información sobre -nowarn
 title: -nowarn
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: cde96fff975a65d6303ee62e6a811bfd83d5ff97
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4fb7d39aef48ff1443c342367f9e20bb37f9c5e0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097688"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434867"
 ---
 # <a name="-nowarn"></a>-nowarn
 

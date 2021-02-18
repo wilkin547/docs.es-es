@@ -1,4 +1,5 @@
 ---
+description: Más información sobre -main
 title: -main
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: fb317b3c555d151e132122c476ce19bdeceb1321
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4c225c5a0030de6de0aaa510080a586272aa920b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065624"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455670"
 ---
 # <a name="-main"></a>-main
 

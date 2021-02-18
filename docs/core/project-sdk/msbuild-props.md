@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e140491c694291438fe1db7fd60d581ffed0319d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9cd387a4a8ad7f5b31a797d4d019a53799d926ff
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99802676"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432707"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -366,6 +366,9 @@ En la siguiente tabla se muestran las opciones disponibles.
 | `5.0` | Se usa el conjunto de reglas que se habilitó para .NET 5,0, incluso si hay reglas más recientes disponibles. |
 | `5` | Se usa el conjunto de reglas que se habilitó para .NET 5,0, incluso si hay reglas más recientes disponibles. |
 
+> [!NOTE]
+> Esta propiedad no tiene ningún efecto en el análisis de código de los proyectos que no hacen referencia a un [SDK de proyecto](overview.md), por ejemplo, los proyectos de .NET Framework heredados que hacen referencia al paquete NuGet Microsoft.CodeAnalysis.NetAnalyzers.
+
 ### <a name="analysismode"></a>AnalysisMode
 
 A partir de .NET 5.0, el SDK de .NET incluye todas las [reglas "CA" de calidad del código](../../fundamentals/code-analysis/quality-rules/index.md). De forma predeterminada, solo [algunas reglas están habilitadas](../../fundamentals/code-analysis/overview.md#enabled-rules) como advertencias de compilación. La propiedad `AnalysisMode` le permite personalizar el conjunto de reglas que están habilitadas de forma predeterminada. Puede cambiar a un modo de análisis más agresivo (exclusión) o a uno más conservador (inclusión). Por ejemplo, si quiere habilitar todas las reglas de forma predeterminada como advertencias de compilación, establezca el valor en `AllEnabledByDefault`.
@@ -384,6 +387,9 @@ En la siguiente tabla se muestran las opciones disponibles.
 | `AllEnabledByDefault` | Modo agresivo o de exclusión, en el que todas las reglas están habilitadas de forma predeterminada como advertencias de compilación. Puede [excluir](../../fundamentals/code-analysis/configuration-options.md) de forma selectiva reglas individuales para deshabilitarlas. |
 | `AllDisabledByDefault` | Modo conservador o de inclusión, en el que todas las reglas están deshabilitadas de forma predeterminada. Puede [incluir](../../fundamentals/code-analysis/configuration-options.md) de forma selectiva reglas individuales para habilitarlas. |
 
+> [!NOTE]
+> Esta propiedad no tiene ningún efecto en el análisis de código de los proyectos que no hacen referencia a un [SDK de proyecto](overview.md), por ejemplo, los proyectos de .NET Framework heredados que hacen referencia al paquete NuGet Microsoft.CodeAnalysis.NetAnalyzers.
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
 La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las advertencias de análisis de calidad del código (CAxxxx) se deben tratar como advertencias e interrumpir la compilación. Si usa la marca `-warnaserror` al compilar los proyectos, las advertencias de [análisis de calidad del código de .NET](../../fundamentals/code-analysis/overview.md#code-quality-analysis) también se tratan como errores. Si no quiere que las advertencias de análisis de calidad del código se traten como errores, puede establecer la propiedad `CodeAnalysisTreatWarningsAsErrors` de MSBuild en `false` en el archivo del proyecto.
@@ -396,7 +402,7 @@ La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las ad
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-De forma predeterminada, el [análisis de calidad del código de .NET](../../fundamentals/code-analysis/overview.md#code-quality-analysis) está habilitado para los proyectos que tienen como destino .NET 5.0 o una versión posterior. Puede habilitar el análisis de código de .NET para los proyectos que tienen como destino versiones anteriores de .NET estableciendo la propiedad `EnableNETAnalyzers` en `true`. Para deshabilitar el análisis de código en cualquier proyecto, establezca esta propiedad en `false`.
+De forma predeterminada, el [análisis de calidad del código de .NET](../../fundamentals/code-analysis/overview.md#code-quality-analysis) está habilitado para los proyectos que tienen como destino .NET 5.0 o una versión posterior. Puede habilitar el análisis de código de .NET para los proyectos de estilo SDK que tienen como destino versiones anteriores de .NET si establece la propiedad `EnableNETAnalyzers` en `true`. Para deshabilitar el análisis de código en cualquier proyecto, establezca esta propiedad en `false`.
 
 ```xml
 <PropertyGroup>

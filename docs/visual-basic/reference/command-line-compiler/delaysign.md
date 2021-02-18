@@ -1,4 +1,5 @@
 ---
+description: Más información sobre -delaysign
 title: -delaysign
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: c9bb302e2b34ebe1f51cf39bb3db1094d420d7f4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fc3e52f63431da870355e369e6ffeb8b7b14c5ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408704"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461507"
 ---
 # <a name="-delaysign"></a>-delaysign
 

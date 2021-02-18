@@ -1,4 +1,5 @@
 ---
+description: Más información sobre -keycontainer
 title: -keycontainer
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 243583e55dcf278f951b813cca8384246d2d6db9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d8b83162d9404eb2ce80e5e531457360b040f27d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085235"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436817"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 
@@ -42,7 +43,7 @@ Especifica un nombre de contenedor de claves para un par de claves que asigna un
  Para obtener más información sobre cómo firmar un ensamblado, vea [Creación y uso de ensamblados con nombre seguro](../../../standard/assembly/create-use-strong-named.md).  
   
 > [!NOTE]
-> La opción `-keycontainer` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
+> La opción `-keycontainer` no está disponible en el entorno de desarrollo de Visual Studio; solo lo está cuando se compila desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
 

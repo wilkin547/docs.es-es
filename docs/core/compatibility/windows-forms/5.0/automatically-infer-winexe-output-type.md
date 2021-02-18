@@ -2,12 +2,12 @@
 title: 'Cambio importante: OutputType establecido en WinExe para aplicaciones de WPF y WinForms'
 description: Obtenga información sobre el cambio importante en el SDK 5.0.100 de .NET, donde OutputType se establece automáticamente en WinExe para las aplicaciones Windows Forms.
 ms.date: 09/18/2020
-ms.openlocfilehash: 0b56db57d5242f2fb001c4de339a7f696c088dfc
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 38d9b910374f9e44f7e35296808930c6a6d45f0d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633862"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431469"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>OutputType establecido en WinExe para aplicaciones de WPF y WinForms
 
@@ -23,13 +23,15 @@ En versiones anteriores del SDK de .NET, se usa el valor especificado para `Outp
 </PropertyGroup>
 ```
 
-A partir de la versión 5.0.100 del SDK de .NET, `OutputType` se establece automáticamente en `WinExe` para WPF y las aplicaciones de Windows Forms que tienen como destino cualquier versión de Framework, incluido .NET Framework. Por ejemplo:
+A partir de la versión 5.0.100 del SDK de .NET, cuando `OutputType` se establece en `Exe`, se cambia de forma automática a `WinExe` para las aplicaciones WPF y Windows Forms que tienen como destino cualquier versión del marco, incluido .NET Framework.
 
 ```xml
 <PropertyGroup>
   <OutputType>WinExe</OutputType>
 </PropertyGroup>
 ```
+
+ Si no se especifica `OutputType` en el archivo del proyecto, se usa `Library` como valor predeterminado y ese valor no cambia.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

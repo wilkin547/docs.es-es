@@ -1,4 +1,5 @@
 ---
+description: Más información sobre -refout (Visual Basic)
 title: -refout
 ms.date: 03/16/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 3649a24a52cc6a448ea7cf4d850915adf02147fb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2760f7e60d950aaff90becad843824a2e2b4379f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348648"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474127"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 

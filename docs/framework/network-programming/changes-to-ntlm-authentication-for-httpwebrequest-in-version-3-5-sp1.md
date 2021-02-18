@@ -3,12 +3,12 @@ description: 'Más información acerca de: Cambios en la autenticación NTLM par
 title: Cambios en la autenticación NTLM para HttpWebRequest en la versión 3.5 SP1
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: cdb17317dbafc167cce7a9b2785be68a35d3bd5b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 24787894d89f65024f7022a44b507c689bb0beb5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99791639"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434854"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Cambios en la autenticación NTLM para HttpWebRequest en la versión 3.5 SP1
 
@@ -52,7 +52,7 @@ Para especificar los nombres de host que se asignan a la dirección de bucle inv
 
 7. Salga del editor del Registro y luego reinicie el servicio IISAdmin y ejecute IISReset.
 
-Una solución menos segura es deshabilitar la comprobación de bucle inverso, como se explica en <https://support.microsoft.com/kb/896861>. Esto deshabilita la protección contra ataques de reflejo. Por eso es mejor restringir el conjunto de nombres alternativos a solo aquellos que espera que use el equipo en realidad.
+Una solución menos segura consiste en deshabilitar la comprobación de bucle inverso. Esto deshabilita la protección contra ataques de reflejo. Por eso es mejor restringir el conjunto de nombres alternativos a solo aquellos que espera que use el equipo en realidad.
 
 ## <a name="see-also"></a>Vea también
 

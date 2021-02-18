@@ -2,12 +2,12 @@
 title: 'Atributos reservados de C#: Análisis estático que admite un valor NULL'
 ms.date: 02/02/2021
 description: El compilador interpreta estos atributos para proporcionar un mejor análisis estático para los tipos de referencia que aceptan y que no aceptan valores NULL.
-ms.openlocfilehash: c1c3e0a0fe1ee9000e0a1a85ee08e6e966200be5
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 91bba16506e2e8bbac9fdef2d1c4badcf59c1546
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548362"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432574"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Los atributos reservados contribuyen al análisis estático del estado NULL del compilador.
 
@@ -240,7 +240,7 @@ Las condiciones posteriores condicionales se especifican mediante estos atributo
 
 ## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>Métodos auxiliares de constructor: `MemberNotNull` y `MemberNotNullWhen`
 
-Estos atributos especifican su intención cuando se ha refactorizado código común de los constructores en métodos auxiliares. El compilador de C# analiza los constructores y los inicializadores de campo para asegurarse de que todos los campos de referencia que no aceptan valores NULL se han inicializado antes de que se devuelva cada constructor. Sin embargo, el compilador de C# no realiza un seguimiento de las asignaciones de campo a través de todos los métodos auxiliares. El compilador emite una advertencia `CS8618` cuando los campos no se inicializan directamente en el constructor, sino en un método auxiliar. Agrega <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute> a una declaración de método a los campos que se inicializan en un valor distinto de NULL en el método. Por ejemplo, considere el siguiente ejemplo:
+Estos atributos especifican su intención cuando se ha refactorizado código común de los constructores en métodos auxiliares. El compilador de C# analiza los constructores y los inicializadores de campo para asegurarse de que todos los campos de referencia que no aceptan valores NULL se han inicializado antes de que se devuelva cada constructor. Sin embargo, el compilador de C# no realiza un seguimiento de las asignaciones de campo a través de todos los métodos auxiliares. El compilador emite una advertencia `CS8618` cuando los campos no se inicializan directamente en el constructor, sino en un método auxiliar. Agregue <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute> a una declaración de método y especifique los campos que se inicializan en un valor distinto de NULL en el método. Por ejemplo, considere el siguiente ejemplo:
 
 :::code language="csharp" source="snippets/InitializeMembers.cs" ID="MemberNotNullExample":::
 

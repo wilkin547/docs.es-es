@@ -3,18 +3,20 @@ title: Tutorial Depuración de una fuga de memoria
 description: Obtenga información sobre cómo depurar una fuga de memoria en .NET Core.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538597"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431456"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>Depuración de una fuga de memoria en .NET Core
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 3.1 y versiones posteriores
 
-En este tutorial se muestran las herramientas para analizar una fuga de memoria de .NET Core.
+Una fuga de memoria se puede producir cuando la aplicación hace referencia a objetos que ya no necesita para realizar la tarea deseada. Al hacer referencia a estos objetos, el recolector de elementos no utilizados no puede reclamar la memoria usada, lo que a menudo genera una degradación del rendimiento y podría acabar con una excepción <xref:System.OutOfMemoryException>.
+
+En este tutorial se muestran las herramientas para analizar una fuga de memoria en una aplicación de .NET Core con las herramientas de la CLI de diagnóstico de .NET. Si trabaja en Windows, es posible que pueda [usar las herramientas de diagnóstico de memoria de Visual Studio](/visualstudio/profiling/memory-usage) para depurar la fuga de memoria.
 
 En este tutorial se usa una aplicación de ejemplo, diseñada para perder memoria de manera intencionada. El ejemplo se proporciona como ejercicio. Asimismo, puede analizar una aplicación que pierda memoria involuntariamente.
 
@@ -238,6 +240,7 @@ También puede eliminar el archivo de volcado de memoria que se creó.
 - [dotnet-counters](dotnet-counters.md) para comprobar el uso de memoria administrada
 - [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria
 - [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [Uso de Visual Studio para depurar fugas de memoria](/visualstudio/profiling/memory-usage)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

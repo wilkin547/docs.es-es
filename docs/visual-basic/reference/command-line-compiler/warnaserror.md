@@ -1,4 +1,5 @@
 ---
+description: Más información sobre -warnaserror (Visual Basic)
 title: -warnaserror
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 2c243b05b7e819691165ef20996691c0bd38ae4a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 38fc2d70f95228c715ef5ac4bfc9b4fdb6f67c0e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098870"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470102"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 
