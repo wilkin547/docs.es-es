@@ -3,12 +3,12 @@ title: Dapr para desarrolladores de .NET
 description: Una guía para que los desarrolladores de .NET comprendan y aprovechen toda la eficacia de Distributed Apps Runtime de código abierto de Microsoft.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: a9f1362d8e588790151f9b828f53de90565cacbb
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 53d5356c8e010f0c4e168a2186d48dd9af369ff6
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626022"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096737"
 ---
 # <a name="dapr-for-net-developers"></a>Dapr para desarrolladores de .NET
 
@@ -66,7 +66,7 @@ Editores:
 
 > **David Pine**, desarrollador de contenidos sénior, equipo de .NET, Microsoft
 
-> **Maira Wenzel**, directora de administración de programas, equipo de .NET, Microsoft
+> **Maira Wenzel**, administradora de programas sénior, equipo de .NET, Microsoft
 
 ## <a name="version"></a>Versión
 
