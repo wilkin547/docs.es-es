@@ -1,0 +1,39 @@
+- name: Dapr para desarrolladores de .NET
+  href: index.md
+  items:
+    - name: Prólogo
+      href: foreword.md
+      displayName: 'mark russinovich, foreword by mark russinovich, distributed system future, distributed application future, distributed architecture, microservice, monolithic, monolithic architecture'
+    - name: El mundo está distribuido.
+      href: the-world-is-distributed.md
+      displayName: 'distributed system, distributed application, distributed architecture, microservice, SOA, monolithic, monolithic architecture'
+    - name: "Dapr a 20\_000 pies"
+      href: dapr-at-20000-feet.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, sidecar architecture, service mesh'
+    - name: Introducción
+      href: getting-started.md
+      displayName: 'dapr, distributed system, distributed application, service invocation, state management, install dapr, component configuration files, multi-container dapr application'
+    - name: Aplicación de referencia
+      href: reference-application.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, eshop'
+    - name: Administración de estado
+      href: state-management.md
+      displayName: 'dapr, distributed system, distributed application, state management, dapr state management building block, cap theorem, concurrency, transactions'
+    - name: Invocación de servicio
+      href: service-invocation.md
+      displayName: 'dapr, distributed system, distributed application, service invocation, dapr service invocation building block, envoy'
+    - name: Publicación y suscripción
+      href: publish-subscribe.md
+      displayName: 'dapr, distributed system, distributed application, pub/sub, publish and subscribe, cloud events, publishing events, subscribing to events, dapr publish-subscribe building block'
+    - name: Enlaces
+      href: bindings.md
+      displayName: 'dapr bindings building block, input binding, output binding, binding components, dapr bindings building block'
+    - name: Observabilidad
+      href: observability.md
+      displayName: 'dapr, distributed system, distributed application, observability, distributed tracing, traces, metrics, logging, zipkin, jaeger, prometheus, new relic, dapr observability building block'
+    - name: Secretos
+      href: secrets.md
+      displayName: 'dapr, distributed system, distributed application, secrets, dapr secrets building block, kubernetes secrets, azure key vault'
+    - name: Resumen y camino a seguir
+      href: summary.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, sidecar architecture, dapr futures'

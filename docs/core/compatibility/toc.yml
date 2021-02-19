@@ -24,6 +24,8 @@
               href: 6.0.md
             - name: ASP.NET Core
               items:
+                - name: Las anotaciones en los tipos de referencia que aceptan valores NULL han cambiado.
+                  href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
                 - name: 'Blazor: se ha cambiado el de parámetro en el método RequestImageFileAsync'
                   href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: Atributos de mensaje de registro modificados'
@@ -316,6 +318,8 @@
           items:
             - name: ".NET\_6.0"
               items:
+                - name: Las anotaciones en los tipos de referencia que aceptan valores NULL han cambiado.
+                  href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
                 - name: 'Blazor: se ha cambiado el de parámetro en el método RequestImageFileAsync'
                   href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: Atributos de mensaje de registro modificados'
