@@ -21,3 +21,5 @@
       href: microservices/
     - name: 'Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure'
       href: serverless/
+    - name: Dapr para desarrolladores de .NET
+      href: dapr-for-net-developers/

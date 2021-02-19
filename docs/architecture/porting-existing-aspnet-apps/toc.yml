@@ -62,6 +62,9 @@
           href: strategies-migrating-in-production.md
     - name: Ejemplo de migración de un proyecto de eShop
       href: example-migration-eshop.md
+      items:
+        - name: Más escenarios de migración
+          href: more-migration-scenarios.md
     - name: Escenarios de implementación
       href: deployment-scenarios.md
     - name: Resumen

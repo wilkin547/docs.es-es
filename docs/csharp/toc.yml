@@ -1,7 +1,7 @@
 items:
   - name: Documentación de C#
     href: index.yml
-  - name: Paseo por C#
+  - name: Primeros pasos
     items:
       - name: Introducción
         href: tour-of-csharp/index.md
@@ -11,37 +11,39 @@ items:
         href: tour-of-csharp/program-building-blocks.md
       - name: Áreas principales del lenguaje
         href: tour-of-csharp/features.md
+      - name: Tutoriales
+        items:
+          - name: Elección de la primera lección
+            href: tour-of-csharp/tutorials/index.md
+          - name: Tutoriales basados en el explorador
+            items:
+              - name: Hola a todos
+                href: tour-of-csharp/tutorials/hello-world.yml
+              - name: Números en C#
+                href: tour-of-csharp/tutorials/numbers-in-csharp.yml
+              - name: Bifurcaciones y bucles
+                href: tour-of-csharp/tutorials/branches-and-loops.yml
+              - name: Colecciones de listas
+                href: tour-of-csharp/tutorials/list-collection.yml
+          - name: Trabajo en un entorno local
+            items:
+              - name: Configuración del entorno
+                href: tour-of-csharp/tutorials/local-environment.md
+              - name: Números en C#
+                href: tour-of-csharp/tutorials/numbers-in-csharp-local.md
+              - name: Bifurcaciones y bucles
+                href: tour-of-csharp/tutorials/branches-and-loops-local.md
+              - name: Colecciones de listas
+                href: tour-of-csharp/tutorials/arrays-and-collections.md
   - name: Tutoriales
     items:
       - name: Información general
         displayName: tutorials
         href: tutorials/index.md
-      - name: Introducción a la programación con C#
-        items:
-          - name: Elección de la primera lección
-            href: tutorials/intro-to-csharp/index.md
-          - name: Hola a todos
-            href: tutorials/intro-to-csharp/hello-world.yml
-          - name: Números en C#
-            href: tutorials/intro-to-csharp/numbers-in-csharp.yml
-          - name: Bifurcaciones y bucles
-            href: tutorials/intro-to-csharp/branches-and-loops.yml
-          - name: Colecciones de listas
-            href: tutorials/intro-to-csharp/list-collection.yml
-          - name: Trabajo en un entorno local
-            items:
-              - name: Configuración del entorno
-                href: tutorials/intro-to-csharp/local-environment.md
-              - name: Números en C#
-                href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
-              - name: Bifurcaciones y bucles
-                href: tutorials/intro-to-csharp/branches-and-loops-local.md
-              - name: Colecciones de listas
-                href: tutorials/intro-to-csharp/arrays-and-collections.md
-              - name: Introducción a las clases
-                href: tutorials/intro-to-csharp/introduction-to-classes.md
-              - name: Programación orientada a objetos
-                href: tutorials/intro-to-csharp/object-oriented-programming.md
+      - name: Introducción a las clases
+        href: tutorials/intro-to-csharp/introduction-to-classes.md
+      - name: Programación orientada a objetos
+        href: tutorials/intro-to-csharp/object-oriented-programming.md
       - name: Exploración de los tipos de registros
         href: tutorials/exploration/records.md
       - name: Exploración de instrucciones de nivel superior
@@ -267,8 +269,6 @@ items:
         items:
           - name: Qué hay dentro de un programa de C#
             href: programming-guide/inside-a-program/index.md
-          - name: 'Hello World, su primer programa'
-            href: programming-guide/inside-a-program/hello-world-your-first-program.md
           - name: Estructura general de un programa de C#
             href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
           - name: Nombres de identificador
