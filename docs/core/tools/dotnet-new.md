@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: acaaf025555c46f720452b8c9d4f875b8656125a
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634460"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096809"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
   En la tabla siguiente se muestran las plantillas que vienen preinstaladas con el SDK de .NET. El lenguaje predeterminado de la plantilla se muestra entre corchetes. Haga clic en el vínculo del nombre corto para ver las opciones específicas de la plantilla.
 
-| Plantillas                                    | Nombre corto                      | Lenguaje     | Etiquetas                                  | Inclusión |
-|----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| Aplicación de consola                          | [console](#console)             | [C#], F#, VB | Común/Consola                        | 1.0        |
-| Biblioteca de clases                                | [classlib](#classlib)           | [C#], F#, VB | Común/Biblioteca                        | 1.0        |
-| Aplicación WPF                              | [wpf](#wpf)                     | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
-| Biblioteca de clases de WPF                            | [wpflib](#wpf)                  | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
-| Biblioteca de controles personalizados WPF                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
-| Biblioteca de controles de usuario de WPF                     | [wpfusercontrollib](#wpf)       | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
-| Aplicación de Windows Forms (WinForms)         | [winforms](#winforms)           | [C#], VB     | Común/WinForms                       | 3.0 (5.0 para VB)|
-| Biblioteca de clases de Windows Forms (WinForms)       | [winformslib](#winforms)        | [C#], VB     | Común/WinForms                       | 3.0 (5.0 para VB)|
-| Servicio Worker                               | [worker](#web-others)           | [C#]         | Común/Worker/Web                     | 3.0        |
-| Proyecto de prueba unitaria                            | [mstest](#test)                 | [C#], F#, VB | Prueba/MSTest                           | 1.0        |
-| Proyecto de prueba de NUnit 3                         | [nunit](#nunit)                 | [C#], F#, VB | Prueba/NUnit                            | 2.1.400    |
-| Elemento de prueba de NUnit 3                            | `nunit-test`                    | [C#], F#, VB | Prueba/NUnit                            | 2.2        |
-| Proyecto de prueba de xUnit                           | [xunit](#test)                  | [C#], F#, VB | Prueba/xUnit                            | 1.0        |
-| Componente Razor                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
-| Página de Razor                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
-| MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
-| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
-| Blazor Aplicación de servidor                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Aplicación de Blazor WebAssembly                       | [blazorwasm](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
-| Vacío de ASP.NET Core                           | [web](#web)                     | [C#], F#     | Web/Vacío                             | 1.0        |
-| Aplicación web de ASP.NET Core (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
-| Aplicación web de ASP.NET Core                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
-| ASP.NET Core con Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
-| ASP.NET Core con React.js                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
-| ASP.NET Core con React.js y Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
-| Biblioteca de clases de Razor                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Biblioteca/Biblioteca de clases de Razor | 2.1        |
-| API web de ASP.NET Core                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
-| Servicio gRPC de ASP.NET Core                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
-| Archivo dotnet gitignore                        | `gitignore`                     |              | Configuración                                | 3.0        |
-| archivo global.json                             | [globaljson](#globaljson)       |              | Configuración                                | 2.0        |
-| Configuración de NuGet                                 | `nugetconfig`                   |              | Configuración                                | 1.0        |
-| Archivo de manifiesto de la herramienta local dotnet              | `tool-manifest`                 |              | Configuración                                | 3.0        |
-| Configuración web                                   | `webconfig`                     |              | Configuración                                | 1.0        |
-| Archivo de solución                                | `sln`                           |              | Soluciones                              | 1.0        |
-| Archivo de búfer de protocolo                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
+| Plantillas                                    | Nombre corto                        | Lenguaje     | Etiquetas                                  | Inclusión |
+|----------------------------------------------|-----------------------------------|--------------|---------------------------------------|------------|
+| Aplicación de consola                          | [`console`](#console)             | [C#], F#, VB | Común/Consola                        | 1.0        |
+| Biblioteca de clases                                | [`classlib`](#classlib)           | [C#], F#, VB | Común/Biblioteca                        | 1.0        |
+| Aplicación WPF                              | [`wpf`](#wpf)                     | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
+| Biblioteca de clases de WPF                            | [`wpflib`](#wpf)                  | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
+| Biblioteca de controles personalizados WPF                   | [`wpfcustomcontrollib`](#wpf)     | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
+| Biblioteca de controles de usuario de WPF                     | [`wpfusercontrollib`](#wpf)       | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
+| Aplicación de Windows Forms (WinForms)         | [`winforms`](#winforms)           | [C#], VB     | Común/WinForms                       | 3.0 (5.0 para VB)|
+| Biblioteca de clases de Windows Forms (WinForms)       | [`winformslib`](#winforms)        | [C#], VB     | Común/WinForms                       | 3.0 (5.0 para VB)|
+| Servicio Worker                               | [`worker`](#web-others)           | [C#]         | Común/Worker/Web                     | 3.0        |
+| Proyecto de prueba unitaria                            | [`mstest`](#test)                 | [C#], F#, VB | Prueba/MSTest                           | 1.0        |
+| Proyecto de prueba de NUnit 3                         | [`nunit`](#nunit)                 | [C#], F#, VB | Prueba/NUnit                            | 2.1.400    |
+| Elemento de prueba de NUnit 3                            | `nunit-test`                      | [C#], F#, VB | Prueba/NUnit                            | 2.2        |
+| Proyecto de prueba de xUnit                           | [`xunit`](#test)                  | [C#], F#, VB | Prueba/xUnit                            | 1.0        |
+| Componente Razor                              | `razorcomponent`                  | [C#]         | Web/ASP.NET                           | 3.0        |
+| Página de Razor                                   | [`page`](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewImports                              | [`viewimports`](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewStart                                | `viewstart`                       | [C#]         | Web/ASP.NET                           | 2.0        |
+| Blazor Aplicación de servidor                            | [`blazorserver`](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
+| Aplicación de Blazor WebAssembly                       | [`blazorwasm`](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
+| Vacío de ASP.NET Core                           | [`web`](#web)                     | [C#], F#     | Web/Vacío                             | 1.0        |
+| Aplicación web de ASP.NET Core (Model-View-Controller) | [`mvc`](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
+| Aplicación web de ASP.NET Core                         | [`webapp, razor`](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
+| ASP.NET Core con Angular                    | [`angular`](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core con React.js                   | [`react`](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core con React.js y Redux         | [`reactredux`](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
+| Biblioteca de clases de Razor                          | [`razorclasslib`](#razorclasslib) | [C#]         | Web/Razor/Biblioteca/Biblioteca de clases de Razor | 2.1        |
+| API web de ASP.NET Core                         | [`webapi`](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
+| Servicio gRPC de ASP.NET Core                    | [`grpc`](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
+| Archivo dotnet gitignore                        | `gitignore`                       |              | Configuración                                | 3.0        |
+| archivo global.json                             | [`globaljson`](#globaljson)       |              | Configuración                                | 2.0        |
+| Configuración de NuGet                                 | `nugetconfig`                     |              | Configuración                                | 1.0        |
+| Archivo de manifiesto de la herramienta local dotnet              | `tool-manifest`                   |              | Configuración                                | 3.0        |
+| Configuración web                                   | `webconfig`                       |              | Configuración                                | 1.0        |
+| Archivo de solución                                | `sln`                             |              | Soluciones                              | 1.0        |
+| Archivo de búfer de protocolo                         | [`proto`](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>Opciones
 
@@ -167,7 +167,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
 Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las plantillas principales tienen las siguientes opciones adicionales:
 
-### <a name="console"></a>consola
+### `console`
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -191,11 +191,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Si se especifica, no se ejecuta ninguna restauración implícita durante la creación del proyecto. Disponible a partir del SDK de .NET Core 2.2.
 
-**_
+***
 
-### <a name="classlib"></a>classlib
+### `classlib`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino. Valores: `net5.0` o `netcoreapp<version>` para crear una biblioteca de clases de .NET, o bien `netstandard<version>` para crear una de .NET Standard. El valor predeterminado para el SDK de .NET 5.0 es `net5.0`.
 
@@ -209,11 +209,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-**_
+***
 
-### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> `wpf`, `wpflib`, `wpfcustomcontrollib`, `wpfusercontrollib`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `net5.0`. Disponible a partir del SDK de .NET Core 3.1.
 
@@ -227,11 +227,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-**_
+***
 
-### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a> `winforms`, `winformslib`
 
-- _ *`--langVersion <VERSION_NUMBER>`**
+- **`--langVersion <VERSION_NUMBER>`**
 
   Establece la propiedad `LangVersion` en el archivo del proyecto creado. Por ejemplo, use `--langVersion 7.3` para emplear C# 7.3.
 
@@ -241,11 +241,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-**_
+***
 
-### <a name="worker-grpc"></a><a name="web-others"></a> worker, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a> `worker`, `grpc`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `netcoreapp3.1`. Disponible a partir del SDK de .NET Core 3.1.
 
@@ -257,11 +257,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-**_
+***
 
-### <a name="mstest-xunit"></a><a name="test"></a> mstest, xunit
+### <a name="mstest-xunit"></a><a name="test"></a> `mstest`, `xunit`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino. Opción disponible a partir del SDK de .NET Core 3.0.
 
@@ -281,11 +281,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-**_
+***
 
-### <a name="nunit"></a>nunit
+### `nunit`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino.
 
@@ -307,11 +307,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-**_
+***
 
-### <a name="page"></a>página
+### `page`
 
-- _ *`-na|--namespace <NAMESPACE_NAME>`**
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
   Espacio de nombres del código generado. El valor predeterminado es `MyApp.Namespace`.
 
@@ -319,19 +319,19 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Crea la página sin PageModel.
 
-**_
+***
 
-### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports, proto
+### <a name="viewimports-proto"></a><a name="namespace"></a> `viewimports`, `proto`
 
-- _ *`-na|--namespace <NAMESPACE_NAME>`**
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
   Espacio de nombres del código generado. El valor predeterminado es `MyApp.Namespace`.
 
-**_
+***
 
-### <a name="blazorserver"></a>blazorserver
+### `blazorserver`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Tipo de autenticación que se va a usar. Los valores posibles son:
 
@@ -398,11 +398,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-**_
+***
 
-### <a name="blazorwasm"></a>blazorwasm
+### `blazorwasm`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino.
 
@@ -502,11 +502,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Ámbitos para solicitar llamar a la API desde la aplicación web. Solo se aplica a la autenticación `SingleOrg` o `IndividualB2C` sin un host especificado de ASP.NET Core. De manera predeterminada, es `user.read`.
 
-**_
+***
 
-### <a name="web"></a>web
+### `web`
 
-- _ *`--exclude-launch-settings`**
+- **`--exclude-launch-settings`**
 
   Excluye *launchSettings.json* de la plantilla generada.
 
@@ -531,11 +531,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Desactiva HTTPS.
 
-**_
+***
 
-### <a name="mvc-webapp"></a><a name="web-options"></a> mvc, webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a> `mvc`, `webapp`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Tipo de autenticación que se va a usar. Los valores posibles son:
 
@@ -622,11 +622,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Determina si el proyecto está configurado para usar la [compilación en tiempo de ejecución de Razor](/aspnet/core/mvc/views/view-compilation#runtime-compilation) en las compilaciones de depuración. Opción disponible a partir del SDK de .NET Core 3.1.201.
 
-**_
+***
 
-### <a name="angular-react"></a><a name="spa"></a> angular, react
+### <a name="angular-react"></a><a name="spa"></a> `angular`, `react`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Tipo de autenticación que se va a usar. Disponible desde el SDK de .NET Core 3.0.
   
@@ -664,11 +664,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-**_
+***
 
-### <a name="reactredux"></a>reactredux
+### `reactredux`
 
-- _ *`--exclude-launch-settings`**
+- **`--exclude-launch-settings`**
 
   Excluye *launchSettings.json* de la plantilla generada.
 
@@ -693,11 +693,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Desactiva HTTPS.
 
-**_
+***
 
-### <a name="razorclasslib"></a>razorclasslib
+### `razorclasslib`
 
-- _ *`--no-restore`**
+- **`--no-restore`**
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
@@ -705,11 +705,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Permite agregar vistas y páginas de Razor tradicionales además de los componentes a esta biblioteca. Disponible desde el SDK de .NET Core 3.0.
 
-**_
+***
   
-### <a name="webapi"></a>webapi
+### `webapi`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Tipo de autenticación que se va a usar. Los valores posibles son:
 
@@ -775,11 +775,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-**_
+***
 
-### <a name="globaljson"></a>globaljson
+### `globaljson`
 
-- _ *`--sdk-version <VERSION_NUMBER>`**
+- **`--sdk-version <VERSION_NUMBER>`**
 
   Especifica la versión del SDK de .NET que se va a usar en el archivo *global.json*.
 

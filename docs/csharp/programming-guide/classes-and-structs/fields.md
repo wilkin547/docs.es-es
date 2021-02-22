@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 58e60e1dc0b574ae922e6a27a22978b91aca4ec4
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 3210500719529f8bb7f2627abf634cc7b9dcb772
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899053"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096822"
 ---
 # <a name="fields-c-programming-guide"></a>Campos (Guía de programación de C#)
 
@@ -26,11 +26,11 @@ Los campos se declaran en el bloque de clase especificando el nivel de acceso de
 
 [!code-csharp[fields#1](snippets/fields/Program.cs#1)]
 
-Para obtener acceso a un campo en un objeto, agregue un punto después del nombre de objeto, seguido del nombre del campo, como en `objectname.fieldname`. Por ejemplo:
+Para obtener acceso a un campo en un objeto, agregue un punto después del nombre de objeto, seguido del nombre del campo, como en `objectname._fieldName`. Por ejemplo:
 
 [!code-csharp[fields#2](snippets/fields/Program.cs#2)]
 
-Se puede proporcionar un valor inicial a un campo mediante el operador de asignación cuando se declara el campo. Para asignar automáticamente el campo `day` a `"Monday"`, por ejemplo, se declararía `day` como en el ejemplo siguiente:
+Se puede proporcionar un valor inicial a un campo mediante el operador de asignación cuando se declara el campo. Para asignar automáticamente el campo `Day` a `"Monday"`, por ejemplo, se declararía `Day` como en el ejemplo siguiente:
 
 [!code-csharp[fields#3](snippets/fields/Program.cs#3)]
 
@@ -49,7 +49,7 @@ Se puede declarar un campo como [readonly](../../language-reference/keywords/rea
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Clases y structs](./index.md)

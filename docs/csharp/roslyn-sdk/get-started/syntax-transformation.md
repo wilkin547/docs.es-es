@@ -3,12 +3,12 @@ title: Introducción a la transformación de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5879dfd6ed0a5f6465829eec496d10cfcfd07362
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 706e4643ecc81d252a9192dc5e8850024770628f
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202119"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639408"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introducción a la transformación de sintaxis
 
@@ -82,7 +82,7 @@ Cree un nuevo nodo <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSynt
 
 [!code-csharp[create a new subtree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#BuildNewUsing "Create the subtree with the replaced namespace")]
 
-Ejecute el programa y observe con detenimiento el resultado. `newusing` todavía no se ha colocado en el árbol de la raíz. No se ha modificado el árbol original.
+Ejecute el programa y observe con detenimiento el resultado. `newUsing` todavía no se ha colocado en el árbol de la raíz. No se ha modificado el árbol original.
 
 Agregue el siguiente código utilizando el método de extensión <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> para crear un nuevo árbol. El nuevo árbol es el resultado de reemplazar la importación existente por el nodo `newUsing` actualizado. Asigne este nuevo árbol a la variable `root` existente:
 

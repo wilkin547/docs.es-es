@@ -2,12 +2,12 @@
 title: 'Registro y seguimiento: .NET Core'
 description: Introducción al registro y seguimiento de .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: a8c6d82ddb7bc3f8b4cc9eae9dd7aaf65732a0b8
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 70cff297688270d30b9850d123ffc8bb27ef7fbe
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548401"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582963"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registro y seguimiento de .NET Core
 
@@ -64,9 +64,6 @@ Las siguientes API están más orientadas a eventos. En lugar de registrar caden
   - Se incluye en .NET Core y como un [paquete NuGet](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) para .NET Framework.
   - Permite el seguimiento en curso de objetos no serializables.
   - Incluye un puente para permitir que los campos seleccionados de objetos registrados se escriban en un elemento <xref:System.Diagnostics.Tracing.EventSource>.
-
-- <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
-  - Proporciona una manera definitiva de identificar los mensajes de registro resultantes de una actividad o transacción específica. Este objeto se puede utilizar para correlacionar los registros entre distintos servicios.
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
   - Solo Windows.
