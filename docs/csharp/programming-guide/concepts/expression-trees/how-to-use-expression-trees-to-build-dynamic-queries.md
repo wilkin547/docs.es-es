@@ -3,12 +3,12 @@ title: Consultas basadas en el estado del entorno de ejecución (C#)
 description: Se describen diversas técnicas que el código puede usar para realizar consultas de forma dinámica según el estado del entorno de ejecución, mediante la modificación de las llamadas a métodos de LINQ o los árboles de expresión pasados a esos métodos.
 ms.date: 02/11/2021
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 0dcf1696ca323ac4823c80c7993fef7873fd8ed5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 5e015bbc69b61b783abd7eba9cfcf13c29d5c3be
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100433788"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100581944"
 ---
 # <a name="querying-based-on-runtime-state-c"></a>Consultas basadas en el estado del entorno de ejecución (C#)
 
@@ -35,7 +35,7 @@ En las secciones siguientes se describen técnicas específicas para realizar co
 - Llamada a métodos de LINQ adicionales
 - Variación del árbol de expresión que se pasa a los métodos de LINQ
 - Creación de un árbol de expresión [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) con los métodos de generador de <xref:System.Linq.Expressions.Expression>
-- Adición de nodos de llamada de método a la interfaz <xref:System.Linq.IQueryable> de un árbol de expresión
+- Adición de nodos de llamada de método al árbol de expresión de <xref:System.Linq.IQueryable>
 - Construcción de cadenas y uso de la [biblioteca dinámica de LINQ](https://dynamic-linq.net/)
 
 ## <a name="use-runtime-state-from-within-the-expression-tree"></a>Uso del estado del entorno de ejecución desde el árbol de expresión
@@ -53,7 +53,7 @@ Por lo general, los [métodos de LINQ integrados](https://github.com/dotnet/runt
 * Encapsulan el árbol de expresión actual en un elemento <xref:System.Linq.Expressions.MethodCallExpression> que representa la llamada de método.
 * Vuelven a pasar el árbol de expresión encapsulado al proveedor, ya sea para devolver un valor mediante el método <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> del proveedor, o bien para devolver un objeto de consulta traducido mediante el método <xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType>.
 
-Puede reemplazar la consulta original con el resultado de un método que devuelva [IQueryable\<T>](xref:System.Linq.IQueryable%601) para obtener una nueva consulta. Puede hacerlo en función del estado del entorno de ejecución, como en el ejemplo siguiente:
+Puede reemplazar la consulta original con el resultado de un método que devuelva [IQueryable\<T>](xref:System.Linq.IQueryable%601) para obtener una nueva consulta. Puede hacerlo condicionalmente en función del estado del entorno de ejecución, como en el ejemplo siguiente:
 
 :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Added_method_calls":::
 
@@ -69,7 +69,7 @@ También es posible que quiera crear las distintas subexpresiones mediante una b
 
 ## <a name="construct-expression-trees-and-queries-using-factory-methods"></a>Creación de árboles de expresión y consultas mediante métodos de generador
 
-En todos los ejemplos vistos hasta ahora, se ha conocido el tipo de elemento en tiempo de compilación `string` y, por tanto, el tipo de la consulta `IQueryable<string>`. Es posible que tenga que agregar componentes a una consulta de cualquier tipo de elemento. Es posible que tenga que agregar otros componentes, en función del tipo de elemento. Puede crear árboles de expresión desde cero, con los métodos de generador de <xref:System.Linq.Expressions.Expression?displayProperty=fullName> y, por tanto, adaptar la expresión a un tipo de elemento específico.
+En todos los ejemplos vistos hasta ahora, se ha conocido el tipo de elemento en tiempo de compilación `string` y, por tanto, el tipo de la consulta `IQueryable<string>`. Es posible que necesite agregar componentes a una consulta de cualquier tipo de elemento o agregar componentes diferentes, en función del tipo de elemento. Puede crear árboles de expresión desde cero, con los métodos de generador de <xref:System.Linq.Expressions.Expression?displayProperty=fullName> y, por tanto, adaptar la expresión del entorno de ejecución a un tipo de elemento específico.
 
 ### <a name="constructing-an-expressiontdelegate"></a>Creación de una instancia de [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601)
 
@@ -77,9 +77,7 @@ Cuando se crea una expresión para pasarla a uno de los métodos de LINQ, en rea
 
 [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) hereda de <xref:System.Linq.Expressions.LambdaExpression>, que representa una expresión lambda completa como la siguiente:
 
-```csharp
-Expression<Func<string, bool>> expr = x => x.StartsWith("a");
-```
+:::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Compiler_generated_expression_tree":::
 
 <xref:System.Linq.Expressions.LambdaExpression> tiene dos componentes:
 
@@ -90,25 +88,15 @@ Los pasos básicos para crear una instancia de [Expression\<TDelegate>](xref:Sys
 
 * Defina objetos <xref:System.Linq.Expressions.ParameterExpression> para cada uno de los parámetros (si existen) de la expresión lambda, mediante el método generador <xref:System.Linq.Expressions.Expression.Parameter%2A>.
 
-    ```csharp
-    ParameterExpression x = Parameter(typeof(string), "x");
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_parameter":::
 
-* Cree el cuerpo de <xref:System.Linq.Expressions.LambdaExpression>, mediante el objeto <xref:System.Linq.Expressions.ParameterExpression> que haya definido. Por ejemplo, una expresión que represente `x.StartsWith("a")` se podría crear de la siguiente manera:
+* Construya el cuerpo de <xref:System.Linq.Expressions.LambdaExpression> utilizando los valores <xref:System.Linq.Expressions.ParameterExpression> definidos por el usuario y los métodos de generador en <xref:System.Linq.Expressions.Expression>. Por ejemplo, una expresión que represente `x.StartsWith("a")` se podría crear de la siguiente manera:
 
-    ```csharp
-    Expression body = Call(
-        x,
-        typeof(string).GetMethod("StartsWith", new [] {typeof(string)}),
-        Constant("a")
-    );
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_body":::
 
 * Encapsule los parámetros y el cuerpo en una instancia de [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) con tipo de tiempo de compilación, mediante la sobrecarga correspondiente del método de generador <xref:System.Linq.Expressions.Expression.Lambda%2A>:
 
-    ```csharp
-    Expression<Func<string, bool>> expr = Lambda<Func<string, bool>>(body, prm);
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_lambda":::
 
 En las secciones siguientes se describe un escenario en el que es posible que quiera crear una instancia de [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) para pasarla a un método de LINQ, y se proporciona un ejemplo completo de cómo hacerlo mediante los métodos de generador.
 
@@ -116,10 +104,7 @@ En las secciones siguientes se describe un escenario en el que es posible que qu
 
 Imagine que tiene varios tipos de entidad:
 
-```csharp
-record Person(string LastName, string FirstName, DateTime DateOfBirth);
-record Car(string Model, int Year);
-```
+:::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Entities":::
 
 En cualquiera de estos tipos de entidad, quiere filtrar y devolver solo las entidades que contengan un texto concreto dentro de uno de sus campos `string`. Para `Person`, le interesa buscar las propiedades `FirstName` y `LastName`:
 
@@ -149,7 +134,7 @@ Como la función `TextFilter` toma y devuelve una interfaz [IQueryable\<T>](xref
 
 :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_methods_expression_of_tdelegate_usage":::
 
-## <a name="adding-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a>Adición de nodos de llamada de método a la interfaz <xref:System.Linq.IQueryable> del árbol de expresión
+## <a name="add-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a>Adición de nodos de llamada de método al árbol de expresión de <xref:System.Linq.IQueryable>
 
 Si tiene una interfaz <xref:System.Linq.IQueryable> en lugar de [IQueryable\<T>](xref:System.Linq.IQueryable%601), no puede llamar directamente a los métodos de LINQ genéricos. Una alternativa consiste en crear el árbol de expresión interno como se ha indicado antes y usar la reflexión para invocar el método de LINQ adecuado mientras se pasa el árbol de expresión.
 

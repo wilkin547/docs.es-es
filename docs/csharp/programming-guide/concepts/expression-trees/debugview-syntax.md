@@ -3,27 +3,27 @@ title: Sintaxis que utiliza la propiedad DebugView (C#)
 description: Describe la sintaxis especial usada por la propiedad DebugView para producir una representación de cadena de árboles de expresión
 author: zspitz
 ms.author: wiwagn
-ms.date: 05/22/2019
+ms.date: 02/14/2021
 ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: ba695fc808108c49a4eee3c70a305b24c91769d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 278fc66f9f8cf7671b956126cec10c4464a5b81c
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "67661713"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639394"
 ---
-# <a name="debugview-syntax"></a>Sintaxis de `DebugView`
+# <a name="debugview-syntax"></a>Sintaxis de **DebugView**
 
-La propiedad `DebugView` (disponible solo durante la depuración) proporciona una representación de cadenas de árboles de expresión. La mayor parte de la sintaxis es bastante sencilla de entender; los casos especiales se describen en las siguientes secciones.
+La propiedad **DebugView** (disponible solo durante la depuración) proporciona una representación de cadenas de árboles de expresión. La mayor parte de la sintaxis es bastante sencilla de entender; los casos especiales se describen en las siguientes secciones.
 
-Cada ejemplo va seguido de un comentario del bloque, que contiene `DebugView`.
+Cada ejemplo va seguido de un comentario del bloque, que contiene **DebugView**.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
-los nombres de variable <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> se muestran con un símbolo `$` al principio.
+los nombres de variable <xref:System.Linq.Expressions.ParameterExpression> se muestran con un símbolo `$` al principio.
 
 Si un parámetro no tiene un nombre, se le asigna un nombre generado automáticamente, como `$var1` o `$var2`.
 
@@ -43,7 +43,7 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 
 ## <a name="constantexpression"></a>ConstantExpression
 
-Para los objetos <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> que representan valores enteros, cadenas y `null`, se muestra el valor de la constante.
+Para los objetos <xref:System.Linq.Expressions.ConstantExpression> que representan valores enteros, cadenas y `null`, se muestra el valor de la constante.
 
 Para los tipos numéricos que tienen sufijos estándar como literales de C#, el sufijo se agrega al valor. En la tabla siguiente se muestran los sufijos asociados a varios tipos numéricos.
 
@@ -74,7 +74,7 @@ ConstantExpression expr = Expression.Constant(num);
 
 ## <a name="blockexpression"></a>BlockExpression
 
-Si el tipo de un objeto <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> difiere del tipo de la última expresión del bloque, el tipo se muestra entre corchetes angulares (`<` y `>`). De otro modo, el tipo del objeto <xref:System.Linq.Expressions.BlockExpression> no se muestra.
+Si el tipo de un objeto <xref:System.Linq.Expressions.BlockExpression> difiere del tipo de la última expresión del bloque, el tipo se muestra entre corchetes angulares (`<` y `>`). De otro modo, el tipo del objeto <xref:System.Linq.Expressions.BlockExpression> no se muestra.
 
 ### <a name="examples"></a>Ejemplos
 
@@ -96,7 +96,7 @@ BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("t
 
 ## <a name="lambdaexpression"></a>LambdaExpression
 
-Los objetos <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> se muestran junto con sus tipos delegados.
+Los objetos <xref:System.Linq.Expressions.LambdaExpression> se muestran junto con sus tipos delegados.
 
 Si una expresión lambda no tiene un nombre, se le asigna un nombre generado automáticamente, como `#Lambda1` o `#Lambda2`.
 
@@ -120,7 +120,7 @@ LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), 
 
 ## <a name="labelexpression"></a>LabelExpression
 
-Si especifica un valor predeterminado para el objeto <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType>, este valor se muestra antes del objeto <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType>.
+Si especifica un valor predeterminado para el objeto <xref:System.Linq.Expressions.LabelExpression>, este valor se muestra antes del objeto <xref:System.Linq.Expressions.LabelTarget>.
 
 El token `.Label` indica el inicio de la etiqueta. El token `.LabelTarget` indica el destino al que se va a saltar.
 

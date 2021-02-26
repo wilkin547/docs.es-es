@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-trace: CLI de .NET'
 description: Aprenda a instalar y usar la herramienta dotnet-trace de la CLI para recopilar seguimientos de .NET de un proceso en ejecución sin el generador de perfiles nativo, mediante EventPipe de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: 93698882e94f58eda84abebc277e1eacfe22a3da
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: abf98df6e31747ea3e8013fc77b246613a3402ad
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189710"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583004"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Utilidad de análisis de rendimiento dotnet-trace
 
@@ -180,6 +180,8 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   - `Provider` tiene el formato: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]`.
   - `KeyValueArgs` tiene el formato: `[key1=value1][;key2=value2]`.
 
+  Para obtener más información acerca de algunos de los proveedores conocidos en .NET, consulte [Proveedores de eventos conocidos en .NET](./well-known-event-providers.md).
+
 - **`-- <command>` (solo para seleccionar como destino aplicaciones que ejecutan .NET 5.0)**
 
   Después de los parámetros de configuración de la colección, el usuario puede anexar `--` seguido de un comando para iniciar una aplicación de .NET con un entorno de ejecución de 5.0 como mínimo. Esto puede resultar útil al diagnosticar problemas que se producen al principio del proceso, como problemas de rendimiento de inicio o de cargador de ensamblados y errores del enlazador.
@@ -195,6 +197,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 > [!NOTE]
 > Para recopilar un seguimiento mediante `dotnet-trace`, debe ejecutarse como el mismo usuario que el que ejecuta el proceso de destino, o bien como usuario raíz. De lo contrario, la herramienta no podrá establecer una conexión con el proceso de destino.
+
+> [!NOTE]
+> Si ve un mensaje de error similar al siguiente: `[ERROR] System.ComponentModel.Win32Exception (299): A 32 bit processes cannot access modules of a 64 bit process.`, está intentando usar `dotnet-trace` que tiene un valor de bits no coincidente con el proceso de destino. Asegúrese de descargar el valor de bits correcto de la herramienta en el vínculo de [instalación](#install).
 
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 

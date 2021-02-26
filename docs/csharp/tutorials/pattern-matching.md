@@ -4,14 +4,14 @@ description: En este tutorial avanzado se muestra cómo usar técnicas de coinci
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: be1c330973859df62cd4706e5f6f9ca4326fb221
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: b0ee4ee905c130876cf201cb3a1a441d54226c52
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794816"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582788"
 ---
-# <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos.
+# <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos
 
 C# 7 introdujo las características básicas de coincidencia de patrones. Esas características se han ampliado en C# 8 y C# 9 con nuevas expresiones y patrones. Puede escribir una funcionalidad que se comporta como si se hubiesen ampliado tipos que pueden estar en otras bibliotecas. Los patrones también se usan para crear una funcionalidad que la aplicación requiere y que no es una característica fundamental del tipo que se está ampliando.
 

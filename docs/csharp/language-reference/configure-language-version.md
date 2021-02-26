@@ -3,12 +3,12 @@ title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: fb4a869fe67b3292ba430ea563bc2a072590adb2
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96598920"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582151"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -53,7 +53,7 @@ Si debe especificar su versión de C# explícitamente, puede hacerlo de varias m
 - Configurar la opción dl compilador [Reemplace la opción del compilador `-langversion`](compiler-options/langversion-compiler-option.md).
 
 > [!TIP]
-> Para saber qué versión de lenguaje está usando actualmente, incluya `#error version` (con distinción de mayúsculas y minúsculas) en el código. Esto hace que el compilador genere un diagnóstico, CS8304, con un mensaje que contiene la versión del compilador que se usa y la versión del lenguaje seleccionada actualmente.
+> Para saber qué versión de lenguaje está usando actualmente, incluya `#error version` (con distinción de mayúsculas y minúsculas) en el código. Esto hace que el compilador genere un error de compilador, CS8304, con un mensaje que contiene la versión del compilador que se usa y la versión del lenguaje seleccionada actualmente. Vea [#error (Referencia de C#)](preprocessor-directives/preprocessor-error.md) para obtener más información.
 
 ### <a name="edit-the-project-file"></a>Edición del archivo del proyecto
 

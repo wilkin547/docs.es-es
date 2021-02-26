@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-counters: CLI de .NET'
 description: Obtenga información sobre cómo instalar y usar la herramienta dotnet-counter de la CLI para la investigación del rendimiento y la supervisión del estado de primer nivel ad hoc.
 ms.date: 11/17/2020
-ms.openlocfilehash: 1842b1fb9cde0e0b7a570456766cbfdeb64c5896
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 1c802e33602c2d8f18600b9771a1f68e722d8fdf
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188587"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583305"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>Investigación de los contadores de rendimiento (dotnet-counters)
 
@@ -236,6 +236,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
 
 > [!NOTE]
 > Para supervisar métricas mediante `dotnet-counters`, debe ejecutarse como el mismo usuario que el que ejecuta el proceso de destino, o bien como usuario raíz.
+
+> [!NOTE]
+> Si ve un mensaje de error similar al siguiente: `[ERROR] System.ComponentModel.Win32Exception (299): A 32 bit processes cannot access modules of a 64 bit process.`, está intentando usar `dotnet-counters` que tiene un valor de bits no coincidente con el proceso de destino. Asegúrese de descargar el valor de bits correcto de la herramienta en el vínculo de [instalación](#install).
 
 ### <a name="examples"></a>Ejemplos
 

@@ -1,6 +1,6 @@
 ---
 title: Ilasm.exe (Ensamblador de IL)
-description: Empiece a usar Ilasm.exe, el ensamblador de IL. Esta herramienta genera un archivo ejecutable portable (PE) a partir de lenguaje intermedio (IL).
+description: Empiece a usar Ilasm.exe, el ensamblador de IL. Esta herramienta genera un archivo ejecutable portable (PE) a partir de un ensamblado de lenguaje intermedio (IL).
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MSIL generators
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-ms.openlocfilehash: 1a85b3bf9509ffba6c2331d14196a6bef2bfa080
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 50dbb0688a75d8588cb6d8679410a4a07abc6b50
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166979"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584274"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
 
-El Ensamblador de IL genera un archivo portable ejecutable (PE) a partir del lenguaje intermedio (IL). Para obtener información sobre IL, consulte [Proceso de ejecución administrada](../../standard/managed-execution-process.md). Se puede ejecutar el archivo ejecutable resultante, que contiene IL y los metadatos requeridos, para determinar si IL se comporta de acuerdo con lo esperado.
+El Ensamblador de IL genera un archivo portable ejecutable (PE) a partir del ensamblado de lenguaje intermedio (IL). Para obtener información sobre IL, consulte [Proceso de ejecución administrada](../../standard/managed-execution-process.md). Se puede ejecutar el archivo ejecutable resultante, que contiene IL y los metadatos requeridos, para determinar si IL se comporta de acuerdo con lo esperado.
 
 Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
 

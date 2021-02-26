@@ -1,25 +1,25 @@
 ---
-title: Bloques de creación de "programas" de C#
+title: Bloques de creación de programas de C#
 description: Obtenga información sobre miembros, expresiones e instrucciones de C#. Los tipos contienen miembros que se escriben. Estos miembros se crean a partir de instrucciones y expresiones.
 ms.date: 08/06/2020
-ms.openlocfilehash: 0ac45eee180b60062a328fca9ab5c63a1537debe
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 79ba391a6c4c6dc453f6c6e07107e4dd831e111d
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216621"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582953"
 ---
 # <a name="program-building-blocks"></a>Bloques de creación de programas
 
-Los tipos descritos en el artículo anterior se compilan con estos bloques de creación: [***miembros** _](../programming-guide/classes-and-structs/members.md), [_*_expresiones_*_ e _*_instrucciones_*_](../programming-guide/statements-expressions-operators/index.md).
+Los tipos descritos en el artículo anterior se compilan con estos bloques de creación: [***miembros** _](../programming-guide/classes-and-structs/members.md), [_*_expresiones_*_ e _ *_instrucciones_**](../programming-guide/statements-expressions-operators/index.md).
 
 ## <a name="members"></a>Miembros
 
-Los miembros de una `class` son _*_estáticos_*_ o _*_de instancia_*_. Los miembros estáticos pertenecen a clases y los miembros de instancia pertenecen a objetos (instancias de clases).
+Los miembros de `class` son ***estáticos** _ o _*_de instancia_**. Los miembros estáticos pertenecen a clases y los miembros de instancia pertenecen a objetos (instancias de clases).
 
 En la lista siguiente se proporciona una visión general de los tipos de miembros que puede contener una clase.
 
-- _*Constantes**: Valores constantes asociados a la clase
+- **Constantes**: Valores constantes asociados a la clase
 - **Campos**:  variables que están asociadas a la clase
 - **Métodos**:  acciones que puede realizar la clase.
 - **Propiedades**: Acciones asociadas a la lectura y escritura de propiedades con nombre de la clase

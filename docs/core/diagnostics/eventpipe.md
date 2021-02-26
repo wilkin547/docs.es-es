@@ -3,12 +3,12 @@ title: Información general sobre EventPipe
 description: Obtenga información sobre EventPipe y cómo usarlo para hacer un seguimiento de las aplicaciones .NET con el fin de diagnosticar problemas de rendimiento.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: 00378c4f409b307afa9183e40de6078cdafd3ae7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f315beafabbd99bf78647b3f714fd76d93fcac28
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820623"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582982"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -94,3 +94,5 @@ pero puede usar las siguientes variables de entorno para configurar una sesión 
   - `Microsoft-Windows-DotNETRuntime:4c14fccbd:5`
   - `Microsoft-Windows-DotNETRuntimePrivate:4002000b:5`
   - `Microsoft-DotNETCore-SampleProfiler:0:5`
+
+  Para obtener más información acerca de algunos de los proveedores conocidos en .NET, consulte [Proveedores de eventos conocidos en .NET](./well-known-event-providers.md).
