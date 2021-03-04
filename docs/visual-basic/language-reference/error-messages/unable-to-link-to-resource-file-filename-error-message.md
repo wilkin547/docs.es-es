@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: 79c4c99dee252ae32837a99378fbf32d7d0d8470
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fd53cda4040846a8b41573ebbec8f21b656a118a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640932"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106844"
 ---
 # <a name="bc30144-unable-to-link-to-resource-file-filename-error-message"></a>BC30144: no se puede vincular al archivo de recursos ' \<filename> ': \<error message>
 
@@ -27,7 +27,7 @@ El compilador Visual Basic llama a Assembly Linker (Al.exe, también conocido co
 
 2. Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Hable con nosotros](/visualstudio/ide/feedback-options)
+- [Opciones de comentarios de Visual Studio](/visualstudio/ide/feedback-options)

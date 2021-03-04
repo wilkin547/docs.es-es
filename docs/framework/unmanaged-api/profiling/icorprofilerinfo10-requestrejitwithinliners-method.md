@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: da3434926b36408adfdee2171d56f23ba764f0eb
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 925a61bf2521950cad7fb0dce8f1484198f3f806
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99753268"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106519"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners (método)
 
@@ -62,8 +62,8 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**Versiones de .net:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaz ICorProfilerInfo10](icorprofilerinfo10-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 56aa88f9e4ca3c50e7fc3704685ae4ac535db12c
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 222c92413bd12e1769376c0f6eef7e34d7d5182e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100455241"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106571"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -252,7 +252,7 @@ Puede implementar propiedades de interfaz de solo lectura mediante una propiedad
 
 Para mejorar la legibilidad del código, ahora puede usar `TypeOf` con `IsNot`.
 
-[#Disable Warning \<ID> y #Enable Warning \<ID>](../language-reference/directives/index.md)
+[#Disable Warning \<ID> y #Enable Warning \<ID>](../language-reference/directives/disable-enable.md)
 
 Puede deshabilitar y habilitar advertencias específicas para las regiones dentro de un archivo de origen.
 

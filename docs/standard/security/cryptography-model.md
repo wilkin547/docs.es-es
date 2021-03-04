@@ -1,7 +1,7 @@
 ---
 title: Modelo de criptografía de .NET
 description: Revise las implementaciones de los algoritmos criptográficos habituales en .NET. Obtenga información sobre el modelo de criptografía extensible de herencia de objetos, diseño de secuencias & configuración.
-ms.date: 07/14/2020
+ms.date: 02/26/2021
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f9ec08992cb8db8f81f11de661612e1b7d15131c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2208e36ac4521f43cfd2960d92588c8349a119ca
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831122"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106935"
 ---
 # <a name="net-cryptography-model"></a>Modelo de criptografía de .NET
 
@@ -48,14 +48,14 @@ En .NET Core y .NET 5 y versiones posteriores, todas las clases de implementaci�
 
 En la mayoría de los casos, no es necesario hacer referencia directamente a una clase de implementación de algoritmos, como `AesCryptoServiceProvider` . Los métodos y las propiedades que normalmente necesita están en la clase de algoritmo base, como `Aes` . Cree una instancia de una clase de implementación predeterminada utilizando un Factory Method en la clase de algoritmo base y haga referencia a la clase de algoritmo base. Por ejemplo, vea la línea de código resaltada en el ejemplo siguiente:
 
-:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="16":::
-:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="12":::
+:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="20":::
+:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="17":::
 
 ## <a name="cryptographic-configuration"></a>Configuración criptográfica
 
 La configuración criptográfica le permite resolver una implementación específica de un algoritmo en un nombre de algoritmo, lo que permite la extensibilidad de las clases de criptografía de .NET. Puede agregar su propia implementación de hardware o software de un algoritmo y asignar la implementación al nombre del algoritmo que quiera. Si un algoritmo no se especifica en el archivo de configuración, se usa la configuración predeterminada.
 
-## <a name="choosing-an-algorithm"></a>Elegir un algoritmo
+## <a name="choose-an-algorithm"></a>Selección de un algoritmo
 
 Puede seleccionar un algoritmo por diferentes motivos: por ejemplo, para proteger la integridad de los datos, para proteger la privacidad de los datos o para generar una clave. Los algoritmos simétricos y hash están diseñados para proteger los datos por motivos de integridad (impedir los cambios) o por motivos de privacidad (impedir la visualización). Los algoritmos hash se usan principalmente para proteger la integridad de los datos.
 
