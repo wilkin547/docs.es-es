@@ -12,44 +12,44 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: b07e456f7fa9c328217b8779733d45dfe2793fe2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3b47204630056e2797b5cf126bd7c291830cea05
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99753281"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103457"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a><span data-ttu-id="b3b5a-103">ICorProfilerInfo10:: IsFrozenObject (método)</span><span class="sxs-lookup"><span data-stu-id="b3b5a-103">ICorProfilerInfo10::IsFrozenObject Method</span></span>
+# <a name="icorprofilerinfo10isfrozenobject-method"></a><span data-ttu-id="bf915-103">ICorProfilerInfo10:: IsFrozenObject (método)</span><span class="sxs-lookup"><span data-stu-id="bf915-103">ICorProfilerInfo10::IsFrozenObject Method</span></span>
 
-<span data-ttu-id="b3b5a-104">Dado un ObjectID, determina si el objeto está en un segmento de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="b3b5a-104">Given an ObjectID, determines whether the object is in a read-only segment.</span></span>
+<span data-ttu-id="bf915-104">Dado un ObjectID, determina si el objeto está en un segmento de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="bf915-104">Given an ObjectID, determines whether the object is in a read-only segment.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="b3b5a-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b3b5a-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="bf915-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bf915-105">Syntax</span></span>
 
 ```cpp
 HRESULT IsFrozenObject( [in]  ObjectID objectId,
                         [out] BOOL *pbFrozen);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="b3b5a-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b3b5a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="bf915-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="bf915-106">Parameters</span></span>
 
 - `objectId`
 
-  <span data-ttu-id="b3b5a-107">\[en] objeto que se va a examinar.</span><span class="sxs-lookup"><span data-stu-id="b3b5a-107">\[in] The object to examine.</span></span>
+  <span data-ttu-id="bf915-107">\[en] objeto que se va a examinar.</span><span class="sxs-lookup"><span data-stu-id="bf915-107">\[in] The object to examine.</span></span>
 
 - `pbFrozen`
 
-  <span data-ttu-id="b3b5a-108">\[out] un valor de `BOOL` tipo que indica si el objeto está en un segmento de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="b3b5a-108">\[out] A `BOOL` indicating if the object is in a read-only segment.</span></span>
+  <span data-ttu-id="bf915-108">\[out] un valor de `BOOL` tipo que indica si el objeto está en un segmento de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="bf915-108">\[out] A `BOOL` indicating if the object is in a read-only segment.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="b3b5a-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b3b5a-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="bf915-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bf915-109">Requirements</span></span>
 
-<span data-ttu-id="b3b5a-110">**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="b3b5a-110">**Platforms:** See [.NET Core supported operating systems](../../../core/install/windows.md?pivots=os-windows).</span></span>
+<span data-ttu-id="bf915-110">**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="bf915-110">**Platforms:** See [.NET Core supported operating systems](../../../core/install/windows.md?pivots=os-windows).</span></span>
 
-<span data-ttu-id="b3b5a-111">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b3b5a-111">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="bf915-111">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bf915-111">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="b3b5a-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3b5a-112">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="bf915-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bf915-112">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="b3b5a-113">**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3b5a-113">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="bf915-113">**Versiones de .net:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf915-113">**.NET Versions:** [!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b3b5a-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="b3b5a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf915-114">Consulte también</span><span class="sxs-lookup"><span data-stu-id="bf915-114">See also</span></span>
 
-- [<span data-ttu-id="b3b5a-115">Interfaz ICorProfilerInfo10</span><span class="sxs-lookup"><span data-stu-id="b3b5a-115">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="bf915-115">Interfaz ICorProfilerInfo10</span><span class="sxs-lookup"><span data-stu-id="bf915-115">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
