@@ -15,12 +15,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: e6e314a34469083433289c0fff9b404d4549824d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a6a63ec742cf4a93080c9cc2f9906c5c6c21f0a8
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792172"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102102898"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte (tipo de datos, Visual Basic)
 
@@ -65,7 +65,7 @@ Si el literal entero está fuera del intervalo de `SByte` (es decir, si es infer
 
 ## <a name="programming-tips"></a>sugerencias de programación
 
-- **Conformidad con CLS.** El `SByte` tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede consumir un componente que lo utiliza.
+- **Conformidad con CLS.** El `SByte` tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS), por lo que el código conforme a CLS no puede consumir un componente que lo utiliza.
 
 - **Ampliación.** El `SByte` tipo de datos se amplía a `Short` , `Integer` , `Long` , `Decimal` , `Single` y `Double` . Esto significa que puede convertir `SByte` en cualquiera de estos tipos sin que se produzca un <xref:System.OverflowException?displayProperty=nameWithType> error.
 
@@ -73,7 +73,7 @@ Si el literal entero está fuera del intervalo de `SByte` (es decir, si es infer
 
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.SByte?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.SByte?displayProperty=nameWithType>
 - [Tipo de datos](index.md)
