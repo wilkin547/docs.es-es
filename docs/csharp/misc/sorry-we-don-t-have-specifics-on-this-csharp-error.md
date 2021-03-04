@@ -737,12 +737,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: c16698fbbf42e0967978a3502243793835f541c5
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 21d74d5a4f8eb406c3a0e48f56e4df479f222183
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216907"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103340"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Lo sentimos, no tenemos detalles sobre este error de C#
 
@@ -754,9 +754,9 @@ Lo sentimos, pero no tenemos información específica sobre este error. Puede bu
  [Stack Overflow](https://stackoverflow.com/questions/tagged/c%23)  
 Proporciona un sitio web de QA para preguntas y problemas con Visual C#.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../programming-guide/index.md)
 - [Referencia de C#](../language-reference/index.md)
-- [Hable con nosotros](/visualstudio/ide/feedback-options)
+- [Opciones de comentarios de Visual Studio](/visualstudio/ide/feedback-options)
 - [Otros recursos para los programadores de Visual C#](../tour-of-csharp/index.md)

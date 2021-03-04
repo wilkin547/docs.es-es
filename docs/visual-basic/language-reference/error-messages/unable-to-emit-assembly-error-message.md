@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 015ab6e1d186495d72bddd65678ab15088c0f1b2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 393571f5b1fab518f379bbd6f4e6f1cb62a74b26
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99674888"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104788"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: no se puede emitir el ensamblado: \<error message>
 
@@ -39,8 +39,6 @@ El compilador Visual Basic llama a Assembly Linker (*Al.exe*, también conocido 
 
 3. Abra el [símbolo del sistema para desarrolladores para Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
 
-   En Windows 10, escriba **símbolo del sistema para desarrolladores** en el cuadro de búsqueda de la barra de tareas. A continuación, seleccione **símbolo del sistema para desarrolladores para VS 2017** en la lista de resultados.
-
 4. Cambie el directorio al directorio en el que desea colocar el contenedor de ensamblado.
 
 5. Escriba el comando siguiente:
@@ -60,9 +58,9 @@ El compilador Visual Basic llama a Assembly Linker (*Al.exe*, también conocido 
 
 6. En Visual Studio, agregue una referencia de ensamblado .NET al archivo que acaba de crear.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (Herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [Cómo: Creación de un par de claves privada y pública](../../../standard/assembly/create-public-private-key-pair.md)
-- [Hable con nosotros](/visualstudio/ide/feedback-options)
+- [Opciones de comentarios de Visual Studio](/visualstudio/ide/feedback-options)

@@ -1,15 +1,15 @@
 ---
-title: Novedades de .NET para escritorio
+title: ¿Qué novedades hay en .NET para escritorio?
 description: Obtenga información sobre .NET, las diferencias entre .NET y .NET Framework y las nuevas características que se agregaron.
 ms.date: 12/29/2020
-ms.openlocfilehash: 9cae715f64e9de959b5b1ee6fb58ef381bab1040
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: 03dea849ad8a797b917dca953d93be6878d7ec72
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98618047"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106186"
 ---
-# <a name="whats-new-with-net-for-desktop"></a>Novedades de .NET para escritorio
+# <a name="whats-new-with-net-for-desktop"></a>¿Qué novedades hay en .NET para escritorio?
 
 A partir de .NET Core 3,0, .NET admite Windows Forms y WPF. Por lo tanto, ahora tiene la opción de elegir entre .NET Framework y .NET para las aplicaciones de escritorio. En este capítulo se describe lo que es .NET y cuáles son las ventajas de las aplicaciones de escritorio.
 
@@ -63,7 +63,7 @@ A partir de .NET Core 3,0, además de la compatibilidad existente con la web y l
 - Ampliar las funcionalidades de .NET con las mejores características de .NET Core, .NET Framework, Xamarin y Mono.
 - Desarrollar el producto a partir de un solo código base que mejore todos los escenarios, que los desarrolladores (Microsoft y la comunidad) puedan expandir y en el que puedan trabajar juntos.
 
-Esta nueva versión y dirección son un cambio de juego para .NET. Con .NET 5, los archivos de proyecto y código tendrán la misma apariencia, independientemente del tipo de aplicación que se esté compilando. Tendrá acceso a las mismas funcionalidades de tiempo de ejecución, API y lenguaje con cada aplicación. Esto incluye nuevas [mejoras de rendimiento](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) que se confirman en tiempo de ejecución, prácticamente a diario. Para obtener más información, consulte las novedades [de .net 5](https://docs.microsoft.com/dotnet/core/dotnet-five).
+Esta nueva versión y dirección son un cambio de juego para .NET. Con .NET 5, los archivos de proyecto y código tendrán la misma apariencia, independientemente del tipo de aplicación que se esté compilando. Tendrá acceso a las mismas funcionalidades de tiempo de ejecución, API y lenguaje con cada aplicación. Esto incluye nuevas [mejoras de rendimiento](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) que se confirman en tiempo de ejecución, prácticamente a diario. Para obtener más información, consulte las novedades [de .net 5](../../core/dotnet-five.md).
 
 ![Todos los dominios de .NET 5](./media/whats-new-dotnet-core/all-domains-of-dotnet5.png)
 

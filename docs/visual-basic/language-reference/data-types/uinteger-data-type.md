@@ -17,12 +17,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 5202619909de4a132bda8ab3dca63337c6f3493f
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c3c04f746f0e2cf15bc1881544b93a538dbdc04e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792107"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104840"
 ---
 # <a name="uinteger-data-type"></a>UInteger (tipo de datos)
 
@@ -69,7 +69,7 @@ Los `UInteger` `Integer` tipos de datos y proporcionan un rendimiento óptimo en
 
 - **Números negativos.** Dado `UInteger` que es un tipo sin signo, no puede representar un número negativo. Si usa el operador unario menos ( `-` ) en una expresión que se evalúa como tipo `UInteger` , Visual Basic convierte primero la expresión en `Long` .
 
-- **Conformidad con CLS.** El `UInteger` tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede consumir un componente que lo utiliza.
+- **Conformidad con CLS.** El `UInteger` tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS), por lo que el código conforme a CLS no puede consumir un componente que lo utiliza.
 
 - **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para el .NET Framework, por ejemplo, objetos de automatización o COM, tenga en cuenta que los tipos como `uint` pueden tener un ancho de datos diferente (16 bits) en otros entornos. Si va a pasar un argumento de 16 bits a este componente, declárelo como `UShort` en lugar de `UInteger` en el código de Visual Basic administrado.
 
@@ -79,7 +79,7 @@ Los `UInteger` `Integer` tipos de datos y proporcionan un rendimiento óptimo en
 
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt32?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.UInt32>
 - [Tipo de datos](index.md)

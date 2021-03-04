@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: 4116f3293a36f4592712c3e39c988aa730753de4
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e2c690ab198e11a70a2fc3bba925ccc4ccb31c79
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796540"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103418"
 ---
 # <a name="bc30140-error-creating-assembly-manifest-error-message"></a>BC30140: error al crear el manifiesto del ensamblado: \<error message>
 
@@ -34,4 +34,4 @@ El compilador Visual Basic llama a Assembly Linker (Al.exe, también conocido co
 - [Cómo: Firma de un ensamblado con un nombre seguro](../../../standard/assembly/sign-strong-name.md)
 - [Página Firma, Diseñador de proyectos](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Hable con nosotros](/visualstudio/ide/feedback-options)
+- [Opciones de comentarios de Visual Studio](/visualstudio/ide/feedback-options)

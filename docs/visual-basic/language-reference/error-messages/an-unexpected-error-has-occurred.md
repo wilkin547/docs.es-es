@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 43ac84e053def32cd5fa0dfc798bd47a022c0471
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 76f7bd43c05ea3bd46b352a791debac984ca8fcd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99797177"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103613"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única
 
@@ -36,4 +36,4 @@ La aplicación no pudo obtener un recurso de sistema operativo necesario. Alguna
 
 - [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Conceptos básicos del depurador](/visualstudio/debugger/debugger-basics)
-- [Hable con nosotros](/visualstudio/ide/feedback-options)
+- [Opciones de comentarios de Visual Studio](/visualstudio/ide/feedback-options)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 47a299437b5f3ceab1cb24b8a09666366c546a64
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 01a696d5faf4f33efd0f54aee7ba62a8d9f29467
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99731037"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103860"
 ---
 # <a name="visual-basic-language-reference"></a>Referencia del lenguaje Visual Basic
 
@@ -42,7 +42,7 @@ En esta sección se proporciona información de referencia sobre diversos aspect
  [Tipo de datos](data-types/index.md)  
  Documenta los tipos de datos disponibles en Visual Basic.  
   
- [Directivas](directives/index.md)  
+ [Directivas](./directives/disable-enable.md)  
  Documenta las directivas de compilador disponibles en Visual Basic.  
   
  [Funciones](functions/index.md)  

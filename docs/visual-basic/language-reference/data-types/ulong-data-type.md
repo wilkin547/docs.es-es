@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 9082fc9444f0754c60a6aa3f9b58db1d833349b8
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 5e47fc49e8e0a6df4d1fcc70174a8519752fd3e1
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792094"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104827"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong (tipo de datos) (Visual Basic)
 
@@ -67,7 +67,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 - **Números negativos.** Dado `ULong` que es un tipo sin signo, no puede representar un número negativo. Si usa el operador unario menos ( `-` ) en una expresión que se evalúa como tipo `ULong` , Visual Basic convierte primero la expresión en `Decimal` .
 
-- **Conformidad con CLS.** El `ULong` tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede consumir un componente que lo utiliza.
+- **Conformidad con CLS.** El `ULong` tipo de datos no forma parte de la [Common Language Specification](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS), por lo que el código conforme a CLS no puede consumir un componente que lo utiliza.
 
 - **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para el .NET Framework, por ejemplo, objetos de automatización o COM, tenga en cuenta que los tipos como `ulong` pueden tener un ancho de datos diferente (32 bits) en otros entornos. Si va a pasar un argumento de 32 bits a este componente, declárelo como `UInteger` en lugar de `ULong` en el código de Visual Basic administrado.
 
@@ -79,7 +79,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 - **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt64?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.UInt64>
 - [Tipo de datos](index.md)

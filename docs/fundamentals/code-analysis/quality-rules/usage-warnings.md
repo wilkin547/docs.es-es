@@ -11,12 +11,12 @@ helpviewer_keywords:
 - usage rules
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: c8b14d2f92502d5a82e41a322e599745bdcf8b85
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: b05edde3c6faef39aa724dd49d159abe23d049f5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "96594531"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102102976"
 ---
 # <a name="usage-rules"></a>Reglas de uso
 
@@ -55,6 +55,6 @@ Las reglas de uso admiten el uso adecuado de .NET.
 |[CA2244: No duplicar inicializaciones de elementos indexados](ca2244.md)|Un inicializador de objeto tiene más de un inicializador de elemento indizado con el mismo índice de constante. Todo menos el último inicializador son redundantes.|
 |[CA2245: No asignar una propiedad a sí misma](ca2245.md)|Una propiedad se asignó accidentalmente a sí misma.|
 |[CA2246: No asignar un símbolo y su miembro en la misma instrucción](ca2246.md)|No se recomienda asignar un símbolo y su miembro, es decir, un campo o una propiedad, en la misma instrucción. No está claro si el acceso a miembros debía usar el valor anterior del símbolo antes de la asignación o el nuevo valor de la asignación en esta instrucción.|
-|[CA2247: El argumento pasado al constructor TaskCompletionSource debe ser una enumeración TaskCreationOptions en lugar de TaskContinuationOptions](ca2246.md)|TaskCompletionSource tiene constructores que toman un TaskCreationOptions que controla la tarea subyacente y constructores que toman el estado del objeto almacenado en la tarea.  Pasar accidentalmente un TaskContinuationOptions en lugar de un TaskCreationOptions dará lugar a que la llamada trate las opciones como estado.|
+|[CA2247: El argumento pasado al constructor TaskCompletionSource debe ser una enumeración TaskCreationOptions en lugar de TaskContinuationOptions](ca2247.md)|TaskCompletionSource tiene constructores que toman un TaskCreationOptions que controla la tarea subyacente y constructores que toman el estado del objeto almacenado en la tarea.  Pasar accidentalmente un TaskContinuationOptions en lugar de un TaskCreationOptions dará lugar a que la llamada trate las opciones como estado.|
 |[CA2248: proporcione el argumento ' ENUM ' correcto a ' enum. HasFlag '](ca2248.md)|El tipo de enumeración que se pasa como argumento a la `HasFlag` llamada al método es diferente del tipo de enumeración que realiza la llamada.|
 |[CA2249: Valorar la posibilidad de usar String.Contains en lugar de String.IndexOf](ca2249.md)|Las llamadas a `string.IndexOf` donde se utiliza el resultado para comprobar la presencia o la ausencia de una subcadena se pueden reemplazar por `string.Contains` .|
