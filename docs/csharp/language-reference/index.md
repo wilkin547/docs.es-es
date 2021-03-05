@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
-ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
+ms.openlocfilehash: dfbf7a2548f403bce895d388fe2cd1483e092b2e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98235240"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104068"
 ---
 # <a name="c-reference"></a>Referencia de C#
 
@@ -44,7 +44,7 @@ En esta sección se proporciona material de referencia sobre palabras clave, ope
  Incluye fragmentos de código que muestran la causa y la corrección de errores y advertencias del compilador de C#.  
   
  [Especificación del lenguaje C#](../../../_csharplang/spec/introduction.md)  
- Especificación del lenguaje C# 6.0 Se trata de un borrador de propuesta para el lenguaje C# 6.0. Este documento se perfeccionará por medio del trabajo con el comité de normas de C# de ECMA. La versión 5.0 se ha publicado en diciembre de 2017 como el documento [Norma ECMA-334 estándar, quinta edición](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
+ Especificación del lenguaje C# 6.0 Se trata de un borrador de propuesta para el lenguaje C# 6.0. Este documento se perfeccionará por medio del trabajo con el comité de normas de C# de ECMA. La versión 5.0 se ha publicado en diciembre de 2017 como el documento [Norma ECMA-334 estándar, quinta edición](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf).
 
 Las características que se han implementado en versiones de C# posteriores a 6.0 se representan en las propuestas de especificación del lenguaje. Estos documentos describen los deltas de la especificación del lenguaje con el fin de agregar estas nuevas características. Están en formato de propuesta de borrador. Estas especificaciones se perfeccionarán y enviarán al comité de normas de ECMA para su revisión formal e incorporación a una versión futura del estándar de C#.
 

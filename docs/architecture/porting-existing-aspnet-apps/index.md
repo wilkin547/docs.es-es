@@ -3,12 +3,12 @@ title: Migración de aplicaciones existentes de ASP.NET a .NET Core
 description: Una guía gratuita para convertir aplicaciones de ASP.NET MVC y Web API a ASP.NET Core.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 36c0cdbe03fb97ae82336d53e15be2108e9c6367
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 848f0e9533a65b59055853f1d502307abb69118c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488169"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105950"
 ---
 # <a name="porting-existing-aspnet-apps-to-net-core"></a>Migración de aplicaciones existentes de ASP.NET a .NET Core
 
@@ -62,7 +62,7 @@ En esta guía se describe **.NET Core 3.1** y las actualizaciones relacionadas
 
 ## <a name="who-should-use-this-guide"></a>Destinatarios de esta guía
 
-Esta guía está dirigida a desarrolladores, jefes de desarrollo y arquitectos que estén interesados en migrar sus aplicaciones existentes escritas para ASP.NET MVC y Web API (.NET Framework 4.x) a .NET Core. Los desarrolladores de ASP.NET Web Forms se beneficiarán de esta guía, pero también deberían leer el libro electrónico [Blazor para desarrolladores de ASP.NET Web Forms](https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/).
+Esta guía está dirigida a desarrolladores, jefes de desarrollo y arquitectos que estén interesados en migrar sus aplicaciones existentes escritas para ASP.NET MVC y Web API (.NET Framework 4.x) a .NET Core. Los desarrolladores de ASP.NET Web Forms se beneficiarán de esta guía, pero también deberían leer el libro electrónico [Blazor para desarrolladores de ASP.NET Web Forms](../blazor-for-web-forms-developers/index.md).
 
 Un público secundario es el de los responsables de la toma de decisiones técnicas que planean cuándo migrar sus aplicaciones a .NET Core.
 

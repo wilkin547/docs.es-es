@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 59928ce89dacc47534a1e7cb5ed0603d259b5a4e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063604"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104812"
 ---
 # <a name="c-programming-guide"></a>Guía de programación de C#
 
 En esta sección se proporciona información detallada sobre las funcionalidades y características claves del lenguaje C# a las que C# puede acceder a través de .NET.  
   
- En la mayor parte de esta sección se supone que ya sabe algo sobre C# y que conoce los conceptos de programación generales. Si nunca ha programado ni ha trabajado con C#, puede consultar los tutoriales de [introducción a C#](../tutorials/intro-to-csharp/index.md) o el [tutorial de .NET en explorador](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), que no requieren ningún conocimiento previo de programación.  
+ En la mayor parte de esta sección se supone que ya sabe algo sobre C# y que conoce los conceptos de programación generales. Si nunca ha programado ni ha trabajado con C#, puede consultar los tutoriales de [introducción a C#](../tour-of-csharp/tutorials/index.md) o el [tutorial de .NET en explorador](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), que no requieren ningún conocimiento previo de programación.  
   
  Para obtener información sobre determinadas palabras clave, operadores y directivas de preprocesador, consulte [Referencia de C#](../language-reference/index.md). Para obtener información sobre la especificación del lenguaje C#, consulte [Especificación del lenguaje C#](/dotnet/csharp/language-reference/language-specification/introduction).  
   

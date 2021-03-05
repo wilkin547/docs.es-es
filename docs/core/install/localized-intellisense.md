@@ -2,12 +2,12 @@
 title: Instalación de archivos de IntelliSense localizados
 description: Obtenga información sobre cómo configurar su máquina de desarrollo con el fin de usar archivos de IntelliSense localizados para los proyectos de .NET 5+ (incluido .NET Core) en Visual Studio.
 ms.date: 11/06/2020
-ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: febd748429dd3a2e13460354eb7402d25515f934
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506771"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105211"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>Procedimiento para instalar archivos de IntelliSense localizados para .NET
 
@@ -18,7 +18,7 @@ ms.locfileid: "94506771"
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) o una versión posterior, como el [SDK de .NET 5](https://dotnet.microsoft.com/download/dotnet/5.0).
+- [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet) o una versión posterior, como el [SDK de .NET 5](https://dotnet.microsoft.com/download/dotnet/5.0).
 - [Versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) u otra posterior.
 
 ## <a name="download-and-install-the-localized-intellisense-files"></a>Descarga e instalación de los archivos de IntelliSense localizados
@@ -95,10 +95,10 @@ Si no ha instalado el paquete de idioma deseado durante la configuración, actua
    ![Actualización o modificación de Visual Studio](./media/localized-intellisense/vs-installer-modify.png)
 
    > [!IMPORTANT]
-   > Si no ve el botón **Modificar** , pero sí el botón **Actualizar** , significa que necesita actualizar su versión de Visual Studio para poder modificar su instalación.
+   > Si no ve el botón **Modificar**, pero sí el botón **Actualizar**, significa que necesita actualizar su versión de Visual Studio para poder modificar su instalación.
    > Cuando haya finalizado la actualización, aparecerá el botón **Modificar**.
 
-1. En la pestaña **Paquetes de idioma** , seleccione o anule la selección de los idiomas que quiera instalar o desinstalar.
+1. En la pestaña **Paquetes de idioma**, seleccione o anule la selección de los idiomas que quiera instalar o desinstalar.
 
    ![Pestaña Paquetes de idioma de Visual Studio](./media/localized-intellisense/vs-modify-language-packs.png)
 
@@ -114,9 +114,9 @@ Una vez que haya instalado los paquete de idioma deseados, modifique la configur
 
 1. En la barra de menús, seleccione **Herramientas** > **Opciones**. Se abrirá el cuadro de diálogo Opciones.
 
-1. En el nodo **Entorno** , seleccione **Configuración internacional**.
+1. En el nodo **Entorno**, seleccione **Configuración internacional**.
 
-1. En la lista desplegable **Idioma** , seleccione el que quiera usar. Elija **Aceptar**.
+1. En la lista desplegable **Idioma**, seleccione el que quiera usar. Elija **Aceptar**.
 
 1. Aparecerá un cuadro de diálogo en el que se le informará de que debe reiniciar Visual Studio para que se apliquen los cambios. Elija **Aceptar**.
 
