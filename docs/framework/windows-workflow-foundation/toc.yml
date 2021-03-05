@@ -241,9 +241,8 @@
             - name: Pausar y reanudar un flujo de trabajo
               href: pausing-and-resuming-a-workflow.md
         - name: Guía de migración
-          href: wf-migration-guidance.md
           items:
-            - name: Guía de migración
+            - name: Información general
               href: migration-guidance.md
             - name: Usar actividades de WF de .NET Framework 3.0 en .NET Framework 4 con la actividad Interop
               href: net-framework-3-0-wf-in-net-framework-4-interop.md
