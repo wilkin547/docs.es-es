@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: d4c3e373207e23877903491871f4d09e11000c1a
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 005b40a7d9f46b84fcd90541248f5f4fd243e612
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594733"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255556"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="display-text-on-an-lcd"></a>Mostrar texto en una pantalla LCD
@@ -25,14 +25,14 @@ En este tema, usará .NET para mostrar texto en una pantalla de caracteres LCD m
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [presentación de caracteres LCD 20x4 con la interfaz I2C](https://www.bing.com/images/search?q=20x4+lcd+display+with+i2c)<span class="docon docon-navigate-external x-hidden-focus"></span>
+- [Presentación de caracteres LCD 20x4 con la interfaz I2C](https://www.bing.com/images/search?q=20x4+lcd+display+with+i2c)
 - Cables de puente
 - Placa (opcional/recomendado)
 - Placa de salida de Raspberry PI GPIO (opcional/recomendado)
 - [!INCLUDE [tutorial-prereq-dotnet](../includes/tutorial-prereq-dotnet.md)]
 
 > [!NOTE]
-> Hay muchos fabricantes de pantallas de caracteres LCD. La mayoría de los diseños son idénticos y el fabricante no debe tener ninguna diferencia con la funcionalidad. Como referencia, este tutorial se desarrolló con el [LCD2004 del descubierto](https://www.sunfounder.com/lcd2004-module.html) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+> Hay muchos fabricantes de pantallas de caracteres LCD. La mayoría de los diseños son idénticos y el fabricante no debe tener ninguna diferencia con la funcionalidad. Como referencia, este tutorial se desarrolló con el [LCD2004 del descubierto](https://www.sunfounder.com/lcd2004-module.html).
 
 [!INCLUDE [prepare-pi-i2c](../includes/prepare-pi-i2c.md)]
 
@@ -49,7 +49,7 @@ Consulte las siguientes figuras según sea necesario:
 
 | Interfaz I2C (parte posterior de la pantalla) | Raspberry PI GPIO |
 |---------------------------------|-------------------|
-| :::image type="content" source="../media/character-display-i2c-thumb.png" alt-text="Imagen de la parte posterior de la presentación de caracteres que muestra el expansor de I2C GPIO." lightbox="../media/character-display-i2c.png"::: | :::image type="content" source="../media/gpio-pinout-diagram-thumb.png" alt-text="Diagrama que muestra el pines del encabezado GPIO de Raspberry PI. Image de Raspberry PI Foundation." lightbox="../media/gpio-pinout-diagram.png":::<br />[Image de Raspberry PI Foundation](https://www.raspberrypi.org/documentation/usage/gpio/) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+| :::image type="content" source="../media/character-display-i2c-thumb.png" alt-text="Imagen de la parte posterior de la presentación de caracteres que muestra el expansor de I2C GPIO." lightbox="../media/character-display-i2c.png"::: | :::image type="content" source="../media/gpio-pinout-diagram-thumb.png" alt-text="Diagrama que muestra el pines del encabezado GPIO de Raspberry PI. Image de Raspberry PI Foundation." lightbox="../media/gpio-pinout-diagram.png":::<br />[Image de Raspberry PI Foundation](https://www.raspberrypi.org/documentation/usage/gpio/).
  |
 
 [!INCLUDE [gpio-breakout](../includes/gpio-breakout.md)]
@@ -104,7 +104,7 @@ Complete los pasos siguientes en el entorno de desarrollo que prefiera:
 
 ## <a name="get-the-source-code"></a>Obtención del código fuente
 
-El origen de este tutorial está [disponible en github](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/LcdTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+El origen de este tutorial está [disponible en github](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/LcdTutorial).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

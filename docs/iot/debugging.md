@@ -7,12 +7,12 @@ ms.date: 11/13/2020
 ms.topic: how-to
 ms.prod: dotnet
 zone_pivot_groups: ide-set-one
-ms.openlocfilehash: 7b9872304ee53071452772e3da02081a7def4d80
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 58858384c49a296e0b33d663f3ef930caf9cace6
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96594694"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258070"
 ---
 # <a name="debug-net-apps-on-raspberry-pi"></a>Depuración de aplicaciones .NET en Raspberry PI
 
@@ -26,7 +26,7 @@ La depuración de .NET en Raspberry PI desde Visual Studio Code requiere pasos d
 
 ### <a name="enable-ssh-on-the-raspberry-pi"></a>Habilitación de SSH en Raspberry PI
 
-SSH es necesario para la depuración remota. Para habilitar SSH, [consulte *habilitación de ssh* en la documentación de Raspberry PI](https://www.raspberrypi.org/documentation/remote-access/ssh/) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+SSH es necesario para la depuración remota. Para habilitar SSH, [consulte *habilitación de ssh* en la documentación de Raspberry PI](https://www.raspberrypi.org/documentation/remote-access/ssh/).
 
 ### <a name="install-the-visual-studio-remote-debugger-on-the-raspberry-pi"></a>Instalación del Visual Studio Remote Debugger en Raspberry PI
 
@@ -46,7 +46,7 @@ En una consola de bash en Raspberry PI (ya sea de forma local o a través de SSH
 
 1. Visual Studio Code usa el protocolo SSH para depurar de forma remota. Por motivos de seguridad, `root` no puede iniciar sesión a través de ssh de forma predeterminada. Para habilitar `root` el inicio de sesión a través de SSH, siga estos pasos:
 
-    1. Ejecute el siguiente comando para abrir */etc/ssh/sshd_config* en [nano](https://www.nano-editor.org/docs.php) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+    1. Ejecute el siguiente comando para abrir */etc/ssh/sshd_config* en [nano](https://www.nano-editor.org/docs.php).
 
         ```bash
         sudo nano /etc/ssh/sshd_config
@@ -110,9 +110,9 @@ Tenga en cuenta lo siguiente:
 - `pipeArgs` son los parámetros que se van a pasar al cliente SSH. Asegúrese de especificar el parámetro de la contraseña, así como el `root` usuario en el formato `<user>@<hostname>` .
 
 > [!IMPORTANT]
-> En el ejemplo anterior se usa *Plink*, un componente del cliente SSH de [Putty](https://www.ssh.com/ssh/putty/) <span class="docon docon-navigate-external x-hidden-focus"></span> . [OpenSSH](https://www.openssh.com/) <span class="docon docon-navigate-external x-hidden-focus"></span> , que se incluye en las versiones recientes de Windows y Linux, se puede usar en su lugar. Sin embargo, OpenSSH no admite el envío de contraseñas como un parámetro de línea de comandos. Para usar OpenSSH, [Configure el dispositivo Raspberry PI para el acceso de SSH con contraseña](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+> En el ejemplo anterior se usa *Plink*, un componente del cliente SSH de [Putty](https://www.ssh.com/ssh/putty/) <span class="docon docon-navigate-external x-hidden-focus"></span> . [OpenSSH](https://www.openssh.com/) <span class="docon docon-navigate-external x-hidden-focus"></span> , que se incluye en las versiones recientes de Windows y Linux, se puede usar en su lugar. Sin embargo, OpenSSH no admite el envío de contraseñas como un parámetro de línea de comandos. Para usar OpenSSH, [Configure el dispositivo Raspberry PI para el acceso de SSH con contraseña](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md).
 
-### <a name="deploy-the-app"></a>Implementar la aplicación
+### <a name="deploy-the-app"></a>Implementación de la aplicación
 
 Implemente la aplicación como se describe en [implementación de aplicaciones .net en Raspberry PI](deployment.md). Asegúrese de que la ruta de acceso de implementación es la misma que se especificó en el `cwd` parámetro en la *launch.jsen* la configuración.
 
@@ -122,7 +122,7 @@ En la pestaña **Ejecutar** , seleccione la configuración de **Inicio de .net C
 
 ## <a name="references"></a>Referencias
 
-[Depuración remota con vs Code en Windows a un Raspberry PI mediante .net Core en ARM](https://www.hanselman.com/blog/remote-debugging-with-vs-code-on-windows-to-a-raspberry-pi-using-net-core-on-arm)<span class="docon docon-navigate-external x-hidden-focus"></span>
+[Depuración remota con VS Code en Windows a un Raspberry PI mediante .NET Core en ARM](https://www.hanselman.com/blog/remote-debugging-with-vs-code-on-windows-to-a-raspberry-pi-using-net-core-on-arm)
 
 ::: zone-end
 

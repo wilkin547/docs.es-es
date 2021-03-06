@@ -2,12 +2,12 @@
 title: Infraestructura como código
 description: Adopción de infraestructura como código (IaC) con aplicaciones nativas de la nube
 ms.date: 05/13/2020
-ms.openlocfilehash: d130705e19e0d3d7a9e15c73f4758a22ee8ecd43
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a7cd3a0b4906b1a4aec9e1015d6128867ae9963
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163744"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255449"
 ---
 # <a name="infrastructure-as-code"></a>Infraestructura como código
 
@@ -60,7 +60,7 @@ Dentro de esta plantilla, se puede definir un contenedor de almacenamiento dentr
 
 Una plantilla de ARM se puede parametrizar con información de entorno y configuración dinámica. De este modo, se puede reutilizar para definir diferentes entornos, como desarrollo, QA o producción. Normalmente, la plantilla crea todos los recursos de un único grupo de recursos de Azure. Es posible definir varios grupos de recursos en una sola plantilla de Administrador de recursos, si es necesario. Puede eliminar todos los recursos de un entorno eliminando el propio grupo de recursos. El análisis de costos también se puede ejecutar en el nivel de grupo de recursos, lo que permite una rápida contabilización de la cantidad de costos de cada entorno.
 
-Hay muchos ejemplos o plantillas de ARM disponibles en el proyecto de [plantillas de inicio rápido de Azure](https://github.com/Azure/azure-quickstart-templates) en github. Pueden ayudar a acelerar la creación de una nueva plantilla o la modificación de una existente.
+Hay muchos ejemplos de plantillas de ARM disponibles en el proyecto de [plantillas de inicio rápido de Azure](https://github.com/Azure/azure-quickstart-templates) en github. Pueden ayudar a acelerar la creación de una nueva plantilla o la modificación de una existente.
 
 Administrador de recursos plantillas se pueden ejecutar de muchas maneras. Quizás la manera más sencilla consiste en pegarlos simplemente en el Azure Portal. En el caso de las implementaciones experimentales, este método puede ser rápido. También se pueden ejecutar como parte de un proceso de compilación o lanzamiento en Azure DevOps. Hay tareas que aprovecharán las conexiones en Azure para ejecutar las plantillas. Los cambios en las plantillas de Administrador de recursos se aplican de forma incremental, lo que significa que para agregar un nuevo recurso, solo es necesario agregarlo a la plantilla. Las herramientas de conciliarán las diferencias entre los recursos actuales y los definidos en la plantilla. Los recursos se crearán o modificarán, de modo que coincidan con lo que se define en la plantilla.  
 

@@ -7,21 +7,21 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: 5d80b28642ee1e975d334f89504a1748d13dea8f
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: 18258c54cffdc538ddd11ec1393639216f86f85a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509785"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255462"
 ---
-# <a name="no-locblazor-app-hosting-models"></a>Blazor modelos de hospedaje de aplicaciones
+# <a name="blazor-app-hosting-models"></a>Blazor modelos de hospedaje de aplicaciones
 
-Blazor las aplicaciones pueden hospedarse en IIS, al igual que las aplicaciones de formularios Web Forms de ASP.NET. Blazor las aplicaciones también se pueden hospedar de una de las siguientes maneras:
+Blazor las aplicaciones se pueden hospedar de una de las siguientes maneras:
 
 - En el lado cliente en el explorador de WebAssembly .
 - Del lado servidor en una aplicación ASP.NET Core.
 
-## <a name="no-locblazor-no-locwebassembly-apps"></a>BlazorWebAssemblyaplicaciones de
+## <a name="blazor-webassembly-apps"></a>BlazorWebAssemblyaplicaciones de
 
 BlazorWebAssemblylas aplicaciones se ejecutan directamente en el explorador en un entorno de WebAssembly tiempo de ejecución .net basado en. Blazorlas WebAssembly aplicaciones funcionan de una manera similar a los marcos de trabajo de JavaScript de front-end, como angular o reAct. Sin embargo, en lugar de escribir JavaScript, escriba C#. El tiempo de ejecución de .NET se descarga con la aplicación junto con el ensamblado de la aplicación y las dependencias necesarias. No se requiere ningún complemento o extensión de explorador.
 
@@ -35,7 +35,7 @@ Blazorlas WebAssembly aplicaciones se ejecutan exclusivamente en el lado cliente
 
 Para obtener todas las ventajas de Blazor y el desarrollo web de .net de pila completa, hospede su Blazor WebAssembly aplicación con ASP.net Core. Con .NET en el cliente y el servidor, puede compartir código fácilmente y compilar la aplicación con un conjunto coherente de lenguajes, marcos y herramientas. Blazor proporciona plantillas convenientes para configurar una solución que contiene una Blazor WebAssembly aplicación y un proyecto de host ASP.net Core. Cuando se compila la solución, los archivos estáticos compilados de la Blazor aplicación se hospedan en la aplicación ASP.net Core con el enrutamiento de reserva ya configurado.
 
-## <a name="no-locblazor-server-apps"></a>Blazor Aplicaciones de servidor
+## <a name="blazor-server-apps"></a>Blazor Aplicaciones de servidor
 
 Recuerde en la descripción de la [ Blazor arquitectura](architecture-comparison.md#blazor) que Blazor los componentes representan su salida en una abstracción intermedia denominada `RenderTree` . BlazorA continuación, el marco de trabajo compara lo que se representó con lo que se representó previamente. Las diferencias se aplican al DOM. Blazor los componentes se desacoplan de la manera en que se aplica la salida representada. Por lo tanto, los propios componentes no tienen que ejecutarse en el mismo proceso que el proceso de actualización de la interfaz de usuario. De hecho, ni siquiera tienen que ejecutarse en el mismo equipo.
 
@@ -45,7 +45,7 @@ En las Blazor aplicaciones de servidor, los componentes se ejecutan en el servid
 
 El Blazor modelo de hospedaje del servidor puede resultar más familiar si ha usado ASP.NET AJAX y el <xref:System.Web.UI.UpdatePanel> control. El `UpdatePanel` control administra la aplicación de actualizaciones parciales de página en respuesta a eventos desencadenadores en la página. Cuando se desencadena, `UpdatePanel` solicita una actualización parcial y, a continuación, la aplica sin necesidad de actualizar la página. El estado de la interfaz de usuario se administra mediante `ViewState` . Blazor Las aplicaciones de servidor son ligeramente diferentes en que la aplicación requiere una conexión activa con el cliente. Además, todo el estado de la interfaz de usuario se mantiene en el servidor. Aparte de estas diferencias, los dos modelos son conceptualmente similares.
 
-## <a name="how-to-choose-the-right-no-locblazor-hosting-model"></a>Cómo elegir el modelo de Blazor hospedaje adecuado
+## <a name="how-to-choose-the-right-blazor-hosting-model"></a>Cómo elegir el modelo de Blazor hospedaje adecuado
 
 Tal y como se describe en los [ Blazor documentos del modelo de hospedaje](/aspnet/core/blazor/hosting-models), los distintos modelos de Blazor Hospedaje tienen diferentes inconvenientes.
 
