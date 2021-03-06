@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 58cdcf046b2a5a292493c5704739b22aa4ec4f17
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a03b391c839b7255fdd423a305d474d0e48ad39
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178416"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259361"
 ---
 # <a name="bypasslist-element-network-settings"></a>Elemento \<bypasslist> (configuración de red)
 
@@ -58,7 +58,7 @@ Proporciona un conjunto de expresiones regulares que describen las direcciones q
 
  La lista de omisión contiene expresiones regulares que describen <xref:System.Net.WebRequest> los URI a los que las instancias tienen acceso directamente en lugar de a través del servidor proxy.  
   
- Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular "[a-z] + \\ . contoso \\ . com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.CPANDL.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ("$"): "[a-z] + \\ . contoso \\ . com $".  
+ Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular `[a-z]+\\.contoso\\.com` coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.CPANDL.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ( `$` ): `[a-z]+\\.contoso\\.com$` .
   
  Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../standard/base-types/regular-expressions.md).  
   

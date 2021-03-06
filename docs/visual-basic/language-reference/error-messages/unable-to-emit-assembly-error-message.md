@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 393571f5b1fab518f379bbd6f4e6f1cb62a74b26
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: fc3b61c80cfd3b40d802c517cdca4085bc274197
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104788"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259439"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: no se puede emitir el ensamblado: \<error message>
 
@@ -37,7 +37,7 @@ El compilador Visual Basic llama a Assembly Linker (*Al.exe*, también conocido 
 
 2. Elimine la referencia COM que está provocando el error en el proyecto.
 
-3. Abra el [símbolo del sistema para desarrolladores para Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
+3. Abra un [Shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 4. Cambie el directorio al directorio en el que desea colocar el contenedor de ensamblado.
 

@@ -3,12 +3,12 @@ description: Más información acerca de cómo exponer datos con CacheMetadata
 title: Exponer datos con CacheMetadata
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-ms.openlocfilehash: ac4623881ebd76270f773a3b7acfe205ad365118
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e3f4dc83a0e268ae548c904a714753fa025c77ae
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99742347"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259790"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Exponer datos con CacheMetadata
 
@@ -60,7 +60,7 @@ protected override void CacheMetadata(NativeActivityMetadata metadata)
 
 Para pasar datos a actividades secundarias que van a ser programadas por una actividad utilizando variables, es necesario agregar las variables como variables de implementación; las variables públicas no pueden tener establecidos sus valores de esta manera. La razón de ello es que las actividades están previstas para ser ejecutadas como implementaciones de funciones (que tienen parámetros), en lugar de clases encapsuladas (que tienen propiedades). Sin embargo, hay situaciones en que los argumentos se deben establecer explícitamente, como cuando se utiliza <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, ya que la actividad programada no tiene acceso a los argumentos de la actividad principal de la manera que una actividad secundaria lo tendría.
 
-El siguiente fragmento de código muestra cómo pasar un argumento de una actividad nativa a una actividad programada utilizando <xref:System.Activities.Activity.CacheMetadata%2A>.
+En el fragmento de código siguiente se muestra cómo pasar un argumento de una actividad nativa a una actividad programada mediante <xref:System.Activities.Activity.CacheMetadata%2A> .
 
 ```csharp
 public sealed class ChildActivity : NativeActivity

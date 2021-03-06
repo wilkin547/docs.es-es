@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 6f1cf8decbaf02aa7d5e202010d4c240c24bdcf9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4562242b82b0d7efac19bdcf2c04c29482af11dc
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103678"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259907"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -928,6 +928,20 @@ let printListWithOffsetPiped a list1 =
 
 Si el cuerpo de una expresión lambda tiene varias líneas de longitud, considere la posibilidad de refactorizarla en una función de ámbito local.
 
+Cuando la función toma un único argumento de tupla de varias líneas, se aplican las mismas reglas para los [constructores de formato, los miembros estáticos y las invocaciones de miembros](#formatting-constructors-static-members-and-member-invocations) .
+
+```fsharp
+let myFunction (a: int, b: string, c: int, d: bool) =
+    ()
+
+myFunction(
+    478815516,
+    "A very long string making all of this multi-line",
+    1515,
+    false
+)
+```
+
 ### <a name="formatting-infix-operators"></a>Aplicar formato a los operadores de infijo
 
 Operadores independientes por espacios. Las excepciones obvias a esta regla son los `!` `.` operadores y.
@@ -1084,6 +1098,26 @@ let untypedRes =
         sourceText,
         parsingOptionsWithDefines
     )
+```
+
+Se aplican las mismas reglas incluso si solo hay un argumento multilínea.
+
+```fsharp
+let poemBuilder = StringBuilder()
+poemBuilder.AppendLine(
+    """
+The last train is nearly due
+The Underground is closing soon
+And in the dark, deserted station
+Restless in anticipation
+A man waits in the shadows
+    """
+)
+
+Option.traverse(
+    create
+    >> Result.setError [ invalidHeader "Content-Checksum" ]
+)
 ```
 
 ## <a name="formatting-attributes"></a>Aplicar formato a atributos

@@ -3,16 +3,16 @@ description: 'Más información sobre: activación de NamedPipe'
 title: Activación NamedPipe
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 4955511f24d831f4aa9e3aa67fdb3f6a218d7af0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 32878b08450b6d4d2d88b3d36c019b3e2138625f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99752233"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259543"
 ---
 # <a name="namedpipe-activation"></a>Activación NamedPipe
 
-Este ejemplo muestra cómo hospedar un servicio que utiliza el servicio de activación de procesos de Windows (WAS) para activar un servicio que se comunica a través de las canalizaciones de los nombres. Este ejemplo se basa en el [Introducción](getting-started-sample.md) y requiere que Windows Vista se ejecute.
+Este ejemplo muestra cómo hospedar un servicio que utiliza el servicio de activación de procesos de Windows (WAS) para activar un servicio que se comunica a través de canalizaciones con nombre. Este ejemplo se basa en el [Introducción](getting-started-sample.md) y requiere que Windows Vista se ejecute.
 
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
@@ -225,6 +225,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Este comando se debe escribir en una sola línea de texto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ejemplos de hospedaje y persistencia de AppFabric](/previous-versions/appfabric/ff383418(v=azure.10))

@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/14/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: 1270e7629e9afc12b1d76d260d4b8b51428f1040
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: bc5c2b9f0876603c152da859547c58b83826969c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594739"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259842"
 ---
 # <a name="read-environmental-conditions-from-a-sensor"></a>Leer condiciones ambientales de un sensor
 
@@ -22,7 +22,7 @@ En este tema, usará .NET para leer las condiciones del entorno de un sensor.
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout) <span class="docon docon-navigate-external x-hidden-focus"></span> Desmontaje del sensor de temperatura/presión barométrica/humedad
+- [BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout) humedad/presión barométrica/salida del sensor de temperatura
 - Cables de puente
 - Placa (opcional)
 - Placa de salida de Raspberry PI GPIO (opcional)
@@ -102,7 +102,7 @@ Complete los pasos siguientes en el entorno de desarrollo que prefiera:
 
 ## <a name="get-the-source-code"></a>Obtención del código fuente
 
-El origen de este tutorial está [disponible en github](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/SensorTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+El origen de este tutorial está [disponible en github](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/SensorTutorial).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
