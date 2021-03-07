@@ -1,0 +1,68 @@
+---
+title: Recursos de migración adicionales
+description: ¿Dónde pueden los equipos encontrar recursos para ayudarle a migrar sus aplicaciones .NET Framework a .NET Core?
+author: ardalis
+ms.date: 11/13/2020
+ms.openlocfilehash: c6563f4791d133606cb1818a088bff17a315b1f6
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102401884"
+---
+# <a name="additional-migration-resources"></a><span data-ttu-id="19c85-103">Recursos de migración adicionales</span><span class="sxs-lookup"><span data-stu-id="19c85-103">Additional migration resources</span></span>
+
+<span data-ttu-id="19c85-104">Al planear y ejecutar la migración de ASP.NET MVC y/o API Web a ASP.NET Core, hay una serie de recursos disponibles para ayudarle más allá de este libro.</span><span class="sxs-lookup"><span data-stu-id="19c85-104">As you're planning and executing your migration from ASP.NET MVC and/or Web API to ASP.NET Core, there are a number of resources available to help beyond this book.</span></span> <span data-ttu-id="19c85-105">Tome nota de ellas y Aprovéchelos cuando corresponda para ayudarle a superar los obstáculos que encuentre en el recorrido de la migración.</span><span class="sxs-lookup"><span data-stu-id="19c85-105">Make a note of these and leverage them where appropriate to help you overcome obstacles you encounter on your migration journey.</span></span>
+
+## <a name="official-documentation"></a><span data-ttu-id="19c85-106">Documentación oficial</span><span class="sxs-lookup"><span data-stu-id="19c85-106">Official documentation</span></span>
+
+<span data-ttu-id="19c85-107">El sitio web oficial de documentación, [docs.Microsoft.com](https://docs.microsoft.com/), tiene la información más actualizada disponible acerca de las versiones, los marcos, los cambios importantes y las opciones de soporte técnico.</span><span class="sxs-lookup"><span data-stu-id="19c85-107">The official documentation website, [docs.microsoft.com](https://docs.microsoft.com/), has the most up-to-date information available about versions, frameworks, breaking changes, and support options.</span></span> <span data-ttu-id="19c85-108">Encontrará muchos vínculos en este libro para artículos de docs, pero para cualquier problema al que esté enfrentado, a menudo merece la pena realizar una búsqueda rápida de los documentos para ver si ya existe información que cubre el problema y ofrece una solución o solución alternativa.</span><span class="sxs-lookup"><span data-stu-id="19c85-108">You'll find many links in this book to docs articles, but for any problem you're facing it's often worth at least doing a quick search of the docs to see if there is already information covering the issue and offering a solution or workaround.</span></span>
+
+## <a name="github"></a><span data-ttu-id="19c85-109">GitHub</span><span class="sxs-lookup"><span data-stu-id="19c85-109">GitHub</span></span>
+
+<span data-ttu-id="19c85-110">Dado que .NET Core es un proyecto de código abierto, se detectan muchos problemas, se registran, se analizan y se corrigen en GitHub.</span><span class="sxs-lookup"><span data-stu-id="19c85-110">Because .NET Core is an open-source project, many issues are discovered, reported, discussed, and fixed on GitHub.</span></span> <span data-ttu-id="19c85-111">Microsoft tiene varias organizaciones de GitHub en las que encontrará repositorios que pueden resultar útiles.</span><span class="sxs-lookup"><span data-stu-id="19c85-111">Microsoft has several GitHub organizations in which you'll find repositories that may be helpful.</span></span> <span data-ttu-id="19c85-112">A continuación se enumera una lista parcial de estas organizaciones y algunos de sus repositorios públicos:</span><span class="sxs-lookup"><span data-stu-id="19c85-112">A partial list of these organizations and some of their public repositories are listed below:</span></span>
+
+- [<span data-ttu-id="19c85-113">Microsoft</span><span class="sxs-lookup"><span data-stu-id="19c85-113">Microsoft</span></span>](https://github.com/microsoft)
+  - [<span data-ttu-id="19c85-114">Control de versiones de la API de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="19c85-114">ASP.NET API Versioning</span></span>](https://github.com/microsoft/aspnet-api-versioning)
+- [<span data-ttu-id="19c85-115">dotnet</span><span class="sxs-lookup"><span data-stu-id="19c85-115">dotnet</span></span>](https://github.com/dotnet)
+  - [<span data-ttu-id="19c85-116">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="19c85-116">ASP.NET Core</span></span>](https://github.com/dotnet/aspnetcore)
+  - [<span data-ttu-id="19c85-117">Tiempo de ejecución de .NET</span><span class="sxs-lookup"><span data-stu-id="19c85-117">.NET Runtime</span></span>](https://github.com/dotnet/runtime)
+  - [<span data-ttu-id="19c85-118">Entity Framework Core</span><span class="sxs-lookup"><span data-stu-id="19c85-118">Entity Framework Core</span></span>](https://github.com/dotnet/efcore)
+  - [<span data-ttu-id="19c85-119">Lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="19c85-119">C# Language</span></span>](https://github.com/dotnet/csharplang)
+  - [<span data-ttu-id="19c85-120">Documentación</span><span class="sxs-lookup"><span data-stu-id="19c85-120">Docs</span></span>](https://github.com/dotnet/docs)
+  - [<span data-ttu-id="19c85-121">Ejemplos de docs</span><span class="sxs-lookup"><span data-stu-id="19c85-121">Docs Samples</span></span>](https://github.com/dotnet/samples)
+  - [<span data-ttu-id="19c85-122">Intentar convertir</span><span class="sxs-lookup"><span data-stu-id="19c85-122">Try Convert</span></span>](https://github.com/dotnet/try-convert)
+  - [<span data-ttu-id="19c85-123">Herramienta del Asistente para actualización de .NET</span><span class="sxs-lookup"><span data-stu-id="19c85-123">.NET Upgrade Assistant tool</span></span>](https://aka.ms/dotnet-upgrade-assistant)
+- [<span data-ttu-id="19c85-124">Aplicaciones de referencia de arquitectura de .NET</span><span class="sxs-lookup"><span data-stu-id="19c85-124">.NET Architecture Reference Apps</span></span>](https://github.com/dotnet-architecture)
+  - [<span data-ttu-id="19c85-125">eShopModernizing</span><span class="sxs-lookup"><span data-stu-id="19c85-125">eShopModernizing</span></span>](https://github.com/dotnet-architecture/eShopModernizing)
+  - [<span data-ttu-id="19c85-126">eShopOnWeb</span><span class="sxs-lookup"><span data-stu-id="19c85-126">eShopOnWeb</span></span>](https://github.com/dotnet-architecture/eShopOnWeb)
+  - [<span data-ttu-id="19c85-127">eShopOnContainers</span><span class="sxs-lookup"><span data-stu-id="19c85-127">eShopOnContainers</span></span>](https://github.com/dotnet-architecture/eShopOnContainers)
+
+<span data-ttu-id="19c85-128">Si surgen problemas con la migración, estos repositorios de GitHub son un buen lugar para notificarlos.</span><span class="sxs-lookup"><span data-stu-id="19c85-128">If you run into problems with your migration, these GitHub repositories are a good place to report them.</span></span> <span data-ttu-id="19c85-129">Los equipos de producto ven los problemas y suelen responder rápidamente a los informes de errores (a pesar de que las preguntas "cómo" se pueden dirigir más adecuadamente a Stack Overflow).</span><span class="sxs-lookup"><span data-stu-id="19c85-129">The product teams watch the issues and typically respond quickly to bug reports (though "how to" questions may be more appropriately directed to Stack Overflow).</span></span>
+
+## <a name="stack-overflow"></a><span data-ttu-id="19c85-130">Stack Overflow</span><span class="sxs-lookup"><span data-stu-id="19c85-130">Stack Overflow</span></span>
+
+<span data-ttu-id="19c85-131">[Stack Overflow](https://stackoverflow.com/) tiene una gran cantidad de información en forma de preguntas anteriores y respuestas dadas, con las respuestas más útiles que se muestran primero y se marcan si resolvieron el problema.</span><span class="sxs-lookup"><span data-stu-id="19c85-131">[Stack Overflow](https://stackoverflow.com/) has a wealth of information in the form of previous questions asked and answers given, with the most helpful answers listed first and marked if they solved the problem.</span></span> <span data-ttu-id="19c85-132">Además de buscar una solución existente para un problema que pueda encontrar, también puede plantearse una pregunta y esperar alguna respuesta de la comunidad de .NET.</span><span class="sxs-lookup"><span data-stu-id="19c85-132">In addition to searching for an existing solution to a problem you may encounter, you can of course also ask a question yourself and hope for some response from the .NET community.</span></span> <span data-ttu-id="19c85-133">No olvide que puede restringir una búsqueda mediante el uso de etiquetas y recordar usar las etiquetas adecuadas al formular preguntas para maximizar las posibilidades de que alguien con la experiencia haya advertido su pregunta.</span><span class="sxs-lookup"><span data-stu-id="19c85-133">Don't forget you can narrow down a search by using tags, and remember to use appropriate tags when you ask questions to maximize the chances of someone with the experience needed noticing your question.</span></span>
+
+## <a name="youtube-channels"></a><span data-ttu-id="19c85-134">Canales de YouTube</span><span class="sxs-lookup"><span data-stu-id="19c85-134">YouTube channels</span></span>
+
+<span data-ttu-id="19c85-135">YouTube tiene una gran cantidad de contenido de vídeo .NET y .NET Core, que puede incluir tutoriales útiles o tutoriales que cubren cualquier escenario en el que pueda encontrarse.</span><span class="sxs-lookup"><span data-stu-id="19c85-135">YouTube has a huge amount of .NET and .NET Core video content, which may include useful tutorials or walkthroughs covering any scenario you may encounter.</span></span> <span data-ttu-id="19c85-136">Considere la posibilidad de buscarlo por separado si el resto de los esfuerzos para buscar ayuda en línea son breves.</span><span class="sxs-lookup"><span data-stu-id="19c85-136">Consider searching it separately if your other efforts to find help online come up short.</span></span> <span data-ttu-id="19c85-137">Estos son algunos buenos lugares para empezar:</span><span class="sxs-lookup"><span data-stu-id="19c85-137">Here are a few good places to get started:</span></span>
+
+- [<span data-ttu-id="19c85-138">dotnet</span><span class="sxs-lookup"><span data-stu-id="19c85-138">dotnet</span></span>](https://www.youtube.com/dotnet)
+- [<span data-ttu-id="19c85-139">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="19c85-139">Visual Studio</span></span>](https://www.youtube.com/visualstudio)
+
+## <a name="twitter-gitter-slack-and-other-community-channels"></a><span data-ttu-id="19c85-140">Twitter, Gitter, margen de demora y otros canales de la comunidad</span><span class="sxs-lookup"><span data-stu-id="19c85-140">Twitter, Gitter, Slack, and other community channels</span></span>
+
+<span data-ttu-id="19c85-141">Encontrará muchas otras formas de conectarse a los desarrolladores de .NET en la [Página](https://dotnet.microsoft.com/platform/community)de la comunidad de .net.</span><span class="sxs-lookup"><span data-stu-id="19c85-141">You'll find many other ways to connect with .NET developers on the [.NET Community page](https://dotnet.microsoft.com/platform/community).</span></span> <span data-ttu-id="19c85-142">También puede unir el [servidor de descables DotNetEvolution](https://aka.ms/dotnet-discord).</span><span class="sxs-lookup"><span data-stu-id="19c85-142">You can also join the [DotNetEvolution Discord server](https://aka.ms/dotnet-discord).</span></span> <span data-ttu-id="19c85-143">Además, muchos equipos de producto y miembros del equipo están en Twitter y en otras comunidades.</span><span class="sxs-lookup"><span data-stu-id="19c85-143">Additionally, many product teams and team members are on Twitter as well as in various other communities.</span></span> <span data-ttu-id="19c85-144">También puede seguir y comunicarse con [el autor de este libro en Twitter](https://twitter.com/ardalis) .</span><span class="sxs-lookup"><span data-stu-id="19c85-144">You can follow and communicate with [the author of this book on Twitter](https://twitter.com/ardalis) as well.</span></span>
+
+## <a name="references"></a><span data-ttu-id="19c85-145">Referencias</span><span class="sxs-lookup"><span data-stu-id="19c85-145">References</span></span>
+
+- [<span data-ttu-id="19c85-146">Introducción a la portabilidad de .NET Framework a .NET Core</span><span class="sxs-lookup"><span data-stu-id="19c85-146">Overview of porting from .NET Framework to .NET Core</span></span>](../../core/porting/index.md)
+- [<span data-ttu-id="19c85-147">Herramienta del Asistente para actualización de .NET</span><span class="sxs-lookup"><span data-stu-id="19c85-147">.NET Upgrade Assistant tool</span></span>](https://aka.ms/dotnet-upgrade-assistant)
+- [<span data-ttu-id="19c85-148">Migración de ASP.NET a ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="19c85-148">Migrate from ASP.NET to ASP.NET Core</span></span>](../../core/porting/index.md)
+- [<span data-ttu-id="19c85-149">Recursos de la comunidad .NET</span><span class="sxs-lookup"><span data-stu-id="19c85-149">.NET Community Resources</span></span>](https://dotnet.microsoft.com/platform/community)
+
+>[!div class="step-by-step"]
+><span data-ttu-id="19c85-150">[Anterior](deployment-strategies.md)
+>[Siguiente](architectural-differences.md)</span><span class="sxs-lookup"><span data-stu-id="19c85-150">[Previous](deployment-strategies.md)
+[Next](architectural-differences.md)</span></span>
