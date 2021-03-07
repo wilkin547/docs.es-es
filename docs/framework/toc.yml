@@ -397,8 +397,6 @@ items:
         href: tools/certmgr-exe-certificate-manager-tool.md
       - name: Clrver.exe (herramienta de versión de CLR)
         href: tools/clrver-exe-clr-version-tool.md
-      - name: Símbolos del sistema
-        href: tools/developer-command-prompt-for-vs.md
       - name: CorFlags.exe (herramienta de conversión de CorFlags)
         href: tools/corflags-exe-corflags-conversion-tool.md
       - name: Fuslogvw.exe (visor de registro de enlaces de ensamblados)
