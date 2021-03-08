@@ -3,12 +3,12 @@ title: 'Información general de las herramientas de diagnóstico: .NET Core'
 description: Información general de las herramientas y técnicas disponibles para diagnosticar las aplicaciones de .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: ee79057e45700e17fdd37cc36288b790d64d7a09
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 9836ea11e7f17d6ed6e04bcba8bc0ed851bb368f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188483"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105289"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>¿Qué herramientas de diagnóstico están disponibles en .NET Core?
 
@@ -38,7 +38,7 @@ Un [volcado](./dumps.md) es un archivo que contiene una instantánea del proceso
 
 ## <a name="symbols"></a>Símbolos
 
-Los símbolos son un requisito indispensable para la depuración y otras herramientas de diagnóstico. El contenido de los archivos de símbolos varia según los lenguajes, los compiladores y las plataformas. En un nivel muy alto, los símbolos son una asignación entre el código de origen y el binario que produce el compilador. Dichas asignaciones se usan para proporcionar datos como la información del número de línea y los nombres de las variables locales en herramientas de diagnóstico como [Visual Studio](/visualstudio/debugger/what-is-debugging) y [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging).  El siguiente vínculo incluye una explicación detallada de los [símbolos](/windows/win32/dxtecharts/debugging-with-symbols) para Windows, aunque muchos de los conceptos también son aplicables a otras plataformas. Los [símbolos portables de .NET](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) tienen una extensión de nombre de archivo "PDB" similar a la de los archivos PDB de Windows, aunque no son compatibles con este formato.
+Los [símbolos](./symbols.md) son una asignación entre el código de origen y el binario que produce el compilador. Los depuradores de .NET suelen usarlos para resolver números de línea de origen, nombres de variables locales y otros tipos de información de diagnóstico.
 
 ## <a name="collect-diagnostics-in-containers"></a>Recopilación de diagnósticos en contenedores
 

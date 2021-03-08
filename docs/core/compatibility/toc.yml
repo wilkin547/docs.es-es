@@ -26,6 +26,8 @@
               items:
                 - name: Las anotaciones en los tipos de referencia que aceptan valores NULL han cambiado.
                   href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
+                - name: API obsoletas y quitadas
+                  href: aspnet-core/6.0/obsolete-removed-apis.md
                 - name: 'Blazor: se ha cambiado el de parámetro en el método RequestImageFileAsync'
                   href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: Atributos de mensaje de registro modificados'
@@ -38,6 +40,8 @@
               items:
                 - name: Cambios en las anotaciones de nulabilidad
                   href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                - name: Precisión del análisis de formato numérico estándar
+                  href: core-libraries/6.0/numeric-format-parsing-handles-higher-precision.md
             - name: Windows Forms
               items:
                 - name: Las API inician la excepción ArgumentNullException
@@ -320,6 +324,8 @@
               items:
                 - name: Las anotaciones en los tipos de referencia que aceptan valores NULL han cambiado.
                   href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
+                - name: API obsoletas y quitadas
+                  href: aspnet-core/6.0/obsolete-removed-apis.md
                 - name: 'Blazor: se ha cambiado el de parámetro en el método RequestImageFileAsync'
                   href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: Atributos de mensaje de registro modificados'
@@ -430,6 +436,8 @@
               items:
                 - name: Cambios en las anotaciones de nulabilidad
                   href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                - name: Precisión del análisis de formato numérico estándar
+                  href: core-libraries/6.0/numeric-format-parsing-handles-higher-precision.md
             - name: ".NET\_5.0"
               items:
                 - name: Cambios de API relacionados con ensamblados para la publicación de un solo archivo
@@ -548,7 +556,7 @@
                   href: msbuild/5.0/publishdepsfilepath-behavior-change.md
                 - name: Cambio de TargetFramework de netcoreapp a net
                   href: msbuild/5.0/targetframework-name-change.md
-            - name: ".NET\_3.0"
+            - name: ".NET Core\_2.1 a\_3.1"
               href: msbuild.md
         - name: Redes
           items:
