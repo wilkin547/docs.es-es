@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 896b88cbf1f7f31d2d26d69ec7d219da6b27ceff
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 65c13239f32a0166681d7a731de84a973a627f29
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "97866398"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104189"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>Versiones y compatibilidad con .NET Core y .NET 5.
 
@@ -93,7 +93,7 @@ Las actualizaciones de mantenimiento de .NET hasta se admiten hasta que se lance
 
 Debe instalar periódicamente las actualizaciones de mantenimiento para asegurarse de que las aplicaciones están en un estado seguro y con soporte técnico. Por ejemplo, si la actualización de servicio más reciente de .NET Core 3.1 es la 3.1.8 y se lanza la 3.1.9, entonces la 3.1.8 ya no es la más reciente. El nivel de servicio de soporte técnico para la 3.1 es 3.1.9.
 
-Para obtener información sobre las actualizaciones de servicio más recientes para cada versión principal y secundaria, consulte la página de [descargas de .NET](https://dotnet.microsoft.com/download/dotnet-core).
+Para obtener información sobre las actualizaciones de servicio más recientes para cada versión principal y secundaria, consulte la página de [descargas de .NET](https://dotnet.microsoft.com/download/dotnet).
 
 ## <a name="end-of-support"></a>Finalización del soporte técnico
 

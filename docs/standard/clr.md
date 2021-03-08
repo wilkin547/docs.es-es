@@ -17,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 917649475271c288516f9eb0913a0959601427af
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89aa77f7704a1d8caba12369cb82fff131a8aab0
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823880"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103652"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Introducción a Common Language Runtime
 
@@ -63,7 +63,7 @@ Las herramientas y los compiladores de lenguajes exponen la funcionalidad del mo
 
 ## <a name="clr-versions"></a>Versiones de CLR
 
-Las versiones de .NET Core, y .NET 5 y versiones posteriores, tienen una versión de producto única, es decir, no hay ninguna versión del CLR independiente. Para obtener una lista de las versiones de .NET Core, consulte [Descarga de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+Las versiones de .NET Core, y .NET 5 y versiones posteriores, tienen una versión de producto única, es decir, no hay ninguna versión del CLR independiente. Para obtener una lista de las versiones de .NET Core, consulte [Descarga de .NET Core](https://dotnet.microsoft.com/download/dotnet).
 
 Pero el número de versión de .NET Framework no se corresponde necesariamente con el del CLR que incluye. Para obtener una lista de las versiones de .NET Framework y sus versiones de CLR correspondientes, consulte [Versiones y dependencias de .NET Framework](../framework/migration-guide/versions-and-dependencies.md).
 

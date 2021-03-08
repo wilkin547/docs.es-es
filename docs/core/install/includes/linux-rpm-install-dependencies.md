@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3d8179c5c0e84f8ff1197cce7790c80a5f5a4f6d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5a027054024d8429831d73525ab3748c51ae850e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619459"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255766"
 ---
 
 Al realizar la instalación con un administrador de paquetes, estas bibliotecas se instalan automáticamente. Sin embargo, si instala manualmente .NET Core o publica una aplicación independiente, deberá asegurarse de que estas bibliotecas estén instaladas:
@@ -12,6 +12,7 @@ Al realizar la instalación con un administrador de paquetes, estas bibliotecas 
 - krb5-libs
 - libicu
 - openssl-libs
+- zlib
 
 Si la versión de OpenSSL del entorno de tiempo de ejecución de destino es 1.1 o más reciente, deberá instalar **compat-openssl10**.
 

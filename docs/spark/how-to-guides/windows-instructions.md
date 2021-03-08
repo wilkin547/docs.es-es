@@ -4,12 +4,12 @@ description: Aprenda a compilar una aplicación de .NET para Apache Spark en Wi
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: 8f197c0050d149ed03e328e72868ad4ba2f728c1
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: d9e1721fbb13d963c3a690ded3e26885f268bc72
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688116"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106857"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Aprenda a compilar una aplicación de .NET para Apache Spark en Windows
 
@@ -19,7 +19,7 @@ En este artículo se enseña cómo crear aplicaciones de .NET para Apache Spark
 
 Si ya cumple con todos los requisitos previos siguientes, vaya a los pasos de [compilación](#build).
 
-  1. Descargue e instale el **[SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet-core/3.1)** . Al instalar el SDK, se agregará la cadena de herramientas `dotnet` a la variable de entorno PATH. Se admiten las versiones de .NET Core 2.1, 2.2 y 3.1.
+  1. Descargue e instale el **[SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet/3.1)** . Al instalar el SDK, se agregará la cadena de herramientas `dotnet` a la variable de entorno PATH. Se admiten las versiones de .NET Core 2.1, 2.2 y 3.1.
   2. Instale **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (versión 16.3 o posterior). La versión Community es completamente gratis. Al configurar la instalación, incluya al menos estos componentes:
      * Desarrollo de escritorio de .NET
        * Todos los componentes necesarios

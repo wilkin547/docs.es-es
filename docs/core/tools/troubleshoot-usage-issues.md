@@ -4,12 +4,12 @@ description: Descubra los problemas comunes que se producen al ejecutar herramie
 author: kdollard
 ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: c5bac4c273cdddae609657c65448e3cc4bd3579d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 9cf0320ec5b5d6f317a4ef7f9052c0068b3ad8e5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633913"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104094"
 ---
 # <a name="troubleshoot-net-tool-usage-issues"></a>Solución de problemas de uso de herramientas de .NET Core
 
@@ -94,7 +94,7 @@ dotnet --list-runtimes
 dotnet --info
 ```
 
-Si cree que la herramienta debería ser compatible con la versión de runtime que tiene instalada actualmente, puede ponerse en contacto con el autor de la herramienta para ver si puede actualizar el número de versión o la compatibilidad con varios destinos. Una vez que se vuelva a compilar y a publicar el paquete de herramientas en NuGet con un número de versión actualizado, podrá actualizar su copia. Mientras tanto, la solución más rápida es instalar una versión del runtime que funcione con la herramienta que intenta ejecutar. Para descargar una versión específica del entorno de ejecución de .NET, visite la [página de descarga de .NET](https://dotnet.microsoft.com/download/dotnet-core).
+Si cree que la herramienta debería ser compatible con la versión de runtime que tiene instalada actualmente, puede ponerse en contacto con el autor de la herramienta para ver si puede actualizar el número de versión o la compatibilidad con varios destinos. Una vez que se vuelva a compilar y a publicar el paquete de herramientas en NuGet con un número de versión actualizado, podrá actualizar su copia. Mientras tanto, la solución más rápida es instalar una versión del runtime que funcione con la herramienta que intenta ejecutar. Para descargar una versión específica del entorno de ejecución de .NET, visite la [página de descarga de .NET](https://dotnet.microsoft.com/download/dotnet).
 
 Si instala el SDK de .NET en una ubicación que no es la predeterminada, debe establecer la variable de entorno `DOTNET_ROOT` en el directorio que contiene el archivo ejecutable `dotnet`.
 

@@ -3,12 +3,12 @@ title: Creación de tipos mixin mediante métodos de interfaz predeterminados
 description: Con el uso de los miembros de interfaz predeterminados, puede extender las interfaces con implementaciones predeterminadas opcionales para los implementadores.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 0095d76eadfe0c6a1b30bf8a0c5000509f5e1bf9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: fb876731f1cf16840b583ea23b1dd09d8ff74bfe
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396711"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103717"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Funcionalidad de combinación al crear clases mediante interfaces con métodos de interfaz predeterminados
 
@@ -24,7 +24,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8.0 está disponible a partir de la [versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) o versiones posteriores.
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8.0 está disponible a partir de la [versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet) o versiones posteriores.
 
 ## <a name="limitations-of-extension-methods"></a>Limitaciones de los métodos de extensión
 

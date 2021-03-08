@@ -4,12 +4,12 @@ description: Muestra cómo instalar el SDK y el entorno de ejecución de .NET si
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 14789587a58c7b9d5ef2c9251ed599ce18a48f24
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 414246e472c3d58a6768311bd7a4635100f3b618
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505581"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105185"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>Instalación manual del SDK y el entorno de ejecución de .NET
 
@@ -111,9 +111,9 @@ Como alternativa a los administradores de paquetes, puede descargar e instalar m
 Si instala el SDK de .NET, no necesita instalar el entorno de ejecución correspondiente. En primer lugar, descargue una versión **binaria** del SDK o del entorno de ejecución de uno de los siguientes sitios:
 
 - ✔️ [Descargas de .NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [Descargas de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [Descargas de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [Todas las descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
+- ✔️ [Descargas de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1)
+- ✔️ [Descargas de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [Todas las descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet)
 
 A continuación, extraiga el archivo descargado y use el comando `export` para establecer las variables que se utilizan en .NET. Luego, asegúrese de que .NET esté en PATH.
 

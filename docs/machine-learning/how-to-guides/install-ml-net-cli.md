@@ -3,12 +3,12 @@ title: Cómo instalar la herramienta de la interfaz de la línea de comandos (CL
 description: Obtenga información sobre cómo instalar, cambiar a una versión anterior y desinstalar la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET.
 ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a99ffa30dcbacba3341125fd0e37e617e0f4cd1e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602276"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103951"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Cómo instalar la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET
 
@@ -21,7 +21,7 @@ La CLI de ML.NET genera código fuente y modelos de ML.NET de buena calidad medi
 
 ## <a name="pre-requisites"></a>Requisitos previos
 
-- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1)
 
 - (Opcional) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 

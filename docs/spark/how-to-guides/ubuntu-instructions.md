@@ -4,12 +4,12 @@ description: Aprenda a compilar una aplicación de .NET para Apache Spark en Ub
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 77daad7298c41d21054db9174f30a8d1ed12648d
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: ae5e0e24ef53b74bd34a2c0100c30a375d8bd71f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687797"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103925"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Aprenda a compilar una aplicación de .NET para Apache Spark en Ubuntu.
 
@@ -19,7 +19,7 @@ En este artículo se enseña cómo crear aplicaciones de .NET para Apache Spark
 
 Si ya cumple con todos los requisitos previos siguientes, vaya a los pasos de [compilación](#build).
 
-1. Descargue e instale el **[SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)** ; al instalar el SDK, se agrega la cadena de herramientas `dotnet` a la ruta de acceso.  Se admiten las versiones de .NET Core 2.1, 2.2 y 3.1.
+1. Descargue e instale el **[SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1)** ; al instalar el SDK, se agrega la cadena de herramientas `dotnet` a la ruta de acceso.  Se admiten las versiones de .NET Core 2.1, 2.2 y 3.1.
 
 2. Instale **[OpenJDK 8](https://openjdk.java.net/install/)** .
 

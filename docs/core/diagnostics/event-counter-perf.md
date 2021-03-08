@@ -3,12 +3,12 @@ title: Medición del rendimiento mediante EventCounters en .NET Core
 description: En este tutorial se aprende a medir el rendimiento mediante EventCounters.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2ed7f234b685dab91ab275105d26b474e3bd1a87
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: bde54ce1996b2f4e2a703c23384eadece06e66cb
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700748"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105315"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: Medición del rendimiento mediante EventCounters en .NET Core
 
@@ -27,7 +27,7 @@ En este tutorial va a:
 
 En el tutorial se usa:
 
-- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core) o una versión posterior
+- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet) o una versión posterior
 - [dotnet-counters](dotnet-counters.md) para supervisar contadores de eventos.
 - Una aplicación de [destino de depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios) que se va a diagnosticar.
 

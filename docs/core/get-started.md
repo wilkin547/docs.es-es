@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 09/29/2020
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ad2b96e668c52ee80b707e31a63eac2433f3c9e
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: f196f5cfe914fe7ecddec61d2abf618c21968bbd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756096"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105159"
 ---
 # <a name="get-started-with-net"></a>Introducción a .NET
 
@@ -20,7 +20,7 @@ Si no está seguro de qué es .NET, comience con la [Introducción a .NET](intro
 
 ## <a name="create-an-application"></a>Crear una aplicación
 
-En primer lugar, descargue e instale el [SDK de .NET](https://dotnet.microsoft.com/download/dotnet-core) en el equipo.
+En primer lugar, descargue e instale el [SDK de .NET](https://dotnet.microsoft.com/download/dotnet) en el equipo.
 
 A continuación, abra un terminal como **PowerShell**, **Símbolo del sistema** o **bash**. Escriba los comandos `dotnet` siguientes para crear y ejecutar una aplicación C#:
 

@@ -3,12 +3,12 @@ title: 'Tutorial: Instalación y uso de herramientas locales de .NET'
 description: Aprenda a instalar y usar una herramienta de .NET como una herramienta local.
 ms.topic: tutorial
 ms.date: 12/11/2020
-ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 29c561d27aad99c0383fc8e0bb5a4543ae65705a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512468"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104133"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET
 
@@ -21,7 +21,7 @@ En este tutorial se enseña cómo instalar y usar una herramienta local. Usará 
 * Complete el [primer tutorial de esta serie](global-tools-how-to-create.md).
 * Instale el entorno de ejecución de .NET Core 2.1.
 
-  En este tutorial, instalará y usará una herramienta que tiene como destino .NET Core 2.1, por lo que debe tener ese entorno de ejecución instalado en el equipo. Para instalar la versión 2.1 del entorno de ejecución, vaya a la [página de descarga de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) y busque el vínculo de instalación del entorno de ejecución en la columna **Ejecutar aplicaciones: entorno de ejecución**.
+  En este tutorial, instalará y usará una herramienta que tiene como destino .NET Core 2.1, por lo que debe tener ese entorno de ejecución instalado en el equipo. Para instalar la versión 2.1 del entorno de ejecución, vaya a la [página de descarga de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet/2.1) y busque el vínculo de instalación del entorno de ejecución en la columna **Ejecutar aplicaciones: entorno de ejecución**.
 
 ## <a name="create-a-manifest-file"></a>Crear un archivo de manifiesto
 

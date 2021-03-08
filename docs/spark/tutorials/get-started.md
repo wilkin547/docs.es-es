@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 52d37f3c6b4907361bf0933942d8f1757669be24
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 44859d1c4819853c07454429e8a83f1fbb2e3af5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426793"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103665"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introducción a .NET para Apache Spark
 
@@ -33,7 +33,7 @@ Antes de comenzar a escribir la aplicación, debe configurar algunas dependencia
 
 Para empezar a compilar aplicaciones .NET, debe descargar e instalar el SDK (kit de desarrollo de software) de .NET.
 
-Descargue e instale el [SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet-core/3.1). Al instalar el SDK, se agrega la cadena de herramientas `dotnet` a la variable de entorno PATH.
+Descargue e instale el [SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet/3.1). Al instalar el SDK, se agrega la cadena de herramientas `dotnet` a la variable de entorno PATH.
 
 Una vez instalado el SDK de .NET Core, abra un símbolo del sistema o terminal nuevo y ejecute `dotnet`.
 

@@ -4,12 +4,12 @@ description: Obtenga información sobre qué versiones de macOS puede instalar e
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 871263b820aaf4cc04e573dd4aa3022caa401857
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: fe42a1593d4e8249252d2bd964dbfd52cdcd81a9
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506310"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105198"
 ---
 # <a name="install-net-on-macos"></a>Instalación de .NET en macOS
 
@@ -24,7 +24,7 @@ En este artículo obtendrá información sobre cómo instalar .NET en macOS. .NE
 La versión más reciente de .NET es la 5.0.
 
 > [!div class="button"]
-> [Descargar .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
+> [Descargar .NET Core](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="supported-releases"></a>Versiones compatibles
 
@@ -62,7 +62,7 @@ Hay dos entornos de ejecución distintos que se pueden instalar en macOS:
   Este entorno de ejecución es el más sencillo y no incluye ningún otro. Se recomienda encarecidamente instalar el *entorno de ejecución de ASP.NET Core* para conseguir la mejor compatibilidad con las aplicaciones de .NET.
 
 > [!div class="button"]
-> [Descarga del entorno de ejecución de .NET](https://dotnet.microsoft.com/download/dotnet-core)
+> [Descarga del entorno de ejecución de .NET](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="sdk-information"></a>Información del SDK
 
@@ -106,20 +106,20 @@ brew install mono-libgdiplus
 
 macOS tiene instaladores independientes que se pueden usar para instalar el SDK de .NET 5.0:
 
-- [CPU de x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/5.0)
+- [CPU de x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
 
 <!-- Note, this content is taken from includes/linux-install-manual.md but changed for macOS. Any fixes should be applied there too, though content may be different -->
 
-Como alternativa a los instaladores de macOS para .NET, puede descargar e instalar manualmente el SDK y el entorno de ejecución. La instalación manual se suele llevar a cabo durante las pruebas de integración continua. Para un desarrollador o usuario, generalmente es mejor usar un [instalador](https://dotnet.microsoft.com/download/dotnet-core).
+Como alternativa a los instaladores de macOS para .NET, puede descargar e instalar manualmente el SDK y el entorno de ejecución. La instalación manual se suele llevar a cabo durante las pruebas de integración continua. Para un desarrollador o usuario, generalmente es mejor usar un [instalador](https://dotnet.microsoft.com/download/dotnet).
 
 Si instala el SDK de .NET, no necesita instalar el entorno de ejecución correspondiente. En primer lugar, descargue una versión **binaria** del SDK o del entorno de ejecución de uno de los siguientes sitios:
 
 - ✔️ [Descargas de .NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [Descargas de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [Descargas de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [Todas las descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
+- ✔️ [Descargas de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1)
+- ✔️ [Descargas de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [Todas las descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet)
 
 A continuación, extraiga el archivo descargado y use el comando `export` para establecer las variables que se utilizan en .NET. Luego, asegúrese de que .NET esté en PATH.
 
@@ -170,7 +170,7 @@ Visual Studio Code es un editor de código fuente ligero y eficaz que se ejecut
 Aunque Visual Studio Code no incluye un instalador automatizado de .NET como Visual Studio, resulta sencillo agregar compatibilidad con .NET.
 
 01. [Descargue e instale Visual Studio Code](https://code.visualstudio.com/Download).
-01. [Descargue e instale el SDK de .NET](https://dotnet.microsoft.com/download/dotnet-core).
+01. [Descargue e instale el SDK de .NET](https://dotnet.microsoft.com/download/dotnet).
 01. [Instale la extensión de C# desde el Marketplace de Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 ## <a name="install-with-bash-automation"></a>Instalación mediante la automatización de Bash

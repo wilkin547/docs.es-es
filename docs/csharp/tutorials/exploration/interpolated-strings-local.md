@@ -2,12 +2,12 @@
 title: 'Interpolación de cadenas: tutorial de C#'
 description: En este tutorial se muestra cómo usar la característica de interpolación de cadenas de C# para incluir resultados de expresión con formato en una cadena mayor.
 ms.date: 10/23/2018
-ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a80f6d6b118a9dfc4e9ada2122dfc374a137fb4e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796059"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103210"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Uso de la interpolación de cadenas para construir cadenas con formato
 
@@ -103,7 +103,7 @@ En la sección anterior, las dos cadenas con formato incorrecto se insertaron en
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-Especifique una cadena de formato al colocar dos puntos (":") después de la expresión de interpolación y la cadena de formato. "d" es una [cadena de formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa el formato de fecha corta. "C2" es una [cadena de formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa un número como un valor de moneda con dos dígitos después del separador decimal.
+Especifique una cadena de formato al colocar dos puntos (":") después de la expresión de interpolación y la cadena de formato. "d" es una [cadena de formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa el formato de fecha corta. "C2" es una [cadena de formato numérico estándar](../../../standard/base-types/standard-numeric-format-strings.md#currency-format-specifier-c) que representa un número como un valor de moneda con dos dígitos después del separador decimal.
 
 Una serie de tipos de las bibliotecas de .NET admiten un conjunto predefinido de cadenas de formato. Esto incluye todos los tipos numéricos y los tipos de fecha y hora. Para obtener una lista completa de los tipos que admiten cadenas de formato, vea [Dar formato a cadenas y tipos de biblioteca de clase .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) en el artículo [Aplicar formato a tipos de .NET](../../../standard/base-types/formatting-types.md).
 

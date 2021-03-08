@@ -3,12 +3,12 @@ title: Herramienta de desinstalación
 description: Información general de la herramienta de desinstalación de .NET, una herramienta guiada que permite limpiar de forma controlada los SDK y los entornos de ejecución de .NET.
 author: sfoslund
 ms.date: 01/28/2021
-ms.openlocfilehash: a3819b11af94d4fec3ecb072ec3d5ddf6de706c9
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 9afcac150659a8f58a04f4c254b0a0219af42e74
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216322"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105439"
 ---
 # <a name="net-uninstall-tool"></a>Herramienta de desinstalación de .NET
 
@@ -302,8 +302,8 @@ Dado que esta herramienta tiene un comportamiento destructivo, es **altamente** 
 > [!CAUTION]
 > Tenga en cuenta las siguientes advertencias:
 >
->- Esta herramienta puede desinstalar las versiones del SDK de .NET que necesitan los archivos `global.json` de la máquina. Puede volver a instalar los SDK de .NET en la página de [descarga de .NET](https://dotnet.microsoft.com/download/dotnet-core).
->- Esta herramienta puede desinstalar las versiones del entorno de ejecución de .NET que necesitan las aplicaciones que dependen del marco de trabajo de la máquina. Puede volver a instalar los entornos de ejecución de .NET en la página de [descarga de .NET](https://dotnet.microsoft.com/download/dotnet-core).
+>- Esta herramienta puede desinstalar las versiones del SDK de .NET que necesitan los archivos `global.json` de la máquina. Puede volver a instalar los SDK de .NET en la página de [descarga de .NET](https://dotnet.microsoft.com/download/dotnet).
+>- Esta herramienta puede desinstalar las versiones del entorno de ejecución de .NET que necesitan las aplicaciones que dependen del marco de trabajo de la máquina. Puede volver a instalar los entornos de ejecución de .NET en la página de [descarga de .NET](https://dotnet.microsoft.com/download/dotnet).
 >- Esta herramienta puede desinstalar las versiones del SDK y del entorno de ejecución de .NET de las que depende Visual Studio. Si interrumpe la instalación de Visual Studio, ejecute "Reparar" en el instalador de Visual Studio para volver a un estado de funcionamiento.
 
 De forma predeterminada, todos los comandos mantienen los SDK y los entornos de ejecución de .NET que pueden necesitar Visual Studio u otros SDK. Estos SDK y entornos en tiempos de ejecución se pueden desinstalar si se enumeran explícitamente como argumentos o mediante la opción `--force`.

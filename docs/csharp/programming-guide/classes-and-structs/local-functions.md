@@ -4,16 +4,16 @@ description: En C#, las funciones locales son métodos privados que están anida
 ms.date: 10/16/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 75accda2e40443073274ece4d8964c13a0945dad
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 1c0cd1b8122f9069e5d6385d698f0ff8278912dd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332905"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103249"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funciones locales (Guía de programación de C#)
 
-A partir de C# 7.0, C# admite *funciones locales* . Las funciones locales son métodos privados de un tipo que están anidados en otro miembro. Solo se pueden llamar desde su miembro contenedor. Las funciones locales se pueden declarar en y llamar desde:
+A partir de C# 7.0, C# admite *funciones locales*. Las funciones locales son métodos privados de un tipo que están anidados en otro miembro. Solo se pueden llamar desde su miembro contenedor. Las funciones locales se pueden declarar en y llamar desde:
 
 - Métodos, especialmente los métodos de iterador y asincrónicos
 - Constructores
@@ -72,16 +72,6 @@ Si coloca la lógica de iterador en una función local, se iniciarán excepcione
 
 :::code language="csharp" source="snippets/local-functions/IteratorWithLocal.cs" :::
 
-Puede usar funciones locales de una manera similar con las operaciones asincrónicas. Las excepciones iniciadas en un método asincrónico aparecen cuando se espera por la tarea correspondiente. Las funciones locales permiten que el código genere un error inmediato y permiten que la excepción se produzca y observe de forma sincrónica.
-
-En el ejemplo siguiente, se usa un método asincrónico denominado `GetMultipleAsync` para pausar durante un número especificado de segundos y se devuelve un valor que es un múltiplo aleatorio de ese número de segundos. El retraso máximo es de 5 segundos; se produce una excepción <xref:System.ArgumentOutOfRangeException> si el valor es mayor que 5. Como se muestra en el ejemplo siguiente, la excepción que se inicia cuando se pasa un valor de 6 al método `GetMultipleAsync` solo se observa cuando se espera por la tarea.
-
-:::code language="csharp" source="snippets/local-functions/AsyncWithoutLocal.cs" :::
-
-Como sucede con el método de iterador, puede refactorizar el ejemplo anterior y colocar el código de la operación asincrónica en una función local. Como se muestra en la salida del ejemplo siguiente, al llamar al método `GetMultiple` se inicia la excepción <xref:System.ArgumentOutOfRangeException>.
-
-:::code language="csharp" source="snippets/local-functions/AsyncWithLocal.cs" :::
-
 ## <a name="local-functions-vs-lambda-expressions"></a>Funciones locales frente a expresiones lambda
 
 A primera vista, las funciones locales y las [expresiones lambda](../../language-reference/operators/lambda-expressions.md) son muy similares. En muchos casos, la elección entre usar expresiones lambda y funciones locales es una cuestión de estilo y de preferencia personal, aunque hay diferencias que debe tener en cuenta acerca de dónde puede usar una u otra.
@@ -106,7 +96,7 @@ Las expresiones lambda se basan en el tipo de la variable `Action`/`Func` al que
 
 Las expresiones lambda son objetos que se declaran y se asignan en tiempo de ejecución. Para poder usar una expresión lambda, debe asignarse definitivamente: se debe declarar la variable `Action`/`Func` a la que se va a asignar y luego asignar a esta la expresión lambda. Observe que `LambdaFactorial` debe declarar e inicializar la expresión lambda `nthFactorial` antes de definirla. De no hacerlo, se produce un error en tiempo de compilación por hacer referencia a `nthFactorial` antes de asignarlo.
 
-Las funciones locales se definen en tiempo de compilación. Dado que no están asignadas a variables, se puede hacer referencia a ellas desde cualquier ubicación del código **que esté en ámbito** ; en el primer ejemplo `LocalFunctionFactorial`, se podría declarar la función local por encima o por debajo de la instrucción `return` y no desencadenar ningún error del compilador.
+Las funciones locales se definen en tiempo de compilación. Dado que no están asignadas a variables, se puede hacer referencia a ellas desde cualquier ubicación del código **que esté en ámbito**; en el primer ejemplo `LocalFunctionFactorial`, se podría declarar la función local por encima o por debajo de la instrucción `return` y no desencadenar ningún error del compilador.
 
 Estas diferencias implican que los algoritmos recursivos son más fáciles de crear usando funciones locales. Puede declarar y definir una función local que se llama a sí misma. Las expresiones lambda se deben declarar y se les debe asignar un valor predeterminado para que se les pueda volver a asignar un cuerpo que haga referencia a la misma expresión lambda.
 

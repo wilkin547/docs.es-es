@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ec6724ab378dd614c55a024ede18d997d27be3a3
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 73bf0ba78e2986da3e0aa66d492f1765df563b27
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032910"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102109238"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Plataforma de destino: se ha quitado la compatibilidad con .NET Framework
 
@@ -14,7 +14,7 @@ A partir de ASP.NET Core 3.0, .NET Framework es un marco de destino que no se a
 
 .NET Framework 4.8 es la última versión principal de .NET Framework. Las nuevas aplicaciones de ASP.NET Core se deben compilar en .NET Core. A partir de NET Core 3.0, puede considerar a ASP.NET Core 3.0 una parte de .NET Core.
 
-Los clientes que usen ASP.NET Core con .NET Framework pueden continuar utilizando la [versión 2.1 LTS](https://dotnet.microsoft.com/download/dotnet-core/2.1) de forma totalmente compatible. La compatibilidad y el servicio para la versión 2.1 continuarán hasta el 21 de agosto de 2021. Esta fecha es tres años posterior a la declaración de la versión LTS de acuerdo a la [Directiva de compatibilidad de .NET](https://dotnet.microsoft.com/platform/support-policy). La compatibilidad con los paquetes de ASP.NET Core 2.1 **en .NET Framework** se extenderá indefinidamente, de forma similar a la [directiva de servicio para otros marcos de ASP.NET basados en paquetes](https://dotnet.microsoft.com/platform/support/policy/aspnet).
+Los clientes que usen ASP.NET Core con .NET Framework pueden continuar utilizando la [versión 2.1 LTS](https://dotnet.microsoft.com/download/dotnet/2.1) de forma totalmente compatible. La compatibilidad y el servicio para la versión 2.1 continuarán hasta el 21 de agosto de 2021. Esta fecha es tres años posterior a la declaración de la versión LTS de acuerdo a la [Directiva de compatibilidad de .NET](https://dotnet.microsoft.com/platform/support-policy). La compatibilidad con los paquetes de ASP.NET Core 2.1 **en .NET Framework** se extenderá indefinidamente, de forma similar a la [directiva de servicio para otros marcos de ASP.NET basados en paquetes](https://dotnet.microsoft.com/platform/support/policy/aspnet).
 
 Para más información sobre cómo migrar de .NET Framework a .NET Core, vea [Portabilidad a .NET Core](~/docs/core/porting/index.md).
 
@@ -36,7 +36,7 @@ Las aplicaciones ASP.NET Core solo se pueden ejecutar en .NET Core.
 
 #### <a name="recommended-action"></a>Acción recomendada
 
-Realice una de las siguientes acciones:
+Para ello, realice las siguientes acciones:
 
 - Mantenga la aplicación en ASP.NET Core 2.1.
 - Migre la aplicación y las dependencias a .NET Core.
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>API afectadas
 
-Ninguna
+None
 
 <!-- 
 
