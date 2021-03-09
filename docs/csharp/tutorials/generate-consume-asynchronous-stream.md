@@ -4,12 +4,12 @@ description: En este tutorial avanzado se muestra cómo generar y consumir secue
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 48d749af47139ca97df9c05f2ef450870b41bef5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420375"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259633"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generación y uso de secuencias asincrónicas con C# 8.0 y .NET Core 3.0
 
@@ -42,13 +42,13 @@ En este tutorial se da por supuesto que está familiarizado con C# y. NET, inclu
 
 ## <a name="run-the-starter-application"></a>Ejecución de la aplicación de inicio
 
-Puede obtener el código para la aplicación de inicio usada en este tutorial en el repositorio [dotnet/docs](https://github.com/dotnet/docs) de la carpeta [csharp/tutoriales/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start).
+Puede obtener el código para la aplicación de inicio usada en este tutorial en el repositorio [dotnet/docs](https://github.com/dotnet/docs) de la carpeta [csharp/tutoriales/AsyncStreams](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start).
 
 La aplicación de inicio es una aplicación de consola que usa la interfaz [GraphQL de GitHub](https://developer.github.com/v4/) para recuperar las incidencias recientes escritas en el repositorio [dotnet/docs](https://github.com/dotnet/docs). Comience por mirar el código siguiente para el método `Main` de la aplicación de inicio:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-Puede establecer una variable de entorno `GitHubKey` para el token de acceso personal, o bien puede reemplazar el último argumento en la llamada a `GenEnvVariable` por el token de acceso personal. No coloque el código de acceso en el código fuente si va a compartir el origen con otros usuarios. No cargue nunca códigos de acceso en un repositorio de código fuente compartido.
+Puede establecer una variable de entorno `GitHubKey` para el token de acceso personal, o bien puede reemplazar el último argumento en la llamada a `GetEnvVariable` por el token de acceso personal. No coloque el código de acceso en el código fuente si va a compartir el origen con otros usuarios. No cargue nunca códigos de acceso en un repositorio de código fuente compartido.
 
 Después de crear el cliente de GitHub, el código de `Main` crea un objeto de informe de progreso y un token de cancelación. Una vez que se crean esos objetos, `Main` llama a `runPagedQueryAsync` para recuperar las 250 incidencias creadas más recientemente. Una vez finalizada esa tarea, se muestran los resultados.
 
@@ -144,7 +144,7 @@ Se puede usar otro método de extensión, <xref:System.Threading.Tasks.TaskAsync
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-Puede obtener el código para el tutorial finalizado en el repositorio [dotnet/docs](https://github.com/dotnet/docs) de la carpeta [csharp/tutoriales/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished).
+Puede obtener el código para el tutorial finalizado en el repositorio [dotnet/docs](https://github.com/dotnet/docs) de la carpeta [csharp/tutoriales/AsyncStreams](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished).
 
 ## <a name="run-the-finished-application"></a>Ejecución de la aplicación finalizada
 

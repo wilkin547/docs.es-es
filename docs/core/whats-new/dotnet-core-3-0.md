@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 1e48f2f83b65ef934c7c460d42f05e2f8de04cbd
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: bab14ec385ca6e4d71919ddaebd6d49ee8d002e0
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437897"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104996"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -263,7 +263,7 @@ Hay algunas operaciones, como la publicación de páginas Razor y la vinculació
 
 Las herramientas locales se basan en un nombre de archivo de manifiesto `dotnet-tools.json` del directorio actual. Este archivo de manifiesto define las herramientas que estarán disponibles en esa carpeta y a continuación. Puede distribuir el archivo de manifiesto con su código para asegurarse de que todo aquel que trabaje con su código pueda restaurar y utilizar las mismas herramientas.
 
-Para las herramientas locales y globales, se requiere una versión compatible del entorno de ejecución. Actualmente, muchas herramientas de NuGet.org tienen como destino el entorno de ejecución de .NET Core 2.1. Para instalar estas herramientas local o globalmente, aún tendría que instalar [NET Core 2.1 Runtime](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+Para las herramientas locales y globales, se requiere una versión compatible del entorno de ejecución. Actualmente, muchas herramientas de NuGet.org tienen como destino el entorno de ejecución de .NET Core 2.1. Para instalar estas herramientas local o globalmente, aún tendría que instalar [NET Core 2.1 Runtime](https://dotnet.microsoft.com/download/dotnet/2.1).
 
 ### <a name="new-globaljson-options"></a>Opciones nuevas de global.json
 

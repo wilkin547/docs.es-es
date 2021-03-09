@@ -4,12 +4,12 @@ description: Obtenga información sobre las versiones de Windows en las que pued
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 55746b29b579a6d3aacb7d11c5604dc601440ab5
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 7909a94c6384e53569db3ba17047cbcc93e80fe1
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506297"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105107"
 ---
 # <a name="install-net-on-windows"></a>Instalación de .NET en Windows
 
@@ -24,7 +24,7 @@ En este artículo obtendrá información sobre cómo instalar .NET en Windows. .
 La versión más reciente de .NET es la 5.0.
 
 > [!div class="button"]
-> [Descarga de .NET](https://dotnet.microsoft.com/download/dotnet-core)
+> [Descarga de .NET](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="supported-releases"></a>Versiones compatibles
 
@@ -76,7 +76,7 @@ Hay tres entornos de ejecución distintos que se pueden instalar en Windows:
   Este entorno de ejecución es el más sencillo y no incluye ningún otro. Se recomienda encarecidamente instalar el *entorno de ejecución de ASP.NET Core* y el *entorno de ejecución de escritorio* para conseguir la mejor compatibilidad con las aplicaciones de .NET.
 
 > [!div class="button"]
-> [Descarga del entorno de ejecución de .NET](https://dotnet.microsoft.com/download/dotnet-core)
+> [Descarga del entorno de ejecución de .NET](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="sdk-information"></a>Información del SDK
 
@@ -263,12 +263,12 @@ Visual Studio Code es un editor de código fuente ligero y eficaz que se ejecut
 Aunque Visual Studio Code no viene con un instalador automatizado de .NET Core como Visual Studio, agregar compatibilidad con .NET Core es sencillo.
 
 01. [Descargue e instale Visual Studio Code](https://code.visualstudio.com/Download).
-01. [Descargue e instale el SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+01. [Descargue e instale el SDK de .NET Core](https://dotnet.microsoft.com/download/dotnet).
 01. [Instale la extensión de C# desde el Marketplace de Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 ## <a name="windows-installer"></a>Windows Installer
 
-La [página de descarga](https://dotnet.microsoft.com/download/dotnet-core) de .NET proporciona ejecutables de Windows Installer.
+La [página de descarga](https://dotnet.microsoft.com/download/dotnet) de .NET proporciona ejecutables de Windows Installer.
 
 Al usar los instaladores de Windows para instalar .NET, puede personalizar la ruta de instalación estableciendo los parámetros `DOTNETHOME_X64` y `DOTNETHOME_X86`:
 
@@ -298,14 +298,14 @@ Para obtener más información, vea [Opciones de la línea de comandos del insta
 
 ## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
 
-Como alternativa a los instaladores de Windows para .NET, puede descargar e instalar manualmente el SDK o el entorno de ejecución. La instalación manual se suele realizar durante las pruebas de integración continua. Para un desarrollador o usuario, generalmente es mejor usar un [instalador](https://dotnet.microsoft.com/download/dotnet-core).
+Como alternativa a los instaladores de Windows para .NET, puede descargar e instalar manualmente el SDK o el entorno de ejecución. La instalación manual se suele realizar durante las pruebas de integración continua. Para un desarrollador o usuario, generalmente es mejor usar un [instalador](https://dotnet.microsoft.com/download/dotnet).
 
 Tanto el SDK como el entorno de ejecución de .NET se pueden instalar manualmente una vez que se han descargado. Si instala el SDK de .NET, no necesita instalar el entorno de ejecución correspondiente. En primer lugar, descargue una versión binaria del SDK o del entorno de ejecución de uno de los siguientes sitios:
 
 - [Descargas de .NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
-- [Descargas de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [Descargas de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [Todas las descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
+- [Descargas de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet/3.1)
+- [Descargas de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [Todas las descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet)
 
 Cree un directorio en el que se extraerá .NET; por ejemplo, `%USERPROFILE%\dotnet`. Después, extraiga el archivo ZIP descargado en ese directorio.
 

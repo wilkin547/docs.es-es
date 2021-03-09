@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 2208f515bcab5f423b32fabc5364e02ed7230919
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 69fd1a1944987d08a6ce1aee2790d0dbe06b9452
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99713213"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106376"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -27,7 +27,7 @@ ms.locfileid: "99713213"
 > [!NOTE]
 > En la primera parte de este artículo, se explica cómo se crean componentes independientes del lenguaje, es decir, componentes que pueden utilizarse en aplicaciones escritas en cualquier lenguaje. También puede crear una aplicación o componente únicos de código fuente escrito en varios lenguajes; consulte [Interoperabilidad entre lenguajes](#CrossLang) en la segunda parte de este artículo.
 
-Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/).
 
 Si el componente se ajusta a Common Language Specification, existe la garantía de que será conforme a CLS y que será accesible desde el código de un ensamblado escrito en cualquier lenguaje de programación que admita CLS. Para determinar si el componente se ajusta o no a Common Language Specification en tiempo de compilación, puede aplicar el atributo <xref:System.CLSCompliantAttribute> en el código fuente. Para más información, consulte [CLSCompliantAttribute (Atributo)](#CLSAttribute).
 
@@ -73,7 +73,7 @@ En este artículo:
 
 ## <a name="cls-compliance-rules"></a>Reglas de conformidad con CLS
 
-En esta sección se explican las reglas para crear un componente conforme a CLS. Para obtener una lista completa de las normas, vea el apartado I, cláusula 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+En esta sección se explican las reglas para crear un componente conforme a CLS. Para obtener una lista completa de las normas, vea el apartado I, cláusula 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/).
 
 > [!NOTE]
 > Common Language Specification describe en cada regla la conformidad con CLS en referencia a los consumidores (desarrolladores que acceden mediante programación a un componente que es conforme a CLS), los marcos (desarrolladores que usan un compilador de lenguaje para crear bibliotecas conformes a CLS) y los extensores (desarrolladores que crean una herramienta, como un compilador de lenguaje o un analizador de código, que crea componentes conformes a CLS). Este artículo se centra en las reglas que se aplican a los marcos. Sin embargo, observe que algunas de las reglas que se aplican a los extensores también se pueden aplicar a los ensamblados que se crean mediante Reflection.Emit.
@@ -101,7 +101,7 @@ Las interfaces públicas de una biblioteca se componen de los elementos siguient
 
 - Parámetros y tipos devueltos de los métodos públicos de las clases públicas y parámetros y tipos devueltos de los métodos accesibles por las clases derivadas.
 
-Las reglas de conformidad con CLS se muestran en la tabla siguiente. El texto de las normas se toma literalmente del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright de 2012 de Ecma International. En las secciones siguientes encontrará información más detallada sobre estas reglas.
+Las reglas de conformidad con CLS se muestran en la tabla siguiente. El texto de las normas se toma literalmente del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/), Copyright de 2012 de Ecma International. En las secciones siguientes encontrará información más detallada sobre estas reglas.
 
 |Categoría|Vea|Regla|Número de regla|
 |--------------|---------|----------|-----------------|

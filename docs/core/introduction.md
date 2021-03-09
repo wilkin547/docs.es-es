@@ -4,12 +4,12 @@ description: Obtenga información sobre .NET, una plataforma de desarrollo gratu
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d08e00ee9702c71cacc8a6588c1f4290b4ab3ae9
-ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
+ms.openlocfilehash: 7997346c9b248962b36688592d357247ec0ce6aa
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101096807"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105094"
 ---
 # <a name="introduction-to-net"></a>Introducción a .NET
 
@@ -132,7 +132,7 @@ Los entornos de desarrollo integrado para .NET incluyen los siguientes:
 
 El [SDK de .NET](sdk.md) es un conjunto de bibliotecas y herramientas para desarrollar y ejecutar aplicaciones .NET.
 
-Al [descargar .NET](https://dotnet.microsoft.com/download/dotnet-core/), puede elegir el SDK o un *entorno de ejecución*, como el de .NET o el de ASP.NET Core. Instale un entorno de ejecución en un equipo que quiera preparar para ejecutar aplicaciones .NET. Instale el SDK en un equipo que quiera usar para el desarrollo. Al descargar el SDK, obtiene automáticamente los entornos de ejecución.
+Al [descargar .NET](https://dotnet.microsoft.com/download/dotnet), puede elegir el SDK o un *entorno de ejecución*, como el de .NET o el de ASP.NET Core. Instale un entorno de ejecución en un equipo que quiera preparar para ejecutar aplicaciones .NET. Instale el SDK en un equipo que quiera usar para el desarrollo. Al descargar el SDK, obtiene automáticamente los entornos de ejecución.
 
 La descarga del SDK incluye los componentes siguientes:
 
@@ -340,7 +340,7 @@ Parte de la terminología de .NET puede resultar confusa porque la misma palabra
   |Context  |Significado de "runtime" |
   |---------|---------|
   | [Common Language Runtime (CLR)](#clr)| El entorno de ejecución de un programa administrado. El sistema operativo forma parte del entorno de tiempo de ejecución, pero no del tiempo de ejecución de .NET. |
-  | [Entorno de ejecución de .NET en la página de descarga de .NET](https://dotnet.microsoft.com/download/dotnet-core) | El [CLR](#clr) y las [bibliotecas en tiempo de ejecución](#runtime-libraries), que de manera conjunta proporcionan compatibilidad para ejecutar aplicaciones [dependientes del marco de trabajo](#deployment-models). En la página también se ofrecen opciones de tiempo de ejecución para aplicaciones de servidor de ASP.NET Core y aplicaciones de escritorio de Windows. |
+  | [Entorno de ejecución de .NET en la página de descarga de .NET](https://dotnet.microsoft.com/download/dotnet) | El [CLR](#clr) y las [bibliotecas en tiempo de ejecución](#runtime-libraries), que de manera conjunta proporcionan compatibilidad para ejecutar aplicaciones [dependientes del marco de trabajo](#deployment-models). En la página también se ofrecen opciones de tiempo de ejecución para aplicaciones de servidor de ASP.NET Core y aplicaciones de escritorio de Windows. |
   | [Identificador en tiempo de ejecución (RID)](rid-catalog.md) | La plataforma del sistema operativo y la arquitectura de la CPU en la que se ejecuta una aplicación .NET. Por ejemplo: Windows x64, Linux x64. |
 
 * **marco de trabajo**
@@ -350,7 +350,7 @@ Parte de la terminología de .NET puede resultar confusa porque la misma palabra
   | .NET Framework | La implementación original de .NET, solo para Windows. La "F" de "Framework" está en mayúsculas. |
   | versión de .NET Framework de destino | La colección de API de las que depende una aplicación o biblioteca de .NET. Ejemplos: .NET Core 3.1, .NET Standard 2.0 |
   | Moniker de la plataforma de destino (TFM)  | TFM es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET. Ejemplo: `net462` para .NET Framework 4.6.2. |
-  | Aplicación dependiente de la plataforma | Una aplicación que solo se puede ejecutar en un equipo en el que se ha instalado el tiempo de ejecución desde la [página de descargas de .NET](https://dotnet.microsoft.com/download/dotnet-core). En este caso, "marco" es lo mismo que el "tiempo de ejecución" que se descarga de la página de descargas de .NET. |
+  | Aplicación dependiente de la plataforma | Una aplicación que solo se puede ejecutar en un equipo en el que se ha instalado el tiempo de ejecución desde la [página de descargas de .NET](https://dotnet.microsoft.com/download/dotnet). En este caso, "marco" es lo mismo que el "tiempo de ejecución" que se descarga de la página de descargas de .NET. |
   | Bibliotecas de marco | A veces se usa como sinónimo de las [bibliotecas en tiempo de ejecución](#runtime-libraries). |
 
 * **SDK**

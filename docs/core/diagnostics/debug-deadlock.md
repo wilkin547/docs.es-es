@@ -3,12 +3,12 @@ title: 'Depuración de un interbloqueo: .NET Core'
 description: Tutorial del proceso de depuración de un problema de bloqueo en .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0f5862c9acc4c1ae892caf29cea2ca484116cabf
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538701"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105589"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>Depuración de un interbloqueo en .NET Core
 
@@ -30,7 +30,7 @@ En este tutorial va a:
 
 En el tutorial se usa:
 
-- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core) o una versión posterior
+- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet) o una versión posterior
 - [Destino de depuración de ejemplo: aplicación web](/samples/dotnet/samples/diagnostic-scenarios) para desencadenar el escenario
 - [dotnet-trace](dotnet-trace.md) para mostrar procesos
 - [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria
