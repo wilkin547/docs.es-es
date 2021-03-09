@@ -1,5 +1,5 @@
 ---
-title: Herramientas de .NET Framework
+title: herramientas de .NET Framework
 description: Consulte una lista de las herramientas de .NET Framework que facilitan la creación, implementación y administración de aplicaciones y componentes dirigidos a .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 96df5a0c8487d3ba344b3aa13ca74b92e428d5aa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556686"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258782"
 ---
-# <a name="net-framework-tools"></a>Herramientas de .NET Framework
+# <a name="net-framework-tools"></a>herramientas de .NET Framework
 
 Las herramientas de .NET Framework facilitan la creación, implementación y administración de aplicaciones y componentes dirigidos a .NET Framework.
 
@@ -23,7 +23,7 @@ La mayoría de las herramientas de .NET Framework que se describen en esta secci
 
 Puede ejecutar todas las herramientas desde la línea de comandos excepto Visor de la memoria caché de ensamblados (*Shfusion.dll*). Debe obtener acceso a *Shfusion.dll* desde el Explorador de archivos.
   
-Para ejecutar las herramientas de línea de comandos, se recomienda usar el Símbolo del sistema para desarrolladores de Visual Studio. Estas utilidades permiten ejecutar las herramientas fácilmente, sin navegar hasta la carpeta de instalación. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+La mejor manera de ejecutar las herramientas de línea de comandos es mediante uno de los shells de desarrollador que instala Visual Studio. Estas utilidades permiten ejecutar las herramientas fácilmente, sin tener que desplazarse hasta la carpeta de instalación. Para obtener más información, vea [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 > [!NOTE]
 > Algunas herramientas son específicas de los equipos de 32 bits o de los equipos de 64 bits. Asegúrese de ejecutar la versión adecuada de la herramienta para su equipo.
@@ -47,9 +47,6 @@ Administra certificados, listas de certificados de confianza (certificate trust 
 
 - [Clrver.exe (herramienta de versión de CLR)](clrver-exe-clr-version-tool.md)  
 Notifica todas las versiones instaladas de Common Language Runtime (CLR) en el equipo.
-
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)  
-Le permite usar las herramientas de .NET Framework más fácilmente. Es un símbolo del sistema que establece automáticamente variables de entorno específicas.
 
 - [CorFlags.exe (Herramienta de conversión de CorFlags)](corflags-exe-corflags-conversion-tool.md)  
 Le permite configurar la sección CorFlags del encabezado de una imagen ejecutable portátil (PE).

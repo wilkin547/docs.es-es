@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 6a1a5b230e427a4991162a702245f1a87352784d
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: a592a4236575a6dd2f782142c470ce3945e130b9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190252"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255651"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 
@@ -64,14 +64,14 @@ C# proporciona un conjunto estándar de tipos integrados para representar númer
 
 ## <a name="custom-types"></a>Tipos personalizados
 
-Las construcciones [struct](../../language-reference/builtin-types/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) y [enum](../../language-reference/builtin-types/enum.md) se usan para crear sus propios tipos personalizados. La biblioteca de clases .NET es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente. Para más información, vea [Biblioteca de clases .NET](../../../standard/class-library-overview.md).
+Las construcciones [struct](../../language-reference/builtin-types/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md), [enum](../../language-reference/builtin-types/enum.md) y [record](../../language-reference/builtin-types/record.md) se usan para crear sus propios tipos personalizados. La biblioteca de clases .NET es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente. Para más información, vea [Biblioteca de clases .NET](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Common Type System
 
 Es importante entender dos aspectos fundamentales sobre el sistema de tipos en .NET:
 
 - Es compatible con el principio de herencia. Los tipos pueden derivarse de otros tipos, denominados *tipos base*. El tipo derivado hereda (con algunas restricciones), los métodos, las propiedades y otros miembros del tipo base. A su vez, el tipo base puede derivarse de algún otro tipo, en cuyo caso el tipo derivado hereda los miembros de ambos tipos base en su jerarquía de herencia. Todos los tipos, incluidos los tipos numéricos integrados como <xref:System.Int32?displayProperty=nameWithType> (palabra clave de C#: [int](../../language-reference/builtin-types/integral-numeric-types.md)), derivan en última instancia de un único tipo base, que es <xref:System.Object?displayProperty=nameWithType> (palabra clave de C#: [object](../../language-reference/builtin-types/reference-types.md)). Esta jerarquía de tipos unificada se denomina [Common Type System](../../../standard/base-types/common-type-system.md) (CTS). Para más información sobre la herencia en C#, vea [Herencia](../classes-and-structs/inheritance.md).
-- En CTS, cada tipo se define como un *tipo de valor* o un *tipo de referencia*. Estos tipos incluyen todos los tipos personalizados de la biblioteca de clases .NET y también sus propios tipos definidos por el usuario. Los tipos que se definen mediante el uso de la palabra clave [struct](../../language-reference/builtin-types/struct.md) son tipos de valor; todos los tipos numéricos integrados son `structs`. Los tipos que se definen mediante el uso de la palabra clave [class](../../language-reference/keywords/class.md) son tipos de referencia. Los tipos de referencia y los tipos de valor tienen distintas reglas de tiempo de compilación y distintos comportamientos de tiempo de ejecución.
+- En CTS, cada tipo se define como un *tipo de valor* o un *tipo de referencia*. Estos tipos incluyen todos los tipos personalizados de la biblioteca de clases .NET y también sus propios tipos definidos por el usuario. Los tipos que se definen mediante el uso de la palabra clave [struct](../../language-reference/builtin-types/struct.md) son tipos de valor; todos los tipos numéricos integrados son `structs`. Los tipos que se definen mediante el uso de la palabra clave [class](../../language-reference/keywords/class.md) o [record](../../language-reference/builtin-types/record.md) son tipos de referencia. Los tipos de referencia y los tipos de valor tienen distintas reglas de tiempo de compilación y distintos comportamientos de tiempo de ejecución.
 
 En la ilustración siguiente se muestra la relación entre los tipos de valor y los tipos de referencia en CTS.
 
@@ -112,7 +112,7 @@ Todas las enumeraciones se heredan de <xref:System.Enum?displayProperty=nameWith
 
 ### <a name="reference-types"></a>Tipos de referencia
 
-Un tipo que se define como [clase](../../language-reference/keywords/class.md), [delegado](../../language-reference/builtin-types/reference-types.md), matriz o [interfaz](../../language-reference/keywords/interface.md) es un *tipo de referencia*. Al declarar una variable de un tipo de referencia en tiempo de ejecución, esta contendrá el valor [null](../../language-reference/keywords/null.md) hasta que se cree explícitamente un objeto mediante el operador [new](../../language-reference/operators/new-operator.md), o bien que se le asigne un objeto creado en otro lugar mediante `new`, tal y como se muestra en el ejemplo siguiente:
+Un tipo que se define como [clase](../../language-reference/keywords/class.md), [registro](../../language-reference/builtin-types/record.md), [delegado](../../language-reference/builtin-types/reference-types.md), matriz o [interfaz](../../language-reference/keywords/interface.md), es un *tipo de referencia*. Al declarar una variable de un tipo de referencia en tiempo de ejecución, esta contendrá el valor [null](../../language-reference/keywords/null.md) hasta que se cree explícitamente un objeto mediante el operador [new](../../language-reference/operators/new-operator.md), o bien que se le asigne un objeto creado en otro lugar mediante `new`, tal y como se muestra en el ejemplo siguiente:
 
 :::code language="csharp" source="snippets/index/Program.cs" id="DeclarationAndAssignment":::
 

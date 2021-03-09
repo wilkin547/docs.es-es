@@ -2,12 +2,12 @@
 title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dae10bf0019c283f568c4850d3bfa0abad6df85a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537410"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258200"
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -24,9 +24,9 @@ Hay varios trucos y sugerencias que son habituales entre los desarrolladores de 
 - Incluso los programadores de C# es posible que quieran [usar el espacio de nombres `My` de Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Cree un nuevo método para un tipo `enum` mediante métodos de extensión](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
-### <a name="class-and-struct-members"></a>Miembros de clase y estructura
+### <a name="class-record-and-struct-members"></a>Miembros de clase, registro y estructura
 
-Cree clases y estructuras para implementar su programa. Estas técnicas suelen usarse al escribir clases o estructuras.
+Para implementar un programa se usan clases, registros y estructuras. Estas técnicas suelen usarse al escribir clases, registros o estructuras.
 
 - [Declare propiedades de implementación automática](../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).
 - [Declare y use propiedades de lectura y escritura](../programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md).
