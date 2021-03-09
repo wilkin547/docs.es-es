@@ -35,6 +35,8 @@
           href: configuration-differences.md
         - name: Diferencias de enrutamiento
           href: routing-differences.md
+        - name: Diferencias de registro
+          href: logging-differences.md
         - name: "Comparación de Razor\_Pages con ASP.NET\_MVC"
           href: comparing-razor-pages-aspnet-mvc.md
         - name: "Diferencias de Web\_API"
