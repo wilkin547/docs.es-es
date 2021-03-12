@@ -3,12 +3,12 @@ description: Más información acerca de cómo elegir un patrón de intercambio 
 title: Elección de un patrón de intercambio de mensajes
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: c452a65e4d4108123deaab93be9bd825127eba70
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c0849ddb16596ebd6e064bb39f0727ac51642eb7
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99685860"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605365"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes
 
@@ -30,7 +30,7 @@ El primer paso para escribir un transporte personalizado es decidir qué *patron
   
      El MEP dúplex permite que un cliente envíe un número arbitrario de mensajes y que se reciban en cualquier orden. El MEP de dúplex es como una conversación telefónica, donde cada palabra que se pronuncia es un mensaje. Dado que ambos lados pueden enviar y recibir en este MEP, la interfaz implementada por los canales de servicio y cliente es <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
- ![Elección de un patrón de intercambio de mensajes](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![Diagrama de flujo que muestra los tres patrones de intercambio de mensajes básicos](./media/wcfc-basicthreemepsc.gif)  
 Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagrama, solicitud-respuesta y dúplex.  
   
  Cada uno de estos MEP también puede admitir *sesiones*. Una sesión (e implementación de <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> de tipo <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) pone en correlación todos los mensajes enviados y recibidos en un canal. El patrón de solicitud-respuesta es una sesión autónoma de dos mensajes, ya que la solicitud y la respuesta se ponen en correlación. Por el contrario, el patrón de solicitud-respuesta que admite las sesiones implica que se ponen en correlación todos los pares de solicitud/respuesta en ese canal entre sí. Esto le da un total de seis MEP entre los que elegir:  
@@ -56,7 +56,7 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
   
  En el modelo de objetos de canal, cada sesión lógica se manifiesta como una instancia de un canal con sesión. Por consiguiente, cada nueva sesión creada por el cliente y aceptada en el servicio se corresponde con un nuevo canal con sesión en cada lado. El siguiente diagrama muestra, en la parte superior, la estructura de los canales sin sesión y, en la parte inferior, la estructura de los canales con sesión.  
   
- ![Elección de un patrón de intercambio de mensajes](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![Diagrama de flujo que muestra la estructura de los canales sin sesión y con sesión](./media/wcfc-sessionandsessionlesschannelsc.gif)  
   
  Un cliente crea un nuevo canal con sesión y envía un mensaje. En el lado del servicio, el agente de escucha del canal recibe este mensaje y detecta que pertenece a una nueva sesión de manera que crea un nuevo canal con sesión y lo une a la aplicación (en respuesta a la aplicación que llama a AcceptChannel en el agente de escucha del canal). La aplicación recibe a continuación este mensaje y todos los mensajes subsiguientes enviados en la misma sesión a través del mismo canal con sesión.  
   

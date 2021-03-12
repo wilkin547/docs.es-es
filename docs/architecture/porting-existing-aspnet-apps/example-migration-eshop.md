@@ -3,12 +3,12 @@ title: Ejemplo de migración de eShop a ASP.NET Core
 description: Un tutorial de migración de una aplicación de ASP.NET MVC existente a ASP.NET Core, mediante una aplicación de la tienda en línea de ejemplo como referencia.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 83110909632e4eb433e1fabaedf3490ce594e12e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 498eb3b11c44381ff6d261b37caed15a2698b166
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401776"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605261"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>Ejemplo de migración de eShop a ASP.NET Core
 
@@ -26,7 +26,7 @@ En este capítulo se muestra cómo realizar muchos de los pasos de actualizació
 
 ## <a name="run-apiport-to-identify-problematic-apis"></a>Ejecución de *ApiPort* para identificar API problemáticas
 
-El primer paso para preparar la migración es ejecutar la herramienta *ApiPort* . La herramienta identifica cuántas API de .NET Framework llama la aplicación y cuántas de ellas tienen .NET Standard o equivalentes de .NET Core. Céntrese principalmente en la lógica de su propia aplicación, no en las dependencias de terceros, y preste atención a las `System.Web` dependencias que se deben migrar. La herramienta ApiPort se presentó en el último capítulo sobre cómo [comprender y actualizar las dependencias](/understand-update-dependencies.md).
+El primer paso para preparar la migración es ejecutar la herramienta *ApiPort* . La herramienta identifica cuántas API de .NET Framework llama la aplicación y cuántas de ellas tienen .NET Standard o equivalentes de .NET Core. Céntrese principalmente en la lógica de su propia aplicación, no en las dependencias de terceros, y preste atención a las `System.Web` dependencias que se deben migrar. La herramienta ApiPort se presentó en el último capítulo sobre cómo [comprender y actualizar las dependencias](understand-update-dependencies.md).
 
 Después de [instalar y configurar la herramienta *ApiPort*](../../standard/analyzers/portability-analyzer.md), ejecute el análisis desde dentro de Visual Studio, como se muestra en la figura 4-2.
 

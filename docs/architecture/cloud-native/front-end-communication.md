@@ -3,12 +3,12 @@ title: Comunicación de cliente front-end
 description: Obtenga información sobre cómo los clientes front-end se comunican con sistemas nativos de la nube
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 089f55f8f6b9320fe552602eb40bb83be28f119b
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: b28fd05aded652057deecd6814199e0360202a07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506245"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604520"
 ---
 # <a name="front-end-client-communication"></a>Comunicación de cliente front-end
 
@@ -43,7 +43,7 @@ La puerta de enlace aísla al cliente de la creación de particiones y refactori
 
 Se debe tener cuidado para mantener la puerta de enlace de API sencilla y rápida. Normalmente, la lógica de negocios se mantiene fuera de la puerta de enlace. Una puerta de enlace compleja arriesga a convertirse en un cuello de botella y, finalmente, a un monolítico. Los sistemas más grandes a menudo exponen varias puertas de enlace de API segmentadas por tipo de cliente (móvil, Web, escritorio) o funcionalidad de back-end. El [back-end para el patrón de Front-](/azure/architecture/patterns/backends-for-frontends) ends proporciona la dirección para implementar varias puertas de enlace. El patrón se muestra en la figura 4-4.
 
-![Patrón de puerta de enlace de API](./media/backend-for-frontend-pattern.png)
+![Patrón back-end para front-end](./media/backend-for-frontend-pattern.png)
 
 **Figura 4-4.** Patrón back-end para front-end
 
@@ -59,8 +59,8 @@ Al igual que cualquier puerta de enlace de API, su funcionalidad principal es re
 
 |Características de Ocelot  | |
 | :-------- | :-------- |
-| Enrutamiento | Autenticación |
-| Solicitar agregación | Autorización |
+| Enrutamiento | Authentication |
+| Solicitar agregación | Authorization |
 | Detección de servicios (con Consul y Eureka) | Limitaciones |
 | Equilibrio de carga | Registro, seguimiento |
 | Almacenamiento en memoria caché | Encabezados/transformación de cadena de consulta |

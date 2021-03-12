@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo se utiliza F# interactivo (dotnet 
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 200caf6be5977e4a4d11bda8ba57f276cb4f5ff6
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426986"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605131"
 ---
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
 
@@ -137,7 +137,7 @@ Puede especificar tantas referencias de paquete como desee en un script.
 > [!NOTE]
 > Actualmente hay una limitación para los scripts que usan referencias de marco (por ejemplo, `Microsoft.NET.Sdk.Web` o `Microsoft.NET.Sdk.WindowsDesktop`). Los paquetes como Saturno, Giraffe y WinForms no están disponibles. Se está realizando un seguimiento en la incidencia [9417](https://github.com/dotnet/fsharp/issues/9417).
 
-Para obtener más información, consulte la [extensibilidad de la administración de paquetes y otras extensiones](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager).
+Para obtener más información, consulte la [extensibilidad de la administración de paquetes y otras extensiones](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html).
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>Referencias a ensamblados en el disco con F# interactivo
 

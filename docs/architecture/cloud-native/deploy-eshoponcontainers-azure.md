@@ -2,12 +2,12 @@
 title: Implementación de eShopOnContainers en Azure
 description: Implementación de la aplicación eShopOnContainers con Azure Kubernetes Service, Helm y DevSpaces.
 ms.date: 01/19/2021
-ms.openlocfilehash: 8fc1343eac7f03c984c3a279d5a8c7908e37f0d1
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: da68fa1510841b6cef9117b6d84e7ed30c565698
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505796"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604572"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>Implementación de eShopOnContainers en Azure
 
@@ -55,7 +55,7 @@ Observe cómo la plantilla describe un conjunto dinámico de pares clave-valor. 
 
 Encontrará los gráficos de eShopOnContainers Helm en la carpeta/K8S/Helm. En la figura 2-6 se muestra cómo se organizan los distintos componentes de la aplicación en una estructura de carpetas que usa Helm para definir y administrar las implementaciones.
 
-![eShopOnContainers arquitectura de la ](./media/eshoponcontainers-helm-folder.png)
+![La carpeta eShopOnContainers Helm ](./media/eshoponcontainers-helm-folder.png)
  **figura 2-6**. La carpeta eShopOnContainers Helm
 
 Cada componente individual se instala mediante un `helm install` comando. eShop incluye un script "implementar todo" que recorre los componentes y los instala mediante sus respectivos gráficos de Helm. El resultado es un proceso repetible, con versiones de la aplicación en el control de código fuente, que cualquier persona del equipo puede implementar en un clúster de AKS con un comando de script de una línea.
@@ -70,12 +70,12 @@ Los desarrolladores comparten una instancia en ejecución (desarrollo) en un cl�
 
 En la figura 2-7, puede ver que Developer Susie ha implementado una versión actualizada del microservicio Bikes en su espacio de desarrollo. Después, puede probar los cambios mediante una dirección URL personalizada que empiece por el nombre de su espacio (susie.s.dev.myapp.eus.azds.io).
 
-![eShopOnContainers arquitectura de la ](./media/azure-devspaces-one.png)
+![Arquitectura de eShopOnContainers que muestra bicicletas microservicio ](./media/azure-devspaces-one.png)
  **figura 2-7**. Developer Susie implementa su propia versión del microservicio Bikes y la prueba.
 
 Al mismo tiempo, el desarrollador John está personalizando el microservicio de reservas y necesita probar sus cambios. Implementa sus cambios en su propio espacio de desarrollo sin entrar en conflicto con los cambios de Susie como se muestra en la figura 2-8. A continuación, Juan prueba sus cambios con su propia dirección URL, que tiene como prefijo el nombre de su espacio (john.s.dev.myapp.eus.azds.io).
 
-![eShopOnContainers arquitectura de la ](./media/azure-devspaces-two.png)
+![Arquitectura de eShopOnContainers que muestra la versión de John del microservicio de reservas de la ](./media/azure-devspaces-two.png)
  **figura 2-8**. El desarrollador John implementa su propia versión del microservicio de reservas y la prueba sin conflictos con otros desarrolladores.
 
 Con Azure Dev Spaces, los equipos pueden trabajar directamente con AKS mientras cambian, implementan y prueban sus cambios de forma independiente. Este enfoque reduce la necesidad de entornos hospedados dedicados independientes, ya que todos los desarrolladores tienen su propio entorno de AKS. Los desarrolladores pueden trabajar con Azure Dev Spaces mediante su CLI o iniciar su aplicación para Azure Dev Spaces directamente desde Visual Studio. [Obtenga más información sobre cómo funciona Azure Dev Spaces y está configurado.](/azure/dev-spaces/how-dev-spaces-works)

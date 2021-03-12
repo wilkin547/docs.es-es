@@ -3,12 +3,12 @@ title: El bloque DAPR Publish & subscribe Building
 description: Una descripción de la publicación DAPR & subscribe Building-Block y cómo aplicarla
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: 3d00c5a3171dd5a7287d07675f5a3742697e784b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 4cb249bafc8241eb54153be2605c33d0a3adb619
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102401920"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604689"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>El bloque DAPR Publish & subscribe Building
 
@@ -293,7 +293,7 @@ Tiene que especificar varios elementos con cada suscripción:
 
 ## <a name="reference-application-eshopondapr"></a>Aplicación de referencia: eShopOnDapr
 
-La aplicación [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr) adjunta proporciona una arquitectura de referencia de un extremo a otro para crear una aplicación de microservicios que implementa DAPR. eShopOnDapr es una evolución de la aplicación de [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainer) ampliamente popular, creada hace varios años. Ambas versiones usan el patrón pub/sub para comunicar [eventos de integración](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) entre microservicios. Los eventos de integración incluyen:
+La aplicación [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr) adjunta proporciona una arquitectura de referencia de un extremo a otro para crear una aplicación de microservicios que implementa DAPR. eShopOnDapr es una evolución de la aplicación de [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) ampliamente popular, creada hace varios años. Ambas versiones usan el patrón pub/sub para comunicar [eventos de integración](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) entre microservicios. Los eventos de integración incluyen:
 
 - Cuando un usuario desprotege una cesta de la compra.
 - Cuando un pago de un pedido se ha realizado correctamente.

@@ -3,12 +3,12 @@ description: Más información acerca de cómo controlar excepciones y errores
 title: Administración de excepciones y errores
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 9851d63705ba8b28819b11e3893bcd6b019d565d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 16ae72d54177b664bc41be6e639d0a44867df569
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99735080"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605066"
 ---
 # <a name="handling-exceptions-and-faults"></a>Administración de excepciones y errores
 
@@ -49,8 +49,8 @@ Las excepciones se utilizan para comunicar localmente los errores dentro del ser
 
  SOAP 1.1 y SOAP 1.2 definen una estructura concreta para los errores. Hay algunas diferencias entre las dos especificaciones pero en general, los tipos Message y MessageFault se utilizan para crear y utilizar los errores.  
   
- ![Control de excepciones y errores](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
-Error de SOAP 1.2 (izquierda) y error de SOAP 1.1 (derecha). Tenga en cuenta que en SOAP 1.1 solo el elemento Fault está calificado con el espacio de nombres.  
+ ![Error de SOAP 1,2 y error de SOAP 1,1](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif)  
+Error de SOAP 1.2 (izquierda) y error de SOAP 1.1 (derecha). En SOAP 1,1, solo el elemento Fault está calificado con el espacio de nombres.  
   
  SOAP define un mensaje de error como un mensaje que contiene solo un elemento de error (un elemento cuyo nombre es `<env:Fault>`. El contenido del elemento de error difiere ligeramente entre SOAP 1.1 y SOAP 1.2 como se muestra en la figura 1. Sin embargo, la clase <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> normaliza estas diferencias en un modelo de objetos:  
   
@@ -324,7 +324,7 @@ public class MessageFault
   
 - Además de los componentes principales, puede usar la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) para ver y buscar los seguimientos de WCF. La herramienta está diseñada específicamente para los archivos de seguimiento generados por WCF y se escriben con <xref:System.Diagnostics.XmlWriterTraceListener> . La figura siguiente muestra los diferentes componentes implicados en el seguimiento.  
   
- ![Control de excepciones y errores](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
+ ![Componentes de seguimiento](./media/wcfc-tracinginchannelsc.gif)  
   
 ### <a name="tracing-from-a-custom-channel"></a>Seguimiento desde un canal personalizado  
 

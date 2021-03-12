@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 4562242b82b0d7efac19bdcf2c04c29482af11dc
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 74ab483a501dd5135ad5d98fd6dce988cf207ef8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259907"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605456"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -621,10 +621,10 @@ type MyRecord =
 let foo a =
     a
     |> Option.map
-        (fun x ->
-            {
-                MyField = x
-            })
+           (fun x ->
+                {
+                    MyField = x
+                })
 ```
 
 Las mismas reglas se aplican a los elementos de lista y matriz.
@@ -836,10 +836,10 @@ La coincidencia de patrones de funciones anónimas, a partir de `function` , no 
 ```fsharp
 lambdaList
 |> List.map
-    (function
-        | Abs(x, body) -> 1 + sizeLambda 0 body
-        | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
-        | Var v -> 1)
+       (function
+            | Abs(x, body) -> 1 + sizeLambda 0 body
+            | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
+            | Var v -> 1)
 ```
 
 La coincidencia de patrones en funciones definidas por `let` o `let rec` debe tener una sangría de cuatro espacios después de iniciarse `let` , incluso si `function` se usa la palabra clave:
@@ -916,17 +916,43 @@ En el caso de las expresiones lambda, puede que también desee considerar la pos
 let printListWithOffset a list1 =
     List.iter
         (fun elem ->
-            printfn $"%d{a + elem}")
+             printfn $"A very long line to format the value: %d{a + elem}")
         list1
 
 let printListWithOffsetPiped a list1 =
     list1
     |> List.iter
-        (fun elem ->
-            printfn $"%d{a + elem}")
+           (fun elem ->
+                printfn $"A very long line to format the value: %d{a + elem}")
 ```
 
 Si el cuerpo de una expresión lambda tiene varias líneas de longitud, considere la posibilidad de refactorizarla en una función de ámbito local.
+
+Normalmente se debe aplicar sangría a los parámetros en relación con la función o la `fun` / `function` palabra clave, independientemente del contexto en el que aparezca la función:
+
+```fsharp
+// With 4 spaces indentation
+list1
+|> List.fold
+       someLongParam
+       anotherLongParam
+
+list1
+|> List.iter
+       (fun elem ->
+            printfn $"A very long line to format the value: %d{elem}")
+
+// With 2 spaces indentation
+list1
+|> List.fold
+     someLongParam
+     anotherLongParam
+
+list1
+|> List.iter
+       (fun elem ->
+          printfn $"A very long line to format the value: %d{elem}")
+```
 
 Cuando la función toma un único argumento de tupla de varias líneas, se aplican las mismas reglas para los [constructores de formato, los miembros estáticos y las invocaciones de miembros](#formatting-constructors-static-members-and-member-invocations) .
 

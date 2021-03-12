@@ -3,12 +3,12 @@ title: Dapr a 20 000 pies
 description: Información general de alto nivel sobre qué es DAPR, qué hace y cómo funciona.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: c6157d29274df73f6ea1fef44b8e5cd5d0239471
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: f0efb4652aaa35961d59979cb561941e5280a575
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401902"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604754"
 ---
 # <a name="dapr-at-20000-feet"></a>Dapr a 20 000 pies
 
@@ -59,7 +59,7 @@ En la tabla siguiente se describen los servicios de infraestructura que proporci
 
 | Bloque de creación | Descripción |
 |----------------|-------------|
-| [Administración de estados](state-management.md) | Admitir información contextual para servicios con estado de larga ejecución. |
+| [Administración de estado](state-management.md) | Admitir información contextual para servicios con estado de larga ejecución. |
 | [Invocación de servicio](service-invocation.md) | Invocar llamadas directas y seguras entre servicios mediante protocolos independientes de la plataforma y puntos de conexión conocidos. |
 | [Publicar y suscribirse](publish-subscribe.md) | Implemente mensajería de pub/sub escalable y segura entre los servicios. |
 | [Enlaces](bindings.md) | Desencadene código a partir de eventos generados por recursos externos con comunicación bidireccional. |
@@ -155,7 +155,6 @@ En el momento de redactar este documento, DAPR proporciona los siguientes tipos 
 | [Enlaces](https://github.com/dapr/components-contrib/tree/master/bindings) | Proporciona una interfaz uniforme para desencadenar eventos de aplicación de sistemas externos e invocar sistemas externos con cargas de datos opcionales. |
 | [Middleware](https://github.com/dapr/components-contrib/tree/master/middleware) | Permite que el middleware personalizado se conecte a la canalización de procesamiento de solicitudes e invoque acciones adicionales en una solicitud o respuesta. |
 | [Almacenes secretos](https://github.com/dapr/components-contrib/tree/master/secretstores) | Proporciona una interfaz uniforme para interactuar con almacenes secretos externos, incluidos servicios de nube, perimetrales, comerciales y de código abierto. |
-| [Exportadores de seguimiento](https://github.com/dapr/components-contrib/tree/master/exporters) | Proporciona una interfaz uniforme para abrir contenedores de telemetría. |
 
 A medida que el chorro completa su marcha sobre DAPR, se vuelve a buscar una vez más y puede ver cómo se conecta a la vez.
 

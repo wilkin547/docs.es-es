@@ -4,12 +4,12 @@ description: Una descripción del bloque de creación de observación, sus carac
 author: edwinvw
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: c7c941625f5867ad58eee602bfc42183bee87183
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6add36b2030c3061ee522604b2e07f05875b98a9
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401872"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604715"
 ---
 # <a name="the-dapr-observability-building-block"></a>El bloque de creación de observación de DAPR
 
@@ -40,7 +40,7 @@ A medida que DAPR abstrae el establecimiento, la aplicación no es consciente de
 
 La [arquitectura sidecar](dapr-at-20000-feet.md#sidecar-architecture) de DAPR permite características de observación integradas. A medida que los servicios se comunican, DAPR sidecar interceptan el tráfico y extraen la información de seguimiento, métricas y registro. La telemetría se publica en un formato estándar abierto. De forma predeterminada, DAPR admite [OpenTelemetry](https://opentelemetry.io/) y [Zipkin](https://zipkin.io/).
 
-DAPR proporciona [recopiladores](https://docs.dapr.io/operations/monitoring/open-telemetry-collector/) que pueden publicar la telemetría en diferentes herramientas de supervisión de back-end. Estas herramientas presentan telemetría DAPR para el análisis y las consultas. En la figura 9-1 se muestra la arquitectura de observación de DAPR:
+DAPR proporciona [recopiladores](https://docs.dapr.io/operations/monitoring/tracing/open-telemetry-collector/) que pueden publicar la telemetría en diferentes herramientas de supervisión de back-end. Estas herramientas presentan telemetría DAPR para el análisis y las consultas. En la figura 9-1 se muestra la arquitectura de observación de DAPR:
 
 ![Arquitectura de observación de DAPR](media/observability/observability-architecture.png)
 
@@ -285,7 +285,7 @@ DAPR genera un gran conjunto de métricas para los servicios del sistema de DAPR
 | dapr_http_server_request_count     | Tiempo de ejecución | Número de solicitudes HTTP iniciadas en un servidor HTTP.           |
 | dapr_http/Client/sent_bytes        | Tiempo de ejecución | Número total de bytes enviados en el cuerpo de la solicitud (sin incluir los encabezados) por un cliente HTTP. |
 
-Para más información sobre las métricas disponibles, consulte la [documentación de métricas de DAPR](https://docs.dapr.io/developing-applications/building-blocks/observability/metrics).
+Para más información sobre las métricas disponibles, consulte la [documentación de métricas de DAPR](https://docs.dapr.io/operations/monitoring/metrics/).
 
 #### <a name="configure-dapr-metrics"></a>Configuración de métricas de DAPR
 
@@ -312,7 +312,7 @@ Con las métricas de recopilación y publicación de la Prometheus de recortes e
 
 ![Panel de Grafana que muestra las métricas de servicios del sistema de DAPR](media/observability/grafana-sample.png)
 
-La documentación de DAPR incluye un [tutorial para la instalación de Prometheus y Grafana](https://docs.dapr.io/operations/monitoring/grafana/).
+La documentación de DAPR incluye un [tutorial para la instalación de Prometheus y Grafana](https://docs.dapr.io/operations/monitoring/metrics/grafana/).
 
 ### <a name="logging"></a>Registro
 
@@ -325,7 +325,7 @@ DAPR emite un registro estructurado. Cada entrada de registro tiene el formato s
 | Campo    | Descripción                                          | Ejemplo                             |
 | -------- | ---------------------------------------------------- | ----------------------------------- |
 | time     | Marca de tiempo con formato ISO8601                          | `2021-01-10T14:19:31.000Z`          |
-| level    | Nivel de la entrada ( `debug` \| `info` \| `warn` \| `error` )   | `info`                              |
+| Nivel    | Nivel de la entrada ( `debug` \| `info` \| `warn` \| `error` )   | `info`                              |
 | type     | Tipo de registro                                             | `log`                               |
 | msg      | Mensaje de registro                                          | `metrics server started on :62408/` |
 | scope    | Ámbito de registro                                        | `dapr.runtime`                      |
@@ -381,7 +381,7 @@ helm install dapr dapr/dapr --namespace dapr-system --set global.logAsJson=true
 
 #### <a name="collect-logs"></a>Recopilación de registros
 
-Los registros emitidos por DAPR se pueden alimentar en un back-end de supervisión para su análisis. Un recopilador de registros es un componente que recopila registros de un sistema y los envía a un back-end de supervisión. Un recopilador de registros conocido está [habituado](https://www.fluentd.org/). Consulte el [artículo sobre cómo configurar la búsqueda elástica y las Kibana en Kubernetes](https://docs.dapr.io/operations/monitoring/fluentd/) en la documentación de DAPR. En este artículo se incluyen instrucciones para configurar el recopilador de registros y la [pila de Elk](https://www.elastic.co/elastic-stack) (búsqueda elástica y Kibana) como un back-end de supervisión.
+Los registros emitidos por DAPR se pueden alimentar en un back-end de supervisión para su análisis. Un recopilador de registros es un componente que recopila registros de un sistema y los envía a un back-end de supervisión. Un recopilador de registros conocido está [habituado](https://www.fluentd.org/). Consulte el [artículo sobre cómo configurar la búsqueda elástica y las Kibana en Kubernetes](https://docs.dapr.io/operations/monitoring/logging/fluentd/) en la documentación de DAPR. En este artículo se incluyen instrucciones para configurar el recopilador de registros y la [pila de Elk](https://www.elastic.co/elastic-stack) (búsqueda elástica y Kibana) como un back-end de supervisión.
 
 ### <a name="health-status"></a>Estado de mantenimiento
 
