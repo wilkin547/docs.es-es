@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 222c92413bd12e1769376c0f6eef7e34d7d5182e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 1e5f7dec0476d0b7fbf09fa3b253d3d5dfedf426
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106571"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190377"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -32,17 +32,14 @@ Puede descargar el SDK de .NET más reciente de la [página de descargas de .NET
 Visual Basic 16.0/Visual Studio 2019, versión 16.0\
 Para las nuevas características, vea [Visual Basic 16.0](#visual-basic-160).
 
-Visual Basic 15.8/Visual Studio 2017, versión 15.8\
-Para consultar las nuevas características, vea [Visual Basic 15.8](#visual-basic-158).
-
 Visual Basic 15.5/Visual Studio 2017, versión 15.5\
 Para consultar las nuevas características, vea [Visual Basic 15.5](#visual-basic-155).
 
 Visual Basic 15.3/Visual Studio 2017, versión 15.3\
 Para consultar las nuevas características, vea [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017\
-Para consultar las nuevas características, vea [Visual Basic 2017](#visual-basic-2017).
+Visual Basic 15/Visual Studio 2017\
+Para consultar las nuevas características, vea [Visual Basic 2017](#visual-basic-15).
 
 Visual Basic/Visual Studio 2015\
 Para consultar las nuevas características, vea [Visual Basic 14](#visual-basic-14).
@@ -89,8 +86,6 @@ Public Sub Main()
         & "WHERE Publishers.State = 'CA'"
 End Sub
 ```
-
-## <a name="visual-basic-158"></a>Visual Basic 15.8
 
 **Punto flotante optimizado para la conversión de enteros**
 
@@ -166,7 +161,7 @@ Al asignar el valor de elementos de tupla desde variables, Visual Basic infiere 
 
 El compilador de línea de comandos de Visual Basic ahora admite las opciones de compilador [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) y [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) para controlar la salida de ensamblados de referencia. **-refout** define el directorio de salida del ensamblado de referencia y **-refonly** especifica que solo un ensamblado de referencia se transferirá por compilación.
 
-## <a name="visual-basic-2017"></a>Visual Basic 2017
+## <a name="visual-basic-15"></a>Visual Basic 15
 
 [**Tuplas**](../programming-guide/language-features/data-types/tuples.md)
 
