@@ -2,12 +2,12 @@
 title: Comando dotnet nuget add source
 description: El comando dotnet nuget add source agrega un nuevo origen de paquete a los archivos de configuración de NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: b847d987de2d88cb3452d32d1bc84232a1e20b6e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: df31a2eaba997d0e9fe4f4c2666052fd7c7c2f03
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537978"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105056"
 ---
 # <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
@@ -30,6 +30,9 @@ dotnet nuget add source -h|--help
 ## <a name="description"></a>Descripción
 
 El comando `dotnet nuget add source` agrega un nuevo origen de paquete a los archivos de configuración de NuGet.
+
+> [!WARNING]
+> Al agregar varios orígenes de paquete, tenga cuidado de no introducir una [vulnerabilidad de confusión de dependencias](https://aka.ms/pkg-sec-wp).
 
 ## <a name="arguments"></a>Argumentos
 

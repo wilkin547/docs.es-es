@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: 42a57334f9f3e50a4d3c3ec48d57d26357d57510
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: a35577841765f7e6d5d5e8220bf3951f81d65832
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439500"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258707"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Herramienta de exportación de metadatos de Windows Runtime)
 
@@ -19,7 +19,7 @@ La Herramienta de exportación de metadatos de Windows (Winmdexp.exe) transforma
   
  Cuando se utiliza la plantilla **Componente de Windows Runtime**, que se encuentra en la **Tienda Windows** para C# y Visual Basic en Visual Studio 2013 o Visual Studio 2012, el destino del compilador es un archivo .winmdobj, y en un paso de compilación subsiguiente llama a Winmdexp.exe para exportar el archivo .winmdobj a un archivo .winmd. Esta es la manera recomendada de crear un componente de Windows Runtime. Utilice Winmdexp.exe directamente si desea tener más control sobre el proceso de compilación que proporciona Visual Studio.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
   
  En el símbolo del sistema, escriba lo siguiente:  
   

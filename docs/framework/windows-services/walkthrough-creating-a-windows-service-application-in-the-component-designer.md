@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, walkthroughs
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-ms.openlocfilehash: bbf9ab7d06c952aa2e076fc36c71f37f1bb10884
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: b6e4937b71c50f887a7eb784bc9106360a05fdc2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608392"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259803"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Creación de una aplicación de servicio de Windows
 
@@ -470,9 +470,9 @@ Cada servicio de Windows tiene una entrada del Registro en la subclave **HKEY_LO
 
 Ahora que ha compilado el servicio de Windows, puede instalarlo. Para instalar un servicio de Windows, debe tener credenciales de administrador en el equipo en el que lo va a instalar.
 
-1. Abra un [Símbolo del sistema para desarrolladores para Visual Studio](../tools/developer-command-prompt-for-vs.md) con credenciales administrativas. En el menú **Inicio** de Windows, seleccione **Símbolo del sistema para desarrolladores de VS2017** en la carpeta de Visual Studio y haga clic en **Más** > **Ejecutar como Administrador** en el menú contextual.
+1. Abra un [Símbolo del sistema para desarrolladores para Visual Studio](/visualstudio/ide/reference/command-prompt-powershell) con credenciales administrativas.
 
-2. En la ventana **Developer Command Prompt for Visual Studio** (Símbolo del sistema para desarrolladores de Visual Studio), desplácese hasta la carpeta que contiene la salida del proyecto (de forma predeterminada, es el subdirectorio *\bin\Debug* del proyecto).
+2. En **Developer Command Prompt for Visual Studio** (Símbolo del sistema para desarrolladores de Visual Studio), desplácese hasta la carpeta que contiene la salida del proyecto (de forma predeterminada, es el subdirectorio *\bin\Debug* del proyecto).
 
 3. Escriba el comando siguiente:
 

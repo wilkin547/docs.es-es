@@ -3,12 +3,12 @@ title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: fb4a869fe67b3292ba430ea563bc2a072590adb2
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ba6f453123668248b2c65ee6a431cb16dfe74c46
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582151"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258408"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -79,7 +79,7 @@ Para configurar varios proyectos, se puede crear un archivo **Directory.Build.pr
 </Project>
 ```
 
-Las compilaciones de todos los subdirectorios del directorio que contenga ese archivo usarán la sintaxis de la versión preliminar de C#. Para obtener más información, consulte el artículo [Personalizar una compilación](/visualstudio/msbuild/customize-your-build).
+Las compilaciones de todos los subdirectorios del directorio que contenga ese archivo usarán la sintaxis de la versión preliminar de C#. Para obtener más información, consulte [Personalización de la compilación](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="c-language-version-reference"></a>Referencia de la versión del lenguaje C#
 
@@ -88,13 +88,13 @@ En la siguiente tabla se muestran las versiones actuales del lenguaje C#. Es pos
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
 > [!TIP]
-> Abra el [Símbolo del sistema para desarrolladores de Visual Studio](../../framework/tools/developer-command-prompt-for-vs.md) y ejecute el siguiente comando para ver la lista de versiones de idioma disponibles en la máquina.
+> Abra un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell) y ejecute el comando siguiente para ver la lista de versiones de idioma disponibles en la máquina.
 >
 > ```CMD
 > csc -langversion:?
 > ```
 >
-> Al cuestionar la opción de compilación [ -langversion ](compiler-options/langversion-compiler-option.md) de este modo, se imprimirá algo similar a lo siguiente:
+> Al consultar la opción de compilación [-langversion](compiler-options/langversion-compiler-option.md) de este modo, se imprimirá algo similar a lo siguiente:
 >
 > ```CMD
 > Supported language versions:

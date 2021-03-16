@@ -2,12 +2,12 @@
 title: 'Uso de tipos de registros: tutorial de C#'
 description: Obtenga información sobre cómo usar tipos de registros, compilar jerarquías de registros y cuándo elegir registros en lugar de clases.
 ms.date: 11/12/2020
-ms.openlocfilehash: 8a2cb6966ab4f93432723fd6f82618efa86b26aa
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 33075c4cafc9a91683960daa8101c9f1defaa36a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688562"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258961"
 ---
 # <a name="create-record-types"></a>Creación de tipos de registros
 
@@ -155,8 +155,8 @@ Ejecute la aplicación terminada para ver los resultados.
 
 ## <a name="summary"></a>Resumen
 
-En este tutorial se han mostrado varios aspectos de los registros. Los registros proporcionan una sintaxis concisa para los tipos de referencia cuyo uso fundamental es el almacenamiento de datos. En el caso de las clases orientadas a objetos, el uso fundamental es definir responsabilidades. Este tutorial se ha centrado en los *registros posicionales*, donde se puede usar una sintaxis concisa para declarar las propiedades init-only de un registro. El compilador sintetiza varios miembros del registro para copiar y comparar registros. Puede agregar cualquier otro miembro que necesite para sus tipos de registros. Puede crear tipos de registros inmutables sabiendo que ninguno de los miembros generados por el compilador mutaría su estado. En el caso de los registros posicionales, las expresiones `with` facilitan la compatibilidad con la mutación no destructiva.
+En este tutorial se han mostrado varios aspectos de los registros. Los registros proporcionan una sintaxis concisa para los tipos de referencia cuyo uso fundamental es el almacenamiento de datos. En el caso de las clases orientadas a objetos, el uso fundamental es definir responsabilidades. Este tutorial se ha centrado en los *registros posicionales*, donde se puede usar una sintaxis concisa para declarar las propiedades init-only de un registro. El compilador sintetiza varios miembros del registro para copiar y comparar registros. Puede agregar cualquier otro miembro que necesite para sus tipos de registros. Puede crear tipos de registros inmutables sabiendo que ninguno de los miembros generados por el compilador mutaría su estado. Además, las expresiones `with` facilitan la compatibilidad con la mutación no destructiva.
 
 Los registros presentan otra manera de definir tipos. Se usan definiciones `class` para crear jerarquías orientadas a objetos que se centran en las responsabilidades y el comportamiento de los objetos. Cree tipos `struct` para las estructuras de datos que almacenan datos y que son lo suficientemente pequeñas como para copiarse de forma eficaz. Los registros se crean si se quieren comparaciones e igualdad basadas en valores, no se quiere copiar valores y se quiere usar variables de referencia.
 
-Puede obtener la descripción completa de los registros si lee la [especificación de tipo de registro propuesta](~/_csharplang/proposals/csharp-9.0/records.md).
+Puede obtener una descripción completa de los registros en el [artículo de referencia del lenguaje C# para el tipo de registro](../../language-reference/builtin-types/record.md) y la [especificación de tipo de registro propuesta](~/_csharplang/proposals/csharp-9.0/records.md).

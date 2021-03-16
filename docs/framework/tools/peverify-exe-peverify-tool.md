@@ -11,18 +11,18 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: c859aa4e2e3ae95c5c72aed930a9bc4a05add296
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b51b01e639719df7ecfde53819e3137813f7c46f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238592"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259255"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (herramienta PEVerify)
 
 La herramienta PEVerify ayuda a los desarrolladores que generan lenguaje intermedio de Microsoft (MSIL) (como autores de compiladores y desarrolladores de motores de scripts) a determinar si el código MSIL y los metadatos asociados satisfacen los requisitos de seguridad de tipos. Algunos compiladores solo generan código con seguridad de tipos comprobable si se evita el uso de determinadas construcciones de lenguaje. Si utiliza un compilador con estas características, conviene que compruebe que no ha puesto en peligro la seguridad de tipos del código. Puede ejecutar la herramienta PEVerify en los archivos con el fin de comprobar el lenguaje MSIL y los metadatos.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -125,4 +125,4 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 - [Herramientas](index.md)
 - [Escritura de código con seguridad de tipos comprobable](../misc/code-access-security-basics.md#typesafe_code)
 - [Seguridad y protección de tipos](../../standard/security/key-security-concepts.md#type-safety-and-security)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

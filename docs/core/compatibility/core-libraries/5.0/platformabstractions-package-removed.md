@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Retirada del paquete Microsoft.DotNet.PlatformAbstractions'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET en las que se ha quitado el paquete Microsoft.DotNet.PlatformAbstractions.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET en las que se ha quitado el paquete Microsoft.DotNet.PlatformAbstractions.
 ms.date: 11/01/2020
-ms.openlocfilehash: 38ffe5e592d01c3bae14fc41becb594283b975a3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aff7be816815b016e3ce694c4e9a97410538c08d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760186"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257250"
 ---
 # <a name="microsoftdotnetplatformabstractions-package-removed"></a>Retirada del paquete Microsoft.DotNet.PlatformAbstractions
 
@@ -19,7 +19,7 @@ Anteriormente, junto a las nuevas versiones de .NET Core, también se producían
 
 La biblioteca <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> se superpone a las API que ya están establecidas en los espacios de nombres System.\* Además, algunas API <xref:Microsoft.DotNet.PlatformAbstractions> no se diseñaron con el mismo nivel de escrutinio y compatibilidad a largo plazo que el resto de las API System.\* . Por ejemplo, <xref:Microsoft.DotNet.PlatformAbstractions> usa la enumeración `Platform` para describir la plataforma actual del sistema operativo. Este diseño de enumeración se rechazó explícitamente cuando se diseñó la API <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform)?displayProperty=nameWithType> con el fin de admitir plataformas nuevas y favorecer la flexibilidad en el futuro.
 
-Los escenarios habilitados por la biblioteca <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> ahora son posibles sin la enumeración. Las versiones existentes seguirán funcionando, incluso en .NET 5.0 y versiones posteriores, y recibirán mantenimiento junto con las versiones anteriores de .NET Core. No obstante, no se agregarán nuevas funcionalidades a la biblioteca. En cambio, las otras bibliotecas y API sí recibirán nuevas funcionalidades.
+Los escenarios habilitados por la biblioteca <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> ahora son posibles sin la enumeración. Las versiones existentes seguirán funcionando, incluso en .NET 5 y versiones posteriores, y recibirán mantenimiento junto con las versiones anteriores de .NET Core. No obstante, no se agregarán nuevas funcionalidades a la biblioteca. En cambio, las otras bibliotecas y API sí recibirán nuevas funcionalidades.
 
 ## <a name="version-introduced"></a>Versión introducida
 

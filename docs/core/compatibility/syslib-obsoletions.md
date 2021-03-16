@@ -1,17 +1,17 @@
 ---
 title: Características obsoletas en .NET 5+
-description: Obtenga información sobre las API marcadas como obsoletas en .NET 5.0 y versiones posteriores que generan advertencias del compilador SYSLIB.
+description: Obtenga información sobre las API marcadas como obsoletas en .NET 5 y versiones posteriores que generan advertencias del compilador SYSLIB.
 ms.date: 10/20/2020
-ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: d6563f21624456d74801242268ecf72652fc4f88
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593310"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256288"
 ---
 # <a name="obsolete-features-in-net-5"></a>Características obsoletas en .NET 5
 
-A partir de .NET 5.0, algunas API recién marcadas como obsoletas usan dos nuevas propiedades en <xref:System.ObsoleteAttribute>.
+A partir de .NET 5, algunas API recién marcadas como obsoletas usan dos nuevas propiedades en <xref:System.ObsoleteAttribute>.
 
 - La propiedad <xref:System.ObsoleteAttribute.DiagnosticId?displayProperty=nameWithType> indica al compilador que genere advertencias de compilación mediante un identificador de diagnóstico personalizado. El identificador personalizado permite que las advertencias de obsolescencia se supriman específicamente y de forma independiente entre sí. En el caso de las obsolescencias de .NET 5+, el formato del identificador de diagnóstico personalizado es `SYSLIBxxxx`.
 

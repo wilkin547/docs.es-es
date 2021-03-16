@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-ms.openlocfilehash: 949f9cf98d5eb4e100be9837be120038f085cc40
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: d9c028507c19ef8599e58b38dcdf15af2ede1dee
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167121"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259283"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visor de registro de enlaces de ensamblados)
 
@@ -24,17 +24,30 @@ El Visor de registro de enlaces de ensamblados es una herramienta que muestra lo
 > [!IMPORTANT]
 > Debe ejecutar fuslogvw.exe con privilegios de administrador.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7) con credenciales de administrador. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell) con credenciales de administrador.
 
-En el símbolo del sistema, escriba lo siguiente:
+En el símbolo del sistema, escriba el siguiente comando:
 
 ```console
 fuslogvw
 ```
 
-El visor muestra una entrada para cada enlace de ensamblado con errores. Para cada error, el visor describe la aplicación en la que se inició el enlace; el ensamblado para el que se realiza el enlace, incluidos el nombre, la versión, la referencia cultural y la clave pública; y la fecha y la hora del error.
+El visor muestra una entrada para cada enlace de ensamblado con errores. Para cada error, el visor describe:
 
-### <a name="to-change-the-log-location-view"></a>Para cambiar la vista de la ubicación del registro
+- la aplicación que inició el enlace,
+- el ensamblado con el que se va a enlazar, incluidos el nombre, la versión, la referencia cultural y la clave pública y
+- la fecha y hora del error.
+
+## <a name="how-to"></a>Cómo…
+
+- [Cambiar la vista de la ubicación del registro](#change-the-log-location-view)
+- [Ver los detalles de un error específico](#view-details-about-a-specific-failure)
+- [Eliminar entradas](#delete-entries)
+- [Actualizar la interfaz de usuario](#refresh-the-user-interface)
+- [Cambiar la configuración de registro](#change-the-log-settings)
+- [Ver el cuadro de diálogo Acerca de](#view-the-about-dialog)
+
+### <a name="change-the-log-location-view"></a>Cambiar la vista de la ubicación del registro
 
 1. Seleccione el botón de opción **Predeterminado** para ver los errores de enlaces de todos los tipos de aplicaciones. De forma predeterminada, las entradas del registro se almacenan por directorios de usuario en la memoria caché wininet del disco.
 
@@ -43,7 +56,7 @@ El visor muestra una entrada para cada enlace de ensamblado con errores. Para ca
     > [!NOTE]
     > Es preferible usar la ubicación de enlace predeterminada en lugar de la ubicación de enlace personalizada. El runtime almacena la ubicación de enlace predeterminada en la memoria caché wininet que, de esta forma, se limpia automáticamente. Si especifica una ubicación de enlace personalizada, es responsabilidad suya limpiarla.
 
-### <a name="to-view-details-about-a-specific-failure"></a>Para ver los detalles de un error específico
+### <a name="view-details-about-a-specific-failure"></a>Ver los detalles de un error específico
 
 1. Seleccione en el visor el nombre de la aplicación de la entrada que desea ver.
 
@@ -97,33 +110,35 @@ LOG: Attempting download of new URL file:///C:/Program Files/Microsoft.NET/Frame
 LOG: All probing URLs attempted and failed.
 ```
 
-### <a name="to-delete-a-single-entry-from-the-log"></a>Para eliminar una entrada del registro
+### <a name="delete-entries"></a>Eliminar entradas
+
+Para eliminar una entrada del registro:
 
 1. Seleccione la entrada en el visor.
 
 2. Haga clic en el botón **Eliminar entrada**.
 
-### <a name="to-delete-all-entries-from-the-log"></a>Para eliminar todas las entradas del registro
+Para eliminar todas las entradas del registro:
 
 - Haga clic en el botón **Eliminar todo**.
 
-### <a name="to-refresh-the-user-interface"></a>Para actualizar la interfaz de usuario
+### <a name="refresh-the-user-interface"></a>Actualizar la interfaz de usuario
 
 - Haga clic en el botón **Actualizar**. Mientras se ejecuta, el visor no detecta automáticamente las entradas nuevas del registro. Debe usar el botón **Actualizar** para mostrarlas.
 
-### <a name="to-change-the-log-settings"></a>Para cambiar la configuración de registro
+### <a name="change-the-log-settings"></a>Cambiar la configuración de registro
 
-- Haga clic en el botón **Configuración** para abrir el cuadro de diálogo **Configuración de registro**.
+Haga clic en el botón **Configuración** para abrir el cuadro de diálogo **Configuración de registro**.
 
-### <a name="to-view-the-about-dialog"></a>Para ver el cuadro de diálogo Acerca de
+### <a name="view-the-about-dialog"></a>Ver el cuadro de diálogo Acerca de
 
-- Haga clic en el botón **Acerca de**.
+Haga clic en el botón **Acerca de**.
 
 ## <a name="binding-logs-for-native-images"></a>Registros de enlaces de las imágenes nativas
 
 De forma predeterminada, Fuslogvw.exe registra las solicitudes de enlace de ensamblado normales. También tiene la opción de registrar los enlaces de ensamblado de las imágenes nativas creadas mediante [Ngen.exe (Generador de imágenes nativas)](ngen-exe-native-image-generator.md).
 
-#### <a name="to-log-assembly-binds-for-native-images"></a>Para registrar los enlaces de ensamblado de las imágenes nativas
+### <a name="log-assembly-binds-for-native-images"></a>Registrar los enlaces de ensamblado de las imágenes nativas
 
 - En el grupo **Categorías de registro**, seleccione el botón de opción **Imágenes nativas**.
 
@@ -185,23 +200,23 @@ Discarding native image.
 
 Puede usar el cuadro de diálogo **Configuración de registro** para realizar las acciones siguientes.
 
-#### <a name="to-disable-logging"></a>Para deshabilitar el registro
+### <a name="to-disable-logging"></a>Para deshabilitar el registro
 
 - Seleccione el botón de opción **Registro deshabilitado**.  Tenga en cuenta que esta opción está seleccionada de forma predeterminada.
 
-#### <a name="to-log-assembly-binds-in-exceptions"></a>Para registrar enlaces de ensamblado en excepciones
+### <a name="to-log-assembly-binds-in-exceptions"></a>Para registrar enlaces de ensamblado en excepciones
 
 - Seleccione el botón de opción **Registrar texto de excepciones**. En el texto de excepciones solo se registra la información de registro de Fusion menos detallada. Para ver toda la información, use cualquier otra opción.
 
   Vea la nota Importante referente a los ensamblados que se cargan como dominios neutros.
 
-#### <a name="to-log-assembly-bind-failures"></a>Para registrar los errores de enlace de ensamblado
+### <a name="to-log-assembly-bind-failures"></a>Para registrar los errores de enlace de ensamblado
 
 - Seleccione el botón de opción **Registrar errores de enlace en el disco**.
 
   Vea la nota Importante referente a los ensamblados que se cargan como dominios neutros.
 
-#### <a name="to-log-all-assembly-binds"></a>Para registrar todos los enlaces de ensamblado
+### <a name="to-log-all-assembly-binds"></a>Para registrar todos los enlaces de ensamblado
 
 - Seleccione el botón de opción **Registrar todos los enlaces en el disco**.
 
@@ -210,7 +225,7 @@ Puede usar el cuadro de diálogo **Configuración de registro** para realizar la
 > [!IMPORTANT]
 > Cuando se carga un ensamblado como dominio neutro, por ejemplo, mediante el establecimiento de la propiedad <xref:System.AppDomainSetup.LoaderOptimization%2A> en <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> o <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, en algunos casos la activación del registro puede originar pérdidas de memoria. Esto puede suceder si se realiza una entrada de registro al cargar un módulo con dominio neutro en un dominio de aplicación y, posteriormente, se descarga el dominio de aplicación. Puede ocurrir que la entrada de registro no se libere hasta que finalice el proceso. Algunos depuradores activan automáticamente el registro.
 
-#### <a name="to-enable-a-custom-log-path"></a>Para habilitar una ruta de acceso de registro personalizada
+### <a name="to-enable-a-custom-log-path"></a>Para habilitar una ruta de acceso de registro personalizada
 
 1. Seleccione el botón de opción **Habilitar ruta de acceso de registro personalizada**.
 
@@ -219,9 +234,9 @@ Puede usar el cuadro de diálogo **Configuración de registro** para realizar la
 > [!NOTE]
 > El [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) usa la memoria caché de Internet Explorer (IE) para almacenar el registro de enlaces. Debido a daños ocasionales en la memoria caché de IE, a veces el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) deja de mostrar los nuevos registros de enlaces en la ventana de visualización. Como consecuencia de estos daños, la infraestructura de enlaces (Fusion) de .NET no puede escribir en el registro de enlaces ni leerlo. (Este problema no aparece si se usa una ruta de acceso de registro personalizada).  Para corregir los daños y permitir que Fusion vuelva a mostrar los registros de enlaces, borre la memoria caché de IE; para ello, elimine los archivos temporales de Internet en el cuadro de diálogo Opciones de Internet de Internet Explorer.
 >
-> Si la aplicación no administrada hospeda Common Language Runtime mediante la implementación de las interfaces `IHostAssemblyManager` e `IHostAssemblyStore`, las entradas de registro no pueden almacenarse en la memoria caché de wininet.  Para ver las entradas de registro para los host personalizados que implementan estas interfaces, debe especificar otra ruta de acceso de registro.
+> Si la aplicación no administrada hospeda Common Language Runtime mediante la implementación de las interfaces `IHostAssemblyManager` e `IHostAssemblyStore`, las entradas de registro no pueden almacenarse en la memoria caché de wininet. Para ver las entradas de registro para los host personalizados que implementan estas interfaces, debe especificar otra ruta de acceso de registro.
 
-#### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Para habilitar el registro para las aplicaciones que se ejecutan en el contenedor de la aplicación de Windows
+### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Para habilitar el registro para las aplicaciones que se ejecutan en el contenedor de la aplicación de Windows
 
 1. Habilite una ruta de acceso de registro personalizada, tal y como se describe en el procedimiento anterior. De forma predeterminada, las aplicaciones que se ejecutan en el contenedor de la aplicación de Windows tienen acceso limitado al disco duro. El directorio especificado tendrá acceso de lectura y escritura para todas las aplicaciones del contenedor de la aplicación.
 
@@ -236,4 +251,4 @@ Puede usar el cuadro de diálogo **Configuración de registro** para realizar la
 - [Herramientas](index.md)
 - [Caché global de ensamblados](../app-domains/gac.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

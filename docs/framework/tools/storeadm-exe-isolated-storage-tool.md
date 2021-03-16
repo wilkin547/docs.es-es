@@ -9,18 +9,18 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 974f3c464ff686a486657d08e77c97299cc94732
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e6c2fc15ba2b6fef27bb57344628638a99103916
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283840"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258743"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (herramienta de almacenamiento aislado)
 
 La herramienta de almacenamiento aislado incluye o quita todos los almacenes existentes del usuario actual.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -65,4 +65,4 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 
 - [Herramientas](index.md)
 - [Almacenamiento aislado](../../standard/io/isolated-storage.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

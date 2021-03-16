@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: CA1417: OutAttribute en parámetros de cadena para P/Invoke'
-description: Obtenga información sobre el cambio importante en .NET 5.0 causado por la habilitación de la regla de análisis de código CA1417.
+description: Obtenga información sobre el cambio importante en .NET 5 causado por la habilitación de la regla de análisis de código CA1417.
 ms.date: 09/29/2020
-ms.openlocfilehash: 3316d07108ec7f9da985494413336cba6d560dc9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74aa6dc867bc1eb62e32dd086dd6b43f62e7f01f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760092"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257835"
 ---
 # <a name="warning-ca1417-outattribute-on-string-parameter-for-pinvoke"></a>Advertencia CA1417: OutAttribute en parámetros de cadena para P/Invoke
 
@@ -15,7 +15,7 @@ La regla [CA1417](/visualstudio/code-quality/ca1417) del analizador de código d
 
 ## <a name="change-description"></a>Descripción del cambio
 
-A partir de .NET 5.0, el SDK de .NET incluye [analizadores de código fuente de .NET](../../../../fundamentals/code-analysis/overview.md). Varias de estas reglas están habilitadas de forma predeterminada, incluida la regla [CA1417](/visualstudio/code-quality/ca1417). Si el proyecto contiene código que infringe esta regla y está configurado para tratar las advertencias como errores, este cambio podría interrumpir la compilación.
+A partir de .NET 5, el SDK de .NET incluye [analizadores de código fuente de .NET](../../../../fundamentals/code-analysis/overview.md). Varias de estas reglas están habilitadas de forma predeterminada, incluida la regla [CA1417](/visualstudio/code-quality/ca1417). Si el proyecto contiene código que infringe esta regla y está configurado para tratar las advertencias como errores, este cambio podría interrumpir la compilación.
 
 La regla CA1417 marca las definiciones del método [P/Invoke](../../../../standard/native-interop/pinvoke.md) en las que un parámetro <xref:System.String> está marcado con el atributo <xref:System.Runtime.InteropServices.OutAttribute> y se pasa por valor. Por ejemplo:
 

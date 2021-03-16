@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 6567a4c738b3d6c8f14d1ab13ba005cb22bb7328
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d26443d07dd76d8d18e0d21112d1e40de5b83c83
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247309"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258289"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)
 
@@ -33,7 +33,7 @@ La herramienta de la directiva de seguridad de acceso del código (CAS), o herra
 > [!NOTE]
 > Los equipos de 64 bits incluyen las versiones de 64 bits y de 32 bits de la directiva de seguridad. Para asegurarse de que los cambios en la directiva se aplican a las aplicaciones de 32 bits y 64 bits, ejecute las dos versiones de Caspol.exe, la 32 bits y la de 64 bits.  
   
- La herramienta de la directiva de seguridad de acceso del código se instala automáticamente con .NET Framework y con Visual Studio. Puede encontrar Caspol.exe en %windir%\Microsoft.NET\Framework\\*versión* en los sistemas de 32 bits o en %windir%\Microsoft.NET\Framework64\\*versión* en los sistemas de 64 bits. (Por ejemplo, la ubicación es %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe para .NET Framework 4 en un sistema de 64 bits). Si en el equipo se ejecutan varias versiones de .NET Framework en paralelo, es posible que haya varias versiones de la herramienta instaladas. Puede ejecutar la herramienta desde el directorio de instalación. Sin embargo, se recomienda usar los [símbolos del sistema](developer-command-prompt-for-vs.md), que no requiere navegar hasta la carpeta de instalación.  
+ La herramienta de la directiva de seguridad de acceso del código se instala automáticamente con .NET Framework y con Visual Studio. Puede encontrar Caspol.exe en %windir%\Microsoft.NET\Framework\\*versión* en los sistemas de 32 bits o en %windir%\Microsoft.NET\Framework64\\*versión* en los sistemas de 64 bits. (Por ejemplo, la ubicación es %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe para .NET Framework 4 en un sistema de 64 bits). Si en el equipo se ejecutan varias versiones de .NET Framework en paralelo, es posible que haya varias versiones de la herramienta instaladas. Puede ejecutar la herramienta desde el directorio de instalación. Sin embargo, se recomienda usar un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell), que no requiere navegar hasta la carpeta de instalación.  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -255,4 +255,4 @@ caspol -all -resolveperm testassembly
 ## <a name="see-also"></a>Vea también
 
 - [Herramientas](index.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

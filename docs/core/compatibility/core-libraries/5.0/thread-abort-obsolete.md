@@ -1,23 +1,23 @@
 ---
 title: 'Cambio importante: Thread.Abort obsoleto'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde las API Thread.Abort están obsoletas.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde las API Thread.Abort están obsoletas.
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d7dfce8fda393bfd88c9b4cf0c59d53942cee25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 29c688250593801bab9b32b9e787911e561ec000
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760116"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257068"
 ---
 # <a name="threadabort-is-obsolete"></a>Thread.Abort obsoleto
 
-Las API de <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> están obsoletas. Los proyectos que tienen como destino .NET 5.0 o una versión posterior detectan advertencias en tiempo de compilación `SYSLIB0006` si se llama a estos métodos.
+Las API de <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> están obsoletas. Los proyectos que tienen como destino .NET 5 o una versión posterior detectan advertencias en tiempo de compilación `SYSLIB0006` si se llama a estos métodos.
 
 ## <a name="change-description"></a>Descripción del cambio
 
 Anteriormente, las llamadas a <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> no producían advertencias en tiempo de compilación, pero el método sí producía una excepción <xref:System.PlatformNotSupportedException> en tiempo de ejecución.
 
-A partir de .NET 5.0, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> está marcado como obsoleto como advertencia. La llamada a este método produce la advertencia del compilador `SYSLIB0006`. La implementación del método no cambia y continúa generando una excepción <xref:System.PlatformNotSupportedException>.
+A partir de .NET 5, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> está marcado como obsoleto como advertencia. La llamada a este método produce la advertencia del compilador `SYSLIB0006`. La implementación del método no cambia y continúa generando una excepción <xref:System.PlatformNotSupportedException>.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

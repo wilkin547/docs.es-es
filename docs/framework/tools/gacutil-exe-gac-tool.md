@@ -18,18 +18,18 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-ms.openlocfilehash: 1fe79a09aa99c9d91d8223e7642408a56da20dfe
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3cdc9e2b07ad176f2a46aa419920d5fa3f47f6e7
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166936"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259256"
 ---
-# <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Herramienta Caché global de ensamblados)
+# <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (herramienta de la caché global de ensamblados)
 
 La herramienta Caché global de ensamblados permite ver y manipular el contenido de la caché global de ensamblados y la memoria caché de descarga.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -182,4 +182,4 @@ gacutil /l
 - [Herramientas](index.md)
 - [Caché global de ensamblados](../app-domains/gac.md)
 - [Regasm.exe (Herramienta de registro de ensamblados)](regasm-exe-assembly-registration-tool.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

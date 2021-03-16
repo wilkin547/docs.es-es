@@ -3,12 +3,12 @@ title: Descartes - Guía de C#
 description: Describe la compatibilidad de C# con descartes, que son variables sin asignar y descartables, así como las maneras en que pueden usarse.
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 3c18fbb0bbb80c2c29c9f5d8334a5dd711b68cc5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: eefa81d3bd8d56c9296e01533aaf93c4725323a3
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432639"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104957"
 ---
 # <a name="discards---c-guide"></a>Descartes - Guía de C#
 
@@ -42,9 +42,9 @@ Para obtener más información sobre la deconstrucción de tipos definidos por e
 
 ## <a name="pattern-matching-with-switch"></a>Coincidencia de patrones con `switch`
 
-El *patrón de descarte* se puede usar en la coincidencia de patrones con la palabra clave [switch](language-reference/keywords/switch.md). Todas las expresiones siempre coinciden con el patrón de descarte. (Se puede utilizar con expresiones [is](language-reference/keywords/is.md). Sin embargo, ese uso es poco frecuente porque el descarte se puede quitar sin cambiar su significado).
+El *patrón de descarte* se puede usar en la coincidencia de patrones con la [expresión switch](language-reference/operators/switch-expression.md). Todas las expresiones, incluida `null`, siempre coinciden con el patrón de descarte.
 
-En el ejemplo siguiente se define un método `ProvidesFormatInfo` que usa instrucciones [is](language-reference/keywords/is.md) para determinar si un objeto proporciona una implementación de <xref:System.IFormatProvider> y probar si el objeto es `null`. También se usa el patrón de descarte para controlar los objetos que no son NULL de cualquier otro tipo.
+En el ejemplo siguiente se define un método `ProvidesFormatInfo` que usa una expresión `switch` para determinar si un objeto proporciona una implementación de <xref:System.IFormatProvider> y probar si el objeto es `null`. También se usa el patrón de descarte para controlar los objetos que no son NULL de cualquier otro tipo.
 
 :::code language="csharp" source="snippets/discards/discard-pattern2.cs" ID="DiscardSwitchExample" :::
 

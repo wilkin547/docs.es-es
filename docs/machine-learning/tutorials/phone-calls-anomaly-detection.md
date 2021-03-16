@@ -4,12 +4,12 @@ description: Aprenda a crear una aplicación de detección de anomalías para lo
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f001cb912bb695a7edb0917f3306ca9bfbe311ac
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 7edb84ae53f1da7903cf4b3f77d215206ffbf1ef
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187787"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259829"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>Tutorial: Detección de anomalías en series temporales con ML.NET
 
@@ -32,7 +32,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
-1. Cree una **aplicación de consola de .NET Core en C#** denominada "ProductSalesAnomalyDetection".
+1. Cree una **aplicación de consola de .NET Core en C#** denominada "PhoneCallsAnomalyDetection".
 
 2. Cree un directorio denominado *Datos* en el proyecto para guardar los archivos de conjunto de datos.
 

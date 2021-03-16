@@ -1,5 +1,5 @@
 ---
-title: Reglas de formato de estilo de código
+title: Reglas de formato del estilo de código
 description: Obtenga información sobre las reglas de estilo de código para aplicar sangrías, espacios y nuevas líneas.
 ms.date: 09/25/2020
 ms.topic: reference
@@ -16,33 +16,33 @@ helpviewer_keywords:
 - formatting code style rules [EditorConfig]
 - formatting rules
 - EditorConfig formatting conventions
-ms.openlocfilehash: 61e6f6a6afdc6aaf9710eef3143af8ae700ef612
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
-ms.translationtype: MT
+ms.openlocfilehash: 866949692341f65a5b78c7dd5b8eec918873d3b7
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96594403"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511806"
 ---
 # <a name="formatting-rules"></a>Reglas de formato
 
-Las reglas de formato afectan a cómo se alinean la sangría, los espacios y las nuevas líneas alrededor de las construcciones del lenguaje de programación .NET. Las reglas se dividen en las siguientes categorías:
+Las reglas de formato afectan a cómo se alinean la sangría, los espacios y las nuevas líneas alrededor de las construcciones del lenguaje de programación .NET. La reglas se dividen en las siguientes categorías:
 
-- [Reglas de formato .net](#net-formatting-rules): reglas que se aplican a C# y Visual Basic. Los nombres de las opciones de EditorConfig para estas reglas comienzan con el `dotnet_` prefijo.
-- [Reglas de formato de c#](#c-formatting-rules): reglas que son específicas del lenguaje C# únicamente. Los nombres de las opciones de EditorConfig para estas reglas comienzan con el `csharp_` prefijo.
+- [Reglas de formato de .NET](#net-formatting-rules): reglas que se aplican a C# y Visual Basic. Los nombres de las opciones de EditorConfig para estas reglas comienzan con el prefijo `dotnet_`.
+- [Reglas de formato de C#](#c-formatting-rules): reglas que son específicas del lenguaje C# únicamente. Los nombres de las opciones de EditorConfig para estas reglas comienzan con el prefijo `csharp_`.
 
-## <a name="rule-id-ide0055-fix-formatting"></a>IDENTIFICADOR de regla: "IDE0055" (corregir formato)
+## <a name="rule-id-ide0055-fix-formatting"></a>Id. de regla: "IDE0055" (corregir formato)
 
-Todas las opciones de formato tienen el identificador `IDE0055` y el título de la regla `Fix formatting` . Establezca la gravedad de una infracción de formato en un archivo EditorConfig mediante la siguiente línea de configuración.
+Todas las opciones de formato tienen el identificador de regla `IDE0055` y el título `Fix formatting`. Establezca la gravedad de una infracción de formato en un archivo EditorConfig mediante la siguiente línea de configuración.
 
 ```ini
 dotnet_diagnostic.IDE0055.severity = <severity value>
 ```
 
-El valor de gravedad debe ser o aplicarse `warning` `error` en la [compilación](../overview.md#code-style-analysis). Para obtener todos los valores de gravedad posibles, consulte [nivel de gravedad](../configuration-options.md#severity-level).
+El valor de gravedad debe ser `warning` o `error` para que [se aplique en la compilación](../overview.md#code-style-analysis). Para consultar todos los valores de gravedad posibles, vea [Nivel de gravedad](../configuration-options.md#severity-level).
 
 ## <a name="option-format"></a>Formato de opción
 
-Las opciones de formato de reglas se pueden especificar en un archivo EditorConfig con el siguiente formato:
+Las opciones de las reglas de formato se pueden especificar en un archivo EditorConfig con el siguiente formato:
 
 `rule_name = value`
 
@@ -50,7 +50,7 @@ Para muchas reglas, especificará `true` (se prefiere este estilo) o `false` (no
 
 ## <a name="net-formatting-rules"></a>Reglas de formato de .NET
 
-Las reglas de formato de esta sección se aplican a C# y Visual Basic.
+Las reglas de formato de esta sección se aplican a C# y Visual Basic.
 
 - [Organización de instrucciones Using](#organize-using-directives)
   - dotnet_sort_system_directives_first
@@ -71,12 +71,12 @@ dotnet_separate_import_directive_groups = true
 
 #### <a name="dotnet_sort_system_directives_first"></a>dotnet\_sort\_system\_directives_first
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | dotnet_sort_system_directives_first |
+| **Nombre de la opción** | dotnet_sort_system_directives_first |
 | **Lenguajes aplicables** | C# y Visual Basic |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
-| **Valores de opción** | `true` -Ordenar las `System.*` `using` directivas alfabéticamente y colocarlas antes que otras directivas using.<br /><br />`false` -No coloque `System.*` `using` Directivas antes de otras `using` directivas. |
+| **Valores de opción** | `true`: se ordenan alfabéticamente las directivas `System.*` `using` y se colocan antes que cualquier otra directiva using.<br /><br />`false`: no se colocan las directivas `System.*` `using` antes que otras directivas `using`. |
 
 Ejemplos de código:
 
@@ -94,9 +94,9 @@ using System.Threading.Tasks;
 
 #### <a name="dotnet_separate_import_directive_groups"></a>dotnet\_separate\_import\_directive\_groups
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | dotnet_separate_import_directive_groups |
+| **Nombre de la opción** | dotnet_separate_import_directive_groups |
 | **Lenguajes aplicables** | C# y Visual Basic |
 | **Versión introducida** | Versión 15.5 de Visual Studio 2017 |
 | **Valores de opción** | `true`: coloque una línea en blanco entre grupos de directivas `using`.<br /><br />`false`: no coloque una línea en blanco entre grupos de directivas `using`. |
@@ -186,9 +186,9 @@ csharp_new_line_between_query_expression_clauses = true
 
 Esta regla se refiere a si se debe colocar una llave de apertura `{` en la misma línea que el código anterior, o en una línea nueva. Para esta regla, se especifica **all**, **none** o uno o varios elementos de código como **methods** o **properties** para definir cuándo se debe aplicar esta regla. Para especificar varios elementos de código, sepárelos con una coma (,).
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_new_line_before_open_brace |
+| **Nombre de la opción** | csharp_new_line_before_open_brace |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `all`: se requiere que las llaves estén en una nueva línea para todas las expresiones (estilo "Allman").<br /><br />`none`: se requiere que las llaves estén en una nueva línea para todas las expresiones ("K&R").<br /><br />`accessors`, `anonymous_methods`, `anonymous_types`, `control_blocks`, `events`, `indexers`, `lambdas`, `local_functions`, `methods`, `object_collection_array_initializers`, `properties`, `types`: se requiere que las llaves estén en una línea nueva para el elemento de código especificado (estilo "Allman"). |
@@ -215,9 +215,9 @@ void MyMethod() {
 
 #### <a name="csharp_new_line_before_else"></a>csharp\_new\_line\_before_else
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_new_line_before_else |
+| **Nombre de la opción** | csharp_new_line_before_else |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: las instrucciones `else` se colocan en una nueva línea.<br /><br />`false`: las instrucciones `else` se colocan en la misma línea. |
@@ -243,9 +243,9 @@ if (...) {
 
 #### <a name="csharp_new_line_before_catch"></a>csharp\_new\_line\_before_catch
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_new_line_before_catch |
+| **Nombre de la opción** | csharp_new_line_before_catch |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: las instrucciones `catch` se colocan en una nueva línea.<br /><br />`false`: las instrucciones `catch` se colocan en la misma línea. |
@@ -271,9 +271,9 @@ try {
 
 #### <a name="csharp_new_line_before_finally"></a>csharp\_new\_line\_before_finally
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_new_line_before_finally |
+| **Nombre de la opción** | csharp_new_line_before_finally |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se requiere que las instrucciones `finally` estén en una nueva línea después de la llave de cierre.<br /><br />`false`: se requiere que las instrucciones `finally` estén en la misma línea que la llave de cierre. |
@@ -304,9 +304,9 @@ try {
 
 #### <a name="csharp_new_line_before_members_in_object_initializers"></a>csharp\_new\_line\_before\_members\_in\_object_initializers
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_new_line_before_members_in_object_initializers |
+| **Nombre de la opción** | csharp_new_line_before_members_in_object_initializers |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se requiere que los miembros de inicializadores de objeto estén en líneas independientes.<br /><br />`false`: se requiere que los miembros de inicializadores de objeto estén en la misma línea. |
@@ -330,9 +330,9 @@ var z = new B()
 
 #### <a name="csharp_new_line_before_members_in_anonymous_types"></a>csharp\_new\_line\_before\_members\_in\_anonymous_types
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_new_line_before_members_in_anonymous_types |
+| **Nombre de la opción** | csharp_new_line_before_members_in_anonymous_types |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se requiere que los miembros de tipos anónimos estén en líneas independientes.<br /><br />`false`: se requiere que los miembros de tipos anónimos estén en la misma línea. |
@@ -356,9 +356,9 @@ var z = new
 
 #### <a name="csharp_new_line_between_query_expression_clauses"></a>csharp_new_line_between_query_expression_clauses
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_new_line_between_query_expression_clauses |
+| **Nombre de la opción** | csharp_new_line_between_query_expression_clauses |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se requiere que los elementos de las cláusulas de la expresión de consulta estén en líneas independientes.<br /><br />`false`: se requiere que los elementos de las cláusulas de la expresión de consulta estén en la misma línea. |
@@ -395,9 +395,9 @@ csharp_indent_case_contents_when_block = true
 
 #### <a name="csharp_indent_case_contents"></a>csharp\_indent\_case_contents
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_indent_case_contents |
+| **Nombre de la opción** | csharp_indent_case_contents |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: aplicar sangría al contenido del caso `switch`.<br /><br />`false`: no aplicar sangría al contenido del caso `switch`. |
@@ -437,9 +437,9 @@ switch(c) {
 
 #### <a name="csharp_indent_switch_labels"></a>csharp\_indent\_switch_labels
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_indent_switch_labels |
+| **Nombre de la opción** | csharp_indent_switch_labels |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: aplicar sangría a etiquetas `switch`.<br /><br />`false`: no aplicar sangría a etiquetas `switch`. |
@@ -476,9 +476,9 @@ default:
 
 #### <a name="csharp_indent_labels"></a>csharp\_indent_labels
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_indent_labels |
+| **Nombre de la opción** | csharp_indent_labels |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `flush_left`: las etiquetas se colocan en la primera columna de la izquierda.<br /><br />`one_less_than_current`: las etiquetas se colocan una sangría menos que el contexto actual.<br /><br />`no_change`: las etiquetas se colocan en la misma sangría que el contexto actual. |
@@ -528,9 +528,9 @@ class C
 
 #### <a name="csharp_indent_block_contents"></a>csharp_indent_block_contents
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_indent_block_contents |
+| **Nombre de la opción** | csharp_indent_block_contents |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true` - <br /><br />`false` -  |
 
@@ -552,9 +552,9 @@ Console.WriteLine("Hello");
 
 #### <a name="csharp_indent_braces"></a>csharp_indent_braces
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_indent_braces |
+| **Nombre de la opción** | csharp_indent_braces |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true` - <br /><br />`false` -  |
 
@@ -576,9 +576,9 @@ static void Hello()
 
 #### <a name="csharp_indent_case_contents_when_block"></a>csharp_indent_case_contents_when_block
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_indent_case_contents_when_block |
+| **Nombre de la opción** | csharp_indent_case_contents_when_block |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true` - <br /><br />`false` -  |
 
@@ -635,9 +635,9 @@ csharp_space_between_square_brackets = false
 
 #### <a name="csharp_space_after_cast"></a>csharp\_space\_after_cast
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_after_cast |
+| **Nombre de la opción** | csharp_space_after_cast |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se inserta un carácter de espacio entre una conversión y el valor<br /><br />`false`: se quita el espacio entre la conversión y el valor |
@@ -654,9 +654,9 @@ int y = (int)x;
 
 #### <a name="csharp_space_after_keywords_in_control_flow_statements"></a>csharp_space_after_keywords_in_control_flow_statements
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_after_keywords_in_control_flow_statements |
+| **Nombre de la opción** | csharp_space_after_keywords_in_control_flow_statements |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se inserta un carácter de espacio después de una palabra clave en una instrucción de flujo de control como un bucle `for`<br /><br />`false`: se quita el espacio después de una palabra clave en una instrucción de flujo de control como un bucle `for` |
@@ -673,9 +673,9 @@ for(int i;i<x;i++) { ... }
 
 #### <a name="csharp_space_between_parentheses"></a>csharp_space_between_parentheses
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_parentheses |
+| **Nombre de la opción** | csharp_space_between_parentheses |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `control_flow_statements`: se inserta un espacio entre los paréntesis de instrucciones de flujo de control.<br /><br />`expressions`: se inserta un espacio entre los paréntesis de expresiones.<br /><br />`type_casts`: se inserta un espacio entre los paréntesis de las conversiones de tipos. |
@@ -697,9 +697,9 @@ int y = ( int )x;
 
 #### <a name="csharp_space_before_colon_in_inheritance_clause"></a>csharp\_space\_before\_colon\_in\_inheritance_clause
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_before_colon_in_inheritance_clause |
+| **Nombre de la opción** | csharp_space_before_colon_in_inheritance_clause |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.7 |
 | **Valores de opción** | `true`: se inserta un carácter de espacio antes de los dos puntos para las bases o interfaces de una declaración de tipos<br /><br />`false`: se quita el espacio antes de los dos puntos para las bases o interfaces de una declaración de tipos |
@@ -732,9 +732,9 @@ class C: I
 
 #### <a name="csharp_space_after_colon_in_inheritance_clause"></a>csharp\_space\_after\_colon\_in\_inheritance_clause
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_after_colon_in_inheritance_clause |
+| **Nombre de la opción** | csharp_space_after_colon_in_inheritance_clause |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.7 |
 | **Valores de opción** | `true`: se inserta un carácter de espacio después de los dos puntos para las bases o interfaces de una declaración de tipos<br /><br />`false`: se quita el espacio después de los dos puntos para las bases o interfaces de una declaración de tipos |
@@ -767,9 +767,9 @@ class C :I
 
 #### <a name="csharp_space_around_binary_operators"></a>csharp\_space\_around\_binary_operators
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_around_binary_operators |
+| **Nombre de la opción** | csharp_space_around_binary_operators |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.7 |
 | **Valores de opción** | `before_and_after`: se inserta un espacio delante y detrás del operador binario.<br /><br />`none`: se quitan los espacios delante y detrás del operador binario.<br /><br />`ignore`: se omiten los espacios alrededor de operadores binarios, |
@@ -791,9 +791,9 @@ return x  *  (x-y);
 
 #### <a name="csharp_space_between_method_declaration_parameter_list_parentheses"></a>csharp_space_between_method_declaration_parameter_list_parentheses
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_method_declaration_parameter_list_parentheses |
+| **Nombre de la opción** | csharp_space_between_method_declaration_parameter_list_parentheses |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se coloca un carácter de espacio después del paréntesis de apertura y antes del paréntesis de cierre de una lista de parámetros de declaración de método.<br /><br />`false`: se quitan los caracteres de espacio después del paréntesis de apertura y antes del paréntesis de cierre de una lista de parámetros de declaración de método |
@@ -810,9 +810,9 @@ void Bark(int x) { ... }
 
 #### <a name="csharp_space_between_method_declaration_empty_parameter_list_parentheses"></a>csharp_space_between_method_declaration_empty_parameter_list_parentheses
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_method_declaration_empty_parameter_list_parentheses |
+| **Nombre de la opción** | csharp_space_between_method_declaration_empty_parameter_list_parentheses |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.7 |
 | **Valores de opción** | `true`: se inserta un espacio dentro de los paréntesis de una lista de parámetros correspondiente a una declaración de método.<br /><br />`false`: se quita el espacio dentro de los paréntesis de una lista de parámetros correspondiente a una declaración de método. |
@@ -845,9 +845,9 @@ void Goo(int x)
 
 #### <a name="csharp_space_between_method_declaration_name_and_open_parenthesis"></a>csharp_space_between_method_declaration_name_and_open_parenthesis
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_method_declaration_name_and_open_parenthesis |
+| **Nombre de la opción** | csharp_space_between_method_declaration_name_and_open_parenthesis |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un carácter de espacio entre el nombre del método y el paréntesis de apertura en la declaración de método<br /><br />`false`: se quitan los caracteres de espacio entre el nombre del método y el paréntesis de apertura en la declaración de método |
 
@@ -863,9 +863,9 @@ void M() { }
 
 #### <a name="csharp_space_between_method_call_parameter_list_parentheses"></a>csharp_space_between_method_call_parameter_list_parentheses
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_method_call_parameter_list_parentheses |
+| **Nombre de la opción** | csharp_space_between_method_call_parameter_list_parentheses |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se coloca un carácter de espacio después del paréntesis de apertura y antes del paréntesis de cierre de una llamada de método.<br /><br />`false`: se quitan los caracteres de espacio después del paréntesis de apertura y antes del paréntesis de cierre de una llamada de método |
@@ -882,9 +882,9 @@ MyMethod(argument);
 
 #### <a name="csharp_space_between_method_call_empty_parameter_list_parentheses"></a>csharp_space_between_method_call_empty_parameter_list_parentheses
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_method_call_empty_parameter_list_parentheses |
+| **Nombre de la opción** | csharp_space_between_method_call_empty_parameter_list_parentheses |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.7 |
 | **Valores de opción** | `true`: se inserta un espacio entre paréntesis vacíos de la lista de argumentos.<br /><br />`false`: se quita un espacio entre paréntesis vacíos de la lista de argumentos. |
@@ -917,9 +917,9 @@ void Goo(int x)
 
 #### <a name="csharp_space_between_method_call_name_and_opening_parenthesis"></a>csharp_space_between_method_call_name_and_opening_parenthesis
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_method_call_name_and_opening_parenthesis |
+| **Nombre de la opción** | csharp_space_between_method_call_name_and_opening_parenthesis |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.7 |
 | **Valores de opción** | `true`: se inserta un espacio entre el nombre de la llamada de método y el paréntesis de apertura.<br /><br />`false`: se quita un espacio entre el nombre de la llamada de método y el paréntesis de apertura. |
@@ -952,9 +952,9 @@ void Goo(int x)
 
 #### <a name="csharp_space_after_comma"></a>csharp_space_after_comma
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_after_comma |
+| **Nombre de la opción** | csharp_space_after_comma |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un espacio tras una coma.<br /><br />`false`: se quita un espacio después de una coma. |
 
@@ -970,9 +970,9 @@ int[] x = new int[] { 1,2,3,4,5 }
 
 #### <a name="csharp_space_before_comma"></a>csharp_space_before_comma
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_before_comma |
+| **Nombre de la opción** | csharp_space_before_comma |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un espacio delante de una coma<br /><br />`false`: se quita el espacio delante de una coma |
 
@@ -988,9 +988,9 @@ int[] x = new int[] { 1, 2, 3, 4, 5 };
 
 #### <a name="csharp_space_after_dot"></a>csharp_space_after_dot
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_after_dot |
+| **Nombre de la opción** | csharp_space_after_dot |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un espacio después de un punto.<br /><br />`false`: se quita un espacio después de un punto. |
 
@@ -1006,9 +1006,9 @@ this.Goo();
 
 #### <a name="csharp_space_before_dot"></a>csharp_space_before_dot
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_before_dot |
+| **Nombre de la opción** | csharp_space_before_dot |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un espacio delante de un punto <br /><br />`false`: se quita el espacio delante de un punto |
 
@@ -1024,9 +1024,9 @@ this.Goo();
 
 #### <a name="csharp_space_after_semicolon_in_for_statement"></a>csharp_space_after_semicolon_in_for_statement
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_after_semicolon_in_for_statement |
+| **Nombre de la opción** | csharp_space_after_semicolon_in_for_statement |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un espacio detrás de cada punto y coma de una instrucción `for`<br /><br />`false`: se quita el espacio detrás de cada punto y coma de una instrucción `for` |
 
@@ -1040,11 +1040,11 @@ for (int i = 0; i < x.Length; i++)
 for (int i = 0;i < x.Length;i++)
 ```
 
-##### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
+#### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_before_semicolon_in_for_statement |
+| **Nombre de la opción** | csharp_space_before_semicolon_in_for_statement |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un espacio delante de cada punto y coma de una instrucción `for` <br /><br />`false`: se quita el espacio delante de cada punto y coma de una instrucción `for` |
 
@@ -1060,9 +1060,9 @@ for (int i = 0; i < x.Length; i++)
 
 #### <a name="csharp_space_around_declaration_statements"></a>csharp_space_around_declaration_statements
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_around_declaration_statements |
+| **Nombre de la opción** | csharp_space_around_declaration_statements |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `ignore`: no se quitan caracteres de espacio adicionales de las instrucciones de declaración<br /><br />`false`: se quitan caracteres de espacio adicionales de las instrucciones de declaración |
 
@@ -1078,9 +1078,9 @@ int x = 0;
 
 #### <a name="csharp_space_before_open_square_brackets"></a>csharp_space_before_open_square_brackets
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_before_open_square_brackets |
+| **Nombre de la opción** | csharp_space_before_open_square_brackets |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un espacio delante de los corchetes de apertura `[` <br /><br />`false`: se quita el espacio delante de los corchetes de apertura `[` |
 
@@ -1096,9 +1096,9 @@ int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 
 #### <a name="csharp_space_between_empty_square_brackets"></a>csharp_space_between_empty_square_brackets
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_empty_square_brackets |
+| **Nombre de la opción** | csharp_space_between_empty_square_brackets |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se inserta un espacio entre corchetes vacíos `[ ]` <br /><br />`false`: se quita el espacio entre corchetes vacíos `[]` |
 
@@ -1114,9 +1114,9 @@ int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 
 #### <a name="csharp_space_between_square_brackets"></a>csharp_space_between_square_brackets
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_space_between_square_brackets |
+| **Nombre de la opción** | csharp_space_between_square_brackets |
 | **Lenguajes aplicables** | C# |
 | **Valores de opción** | `true`: se insertan caracteres de espacio en corchetes no vacíos `[ 0 ]` <br /><br />`false`: se quitan caracteres de espacio en corchetes no vacíos `[0]` |
 
@@ -1145,9 +1145,9 @@ csharp_preserve_single_line_blocks = true
 
 #### <a name="csharp_preserve_single_line_statements"></a>csharp_preserve_single_line_statements
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_preserve_single_line_statements |
+| **Nombre de la opción** | csharp_preserve_single_line_statements |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se dejan las instrucciones y declaraciones de miembros en la misma línea.<br /><br />`false`: se dejan las instrucciones y declaraciones de miembros en líneas diferentes. |
@@ -1165,9 +1165,9 @@ string name = "John";
 
 #### <a name="csharp_preserve_single_line_blocks"></a>csharp_preserve_single_line_blocks
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_preserve_single_line_blocks |
+| **Nombre de la opción** | csharp_preserve_single_line_blocks |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2017 versión 15.3 |
 | **Valores de opción** | `true`: se deja el bloque de código en una sola línea.<br /><br />`false`: se deja el bloque de código en líneas independientes. |
@@ -1200,9 +1200,9 @@ csharp_using_directive_placement = inside_namespace
 
 #### <a name="csharp_using_directive_placement"></a>csharp_using_directive_placement
 
-|Propiedad.|Valor|
+|Propiedad.|Value|
 |-|-|
-| **Nombre de opción** | csharp_using_directive_placement |
+| **Nombre de la opción** | csharp_using_directive_placement |
 | **Lenguajes aplicables** | C# |
 | **Versión introducida** | Visual Studio 2019, versión 16.1 |
 | **Valores de opción** | `outside_namespace`: las directivas using se dejan fuera del espacio de nombres<br /><br />`inside_namespace`: las directivas using se dejan dentro del espacio de nombres |
@@ -1229,4 +1229,4 @@ namespace Conventions
 
 - [Reglas del lenguaje](language-rules.md)
 - [Reglas de nomenclatura](naming-rules.md)
-- [Referencia de reglas de estilo de código de .NET](index.md)
+- [Referencia sobre las reglas de estilo de código de .NET](index.md)

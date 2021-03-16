@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 328c085035927b3f271a39a0ea3992dde29f5119
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 050822d12ef4e0a7dfa752e4789f9861c4894cfa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279108"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259387"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Herramienta de optimización guiada por perfiles administrados)
 
@@ -24,7 +24,9 @@ La optimización guiada por perfiles mejora el tiempo de inicio de la aplicació
 
 Si encuentra problemas de rendimiento relacionados con el tiempo de inicio y el tamaño del espacio de trabajo de los ensamblados de Lenguaje intermedio (IL), le recomendamos que primero use Ngen.exe para eliminar los costos de compilación Just-In-Time (JIT) y facilitar el uso compartido de código. Si necesita mejoras adicionales, después puede usar Mpgo.exe para optimizar aún más la aplicación. Puede usar los datos de rendimiento de los ensamblados de imagen nativa no optimizados como línea base para evaluar las mejoras de rendimiento. Mpgo.exe puede agilizar los tiempos de inicio en frío y reducir el tamaño del espacio de trabajo. Mpgo.exe agrega información a los ensamblados de IL que Ngen.exe usa para crear ensamblados de imagen nativa optimizados. Para obtener más información, vea la entrada sobre cómo [mejorar el rendimiento de inicio de las aplicaciones de escritorio](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/) del blog de .NET.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7) con credenciales de administrador y escriba lo siguiente en dicho símbolo. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell) con credenciales de administrador.
+
+En el símbolo del sistema, escriba el siguiente comando:
 
 Para aplicaciones de escritorio:
 
@@ -33,8 +35,6 @@ mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <a
 ```
 
 Para aplicaciones de la Tienda Windows 8.x:
-
-## <a name="syntax"></a>Sintaxis
 
 ```console
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
@@ -133,6 +133,6 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ## <a name="see-also"></a>Consulte también
 
 - [Ngen.exe (Generador de imágenes nativas)](ngen-exe-native-image-generator.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)
 - [Improving Launch Performance for your Desktop Applications (Mejorar el rendimiento de inicio de las aplicaciones de escritorio)](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)
 - [Información general de las mejoras de rendimiento en .NET Framework 4.5](/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)

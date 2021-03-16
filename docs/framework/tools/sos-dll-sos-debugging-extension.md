@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-ms.openlocfilehash: cc9fed8432b5b24c20c3c470a842895a901d9efb
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 6a145b7de157269cc83ff1375386cff7f2fb30a1
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517183"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258834"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (Extensión de depuración de SOS)
 
@@ -26,7 +26,7 @@ La extensión de depuración de SOS (SOS.dll) ayuda a depurar programas administ
 
 ## <a name="commands"></a>Comandos
 
-|Get-Help|Descripción|
+|Comando|Descripción|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|Muestra la información sobre el último evento de memoria insuficiente (OOM) que se produjo en una solicitud de asignación al montón de recolección de elementos no utilizados. (En la recolección de elementos no utilizados del servidor, se muestra OOM, si hubiera alguno, en cada montón de recolección de elementos no utilizados).|
 |**BPMD** [ **-nofuturemodule**] [\<*module name*> \<*method name*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*pending breakpoint number*> **-clearall**|Crea un punto de interrupción en el método especificado en el módulo especificado.<br /><br /> Si no se han cargado el módulo y el método especificados, antes de crear el punto de interrupción, este comando espera una notificación de que el módulo se ha cargado y se ha compilado Just-In-Time (JIT).<br /><br /> Puede administrar la lista de puntos de interrupción pendientes mediante las opciones **-list**, **-clear** y **-clearall**:<br /><br /> La opción **-list** genera una lista con todos los puntos de interrupción pendientes. Si un punto de interrupción pendiente tiene un identificador de módulo distinto de cero, el punto de interrupción es específico de una función de ese módulo cargado en particular. Si el punto de interrupción pendiente tiene un identificador de módulo cuyo valor es cero, el punto de interrupción se aplica a los módulos que no se han cargado todavía.<br /><br /> Use la opción **-clear** o **-clearall** para quitar los puntos de interrupción pendientes de la lista.|
@@ -206,4 +206,4 @@ El comando siguiente muestra información acerca del token de metadatos en la di
 ## <a name="see-also"></a>Vea también
 
 - [Herramientas](index.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

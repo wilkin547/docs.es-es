@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: 1a9e984e1b81adda572076cb118a25f5f3a045ea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c37864a785d450f9bba435b8a0a7b2e3b9f4ed3c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283762"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258694"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de la biblioteca de tipos)
 
 El Exportador de la biblioteca de tipos genera una biblioteca que describe los tipos definidos en un ensamblado de Common Language Runtime.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -138,4 +138,4 @@ tlbexp Sample.dll
 - [Regasm.exe (Herramienta de registro de ensamblados)](regasm-exe-assembly-registration-tool.md)
 - [Resumen de la conversión de ensamblados en bibliotecas de tipos](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [TlbImp.exe (Importador de la biblioteca de tipos)](tlbimp-exe-type-library-importer.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

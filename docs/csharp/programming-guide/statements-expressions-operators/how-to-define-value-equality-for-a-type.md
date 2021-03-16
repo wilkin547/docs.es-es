@@ -1,6 +1,6 @@
 ---
-title: 'Procedimiento: Definición de la igualdad de valores para un tipo (Guía de programación de C#)'
-description: Aprenda a definir la igualdad de valores para un tipo. Vea ejemplos de código y examine los recursos adicionales disponibles.
+title: Definición de la igualdad de valores para una clase o una estructura (Guía de programación de C#)
+description: Aprenda a definir la igualdad de valores para una clase o estructura. Vea ejemplos de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 9523ba99f877fde7207042ecb8d28548168a68cb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a63fd8d11d0241063364e0156ee73a86aaeb7b35
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162731"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259569"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedimiento: Definición de la igualdad de valores para un tipo (Guía de programación de C#)
+# <a name="how-to-define-value-equality-for-a-class-or-struct-c-programming-guide"></a>Definición de la igualdad de valores para una clase o una estructura (Guía de programación de C#)
 
-Cuando defina una clase o un struct, debe decidir si tiene sentido crear una definición personalizada de igualdad (o equivalencia) de valores para el tipo. Normalmente, la igualdad de valores se implementa cuando se espera agregar objetos del tipo a una colección de algún tipo, o cuando su objetivo principal es almacenar un conjunto de campos o propiedades. Puede basar la definición de la igualdad de valores en una comparación de todos los campos y propiedades del tipo, o bien puede basarla en un subconjunto.
+Al definir un [registro](../classes-and-structs/records.md), el compilador implementa automáticamente la igualdad de valores. Cuando defina una clase o un struct, debe decidir si tiene sentido crear una definición personalizada de igualdad (o equivalencia) de valores para el tipo. Normalmente, la igualdad de valores se implementa cuando se espera agregar objetos del tipo a una colección de algún tipo, o cuando su objetivo principal es almacenar un conjunto de campos o propiedades. Puede basar la definición de la igualdad de valores en una comparación de todos los campos y propiedades del tipo, o bien puede basarla en un subconjunto.
 
 En cualquier caso, tanto en las clases como en las estructuras, la implementación debe cumplir las cinco garantías de equivalencia (en las siguientes reglas, se da por hecho que `x`, `y` y `z` no son NULL):  
   

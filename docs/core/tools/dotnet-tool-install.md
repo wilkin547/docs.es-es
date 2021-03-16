@@ -2,12 +2,12 @@
 title: Comando dotnet tool install
 description: El comando dotnet tool install instala la herramienta especificada de .NET en el equipo.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b04e7fd24edce5d5da67cdd83fbea797118689b4
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634329"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206486"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -71,15 +71,15 @@ Para obtener más información, vea [Instalación de una herramienta local](glob
 
 ## <a name="options"></a>Opciones
 
-- **`add-source <SOURCE>`**
+- **`--add-source <SOURCE>`**
 
-  Agrega un origen de paquete NuGet adicional que se usará durante la instalación.
+  Agrega un origen de paquete NuGet adicional que se usará durante la instalación. Se accede a las fuentes en paralelo, y no de forma secuencial en un orden de prioridad. Si el mismo paquete y versión se encuentra en varias fuentes, se usa la fuente más rápida. Para obtener más información, consulte [¿Qué ocurre cuando se instala un paquete NuGet?](/nuget/concepts/package-installation-process).
 
-- **`configfile <FILE>`**
+- **`--configfile <FILE>`**
 
   El archivo de configuración de NuGet (*nuget.config*) que se usará.
 
-- **`framework <FRAMEWORK>`**
+- **`--framework <FRAMEWORK>`**
 
   Especifica el [marco de destino](../../standard/frameworks.md) para instalar la herramienta. De forma predeterminada, el SDK de .NET intenta elegir la plataforma de destino más apropiada.
 
@@ -91,7 +91,7 @@ Para obtener más información, vea [Instalación de una herramienta local](glob
 
   Imprime una corta ayuda para el comando.
 
-- **`tool-path <PATH>`**
+- **`--tool-path <PATH>`**
 
   Especifica la ubicación de donde se tiene que instalar la herramienta global. PATH puede ser una ruta absoluta o relativa. Si la ruta no existe, el comando intenta crearla. Al omitir `--global` y `--tool-path`, se especifica la instalación de una herramienta local.
 

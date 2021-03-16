@@ -3,13 +3,13 @@ title: 'Instalación de .NET en Fedora: .NET'
 description: Se muestran las diversas maneras de instalar el SDK y el entorno de ejecución de .NET en Fedora.
 author: adegeo
 ms.author: adegeo
-ms.date: 01/06/2021
-ms.openlocfilehash: 9dd8c6264831e2a9382960be505639f1eba95151
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.date: 02/17/2021
+ms.openlocfilehash: efaad4788db2200b1a47f9b4ae2414730588c6ae
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970829"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255767"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>Instalación del SDK y el entorno de ejecución de .NET en Fedora
 
@@ -17,31 +17,19 @@ ms.locfileid: "97970829"
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+Para obtener más información sobre cómo instalar .NET sin un administrador de paquetes, consulte uno de los siguientes artículos:
+
+- [Instalación del SDK y el entorno de ejecución de .NET con un snap](linux-snap.md)
+- [Instalación del SDK y el entorno de ejecución de .NET con un script](linux-scripted-manual.md#scripted-install)
+- [Instalación manual del SDK y el entorno de ejecución de .NET](linux-scripted-manual.md#manual-install)
 
 ## <a name="install-net-50"></a>Instalación de .NET 5.0
 
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-**Fedora 32**
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/32/prod.repo
-```
-
-**Fedora 33**
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
-```
+La última versión de .NET disponible en los repositorios de paquetes predeterminados para Fedora es .NET 5.0.
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="install-net-core-31"></a>Instalación de .NET Core 3.1
-
-La última versión de .NET disponible en los repositorios de paquetes predeterminados para Fedora es .NET Core 3.1.
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
@@ -59,7 +47,7 @@ En la tabla siguiente se muestra una lista de versiones de .NET actualmente comp
 | .NET Core 3.1 | ✔️        | ✔️ | ✔️|✔️ |✔️ |❌  |❌ |
 | .NET Core 2.1 | ✔️        | ✔️ | ✔️|✔️ |✔️ |✔️  |✔️ |
 
-Las versiones siguientes de .NET ya no se admiten. Las descargas de estas siguen estando publicadas:
+Las versiones siguientes de .NET ya no se admiten. aunque sus descargas siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -109,7 +97,11 @@ En esta sección se proporciona información sobre los errores comunes que puede
 
 ### <a name="unable-to-find-package"></a>No se puede encontrar el paquete
 
-[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+Para obtener más información sobre cómo instalar .NET sin un administrador de paquetes, consulte uno de los siguientes artículos:
+
+- [Instalación del SDK y el entorno de ejecución de .NET con un snap](linux-snap.md)
+- [Instalación del SDK y el entorno de ejecución de .NET con un script](linux-scripted-manual.md#scripted-install)
+- [Instalación manual del SDK y el entorno de ejecución de .NET](linux-scripted-manual.md#manual-install)
 
 ### <a name="failed-to-fetch"></a>No se pudo capturar el elemento
 

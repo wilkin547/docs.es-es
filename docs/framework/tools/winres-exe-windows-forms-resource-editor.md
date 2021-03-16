@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 723daa7703828ea6eb103ce3b63164bf787cc10b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543230"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258668"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor de recursos para localización de Windows)
 
 El Editor de recursos para localización de Windows, Winres.exe, es una herramienta de diseño visual que ayuda a los expertos en localización a traducir los recursos de la interfaz de usuario (IU) de Windows Forms que usan los formularios. Los archivos .resx o .resources que se utilizan como entrada en Winres.exe se pueden crear mediante un entorno de diseño visual como Microsoft Visual Studio. Para obtener información sobre cómo implementar recursos en aplicaciones .NET Framework, vea [Recursos en aplicaciones .NET](../resources/index.md).
 
-Winres.exe se instala con Visual Studio. Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Winres.exe se instala con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 ## <a name="syntax"></a>Sintaxis
 

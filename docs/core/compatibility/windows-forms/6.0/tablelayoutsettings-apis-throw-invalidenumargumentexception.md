@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Algunas propiedades de TableLayoutSettings producen una excepción InvalidEnumArgumentException.'
-description: Obtenga información sobre el cambio importante de .NET 6.0 que provoca que algunas API de TableLayoutSettings produzcan una excepción InvalidEnumArgumentException para argumentos no válidos.
+description: Obtenga información sobre el cambio importante de .NET 6 que provoca que algunas API de TableLayoutSettings produzcan una excepción InvalidEnumArgumentException para argumentos no válidos.
 ms.date: 01/18/2021
-ms.openlocfilehash: 8397952e4647347718f11597a100c5d764e7186b
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 2da097122b935ec3a60c2bb009cc8ebbcff6468e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570252"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255729"
 ---
 # <a name="selected-tablelayoutsettings-properties-throw-invalidenumargumentexception"></a>Ciertas propiedades de TableLayoutSettings producen la excepción InvalidEnumArgumentException
 
@@ -15,7 +15,7 @@ Ciertas propiedades de<xref:System.Windows.Forms.TableLayoutSettings> ahora prod
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, estas propiedades producían una excepción <xref:System.ArgumentOutOfRangeException> si intentaba asignar un valor incorrecto. A partir de .NET 6.0, estas propiedades producen una excepción <xref:System.ComponentModel.InvalidEnumArgumentException> en estos casos.
+En versiones anteriores de .NET, estas propiedades producían una excepción <xref:System.ArgumentOutOfRangeException> si intentaba asignar un valor incorrecto. A partir de .NET 6, estas propiedades producen una excepción <xref:System.ComponentModel.InvalidEnumArgumentException> en estos casos.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

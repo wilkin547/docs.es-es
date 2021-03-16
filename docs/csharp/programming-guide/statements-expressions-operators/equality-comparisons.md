@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: d10d1851978ef25b7b02503f196cd2a436aab608
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3bc41e9adeff23dc385d0888163f9edf04772595
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381689"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259630"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (guía de programación de C#)
 
@@ -41,7 +41,7 @@ if (b == a)
 }  
 ```  
   
- Para la mayoría de los otros tipos, las pruebas de igualdad de valores son más complejas, porque es preciso entender cómo la define el tipo. Para las clases y los structs que tienen varios campos o propiedades, la igualdad de valores suele definirse de modo que significa que todos los campos o propiedades tienen el mismo valor. Por ejemplo, podrían definirse dos objetos `Point` que fueran equivalentes si pointA.X es igual a pointB.X y pointA.Y es igual a pointB.Y.  
+ Para la mayoría de los otros tipos, las pruebas de igualdad de valores son más complejas, porque es preciso entender cómo la define el tipo. Para las clases y los structs que tienen varios campos o propiedades, la igualdad de valores suele definirse de modo que significa que todos los campos o propiedades tienen el mismo valor. Por ejemplo, podrían definirse dos objetos `Point` que fueran equivalentes si pointA.X es igual a pointB.X y pointA.Y es igual a pointB.Y. En el caso de los registros, la igualdad de valores significa que dos variables de un tipo de registro son iguales si los tipos coinciden y todos los valores de propiedad y campo coinciden.  
   
 En cambio, no hay ningún requisito que exija que la equivalencia se base en todos los campos de un tipo. Se puede basar en un subconjunto. Al comparar tipos que no sean de su propiedad, es importante asegurarse concretamente de cómo se define la equivalencia para ese tipo. Para más información sobre cómo definir la igualdad de valores en sus propias clases y structs, consulte [Procedimiento Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md).
   
@@ -52,12 +52,13 @@ En cambio, no hay ningún requisito que exija que la equivalencia se base en tod
 ## <a name="related-topics"></a>Temas relacionados  
   
 |Title|Descripción|  
-|-----------|-----------------|  
-|[Procedimiento Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md)|Describe cómo determinar si dos variables presentan igualdad de referencia.|  
-|[Procedimiento Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md)|Describe cómo proporcionar una definición personalizada de igualdad de valores para un tipo.|  
-|[Guía de programación de C#](../index.md)|Proporciona vínculos a información detallada sobre importantes características del lenguaje C# y características que están disponibles para C# a través de .NET.|  
-|[Tipos](../types/index.md)|Proporciona información sobre el sistema de tipos de C# y vínculos a información adicional.|  
-  
+|-----------|-----------------|
+|[Procedimiento Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md)|Describe cómo determinar si dos variables presentan igualdad de referencia.|
+|[Procedimiento Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md)|Describe cómo proporcionar una definición personalizada de igualdad de valores para un tipo.|
+|[Guía de programación de C#](../index.md)|Proporciona vínculos a información detallada sobre importantes características del lenguaje C# y características que están disponibles para C# a través de .NET.|
+|[Tipos](../types/index.md)|Proporciona información sobre el sistema de tipos de C# y vínculos a información adicional.|
+|[Registros](../classes-and-structs/records.md)|Proporciona información sobre los tipos de registro, que comprueban la igualdad de valores de forma predeterminada.|
+
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)

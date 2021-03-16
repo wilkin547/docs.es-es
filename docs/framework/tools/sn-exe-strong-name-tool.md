@@ -11,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: bb9640bbb46683a3facf290c8157853007f4407d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 76999ab305f9924bafaa95884b634e2a59251ff0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238449"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259052"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 
@@ -27,7 +27,7 @@ La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres
 
  Para obtener más información sobre los nombres seguros y los ensamblados con nombre seguro, vea [Ensamblados con nombre seguro](../../standard/assembly/strong-named.md) y [Cómo: Firma de un ensamblado con un nombre seguro](../../standard/assembly/sign-strong-name.md).  
   
- La herramienta Nombre seguro se instala automáticamente con Visual Studio. Para iniciar la herramienta, utilice el símbolo del sistema para desarrolladores (o el símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ La herramienta Nombre seguro se instala automáticamente con Visual Studio. Para iniciar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).  
 
 > [!NOTE]
 > En los equipos de 64 bits, ejecute la versión de Sn.exe de 32 bits mediante Símbolo del sistema para desarrolladores de Visual Studio y la versión de 64 bits mediante el símbolo del sistema de Visual Studio x64 Win64.
@@ -131,4 +131,4 @@ sn -d MyContainer
 - [Herramientas](index.md)
 - [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)
 - [Ensamblados con nombre seguro](../../standard/assembly/strong-named.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

@@ -4,12 +4,12 @@ description: Obtenga información sobre los tipos principales (valores numérico
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 1ddc6b51e48758d203fa570a664fe06d0a5b52c5
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1c3cdefe6aba300536386fe4bb66d788814bcd9d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439721"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258187"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variables y valores
 
@@ -60,7 +60,7 @@ C# proporciona un conjunto estándar de tipos numéricos integrados para represe
   
 ## <a name="custom-types"></a>Tipos personalizados
 
-Las construcciones [struct](language-reference/builtin-types/struct.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) y [enum](language-reference/builtin-types/enum.md) se usan para crear sus propios tipos personalizados. La biblioteca de clases .NET es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente.
+Las construcciones [struct](language-reference/builtin-types/struct.md), [class](language-reference/keywords/class.md), [record](language-reference/builtin-types/record.md), [interface](language-reference/keywords/interface.md) y [enum](language-reference/builtin-types/enum.md) se utilizan para crear sus propios tipos personalizados. La biblioteca de clases .NET es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente.
   
 ## <a name="generic-types"></a>Tipos genéricos
 

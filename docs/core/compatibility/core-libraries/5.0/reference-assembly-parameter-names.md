@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Nombres de parámetros modificados en ensamblados de referencia'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET, donde se han cambiado algunos nombres de parámetro de ensamblado de referencia para coincidir con los nombres de parámetro de los ensamblados de implementación.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET, donde se han cambiado algunos nombres de parámetro de ensamblado de referencia para coincidir con los nombres de parámetro de los ensamblados de implementación.
 ms.date: 11/01/2020
-ms.openlocfilehash: c111428d0d7c103e01d725b21ff8d97d54ffeb33
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b120fac29d4cc7cc76a29d4e68c94f7dc194c284
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760174"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257185"
 ---
 # <a name="parameter-names-changed-in-reference-assemblies"></a>Nombres de parámetros modificados en ensamblados de referencia
 
@@ -17,7 +17,7 @@ Se han cambiado algunos nombres de parámetros de ensamblado de referencia para 
 
 En versiones anteriores de .NET, algunos nombres de parámetros de [ensamblado de referencia](../../../../standard/assembly/reference-assemblies.md) son diferentes de sus parámetros correspondientes en el ensamblado de implementación. Esto puede producir problemas al usar argumentos con nombre y reflexión.
 
-En .NET 5.0, estos nombres de parámetros no coincidentes se han actualizado en los ensamblados de referencia para que coincidan exactamente con los nombres de parámetro correspondientes en los ensamblados de implementación.
+En .NET 5, estos nombres de parámetros no coincidentes se han actualizado en los ensamblados de referencia para que coincidan exactamente con los nombres de parámetro correspondientes en los ensamblados de implementación.
 
 En esta tabla se muestran las API y los nombres de los parámetros que han cambiado.
 

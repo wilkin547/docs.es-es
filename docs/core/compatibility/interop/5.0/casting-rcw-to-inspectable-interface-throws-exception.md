@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Al convertir RCW en `InterfaceIsIInspectable` se inicia una excepción'
-description: Obtenga información sobre el cambio importante de interoperabilidad en .NET 5.0, en el que la conversión de un contenedor RCW a una interfaz `InterfaceIsIInspectable` inicia una excepción PlatformNotSupportedException.
+description: Obtenga información sobre el cambio importante de interoperabilidad en .NET 5, en el que la conversión de un contenedor RCW a una interfaz `InterfaceIsIInspectable` inicia una excepción PlatformNotSupportedException.
 ms.date: 09/13/2020
-ms.openlocfilehash: 7c0f37057aebcc41d0c00d949b921ec3a4bdf012
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f777ee9396f7822c9ff6bf5209021c07b8b618a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760198"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256639"
 ---
 # <a name="casting-rcw-to-an-interfaceisiinspectable-interface-throws-platformnotsupportedexception"></a>Excepción PlatformNotSupportedException al convertir un contenedor RCW en una interfaz de `InterfaceIsIInspectable`
 
@@ -19,13 +19,13 @@ Al convertir un contenedor RCW en una interfaz marcada como <xref:System.Runtime
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En las versiones de .NET anteriores a la versión preliminar 6 de .NET 5.0, la conversión de un contenedor RCW en una interfaz marcada como <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> funcionaba según lo esperado. En las versiones preliminares 6 y 8 de NET 5.0 y RC1, se puede convertir correctamente un contenedor RCW en una interfaz de <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable>. Sin embargo, es posible que incurra en infracciones de acceso al ejecutar métodos en la interfaz, ya que la compatibilidad subyacente en el entorno de ejecución [se ha eliminado en la versión preliminar 6 de .NET 5.0](built-in-support-for-winrt-removed.md).
+En las versiones de .NET anteriores a la versión preliminar 6 de .NET 5, la conversión de un contenedor RCW en una interfaz marcada como <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> funcionaba según lo esperado. En las versiones preliminares 6 y 8 de NET 5 y RC1, se puede convertir correctamente un contenedor RCW en una interfaz de <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable>. Sin embargo, es posible que incurra en infracciones de acceso al ejecutar métodos en la interfaz, ya que la compatibilidad subyacente en el entorno de ejecución [se ha eliminado en la versión preliminar 6 de .NET 5](built-in-support-for-winrt-removed.md).
 
-En .NET 5.0 RC2 y versiones posteriores, al convertir un contenedor RCW en una interfaz marcada como <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable>, se generaba una excepción <xref:System.PlatformNotSupportedException> durante la conversión.
+En .NET 5 RC2 y versiones posteriores, al convertir un contenedor RCW en una interfaz marcada como <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable>, se generaba una excepción <xref:System.PlatformNotSupportedException> durante la conversión.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 
-La compatibilidad con <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> [se eliminó en una versión preliminar anterior de .NET 5.0](built-in-support-for-winrt-removed.md). Sin embargo, la conversión en una interfaz de <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> se pasó por alto debido a un error. Como la compatibilidad subyacente en el entorno de ejecución ya no existe, al generar una excepción <xref:System.PlatformNotSupportedException>, se habilita una ruta de error gradual. Al generar una excepción, también se puede detectar con más facilidad que esta característica ya no se admite.
+La compatibilidad con <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> [se eliminó en una versión preliminar anterior de .NET 5](built-in-support-for-winrt-removed.md). Sin embargo, la conversión en una interfaz de <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> se pasó por alto debido a un error. Como la compatibilidad subyacente en el entorno de ejecución ya no existe, al generar una excepción <xref:System.PlatformNotSupportedException>, se habilita una ruta de error gradual. Al generar una excepción, también se puede detectar con más facilidad que esta característica ya no se admite.
 
 ## <a name="recommended-action"></a>Acción recomendada
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-ms.openlocfilehash: 3f9f2a71a7a33de13264ce60fa7ff6ea5832aace
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4481e6718372fe7b58dbc05ab7cfe35e6d3047ce
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247192"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258057"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Herramienta de conversión de CorFlags)
 
 La herramienta de conversión CorFlags permite configurar la sección de CorFlags del encabezado de una imagen ejecutable portátil.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -57,4 +57,4 @@ CorFlags.exe assembly [options]
 
 - [Herramientas](index.md)
 - [Aplicaciones de 64 bits](../64-bit-apps.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

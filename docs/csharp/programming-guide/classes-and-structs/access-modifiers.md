@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d800116137e088a54edb221fb4f81ecd47b0278f
-ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
+ms.openlocfilehash: 168965a3d7f5c3d2436bfdc25edb6c78cdabbc05
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98757868"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258343"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificadores de acceso (Guía de programación de C#)
 
@@ -30,19 +30,19 @@ En los ejemplos siguientes se muestra cómo especificar modificadores de acceso 
 
 No todos los modificadores de acceso son válidos para todos los tipos o miembros de todos los contextos. En algunos casos, la accesibilidad de un miembro de tipo está restringida por la accesibilidad de su tipo contenedor.
 
-## <a name="class-and-struct-accessibility"></a>Accesibilidad de clases y estructuras  
+## <a name="class-record-and-struct-accessibility"></a>Accesibilidad de clases, registros y estructuras  
 
-Las clases y estructuras que se declaran directamente en un espacio de nombres (es decir, que no están anidadas en otras clases o estructuras) pueden ser `public` o `internal`. Si no se especifica ningún modificador de acceso, el valor predeterminado es `internal`.
+Las clases, los registros y las estructuras que se declaran directamente en un espacio de nombres (es decir, que no están anidadas en otras clases o estructuras) pueden ser `public` o `internal`. Si no se especifica ningún modificador de acceso, el valor predeterminado es `internal`.
 
 Los miembros de estructura, incluidas las clases y las estructuras anidadas, se pueden declarar como `public`, `internal` o `private`. Los miembros de clase, incluidas las clases y las estructuras anidadas, pueden ser `public`, `protected internal`, `protected`, `internal`, `private protected` o `private`. Los miembros de clase y de estructura, incluidas las clases y estructuras anidadas, tienen acceso `private` de forma predeterminada. Los tipos anidados privados no son accesibles desde fuera del tipo contenedor.
 
-Las clases derivadas no pueden tener mayor accesibilidad que sus tipos base. No se puede declarar una clase pública `B` que derive de una clase interna `A`. Si se permitiera, convertiría `A` en público, porque todos los miembros `protected` o `internal` de `A` son accesibles desde la clase derivada.
+Las clases derivadas y los registros derivados no pueden tener mayor accesibilidad que sus tipos base. No se puede declarar una clase pública `B` que derive de una clase interna `A`. Si se permitiera, convertiría `A` en público, porque todos los miembros `protected` o `internal` de `A` son accesibles desde la clase derivada.
 
 Puede habilitar otros ensamblados concretos para acceder a los tipos internos mediante `InternalsVisibleToAttribute`. Para más información, vea [Ensamblados de confianza](../../../standard/assembly/friend.md).
 
-## <a name="class-and-struct-member-accessibility"></a>Accesibilidad de miembros de clase y estructura  
+## <a name="class-record-and-struct-member-accessibility"></a>Accesibilidad de miembros de clases, registros y estructuras  
 
-Los miembros de clase (incluidas las clases y las estructuras anidadas) se pueden declarar con cualquiera de los seis tipos de acceso. Los miembros de estructura no se pueden declarar como `protected`, `protected internal` o `private protected` porque las estructuras no admiten la herencia.
+Los miembros de clases y registros (incluidas las clases, los registros y las estructuras anidados) se pueden declarar con cualquiera de los seis tipos de acceso. Los miembros de estructura no se pueden declarar como `protected`, `protected internal` o `private protected` porque las estructuras no admiten la herencia.
 
 Normalmente, la accesibilidad de un miembro no es mayor que la del tipo que lo contiene. Pero un miembro `public` de una clase interna podría ser accesible desde fuera del ensamblado si el miembro implementa los métodos de interfaz o invalida los métodos virtuales definidos en una clase base pública.
 
@@ -52,7 +52,7 @@ Los operadores definidos por el usuario siempre se deben declarar como `public` 
 
 Los finalizadores no pueden tener modificadores de accesibilidad.
 
-Para establecer el nivel de acceso de un miembro de `class` o `struct`, agregue la palabra clave adecuada a la declaración de miembro, como se muestra en el ejemplo siguiente.
+Para establecer el nivel de acceso de un miembro de `class`, `record` o `struct`, agregue la palabra clave adecuada a la declaración de miembro, como se muestra en el ejemplo siguiente.
 
 [!code-csharp[MethodAccess](~/samples/snippets/csharp/objectoriented/accessmodifiers.cs#MethodAccess)]
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 08a5475d74327265f28b65676ae56be15afb57d3
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 581736d27d8b90430838fc78aa192a3efa21cbb5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104677"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258304"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Procedimiento Instalar un ensamblado en la caché global de ensamblados
 
@@ -46,7 +46,7 @@ gacutil -i <assembly name>
 
 En este comando, *\<assembly name>* es el nombre del ensamblado que se va a instalar en la caché global de ensamblados.
 
-Si *gacutil.exe* no se encuentra en la ruta de acceso del sistema, use el [Símbolo del sistema para desarrolladores de Visual Studio *\<version>* ](../tools/developer-command-prompt-for-vs.md).
+Si *gacutil.exe* no está en la ruta de acceso del sistema, utilice un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 En el ejemplo siguiente se instala un ensamblado con el nombre de archivo *hello.dll* en la caché global de ensamblados.
 

@@ -14,18 +14,18 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-ms.openlocfilehash: 042e5f64a7a863173db9c4e601d3152b0df46d97
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0e03a2a7033d3e210727e2eb080140ad87240dba
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164446"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259946"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Herramienta Installer)
 
 La herramienta de instalación es una utilidad de la línea de comandos que le permite instalar y desinstalar recursos de servidor mediante la ejecución de los componentes del instalador en ensamblados específicos. Esta herramienta funciona junto con clases del espacio de nombres <xref:System.Configuration.Install>.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -170,4 +170,4 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 
 - <xref:System.Configuration.Install>
 - [Herramientas](index.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

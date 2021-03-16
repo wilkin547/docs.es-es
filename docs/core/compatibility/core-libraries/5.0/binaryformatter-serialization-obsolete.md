@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Los métodos de serialización BinaryFormatter están obsoletos y se prohíben en las aplicaciones ASP.NET'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET por el que los métodos de serialización y deserialización de BinaryFormatter, Formatter e IFormatter están obsoletos.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET por el que los métodos de serialización y deserialización de BinaryFormatter, Formatter e IFormatter están obsoletos.
 ms.date: 11/01/2020
-ms.openlocfilehash: 1dca30d33f2aa0a6fe8f05fe728557092f836b2d
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 8c31a95683526ba394101d449b5ae3328f57f3c3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189849"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257666"
 ---
 # <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>Los métodos de serialización BinaryFormatter están obsoletos y se prohíben en las aplicaciones ASP.NET
 

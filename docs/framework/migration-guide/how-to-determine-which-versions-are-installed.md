@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining installed versions
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: a219514fafdcb17db259e089afa8318dbab24811
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 817e7ad7b10e11675fb055b1243a8584196cc2b5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851834"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258629"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
 
@@ -208,7 +208,7 @@ El CLR de .NET Framework que se instala con .NET Framework tiene versiones inde
 
 - **La herramienta Clrver.exe**
 
-  Use la [herramienta de versión de CLR (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) para determinar qué versiones de CLR están instaladas en un equipo. Abra el [símbolo del sistema para desarrolladores de Visual Studio](../tools/developer-command-prompt-for-vs.md) y escriba `clrver`.
+  Use la [herramienta de versión de CLR (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) para determinar qué versiones de CLR están instaladas en un equipo. Abra un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell) y escriba `clrver`.
 
   Resultados del ejemplo:
 

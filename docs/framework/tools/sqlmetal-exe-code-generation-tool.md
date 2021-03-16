@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 4edf11315892ed8267bee17d69a70033348eca5c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b3d52e5ce070f1a86554a2c8b8cd581b2e4bc685
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272571"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258769"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Herramienta de generación de código)
 
@@ -27,15 +27,13 @@ La herramienta de línea de comandos SqlMetal genera el código y las asignacion
   
 - A partir de un archivo .dbml, generar código y atributos de asignación o un archivo de asignación.  
   
- Esta herramienta se instala automáticamente con Visual Studio. De manera predeterminada, el archivo se encuentra en `drive`:\Archivos de programa\Microsoft SDKs\Windows\\v`n.nn`\bin. Si no instala Visual Studio, también puede obtener el archivo de SQLMetal descargando [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
+Esta herramienta se instala automáticamente con Visual Studio. De manera predeterminada, el archivo se encuentra en `drive`:\Archivos de programa\Microsoft SDKs\Windows\\v`n.nn`\bin. Si no instala Visual Studio, también puede obtener el archivo de SQLMetal descargando [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
 > Los desarrolladores que utilizan Visual Studio también pueden usar Object Relational Designer para generar clases de entidad. El enfoque de la línea de comandos se ajusta bien a las bases de datos grandes. Dado que SqlMetal es una herramienta de línea de comandos, puede utilizarse en un proceso de compilación.  
   
- Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para obtener más información, vea [Símbolos del sistema](developer-command-prompt-for-vs.md). En el símbolo del sistema, escriba lo siguiente:  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell). En el símbolo del sistema, escriba el siguiente comando:
+
 ```console  
 sqlmetal [options] [<input file>]  
 ```  

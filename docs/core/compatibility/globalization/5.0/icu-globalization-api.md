@@ -1,23 +1,23 @@
 ---
 title: 'Cambio importante: Las API de globalización usan bibliotecas de ICU en Windows'
-description: Obtenga información sobre el cambio importante de globalización en .NET 5.0, donde se usan las bibliotecas de ICU para la funcionalidad de globalización en lugar de NLS.
+description: Obtenga información sobre el cambio importante de globalización en .NET 5, donde se usan las bibliotecas de ICU para la funcionalidad de globalización en lugar de NLS.
 ms.date: 05/19/2020
-ms.openlocfilehash: efc20e21969ea4a83c9122e40b262e1dc38e6770
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4b8580fcb3ba3c9b95357a7922e3a3062ccd3728
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760277"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256756"
 ---
 # <a name="globalization-apis-use-icu-libraries-on-windows"></a>Las API de globalización usan bibliotecas de ICU en Windows
 
-.NET 5.0 y versiones posteriores usan bibliotecas de [componentes internacionales para Unicode (ICU)](http://site.icu-project.org/home) para la funcionalidad de globalización cuando se ejecutan en la actualización de mayo de 2019 de Windows 10 o versiones posteriores.
+.NET 5 y versiones posteriores usan bibliotecas de [componentes internacionales para Unicode (ICU)](http://site.icu-project.org/home) para la funcionalidad de globalización cuando se ejecutan en la actualización de mayo de 2019 de Windows 10 o versiones posteriores.
 
 ## <a name="change-description"></a>Descripción del cambio
 
 En .NET Core 1.0 a 3.1 y .NET Framework 4 y versiones posteriores, las bibliotecas de .NET usan las API de [compatibilidad con el idioma nacional (NLS)](/windows/win32/intl/national-language-support) para la funcionalidad de globalización en Windows. Por ejemplo, las funciones de NLS se usaban para comparar cadenas, obtener información de referencia cultural y aplicar mayúsculas y minúsculas en las cadenas en la referencia cultural adecuada.
 
-A partir de .NET 5.0, si una aplicación se ejecuta en la actualización de mayo de 2019 de Windows 10 o posterior, las bibliotecas de .NET usan las API de globalización de [ICU](http://site.icu-project.org/home) de manera predeterminada.
+A partir de .NET 5, si una aplicación se ejecuta en la actualización de mayo de 2019 de Windows 10 o posterior, las bibliotecas de .NET usan las API de globalización de [ICU](http://site.icu-project.org/home) de manera predeterminada.
 
 > [!NOTE]
 > Las versiones de la actualización de mayo de 2019 de Windows 10 o posteriores incluyen la biblioteca nativa de ICU. Si el tiempo de ejecución de .NET no puede cargar ICU, utilizará NLS en su lugar.
@@ -37,7 +37,7 @@ Console.WriteLine(idx);
 ```
 
 - En versiones anteriores de .NET en Windows, el fragmento de código imprime `6`.
-- En .NET 5.0 y versiones posteriores en Windows 19H1 y versiones posteriores, el fragmento de código imprime `-1`.
+- En .NET 5 y versiones posteriores en Windows 19H1 y versiones posteriores, el fragmento de código imprime `-1`.
 
 Para corregir este código mediante la realización de una búsqueda ordinal en lugar de una búsqueda según la referencia cultural, llame a la sobrecarga <xref:System.String.IndexOf(System.String,System.StringComparison)> y pase <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> como argumento.
 
@@ -55,7 +55,7 @@ string text = string.Format("{0:C}", 100);
 ```
 
 - En versiones anteriores de .NET en Windows, el valor del texto es `"100,00 €"`.
-- En .NET 5.0 y versiones posteriores en Windows 19H1 y versiones posteriores, el valor del texto es `"100,00 ¤"`, que usa el símbolo de moneda internacional en lugar del euro. En ICU, el diseño es que una moneda es una propiedad de un país o región, no un idioma.
+- En .NET 5 y versiones posteriores en Windows 19H1 y versiones posteriores, el valor del texto es `"100,00 ¤"`, que usa el símbolo de moneda internacional en lugar del euro. En ICU, el diseño es que una moneda es una propiedad de un país o región, no un idioma.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 
