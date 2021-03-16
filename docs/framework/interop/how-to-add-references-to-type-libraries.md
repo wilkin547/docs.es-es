@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 76f616c36d81b8245f77f011b5c2f9b945e6916b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b5e58c5943eba8db7497b4db56bfbd99b17b1043
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255109"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477627"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Procedimiento para agregar referencias a bibliotecas de tipos
 
@@ -42,12 +42,12 @@ Visual Studio genera un ensamblado de interoperabilidad que contiene metadatos c
   
 1. Genere un ensamblado de interoperabilidad tal y como se describe en [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md).  
   
-2. Use la opción del compilador [-link (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) o [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) con el nombre del ensamblado de interoperabilidad para insertar la información sobre los tipos COM en los archivos ejecutables.  
+2. Use la opción del compilador [-link (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes) o [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) con el nombre del ensamblado de interoperabilidad para insertar la información sobre los tipos COM en los archivos ejecutables.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)
 - [Exponer componentes COM en .NET Framework](exposing-com-components.md)
 - [Tutorial: Insertar tipos de ensamblados administrados en Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
-- [-link (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes)
 - [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

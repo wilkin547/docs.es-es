@@ -3,12 +3,12 @@ title: Usar Azure Key Vault para proteger secretos en tiempo de producción
 description: 'Seguridad en microservicios de .NET y aplicaciones web: Azure Key Vault es una forma excelente de gestionar secretos de aplicación controlados en su totalidad por administradores. Los administradores incluso pueden asignar y revocar valores de desarrollo sin necesidad de que los desarrolladores tengan que gestionarlos.'
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 5d024894fe1540df04514031bf0b6e0754ddc75c
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 94243468b35e2db9818ae9afacd5beec0a12075e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633928"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604624"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usar Azure Key Vault para proteger secretos en tiempo de producción
 
@@ -47,9 +47,6 @@ Tenga en cuenta que, al llamar a `AddAzureKeyVault` necesitará el Id. de la apl
 
 - **Administración y duración de las claves de protección de datos en ASP.NET Core** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
-
-- Repositorio de GitHub **Microsoft.Extensions.Configuration**. \
-  <https://github.com/dotnet/extensions/tree/master/src/Configuration>
 
 >[!div class="step-by-step"]
 >[Anterior](developer-app-secrets-storage.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f5703377782977bb69815255d04cf1ee5a274c18
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290946"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477223"
 ---
 # <a name="assemblies-in-net"></a>Ensamblados de .NET
 
@@ -64,7 +64,7 @@ Los ensamblados pueden ser estáticos o dinámicos. Los ensamblados estáticos s
 
 Existen varias formas de crear ensamblados. Puede usar herramientas de desarrollo, como Visual Studio, que permite crear archivos *.dll* o *.exe*. Puede usar las herramientas de Windows SDK para crear ensamblados con módulos de otros entornos de programación. También puede utilizar las API de Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=nameWithType>, para crear ensamblados dinámicos.
 
-Para compilar ensamblados puede hacerlo en Visual Studio, con las herramientas de la interfaz de la línea de comandos de .NET Core o, para los ensamblados de .NET Framework, con un compilador de línea de comandos. Para más información sobre cómo compilar los ensamblados con la CLI de .NET Core, consulte [Información general sobre la CLI de .NET Core](../../core/tools/index.md). Para compilar ensamblados con los compiladores de línea de comandos, vea [Compilar la línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) para C#, o bien [Compilar desde la línea de comandos (Visual Basic)](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) para Visual Basic.
+Para compilar ensamblados puede hacerlo en Visual Studio, con las herramientas de la interfaz de la línea de comandos de .NET Core o, para los ensamblados de .NET Framework, con un compilador de línea de comandos. Para más información sobre cómo compilar los ensamblados con la CLI de .NET Core, consulte [Información general sobre la CLI de .NET Core](../../core/tools/index.md).
 
 > [!NOTE]
 > Para compilar un ensamblado en Visual Studio, seleccione **Compilar** en el menú **Compilar**.
@@ -86,7 +86,7 @@ Como los ensamblados contienen información sobre contenido, control de versione
 Para usar un ensamblado en una aplicación, debe agregar una referencia a él. Una vez que se hace referencia a un ensamblado, todos los tipos accesibles, propiedades, métodos y otros miembros de sus espacios de nombres están disponibles para la aplicación como si su código formara parte del archivo de origen.
 
 > [!NOTE]
-> La referencia a la mayoría de los ensamblados de la biblioteca de clases de .NET se hace automáticamente. Si no se hace referencia a un ensamblado del sistema de forma automática, para .NET Core puede agregar una referencia al paquete NuGet que contiene el ensamblado. Use el administrador de paquetes NuGet de Visual Studio, o bien agregue un elemento [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) para el ensamblado al proyecto *.csproj* o *.vbproj*. En .NET Framework, puede agregar una referencia al ensamblado mediante el cuadro de diálogo **Agregar referencia** de Visual Studio o mediante la opción de la línea de comandos `-reference` para los compiladores de [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) o [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md).
+> La referencia a la mayoría de los ensamblados de la biblioteca de clases de .NET se hace automáticamente. Si no se hace referencia a un ensamblado del sistema de forma automática, para .NET Core puede agregar una referencia al paquete NuGet que contiene el ensamblado. Use el administrador de paquetes NuGet de Visual Studio, o bien agregue un elemento [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) para el ensamblado al proyecto *.csproj* o *.vbproj*. En .NET Framework, puede agregar una referencia al ensamblado mediante el cuadro de diálogo **Agregar referencia** de Visual Studio o mediante la opción de la línea de comandos `-reference` para los compiladores de [C#](../../csharp/language-reference/compiler-options/inputs.md#references) o [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md).
 
 En C#, puede usar dos versiones del mismo ensamblado en una misma aplicación. Para obtener más información, vea [alias externo](../../csharp/language-reference/keywords/extern-alias.md).
 

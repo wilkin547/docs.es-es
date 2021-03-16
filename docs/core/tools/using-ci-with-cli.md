@@ -2,12 +2,12 @@
 title: Integración continua (CI) con el SDK y las herramientas de .NET
 description: Obtenga información sobre cómo usar el SDK de .NET y sus herramientas en el servidor de compilación con la integración continua.
 ms.date: 05/18/2017
-ms.openlocfilehash: 6d92bf7250ab4aea33325b1a23e7661a296e9756
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: fd1548f5c2d0a5191dd54c315c90a8ce3f8a5305
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633823"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190000"
 ---
 # <a name="using-the-net-sdk-and-tools-in-continuous-integration-ci"></a>Uso del SDK y herramientas de .NET en la integración continua (CI)
 
@@ -126,7 +126,7 @@ Travis CI se ejecuta tanto en trabajos de macOS como de Linux en una *matriz de 
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/) instala el SDK de .NET Core 1.0.1 con la imagen de trabajo de compilación de `Visual Studio 2017`. Hay otras imágenes de compilación disponibles con distintas versiones del SDK de .NET. Para más información, consulte el [ejemplo appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml) y el artículo [Build worker images](https://www.appveyor.com/docs/build-environment/#build-worker-images) (Imágenes de trabajo de compilación) en los documentos de AppVeyor.
+[AppVeyor](https://www.appveyor.com/) instala el SDK de .NET Core 1.0.1 con la imagen de trabajo de compilación de `Visual Studio 2017`. Hay otras imágenes de compilación disponibles con distintas versiones del SDK de .NET. Para más información, consulte el [ejemplo appveyor.yml](https://github.com/dotnet/docs/blob/main/appveyor.yml) y el artículo [Build worker images](https://www.appveyor.com/docs/build-environment/#build-worker-images) (Imágenes de trabajo de compilación) en los documentos de AppVeyor.
 
 Los archivos binarios del SDK de .NET se descargan y descomprimen en un subdirectorio mediante el script de instalación y, después, se agregan a la variable de entorno `PATH`. Agregue una matriz de compilación para ejecutar las pruebas de integración con varias versiones del SDK de .NET:
 

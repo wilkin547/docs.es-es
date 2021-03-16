@@ -3,12 +3,12 @@ title: Herramienta de instalación de .NET para autores de extensiones de VS Co
 description: Información general de la herramienta de instalación de .NET para autores de extensiones, una extensión de Visual Studio Code para instalar el entorno de ejecución de .NET.
 author: sfoslund
 ms.date: 11/18/2020
-ms.openlocfilehash: 37be1b9dcdb9fba99554800fea23f28443efb5fa
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 4be931a254e4ce969f9eaf2efde7939cb54e1d5f
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599903"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605157"
 ---
 # <a name="net-install-tool-for-extension-authors"></a>Herramienta de instalación de .NET para autores de extensiones
 
@@ -33,4 +33,4 @@ Para ver más ejemplos, consulte estas extensiones de código abierto que aprove
 
 ## <a name="getting-started-end-users"></a>Introducción: usuarios finales
 
-En general, no es necesario que el usuario final interactúe con la herramienta de instalación de .NET para autores extensiones. Si tiene problemas con la extensión, consulte nuestra [página de solución de problemas](https://github.com/dotnet/vscode-dotnet-runtime/blob/master/Documentation/troubleshooting.md) o presente una incidencia en nuestro [GitHub](https://github.com/dotnet/vscode-dotnet-runtime/issues).
+En general, no es necesario que el usuario final interactúe con la herramienta de instalación de .NET para autores extensiones. Si tiene problemas con la extensión, consulte nuestra [página de solución de problemas](https://github.com/dotnet/vscode-dotnet-runtime/blob/master/Documentation/troubleshooting-runtime.md) o presente una incidencia en nuestro [GitHub](https://github.com/dotnet/vscode-dotnet-runtime/issues).
