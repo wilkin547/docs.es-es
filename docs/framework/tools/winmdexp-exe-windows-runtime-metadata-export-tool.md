@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: a35577841765f7e6d5d5e8220bf3951f81d65832
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: b9a30076fdd67a90dc3e605a8014ead88141f43b
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258707"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477535"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Herramienta de exportación de metadatos de Windows Runtime)
 
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |Argumento u opción|Descripción|  
 |------------------------|-----------------|  
-|`winmdmodule`|Especifica el módulo (.winmdobj) que se va a exportar. Solo se permite un módulo. Para crear este módulo, utilice la opción del compilador `/target` con el destino de `winmdobj`. Consulte [-target:winmdobj (opciones del compilador de C#)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) o [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`winmdmodule`|Especifica el módulo (.winmdobj) que se va a exportar. Solo se permite un módulo. Para crear este módulo, utilice la opción del compilador `/target` con el destino de `winmdobj`. Consulte [-target:winmdobj (opciones del compilador de C#)](../../csharp/language-reference/compiler-options/output.md#targettype) o [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Especifica el archivo de documentación XML de salida que Winmdexp.exe va a generar. En .NET Framework 4.5, el archivo de salida es básicamente igual que el archivo de documentación XML de entrada.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Especifica el nombre del archivo de documentación XML que el compilador generó con `winmdmodule`.|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|Especifica el nombre del archivo de base de datos de programa (PDB) que contiene los símbolos para `winmdmodule`.|  
