@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 895e39593b5e84d708392d3d994267b25bc4eeea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90c989bcf21e24cf7ccf410c9a18a44cde81233e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244176"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478221"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedimiento para compilar con Trace y Debug de forma condicional
 
@@ -30,7 +30,7 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
   
 - Las páginas de propiedades  
   
-- La línea de comandos  
+- Línea de comandos  
   
 - **#CONST** (para Visual Basic) y **#define** (para C#)  
   
@@ -67,13 +67,13 @@ Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de 
     |`-d:`|Define un símbolo de compilación condicional|  
   
     > [!NOTE]
-    > TRACE o DEBUG deben escribirse en letras mayúsculas. Para obtener más información sobre los comandos de compilación condicional, escriba `vbc /?` (para Visual Basic) o `csc /?` (para C#) en el símbolo del sistema. Para más información, vea [Building from the Command Line](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (Compilar desde la línea de comandos) (C#) o [Invoking the Command-Line Compiler](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Invocar el compilador de línea de comandos) (Visual Basic).  
+    > TRACE o DEBUG deben escribirse en letras mayúsculas. Para obtener más información sobre los comandos de compilación condicional, escriba `vbc /?` (para Visual Basic) o `csc /?` (para C#) en el símbolo del sistema. Para más información, vea [Building from the Command Line](../../csharp/language-reference/compiler-options/index.md) (Compilar desde la línea de comandos) (C#) o [Invoking the Command-Line Compiler](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Invocar el compilador de línea de comandos) (Visual Basic).  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Para realizar compilación condicional mediante #CONST o #define  
   
 1. Escriba la instrucción apropiada para su lenguaje de programación en la parte superior del archivo de código fuente.  
   
-    |Lenguaje|.|Resultado|  
+    |Language|.|Resultado|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Habilita el seguimiento|  
     ||**#CONST TRACE = false**|Deshabilita el seguimiento|  
@@ -102,5 +102,5 @@ Convierta en comentario la directiva de compilador.
 - [Modificadores de seguimiento](trace-switches.md)
 - [Agentes de escucha de seguimiento](trace-listeners.md)
 - [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
-- [Establecimiento de variables de entorno para la línea de comandos de Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Establecimiento de variables de entorno para la línea de comandos de Visual Studio](../../csharp/language-reference/compiler-options/index.md)
 - [Procedimiento Invocación del compilador de la línea de comandos](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

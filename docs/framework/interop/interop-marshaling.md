@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: bd618714a9bd27bc309b7933b656de6bd139cfe7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3901bb74e4091406140f8c2d955a3a5150604b57
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554897"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605352"
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 
@@ -69,7 +69,7 @@ El autor del componente establece la afinidad del subproceso de un servidor COM.
 
 Cuando un cliente administrado y un servidor no administrado están en el mismo apartamento, el servicio de serialización de interoperabilidad controla toda la serialización de datos. Sin embargo, cuando el cliente y el servidor se inicializan en apartamentos diferentes, también es necesaria la serialización de COM. En la siguiente ilustración se muestran los elementos de una llamada entre apartamentos:
 
-![Serialización COM](./media/interop-marshaling/single-process-across-multi-apartment.gif "Llamada entre apartamentos entre un cliente .NET y un objeto COM")
+![Llamada entre apartamentos entre un cliente .NET y un objeto COM](./media/interop-marshaling/single-process-across-multi-apartment.gif)
 
 Para una serialización entre apartamentos, puede hacer lo siguiente:
 
@@ -90,7 +90,7 @@ Al igual que con la serialización entre apartamentos, la serialización de COM 
 
 En la siguiente ilustración se muestra cómo la serialización de interoperabilidad y la serialización de COM proporcionan canales de comunicación a través de procesos y límites de hosts:
 
-![Serialización COM](./media/interop-marshaling/interop-and-com-marshaling.gif "Serialización entre procesos")
+![Serialización entre procesos](./media/interop-marshaling/interop-and-com-marshaling.gif)
 
 ### <a name="preserving-identity"></a>Conservar la identidad
 
