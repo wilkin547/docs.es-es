@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: No se admite la creación de instancias de implementaciones predeterminadas de las abstracciones criptográficas'
-description: Obtenga información sobre el cambio importante en .NET 5.0 donde las sobrecargas de Create() sin parámetros en las abstracciones criptográficas están obsoletas.
+description: Obtenga información sobre el cambio importante en .NET 5 donde las sobrecargas de Create() sin parámetros en las abstracciones criptográficas están obsoletas.
 ms.date: 10/16/2020
-ms.openlocfilehash: 8ed7d0b72347ec41ec65ccd9e4004266619c84f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b75f3568317d1db8ae1bb629f760aaec7e69776a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760222"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256795"
 ---
 # <a name="instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported"></a>No se admite la creación de instancias de implementaciones predeterminadas de las abstracciones criptográficas
 
@@ -41,7 +41,7 @@ En .NET Core 2.0-3.1, los generadores primitivos de cifrado abstractos como <xr
 HashAlgorithm alg = HashAlgorithm.Create();
 ```
 
-En .NET 5.0 y versiones posteriores, los generadores primitivos de cifrado abstractos como <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> se marcan como obsoletos y generan una advertencia en tiempo de compilación con el identificador `SYSLIB0007`. En tiempo de ejecución, estos métodos siguen iniciando una excepción <xref:System.PlatformNotSupportedException>.
+En .NET 5 y versiones posteriores, los generadores primitivos de cifrado abstractos como <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> se marcan como obsoletos y generan una advertencia en tiempo de compilación con el identificador `SYSLIB0007`. En tiempo de ejecución, estos métodos siguen iniciando una excepción <xref:System.PlatformNotSupportedException>.
 
 ```csharp
 // Throws PlatformNotSupportedException.

@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: PrincipalPermissionAttribute está obsoleto como error'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde el constructor PrincipalPermissionAttribute está obsoleto y genera un error en tiempo de compilación.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde el constructor PrincipalPermissionAttribute está obsoleto y genera un error en tiempo de compilación.
 ms.date: 11/01/2020
-ms.openlocfilehash: 138bbf25fd493c1bb9c2b3f10b62681c735ea7b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7568883935633e98b884b553efccf50504448b77
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760176"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257237"
 ---
 # <a name="principalpermissionattribute-is-obsolete-as-error"></a>PrincipalPermissionAttribute está obsoleto como error
 
@@ -25,13 +25,13 @@ public void MyMethod()
 }
 ```
 
-A partir de .NET 5.0, no se puede aplicar el atributo <xref:System.Security.Permissions.PrincipalPermissionAttribute> a un método. El constructor del atributo está obsoleto y genera un error en tiempo de compilación. A diferencia de otras advertencias de obsolescencia, el error no se puede suprimir.
+A partir de .NET 5, no se puede aplicar el atributo <xref:System.Security.Permissions.PrincipalPermissionAttribute> a un método. El constructor del atributo está obsoleto y genera un error en tiempo de compilación. A diferencia de otras advertencias de obsolescencia, el error no se puede suprimir.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 
-El tipo <xref:System.Security.Permissions.PrincipalPermissionAttribute>, como otros tipos que colocan <xref:System.Security.Permissions.SecurityAttribute> como subclase, forma parte de la infraestructura de seguridad de acceso del código (CAS) de .NET. En .NET Framework 2.x-4.x, el entorno de ejecución aplica anotaciones <xref:System.Security.Permissions.PrincipalPermissionAttribute> a la entrada de método, incluso si la aplicación se ejecuta en un escenario de plena confianza. .NET Core y .NET 5.0 y posterior no admiten atributos CAS y el entorno de ejecución los omite.
+El tipo <xref:System.Security.Permissions.PrincipalPermissionAttribute>, como otros tipos que colocan <xref:System.Security.Permissions.SecurityAttribute> como subclase, forma parte de la infraestructura de seguridad de acceso del código (CAS) de .NET. En .NET Framework 2.x-4.x, el entorno de ejecución aplica anotaciones <xref:System.Security.Permissions.PrincipalPermissionAttribute> a la entrada de método, incluso si la aplicación se ejecuta en un escenario de plena confianza. .NET Core y .NET 5 y posterior no admiten atributos CAS y el entorno de ejecución los omite.
 
-Esta diferencia de comportamiento entre .NET Framework y .NET Core y .NET 5.0 puede dar lugar a un escenario de "error de apertura", en el que se debería haber bloqueado el acceso pero, por el contrario, se ha permitido. Para evitar el escenario de "error de apertura", ya no se puede aplicar el atributo en el código que tiene como destino .NET 5.0 o posterior.
+Esta diferencia de comportamiento entre .NET Framework y .NET Core y .NET 5 puede dar lugar a un escenario de "error de apertura", en el que se debería haber bloqueado el acceso pero, por el contrario, se ha permitido. Para evitar el escenario de "error de apertura", ya no se puede aplicar el atributo en el código que tiene como destino .NET 5 o posterior.
 
 ## <a name="version-introduced"></a>Versión introducida
 

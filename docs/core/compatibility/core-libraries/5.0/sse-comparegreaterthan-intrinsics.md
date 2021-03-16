@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Los métodos CompareGreaterThan de SSE y SSE2 controlan correctamente las entradas NaN'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde se han corregido los métodos de comparación SSE y SSE2 para controlar correctamente las entradas NaN.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde se han corregido los métodos de comparación SSE y SSE2 para controlar correctamente las entradas NaN.
 ms.date: 11/01/2020
-ms.openlocfilehash: 4abffa8d8bf2abfa9ef83673db9154de035d952c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 23955f08f70d82635a0a93b9bbb9a05efbbab6a9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760118"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257120"
 ---
 # <a name="sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs"></a>Los métodos CompareGreaterThan de SSE y SSE2 controlan correctamente las entradas NaN
 
@@ -26,7 +26,7 @@ Los métodos <xref:System.Runtime.Intrinsics.X86.Sse?displayProperty=nameWithTyp
 
 Antes, las entradas de `NaN` a los métodos <xref:System.Runtime.Intrinsics.X86.Sse> y <xref:System.Runtime.Intrinsics.X86.Sse2> enumerados devolvían un resultado incorrecto. El resultado también era distinto del resultado generado por el método correspondiente en la clase <xref:System.Runtime.Intrinsics.X86.Avx>.
 
-A partir de .NET 5.0, estos métodos controlan correctamente entradas de `NaN` y devuelven los mismos resultados que los métodos correspondientes de la clase <xref:System.Runtime.Intrinsics.X86.Avx>.
+A partir de .NET 5, estos métodos controlan correctamente entradas de `NaN` y devuelven los mismos resultados que los métodos correspondientes de la clase <xref:System.Runtime.Intrinsics.X86.Avx>.
 
 Las arquitecturas estándar de la industria SSE (Extensiones de SIMD de streaming) y SSE2 (Extensiones de SIMD de streaming 2) no proporcionan soporte de hardware directo para estos métodos de comparación, por lo que se implementan en el software. Antes, los métodos se implementaban incorrectamente y las entradas de `NaN` se administraban incorrectamente. En el caso del código trasladado desde el código nativo, el comportamiento incorrecto puede presentar errores. En el caso de una ruta de acceso de código de 256 bits, los métodos también pueden producir resultados diferentes en los métodos equivalentes de la clase <xref:System.Runtime.Intrinsics.X86.Avx>.
 

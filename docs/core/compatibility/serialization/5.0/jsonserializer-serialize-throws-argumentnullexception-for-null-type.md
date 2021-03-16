@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Serialize inicia una excepción cuando el parámetro de tipo es NULL'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde los métodos de serialización de JsonSerialize que tienen un parámetro de tipo ahora inician una excepción cuando se pasa NULL para ese parámetro.
+description: Obtenga información sobre el cambio importante en .NET 5, donde los métodos de serialización de JsonSerialize que tienen un parámetro de tipo ahora inician una excepción cuando se pasa NULL para ese parámetro.
 ms.date: 10/18/2020
-ms.openlocfilehash: af2885394418072ad7efec5855490b5b80152fe6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 81b3b754c11599eea435c750f1386fcaa2f0b54d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760241"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256301"
 ---
 # <a name="jsonserializerserialize-throws-argumentnullexception-when-type-parameter-is-null"></a>JsonSerializer.Serialize inicia la excepción ArgumentNullException cuando el parámetro de tipo es NULL
 
@@ -15,7 +15,7 @@ Las sobrecargas <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProper
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En .NET Core 3.1, las sobrecargas <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>, <xref:System.Text.Json.JsonSerializer.SerializeAsync(System.IO.Stream,System.Object,System.Type,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> y <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes(System.Object,System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> que tienen un parámetro <xref:System.Type> inician una excepción <xref:System.ArgumentNullException> cuando se pasa `null` para el parámetro `Type inputType`, pero no si el parámetro `Object value` también es `null`. A partir de .NET 5.0, estos métodos *siempre* inician una excepción <xref:System.ArgumentNullException> cuando se pasa `null` para el parámetro <xref:System.Type>.
+En .NET Core 3.1, las sobrecargas <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>, <xref:System.Text.Json.JsonSerializer.SerializeAsync(System.IO.Stream,System.Object,System.Type,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> y <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes(System.Object,System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> que tienen un parámetro <xref:System.Type> inician una excepción <xref:System.ArgumentNullException> cuando se pasa `null` para el parámetro `Type inputType`, pero no si el parámetro `Object value` también es `null`. A partir de .NET 5, estos métodos *siempre* inician una excepción <xref:System.ArgumentNullException> cuando se pasa `null` para el parámetro <xref:System.Type>.
 
 Comportamiento en .NET Core 3.1:
 
@@ -27,7 +27,7 @@ JsonSerializer.Serialize(null, null);
 JsonSerializer.SerializeToUtf8Bytes(null, null);
 ```
 
-Comportamiento en .NET 5.0 y versiones posteriores:
+Comportamiento en .NET 5 y versiones posteriores:
 
 ```csharp
 // Throws ArgumentNullException: "Value cannot be null. (Parameter 'inputType')".

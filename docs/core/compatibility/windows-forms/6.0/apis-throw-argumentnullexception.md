@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Algunas API inician la excepción ArgumentNullException'
-description: Obtenga información sobre el cambio importante en .NET 6.0 por el que algunas API validan argumentos y ahora inician una excepción ArgumentNullException.
+description: Obtenga información sobre el cambio importante en .NET 6 por el que algunas API validan argumentos y ahora inician una excepción ArgumentNullException.
 ms.date: 01/29/2021
-ms.openlocfilehash: f9d7dc8bb57ed8dc5b4ff41bda9b3bde7db7b880
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca7f32739237715657350f52d2523b0ce378364d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99804155"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255742"
 ---
 # <a name="some-apis-throw-argumentnullexception"></a>Algunas API inician la excepción ArgumentNullException
 
@@ -17,7 +17,7 @@ Algunas API ahora validan los parámetros de entrada e inician una excepción <x
 
 En las versiones anteriores de .NET, las API afectadas iniciaban una excepción <xref:System.NullReferenceException> si la invocación se realizaba con un argumento que es `null`.
 
-A partir de .NET 6.0, las API afectadas iniciaban una excepción <xref:System.ArgumentNullException> si la invocación se realizaba con un argumento que es `null`.
+A partir de .NET 6, las API afectadas iniciaban una excepción <xref:System.ArgumentNullException> si la invocación se realizaba con un argumento que es `null`.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

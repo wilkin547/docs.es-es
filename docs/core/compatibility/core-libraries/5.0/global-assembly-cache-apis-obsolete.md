@@ -1,17 +1,17 @@
 ---
 title: 'Cambio importante: Las API de caché global de ensamblados están obsoletas'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde las API que controlan la GAC generan un error o no realizan ninguna operación.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde las API que controlan la GAC generan un error o no realizan ninguna operación.
 ms.date: 11/01/2020
-ms.openlocfilehash: 2f74fccc68b7a925d909938d77578df8ebe8d60d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 39c7b092b06754a28723693c0147b7ec3a0b705e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760202"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257484"
 ---
 # <a name="global-assembly-cache-apis-are-obsolete"></a>Las API de caché global de ensamblados están obsoletas
 
-.NET Core y .NET 5.0 y versiones posteriores eliminan el concepto de caché global de ensamblados (GAC) presente en .NET Framework. Por lo tanto, todas las API de .NET Core y .NET 5+ que se ocupan de GAC producen errores o no hacen nada.
+.NET Core y .NET 5 y versiones posteriores eliminan el concepto de caché global de ensamblados (GAC) presente en .NET Framework. Por lo tanto, todas las API de .NET Core y .NET 5+ que se ocupan de GAC producen errores o no hacen nada.
 
 Para ayudar a los desarrolladores a apartarse de estas API, algunas relacionadas con GAC se han marcado como obsoletas y generan una advertencia `SYSLIB0005` en tiempo de compilación. Estas API podrían eliminarse en una próxima versión de .NET.
 
@@ -31,7 +31,7 @@ Assembly asm = typeof(object).Assembly;
 Console.WriteLine(asm.GlobalAssemblyCache);
 ```
 
-En .NET 5.0 y versiones posteriores, la propiedad <xref:System.Reflection.Assembly.GlobalAssemblyCache> sigue devolviendo `false`. Pero el captador de propiedad también se ha marcado como obsoleto para indicar a los autores de llamadas que deben dejar de acceder a la propiedad. Las bibliotecas y aplicaciones no deben usar la API <xref:System.Reflection.Assembly.GlobalAssemblyCache> para realizar determinaciones sobre el comportamiento en tiempo de ejecución, ya que siempre devuelve `false` en .NET Core y .NET 5.0 y versiones posteriores.
+En .NET 5 y versiones posteriores, la propiedad <xref:System.Reflection.Assembly.GlobalAssemblyCache> sigue devolviendo `false`. Pero el captador de propiedad también se ha marcado como obsoleto para indicar a los autores de llamadas que deben dejar de acceder a la propiedad. Las bibliotecas y aplicaciones no deben usar la API <xref:System.Reflection.Assembly.GlobalAssemblyCache> para realizar determinaciones sobre el comportamiento en tiempo de ejecución, ya que siempre devuelve `false` en .NET Core y .NET 5 y versiones posteriores.
 
 ```csharp
 Assembly asm = typeof(object).Assembly;
@@ -43,7 +43,7 @@ Se trata de un cambio solo en tiempo de compilación. No hay ningún cambio en t
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 
-La caché global de ensamblados (GAC) no existe como concepto en .NET Core y .NET 5.0 y versiones posteriores.
+La caché global de ensamblados (GAC) no existe como concepto en .NET Core y .NET 5 y versiones posteriores.
 
 ## <a name="version-introduced"></a>Versión introducida
 

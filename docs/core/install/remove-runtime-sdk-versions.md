@@ -3,14 +3,14 @@ title: Eliminación del entorno de ejecución y el SDK de .NET
 description: En este artículo se describe cómo determinar las versiones del entorno de ejecución y el SDK de .NET instaladas y, luego, cómo quitarlas en Windows, Mac, and Linux.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/20/2020
+ms.date: 03/02/2021
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f07a9acdc5be310d38da18602dde2ebf678e9a1b
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 8ef6ab531d6c3eada5226b1682f19bfe5537bfe4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031727"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255638"
 ---
 # <a name="how-to-remove-the-net-runtime-and-sdk"></a>Procedimiento para quitar el entorno de ejecución y el SDK de .NET
 
@@ -71,15 +71,15 @@ En los equipos en los que solo se ha instalado el entorno de ejecución, y no el
 
 Si ha realizado la instalación mediante un archivo tarball, debe quitar .NET mediante el método manual.
 
-En Linux, debe quitar los SDK y runtimes por separado, quitando los directorios con versiones. De esta manera, se elimina el SDK y el runtime del disco. Por ejemplo, para quitar el runtime y el SDK 1.0.1, tendrá que usar los siguientes comandos de bash:
+En Linux, debe quitar los SDK y runtimes por separado, quitando los directorios con versiones. Estos directorios pueden variar en función de la distribución de Linux. De esta manera, se elimina el SDK y el runtime del disco. Por ejemplo, para quitar el runtime y el SDK 1.0.1, tendrá que usar los siguientes comandos de bash:
 
 ```bash
 version="1.0.1"
-sudo rm -rf /usr/local/share/dotnet/sdk/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.All/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
-sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
+sudo rm -rf /usr/share/dotnet/sdk/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.NETCore.App/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.All/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.App/$version
+sudo rm -rf /usr/share/dotnet/host/fxr/$version
 ```
 
 Los directorios primarios para el SDK y runtime se enumeran en el resultado de los comandos `dotnet --list-sdks` y `dotnet --list-runtimes`, como se muestra en la tabla anterior.
@@ -107,6 +107,8 @@ Los directorios primarios para el SDK y runtime se enumeran en el resultado de l
 
 La [herramienta de desinstalación de .NET](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`) permite quitar los SDK y los entornos de ejecución de .NET de un sistema. Hay una colección de opciones disponible para especificar las versiones que se deben desinstalar.
 
+::: zone pivot="os-windows"
+
 ## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>Dependencia de Visual Studio en versiones de SDK de .NET Core
 
 Antes de la versión 16.3 de Visual Studio 2019, los instaladores de Visual Studio llamaron al instalador de SDK de .NET Core independiente. Como resultado, las versiones del SDK aparecen en el cuadro de diálogo **Aplicaciones y características** de Windows. La eliminación de los SDK de .NET Core que se instalaron con Visual Studio mediante el instalador independiente podría interrumpir Visual Studio. Si Visual Studio tiene problemas después de desinstalar los SDK, ejecute reparar en esa versión específica de Visual Studio. En la tabla siguiente se muestran algunas de las dependencias de Visual Studio en las versiones de SDK de .NET Core:
@@ -120,6 +122,8 @@ Antes de la versión 16.3 de Visual Studio 2019, los instaladores de Visual S
 | Visual Studio 2017, versión 15.8 | SDK de .NET Core 2.1.4xx          |
 
 A partir de la versión 16.3 de Visual Studio 2019, Visual Studio se encarga de su propia copia del SDK de .NET. Por ese motivo, ya no verá las versiones del SDK en el cuadro de diálogo **Aplicaciones y características**.
+
+::: zone-end
 
 ## <a name="remove-the-nuget-fallback-folder"></a>Eliminación de la carpeta de reserva de NuGet
 

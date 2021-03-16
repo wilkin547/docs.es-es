@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: La mayoría de las API de seguridad de acceso del código están obsoletas'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET, donde la mayoría de los tipos relacionados con la seguridad de acceso del código (CAS) en .NET están ahora obsoletos como advertencia.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET, donde la mayoría de los tipos relacionados con la seguridad de acceso del código (CAS) en .NET están ahora obsoletos como advertencia.
 ms.date: 11/01/2020
-ms.openlocfilehash: e793043e83389730934137d441f7ee776d44540b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc4be58622e81022e74476cf824a19689ba23ea4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760206"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257640"
 ---
 # <a name="most-code-access-security-apis-are-obsolete"></a>La mayoría de las API de seguridad de acceso del código están obsoletas
 
@@ -54,7 +54,7 @@ public void DoDeny()
 }
 ```
 
-En .NET 5.0 y versiones posteriores, la mayoría de las API relacionadas con CAS están obsoletas y producen una advertencia `SYSLIB0003` en tiempo de compilación.
+En .NET 5 y versiones posteriores, la mayoría de las API relacionadas con CAS están obsoletas y producen una advertencia `SYSLIB0003` en tiempo de compilación.
 
 ```csharp
 [SocketPermission(SecurityAction.Assert, Host = "contoso.com", Port = "443")] // warning SYSLIB0003
@@ -65,7 +65,7 @@ public void DoSomething()
 }
 ```
 
-Se trata de un cambio solo en tiempo de compilación. No hay ningún cambio en tiempo de ejecución con respecto a versiones anteriores de .NET Core. Los métodos que no realizan ninguna operación en .NET Core 2.x-3.x siguen sin realizar ninguna operación en tiempo de ejecución en .NET 5.0 y versiones posteriores. Los métodos que producen una <xref:System.PlatformNotSupportedException> en .NET Core 2.x-3.x siguen produciendo una <xref:System.PlatformNotSupportedException> en tiempo de ejecución en .NET 5.0 y versiones posteriores.
+Se trata de un cambio solo en tiempo de compilación. No hay ningún cambio en tiempo de ejecución con respecto a versiones anteriores de .NET Core. Los métodos que no realizan ninguna operación en .NET Core 2.x-3.x siguen sin realizar ninguna operación en tiempo de ejecución en .NET 5 y versiones posteriores. Los métodos que producen una <xref:System.PlatformNotSupportedException> en .NET Core 2.x-3.x siguen produciendo una <xref:System.PlatformNotSupportedException> en tiempo de ejecución en .NET 5 y versiones posteriores.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

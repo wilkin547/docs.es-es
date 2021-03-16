@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Ahora, las propiedades de WinForms producen ArgumentOutOfRangeException'
-description: Obtenga información sobre el cambio importante en .NET 5.0 por el que algunas propiedades de Windows Forms ahora inician una excepción ArgumentOutOfRangeException para los argumentos no válidos.
+description: Obtenga información sobre el cambio importante en .NET 5 por el que algunas propiedades de Windows Forms ahora inician una excepción ArgumentOutOfRangeException para los argumentos no válidos.
 ms.date: 06/18/2020
-ms.openlocfilehash: 94593047d16304ce401b23993ad4ca173c10812b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 493669af1ed5646d93e7c7d2688afd40f3fa731c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760217"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256158"
 ---
 # <a name="winforms-properties-now-throw-argumentoutofrangeexception"></a>Ahora, las propiedades de WinForms producen ArgumentOutOfRangeException
 
@@ -15,7 +15,7 @@ Algunas propiedades de Windows Forms inician ahora una excepción <xref:System.
 
 ## <a name="change-description"></a>Descripción del cambio
 
-Anteriormente, estas propiedades producían varias excepciones, como <xref:System.NullReferenceException>, <xref:System.IndexOutOfRangeException>o <xref:System.ArgumentException>, cuando se pasaban argumentos fuera del intervalo. A partir de .NET 5.0, estas propiedades producen ahora <xref:System.ArgumentOutOfRangeException> cuando se pasan argumentos que están fuera del intervalo.
+Anteriormente, estas propiedades producían varias excepciones, como <xref:System.NullReferenceException>, <xref:System.IndexOutOfRangeException>o <xref:System.ArgumentException>, cuando se pasaban argumentos fuera del intervalo. A partir de .NET 5, estas propiedades producen ahora <xref:System.ArgumentOutOfRangeException> cuando se pasan argumentos que están fuera del intervalo.
 
 El inicio de una <xref:System.ArgumentOutOfRangeException> se ajusta al comportamiento del tiempo de ejecución de .NET. También mejora la experiencia de depuración al comunicar claramente qué argumento no es válido.
 

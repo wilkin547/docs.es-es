@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: CA1831: Uso de AsSpan en lugar de indizadores basados en intervalos para una cadena'
-description: Obtenga información sobre el cambio importante en .NET 5.0 causado por la habilitación de la regla de análisis de código CA1831.
+description: Obtenga información sobre el cambio importante en .NET 5 causado por la habilitación de la regla de análisis de código CA1831.
 ms.date: 08/21/2020
-ms.openlocfilehash: 850916b804ae29dba8d2bd05c6e4fb06fe667296
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 1ed4e2bdde9c3d525f95963f316551909ac3de7c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437890"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257796"
 ---
 # <a name="warning-ca1831-use-asspan-instead-of-range-based-indexers-for-string"></a>Advertencia CA1831: Uso de AsSpan en lugar de indizadores basados en intervalos para una cadena
 
@@ -15,7 +15,7 @@ La regla [CA1831](/visualstudio/code-quality/ca1831) del analizador de código d
 
 ## <a name="change-description"></a>Descripción del cambio
 
-A partir de .NET 5.0, el SDK de .NET incluye [analizadores de código fuente de .NET](../../../../fundamentals/code-analysis/overview.md). Varias de estas reglas están habilitadas de forma predeterminada, incluida la regla [CA1831](/visualstudio/code-quality/ca1831). Si el proyecto contiene código que infringe esta regla y está configurado para tratar las advertencias como errores, este cambio podría interrumpir la compilación.
+A partir de .NET 5, el SDK de .NET incluye [analizadores de código fuente de .NET](../../../../fundamentals/code-analysis/overview.md). Varias de estas reglas están habilitadas de forma predeterminada, incluida la regla [CA1831](/visualstudio/code-quality/ca1831). Si el proyecto contiene código que infringe esta regla y está configurado para tratar las advertencias como errores, este cambio podría interrumpir la compilación.
 
 La regla CA1831 busca instancias en las que se usa un indizador basado en <xref:System.Range> en una cadena, pero donde no está prevista ninguna copia. Si el indizador basado en <xref:System.Range> se usa directamente en una cadena para generar una conversión implícita, se crea una copia innecesaria de la parte solicitada de la cadena. Por ejemplo:
 

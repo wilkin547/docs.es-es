@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Se admiten las opciones PropertyNamingPolicy, PropertyNameCaseInsensitive y Encoder para los pares clave-valor'
-description: Obtenga información sobre el cambio importante en .NET 5.0 donde se respetan las opciones PropertyNamingPolicy, PropertyNameCaseInsensitive y Encoder al serializar y deserializar los nombres de propiedad Key y Value de una instancia de par clave-valor.
+description: Obtenga información sobre el cambio importante en .NET 5 donde se respetan las opciones PropertyNamingPolicy, PropertyNameCaseInsensitive y Encoder al serializar y deserializar los nombres de propiedad Key y Value de una instancia de par clave-valor.
 ms.date: 10/18/2020
-ms.openlocfilehash: 5d75cb7feea32cc4b942e5261c5b609e00a5082c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe6298a677488574fdd7bdc7e887ed3b244ba8d6
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760240"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256327"
 ---
 # <a name="propertynamingpolicy-propertynamecaseinsensitive-and-encoder-options-are-honored-when-serializing-and-deserializing-key-value-pairs"></a>Se admiten las opciones PropertyNamingPolicy, PropertyNameCaseInsensitive y Encoder al serializar y deserializar pares clave-valor
 
@@ -27,7 +27,7 @@ Console.WriteLine(JsonSerializer.Serialize(kvp, options));
 // Actual: {"Key":1,"Value":1}
 ```
 
-A partir de .NET 5.0, se respetan las opciones <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> y <xref:System.Text.Json.JsonSerializerOptions.Encoder> al serializar instancias de <xref:System.Collections.Generic.KeyValuePair%602>. En el ejemplo de código siguiente se muestra cómo en las propiedades <xref:System.Collections.Generic.KeyValuePair%602.Key> y <xref:System.Collections.Generic.KeyValuePair%602.Value> se usan mayúsculas y minúsculas (Camel) después de la serialización, de acuerdo a la directiva de nomenclatura de propiedades especificada.
+A partir de .NET 5, se respetan las opciones <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> y <xref:System.Text.Json.JsonSerializerOptions.Encoder> al serializar instancias de <xref:System.Collections.Generic.KeyValuePair%602>. En el ejemplo de código siguiente se muestra cómo en las propiedades <xref:System.Collections.Generic.KeyValuePair%602.Key> y <xref:System.Collections.Generic.KeyValuePair%602.Value> se usan mayúsculas y minúsculas (Camel) después de la serialización, de acuerdo a la directiva de nomenclatura de propiedades especificada.
 
 ```csharp
 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
@@ -47,7 +47,7 @@ string json = @"{""key"":1,""value"":1}";
 JsonSerializer.Deserialize<KeyValuePair<int, int>>(json, options);
 ```
 
-A partir de .NET 5.0, se respetan las opciones <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> y <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive> al deserializar mediante <xref:System.Text.Json.JsonSerializer>. Por ejemplo, en el fragmento de código siguiente se muestra la deserialización correcta de los nombres de propiedad <xref:System.Collections.Generic.KeyValuePair%602.Key> y <xref:System.Collections.Generic.KeyValuePair%602.Value> en minúsculas porque la directiva de nomenclatura de propiedades especificada lo permite.
+A partir de .NET 5, se respetan las opciones <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> y <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive> al deserializar mediante <xref:System.Text.Json.JsonSerializer>. Por ejemplo, en el fragmento de código siguiente se muestra la deserialización correcta de los nombres de propiedad <xref:System.Collections.Generic.KeyValuePair%602.Key> y <xref:System.Collections.Generic.KeyValuePair%602.Value> en minúsculas porque la directiva de nomenclatura de propiedades especificada lo permite.
 
 ```csharp
 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };

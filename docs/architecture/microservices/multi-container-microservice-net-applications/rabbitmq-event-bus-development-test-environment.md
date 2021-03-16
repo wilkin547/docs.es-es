@@ -2,12 +2,12 @@
 title: Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Uso de RabbitMQ para implementar la mensajería de un bus de eventos para entornos de integración con fines de desarrollo de entornos de prueba.
 ms.date: 01/13/2021
-ms.openlocfilehash: a1e7d11e376080a03269f202fa6ae24ffeb0f4d2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b67b6cf92ac2c29b9eff07c2c9603206e42968a3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188086"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258083"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 
@@ -35,7 +35,7 @@ La implementación de RabbitMQ de un bus de eventos de desarrollo/pruebas de eje
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementar un método de publicación sencillo con RabbitMQ
 
-El código siguiente es una versión **_simplificada_* _ de una implementación de bus de eventos para RabbitMQ que tiene como objetivo presentar todo el escenario. Lo cierto es que este no es el modo de controlar la conexión. Para ver la implementación completa, consulte el código real en el repositorio [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs).
+El código siguiente es una versión ***simplificada*** de una implementación de bus de eventos de RabbitMQ con el objetivo de presentar todo el escenario. Lo cierto es que este no es el modo de controlar la conexión. Para ver la implementación completa, consulte el código real en el repositorio [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs).
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -116,12 +116,14 @@ En escenarios de producción, compruebe los recursos adicionales siguientes, esp
 
 Solución lista para la producción compatibles con RabbitMQ.
 
-- _ *EasyNetQ**: cliente de la API de .NET de código abierto para RabbitMQ \
+- **EasyNetQ**: cliente de la API de .NET de código abierto para RabbitMQ \
   <https://easynetq.com/>
 
 - **MassTransit** \
   <https://masstransit-project.com/>
   
+- **Rebus**: Service Bus .NET de código abierto <https://github.com/rebus-org/Rebus>
+
 > [!div class="step-by-step"]
 > [Anterior](integration-event-based-microservice-communications.md)
 > [Siguiente](subscribe-events.md)

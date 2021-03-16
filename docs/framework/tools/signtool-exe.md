@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6c810a7116f88f2eb7fc25efbfc6f44b60f2768b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238475"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259130"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 > [!Note]  
 > Las **compilaciones 20236 y posteriores** del SDK de Windows 10, Windows 10 HLK, Windows 10 WDK y Windows 10 ADK requieren especificar el algoritmo de resumen. El comando `sign` de SignTool requiere que el **algoritmo de resumen de archivo** `/fd` y la opción **algoritmo de resumen de marca de tiempo** `/td` se especifiquen durante la firma y la marca de tiempo, respectivamente. Se generará una advertencia (inicialmente, código de error 0) si `/fd` no se especifica durante la firma y si `/td` no se especifica durante la marca de tiempo. En versiones posteriores de SignTool, la advertencia se convertirá en un error. Se recomienda SHA256, el que el sector considera más seguro que SHA1.  
@@ -231,4 +231,4 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ## <a name="see-also"></a>Vea también
 
 - [Herramientas](index.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: e94e80d0342f68098a08e184b6bf3f48c14e817b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efa07ee4166d3f02ca3885c5efc4373be8eac2fd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440886"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258538"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
 El Desensamblador de IL es una herramienta complementaria del Ensamblador de IL (*Ilasm.exe*). A partir de un archivo portable ejecutable (PE) que contiene código de lenguaje intermedio (IL), *Ildasm.exe* crea un archivo de texto que se puede usar como entrada para *Ilasm.exe*.
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -188,4 +188,4 @@ Un tipo anidado debe ir precedido de su clase contenedora delimitada por una bar
 - [Herramientas](index.md)
 - [Ilasm.exe (Ensamblador de IL)](ilasm-exe-il-assembler.md)
 - [Proceso de ejecución administrada](../../standard/managed-execution-process.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

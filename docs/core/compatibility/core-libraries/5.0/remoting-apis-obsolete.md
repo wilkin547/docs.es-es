@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Las API de comunicación remota están obsoletas'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde algunas API relacionadas con la comunicación remota están marcadas como obsoletas y generan una advertencia con un identificador de diagnóstico personalizado.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde algunas API relacionadas con la comunicación remota están marcadas como obsoletas y generan una advertencia con un identificador de diagnóstico personalizado.
 ms.date: 11/01/2020
-ms.openlocfilehash: 5687b1471028b077674cfd31cb77ce95dc51bef5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c4f7cd200cadd11321da60f2b4a0d191497aae8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760173"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257175"
 ---
 # <a name="remoting-apis-are-obsolete"></a>Las API de comunicación remota están obsoletas
 
@@ -24,7 +24,7 @@ Las siguientes API de comunicación remota se han marcado como obsoletas.
 
 En .NET Framework 2.x-4.x, los métodos <xref:System.MarshalByRefObject.GetLifetimeService> y <xref:System.MarshalByRefObject.InitializeLifetimeService> controlan la duración de las instancias implicadas con .NET Remoting. En .NET Core 2.x-3.x, estos métodos siempre producen una <xref:System.PlatformNotSupportedException> en tiempo de ejecución.
 
-En .NET 5.0 y versiones posteriores, los métodos <xref:System.MarshalByRefObject.GetLifetimeService> y <xref:System.MarshalByRefObject.InitializeLifetimeService> se han marcado como obsoletos como advertencia, pero siguen produciendo una <xref:System.PlatformNotSupportedException> en tiempo de ejecución.
+En .NET 5 y versiones posteriores, los métodos <xref:System.MarshalByRefObject.GetLifetimeService> y <xref:System.MarshalByRefObject.InitializeLifetimeService> se han marcado como obsoletos como advertencia, pero siguen produciendo una excepción <xref:System.PlatformNotSupportedException> en tiempo de ejecución.
 
 ```csharp
 // MemoryStream, like all Stream instances, subclasses MarshalByRefObject.
@@ -37,7 +37,7 @@ Se trata de un cambio solo en tiempo de compilación. No hay ningún cambio en t
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 
-[.NET Remoting](/previous-versions/dotnet/netframework-1.1/kwdt6w2k(v=vs.71)) es una tecnología heredada. Permite crear instancias de un objeto en otro proceso (potencialmente incluso en otra máquina) e interactuar con ese objeto como si fuera una instancia de objeto .NET normal en proceso. La infraestructura de .NET Remoting solo existe en .NET Framework 2.x-4.x. .NET Core y .NET 5.0 y versiones posteriores no tienen compatibilidad con .NET Remoting, y las API de comunicación remota o no existen o siempre producen excepciones en estos entornos de ejecución.
+[.NET Remoting](/previous-versions/dotnet/netframework-1.1/kwdt6w2k(v=vs.71)) es una tecnología heredada. Permite crear instancias de un objeto en otro proceso (potencialmente incluso en otra máquina) e interactuar con ese objeto como si fuera una instancia de objeto .NET normal en proceso. La infraestructura de .NET Remoting solo existe en .NET Framework 2.x-4.x. .NET Core y .NET 5 y versiones posteriores no tienen compatibilidad con .NET Remoting, y las API de comunicación remota o no existen o siempre producen excepciones en estos entornos de ejecución.
 
 Para ayudar a los desarrolladores a apartarse de estas API, se están marcando como obsoletas API seleccionadas relacionadas con la comunicación remota. Estas API podrían eliminarse por completo en una próxima versión de .NET.
 

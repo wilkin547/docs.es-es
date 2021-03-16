@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: af2198360670360f94f7fdf30d2890bc7dfd436d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99773867"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255701"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>Publicación de aplicaciones de .NET con la CLI de .NET
 
@@ -137,7 +137,7 @@ Para .NET 2.1, debe usar los modificadores siguientes con el comando `dotnet pu
 
 - `-r <RID>` Este modificador usa un identificador (RID) para especificar la plataforma de destino. Para obtener una lista de identificadores de tiempo de ejecución, vea [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md).
 
-- `--self-contained false` Este modificador indica al SDK de .NET Core que cree un archivo ejecutable como un FDE.
+- `--self-contained false` Este modificador deshabilita el comportamiento predeterminado del modificador `-r`, que consiste en crear una implementación autocontenida (SCD). Este modificador crea un FDE.
 
 | Modo de publicación                   | Versión del SDK | Comando                                                     |
 |--------------------------------|-------------|-------------------------------------------------------------|

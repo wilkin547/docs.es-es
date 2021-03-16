@@ -5,12 +5,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: f0535e2aa94cda96610acb0edb24f6d46cc4afa0
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 015be752e5c98ec732e1b95130979446071810f1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100474179"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478059"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opciones del compilador de Visual Basic, por categoría
 
@@ -26,7 +26,7 @@ El compilador de línea de comandos de Visual Basic se ofrece como alternativa a
 |[-utf8output](utf8output.md)|Muestra los resultados del compilador en codificación UTF-8.|  
 |[-verbose](verbose.md)|Muestra información adicional durante la compilación.|  
 |`-modulename:<string>`|Especifica el nombre del módulo de origen.|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Especifica un idioma para los resultados del compilador.|
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/advanced.md#preferreduilang)|Especifica un idioma para los resultados del compilador.|
   
 ## <a name="optimization"></a>Optimización  
   

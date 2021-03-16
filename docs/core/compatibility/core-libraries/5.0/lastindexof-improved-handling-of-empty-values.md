@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Mejora del control de cadenas de búsqueda vacías por parte de LastIndexOf'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde LastIndexOf y las API relacionadas ahora devuelven valores correctos al buscar una subcadena de longitud cero.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde LastIndexOf y las API relacionadas ahora devuelven valores correctos al buscar una subcadena de longitud cero.
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d1a676eb2b9ed3de6a745db27d53bd43560a32f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dc34300d867fe1bb9264494b3f2261bad2c1eea
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760113"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257432"
 ---
 # <a name="lastindexof-has-improved-handling-of-empty-search-strings"></a>Mejora del control de cadenas de búsqueda vacías por parte de LastIndexOf
 
@@ -24,7 +24,7 @@ ReadOnlySpan<char> span = "Hello";
 Console.WriteLine(span.LastIndexOf("")); // prints '0' (incorrect)
 ```
 
-A partir de .NET 5.0, estas API devuelven el valor correcto para `LastIndexOf`.
+A partir de .NET 5, estas API devuelven el valor correcto para `LastIndexOf`.
 
 ```csharp
 Console.WriteLine("Hello".LastIndexOf("")); // prints '5' (correct)
@@ -45,7 +45,7 @@ Este cambio formaba parte de un esfuerzo general de corrección de errores relac
 
 ## <a name="recommended-action"></a>Acción recomendada
 
-No tiene que realizar ninguna acción. El entorno de ejecución de .NET 5.0 proporciona los nuevos comportamientos de forma automática.
+No tiene que realizar ninguna acción. El entorno de ejecución de .NET 5 proporciona los nuevos comportamientos de forma automática.
 
 No hay ningún modificador de compatibilidad para restaurar el comportamiento anterior.
 

@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Rutas de acceso de URI con caracteres que no son ASCII se analizan correctamente en UNIX'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde las rutas de acceso de URI absolutas que contienen caracteres que no son ASCII ahora se analizan correctamente en plataformas Unix.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde las rutas de acceso de URI absolutas que contienen caracteres que no son ASCII ahora se analizan correctamente en plataformas Unix.
 ms.date: 11/01/2020
-ms.openlocfilehash: 94de4e0eb94a11153d873871d4003422a4286a0c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 50e9b4597a5ac0b73732a38ce662037292777a03
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760112"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257419"
 ---
 # <a name="uri-paths-with-non-ascii-characters-parse-correctly-on-unix"></a>Rutas de acceso de URI con caracteres que no son ASCII se analizan correctamente en UNIX
 
@@ -15,7 +15,7 @@ Se ha corregido un error de la clase <xref:System.Uri?displayProperty=fullName>,
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, las rutas de acceso de URI absolutas que contienen caracteres que no son ASCII se analizan incorrectamente en plataformas UNIX y los segmentos de la ruta de acceso están duplicados. (Las rutas de acceso absolutas son las que empiezan por "/"). El problema de análisis se ha solucionado para .NET 5.0. Si pasa de una versión anterior de .NET a .NET 5.0 u otra posterior, obtendrá valores diferentes generados por <xref:System.Uri.AbsoluteUri?displayProperty=nameWithType>, <xref:System.Uri.ToString?displayProperty=nameWithType> y otros miembros de <xref:System.Uri>.
+En versiones anteriores de .NET, las rutas de acceso de URI absolutas que contienen caracteres que no son ASCII se analizan incorrectamente en plataformas UNIX y los segmentos de la ruta de acceso están duplicados. (Las rutas de acceso absolutas son las que empiezan por "/"). El problema de análisis se ha solucionado para .NET 5.0. Si pasa de una versión anterior de .NET a .NET 5 u otra posterior, obtendrá valores diferentes generados por <xref:System.Uri.AbsoluteUri?displayProperty=nameWithType>, <xref:System.Uri.ToString?displayProperty=nameWithType> y otros miembros de <xref:System.Uri>.
 
 Tenga en cuenta el resultado de este código cuando se ejecute en UNIX.
 
@@ -33,7 +33,7 @@ AbsoluteUri: /%C3%BCri/%C3%BCri
 ToString: /üri/üri
 ```
 
-Resultado en .NET 5.0 u otra versión posterior:
+Resultado en .NET 5 u otra versión posterior:
 
 ```text
 AbsoluteUri: /%C3%BCri

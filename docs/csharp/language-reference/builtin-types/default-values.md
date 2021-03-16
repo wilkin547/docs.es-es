@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 72d6249ed56ae6ae34a6f51102e1e7bbd3f64ab7
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507261"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104120"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Valores predeterminados de los tipos de C# (referencia de C#)
 
@@ -18,7 +18,7 @@ En la tabla siguiente se muestran los valores predeterminados de los tipos de C#
 
 |Tipo|Valor predeterminado|
 |---------|------------------|
-|Cualquier tipo de referencia|`null`|
+|Cualquier [tipo de referencia](../keywords/reference-types.md)|`null`|
 |Cualquier [tipo numérico entero integrado](integral-numeric-types.md)|0 (cero)|
 |Cualquier [tipo numérico de punto flotante integrado](floating-point-numeric-types.md)|0 (cero)|
 |[bool](bool.md)|`false`|

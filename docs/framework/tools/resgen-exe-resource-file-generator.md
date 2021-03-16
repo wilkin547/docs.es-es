@@ -16,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: 27ff0ea4e014f440d14e2972a8ba2963386f142b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 61ae4503876718e63993af5a180dead34540afde
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238565"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259116"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generador de archivos de recursos)
 
@@ -55,7 +55,7 @@ resgen /?
   
  Si usa Resgen.exe para generar archivos .resources binarios, puede usar un compilador de lenguaje para incrustar los archivos binarios en ensamblados ejecutables, o puede usar la herramienta [Assembly Linker (Al.exe)](al-exe-assembly-linker.md) para compilarlos en ensamblados satélite.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -352,4 +352,4 @@ resgen StringResources.txt /str:vb,,StringResources
 - [Recursos de aplicaciones de escritorio](../resources/index.md)
 - [Crear archivos de recursos](../resources/creating-resource-files-for-desktop-apps.md)
 - [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

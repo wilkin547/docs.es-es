@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 69fd1a1944987d08a6ce1aee2790d0dbe06b9452
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4080cb38ca3b7d79c0ad4291198b13567511093c
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106376"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480835"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -594,8 +594,6 @@ Para compilar el archivo de código fuente de C# en un módulo, use este comando
 ```console
 csc /t:module NumberUtil.cs
 ```
-
-Para más información sobre la sintaxis de la línea de comandos del compilador de C#, consulte [Compilación de la línea de comandos con csc.exe](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).
 
 Utilice luego las [opciones del enlazador](/cpp/build/reference/linker-options) para compilar los dos módulos en un ensamblado:
 

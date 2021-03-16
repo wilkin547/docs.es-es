@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET y el entorno de ejecución compartido.
 ms.date: 09/22/2020
-ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 51482ca70d08d86e02a493f1da49b056fed8d11c
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957887"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206692"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -52,6 +52,9 @@ Los scripts `dotnet-install` realizan una instalación sin derechos administrati
 
 * un script de PowerShell que funciona en Windows;
 * un script de Bash que funciona en Linux y macOS.
+
+> [!NOTE]
+> .NET recopila datos de telemetría. Para obtener más información y saber cómo no participar, consulte [Telemetría del SDK de .NET](telemetry.md).
 
 ### <a name="purpose"></a>Propósito
 

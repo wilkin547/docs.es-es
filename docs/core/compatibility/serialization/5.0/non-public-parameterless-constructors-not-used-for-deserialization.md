@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Constructores no públicos sin parámetros que no se usan para la deserialización'
-description: Obtenga información sobre el cambio importante en .NET 5.0 por el que los constructores no públicos y sin parámetros ya no se usan para la deserialización con JsonSerializer.
+description: Obtenga información sobre el cambio importante en .NET 5 por el que los constructores no públicos y sin parámetros ya no se usan para la deserialización con JsonSerializer.
 ms.date: 10/18/2020
-ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 9781061fa89eb3bffb53a4f08bacbd88f3bc9265
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794699"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256275"
 ---
 # <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>Constructores no públicos sin parámetros que no se usan para la deserialización
 
@@ -17,7 +17,7 @@ Para mantener la coherencia entre todos los monikers de la plataforma de destino
 
 Los [paquetes NuGet System.Text.Json](https://www.nuget.org/packages/System.Text.Json/) independientes que admiten .NET Standard 2.0 y versiones posteriores, es decir, las versiones 4.6.0-4.7.2, se comportan de manera incoherente con el comportamiento integrado en .NET Core 3.0 y 3.1. En .NET Core 3.x, se pueden usar constructores internos y privados para la deserialización. En los paquetes independientes, no se permiten constructores no públicos y se inicia una excepción <xref:System.MissingMethodException> si no se define ningún constructor público sin parámetros.
 
-A partir de .NET 5.0 y del paquete NuGet System.Text.Json 5.0.0, el comportamiento es coherente entre el paquete NuGet y las API integradas. El serializador omite de forma predeterminada los constructores no públicos, incluidos los que no tienen parámetros. El serializador usa uno de los constructores siguientes para la deserialización:
+A partir de .NET 5 y del paquete NuGet System.Text.Json 5.0.0, el comportamiento es coherente entre el paquete NuGet y las API integradas. El serializador omite de forma predeterminada los constructores no públicos, incluidos los que no tienen parámetros. El serializador usa uno de los constructores siguientes para la deserialización:
 
 - Constructor público anotado con <xref:System.Text.Json.Serialization.JsonConstructorAttribute>.
 - Constructor público sin parámetros.

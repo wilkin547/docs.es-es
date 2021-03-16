@@ -2,19 +2,19 @@
 title: Programación orientada a objetos (C#)
 description: C# proporciona compatibilidad completa para la programación orientada a objetos incluida la abstracción, la encapsulación, la herencia y el polimorfismo.
 ms.date: 09/30/2020
-ms.openlocfilehash: b778b7c42bbfb1f20bdd2d83b9cb10512ea3f41b
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 57f1759edd2dd5f239e81351aed64bf061766b7b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794851"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255410"
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 
 C# es un lenguaje orientado a objetos. Cuatro de las técnicas clave que se usan en la programación orientada a objetos son:
 
-- La *abstracción* significa ocultar los detalles innecesarios de los consumidores de tipos.
-- La *encapsulación* significa que un grupo de propiedades, métodos y otros miembros relacionados se tratan como una sola unidad u objeto.
+- La *abstracción* significa que un grupo de propiedades, métodos y otros miembros relacionados se tratan como una sola unidad u objeto.
+- La *encapsulación* significa ocultar los detalles innecesarios de los consumidores de tipos.
 - La *herencia* describe la posibilidad de crear nuevas clases basadas en una clase existente.
 - El *polimorfismo* significa que puede tener múltiples clases que se pueden usar de manera intercambiable, aunque cada clase implementa las mismas propiedades o los mismos métodos de maneras diferentes.
 
@@ -183,7 +183,7 @@ Ejecute el programa y compruebe los resultados.
 
 ## <a name="summary"></a>Resumen
 
-Si se ha quedado bloqueado, puede consultar el origen de este tutorial [en el repositorio de GitHub](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming).
+Si se ha quedado bloqueado, puede consultar el origen de este tutorial [en el repositorio de GitHub](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming).
 
 En este tutorial se han mostrado muchas de las técnicas que se usan en la programación orientada a objetos:
 

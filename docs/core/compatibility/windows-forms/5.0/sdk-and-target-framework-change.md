@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Uso de Microsoft.NET.Sdk por parte de las aplicaciones de WinForms y WPF'
-description: Obtenga información sobre el cambio importante en .NET 5.0 donde las aplicaciones Windows Forms y Windows Presentation Framework ahora usan el SDK de .NET en lugar del SDK para WinForms y WPF de .NET Core.
+description: Obtenga información sobre el cambio importante en .NET 5 donde las aplicaciones Windows Forms y Windows Presentation Framework ahora usan el SDK de .NET en lugar del SDK para WinForms y WPF de .NET Core.
 ms.date: 09/18/2020
-ms.openlocfilehash: 5eafed03fbf034f6a6457217a8527a877214e239
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 408233f6f8801fb3d4e53beab28c26a777a4a3e1
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633824"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256210"
 ---
 # <a name="winforms-and-wpf-apps-use-microsoftnetsdk"></a>Uso de Microsoft.NET.Sdk por parte de las aplicaciones de WinForms y WPF
 
@@ -15,7 +15,7 @@ Las aplicaciones de Windows Forms y Windows Presentation Framework (WPF) ahora 
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET Core, las aplicaciones de WinForms y WPF usaban un [SDK de proyecto](../../../project-sdk/overview.md) independiente (`Microsoft.NET.Sdk.WindowsDesktop`). A partir de .NET 5.0, el SDK de WinForms y WPF se ha unificado con el SDK de .NET (`Microsoft.NET.Sdk`). Además, los nuevos [monikers de la plataforma de destino (TFM)](../../../../standard/frameworks.md) reemplazan a `netcoreapp` y `netstandard` en .NET 5. En el ejemplo siguiente se muestran los cambios que se deben realizar en un archivo de proyecto de WPF al redestinarlo a .NET 5.0 o una versión posterior.
+En versiones anteriores de .NET Core, las aplicaciones de WinForms y WPF usaban un [SDK de proyecto](../../../project-sdk/overview.md) independiente (`Microsoft.NET.Sdk.WindowsDesktop`). A partir de .NET 5, el SDK de WinForms y WPF se ha unificado con el SDK de .NET (`Microsoft.NET.Sdk`). Además, los nuevos [monikers de la plataforma de destino (TFM)](../../../../standard/frameworks.md) reemplazan a `netcoreapp` y `netstandard` en .NET 5. En el ejemplo siguiente se muestran los cambios que se deben realizar en un archivo de proyecto de WPF al redestinarlo a .NET 5 o una versión posterior.
 
 En versiones anteriores de .NET Core:
 
@@ -31,7 +31,7 @@ En versiones anteriores de .NET Core:
 </Project>
 ```
 
-En .NET 5.0 y versiones posteriores:
+En .NET 5 y versiones posteriores:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
