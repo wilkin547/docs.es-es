@@ -1,23 +1,23 @@
 ---
 title: 'Cambio importante: cambios de anotación en los tipos de referencia que aceptan valores NULL'
-description: Obtenga información sobre el cambio importante de .NET 6.0 en las bibliotecas de .NET básicas, donde algunas anotaciones de tipo de referencia que aceptan valores NULL han cambiado.
+description: Obtenga información sobre el cambio importante de .NET 6 en las bibliotecas de .NET básicas, donde algunas anotaciones de tipo de referencia que aceptan valores NULL han cambiado.
 ms.date: 02/11/2021
-ms.openlocfilehash: a0133ce49ba33d0e835b718f3f2b19180526c61b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: fe56fd3006528238713bd08f353b5044092043a2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488254"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256938"
 ---
 # <a name="changes-to-nullable-reference-type-annotations"></a>Cambios en las anotaciones de tipos de referencia que aceptan valores NULL
 
-En .NET 6.0, algunas anotaciones de nulabilidad de las bibliotecas de .NET han cambiado.
+En .NET 6, algunas anotaciones de nulabilidad de las bibliotecas de .NET han cambiado.
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, algunas anotaciones de tipos de referencia que aceptan valores NULL son incorrectas y las advertencias de compilación están ausentes o son incorrectas. A partir de .NET 6.0, se han actualizado algunas anotaciones aplicadas previamente. Se generarán nuevas advertencias de compilación y ya no se producirán advertencias de compilación incorrectas para las API afectadas.
+En versiones anteriores de .NET, algunas anotaciones de tipos de referencia que aceptan valores NULL son incorrectas y las advertencias de compilación están ausentes o son incorrectas. A partir de .NET 6, se han actualizado algunas anotaciones aplicadas previamente. Se generarán nuevas advertencias de compilación y ya no se producirán advertencias de compilación incorrectas para las API afectadas.
 
-Algunos de estos cambios se consideran *importantes*, ya que pueden dar lugar a nuevas advertencias en tiempo de compilación. Al realizar la migración a .NET 6.0, será necesario actualizar el código que hace referencia a estas API.
+Algunos de estos cambios se consideran *importantes*, ya que pueden dar lugar a nuevas advertencias en tiempo de compilación. Al realizar la migración a .NET 6, será necesario actualizar el código que hace referencia a estas API.
 
 En esta página también se documentan otros cambios que no se consideran importantes. Cualquier código que haga referencia a las API actualizadas se puede beneficiar de la eliminación de operadores o pragmas que ya no sean necesarios.
 
@@ -63,6 +63,12 @@ En la tabla siguiente se enumeran las API afectadas:
 | <xref:System.Data.IDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType> | Tipo de parámetro `buffer` que admite un valor NULL | Problemático | Versión preliminar 1 |
 | <xref:System.Data.Common.DbDataRecord.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)?displayProperty=nameWithType> | Tipo de parámetro `buffer` que admite un valor NULL | Problemático | Versión preliminar 1 |
 | <xref:System.Data.Common.DbDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType> | Tipo de parámetro `buffer` que admite un valor NULL | Problemático | Versión preliminar 1 |
+| <xref:System.Net.HttpListenerContext.AcceptWebSocketAsync%2A?displayProperty=fullName> | Tipo de parámetro `subProtocol` que admite un valor NULL | No importante | Versión preliminar 2 |
+| Métodos que invalidan <xref:System.Object.Equals(System.Object)?displayProperty=nameWithType> y [muchos otros que devuelven `bool`](https://github.com/dotnet/runtime/pull/47598/files) | `[NotNullWhen(true)]` agregado al primer parámetro que admite un valor NULL | Problemático | Versión preliminar 2 |
+
+## <a name="see-also"></a>Vea también
+
+- [Cambios en la anotación de tipos de referencia que admiten un valor NULL en ASP.NET Core](../../aspnet-core/6.0/nullable-reference-type-annotations-changed.md)
 
 <!--
 

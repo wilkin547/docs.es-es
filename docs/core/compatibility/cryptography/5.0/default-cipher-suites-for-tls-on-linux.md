@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Conjuntos de cifrado TLS predeterminados para .NET en Linux'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde .NET, para Linux ahora respeta la configuración de OpenSSL para los conjuntos de cifrado predeterminados al realizar TLS/SSL.
+description: Obtenga información sobre el cambio importante en .NET 5, donde .NET para Linux ahora respeta la configuración de OpenSSL para los conjuntos de cifrado predeterminados al realizar TLS/SSL.
 ms.date: 10/16/2020
-ms.openlocfilehash: f1c23517161ac213a9cd7cf6e7da8eebeb91583b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c28207aa5bf4324a7921deb006c57fbd5e1d6f5f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760084"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256821"
 ---
 # <a name="default-tls-cipher-suites-for-net-on-linux"></a>Conjuntos de cifrado TLS predeterminados para .NET en Linux
 
@@ -17,7 +17,7 @@ Ahora .NET en Linux respeta la configuración de OpenSSL para los conjuntos de c
 
 En versiones anteriores, .NET no respeta la configuración del sistema para los conjuntos de cifrado predeterminados. La lista de conjuntos de cifrado predeterminados para .NET en Linux es muy permisiva.
 
-A partir de .NET 5.0, .NET en Linux respeta la configuración de OpenSSL para los conjuntos de cifrado predeterminados cuando se especifica en *openssl.cnf*. Cuando los conjuntos de cifrado no se configuran de forma explícita, los únicos que se permiten son los siguientes:
+A partir de .NET 5, .NET en Linux respeta la configuración de OpenSSL para los conjuntos de cifrado predeterminados cuando se especifica en *openssl.cnf*. Cuando los conjuntos de cifrado no se configuran de forma explícita, los únicos que se permiten son los siguientes:
 
 - Conjuntos de cifrado TLS 1.3
 - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
@@ -45,7 +45,7 @@ Los usuarios que ejecutan .NET en Linux han solicitado que la configuración pre
 
 Es probable que los nuevos valores predeterminados funcionen al comunicarse con servidores o clientes modernos. Si tiene que expandir la lista de conjuntos de cifrado predeterminados para aceptar clientes heredados (o para ponerse en contacto con servidores heredados), especifique un valor de `CipherSuitePolicy` o cambie el archivo de configuración de OpenSSL. En muchas distribuciones de Linux, el archivo de configuración de OpenSSL está en */etc/ssl/openssl.cnf*.
 
-Este archivo *openssl.cnf* de ejemplo es un archivo mínimo que equivale a la directiva de conjuntos de cifrado predeterminados para .NET 5.0 y versiones posteriores en Linux. En lugar de reemplazar el archivo del sistema, combine estos conceptos con el archivo que se encuentre en el sistema.
+Este archivo *openssl.cnf* de ejemplo es un archivo mínimo que equivale a la directiva de conjuntos de cifrado predeterminados para .NET 5 y versiones posteriores en Linux. En lugar de reemplazar el archivo del sistema, combine estos conceptos con el archivo que se encuentre en el sistema.
 
 ```ini
 openssl_conf = default_conf

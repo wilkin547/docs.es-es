@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: BinaryFormatter.Deserialize vuelve a encapsular algunas excepciones'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde BinaryFormatter.Deserialize vuelve a encapsular algunos objetos de excepción dentro de SerializationException.
+description: Obtenga información sobre el cambio importante en .NET 5, donde BinaryFormatter.Deserialize vuelve a encapsular algunos objetos de excepción dentro de SerializationException.
 ms.date: 08/18/2020
-ms.openlocfilehash: 90dc4cce6785fdb38644cca2a2e9aff65eb7a313
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e357035908f34c6c5c77d2a0728ab213bdc791a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760140"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256353"
 ---
 # <a name="binaryformatterdeserialize-rewraps-some-exceptions-in-serializationexception"></a>BinaryFormatter.Deserialize vuelve a encapsular algunas excepciones en SerializationException
 
@@ -17,7 +17,7 @@ El método <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.
 
 Anteriormente, el método <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> permitía que algunas excepciones arbitrarias, como <xref:System.ArgumentNullException>, se propagaran arriba de la pila a sus autores de la llamada.
 
-En .NET 5.0 y versiones posteriores, el método <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> detecta de forma más agresiva las excepciones que se producen debido a operaciones de deserialización no válidas y las encapsula en una excepción <xref:System.Runtime.Serialization.SerializationException>.
+En .NET 5 y versiones posteriores, el método <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> detecta de forma más agresiva las excepciones que se producen debido a operaciones de deserialización no válidas y las encapsula en una excepción <xref:System.Runtime.Serialization.SerializationException>.
 
 ## <a name="version-introduced"></a>Versión introducida
 

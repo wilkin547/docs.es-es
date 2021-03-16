@@ -4,12 +4,12 @@ description: Las mejoras aplicadas recientemente al lenguaje C# permiten escribi
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: b739a4ce1f723798cbe50ef9eae673494996751c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021489"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106623"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escritura de código C# seguro y eficaz
 
@@ -160,8 +160,7 @@ La primera asignación en el código anterior realiza una copia de la constante 
 
 El modificador `readonly` es necesario en la declaración de `originReference`.
 
-El compilador exige que el autor de una llamada no pueda modificar la referencia. Los intentos de asignar el valor directamente generan un error en tiempo de compilación. Sin embargo, el compilador no puede saber si algún método de miembro modifica el estado del valor struct.
-Para asegurarse de que el objeto no se modifique, el compilador crea una copia y llama a las referencias de miembro usando esa copia. Las modificaciones se realizan sobre esa copia defensiva.
+El compilador exige que el autor de una llamada no pueda modificar la referencia. Los intentos de asignar el valor directamente generan un error en tiempo de compilación. En otros casos, el compilador asigna una copia defensiva a menos que pueda usar sin ningún riesgo la referencia de solo lectura. Las reglas de análisis estático determinan si se puede modificar la estructura. El compilador no crea una copia defensiva cuando la estructura es un elemento `readonly struct` o el miembro es miembro de `readonly` de la estructura. No se necesitan copias defensivas para pasar la estructura como un argumento `in`.
 
 ## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>Aplicación del modificador `in` en los parámetros `readonly struct` mayores que `System.IntPtr.Size`
 

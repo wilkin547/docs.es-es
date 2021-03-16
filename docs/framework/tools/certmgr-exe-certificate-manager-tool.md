@@ -14,23 +14,23 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 30a35ded6fc86af6dc6dd4bf19cdf60f66570e0c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a5666645c674bbbe77b988fc7a1ff0db935920aa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247257"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258239"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Herramienta de administración de certificados)
 
 El administrador de certificados (Certmgr.exe) es una herramienta que administra certificados, listas de certificados de confianza (CTL) y listas de revocación de certificados (CRL).  
   
- El administrador de certificados se instala automáticamente con Visual Studio. Para iniciar la herramienta, use los [símbolos del sistema](developer-command-prompt-for-vs.md).  
+ El administrador de certificados se instala automáticamente con Visual Studio. Para iniciar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).  
   
 > [!NOTE]
 > El administrador de certificados (Certmgr.exe) es una utilidad de línea de comandos, mientras que Certificados (Certmgr.msc) es un complemento MMC (Microsoft Management Console). Dado que Certmgr.msc se encuentra normalmente en el directorio del sistema Windows, al escribir `certmgr` en la línea de comandos, es posible que se cargue el complemento MMC Certificados, incluso si ha abierto Símbolo del sistema para desarrolladores de Visual Studio. Esto ocurre porque la ruta de acceso al complemento precede a la ruta de acceso al administrador de certificados en la variable de entorno PATH. Si se produce este problema, puede ejecutar los comandos de Certmgr.exe especificando la ruta de acceso al archivo ejecutable.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).  
   
  Para información general sobre los certificados X.509, consulte [Trabajar con certificados](../wcf/feature-details/working-with-certificates.md).  
   
@@ -143,4 +143,4 @@ certmgr /put /c /s my newFile
 
 - [Herramientas](index.md)
 - [Makecert.exe (Herramienta de creación de certificados)](/windows/desktop/SecCrypto/makecert)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

@@ -3,12 +3,12 @@ title: Tutorial Depuración de una fuga de memoria
 description: Obtenga información sobre cómo depurar una fuga de memoria en .NET Core.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431456"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255677"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>Depuración de una fuga de memoria en .NET Core
 
@@ -32,8 +32,7 @@ En este tutorial va a:
 
 En el tutorial se usa:
 
-- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core) o una versión posterior
-- [dotnet-trace](dotnet-trace.md) para mostrar procesos.
+- [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet) o una versión posterior
 - [dotnet-counters](dotnet-counters.md) para comprobar el uso de memoria administrada.
 - [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria.
 - Una aplicación de [destino de depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios/) que se va a diagnosticar.
@@ -50,10 +49,10 @@ Abra una ventana de consola y vaya al directorio donde descargó y descomprimió
 dotnet run
 ```
 
-En una consola independiente, busque el identificador del proceso mediante la herramienta [dotnet-trace](dotnet-trace.md):
+En una consola independiente, busque el id. de proceso:
 
 ```console
-dotnet-trace ps
+dotnet-counters ps
 ```
 
 La salida debe ser similar a:
@@ -116,7 +115,7 @@ Al observar el uso de memoria, puede indicar con seguridad el aumento o la fuga 
 
 ### <a name="generate-memory-dump"></a>Generación de un volcado de memoria
 
-Al analizar posibles fugas de memoria, debe tener acceso al montón de memoria de la aplicación. A continuación, puede analizar el contenido de la memoria. Al observarse las relaciones entre los objetos, se crean teorías de por qué no se libera la memoria. Un origen de datos de diagnóstico habitual es un volcado de memoria en Windows o el volcado de memoria principal equivalente en Linux. Para generar un volcado de memoria de una aplicación .NET Core, puede usar la herramienta [dotnet-dump)](dotnet-dump.md).
+Al analizar posibles fugas de memoria, debe tener acceso al montón de memoria de la aplicación. A continuación, puede analizar el contenido de la memoria. Al observarse las relaciones entre los objetos, se crean teorías de por qué no se libera la memoria. Un origen de datos de diagnóstico habitual es un volcado de memoria en Windows o el volcado de memoria principal equivalente en Linux. Para generar un volcado de memoria de una aplicación .NET Core, puede usar la herramienta [dotnet-dump](dotnet-dump.md).
 
 Con el [destino de depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios/) iniciado anteriormente, ejecute el siguiente comando para generar un volcado de memoria principal de Linux:
 

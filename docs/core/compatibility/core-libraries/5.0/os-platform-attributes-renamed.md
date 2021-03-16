@@ -1,42 +1,42 @@
 ---
 title: 'Cambio importante: Atributos de OSPlatform que se han cambiado de nombre o se han quitado'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde los atributos de la plataforma del sistema operativo que se introdujeron en una versión preliminar se han quitado o se les ha cambiado el nombre.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde los atributos de la plataforma del sistema operativo que se introdujeron en una versión preliminar se han quitado o se les ha cambiado el nombre.
 ms.date: 11/01/2020
-ms.openlocfilehash: be2ddd4909bef70f531ca48246f091923d6435ec
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 118c5360eb02c1b4d57fccbd3b2cfdeff0b9fe12
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739495"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257263"
 ---
 # <a name="osplatform-attributes-renamed-or-removed"></a>Atributos de OSPlatform que se han cambiado de nombre o se han quitado
 
-Los atributos siguientes que se presentaron en .NET 5.0 Preview 8 se han quitado o se les ha cambiado el nombre: `MinimumOSPlatformAttribute`, `RemovedInOSPlatformAttribute` y `ObsoletedInOSPlatformAttribute`.
+Los atributos siguientes que se presentaron en .NET 5 Preview 8 se han quitado o se les ha cambiado el nombre: `MinimumOSPlatformAttribute`, `RemovedInOSPlatformAttribute` y `ObsoletedInOSPlatformAttribute`.
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En .NET 5.0 Preview 8 se han presentado los siguientes atributos en el espacio de nombres <xref:System.Runtime.Versioning>:
+En .NET 5 Preview 8 se han presentado los siguientes atributos en el espacio de nombres <xref:System.Runtime.Versioning>:
 
 - `MinimumOSPlatformAttribute`
 - `RemovedInOSPlatformAttribute`
 - `ObsoletedInOSPlatformAttribute`
 
-En .NET 5.0 Preview 8, cuando un proyecto tiene como destino un tipo específico del sistema operativo de .NET 5 mediante un [moniker de la plataforma de destino](../../../../standard/frameworks.md) como `net5.0-windows`, la compilación agrega un atributo `System.Runtime.Versioning.MinimumOSPlatformAttribute` de nivel de ensamblado.
+En .NET 5 Preview 8, cuando un proyecto tiene como destino un tipo específico del sistema operativo de .NET 5 mediante un [moniker de la plataforma de destino](../../../../standard/frameworks.md) como `net5.0-windows`, la compilación agrega un atributo `System.Runtime.Versioning.MinimumOSPlatformAttribute` de nivel de ensamblado.
 
-En .NET 5.0 RC1, se ha quitado `ObsoletedInOSPlatformAttribute`, y se ha cambiado el nombre de `MinimumOSPlatformAttribute` y `RemovedInOSPlatformAttribute` de la siguiente manera:
+En .NET 5 RC1, se ha quitado `ObsoletedInOSPlatformAttribute`, y se ha cambiado el nombre de `MinimumOSPlatformAttribute` y `RemovedInOSPlatformAttribute` de la siguiente manera:
 
 | Nombre en Preview 8 | Nombre en RC1 y versiones posteriores |
 | - | - |
 | `MinimumOSPlatformAttribute` | <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> |
 | `RemovedInOSPlatformAttribute` | <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> |
 
-En .NET 5.0 RC1 y versiones posteriores, cuando un proyecto tiene como destino un tipo específico del sistema operativo de .NET 5 mediante un [moniker de la plataforma de destino](../../../../standard/frameworks.md) como `net5.0-windows`, la compilación agrega un atributo <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> de nivel de ensamblado.
+En .NET 5 RC1 y versiones posteriores, cuando un proyecto tiene como destino un tipo específico del sistema operativo de .NET 5 mediante un [moniker de la plataforma de destino](../../../../standard/frameworks.md) como `net5.0-windows`, la compilación agrega un atributo <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> de nivel de ensamblado.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 
-En .NET 5.0 Preview 8 se han presentado atributos en <xref:System.Runtime.Versioning> para especificar las plataformas admitidas para las API. El [analizador de compatibilidad de la plataforma](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) consume los atributos para generar advertencias de compilación cuando se consumen API específicas de la plataforma en plataformas que no admiten esas API.
+En .NET 5 Preview 8 se han presentado atributos en <xref:System.Runtime.Versioning> para especificar las plataformas admitidas para las API. El [analizador de compatibilidad de la plataforma](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) consume los atributos para generar advertencias de compilación cuando se consumen API específicas de la plataforma en plataformas que no admiten esas API.
 
-Para .NET 5.0 RC1, se ha agregado una característica adicional al analizador de compatibilidad de la plataforma para la exclusión de plataformas. La característica permite que las API se marquen como totalmente no compatibles en plataformas de sistema operativo. Esta característica ha solicitado cambios en los atributos, incluido el uso de nombres más adecuados. Se ha quitado `ObsoletedInOSPlatformAttribute` porque ya no era necesario.
+Para .NET 5 RC1, se ha agregado una característica adicional al analizador de compatibilidad de la plataforma para la exclusión de plataformas. La característica permite que las API se marquen como totalmente no compatibles en plataformas de sistema operativo. Esta característica ha solicitado cambios en los atributos, incluido el uso de nombres más adecuados. Se ha quitado `ObsoletedInOSPlatformAttribute` porque ya no era necesario.
 
 ## <a name="version-introduced"></a>Versión introducida
 
@@ -44,7 +44,7 @@ Para .NET 5.0 RC1, se ha agregado una característica adicional al analizador 
 
 ## <a name="recommended-action"></a>Acción recomendada
 
-Al redestinar el proyecto de .NET 5.0 Preview 8 a .NET 5.0 RC1, se pueden producir errores en tiempo de compilación o ejecución debido a estos cambios. Por ejemplo, es probable que el cambio de nombre de `MinimumOSPlatformAttribute` produzca errores, porque el atributo se aplica a ensamblados específicos de la plataforma en tiempo de compilación y los artefactos de compilación antiguos seguirán haciendo referencia al antiguo nombre de API.
+Al redestinar el proyecto de .NET 5 Preview 8 a .NET 5 RC1, se pueden producir errores en tiempo de compilación o ejecución debido a estos cambios. Por ejemplo, es probable que el cambio de nombre de `MinimumOSPlatformAttribute` produzca errores, porque el atributo se aplica a ensamblados específicos de la plataforma en tiempo de compilación y los artefactos de compilación antiguos seguirán haciendo referencia al antiguo nombre de API.
 
 Ejemplo de errores en tiempo de compilación:
 

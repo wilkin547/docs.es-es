@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar el archivo global.json para e
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc471cf5b50cf91c38b46607ccf38bd4d087aa6a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634004"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104146"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
@@ -153,7 +153,7 @@ En este ejemplo se muestra cómo usar la versión de revisión superior instalad
 
 Resulta útil saber qué versiones del SDK están instaladas en el equipo con el fin de establecer una en el archivo *global.json*. Para obtener más información sobre cómo hacerlo, vea [Cómo comprobar que .NET Core ya está instalado](../install/how-to-detect-installed-versions.md#check-sdk-versions).
 
-Para instalar otras versiones del SDK de .NET en el equipo, visite la página de [descargas de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+Para instalar otras versiones del SDK de .NET en el equipo, visite la página [Descargas de .NET](https://dotnet.microsoft.com/download/dotnet).
 
 Puede crear un archivo *global.json* en el directorio actual mediante la ejecución del comando [dotnet new](dotnet-new.md), similar al ejemplo siguiente:
 

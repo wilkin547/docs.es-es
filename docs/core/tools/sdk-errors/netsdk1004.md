@@ -5,12 +5,12 @@ ms.topic: error-reference
 ms.date: 01/29/2021
 f1_keywords:
 - NETSDK1004
-ms.openlocfilehash: 8416063fe318106cbcb4dbccacef3ecaaff5bba2
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: aa01ff657143faac96baa5ae1133493516edfb1c
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216440"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206718"
 ---
 # <a name="netsdk1004-assets-file-not-found"></a>NETSDK1004: archivo de recursos no encontrado
 
@@ -27,3 +27,4 @@ Estas son algunas posibles causas del error:
 * Una versión anterior de Nuget.exe ha restaurado un proyecto por separado. Para resolver el error, abra un símbolo del sistema y ejecute `dotnet restore` en el proyecto.
 * Un error anterior, como NETSDK1045 (la versión del SDK que está usando no es compatible con la plataforma de destino del proyecto), impedía que NuGet creara el archivo de recursos del proyecto. Para resolver el error NETSDK1004, resuelva el error anterior y, después, ejecute `dotnet restore` en el proyecto.
 * La CI de App Center está compilando un proyecto con un ensamblado externo que no está en NuGet. Para resolver el error, use un paquete NuGet para el ensamblado.
+* Ha agregado una carpeta de soluciones en Visual Studio con un nombre que comienza con un punto. Para resolver el error, quite el punto inicial del nombre de la carpeta.

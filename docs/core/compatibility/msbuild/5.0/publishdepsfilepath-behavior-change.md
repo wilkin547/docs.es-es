@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Cambio de comportamiento de PublishDepsFilePath'
-description: Obtenga información sobre el cambio importante en .NET 5.0 en el que la propiedad PublishDepsFilePath de MSBuild está vacía para las aplicaciones de un solo archivo.
+description: Obtenga información sobre el cambio importante en .NET 5 en el que la propiedad PublishDepsFilePath de MSBuild está vacía para las aplicaciones de un solo archivo.
 ms.date: 09/17/2020
-ms.openlocfilehash: 70631beff31aa3388e59f3b79875ef437351451a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a32f733ceaa2a24eb55d5e89f2eb1791c277f0d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760294"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256509"
 ---
 # <a name="publishdepsfilepath-behavior-change"></a>Cambio de comportamiento de PublishDepsFilePath
 
@@ -21,7 +21,7 @@ La propiedad `PublishDepsFilePath` de MSBuild está vacía para las aplicaciones
 
 En versiones anteriores de .NET, la propiedad `PublishDepsFilePath` de MSBuild es la ruta de acceso al archivo *deps.json* de la aplicación en el directorio de salida para las aplicaciones que no son de archivo único, y una ruta de acceso en el directorio intermedio para las aplicaciones de archivo único.
 
-A partir de .NET 5.0, `PublishDepsFilePath` está vacío para las aplicaciones de archivo único y una nueva propiedad `IntermediateDepsFilePath` especifica la ubicación de *deps.json* en el directorio intermedio. Además, en el caso de las aplicaciones que no son de archivo único, es posible que el archivo *deps.json* no se copie en el directorio de salida (es decir, la ruta de acceso especificada por `PublishDepsFilePath`) hasta después en la compilación.
+A partir de .NET 5, `PublishDepsFilePath` está vacío para las aplicaciones de archivo único y una nueva propiedad `IntermediateDepsFilePath` especifica la ubicación de *deps.json* en el directorio intermedio. Además, en el caso de las aplicaciones que no son de archivo único, es posible que el archivo *deps.json* no se copie en el directorio de salida (es decir, la ruta de acceso especificada por `PublishDepsFilePath`) hasta después en la compilación.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

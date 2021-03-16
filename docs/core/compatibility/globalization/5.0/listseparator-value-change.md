@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Cambio de valor de TextInfo.ListSeparator'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en el que el valor predeterminado de TextInfo.ListSeparator se ha cambiado entre las versiones 5.0 y 5.0.1.
+description: Obtenga información sobre el cambio importante de .NET 5 en el que el valor predeterminado de TextInfo.ListSeparator se ha cambiado entre las versiones 5.0 y 5.0.1.
 ms.date: 12/10/2020
-ms.openlocfilehash: 720d46c1908bcd70812f575a90f580470dbc7f32
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 9a319da8ea8e3cbf62cbf4730e553b03f5bfdc89
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596422"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256730"
 ---
 # <a name="textinfolistseparator-values-changed"></a>Cambio de los valores de TextInfo.ListSeparator
 
@@ -21,7 +21,7 @@ Para todos los sistemas operativos en .NET 5.0.1 y versiones posteriores, los v
 
 En la tabla siguiente se resumen los cambios en los valores de <xref:System.Globalization.TextInfo.ListSeparator?displayProperty=nameWithType>.
 
-| | .NET Framework<br/>.NET Core 1.0 a 3.1 | .NET 5.0 | .NET 5.0.1 |
+| | .NET Framework<br/>.NET Core 1.0 a 3.1 | .NET 5 | .NET 5.0.1 |
 -|-|-|-
 | **Windows** | Obtenidos de NLS | Separador decimal de ICU<br/>(Se puede volver a NLS) | Equivalentes a NLS |
 | **Linux y macOS** | Separador decimal de ICU | Separador decimal de ICU | Equivalentes a NLS |

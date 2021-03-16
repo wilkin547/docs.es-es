@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: DataGridView ya no restablece las fuentes para los estilos de celda personalizados'
-description: Obtenga información sobre el cambio importante en .NET 5.0 donde DataGridView ya no restablece las fuentes predeterminadas de estilo de celda para que coincidan con la fuente ambiente si se ha personalizado la fuente del estilo de celda.
+description: Obtenga información sobre el cambio importante en .NET 5 donde DataGridView ya no restablece las fuentes predeterminadas de estilo de celda para que coincidan con la fuente ambiente si se ha personalizado la fuente del estilo de celda.
 ms.date: 10/18/2020
-ms.openlocfilehash: 708b12ba1305681f5c38eb605861d02e3b2c8eb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd28fb5a0b508157289dde1b720522ed49163e31
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760285"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256135"
 ---
 # <a name="datagridview-no-longer-resets-fonts-for-customized-cell-styles"></a>DataGridView ya no restablece las fuentes para los estilos de celda personalizados
 
@@ -17,7 +17,7 @@ Cuando la fuente ambiente cambia, <xref:System.Windows.Forms.DataGridViewElement
 
 En versiones anteriores de .NET, si la fuente ambiente cambia, <xref:System.Windows.Forms.DataGridViewElement.DataGridView> restablece e invalida las fuentes definidas por el usuario en las propiedades <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> y <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle>.
 
-A partir de .NET 5.0, si se configuran las opciones de fuente en las propiedades <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> o <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle>, esas opciones se conservan incluso cuando cambia la fuente ambiente. Para cualquiera de estas propiedades en las que no se personalice la fuente, la fuente cambiará para que coincida con la configuración de la fuente ambiente.
+A partir de .NET 5, si se configuran las opciones de fuente en las propiedades <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> o <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle>, esas opciones se conservan incluso cuando cambia la fuente ambiente. Para cualquiera de estas propiedades en las que no se personalice la fuente, la fuente cambiará para que coincida con la configuración de la fuente ambiente.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

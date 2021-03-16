@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: .NET deja de tener compatibilidad integrada con WinRT'
-description: Obtenga información sobre el cambio importante de interoperabilidad en .NET 5.0 donde se ha quitado de .NET la compatibilidad integrada con WinRT.
+description: Obtenga información sobre el cambio importante de interoperabilidad en .NET 5 donde se ha quitado de .NET la compatibilidad integrada con WinRT.
 ms.date: 10/13/2020
-ms.openlocfilehash: 61d8e26d06c232a7bfa1891a2159f5232f747b8a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 986b810b74c7e7d7514ec2b734bfab45e29b87fa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760200"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256691"
 ---
 # <a name="built-in-support-for-winrt-is-removed-from-net"></a>.NET deja de tener compatibilidad integrada con WinRT
 
@@ -19,7 +19,7 @@ Se ha quitado la compatibilidad integrada para el consumo de las API [Windows en
 
 ## <a name="change-description"></a>Descripción del cambio
 
-Anteriormente, CoreCLR podía consumir [archivos de metadatos de Windows (WinMD)](/uwp/winrt-cref/winmd-files) con el fin de activar y consumir tipos de WinRT. A partir de la versión .NET 5.0, CoreCLR ya no puede consumir archivos WinMD directamente.
+Anteriormente, CoreCLR podía consumir [archivos de metadatos de Windows (WinMD)](/uwp/winrt-cref/winmd-files) con el fin de activar y consumir tipos de WinRT. A partir de la versión .NET 5, CoreCLR ya no puede consumir archivos WinMD directamente.
 
 Si se intenta hacer referencia a un ensamblado no admitido, se obtendrá <xref:System.IO.FileNotFoundException>, mientras que, si se activa una clase WinRT, se obtendrá <xref:System.PlatformNotSupportedException>.
 
@@ -38,7 +38,7 @@ Este cambio importante se ha realizado por los siguientes motivos:
   <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
   ```
 
-- Use la cadena de herramientas de [C#/WinRT](/windows/uwp/csharp-winrt/) para generar o personalizar los tipos y las API de WinRT en .NET 5.0 y versiones posteriores.
+- Use la cadena de herramientas de [C#/WinRT](/windows/uwp/csharp-winrt/) para generar o personalizar los tipos y las API de WinRT en .NET 5 y versiones posteriores.
 
 ## <a name="affected-apis"></a>API afectadas
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: ec86395a41baea75694572b59b2c76cbde24fedf
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6089e14bd2b13268a03d3600ef8bf78f9afa1c6d
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170394"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206744"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfaces genéricas (Guía de programación de C#)
 
@@ -33,7 +33,7 @@ A menudo es útil definir interfaces para las clases de colección genéricas o 
   
  [!code-csharp[csProgGuideGenerics#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#32)]  
   
- Las interfaces genéricas pueden heredar de interfaces no genéricas si son contravariantes, lo que significa que solo usan su parámetro de tipo como valor devuelto. En la biblioteca de clases de .NET, <xref:System.Collections.Generic.IEnumerable%601> hereda de <xref:System.Collections.IEnumerable> porque <xref:System.Collections.Generic.IEnumerable%601> solo usa `T` en el valor devuelto de <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> y en el captador de propiedad <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+ Las interfaces genéricas pueden heredar de interfaces no genéricas si son covariantes, lo que significa que solo usan su parámetro de tipo como valor devuelto. En la biblioteca de clases de .NET, <xref:System.Collections.Generic.IEnumerable%601> hereda de <xref:System.Collections.IEnumerable> porque <xref:System.Collections.Generic.IEnumerable%601> solo usa `T` en el valor devuelto de <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> y en el captador de propiedad <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
   
  Las clases concretas pueden implementar interfaces construidas cerradas, de la siguiente manera:  
   

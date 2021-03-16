@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: a3af6a0fbc7c9c695e18448da285977f04fd72ef
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 14dbaf0e100204718e78292b038bf016b5607bc8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517261"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259195"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Herramienta de registro de ensamblados)
 
 La herramienta de registro de ensamblados lee los metadatos de un ensamblado y agrega las entradas necesarias al Registro, lo que permite a los clientes COM crear clases de .NET Framework de forma transparente. Una vez registrada una clase, cualquier cliente COM puede usarla como si se tratase de una clase COM. La clase se registra una sola vez, cuando se instala el ensamblado. Las instancias de las clases del ensamblado no se pueden crear a partir de COM si no están registradas.
 
-Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -89,4 +89,4 @@ regasm myTest.dll /tlb:myTest.tlb
 - [Tlbexp.exe (Exportador de la biblioteca de tipos)](tlbexp-exe-type-library-exporter.md)
 - [TlbImp.exe (Importador de la biblioteca de tipos)](tlbimp-exe-type-library-importer.md)
 - [Registrar ensamblados con COM](../interop/registering-assemblies-with-com.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

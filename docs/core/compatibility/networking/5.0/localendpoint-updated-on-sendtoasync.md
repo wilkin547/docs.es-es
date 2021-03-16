@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Socket.LocalEndPoint se actualiza después de llamar a SendToAsync'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde ahora SendToAsync actualiza el valor de la propiedad de punto de conexión local a la dirección local del socket.
+description: Obtenga información sobre el cambio importante en .NET 5, donde ahora SendToAsync actualiza el valor de la propiedad de punto de conexión local a la dirección local del socket.
 ms.date: 10/18/2020
-ms.openlocfilehash: 53d7da350eac6e65832012331044427fd90fe796
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4be62f8bf6596cc3531d59f3e65eda005bff778a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760145"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256431"
 ---
 # <a name="socketlocalendpoint-is-updated-after-calling-sendtoasync"></a>Socket.LocalEndPoint se actualiza después de llamar a SendToAsync
 
@@ -19,7 +19,7 @@ Ahora <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsync
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsyncEventArgs)?displayProperty=nameWithType> no modifica el valor de la propiedad <xref:System.Net.Sockets.Socket.LocalEndPoint?displayProperty=nameWithType> en la instancia del socket. A partir de .NET 5.0, cuando <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsyncEventArgs)> se completa de forma correcta, el valor de <xref:System.Net.Sockets.Socket.LocalEndPoint?displayProperty=nameWithType> es la dirección local del socket enlazado de forma implícita. Este nuevo comportamiento es coherente con el de <xref:System.Net.Sockets.Socket.SendTo(System.Byte[],System.Net.EndPoint)> y <xref:System.Net.Sockets.Socket.BeginSendTo(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint,System.AsyncCallback,System.Object)>/<xref:System.Net.Sockets.Socket.EndSendTo(System.IAsyncResult)>.
+En versiones anteriores de .NET, <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsyncEventArgs)?displayProperty=nameWithType> no modifica el valor de la propiedad <xref:System.Net.Sockets.Socket.LocalEndPoint?displayProperty=nameWithType> en la instancia del socket. A partir de .NET 5, cuando <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsyncEventArgs)> se completa de forma correcta, el valor de <xref:System.Net.Sockets.Socket.LocalEndPoint?displayProperty=nameWithType> es la dirección local del socket enlazado de forma implícita. Este nuevo comportamiento es coherente con el de <xref:System.Net.Sockets.Socket.SendTo(System.Byte[],System.Net.EndPoint)> y <xref:System.Net.Sockets.Socket.BeginSendTo(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint,System.AsyncCallback,System.Object)>/<xref:System.Net.Sockets.Socket.EndSendTo(System.IAsyncResult)>.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

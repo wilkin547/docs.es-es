@@ -3,12 +3,12 @@ title: Proveedores de eventos conocidos en .NET
 description: Revise los proveedores y los eventos publicados por las bibliotecas y el entorno de ejecución de .NET.
 ms.topic: reference
 ms.date: 12/21/2020
-ms.openlocfilehash: 03d505f33e300b094958676bb768fb542d828aeb
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: 37aa9551397bb3e3e8858a1289ddc3921327b722
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97738193"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105172"
 ---
 # <a name="well-known-event-providers-in-net"></a>Proveedores de eventos conocidos en .NET
 
@@ -113,3 +113,9 @@ Este proveedor registra información sobre la [biblioteca TPL](../../standard/pa
 ASP.NET Core también proporciona varios eventos para ayudarle a diagnosticar problemas en la pila de ASP.NET Core.
 
 Para obtener más información sobre los eventos en ASP.NET Core y cómo consumirlos, consulte el artículo [Registros en .NET Core y ASP.NET Core](/aspnet/core/fundamentals/logging/).
+
+## <a name="entity-framework-core"></a>Entity Framework Core
+
+EF Core también proporciona eventos para ayudarle a diagnosticar problemas en EF Core.
+
+Para obtener más información sobre los eventos en EFCore y cómo consumirlos, consulte [Eventos de .NET en EF Core](/ef/core/logging-events-diagnostics/events).

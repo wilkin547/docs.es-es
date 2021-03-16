@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Las comprobaciones intrínsecas de IsSupported de hardware pueden diferir en los tipos anidados'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET donde ahora la comprobación de objetos intrínsecos de hardware en X64.IsSupported puede generar un resultado diferente.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde ahora la comprobación de objetos intrínsecos de hardware en X64.IsSupported puede generar un resultado diferente.
 ms.date: 11/01/2020
-ms.openlocfilehash: 9acef15860de76a9743621cb4c5edba5aac3931c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c6049ad5881c0389870cfd5e1550f8358c67599
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760201"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257458"
 ---
 # <a name="hardware-intrinsic-issupported-checks-may-differ-for-nested-types"></a>Las comprobaciones intrínsecas de IsSupported de hardware pueden diferir en los tipos anidados
 
@@ -24,7 +24,7 @@ La comprobación de `<Isa>.X64.IsSupported`, donde `<Isa>` hace referencia a las
 
 En versiones anteriores de .NET, algunos de los tipos intrínsecos de hardware de <xref:System.Runtime.Intrinsics.X86>, por ejemplo, <xref:System.Runtime.Intrinsics.X86.Aes?displayProperty=nameWithType>, no exponían una clase anidada de `X64` . Para estos tipos, la llamada a `<Isa>.X64.IsSupported` se resolvía en una propiedad `IsSupported` en una clase `X64` anidada de una clase principal `<Isa>`. Esto significaba que la propiedad podía devolver `true` incluso cuando `<Isa>.IsSupported` devuelve `false`.
 
-En .NET 5.0 y versiones posteriores, todos los tipos <xref:System.Runtime.Intrinsics.X86> exponen una clase `X64` anidada que notifica correctamente la compatibilidad. Esto garantiza que la jerarquía general siga siendo correcta y que si `<Isa>.X64.IsSupported` es `true`, también se puede suponer que `<Isa>.IsSupported` es `true`.
+En .NET 5 y versiones posteriores, todos los tipos <xref:System.Runtime.Intrinsics.X86> exponen una clase `X64` anidada que notifica correctamente la compatibilidad. Esto garantiza que la jerarquía general siga siendo correcta y que si `<Isa>.X64.IsSupported` es `true`, también se puede suponer que `<Isa>.IsSupported` es `true`.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

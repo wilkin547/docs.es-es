@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Deserialize char necesita una cadena de un solo carácter'
-description: Obtenga información sobre el cambio importante en .NET 5.0, por el que System.Text.Json requiere una cadena de un solo elemento char en JSON al realizar una deserialización a un destino de un carácter.
+description: Obtenga información sobre el cambio importante en .NET 5, por el que System.Text.Json requiere una cadena de un solo elemento char en JSON al realizar una deserialización a un destino de un carácter.
 ms.date: 12/15/2020
-ms.openlocfilehash: 39a2d25b00bf8855cfbf46a4d78b8545052703e5
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: e901f8ee7e7521af948a3bcde5cf969640436f7f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633876"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256340"
 ---
 # <a name="systemtextjson-requires-single-char-string-to-deserialize-a-char"></a>System.Text.Json requiere una cadena de un solo elemento char para deserializar a un elemento char
 
@@ -19,11 +19,11 @@ En versiones anteriores de .NET, una cadena de varios elementos `char` en JSON s
 
 ```csharp
 // .NET Core 3.0 and 3.1: Returns the first char 'a'.
-// .NET 5.0 and later: Throws JsonException because payload has more than one char.
+// .NET 5 and later: Throws JsonException because payload has more than one char.
 char deserializedChar = JsonSerializer.Deserialize<char>("\"abc\"");
 ```
 
-En .NET 5.0 y versiones posteriores, si se pasa algo distinto a una cadena de un solo elemento `char`, se inicia una excepción <xref:System.Text.Json.JsonException> cuando el parámetro de tipo es un elemento `char`. La siguiente cadena de ejemplo se deserializa correctamente en todas las versiones de .NET:
+En .NET 5 y versiones posteriores, si se pasa algo distinto a una cadena de un solo elemento `char`, se inicia una excepción <xref:System.Text.Json.JsonException> cuando el parámetro de tipo es un elemento `char`. La siguiente cadena de ejemplo se deserializa correctamente en todas las versiones de .NET:
 
 ```csharp
 // Correct usage.

@@ -3,12 +3,12 @@ title: Advertencia SYSLIB0004
 description: Obtenga información sobre las obsolescencias que generan la advertencia en tiempo de compilación SYSLIB0004.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 03be8bb54f71f74ed94ee2c3f8489397ae1e99b5
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 76726e233e2900c82dce1b0872533e5356e91c8c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596400"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256377"
 ---
 # <a name="syslib0004-the-constrained-execution-region-cer-feature-is-not-supported"></a>SYSLIB0004: no se admite la característica de regiones de ejecución restringidas (CER)
 
@@ -28,7 +28,7 @@ Las siguientes API relacionadas con CER están obsoletas:
 
 ## <a name="workarounds"></a>Soluciones alternativas
 
-- Si ha aplicado un atributo CER a un método, quite el atributo. Estos atributos no tienen ningún efecto en .NET 5.0 y versiones posteriores.
+- Si ha aplicado un atributo CER a un método, quite el atributo. Estos atributos no tienen ningún efecto en .NET 5 y versiones posteriores.
 
   ```csharp
   // REMOVE the attribute below.
@@ -44,7 +44,7 @@ Las siguientes API relacionadas con CER están obsoletas:
   }
   ```
 
-- Si llama a `RuntimeHelpers.ProbeForSufficientStack` o `RuntimeHelpers.PrepareContractedDelegate`, quite la llamada. Estas llamadas no tienen ningún efecto en .NET 5.0 y versiones posteriores.
+- Si llama a `RuntimeHelpers.ProbeForSufficientStack` o `RuntimeHelpers.PrepareContractedDelegate`, quite la llamada. Estas llamadas no tienen ningún efecto en .NET 5 y versiones posteriores.
 
   ```csharp
   public void DoSomething()
@@ -56,7 +56,7 @@ Las siguientes API relacionadas con CER están obsoletas:
   }
   ```
 
-- Si llama a `RuntimeHelpers.PrepareConstrainedRegions`, quite la llamada. Esta llamada no tiene ningún efecto en .NET 5.0 y versiones posteriores.
+- Si llama a `RuntimeHelpers.PrepareConstrainedRegions`, quite la llamada. Esta llamada no tiene ningún efecto en .NET 5 y versiones posteriores.
 
   ```csharp
   public void DoSomething_Old()

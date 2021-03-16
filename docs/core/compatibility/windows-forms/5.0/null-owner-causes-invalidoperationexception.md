@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Las API relacionadas con DataGridView inician una excepción InvalidOperationException'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde algunas API relacionadas con DataGridView inician una excepción si el valor de DataGridViewCellAccessibleObject.Owner del objeto es NULL.
+description: Obtenga información sobre el cambio importante en .NET 5, donde algunas API relacionadas con DataGridView inician una excepción si el valor de DataGridViewCellAccessibleObject.Owner del objeto es NULL.
 ms.date: 09/18/2020
-ms.openlocfilehash: 927b1c9160700159a45aa1472b8d96f1a9ecfe25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e49ce0ebecb5a9ab4ed7f0e0d70d994ab751bc58
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760229"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256119"
 ---
 # <a name="datagridview-related-apis-now-throw-invalidoperationexception"></a>Excepción InvalidOperationException por parte de las API relacionadas con DataGridView
 
@@ -15,7 +15,7 @@ Algunas API relacionadas con <xref:System.Windows.Forms.DataGridView> ahora prod
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En las versiones anteriores de .NET, las API afectadas inician una excepción <xref:System.NullReferenceException> cuando se invocan y el valor de <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> es `null`. A partir de .NET 5.0, estas API inician una excepción <xref:System.InvalidOperationException> en lugar de una excepción <xref:System.NullReferenceException> si el valor de <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> es `null` cuando se invocan.
+En las versiones anteriores de .NET, las API afectadas inician una excepción <xref:System.NullReferenceException> cuando se invocan y el valor de <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> es `null`. A partir de .NET 5, estas API inician una excepción <xref:System.InvalidOperationException> en lugar de una excepción <xref:System.NullReferenceException> si el valor de <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> es `null` cuando se invocan.
 
 El inicio de una <xref:System.InvalidOperationException> se ajusta al comportamiento del tiempo de ejecución de .NET. También mejora la experiencia de depuración al comunicar claramente qué propiedad no es válida.
 

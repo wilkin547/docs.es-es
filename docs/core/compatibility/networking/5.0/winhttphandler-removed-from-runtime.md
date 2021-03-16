@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: WinHttpHandler quitado del entorno de ejecución de .NET'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde WinHttpHandler se ha quitado del entorno de ejecución de .NET.
+description: Obtenga información sobre el cambio importante en .NET 5, donde WinHttpHandler se ha quitado del entorno de ejecución de .NET.
 ms.date: 10/18/2020
-ms.openlocfilehash: f8b9910ade8d459133791a23704d624a91cc5dff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 95abcfb4d7670be035bd640dbb85458406c1b0e0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760141"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256418"
 ---
 # <a name="winhttphandler-removed-from-net-runtime"></a>WinHttpHandler quitado del entorno de ejecución de .NET
 
@@ -19,7 +19,7 @@ La clase `WinHttpHandler` se ha quitado del ensamblado *System.Net.Http.dll*. Ah
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, la clase <xref:System.Net.Http.WinHttpHandler> está disponible como parte de las bibliotecas básicas de .NET. A partir de .NET 5.0, la clase solo está disponible como un <xref:System.Net.Http.WinHttpHandler>[paquete NuGet](https://www.nuget.org/packages/System.Net.Http.WinHttpHandler/) instalado por separado.
+En versiones anteriores de .NET, la clase <xref:System.Net.Http.WinHttpHandler> está disponible como parte de las bibliotecas básicas de .NET. A partir de .NET 5, la clase <xref:System.Net.Http.WinHttpHandler> solo está disponible como un [paquete NuGet](https://www.nuget.org/packages/System.Net.Http.WinHttpHandler/) instalado por separado.
 
 ## <a name="recommended-action"></a>Acción recomendada
 

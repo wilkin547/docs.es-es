@@ -5,16 +5,16 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: b9cd308a1eaf2ae8f4e3e89b1a4770933b3978cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 171218dcc4904b797b0c9a66b56bcb970607684e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188413"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104853"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificador del parámetro in (referencia de C#)
 
-La palabra clave `in` hace que los argumentos se pasen por referencia. Hace que el parámetro formal sea un alias para el argumento, que debe ser una variable. En otras palabras, cualquier operación en el parámetro se realiza en el argumento. Es como las palabras clave [ref](ref.md) o [out](out-parameter-modifier.md), salvo que el método al que se llama no puede modificar los argumentos `in`. Mientras que los argumentos `ref` se pueden modificar, el método llamado debe modificar los argumentos `out` y esas modificaciones se pueden observar en el contexto de la llamada.
+La palabra clave `in` hace que los argumentos se pasen por referencia pero garantiza que el argumento no se modifica. Hace que el parámetro formal sea un alias para el argumento, que debe ser una variable. En otras palabras, cualquier operación en el parámetro se realiza en el argumento. Es como las palabras clave [ref](ref.md) o [out](out-parameter-modifier.md), salvo que el método al que se llama no puede modificar los argumentos `in`. Mientras que los argumentos `ref` se pueden modificar, el método llamado debe modificar los argumentos `out` y esas modificaciones se pueden observar en el contexto de la llamada.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -120,14 +120,8 @@ Las palabras clave `in`, `ref` y `out` no pueden usarse para estos tipos de mét
 - El primer argumento de un método de extensión no puede tener el modificador `in` a menos que ese argumento sea una estructura.
 - El primer argumento de un método de extensión donde el argumento es un tipo genérico (incluso si el tipo está restringido para ser una estructura).
 
+Puede obtener más información sobre el modificador `in` y sobre cómo difiere de `ref` y `out` en el artículo sobre [Escritura de código eficaz y seguro](../../write-safe-efficient-code.md).
+
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vea también
-
-- [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
-- [Palabras clave de C#](index.md)
-- [Parámetros de métodos](method-parameters.md)
-- [Escritura de código seguro y eficaz](../../write-safe-efficient-code.md)

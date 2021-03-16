@@ -3,12 +3,12 @@ title: Información general sobre EventPipe
 description: Obtenga información sobre EventPipe y cómo usarlo para hacer un seguimiento de las aplicaciones .NET con el fin de diagnosticar problemas de rendimiento.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: f315beafabbd99bf78647b3f714fd76d93fcac28
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 213d15e48ac9d50af0c87565738f952295c4f041
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582982"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105302"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -77,10 +77,11 @@ pero puede usar las siguientes variables de entorno para configurar una sesión 
 
 * `COMPlus_EventPipeOutputPath`: ruta de acceso al archivo de seguimiento de EventPipe de salida cuando está configurado para ejecutarse mediante `COMPlus_EnableEventPipe`. El valor predeterminado es `trace.nettrace`, que se crea en el mismo directorio desde el que se ejecuta la aplicación.
 
-* `COMPlus_CircularBufferMB`: tamaño del búfer interno usado por EventPipe cuando se configura para ejecutarse mediante `COMPlus_EnableEventPipe`.
+* `COMPlus_EventPipeCircularMB`: valor hexadecimal que representa el tamaño del búfer interno de EventPipe en megabytes. Este valor de configuración solo se usa cuando EventPipe está configurado para ejecutarse mediante `COMPlus_EnableEventPipe`. El tamaño de búfer predeterminado es de 1024 MB, que se traduce en esta variable de entorno estableciéndose en `400`, puesto que `0x400` == `1024`.
+
+* `COMPlus_EventPipeProcNumbers`: establézcalo en `1` para habilitar la captura de números de procesador en los encabezados de evento de EventPipe. El valor predeterminado es `0`.
 
 * `COMPlus_EventPipeConfig`: establece la configuración de sesión de EventPipe al iniciar una sesión de EventPipe con `COMPlus_EnableEventPipe`.
-
   La sintaxis es la siguiente:
 
   `<provider>:<keyword>:<level>`

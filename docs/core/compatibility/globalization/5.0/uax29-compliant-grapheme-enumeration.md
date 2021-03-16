@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: StringInfo y TextElementEnumerator ahora son compatibles con UAX29'
-description: Obtenga información sobre el cambio importante de globalización en .NET 5.0, donde StringInfo y TextElementEnumerator procesan los clústeres de grafemas según la versión más reciente del estándar Unicode.
+description: Obtenga información sobre el cambio importante de globalización en .NET 5, donde StringInfo y TextElementEnumerator procesan los clústeres de grafemas según la versión más reciente del estándar Unicode.
 ms.date: 04/07/2020
-ms.openlocfilehash: cd5ae5a3eb9f2dd9c02bc179a40d454d24101199
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf770e30bfadf1973bbe018cc9d2783ed6234723
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760110"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256710"
 ---
 # <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo y TextElementEnumerator ahora son compatibles con UAX29
 

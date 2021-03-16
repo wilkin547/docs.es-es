@@ -2,12 +2,12 @@
 title: Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Elección de las plataformas de proceso de Azure para las aplicaciones basadas en contenedores
 ms.date: 02/18/2020
-ms.openlocfilehash: 4bc72fb5a5be30d47cffe73d53a82b3237a959a6
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 9246b8dfb4e1d68fbd965d25e2e9d3272563798c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987821"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257998"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
 
@@ -31,7 +31,7 @@ En la siguiente tabla, puede ver un desglose de los diferentes tipos de aplicaci
 |:------------------------:|:--:|:--:|:--:|:--:|:--:|:--:|
 | **Aplicaciones web (monolíticas)**         | ![Posible con VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Posible con ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Recomendado con App Service](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![Posible con AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
 | **Aplicaciones de n niveles (servicios)**        | ![Posible con VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Posible con ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Recomendado con App Service](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![Posible con AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Posible con Azure Fuctions](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
-| **Nativo en la nube (microservicios)**  | | ![Posible con ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![Recomendado con AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Contenedores de&nbsp;Linux)| ![Recomendado con Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Basado en eventos) | |
+| **Nativo en la nube (microservicios)**  | | ![Posible con ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Posible con ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) <br/> (Con&nbsp;contenedores) | ![Recomendado con AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Contenedores de&nbsp;Linux)| ![Recomendado con Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Basado en eventos) | |
 | **Lotes y trabajos (tareas en segundo plano)** | ![Posible con VM](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Posible con ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Posible con App Service](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Posible con AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Recomendado con Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Tareas&nbsp;en segundo plano) | ![Recomendado con Azure Batch](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Gran escala) |
 
 **Leyenda**

@@ -1,21 +1,21 @@
 ---
 title: 'Cambio importante: objetos de WinForms no accesibles desde código nativo'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde los objetos de Windows Forms ya no son accesibles desde código nativo.
+description: Obtenga información sobre el cambio importante en .NET 5, donde los objetos de Windows Forms ya no son accesibles desde código nativo.
 ms.date: 01/29/2021
-ms.openlocfilehash: 53343f3f07817f735fa3b0ee77a352dcc80d4b6c
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 823d37cb8115b8669b254878325a350809393e79
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506525"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256101"
 ---
 # <a name="native-code-cant-access-windows-forms-objects"></a>El código nativo no puede acceder a objetos Windows Forms.
 
-A partir de .NET 5.0, ya no puede tener acceso a objetos de Windows Forms desde código nativo.
+A partir de .NET 5, ya no puede tener acceso a objetos de Windows Forms desde código nativo.
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, algunos tipos de Windows Forms se representaban como visibles para la interoperabilidad COM y, por tanto, se podía tener acceso al código nativo. A partir de .NET 5.0, no hay ninguna API de Windows Forms visible para la interoperabilidad COM o accesible para el código nativo. El entorno de ejecución de .NET ya no admite la creación de bibliotecas de tipos personalizados directamente. Además, el entorno de ejecución de .NET no puede depender de la biblioteca de tipos para .NET Framework (lo que requeriría mantener la forma de las clases tal como estaban en .NET Framework).
+En versiones anteriores de .NET, algunos tipos de Windows Forms se representaban como visibles para la interoperabilidad COM y, por tanto, se podía tener acceso al código nativo. A partir de .NET 5, no hay ninguna API de Windows Forms visible para la interoperabilidad COM o accesible para el código nativo. El entorno de ejecución de .NET ya no admite la creación de bibliotecas de tipos personalizados directamente. Además, el entorno de ejecución de .NET no puede depender de la biblioteca de tipos para .NET Framework (lo que requeriría mantener la forma de las clases tal como estaban en .NET Framework).
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 
@@ -67,7 +67,7 @@ public class Form1 : Form
 }
 ```
 
-Hay dos formas posibles de hacer que el ejemplo funcione en .NET 5.0 y versiones posteriores:
+Hay dos formas posibles de hacer que el ejemplo funcione en .NET 5 y versiones posteriores:
 
 - Introducir un objeto `ObjectForScripting` declarado por el usuario que admita `IDispatch` (que se aplica de forma predeterminada, a menos que se cambie explícitamente en el nivel de proyecto).
 

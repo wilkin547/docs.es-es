@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4d3b5b1720f29c70b5276d1c79275d8c057b179a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247348"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259478"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 
@@ -24,7 +24,7 @@ El Importador de controles ActiveX convierte definiciones de tipos de una biblio
   
  Para hospedar el control ActiveX, debe generar un control contenedor que se derive de <xref:System.Windows.Forms.AxHost>. Este control contenedor contiene una instancia del control ActiveX subyacente. También sabe cómo establecer comunicación con el control ActiveX, pero aparece como un control de Windows Forms. Este control generado contiene el control ActiveX y proporciona sus propiedades, métodos y eventos como si fuesen propios.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [Shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
   
  En el símbolo del sistema, escriba lo siguiente:  
   

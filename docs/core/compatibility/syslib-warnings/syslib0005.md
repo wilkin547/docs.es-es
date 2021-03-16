@@ -3,16 +3,16 @@ title: Advertencia SYSLIB0005
 description: Obtenga información sobre la obsolescencia que genera la advertencia en tiempo de compilación SYSLIB0005.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1263a4d327c735268f77ed56bdcea6a4cbed4bfa
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 9ed36d247d31bcebc499bd7ed3945490d9d901f9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596411"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256378"
 ---
 # <a name="syslib0005-the-global-assembly-cache-gac-is-not-supported"></a>SYSLIB0005: no se admite la caché global de ensamblados (GAC)
 
-.NET Core y .NET 5.0 y versiones posteriores eliminan el concepto de caché global de ensamblados (GAC) presente en .NET Framework. Para ayudar a los desarrolladores a apartarse de estas API, algunas relacionadas con GAC se han marcado como obsoletas a partir de .NET 5.0. El uso de estas API genera una advertencia `SYSLIB0005` en tiempo de compilación.
+.NET Core y .NET 5 y versiones posteriores eliminan el concepto de caché global de ensamblados (GAC) presente en .NET Framework. Para ayudar a los desarrolladores a apartarse de estas API, algunas relacionadas con GAC se han marcado como obsoletas a partir de .NET 5.0. El uso de estas API genera una advertencia `SYSLIB0005` en tiempo de compilación.
 
 Las siguientes API relacionadas con GAC se han marcado como obsoletas:
 

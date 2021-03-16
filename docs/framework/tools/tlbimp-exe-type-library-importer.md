@@ -11,18 +11,18 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: 6810fc4fbe39fa82a02faa967b1afd8ad9c7a3cc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fa835b95d0dab1c5139fe9b1dfbf81d1c4400a82
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244891"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258681"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
 
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -139,4 +139,4 @@ void SomeMethod(out bool x);
 - [Sn.exe (Herramienta de nombre seguro)](sn-exe-strong-name-tool.md)
 - [Ensamblados con nombre seguro](../../standard/assembly/strong-named.md)
 - [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

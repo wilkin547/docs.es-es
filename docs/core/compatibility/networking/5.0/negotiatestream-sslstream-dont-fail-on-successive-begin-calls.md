@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: NegotiateStream y SslStream permiten operaciones Begin sucesivas'
-description: Obtenga información sobre el cambio importante en .NET 5.0 en el que los casos de error en las secuencias de seguridad se controlan de forma diferente, y las llamadas sucesivas a BeginAuthenticateAsServer o BeginAuthenticateAsClient ya no producen errores.
+description: Obtenga información sobre el cambio importante en .NET 5 en el que los casos de error en las secuencias de seguridad se controlan de forma diferente, y las llamadas sucesivas a BeginAuthenticateAsServer o BeginAuthenticateAsClient ya no producen errores.
 ms.date: 10/18/2020
-ms.openlocfilehash: e0226d0f5586efca050ca3497ca1490fa21fd943
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c042be01873849cc154111a31fc007521508c7b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760142"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256444"
 ---
 # <a name="negotiatestream-and-sslstream-allow-successive-begin-operations"></a>NegotiateStream y SslStream permiten operaciones Begin sucesivas
 
@@ -19,7 +19,7 @@ Los casos de error en las secuencias de seguridad se administran de forma difere
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, las llamadas sucesivas a `BeginAuthenticateAsServer` o `BeginAuthenticateAsClient` sin llamar primero a `EndAuthenticateAsServer` o `EndAuthenticateAsClient` dan como resultado una excepción <xref:System.NotSupportedException>. A partir de .NET 5.0, las llamadas sucesivas a `BeginAuthenticateAsServer` o `BeginAuthenticateAsClient` ya no inician una excepción <xref:System.NotSupportedException>, porque estas API están respaldadas por una implementación basada en <xref:System.Threading.Tasks.Task>.
+En versiones anteriores de .NET, las llamadas sucesivas a `BeginAuthenticateAsServer` o `BeginAuthenticateAsClient` sin llamar primero a `EndAuthenticateAsServer` o `EndAuthenticateAsClient` dan como resultado una excepción <xref:System.NotSupportedException>. A partir de .NET 5, las llamadas sucesivas a `BeginAuthenticateAsServer` o `BeginAuthenticateAsClient` ya no inician una excepción <xref:System.NotSupportedException>, porque estas API están respaldadas por una implementación basada en <xref:System.Threading.Tasks.Task>.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

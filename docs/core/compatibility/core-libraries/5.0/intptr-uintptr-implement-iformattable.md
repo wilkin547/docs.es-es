@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: IntPtr y UIntPtr implementan IFormattable'
-description: Obtenga información sobre el cambio importante de .NET 5.0 en las bibliotecas básicas de .NET, donde IntPtr y UIntPtr implementan ahora IFormattable.
+description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET, donde IntPtr y UIntPtr implementan ahora IFormattable.
 ms.date: 11/01/2020
-ms.openlocfilehash: 0684652cdc2b8cf1d237074263bf0809082b0dcd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: adfb68807d5fa5f0c750fb41ef75951f63a4b2d5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760244"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257445"
 ---
 # <a name="intptr-and-uintptr-implement-iformattable"></a>IntPtr y UIntPtr implementan IFormattable
 
@@ -17,7 +17,7 @@ ms.locfileid: "95760244"
 
 En versiones anteriores de .NET, <xref:System.IntPtr> y <xref:System.UIntPtr> no implementan <xref:System.IFormattable>. Las funciones que comprueban <xref:System.IFormattable> pueden revertir simplemente a llamar a <xref:System.IntPtr.ToString%2A?displayProperty=nameWithType> o <xref:System.UIntPtr.ToString%2A?displayProperty=nameWithType>, lo que significa que no se respetan los especificadores de formato ni las referencias culturales.
 
-En .NET 5.0 y versiones posteriores, <xref:System.IntPtr> y <xref:System.UIntPtr> implementan <xref:System.IFormattable>. Las funciones que comprueban la compatibilidad de <xref:System.IFormattable> ahora pueden devolver resultados diferentes para estos tipos, ya que pueden pasar un especificador de formato y una referencia cultural.
+En .NET 5 y versiones posteriores, <xref:System.IntPtr> y <xref:System.UIntPtr> implementan <xref:System.IFormattable>. Las funciones que comprueban la compatibilidad de <xref:System.IFormattable> ahora pueden devolver resultados diferentes para estos tipos, ya que pueden pasar un especificador de formato y una referencia cultural.
 
 Este cambio afecta a escenarios como cadenas interpoladas y <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, entre otros.
 

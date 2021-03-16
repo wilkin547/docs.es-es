@@ -5,12 +5,12 @@ ms.topic: error-reference
 ms.date: 02/12/2021
 f1_keywords:
 - NETSDK1045
-ms.openlocfilehash: 900402ae01f945b1096170ea4fc79d00ea789b62
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 7f21270fdc7c2db862a49302a302bf8121fc86a5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488253"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104107"
 ---
 # <a name="netsdk1045-the-current-net-sdk-does-not-support-newer-version-as-a-target"></a>NETSDK1045: El SDK de .NET actual no es compatible con "versión más reciente" como destino.
 
@@ -40,7 +40,7 @@ dotnet --list-sdks
 
 Cada versión del SDK de .NET está disponible en la arquitectura x86 y x64. Es posible que el proyecto intente encontrar el SDK de .NET para la arquitectura equivocada, o bien que no esté instalado el SDK de .NET para la arquitectura que necesita el proyecto. Busque en las carpetas de instalación la arquitectura que necesita. Por ejemplo, en Windows, la versión x86 del SDK de .NET se instala en *C:\Archivos de programa (x86)\dotnet*, y la versión x64, en *C:\Archivos de programa\dotnet*. Vea [Cómo comprobar que .NET Core ya está instalado](../../install/how-to-detect-installed-versions.md) y elija el sistema operativo para averiguar cómo detectar lo que está instalado en la máquina.
 
-Si la versión que necesita no está instalada, descárguela [aquí](https://dotnet.microsoft.com/download/dotnet-core).
+Si la versión que necesita no está instalada, búsquela en la página [Descargas de .NET](https://dotnet.microsoft.com/download/dotnet).
 
 ## <a name="preview-not-enabled"></a>Versión preliminar no habilitada
 

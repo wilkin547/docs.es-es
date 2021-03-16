@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: Los métodos de WinForms inician ahora la excepción ArgumentNullException'
-description: Obtenga información sobre el cambio importante en .NET 5.0 por el que algunos métodos de Windows Forms ahora inician una excepción ArgumentNullException para los argumentos NULL.
+description: Obtenga información sobre el cambio importante en .NET 5 por el que algunos métodos de Windows Forms ahora inician una excepción ArgumentNullException para los argumentos NULL.
 ms.date: 09/18/2020
-ms.openlocfilehash: 77280827d44b0e58533339a09357d518a0bfe508
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d72f8e3320430396132de20c252cd5e8759dce3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760230"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256105"
 ---
 # <a name="winforms-methods-now-throw-argumentnullexception"></a>Los métodos de WinForms inician ahora la excepción ArgumentNullException
 
@@ -15,7 +15,7 @@ Algunos métodos de Windows Forms inician ahora una <xref:System.ArgumentNullExc
 
 ## <a name="change-description"></a>Descripción del cambio
 
-Anteriormente, algunos métodos de Windows Forms iniciaban una <xref:System.NullReferenceException> si se pasaba un argumento que era NULL. A partir de .NET 5.0, estos métodos inician ahora en cambio una excepción <xref:System.ArgumentNullException> para los argumentos NULL.
+Anteriormente, algunos métodos de Windows Forms iniciaban una <xref:System.NullReferenceException> si se pasaba un argumento que era NULL. A partir de .NET 5, estos métodos inician ahora en cambio una excepción <xref:System.ArgumentNullException> para los argumentos NULL.
 
 El inicio de una <xref:System.ArgumentNullException> se ajusta al comportamiento del tiempo de ejecución de .NET. También mejora la experiencia de depuración al comunicar claramente que un argumento es NULL y de qué argumento se trata.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: bca26e359c25bf0dfae70f0ddfdc0c75b2081458
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ce3724271663163f26a34b6710b28503f7b0c52e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556328"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259933"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 
@@ -19,7 +19,7 @@ La herramienta de generación y edición de manifiestos (*Mage.exe*) es una herr
 
 También puede usar *MageUI.exe*, una aplicación gráfica, en lugar de *Mage.exe*. Para obtener más información, consulte [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use el Símbolo del sistema para desarrolladores de Visual Studio. Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [Shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 En Visual Studio se incluyen dos versiones de *Mage.exe* y *MageUI.exe*. Para ver información sobre la versión, ejecute *MageUI.exe*, seleccione **Ayuda** y, después, seleccione **Acerca de**. En esta documentación se describe la versión 4.0.x.x de *Mage.exe* y *MageUI.exe*.
 
@@ -224,4 +224,4 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [Tutorial: Implementación manual de una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview)
 - [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

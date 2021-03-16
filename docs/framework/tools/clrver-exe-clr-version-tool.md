@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: 3a7a585d990051553aa8fdc0e99b2dc206273cf4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8205b92f3997f6abacc566e2e6f2b37604fbda07
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247231"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255254"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (herramienta de versión de CLR)
 
 La herramienta de versión de CLR (Clrver.exe) notifica todas las versiones instaladas de Common Language Runtime (CLR) en el equipo.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).  
   
- En el símbolo del sistema, escriba lo siguiente:  
+ En el símbolo del sistema, escriba el siguiente comando:  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,4 +61,4 @@ clrver [option]
 ## <a name="see-also"></a>Vea también
 
 - [Herramientas](index.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)

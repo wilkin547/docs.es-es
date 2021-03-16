@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: No se admiten las API de System.Security.Cryptography en Blazor WebAssembly'
-description: Obtenga información sobre el cambio importante en .NET 5.0 donde las API de criptografía inician una excepción cuando se ejecutan en un explorador.
+description: Obtenga información sobre el cambio importante en .NET 5 donde las API de criptografía inician una excepción cuando se ejecutan en un explorador.
 ms.date: 09/16/2020
-ms.openlocfilehash: ec10fa777e91f641b5582378830536a0cfa8dd72
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecbdda4c04642af6b1737e888491eb6565ba7479
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760123"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256886"
 ---
 # <a name="systemsecuritycryptography-apis-not-supported-on-blazor-webassembly"></a>No se admiten las API de System.Security.Cryptography en Blazor WebAssembly
 
@@ -15,10 +15,10 @@ Las API de <xref:System.Security.Cryptography> inician una excepción <xref:Syst
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, la mayoría de las API de <xref:System.Security.Cryptography> no están disponibles para las aplicaciones de Blazor WebAssembly. A partir de .NET 5.0, las aplicaciones de Blazor WebAssembly tienen como destino el área expuesta de la API de .NET 5 completa, sin embargo, no se admiten todas las API de .NET 5 debido a las restricciones de espacio aislado del explorador. En .NET 5.0 y versiones posteriores, las API de <xref:System.Security.Cryptography> no compatibles inician una excepción <xref:System.PlatformNotSupportedException> cuando se ejecutan en WebAssembly.
+En versiones anteriores de .NET, la mayoría de las API de <xref:System.Security.Cryptography> no están disponibles para las aplicaciones de Blazor WebAssembly. A partir de .NET 5, las aplicaciones de Blazor WebAssembly tienen como destino el área expuesta de la API de .NET 5 completa, sin embargo, no se admiten todas las API de .NET 5 debido a las restricciones de espacio aislado del explorador. En .NET 5 y versiones posteriores, las API de <xref:System.Security.Cryptography> no compatibles inician una excepción <xref:System.PlatformNotSupportedException> cuando se ejecutan en WebAssembly.
 
 > [!TIP]
-> El [analizador de compatibilidad de plataformas](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) marcará todas las llamadas a las API afectadas al compilar un proyecto que admita la plataforma del explorador. Este analizador se ejecuta de forma predeterminada en las aplicaciones .NET 5.0 y versiones posteriores.
+> El [analizador de compatibilidad de plataformas](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) marcará todas las llamadas a las API afectadas al compilar un proyecto que admita la plataforma del explorador. Este analizador se ejecuta de forma predeterminada en las aplicaciones .NET 5 y versiones posteriores.
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 

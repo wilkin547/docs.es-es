@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: cfa7ec7cb0ff174a820afcdcbdb1eb461510fc05
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 467a1d7ba06862b37002e5db75bf6a6ef2a9e65a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238540"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259108"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)
 
@@ -19,7 +19,7 @@ La herramienta Anotador de seguridad de .NET (SecAnnotate.exe) es una aplicació
   
  El [Anotador de seguridad](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator), que es una extensión de Visual Studio, proporciona una interfaz gráfica de usuario a SecAnnotate.exe y permite ejecutar la herramienta desde Visual Studio.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).  
   
  En el símbolo del sistema, escriba lo siguiente (los valores de *parameters* se describen en la sección siguiente y *assemblies* se compone de uno o varios nombres de ensamblado separados por espacios en blanco):  
   

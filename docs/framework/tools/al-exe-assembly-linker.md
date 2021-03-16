@@ -8,21 +8,21 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 66408b11f4e82776058ac19b8454bf50906b4b86
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 112e3880e76d4e81ab42cece592fcfd0f4dff312
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167355"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480801"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
 Assembly Linker genera un archivo con un manifiesto del ensamblado a partir de uno o varios archivos que son módulos o archivos de recursos. Un módulo es un archivo de lenguaje intermedio (IL) que no tiene un manifiesto del ensamblado.
 
 > [!NOTE]
-> A partir de Visual Studio 2008, los compiladores de Visual Basic y de C# incrustan automáticamente un manifiesto de Win32 en el ensamblado. Para obtener más información, consulte [-win32manifest (opciones del compilador de C#)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> A partir de Visual Studio 2008, los compiladores de Visual Basic y de C# incrustan automáticamente un manifiesto de Win32 en el ensamblado. Para obtener más información, consulte [-win32manifest (opciones del compilador de C#)](../../csharp/language-reference/compiler-options/resources.md#win32manifest).
 
-Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use un [shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 En el símbolo del sistema, escriba lo siguiente:
 
@@ -40,7 +40,7 @@ Puede especificar uno o varios de los siguientes orígenes (`sources`).
 | ------ | ----------- |
 |`file`[,`target`]|Copia el contenido de `file` (un módulo) en el nombre de archivo especificado en `target`. Después de la copia, *Al.exe* compila `target` en un ensamblado.|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|Inserta el recurso especificado en `file` en la imagen que contiene el manifiesto del ensamblado; *Al.exe* copia el contenido de `file` en la imagen portable ejecutable (PE).<br /><br /> El parámetro `name` es un identificador interno del recurso. De forma predeterminada, los recursos son públicos en el ensamblado (visibles para otros ensamblados). Si se especifica `private`, el recurso no es visible para otros ensamblados.<br /><br /> Si `file` es un archivo de recursos de .NET Framework creado, por ejemplo, por el [Generador de archivos de recursos *Resgen.exe*)](resgen-exe-resource-file-generator.md) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del <xref:System.Resources>. Para obtener más información, vea <xref:System.Resources.ResourceManager>. Para todos los demás recursos, use los métodos `GetManifestResource*` de <xref:System.Reflection.Assembly> para obtener acceso al recurso en tiempo de ejecución.<br /><br /> Si solo se pasan archivos de recursos a *Al.exe*, el archivo de salida es un ensamblado de recursos satélite.|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|Vincula un archivo de recursos a un ensamblado. El recurso especificado en `file` pasa a formar parte del ensamblado; el archivo no se copia. El parámetro `file` puede estar en cualquier formato de archivo. Por ejemplo, puede especificar un archivo DLL nativo como parámetro `file`. Así, el archivo DLL nativo formará parte del ensamblado; de esta forma, se podrá instalar en la caché global de ensamblados y tener acceso al mismo a partir de código administrado del ensamblado. También puede hacerlo mediante la opción del compilador **/linkresource**. Para obtener más información, vea [-linkresource (opciones del compilador de C#)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> El parámetro `name` es un identificador interno del recurso. El parámetro `target` especifica una ruta de acceso y el nombre del archivo en el que *Al.exe* copia el `file` *.* Después de la copia, *Al.exe* compila `target` en un ensamblado. De forma predeterminada, los recursos son públicos en el ensamblado (visibles para otros ensamblados). Si se especifica `private`, el recurso no es visible para otros ensamblados.<br /><br /> Si `file` es un archivo de recursos de .NET Framework creado, por ejemplo, por el Generador de archivos de recursos (*Resgen.exe*) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del espacio de nombres <xref:System.Resources>. Para obtener más información, vea <xref:System.Resources.ResourceManager>. Para todos los demás recursos, use los métodos `GetManifestResource*` de la clase <xref:System.Reflection.Assembly> para tener acceso al recurso en tiempo de ejecución.<br /><br /> Si solo se pasan archivos de recursos a *Al.exe*, el archivo de salida es un ensamblado de recursos satélite.|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|Vincula un archivo de recursos a un ensamblado. El recurso especificado en `file` pasa a formar parte del ensamblado; el archivo no se copia. El parámetro `file` puede estar en cualquier formato de archivo. Por ejemplo, puede especificar un archivo DLL nativo como parámetro `file`. Así, el archivo DLL nativo formará parte del ensamblado; de esta forma, se podrá instalar en la caché global de ensamblados y tener acceso al mismo a partir de código administrado del ensamblado. También puede hacerlo mediante la opción del compilador **/linkresource**. Para obtener más información, vea [-linkresource (opciones del compilador de C#)](../../csharp/language-reference/compiler-options/resources.md#linkresources).<br /><br /> El parámetro `name` es un identificador interno del recurso. El parámetro `target` especifica una ruta de acceso y el nombre del archivo en el que *Al.exe* copia el `file` *.* Después de la copia, *Al.exe* compila `target` en un ensamblado. De forma predeterminada, los recursos son públicos en el ensamblado (visibles para otros ensamblados). Si se especifica `private`, el recurso no es visible para otros ensamblados.<br /><br /> Si `file` es un archivo de recursos de .NET Framework creado, por ejemplo, por el Generador de archivos de recursos (*Resgen.exe*) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del espacio de nombres <xref:System.Resources>. Para obtener más información, vea <xref:System.Resources.ResourceManager>. Para todos los demás recursos, use los métodos `GetManifestResource*` de la clase <xref:System.Reflection.Assembly> para tener acceso al recurso en tiempo de ejecución.<br /><br /> Si solo se pasan archivos de recursos a *Al.exe*, el archivo de salida es un ensamblado de recursos satélite.|
 
 Se pueden especificar las siguientes `options`; debe especificar **/out**.
 
@@ -178,4 +178,4 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [*Sn.exe* (Herramienta de nombre seguro)](sn-exe-strong-name-tool.md)
 - [*Gacutil.exe* (Herramienta Caché global de ensamblados)](gacutil-exe-gac-tool.md)
 - [Programar con ensamblados](../../standard/assembly/index.md)
-- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+- [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell)
