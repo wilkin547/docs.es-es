@@ -7,12 +7,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 2a44d4a7ec9de1747fd8e7321d5c88c2a9e8ac20
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8274fe8f5d32b0f6258e450cc7d649fe3e184d78
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285088"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477215"
 ---
 # <a name="64-bit-applications"></a>Aplicaciones de 64 bits
 
@@ -56,7 +56,7 @@ Al compilar una aplicación, puede especificar que debe ejecutarse en un sistema
 |Compilador|Opción del compilador|  
 |--------------|---------------------|  
 |Visual Basic|[-platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[-platform (Opciones del compilador de C#)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual C#|[-platform (Opciones del compilador de C#)](../csharp/language-reference/compiler-options/output.md#platformtarget)|  
 |Visual C++|Puede crear aplicaciones del Lenguaje Intermedio de Microsoft (MSIL) independientes de la plataforma utilizando **/clr:safe**. Para obtener más información, consulte [-clr (Compilación de Common Language Runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ incluye un compilador independiente para cada sistema operativo de 64 bits. Para más información sobre cómo utilizar Visual C++ para crear aplicaciones nativas que se ejecuten en un sistema operativo Windows de 64 bits, vea [Programación de 64 bits con Visual C++](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Determinar el estado de un archivo .exe o .dll  

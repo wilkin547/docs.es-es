@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 4485a9f8e3581aa80ed65221258dc40310b3a695
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303054"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605287"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 
@@ -31,7 +31,7 @@ La definición de `IEquatable<T>` no facilita ninguna implementación para `Equa
 
 Para obtener más información sobre las clases abstractas, vea [Clases y miembros de clase abstractos y sellados (Guía de programación de C#)](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 
-Las interfaces pueden contener propiedades, eventos, indizadores o métodos de instancia, o bien cualquier combinación de estos cuatro tipos de miembros. Las interfaces pueden contener constructores estáticos, campos, constantes u operadores. Para obtener vínculos a ejemplos, vea [Secciones relacionadas](./index.md#BKMK_RelatedSections). Una interfaz no puede contener campos de instancia, constructores de instancias ni finalizadores. Los miembros de la interfaz son públicos de forma predeterminada.
+Las interfaces pueden contener propiedades, eventos, indizadores o métodos de instancia, o bien cualquier combinación de estos cuatro tipos de miembros. Las interfaces pueden contener constructores estáticos, campos, constantes u operadores. Para obtener vínculos a ejemplos, vea [Secciones relacionadas](./index.md#BKMK_RelatedSections). Una interfaz no puede contener campos de instancia, constructores de instancias ni finalizadores. Los miembros de interfaz son públicos de forma predeterminada y se pueden especificar explícitamente modificadores de accesibilidad, como `public`, `protected`, `internal`, `private`, `protected internal` o `private protected`. Un miembro `private` debe tener una implementación predeterminada.
 
 Para implementar un miembro de interfaz, el miembro correspondiente de la clase de implementación debe ser público, no estático y tener el mismo nombre y firma que el miembro de interfaz.
 
