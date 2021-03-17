@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 63fdf49ba688c0b3c4ee6653e1c2960c49f526ce
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e477a474ab850239068246057e94b94c983a99c8
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257124"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624206"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Seguimiento e instrumentación de aplicaciones
 
@@ -33,7 +33,7 @@ El seguimiento es una manera de supervisar la ejecución de la aplicación mient
   
 - **Contadores de rendimiento**: componentes que permiten realizar el seguimiento del rendimiento de la aplicación. Para más información, consulte [Performance Counters](performance-counters.md).  
   
-- **Registros de eventos**: componentes que permiten recibir y realizar el seguimiento de eventos importantes en la ejecución de la aplicación. Para obtener más información, vea la clase <xref:System.Diagnostics.EventLog>.  
+- **Registros de eventos** : componentes que permiten recibir y realizar el seguimiento de eventos importantes en la ejecución de la aplicación. Para obtener más información, vea la clase <xref:System.Diagnostics.EventLog>.  
   
  La instrumentación de la aplicación mediante la colocación de instrucciones de seguimiento en puntos estratégicos del código resulta especialmente útil con aplicaciones distribuidas. Mediante el uso de instrucciones de seguimiento, puede instrumentar una aplicación no solo para mostrar información cuando existe algún problema, sino también para supervisar el rendimiento de la aplicación.  
   
@@ -144,14 +144,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 
  Si no deshabilita el seguimiento y la depuración antes de implementar una aplicación ASP.NET, la aplicación puede revelar información sobre sí misma que podría ser aprovechada por un programa malintencionado. Para más información, vea [Cómo: Realizar compilación condicional con Trace y Debug](how-to-compile-conditionally-with-trace-and-debug.md), [Compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio) y [Cómo: Crear, inicializar y configurar modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md). La depuración también es configurable a través de Internet Information Services (IIS).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [Contratos de código](code-contracts.md)
 - [Tipos de proyectos de C#, F# y Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
 - [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
-- [Compilación condicional con Trace y Debug](how-to-compile-conditionally-with-trace-and-debug.md)
+- [Cómo: Compilación condicional con Trace y Debug](how-to-compile-conditionally-with-trace-and-debug.md)
 - [Procedimiento para crear, inicializar y configurar modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md)
 - [Procedimiento para crear e inicializar orígenes de seguimiento](how-to-create-and-initialize-trace-sources.md)
 - [Procedimiento para usar TraceSource y filtros con agentes de escucha de seguimiento](how-to-use-tracesource-and-filters-with-trace-listeners.md)

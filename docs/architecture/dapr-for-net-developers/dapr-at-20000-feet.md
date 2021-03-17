@@ -2,13 +2,13 @@
 title: Dapr a 20 000 pies
 description: Información general de alto nivel sobre qué es DAPR, qué hace y cómo funciona.
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: f0efb4652aaa35961d59979cb561941e5280a575
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.date: 02/17/2021
+ms.openlocfilehash: 9f23e9822fd0d4b5eda648d2fc1359cce14cf59d
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604754"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624050"
 ---
 # <a name="dapr-at-20000-feet"></a>Dapr a 20 000 pies
 
@@ -26,7 +26,9 @@ Imagine volar en un inyector de 20.000 metros. Examine la ventana y vea el panor
 
 DAPR aborda un gran desafío inherente a las modernas aplicaciones distribuidas: **complejidad**.
 
-A través de una arquitectura de componentes conectables, DAPR simplifica considerablemente la fontanería detrás de las aplicaciones distribuidas. Proporciona un **pegado dinámico** que enlaza la aplicación con las funcionalidades de infraestructura del tiempo de ejecución de DAPR. Por ejemplo, puede que la aplicación requiera un almacén de estado. Podría escribir código personalizado para Redis Cache de destino e insertarlo en el servicio en tiempo de ejecución. Sin embargo, DAPR simplifica su experiencia al proporcionar una funcionalidad de caché distribuida de forma rápida. El servicio invoca un bloque de **creación** de DAPR que se enlaza dinámicamente con Redis cache **componente** a través de una **configuración** de DAPR. Con este modelo, el servicio delega la llamada a DAPR, que llama a Redis en su nombre. El servicio no tiene ningún SDK, biblioteca o referencia directa a Redis. Puede codificar con la API de administración de estado de DAPR comunes, no con Redis Cache API.
+A través de una arquitectura de componentes conectables, DAPR simplifica considerablemente la fontanería detrás de las aplicaciones distribuidas. Proporciona un **pegado dinámico** que enlaza la aplicación con las funcionalidades de infraestructura del tiempo de ejecución de DAPR.
+
+¿Tiene en cuenta un requisito para realizar uno de sus servicios con estado? ¿Cuál sería su diseño? Puede escribir código personalizado que tenga como destino un almacén de estado como Redis Cache. Sin embargo, DAPR proporciona funciones de administración de estado integradas. El servicio invoca el **bloque de creación** de administración de estado de DAPR que se enlaza de forma dinámica a un **componente** del almacén de estado a través de un archivo de **configuración de componentes** de DAPR YAML. DAPR se suministra con varios componentes de almacén de estado pregenerados, incluidos Redis. Con este modelo, el servicio delega la administración del estado en el tiempo de ejecución de DAPR. El servicio no tiene ningún SDK, biblioteca o referencia directa al componente subyacente. Incluso puede cambiar almacenes de estado, por ejemplo, de Redis a MySQL o Cassandra, sin necesidad de realizar cambios en el código.
 
 En la figura 2-1 se muestra DAPR de 20.000 pies.
 
@@ -208,6 +210,8 @@ gRPC es un marco de trabajo moderno y de alto rendimiento que evoluciona el prot
 - Comunicación dúplex completa bidireccional para enviar solicitudes de cliente y respuestas de servidor simultáneamente.
 - Streaming integrado que habilita las solicitudes y respuestas para transmitir conjuntos de datos grandes de forma asincrónica.
 
+Para obtener más información, consulte la [información general de gRPC](https://docs.microsoft.com/dotnet/architecture/cloud-native/grpc#what-is-grpc) en el libro electrónico de [arquitectura de aplicaciones .net de diseño Cloud-Native](https://docs.microsoft.com/dotnet/architecture/cloud-native/) .  
+
 ## <a name="dapr-and-service-meshes"></a>DAPR y mallas de servicio
 
 La malla de servicio es otra tecnología que evoluciona rápidamente para aplicaciones distribuidas.
@@ -220,7 +224,7 @@ En la figura 2-8 se muestra una aplicación que implementa la tecnología de mal
 
 **Figura 2-8**. Malla de servicio con un coche lateral.
 
-En la ilustración anterior se muestra cómo interceptan los mensajes un proxy que se ejecuta junto con cada servicio. Cada proxy se puede configurar con reglas de tráfico específicas del servicio. Comprende los mensajes y los puede enrutar a través de los servicios y del mundo exterior.
+En la ilustración anterior se muestra cómo interceptan los mensajes un proxy sidecar que se ejecuta junto con cada servicio. Cada proxy se puede configurar con reglas de tráfico específicas del servicio. Comprende los mensajes y los puede enrutar a través de los servicios y del mundo exterior.
 
 Por lo tanto, la pregunta se convierte en "¿DAPR una malla de servicio?".
 
@@ -234,7 +238,7 @@ En la figura 2-9 se muestra una aplicación que implementa la tecnología de DAP
 
 **Figura 2-9**. DAPR y la malla de servicio juntas.
 
-En el libro [Learning DAPR](https://www.amazon.com/Learning-Dapr-Building-Distributed-Applications/dp/1492072427/ref=sr_1_1?dchild=1&keywords=dapr&qid=1604794794&sr=8-1), authors Haishi Bai y Yaron Schneider, se trata la integración de DAPR y la malla de servicio.
+La [documentación en línea de DAPR](https://docs.dapr.io/concepts/faq/#networking-and-service-meshes) cubre la integración de DAPR y la malla de servicio.
 
 ## <a name="summary"></a>Resumen
 

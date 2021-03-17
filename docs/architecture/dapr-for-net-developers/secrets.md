@@ -2,13 +2,13 @@
 title: El bloque de creación de secretos de DAPR
 description: Una descripción del bloque de creación de secretos, sus características, ventajas y cómo aplicarlo
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 94942b396af947b2a3e49b918b2b082c15f4bb08
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: 52b899b4d496aab6762f69bbee99faecfcd23d59
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401851"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623751"
 ---
 # <a name="the-dapr-secrets-building-block"></a>El bloque de creación de secretos de DAPR
 
@@ -43,7 +43,7 @@ DAPR controla todos los problemas anteriores.
 
 El acceso a los secretos se protege a través de la autenticación y la autorización. Solo una aplicación con derechos suficientes puede acceder a los secretos. Las aplicaciones que se ejecutan en Kubernetes también pueden usar su mecanismo de administración de secretos integrado.
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 Las aplicaciones usan el bloque de creación de secretos de dos maneras:
 

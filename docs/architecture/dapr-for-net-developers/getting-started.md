@@ -3,12 +3,12 @@ title: Introducción a DAPR
 description: Una guía para preparar el entorno de desarrollo local y crear sus primeras aplicaciones .NET con DAPR.
 author: amolenk
 ms.date: 02/25/2021
-ms.openlocfilehash: 68b1982c7283e0717ff7e1e254e5f313cd480d7b
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 1b6ecd2cc2bf077375262155f0866cfef2dab708
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401905"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623816"
 ---
 # <a name="get-started-with-dapr"></a>Introducción a DAPR
 
@@ -255,7 +255,7 @@ Ahora, configurará la comunicación entre los servicios mediante el [bloque de 
     }
     ```
 
-    La llamada a `AddDapr` registra la `DaprClient` clase con el sistema de inserción de dependencias ASP.net Core. Usará la `DaprClient` clase más adelante para comunicarse con el sidecar de DAPR.
+    La llamada a `AddDapr` registra la `DaprClient` clase con el sistema de inserción de dependencias ASP.net Core. Con el cliente registrado, ahora puede inyectar una instancia de `DaprClient` en el código de servicio para comunicarse con el sidecar de DAPR, los bloques de creación y los componentes.
 
 1. Agregue un nuevo archivo de clase de C# denominado *WeatherForecast* al `DaprFrontEnd` proyecto:
 

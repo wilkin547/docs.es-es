@@ -2,13 +2,13 @@
 title: El bloque de creación de enlaces de DAPR
 description: Descripción del bloque de creación de enlaces, sus características, ventajas y cómo aplicarlo
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 757d2560016407119fe9244c100a971977852cc5
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.date: 02/17/2021
+ms.openlocfilehash: d6f8b2aa90b15e5b9cd7b5c29938660d1b2907e9
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401890"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623959"
 ---
 # <a name="the-dapr-bindings-building-block"></a>El bloque de creación de enlaces de DAPR
 
@@ -26,7 +26,7 @@ Considere, por ejemplo, una cuenta de Twitter que desencadene un evento cada vez
 
 A primera vista, el comportamiento del enlace de recursos puede ser similar al [patrón de publicación/suscripción](publish-subscribe.md) descrito anteriormente en este libro. Aunque comparten similitudes, hay diferencias. La publicación o suscripción se centra en la comunicación asincrónica entre DAPR Services. El enlace de recursos tiene un ámbito mucho más amplio. Se centra en la interoperabilidad del sistema entre las plataformas de software. Intercambio de información entre aplicaciones, almacenes de datos y servicios dispares fuera de la aplicación de microservicios.
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 El enlace de recursos DAPR comienza con un archivo de configuración de componentes. Este archivo YAML describe el tipo de recurso al que se enlazará junto con sus valores de configuración. Una vez configurado, el servicio puede recibir eventos del recurso o desencadenar eventos en él.
 

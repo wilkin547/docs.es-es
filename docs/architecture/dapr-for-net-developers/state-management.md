@@ -2,14 +2,14 @@
 title: El bloque de creación de administración de estado de DAPR
 description: Una descripción del bloque de creación de la administración de estado, sus características, ventajas y cómo aplicarla.
 author: amolenk
-ms.date: 02/07/2021
+ms.date: 02/17/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 05daf18ece1da377f3d5d6a91c4839f196f14f80
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 67b7f839ccbe24752281fb537b0473d4984d9e37
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401836"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623933"
 ---
 # <a name="the-dapr-state-management-building-block"></a>El bloque de creación de administración de estado de DAPR
 
@@ -31,7 +31,7 @@ El bloque de creación de administración de estado de DAPR aborda estos desafí
 > [!IMPORTANT]
 > La administración de estado de DAPR ofrece una API de [clave/valor](/azure/architecture/guide/technology-choices/data-store-overview#keyvalue-stores) . La característica no admite el almacenamiento de datos relacionales o de gráficos.
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 La aplicación interactúa con un sidecar de DAPR para almacenar y recuperar datos de clave/valor. En el capó, la API sidecar consume un componente de almacén de estado configurable para conservar los datos. Los desarrolladores pueden elegir entre una creciente colección de [almacenes de Estados compatibles](https://docs.dapr.io/operations/components/setup-state-store/supported-state-stores/) que incluyen Azure Cosmos DB, SQL Server y Cassandra.
 

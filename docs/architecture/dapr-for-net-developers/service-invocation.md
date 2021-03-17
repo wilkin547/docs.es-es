@@ -2,13 +2,13 @@
 title: El bloque de creación de invocación del servicio DAPR
 description: Una descripción del bloque de creación de invocación de servicio, sus características, ventajas y cómo aplicarla
 author: amolenk
-ms.date: 02/07/2021
-ms.openlocfilehash: 2b64aa1e9b079a3fefe120e687cd6d395981c633
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: f6d5f10ae476d85a9925c4fa387a16d575cacf6a
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401842"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624102"
 ---
 # <a name="the-dapr-service-invocation-building-block"></a>El bloque de creación de invocación del servicio DAPR
 
@@ -26,7 +26,7 @@ Por último, a medida que las aplicaciones distribuidas componen muchos servicio
 
 El bloque de creación de invocación de servicio soluciona estos desafíos mediante el uso de un sidecar de DAPR como un [proxy inverso](https://kemptechnologies.com/reverse-proxy/reverse-proxy/) para su servicio.
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 Comencemos con un ejemplo. Considere dos servicios, "servicio A" y "servicio B". El servicio a necesita llamar a la `catalog/items` API en el servicio B. Aunque el servicio A podría tomar una dependencia del servicio B y realizar una llamada directa a él, el servicio A invoca la API de invocación del servicio en el sidecar de DAPR. En la figura 6-1 se muestra la operación.
 

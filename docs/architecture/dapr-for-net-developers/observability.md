@@ -2,14 +2,14 @@
 title: El bloque de creación de observación de DAPR
 description: Una descripción del bloque de creación de observación, sus características, ventajas y cómo aplicarla
 author: edwinvw
-ms.date: 02/07/2021
+ms.date: 02/17/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 6add36b2030c3061ee522604b2e07f05875b98a9
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 745b9c07c31cc3ee11d5df945f2ccb87d0c9c2ed
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604715"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623985"
 ---
 # <a name="the-dapr-observability-building-block"></a>El bloque de creación de observación de DAPR
 
@@ -36,7 +36,7 @@ El bloque de creación de observación DAPR desacopla la observación de la apli
 
 A medida que DAPR abstrae el establecimiento, la aplicación no es consciente de cómo se implementa la observación. No es necesario hacer referencia a las bibliotecas ni implementar código de instrumentación personalizado. DAPR permite al desarrollador centrarse en la creación de lógica de negocios y no en la estructura de observación. La observación se configura en el nivel de DAPR y es coherente en todos los servicios, incluso cuando se crean en distintos equipos y se crea con diferentes pilas tecnológicas.
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 La [arquitectura sidecar](dapr-at-20000-feet.md#sidecar-architecture) de DAPR permite características de observación integradas. A medida que los servicios se comunican, DAPR sidecar interceptan el tráfico y extraen la información de seguimiento, métricas y registro. La telemetría se publica en un formato estándar abierto. De forma predeterminada, DAPR admite [OpenTelemetry](https://opentelemetry.io/) y [Zipkin](https://zipkin.io/).
 
@@ -274,12 +274,12 @@ Es posible que se pregunte cómo el receptor de métricas sabe dónde recopilar 
 
 DAPR genera un gran conjunto de métricas para los servicios del sistema de DAPR y su tiempo de ejecución. Estos son algunos ejemplos:
 
-| Métrica                                         | Source | Descripción                                                  |
+| Métrica                                         | Origen | Descripción                                                  |
 | ---------------------------------------------- | :----: | ------------------------------------------------------------ |
-| dapr_operator_service_created_total            | Sistema | El número total de servicios de DAPR creados por el servicio del operador DAPR. |
-| dapr_injector_sidecar_injection/requests_total | Sistema | Número total de solicitudes de inyección de sidecar recibidas por el servicio Sidecar-Injector de DAPR. |
-| dapr_placement_runtimes_total                  | Sistema | El número total de hosts que se han comunicado al servicio de selección de ubicación DAPR. |
-| dapr_sentry_cert_sign_request_received_total   | Sistema | El número de solicitudes de firma de certificado (Sir) recibidas por el servicio de DAPR Sentry. |
+| dapr_operator_service_created_total            | System | El número total de servicios de DAPR creados por el servicio del operador DAPR. |
+| dapr_injector_sidecar_injection/requests_total | System | Número total de solicitudes de inyección de sidecar recibidas por el servicio Sidecar-Injector de DAPR. |
+| dapr_placement_runtimes_total                  | System | El número total de hosts que se han comunicado al servicio de selección de ubicación DAPR. |
+| dapr_sentry_cert_sign_request_received_total   | System | El número de solicitudes de firma de certificado (Sir) recibidas por el servicio de DAPR Sentry. |
 | dapr_runtime_component_loaded      | Tiempo de ejecución | Número de componentes DAPR cargados correctamente.           |
 | dapr_grpc_io_server_completed_rpcs | Tiempo de ejecución | Recuento de llamadas de gRPC por método y estado.                    |
 | dapr_http_server_request_count     | Tiempo de ejecución | Número de solicitudes HTTP iniciadas en un servidor HTTP.           |
@@ -326,7 +326,7 @@ DAPR emite un registro estructurado. Cada entrada de registro tiene el formato s
 | -------- | ---------------------------------------------------- | ----------------------------------- |
 | time     | Marca de tiempo con formato ISO8601                          | `2021-01-10T14:19:31.000Z`          |
 | Nivel    | Nivel de la entrada ( `debug` \| `info` \| `warn` \| `error` )   | `info`                              |
-| type     | Tipo de registro                                             | `log`                               |
+| tipo     | Tipo de registro                                             | `log`                               |
 | msg      | Mensaje de registro                                          | `metrics server started on :62408/` |
 | scope    | Ámbito de registro                                        | `dapr.runtime`                      |
 | instance | Nombre de host donde se ejecuta DAPR                             | TSTSRV01                            |

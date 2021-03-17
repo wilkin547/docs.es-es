@@ -2,13 +2,13 @@
 title: El bloque DAPR Publish & subscribe Building
 description: Una descripción de la publicación DAPR & subscribe Building-Block y cómo aplicarla
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 4cb249bafc8241eb54153be2605c33d0a3adb619
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.date: 02/17/2021
+ms.openlocfilehash: 11898430d897ec85b7e367fa0e93ca912279784b
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604689"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623829"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>El bloque DAPR Publish & subscribe Building
 
@@ -39,7 +39,7 @@ Hay varios productos de agente de mensajes disponibles, tanto comerciales como d
 
 El bloque DAPR Publish & subscribe Building proporciona la abstracción de mensajería y la implementación. El código personalizado que habría tenido que escribir está precompilado y encapsulado en el bloque de creación de DAPR. Se enlaza a él y se usa. En lugar de escribir el código de la infraestructura de mensajería, usted y su equipo se centran en crear funciones empresariales que agregan valor a sus clientes.
 
-## <a name="how-it-works"></a>Funcionamiento
+## <a name="how-it-works"></a>Cómo funciona
 
 El bloque DAPR Publish & subscribe Building proporciona un marco de API independiente de la plataforma para enviar y recibir mensajes. Los servicios publican mensajes en un [tema](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions)con nombre. Los servicios se suscriben a un tema para consumir mensajes.
 
@@ -125,7 +125,7 @@ En el ejemplo, el mensaje se trata correctamente. Pero si algo va mal mientras e
 
 En la tabla siguiente se muestran los `status` valores disponibles:
 
-| Estado           | Acción                                                       |
+| Status           | Acción                                                       |
 | ---------------- | ------------------------------------------------------------ |
 | CORRECTA          | El mensaje se considera como procesado correctamente y se ha quitado. |
 | REINTENTAR            | El mensaje se vuelve a intentar.                                      |

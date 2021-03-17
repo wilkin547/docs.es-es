@@ -2,13 +2,13 @@
 title: El mundo está distribuido.
 description: Las ventajas y los desafíos de las aplicaciones distribuidas con un vistazo a los enfoques monolíticos y SOA.
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: b857355880c3942526d751312d98f2b822704759
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: df182e81bcf95a84fc283dbb945d20f2218b0d0b
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401833"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623946"
 ---
 # <a name="the-world-is-distributed"></a>El mundo está distribuido.
 
@@ -33,7 +33,7 @@ Observe cómo se ejecutan los módulos para pedidos, identidades y marketing en 
 
 En muchos sentidos, las aplicaciones monolíticas son `straightforward` . Son sencillos:
 
-- Build
+- Compilar
 - Prueba
 - Implementar
 - Solución de problemas

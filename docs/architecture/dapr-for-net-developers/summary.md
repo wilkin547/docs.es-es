@@ -1,14 +1,14 @@
 ---
 title: Resumen y camino a seguir
 description: Un resumen de las conclusiones clave de DAPR y una mirada hacia adelante.
-ms.date: 02/04/2021
+ms.date: 02/17/2021
 author: robvet
-ms.openlocfilehash: c15104f861dd6cfb999d3f67f19b988d1a8ffb03
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: fdbb92d067c29db56aa7449b8fe3c974c8c132b8
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401830"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624076"
 ---
 # <a name="summary-and-the-road-ahead"></a>Resumen y camino a seguir
 
