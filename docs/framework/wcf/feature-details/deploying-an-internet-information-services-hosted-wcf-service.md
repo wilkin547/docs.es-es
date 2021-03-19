@@ -3,12 +3,12 @@ title: Implementación de un servicio WFC hospedado en Internet Information Serv
 description: Obtenga información sobre las tareas necesarias para desarrollar e implementar un servicio WCF hospedado en IIS, empezando por comprobar la instalación de componentes.
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: ae01533efbeddba75efd159d187a896e2d97ec1a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: a51cf09309a5a5c9ac8c8a4cc4fecc0a203b7b3c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259894"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653483"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implementación de un servicio WFC hospedado en Internet Information Services
 
@@ -36,7 +36,7 @@ Las instrucciones para instalar IIS en otros sistemas operativos se pueden encon
 
 El proceso de instalación de .NET Framework registra automáticamente WCF con IIS si IIS ya está presente en la máquina. Si IIS se instala después .NET Framework, es necesario un paso adicional para registrar WCF con IIS y ASP.NET. Puede hacer esto de la siguiente manera, en función de su sistema operativo:
 
-- Windows 7 y Windows Server 2003: Use la herramienta de [registro de ServiceModel (ServiceModelReg.exe)](../servicemodelreg-exe.md) para registrar WCF con IIS. Para usar esta herramienta, escriba `ServiceModelReg.exe /i /x` en un [Shell de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
+- Windows 7 y Windows Server 2003: Use la herramienta de [registro de ServiceModel (ServiceModelReg.exe)](../servicemodelreg-exe.md) para registrar WCF con IIS. Para usar esta herramienta, escriba `ServiceModelReg.exe /i /x` en [visual Studio símbolo del sistema para desarrolladores o Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell).
 
 - Windows 7: por último, debe comprobar que ASP.NET está configurado para usar .NET Framework versión 4 o posterior. Para ello, ejecute la herramienta ASPNET_Regiis con la `–i` opción. Para obtener más información, consulte [ASP.net IIS registration Tool](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
