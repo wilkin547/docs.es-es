@@ -13,12 +13,12 @@ api_type:
 ms.assetid: 3d5af8e7-c337-48f4-9fa6-97c83878b9b1
 topic_type:
 - apiref
-ms.openlocfilehash: 343e76dd64329c88bf4b52e24d45a1e7c8b639bd
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e73a6d59b76744dcf9f4991be2589220669e154d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648381"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760749"
 ---
 # <a name="icorprofilerassemblyreferenceprovideraddassemblyreference-method"></a>ICorProfilerAssemblyReferenceProvider::AddAssemblyReference (Método)
 
@@ -36,9 +36,7 @@ HRESULT AddAssemblyReference(
   
 ## <a name="parameters"></a>Parámetros
 
-- `pAssemblyRefInfo`
-
-  Puntero a una estructura de [COR_PRF_ASSEMBLY_REFERENCE_INFO](cor-prf-assembly-reference-info-structure.md) que proporciona a CLR información sobre una referencia de ensamblado que debe tener en cuenta al realizar un recorrido de cierre de referencia de ensamblado.
+`pAssemblyRefInfo` Puntero a una estructura de [COR_PRF_ASSEMBLY_REFERENCE_INFO](cor-prf-assembly-reference-info-structure.md) que proporciona a CLR información sobre una referencia de ensamblado que debe tener en cuenta al realizar un recorrido de cierre de referencia de ensamblado.
   
 ## <a name="remarks"></a>Observaciones  
 
@@ -54,7 +52,7 @@ HRESULT AddAssemblyReference(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerAssemblyReferenceProvider (Interfaz)](icorprofilerassemblyreferenceprovider-interface.md)
 - [GetAssemblyReferences (método)](icorprofilercallback6-getassemblyreferences-method.md)

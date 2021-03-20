@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: 6a861f455e827258368764b80547c3b3e9c986cd
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 617ca023f58a180c198751fea9752fe737249331
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687420"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760085"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo (Función)
 
@@ -36,13 +36,9 @@ void __stdcall FunctionLeave3WithInfo(
   
 ## <a name="parameters"></a>Parámetros
 
-- `functionIDOrClientID`
+`functionIDOrClientID` de Identificador de la función de la que se devuelve el control.
 
-  \[in] identificador de la función de la que se devuelve el control.
-
-- `eltInfo`
-
-  \[in] un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
+`eltInfo` de Un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionLeave3WithInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Getfunctionleave3info (](icorprofilerinfo3-getfunctionleave3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 1faaf8fbc1e0fee9ce76850cfedcd4e8cf934371
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3f384c1a02da1747b28701d2eba994b56a85c18f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705777"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759965"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted (Método)
 
@@ -37,13 +37,9 @@ HRESULT JITCachedFunctionSearchStarted(
   
 ## <a name="parameters"></a>Parámetros
 
-- `functionId`
+`functionId` de IDENTIFICADOR de la función para la que se realiza la búsqueda.
 
-  \[in] identificador de la función para la que se realiza la búsqueda.
-
-- `pbUseCachedFunction`
-
-  \[out] `true` si el motor de ejecución debe utilizar la versión almacenada en caché de una función (si está disponible); en caso contrario, `false` . Si el valor es `false` , el motor de ejecución compila la función JIT en lugar de usar una versión que no está compilada JIT.
+`pbUseCachedFunction` [out] `true` Si el motor de ejecución debe utilizar la versión almacenada en caché de una función (si está disponible); en caso contrario, `false` . Si el valor es `false` , el motor de ejecución compila la función JIT en lugar de usar una versión que no está compilada JIT.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -65,6 +61,6 @@ HRESULT JITCachedFunctionSearchStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

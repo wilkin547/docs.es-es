@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1ca686cef4a45ebb9e05190fa790ed5300c0d816
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 062aebf6d5bed208ea71b215bd9f857b82483673
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646496"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759056"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses (método)
 
@@ -35,25 +35,15 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 ## <a name="parameters"></a>Parámetros
 
-- `functionId`
+`functionId` de IDENTIFICADOR de la función cuyas direcciones de inicio de código nativo deben devolverse.
 
-  \[en] identificador de la función cuyas direcciones de inicio de código nativo deben devolverse.
+`reJitId` de La identidad de la función con compilación JIT.
 
-- `reJitId`
+`cCodeStartAddresses` de Tamaño máximo de la `codeStartAddresses` matriz.
 
-  \[en] la identidad de la función con compilación JIT.
+`pcCodeStartAddresses` enuncia El número de direcciones disponibles.
 
-- `cCodeStartAddresses`
-
-  \[en] tamaño máximo de la `codeStartAddresses` matriz.
-
-- `pcCodeStartAddresses`
-
-  \[out] el número de direcciones disponibles.
-
-- `codeStartAddresses`
-
-  \[out] una matriz de `UINT_PTR` , cada una de las cuales es la dirección inicial de un cuerpo nativo para la función especificada.
+`codeStartAddresses` enuncia Una matriz de `UINT_PTR` , cada una de las cuales es la dirección inicial de un cuerpo nativo para la función especificada.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -67,8 +57,8 @@ Cuando la compilación en capas está habilitada, una función puede tener más 
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**Versiones de .net:**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaz ICorProfilerInfo9](icorprofilerinfo9-interface.md)

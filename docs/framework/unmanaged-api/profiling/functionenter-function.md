@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 07b91a81480e453be16e840b89fa822cb91002ba
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0f5c9f0dde405aaadf50a7da476bbae664ef8ef7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788961"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759383"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (Función)
 
@@ -39,9 +39,7 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parámetros
 
-- `funcID`
-
-  \[in] el identificador de la función a la que se pasa el control.
+`funcID` de Identificador de la función a la que se pasa el control.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -67,7 +65,7 @@ void __stdcall FunctionEnter (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

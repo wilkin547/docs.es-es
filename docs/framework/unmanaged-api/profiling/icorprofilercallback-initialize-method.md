@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: b3ff579dee384b331450aa54aace39890febfe30
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c7138a1a39a1d32c751c205a86c00e6070a236b3
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705946"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760423"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize (Método)
 
@@ -36,9 +36,7 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>Parámetros
 
-- `pICorProfilerInfoUnk`
-
-  \[in] puntero en una interfaz [IUnknown](/cpp/atl/iunknown) que el generador de perfiles debe consultar para un puntero de interfaz [ICorProfilerInfo](icorprofilerinfo-interface.md) .  
+`pICorProfilerInfoUnk` de Puntero a una interfaz [IUnknown](/cpp/atl/iunknown) que el generador de perfiles debe consultar para un puntero de interfaz [ICorProfilerInfo](icorprofilerinfo-interface.md) .  
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -54,7 +52,7 @@ HRESULT Initialize(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método Shutdown](icorprofilercallback-shutdown-method.md)

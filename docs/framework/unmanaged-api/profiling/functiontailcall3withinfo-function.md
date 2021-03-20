@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: efa8b2e965ba4a365bbd72db4c5af69db006f6d5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d84cac19acb8a1d696030fe372d29c655c5f97a6
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648511"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760800"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo (Función)
 
@@ -36,13 +36,9 @@ void __stdcall FunctionTailcall3WithInfo(
   
 ## <a name="parameters"></a>Parámetros  
 
-- `functionIDOrClientID`
+`functionIDOrClientID` de Identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
 
-  \[in] el identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
-
-- `eltInfo`
-
-  \[in] un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
+`eltInfo` de Un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionTailcall3WithInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionLeave3](functionleave3-function.md)

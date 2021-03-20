@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-ms.openlocfilehash: e4a701597b318a387405a152f2c3b4758d616eb0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a142aa39f1c601c8c814d2f760cb6414d84b8494
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706089"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759448"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter (Método)
 
@@ -36,9 +36,7 @@ HRESULT ExceptionUnwindFinallyEnter(
   
 ## <a name="parameters"></a>Parámetros
 
-- `functionId`
-
-  \[in] identificador de la función que contiene la `finally` cláusula.
+`functionId` de IDENTIFICADOR de la función que contiene la `finally` cláusula.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -56,7 +54,7 @@ HRESULT ExceptionUnwindFinallyEnter(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)

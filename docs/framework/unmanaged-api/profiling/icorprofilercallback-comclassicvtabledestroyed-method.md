@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 91ed5bb65d3a64f1f85a09a710b507974f51c79b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e8ed6be2519a9f8959ac4f59313f73f13d6c569b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706388"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760566"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed (Método)
 
@@ -41,17 +41,11 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>Parámetros
 
-- `wrappedClassId`
+`wrappedClassId` de IDENTIFICADOR de la clase para la que se creó esta vtable.
 
-  \[in] identificador de la clase para la que se creó esta vtable.
+`implementedIID` de IDENTIFICADOR de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz solo es interna.
 
-- `implementedIID`
-
-  \[in] identificador de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz solo es interna.
-
-- `pVTable`
-
-  \[in] un puntero al inicio de vtable.
+`pVTable` de Puntero al principio de la tabla vtable.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -69,7 +63,7 @@ HRESULT COMClassicVTableDestroyed(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método COMClassicVTableCreated](icorprofilercallback-comclassicvtablecreated-method.md)

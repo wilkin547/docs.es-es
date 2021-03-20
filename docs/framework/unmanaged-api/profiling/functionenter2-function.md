@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 8b8061b213d02efd845e214c1177db4e5351869b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f68aeffdd63222cd78d7dc361f09e0b4c3e5af51
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788987"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759396"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 (Función)
 
@@ -39,25 +39,17 @@ void __stdcall FunctionEnter2 (
   
 ## <a name="parameters"></a>Parámetros
 
-- `funcId`
+`funcId` de Identificador de la función a la que se pasa el control.
 
-  \[in] el identificador de la función a la que se pasa el control.
-
-- `clientData`
-
-  \[in] el identificador de la función reasignada, que el generador de perfiles especificó anteriormente mediante la función [FunctionIDMapper](functionidmapper-function.md) .
+`clientData` de Identificador de la función reasignada, que el generador de perfiles especificó anteriormente mediante la función [FunctionIDMapper](functionidmapper-function.md) .
   
-- `func`
-
-  \[en] un `COR_PRF_FRAME_INFO` valor que señala a la información sobre el marco de pila.
+`func` de `COR_PRF_FRAME_INFO` Valor que señala a la información sobre el marco de pila.
   
-  El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .  
+El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
-- `argumentInfo`
+`argumentInfo` de Puntero a una estructura de [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) que especifica las ubicaciones en memoria de los argumentos de la función.
 
-  \[in] un puntero a una estructura de [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) que especifica las ubicaciones en memoria de los argumentos de la función.
-
-  Para tener acceso a la información de los argumentos, `COR_PRF_ENABLE_FUNCTION_ARGS` se debe establecer la marca. El generador de perfiles puede utilizar el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento.
+Para tener acceso a la información de los argumentos, `COR_PRF_ENABLE_FUNCTION_ARGS` se debe establecer la marca. El generador de perfiles puede utilizar el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -85,7 +77,7 @@ void __stdcall FunctionEnter2 (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [FunctionLeave2 (Función)](functionleave2-function.md)
 - [FunctionTailcall2 (Función)](functiontailcall2-function.md)

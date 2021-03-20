@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: 40114f6e1d80719eceaf2dbc398b74c1e790c76a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ded43da029fe0b4c2a645823e62ca66b480f095c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788675"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760280"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences (Método)
 
@@ -40,17 +40,13 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="parameters"></a>Parámetros
 
-`cRootRefs`\
-[in] Número de elementos en las matrices `keyRefIds`, `valueRefIds` y `rootIds`.
+`cRootRefs` de El número de elementos de las `keyRefIds` `valueRefIds` matrices, y `rootIds` .
 
-`keyRefIds`\
-[in] Matriz de identificadores de objeto, cada uno de los cuales contiene el `ObjectID` del elemento principal en el par de controladores de dependencia.
+`keyRefIds` de Matriz de identificadores de objeto, cada uno de los cuales contiene el objeto del `ObjectID` elemento principal en el par de identificadores dependientes.
 
-`valueRefIds`\
-[in] Matriz de identificadores de objeto, cada uno de los cuales contiene el `ObjectID` del elemento secundario en el par de controladores de dependencia. ( `keyRefIds[i]` mantiene `valueRefIds[i]` activo).
+`valueRefIds` de Matriz de identificadores de objeto, cada uno de los cuales contiene el objeto del `ObjectID` elemento secundario en el par de identificadores dependientes. ( `keyRefIds[i]` mantiene `valueRefIds[i]` activo).
 
-`rootIds`\
-[in] Matriz de valores `GCHandleID` que apuntan a un entero que contiene información adicional sobre la raíz de recolección de elementos no utilizados.
+`rootIds` de Matriz de `GCHandleID` valores que apuntan a un entero que contiene información adicional sobre la raíz de la recolección de elementos no utilizados.
 
 Ninguno de los valores `ObjectID` devueltos por el método `ConditionalWeakTableElementReferences` son válidos durante la devolución de llamada en sí, porque el recolector de elementos no utilizados puede estar en proceso de mover objetos de ubicaciones anteriores a nuevas. Por lo tanto, los generadores de perfiles no deben intentar inspeccionar objetos durante una llamada a `ConditionalWeakTableElementReferences`. En `GarbageCollectionFinished`, todos los objetos se han movido a sus nuevas ubicaciones y puede que la inspección se haya realizado.
 
@@ -91,6 +87,6 @@ Un generador de perfiles para el .NET Framework 4,5 o versiones posteriores impl
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback5 (interfaz)](icorprofilercallback5-interface.md)

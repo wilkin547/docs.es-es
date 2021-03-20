@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 765f3dfee6c56148eb7807b0606e79d4b3a2e7a1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c7897e266fbb84d44df719c127e24bd375b560bb
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99783812"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759096"
 ---
 # <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9:: GetCodeInfo4 (método)
 
@@ -34,21 +34,13 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="parameters"></a>Parámetros
 
-- `pNativeCodeStartAddress`
+`pNativeCodeStartAddress` de Puntero al inicio de una función nativa.
 
-  \[in] un puntero al inicio de una función nativa.
+`cCodeInfos` de Tamaño de la `codeInfos` matriz.
 
-- `cCodeInfos`
+`pcCodeInfos` enuncia Puntero al número total de estructuras de [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) disponibles.
 
-  \[en] tamaño de la `codeInfos` matriz.
-
-- `pcCodeInfos`
-
-  \[out] un puntero al número total de estructuras de [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) disponibles.
-
-- `codeInfos`
-
-  \[out] un búfer proporcionado por el autor de la llamada. Después de que el método vuelva, contiene una matriz de estructuras `COR_PRF_CODE_INFO`, cada una de las cuales describe un bloque de código nativo.
+`codeInfos` enuncia Búfer proporcionado por el autor de la llamada. Después de que el método vuelva, contiene una matriz de estructuras `COR_PRF_CODE_INFO`, cada una de las cuales describe un bloque de código nativo.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -71,8 +63,8 @@ También tiene la opción de llamar primero a `GetCodeInfo4` con un búfer `code
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**Versiones de .net:**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaz ICorProfilerInfo9](ICorProfilerInfo9-interface.md)

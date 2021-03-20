@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: 573326c05275192a7b324377237ba057fb54bffb
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9bcebba724f7ebb405bb3d404f028e3ebca3e0d7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648745"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759317"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo (Función)
 
@@ -36,13 +36,9 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="parameters"></a>Parámetros
 
-- `functionIDOrClientID`
+`functionIDOrClientID` de Identificador de la función a la que se pasa el control.
 
-  \[in] el identificador de la función a la que se pasa el control.
-
-- `eltInfo`
-
-  \[in] un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
+`eltInfo` de Un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionEnter3WithInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Getfunctionenter3info (](icorprofilerinfo3-getfunctionenter3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)

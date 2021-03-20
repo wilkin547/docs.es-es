@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8ab942e6919f8029ef0d1c20336917622a1d22ad
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 139edeed3e078668974382f1719c8e03f83e2a09
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646535"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759083"
 ---
 # <a name="icorprofilerinfo8isfunctiondynamic-method"></a>ICorProfilerInfo8:: IsFunctionDynamic (método)
 
@@ -32,13 +32,9 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
 
 ## <a name="parameters"></a>Parámetros
 
-- `functionId`
+`functionId` de  `FunctionID` Que identifica la función en cuestión.
 
-  \[en] `FunctionID` que identifica la función en cuestión.
-
-- `isDynamic`
-
-  \[out] un puntero a que contendrá `BOOL` un valor que indica si la función no tiene metadatos.
+`isDynamic` enuncia Un puntero a un `BOOL` que contendrá un valor que indica si la función no tiene metadatos.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -54,6 +50,6 @@ Una función se considera dinámica si no tiene metadatos. Ciertos métodos como
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interface ICorProfilerInfo8](icorprofilerinfo8-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 475def9af448182003ef36782a84d501a9f2661d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a9a97b84c70fd50044e8340b6f59fdbefe1d1a60
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687576"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760150"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 (Función)
 
@@ -39,25 +39,17 @@ void __stdcall FunctionLeave2 (
   
 ## <a name="parameters"></a>Parámetros
 
-- `funcId`
+`funcId` de El identificador de la función que devuelve.
 
-  \[in] el identificador de la función que devuelve.
+`clientData` de Identificador de la función reasignada, que el generador de perfiles especificó previamente a través de la función [FunctionIDMapper](functionidmapper-function.md) .
 
-- `clientData`
+`func` de `COR_PRF_FRAME_INFO` Valor que señala a la información sobre el marco de pila.
 
-  \[in] el identificador de la función reasignada, que el generador de perfiles especificó previamente a través de la función [FunctionIDMapper](functionidmapper-function.md) .
-
-- `func`
-
-  \[en] un `COR_PRF_FRAME_INFO` valor que señala a la información sobre el marco de pila.
-
-  El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .  
+El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
-- `retvalRange`
+`retvalRange` de Puntero a una estructura de [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) que especifica la ubicación de memoria del valor devuelto de la función.
 
-  \[in] un puntero a una estructura de [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) que especifica la ubicación de memoria del valor devuelto de la función.
-
-  Para tener acceso a la información de los valores devueltos, `COR_PRF_ENABLE_FUNCTION_RETVAL` se debe establecer la marca. El generador de perfiles puede utilizar el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento.
+Para tener acceso a la información de los valores devueltos, `COR_PRF_ENABLE_FUNCTION_RETVAL` se debe establecer la marca. El generador de perfiles puede utilizar el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -85,7 +77,7 @@ void __stdcall FunctionLeave2 (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionTailcall2 (Función)](functiontailcall2-function.md)

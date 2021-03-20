@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 925a61bf2521950cad7fb0dce8f1484198f3f806
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3d85537030e042d53bb4ff859eb1d2c3a24a45a5
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106519"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760787"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners (método)
 
@@ -34,21 +34,13 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 ## <a name="parameters"></a>Parámetros
 
-- `dwRejitFlags`
+`dwRejitFlags` de Máscara de [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md).
 
-  \[en] una máscara de [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md).
+`cFunctions` de Número de funciones que se van a volver a compilar.
 
-- `cFunctions`
+`moduleIds` de Especifica la `moduleId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.
 
-  \[en] número de funciones que se van a volver a compilar.
-
-- `moduleIds`
-
-  \[en] especifica la `moduleId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.
-
-- `methodIds`
-
-  \[en] especifica la `methodId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.
+`methodIds` de Especifica la `methodId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.
 
 ## <a name="remarks"></a>Observaciones
 

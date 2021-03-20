@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 03547537d43a76f26d6946666589f38ca4e02ec4
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e06c3bde7ad0700de3d7f08b33159032b31eae8a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687433"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760072"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 (Función)
 
@@ -38,19 +38,13 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>Parámetros
 
-- `funcId`
+`funcId` de Identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
 
-  \[in] el identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
-
-- `clientData`
-
-  \[in] el identificador de la función reasignada, que el generador de perfiles especificó previamente a través de [FunctionIDMapper](functionidmapper-function.md), de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
+`clientData` de Identificador de la función reasignada, que el generador de perfiles especificó previamente a través de [FunctionIDMapper](functionidmapper-function.md), de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
   
-- `func`
+`func` de `COR_PRF_FRAME_INFO` Valor que señala a la información sobre el marco de pila.
 
-  \[en] un `COR_PRF_FRAME_INFO` valor que señala a la información sobre el marco de pila.
-
-  El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .
+El generador de perfiles debe tratarlo como un identificador opaco que se puede devolver al motor de ejecución en el método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) .
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -80,7 +74,7 @@ void __stdcall FunctionTailcall2 (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

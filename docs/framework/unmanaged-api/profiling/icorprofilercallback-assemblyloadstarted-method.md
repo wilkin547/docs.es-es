@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: f771008b9aed9322f0c5fd279fa9dfb3086755e5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 19737fc284d49c3690f66e4881450ca5803622e3
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648024"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760612"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted (Método)
 
@@ -36,9 +36,7 @@ HRESULT AssemblyLoadStarted(
   
 ## <a name="parameters"></a>Parámetros
 
-- `assemblyId`
-
-  \[in] identifica el ensamblado que se está cargando.
+`assemblyId` de Identifica el ensamblado que se está cargando.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -54,6 +52,6 @@ HRESULT AssemblyLoadStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

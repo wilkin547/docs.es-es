@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: e08a4f7e03bfd18d9c6a2fdf56bfab8c68f9c379
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 8cd45f73741bd26cb54fa85d7d6a186ebaeab5d8
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648261"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760696"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished (Método)
 
@@ -37,13 +37,9 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>Parámetros
 
-- `appDomainId`
+`appDomainId` de Identifica el dominio en el que se almacenan los ensamblados de la aplicación.
 
-  \[en] identifica el dominio en el que se almacenan los ensamblados de la aplicación.
-
-- `hrStatus`
-
-  \[in] un valor HRESULT que indica si el dominio de aplicación se ha descargado correctamente.
+`hrStatus` de Un valor HRESULT que indica si el dominio de aplicación se ha descargado correctamente.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -61,6 +57,6 @@ HRESULT AppDomainShutdownFinished(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

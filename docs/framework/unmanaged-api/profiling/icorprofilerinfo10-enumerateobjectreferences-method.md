@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c18532450e420f38413028a18630dbf3e308fa61
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: bcd374aec2944977a0745177995ba8adf0cce9b7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106727"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759422"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences (método)
 
@@ -33,17 +33,11 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 ## <a name="parameters"></a>Parámetros
 
-- `objectId`
+`objectId` de Objeto en el que se van a enumerar las referencias.
 
-  \[en] objeto para el que se van a enumerar las referencias.
+`callback` de Función a la que se llamará con las referencias para el objeto.
 
-- `callback`
-
-  \[en] la función a la que se llamará con las referencias para el objeto.
-
-- `clientData`
-
-  \[en] datos proporcionados por el generador de perfiles que se van a pasar a la `callback` función.
+`clientData` de Datos proporcionados por el generador de perfiles que se van a pasar a la `callback` función.
 
 ## <a name="remarks"></a>Observaciones
 

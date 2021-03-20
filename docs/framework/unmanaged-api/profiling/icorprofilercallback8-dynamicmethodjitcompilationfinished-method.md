@@ -9,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: d076307b9e57c27753297cad8eebc1b9aa9433f6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d610024af9959790b37a724c2bdbf4dabc89dd20
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781719"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759825"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D método ynamicMethodJITCompilationFinished
 
@@ -34,13 +34,12 @@ HRESULT DynamicMethodJITCompilationFinished(
   
 ## <a name="parameters"></a>Parámetros  
 
-[in] `functionId`  
-Identificador de la función en memoria para la que se inicia la compilación JIT.
+`functionId`  
+de Identificador de la función en memoria para la que se inicia la compilación JIT.
 
-[in] `hrStatus` Valor que indica si la compilación JIT se realizó correctamente.
+`hrStatus` de Valor que indica si la compilación JIT se realizó correctamente.
 
-[in] `fIsSafeToBlock` 
- `true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false`para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución.  
+`fIsSafeToBlock` [in] `true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false` para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución.  
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -59,7 +58,7 @@ Esta devolución de llamada se desencadena cuando finaliza la compilación JIT d
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Método DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [Interfaz ICorProfilerCallback8](icorprofilercallback8-interface.md)

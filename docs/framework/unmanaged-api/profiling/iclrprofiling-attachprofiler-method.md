@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 11b53b39d3332d1f72304352fad525e5881e05a6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 00ae5ca76462d8800a77c2869ef73703a4f1d980
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648459"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760774"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler (Método)
 
@@ -41,29 +41,17 @@ HRESULT AttachProfiler(
   
 ## <a name="parameters"></a>Parámetros
 
-- `dwProfileeProcessID`
+`dwProfileeProcessID` de IDENTIFICADOR de proceso del proceso al que se debe adjuntar el generador de perfiles. En un equipo de 64 bits, el valor de bits del proceso cuyo perfil se ha generado debe coincidir con el valor de bits del proceso desencadenador que llama a `AttachProfiler`. Si la cuenta de usuario con la que llama a `AttachProfiler` tiene privilegios administrativos, el proceso de destino puede ser cualquier proceso del sistema. De lo contrario, el proceso de destino debe pertenecer a la misma cuenta de usuario.
 
-  \[en] identificador de proceso del proceso al que se debe adjuntar el generador de perfiles. En un equipo de 64 bits, el valor de bits del proceso cuyo perfil se ha generado debe coincidir con el valor de bits del proceso desencadenador que llama a `AttachProfiler`. Si la cuenta de usuario con la que llama a `AttachProfiler` tiene privilegios administrativos, el proceso de destino puede ser cualquier proceso del sistema. De lo contrario, el proceso de destino debe pertenecer a la misma cuenta de usuario.
-
-- `dwMillisecondsMax`
-
-  \[en] la duración de tiempo, en milisegundos, para `AttachProfiler` que se complete. El proceso de desencadenador debe pasar un tiempo de espera que se sabe que es suficiente para que el generador de perfiles determinado complete su inicialización.
+`dwMillisecondsMax` de Tiempo, en milisegundos, para `AttachProfiler` que se complete. El proceso de desencadenador debe pasar un tiempo de espera que se sabe que es suficiente para que el generador de perfiles determinado complete su inicialización.
   
-- `pClsidProfiler`
+`pClsidProfiler` de Puntero al CLSID del generador de perfiles que se va a cargar. El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva.
 
-  \[in] un puntero al CLSID del generador de perfiles que se va a cargar. El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva.
+`wszProfilerPath` de Ruta de acceso completa al archivo DLL del generador de perfiles que se va a cargar. Esta cadena debe contener un máximo de 260 caracteres, incluido el terminador NULL. Si `wszProfilerPath` es NULL o una cadena vacía, Common Language Runtime (CLR) intentará encontrar la ubicación del archivo DLL del generador de perfiles; para ello, buscará en el Registro el CLSID al que `pClsidProfiler` apunta.
 
-- `wszProfilerPath`
+`pvClientData` de Puntero a los datos que se van a pasar al generador de perfiles mediante el método [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) . El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva. Si `pvClientData` es NULL, `cbClientData` debe ser 0 (cero).
 
-  \[en] ruta de acceso completa al archivo DLL del generador de perfiles que se va a cargar. Esta cadena debe contener un máximo de 260 caracteres, incluido el terminador NULL. Si `wszProfilerPath` es NULL o una cadena vacía, Common Language Runtime (CLR) intentará encontrar la ubicación del archivo DLL del generador de perfiles; para ello, buscará en el Registro el CLSID al que `pClsidProfiler` apunta.
-
-- `pvClientData`
-
-  \[in] un puntero a los datos que se van a pasar al generador de perfiles mediante el método [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) . El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva. Si `pvClientData` es NULL, `cbClientData` debe ser 0 (cero).
-
-- `cbClientData`
-
-  \[in] tamaño, en bytes, de los datos a los que `pvClientData` señala.
+`cbClientData` de Tamaño, en bytes, de los datos a los que `pvClientData` señala.
 
 ## <a name="return-value"></a>Valor devuelto  
 
@@ -100,7 +88,7 @@ HRESULT AttachProfiler(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 (Interfaz)](icorprofilerinfo3-interface.md)

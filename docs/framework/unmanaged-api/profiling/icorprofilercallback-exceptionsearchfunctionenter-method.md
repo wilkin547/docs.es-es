@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-ms.openlocfilehash: 6e77ab5dc8c15a1d0785fb83310183c0a4693225
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d9989ef8b1ae50202ba6900b95504a7d50e10dfc
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706206"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759487"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter (Método)
 
@@ -36,9 +36,7 @@ HRESULT ExceptionSearchFunctionEnter(
   
 ## <a name="parameters"></a>Parámetros
 
-- `functionId`
-
-  \[in] identificador de la función que se ha especificado.
+`functionId` de IDENTIFICADOR de la función que se ha especificado.
   
 ## <a name="requirements"></a>Requisitos  
 
@@ -50,7 +48,7 @@ HRESULT ExceptionSearchFunctionEnter(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método ExceptionSearchFunctionLeave](icorprofilercallback-exceptionsearchfunctionleave-method.md)

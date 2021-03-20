@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: 19c0871808455e64ad8a4eb002806a87030f7882
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: accddef08f3cb76ef2cb1b70993aee24cf83ae50
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648043"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760678"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished (Método)
 
@@ -37,13 +37,9 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>Parámetros
 
-- `assemblyId`
+`assemblyId` de Identifica el ensamblado que se cargó.
 
-  \[in] identifica el ensamblado que se cargó.
-
-- `hrStatus`
-
-  \[in] un valor HRESULT que indica si el ensamblado finalizó la carga correctamente.
+`hrStatus` de HRESULT que indica si el ensamblado finalizó la carga correctamente.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -61,6 +57,6 @@ HRESULT AssemblyLoadFinished(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 00ebbe35f6f4446caeee5ebcd56b853d6e6dc80c
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b783bb652bed3b600c1e4524810620bab68f5f7a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648264"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760709"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted (Método)
 
@@ -36,9 +36,7 @@ HRESULT AppDomainCreationStarted(
   
 ## <a name="parameters"></a>Parámetros
 
-- `appDomainId`
-
-  \[en] identifica el dominio que se va a crear.
+`appDomainId` de Identifica el dominio que se va a crear.
   
 ## <a name="remarks"></a>Observaciones  
 
@@ -54,6 +52,6 @@ HRESULT AppDomainCreationStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

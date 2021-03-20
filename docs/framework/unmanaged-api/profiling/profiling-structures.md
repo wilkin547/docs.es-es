@@ -7,12 +7,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: 7a76c49aaa301ba45c41fb2eb3f7770539dcc6c0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 176830cac519f22864ba004b176cb575d80e50e2
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99798893"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760241"
 ---
 # <a name="profiling-structures"></a>Estructuras para generación de perfiles
 
@@ -40,6 +40,12 @@ En esta sección se describen las estructuras no administradas que utiliza la AP
   
  [COR_PRF_GC_GENERATION_RANGE (Estructura)](cor-prf-gc-generation-range-structure.md)  
  Describe un intervalo (es decir, un bloque) de memoria sometida a recopilación de elementos no utilizados.  
+
+ [Estructura de COR_PRF_EVENTPIPE_PROVIDER_CONFIG](cor-prf-eventpipe-provider-config-structure.md) Describe los campos necesarios para configurar un proveedor de EventPipe.
+
+ [Estructura de COR_PRF_EVENTPIPE_PARAM_DESC](cor-prf-eventpipe-param-desc-structure.md) Describe el nombre y el tipo de parámetro de un evento EventPipe.
+
+ [Estructura de COR_PRF_EVENT_DATA](cor-prf-event-data-structure.md) Describe los datos de evento para un evento EventPipe que se está escribiendo.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 

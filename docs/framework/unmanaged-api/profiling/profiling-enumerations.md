@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-ms.openlocfilehash: f202e70dd27654dd39740851549477d4a6bf77a3
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a4fcd812642698237d32afff5a681a99bf9cf12f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99736757"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759070"
 ---
 # <a name="profiling-enumerations"></a>Enumeraciones para generación de perfiles
 
@@ -70,6 +70,10 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
   
  [COR_PRF_TRANSITION_REASON (Enumeración)](cor-prf-transition-reason-enumeration.md)  
  Indica el motivo para una transición desde código administrado a no administrado, y o viceversa.  
+
+ [COR_PRF_EVENTPIPE_PARAM_TYPE](cor-prf-eventpipe-param-type-enumeration.md) Indica el tipo de un parámetro EventPipe.
+
+ [COR_PRF_EVENTPIPE_LEVEL](cor-prf-eventpipe-level-enumeration.md) Indivates el nivel de un evento EventPipe.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 

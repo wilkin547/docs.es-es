@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 0cf3b4ccf31076c2d1ea2df581003e3a07f0e795
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f9ed01b91f740a8bd95f4ad049076feb02363b8f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99737355"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760397"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap (Método)
 
@@ -42,17 +42,13 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="parameters"></a>Parámetros
 
-`functionId`\
-de IDENTIFICADOR de la función para la que se va a establecer el mapa de código.
+`functionId` de IDENTIFICADOR de la función para la que se va a establecer el mapa de código.
 
-`fStartJit`\
-de Valor booleano que indica si la llamada al `SetILInstrumentedCodeMap` método es la primera para un determinado `FunctionID` . Establezca `fStartJit` en `true` en la primera llamada a `SetILInstrumentedCodeMap` para un determinado `FunctionID` y, a `false` partir de ese momento,.
+`fStartJit` de Valor booleano que indica si la llamada al `SetILInstrumentedCodeMap` método es la primera para un determinado `FunctionID` . Establezca `fStartJit` en `true` en la primera llamada a `SetILInstrumentedCodeMap` para un determinado `FunctionID` y, a `false` partir de ese momento,.
 
-`cILMapEntries`\
-de Número de elementos de la `cILMapEntries` matriz.
+`cILMapEntries` de Número de elementos de la `cILMapEntries` matriz.
 
-`rgILMapEntries`\
-de Matriz de estructuras de COR_IL_MAP, cada una de las cuales especifica un desplazamiento de MSIL.
+`rgILMapEntries` de Matriz de estructuras de COR_IL_MAP, cada una de las cuales especifica un desplazamiento de MSIL.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -96,6 +92,6 @@ En el .NET Framework 3,5 y versiones anteriores, se asigna la `rgILMapEntries` m
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

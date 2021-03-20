@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-ms.openlocfilehash: b5025a7d33800047bb6244b82308ba2ab158cea7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3dc655c2a049a2cac08f6e4856aab98ee690b9df
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705855"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759981"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished (Método)
 
@@ -37,13 +37,9 @@ HRESULT JITCachedFunctionSearchFinished(
   
 ## <a name="parameters"></a>Parámetros
 
-- `functionId`
+`functionId` de IDENTIFICADOR de la función para la que se realizó la búsqueda.
 
-  \[in] identificador de la función para la que se realizó la búsqueda.
-
-- `result`
-
-  \[in] un valor de la enumeración [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) que indica el resultado de la búsqueda.
+`result` de Un valor de la enumeración [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) que indica el resultado de la búsqueda.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -59,6 +55,6 @@ HRESULT JITCachedFunctionSearchFinished(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

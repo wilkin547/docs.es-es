@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 134ca44cbcd7a275e3ad61a3dd4decaa92668b5b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 04ba37b9c1307539c9fdf299f4667e7026d571be
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657715"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760579"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated (Método)
 
@@ -39,21 +39,13 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Parámetros
 
-- `wrappedClasId`
+`wrappedClasId` de IDENTIFICADOR de la clase para la que se ha creado la tabla vtable.
 
-  \[in] identificador de la clase para la que se ha creado la tabla vtable.
+`implementedIID` de IDENTIFICADOR de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz solo es interna.
 
-- `implementedIID`
+`pVTable` de Puntero al principio de la tabla vtable.
 
-  \[in] identificador de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz solo es interna.
-
-- `pVTable`
-
-  \[in] un puntero al inicio de vtable.
-
-- `cSlots`
-
-  \[en] el número de ranuras que se encuentran en la tabla vtable.
+`cSlots` de Número de ranuras que se encuentran en la tabla vtable.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -71,7 +63,7 @@ HRESULT COMClassicVTableCreated(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método COMClassicVTableDestroyed](icorprofilercallback-comclassicvtabledestroyed-method.md)

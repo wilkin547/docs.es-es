@@ -9,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 186b41564e0aabb069b06356b8eccbe90296ec4b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c03251ab3120fd93cbb8e6c2f1bb62a4527a92bb
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781706"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759929"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D método ynamicMethodJITCompilationStarted
 
@@ -35,15 +35,14 @@ HRESULT DynamicMethodJITCompilationStarted(
   
 ## <a name="parameters"></a>Parámetros  
 
-[in] `functionId`  
-Identificador de la función en memoria para la que se inicia la compilación JIT.
+`functionId`  
+de Identificador de la función en memoria para la que se inicia la compilación JIT.
 
-[in] `fIsSafeToBlock` 
- `true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false`para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución.  
+`fIsSafeToBlock` [in] `true` para indicar que el bloqueo puede hacer que el tiempo de ejecución espere a que el subproceso que realiza la llamada devuelva de esta devolución de llamada; `false` para indicar que el bloqueo no afectará al funcionamiento del tiempo de ejecución.  
 
-[in] `pILHeader` Puntero al primer byte del encabezado IL del método.
+`pILHeader` de Puntero al primer byte del encabezado IL del método.
 
-[in] `cbILHeader` Número de bytes del encabezado IL.
+`cbILHeader` de Número de bytes del encabezado IL.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -64,7 +63,7 @@ El `pILHeader` puntero solo es válido durante la devolución de llamada.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Método DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [Interfaz ICorProfilerCallback8](icorprofilercallback8-interface.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-ms.openlocfilehash: 3f0376e01263290596aa722b37f6a796ab919139
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 665684b08ec272f26a468f5635c40cf64ce4981a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706034"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760514"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter (Método)
 
@@ -36,9 +36,7 @@ HRESULT ExceptionUnwindFunctionEnter(
   
 ## <a name="parameters"></a>Parámetros
 
-- `functionId`
-
-  \[in] identificador de la función que se está desenredando.
+`functionId` de IDENTIFICADOR de la función que se va a desenredar.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -56,7 +54,7 @@ HRESULT ExceptionUnwindFunctionEnter(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método ExceptionUnwindFunctionLeave](icorprofilercallback-exceptionunwindfunctionleave-method.md)

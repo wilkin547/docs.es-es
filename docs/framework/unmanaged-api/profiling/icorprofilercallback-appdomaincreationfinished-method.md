@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 6995c6cda168b5be5815e6f7b2b4d900ae0d4d67
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 51ed9ba19d96fd6ea05d05b07fe329aa9c01f290
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648368"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760761"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished (Método)
 
@@ -37,13 +37,9 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>Parámetros
 
-- `appDomainId`
+`appDomainId` de Identifica el dominio que se ha creado.
 
-  \[en] identifica el dominio que se ha creado.
-
-- `hrStatus`
-
-  \[in] un valor HRESULT que indica si la creación del dominio de aplicación se completó correctamente.
+`hrStatus` de HRESULT que indica si la creación del dominio de aplicación se completó correctamente.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -61,6 +57,6 @@ HRESULT AppDomainCreationFinished(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

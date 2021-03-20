@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 466ad51b-8f0c-41d9-81f7-371aac3374cb
 topic_type:
 - apiref
-ms.openlocfilehash: 1fd6680ffaa7b28e679dc3eaeb9840981ead5c45
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 8d1b2de62e75665de7116b28a4aa68246dda7bbd
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648576"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759539"
 ---
 # <a name="functionidmapper2-function"></a>FunctionIDMapper2 (Función)
 
@@ -38,17 +38,11 @@ UINT_PTR __stdcall FunctionIDMapper2 (
   
 ## <a name="parameters"></a>Parámetros
 
-- `funcId`
+`funcId` de Identificador de función que se va a reasignar.
 
-  \[en] el identificador de función que se va a reasignar.
+`clientData` de Puntero a datos que se usa para eliminar la ambigüedad entre los tiempos de ejecución.
 
-- `clientData`
-
-  \[in] un puntero a datos que se usa para eliminar la ambigüedad entre los tiempos de ejecución.
-
-- `pbHookFunction`
-
-  \[out] un puntero a un valor que el generador de perfiles establece en `true` si desea recibir `FunctionEnter3` `FunctionLeave3` `FunctionTailcall3` devoluciones de llamada, y, o `FunctionEnter3WithInfo` , `FunctionLeave3WithInfo` y `FunctionTailcall3WithInfo` ; de lo contrario, establece este valor en `false` .
+`pbHookFunction` enuncia Puntero a un valor que el generador de perfiles establece en `true` si desea recibir las `FunctionEnter3` `FunctionLeave3` `FunctionTailcall3` devoluciones de llamada, y, o `FunctionEnter3WithInfo` , `FunctionLeave3WithInfo` y `FunctionTailcall3WithInfo` ; de lo contrario, establece este valor en `false` .
 
 ## <a name="return-value"></a>Valor devuelto  
 
@@ -68,7 +62,7 @@ UINT_PTR __stdcall FunctionIDMapper2 (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo::SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
 - [ICorProfilerInfo3::SetFunctionIDMapper2](icorprofilerinfo3-setfunctionidmapper2-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 9da68ffa2c54ada1437b3bef8bd6324c0791d610
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0409a9969fddbbbcb8fcb5d870acccf1ae3a809b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687459"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760111"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 (Función)
 
@@ -34,9 +34,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Parámetros  
 
-- `functionOrRemappedID`
-
-  \[in] identificador de la función de la que se devuelve el control.
+`functionOrRemappedID` de Identificador de la función de la que se devuelve el control.
   
 ## <a name="remarks"></a>Observaciones  
 
@@ -64,7 +62,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionTailcall3](functiontailcall3-function.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: dca39d9d5269148fda12c50130f35bdeb10cb19d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 2db616509bf5dcb5b8aee9cea76a9841369ec49d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648654"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759259"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper (Función)
 
@@ -37,13 +37,9 @@ UINT_PTR __stdcall FunctionIDMapper (
   
 ## <a name="parameters"></a>Parámetros
 
-- `funcId`
+`funcId` de Identificador de función que se va a reasignar.
 
-  \[en] el identificador de función que se va a reasignar.
-
-- `pbHookFunction`
-
-  \[out] un puntero a un valor que el generador de perfiles establece en `true` si desea recibir `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` devoluciones de llamada, y; de lo contrario, establece este valor en `false` .
+`pbHookFunction` enuncia Un puntero a un valor que el generador de perfiles establece en `true` si desea recibir `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` devoluciones de llamada, y; de lo contrario, establece este valor en `false` .
 
 ## <a name="return-value"></a>Valor devuelto  
 
@@ -69,7 +65,7 @@ UINT_PTR __stdcall FunctionIDMapper (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Método SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
 - [FunctionIDMapper2 (Función)](functionidmapper2-function.md)

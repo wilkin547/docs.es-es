@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 8da3efde7d925fdb02232ca98662f8d6a6fd0adf
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: aeb6e7dcbf52fc57ebb7b6dca22331c27cadc186
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687316"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760033"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall (Función)
 
@@ -39,9 +39,7 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>Parámetros
 
-- `funcID`
-
-  \[in] el identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
+`funcID` de Identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
 
 ## <a name="remarks"></a>Observaciones  
 
@@ -69,7 +67,7 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)
