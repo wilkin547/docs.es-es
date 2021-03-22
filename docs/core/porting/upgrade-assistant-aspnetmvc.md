@@ -2,20 +2,20 @@
 title: Actualización de aplicaciones de MVC de ASP.NET a .NET 5
 description: Use el Asistente para actualización de .NET para actualizar una aplicación .NET Framework de MVC de ASP.NET existente a .NET 5. El Asistente para actualización de .NET es una herramienta de la CLI que ayuda a migrar una aplicación de .NET Framework a .NET 5.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: 0c9af9e12b78df7c4a2aaed18155f7ee9f02870d
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: 421d8ce16bc1800451ee39c20c4746ea321fafd0
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108362"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604962"
 ---
 # <a name="upgrade-an-aspnet-mvc-app-to-net-5-with-the-net-upgrade-assistant"></a>Actualización de una aplicación ASP.NET de MVC a .NET 5 con el Asistente para actualización de .NET
 
 El [Asistente para actualización de .NET](upgrade-assistant-overview.md) es una herramienta de la línea de comandos que puede ayudar en la actualización de aplicaciones .NET Framework de MVC de ASP.NET a .NET 5. En este artículo se proporciona:
 
-* Demostración de cómo se ejecuta la herramienta en una aplicación .NET Framework de MVC de ASP.NET
-* Sugerencias de solución de problemas
+- Demostración de cómo se ejecuta la herramienta en una aplicación .NET Framework de MVC de ASP.NET
+- Sugerencias de solución de problemas
 
 ## <a name="upgrade-net-framework-aspnet-mvc-apps"></a>Actualización de aplicaciones .NET Framework de ASP.NET de MVC
 
@@ -63,7 +63,7 @@ La herramienta solicita una ruta de acceso personalizada para la copia de seguri
 
 Una vez actualizado el formato del proyecto, el paso siguiente es actualizar el TFM del proyecto.
 
-:::image type="content" source="media/upgrade-assistant-aspnetmvc/update-tfm.png" alt-text="Conversión del proyecto al estilo SDK en el Asistente para actualización de .NET":::
+:::image type="content" source="media/upgrade-assistant-aspnetmvc/update-tfm.png" alt-text="TFM de actualización del Asistente para actualización de .NET":::
 
 A continuación, la herramienta actualiza los paquetes NuGet del proyecto. Varios paquetes necesitan actualizaciones y se agrega un nuevo paquete de analizador.
 
@@ -86,7 +86,7 @@ A continuación, la herramienta migra los archivos de configuración. La herrami
 
 La herramienta completa la migración de los archivos de configuración con la migración de `system.web.webPages.razor/pages/namespaces`.
 
-:::image type="content" source="media/upgrade-assistant-aspnetmvc/migrate-config2.png" alt-text="Migración de la configuración en el Asistente para actualización de .NET":::
+:::image type="content" source="media/upgrade-assistant-aspnetmvc/migrate-config2.png" alt-text="Migración de la configuración del Asistente para actualización de .NET completada":::
 
 La herramienta aplica correcciones conocidas para migrar las referencias de C# a sus nuevos homólogos.
 
@@ -113,7 +113,7 @@ Una vez completado este proceso, abra el archivo del proyecto y revíselo. Busqu
   </ItemGroup>
 ```
 
-Los archivos estáticos que debe proporcionar el servidor web deben trasladarse a una carpeta adecuada dentro de una carpeta de nivel raíz denominada `wwwroot`. Consulte [Archivos estáticos en ASP.NET Core](/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0) para obtener más información. Una vez que se han trasladado los archivos, se pueden eliminar los elementos `<Content>` del archivo del proyecto correspondientes a estos archivos. De hecho, se pueden quitar todos los elementos `<Content>` y sus grupos contenedores. Además, debe quitarse cualquier `<PackageReference>` en una biblioteca del lado del cliente como `bootstrap` o `jQuery`.
+Los archivos estáticos que debe proporcionar el servidor web deben trasladarse a una carpeta adecuada dentro de una carpeta de nivel raíz denominada `wwwroot`. Consulte [Archivos estáticos en ASP.NET Core](/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0&preserve-view=true) para obtener más información. Una vez que se han trasladado los archivos, se pueden eliminar los elementos `<Content>` del archivo del proyecto correspondientes a estos archivos. De hecho, se pueden quitar todos los elementos `<Content>` y sus grupos contenedores. Además, debe quitarse cualquier `<PackageReference>` en una biblioteca del lado del cliente como `bootstrap` o `jQuery`.
 
 De forma predeterminada, el proyecto se convertirá como una biblioteca de clases. Cambie el atributo `Sdk` de la primera línea a `Microsoft.NET.Sdk.Web` y establezca `<TargetFramework>` en `net5.0`. Compile el proyecto. En este momento, el número de errores debería ser bastante pequeño. Al portar un nuevo proyecto de MVC de ASP.NET 4.6.1, los errores restantes hacen referencia a archivos de la carpeta `App_Start`:
 
@@ -123,7 +123,7 @@ De forma predeterminada, el proyecto se convertirá como una biblioteca de clase
 
 Estos archivos (y toda la carpeta `App_Start`) se pueden eliminar. Del mismo modo, los archivos `Global.asax` y `Global.asax.cs` se pueden quitar.
 
-En este momento, los únicos errores que quedan están relacionados con la unión. Hay [varias maneras de configurar la unión y la minificación en ASP.NET Core](/aspnet/core/migration/mvc?view=aspnetcore-5.0#configure-bundling-and-minification). Elija la que sea más conveniente para el proyecto.
+En este momento, los únicos errores que quedan están relacionados con la unión. Hay [varias maneras de configurar la unión y la minificación en ASP.NET Core](/aspnet/core/migration/mvc?view=aspnetcore-5.0&preserve-view=true#configure-bundling-and-minification). Elija la que sea más conveniente para el proyecto.
 
 ## <a name="troubleshooting-tips"></a>Sugerencias de solución de problemas
 

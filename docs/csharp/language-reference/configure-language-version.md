@@ -3,12 +3,12 @@ title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: ba6f453123668248b2c65ee6a431cb16dfe74c46
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e1b5848f5cd589b0ea61518f0b19efb8fe801337
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258408"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477465"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -50,7 +50,7 @@ Si debe especificar su versión de C# explícitamente, puede hacerlo de varias m
 
 - Editar manualmente el [archivo del proyecto](#edit-the-project-file).
 - Establecer la versión del lenguaje [para varios proyectos en un subdirectorio](#configure-multiple-projects).
-- Configurar la opción dl compilador [Reemplace la opción del compilador `-langversion`](compiler-options/langversion-compiler-option.md).
+- Configure la [opción del compilador **LangVersion**](compiler-options/language.md#langversion).
 
 > [!TIP]
 > Para saber qué versión de lenguaje está usando actualmente, incluya `#error version` (con distinción de mayúsculas y minúsculas) en el código. Esto hace que el compilador genere un error de compilador, CS8304, con un mensaje que contiene la versión del compilador que se usa y la versión del lenguaje seleccionada actualmente. Vea [#error (Referencia de C#)](preprocessor-directives/preprocessor-error.md) para obtener más información.
@@ -94,7 +94,7 @@ En la siguiente tabla se muestran las versiones actuales del lenguaje C#. Es pos
 > csc -langversion:?
 > ```
 >
-> Al consultar la opción de compilación [-langversion](compiler-options/langversion-compiler-option.md) de este modo, se imprimirá algo similar a lo siguiente:
+> Al consultar la opción del compilador [**LangVersion](compiler-options/language.md#langversion) de este modo, se imprimirá algo similar a lo siguiente:
 >
 > ```CMD
 > Supported language versions:

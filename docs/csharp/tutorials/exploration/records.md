@@ -2,12 +2,12 @@
 title: 'Uso de tipos de registros: tutorial de C#'
 description: Obtenga información sobre cómo usar tipos de registros, compilar jerarquías de registros y cuándo elegir registros en lugar de clases.
 ms.date: 11/12/2020
-ms.openlocfilehash: 33075c4cafc9a91683960daa8101c9f1defaa36a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 301eaf1ddf6d6b7dc1f88ffa4c790e2c2b01862f
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258961"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231438"
 ---
 # <a name="create-record-types"></a>Creación de tipos de registros
 
@@ -45,7 +45,7 @@ También puede declarar *registros posicionales* mediante una sintaxis más conc
 
 ## <a name="build-temperature-data"></a>Compilación de datos de temperatura
 
-Los datos y las estadísticas se encuentran entre los escenarios en los que se recomienda usar registros. En este tutorial va a compilar una aplicación que calcula *grados día* para distintos usos. Los *grados día* son una medida de calor (o falta de él) a lo largo de un período de días, semanas o meses. Los grados día realizan un seguimiento del uso energético y lo predicen. Más días más cálidos significan más aire acondicionado, mientras que más días más fríos implican un mayor uso de calefacción. Los grados día ayudan a administrar las poblaciones de plantas. Los grados día tienen correlación con el crecimiento de las plantas a medida que cambian las estaciones. Los grados día ayudan a realizar un seguimiento de las migraciones animales de especies que se desplazan según el clima.
+Los datos y las estadísticas se encuentran entre los escenarios en los que se recomienda usar registros. En este tutorial va a compilar una aplicación que calcula *grados día* para distintos usos. Los *grados día* son una medida de calor (o falta de él) a lo largo de un período de días, semanas o meses. Los grados día realizan un seguimiento del uso energético y lo predicen. Más días más cálidos significan más aire acondicionado, mientras que más días más fríos implican un mayor uso de calefacción. Los grados día resultan útiles para administrar la población vegetal y poner en correlación su crecimiento a medida que cambiamos de estación. Los grados día ayudan a realizar un seguimiento de las migraciones animales de especies que se desplazan según el clima.
 
 La fórmula se basa en la temperatura media de un día determinado y una temperatura de base de referencia. Para calcular los grados día a lo largo del tiempo, necesita la temperatura mínima y máxima de cada día durante un período de tiempo. Comencemos por crear una nueva aplicación. Cree una nueva aplicación de consola. Cree un nuevo tipo de registro en un nuevo archivo denominado "DailyTemperature.cs":
 
@@ -77,7 +77,7 @@ DailyTemperature { HighTemp = 80, LowTemp = 60, Mean = 70 }
 DailyTemperature { HighTemp = 85, LowTemp = 66, Mean = 75.5 }
 ```
 
-El código anterior muestra el resultado de la invalidación de `ToString` sintetizada por el compilador. Si prefiere otro texto, puede escribir su propia versión de `ToString`. Eso evita que el compilador sintetice una versión automáticamente.
+El código anterior muestra el resultado de la invalidación de `ToString` sintetizada por el compilador. Si prefiere otro texto, puede escribir una versión propia de `ToString` que impida al compilador sintetizar otra para el usuario.
 
 ## <a name="compute-degree-days"></a>Cálculo de grados día
 
@@ -157,6 +157,6 @@ Ejecute la aplicación terminada para ver los resultados.
 
 En este tutorial se han mostrado varios aspectos de los registros. Los registros proporcionan una sintaxis concisa para los tipos de referencia cuyo uso fundamental es el almacenamiento de datos. En el caso de las clases orientadas a objetos, el uso fundamental es definir responsabilidades. Este tutorial se ha centrado en los *registros posicionales*, donde se puede usar una sintaxis concisa para declarar las propiedades init-only de un registro. El compilador sintetiza varios miembros del registro para copiar y comparar registros. Puede agregar cualquier otro miembro que necesite para sus tipos de registros. Puede crear tipos de registros inmutables sabiendo que ninguno de los miembros generados por el compilador mutaría su estado. Además, las expresiones `with` facilitan la compatibilidad con la mutación no destructiva.
 
-Los registros presentan otra manera de definir tipos. Se usan definiciones `class` para crear jerarquías orientadas a objetos que se centran en las responsabilidades y el comportamiento de los objetos. Cree tipos `struct` para las estructuras de datos que almacenan datos y que son lo suficientemente pequeñas como para copiarse de forma eficaz. Los registros se crean si se quieren comparaciones e igualdad basadas en valores, no se quiere copiar valores y se quiere usar variables de referencia.
+Los registros presentan otra manera de definir tipos. Se usan definiciones `class` para crear jerarquías orientadas a objetos que se centran en las responsabilidades y el comportamiento de los objetos. Cree tipos `struct` para las estructuras de datos que almacenan datos y que son lo suficientemente pequeñas como para copiarse de forma eficaz. Cree tipos `record` si lo que busca son comparaciones y análisis de similitud que se basen en valores, y quiere usar variables de referencia, pero no copiar valores.
 
 Puede obtener una descripción completa de los registros en el [artículo de referencia del lenguaje C# para el tipo de registro](../../language-reference/builtin-types/record.md) y la [especificación de tipo de registro propuesta](~/_csharplang/proposals/csharp-9.0/records.md).

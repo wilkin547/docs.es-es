@@ -2,20 +2,20 @@
 title: Información general sobre el Asistente para actualización de .NET
 description: Introducción a la herramienta Asistente para actualización de .NET que ayuda a migrar desde .NET Framework y actualiza los proyectos a .NET 5.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: bd1c904586d170d93b76ae058914adb334289f89
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: c667cfce40d4f740bc23606826eb2a058643b7be
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108285"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604780"
 ---
 # <a name="overview-of-the-net-upgrade-assistant"></a>Información general sobre el Asistente para actualización de .NET
 
 Es posible que tenga aplicaciones que se ejecutan actualmente en .NET Framework que le interesa portar a .NET 5. La herramienta Asistente para actualización de .NET puede ayudarle con este proceso. En este artículo se proporciona:
 
-* Información general sobre el Asistente para actualización de .NET.
-* Cómo instalar el Asistente para actualización de .NET.
+- Información general sobre el Asistente para actualización de .NET.
+- Cómo instalar el Asistente para actualización de .NET.
 
 ## <a name="what-is-the-net-upgrade-assistant"></a>Qué es el Asistente para actualización de .NET.
 
@@ -44,9 +44,17 @@ El [Tutorial de introducción](https://aka.ms/dotnet-upgrade-assistant-install) 
 
 ### <a name="installation-steps"></a>Pasos de instalación
 
-La herramienta se puede instalar como una herramienta de la CLI de .NET; para ello, ejecute: `dotnet tool install -g upgrade-assistant --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json`
+Para instalar la herramienta como de la CLI de .NET, ejecute lo siguiente:
 
-Del mismo modo, puesto que el Asistente para actualización de .NET se instala como una herramienta de la CLI de .NET, puede actualizarse fácilmente; para ello, ejecute: `https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json`
+```dotnet
+dotnet tool install -g upgrade-assistant
+```
+
+Del mismo modo, puesto que el Asistente para actualización de .NET se instala como herramienta de la CLI de .NET, puede ejecutar lo siguiente para realizar la actualización fácilmente:
+
+```dotnet
+dotnet tool update -g upgrade-assistant
+```
 
 Para obtener instrucciones detalladas, consulte el archivo [README](https://github.com/dotnet/upgrade-assistant) del proyecto.
 

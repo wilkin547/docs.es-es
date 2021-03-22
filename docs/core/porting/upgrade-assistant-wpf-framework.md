@@ -2,20 +2,20 @@
 title: Actualización de las aplicaciones de WPF a .NET 5
 description: Use el Asistente para actualización de .NET para actualizar una aplicación .NET Framework de WPF existente a .NET 5. El Asistente para actualización de .NET es una herramienta de la CLI que ayuda a migrar una aplicación de .NET Framework a .NET 5.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: e71cdc0ef5b72fcb7ae3985a26672e23ed0c1f12
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: b0c9baa25be6da4e7849f28c875a1d8f5f5a5d07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108296"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604845"
 ---
 # <a name="upgrade-a-wpf-app-to-net-5-with-the-net-upgrade-assistant"></a>Actualización de una aplicación de WPF a .NET 5 con el Asistente para actualización de .NET
 
 El [Asistente para actualización de .NET](upgrade-assistant-overview.md) es una herramienta de la línea de comandos que puede ayudar en la actualización de aplicaciones .NET Framework de WPF a .NET 5. En este artículo se proporciona:
 
-* Demostración de cómo se ejecuta la herramienta en una aplicación .NET Framework de WPF
-* Sugerencias de solución de problemas
+- Demostración de cómo se ejecuta la herramienta en una aplicación .NET Framework de WPF
+- Sugerencias de solución de problemas
 
 ## <a name="upgrade-net-framework-wpf-apps"></a>Actualización de aplicaciones .NET Framework de WPF
 
@@ -59,7 +59,7 @@ La herramienta solicita una ruta de acceso personalizada para la copia de seguri
 
 Una vez actualizado el formato del proyecto, el paso siguiente es actualizar el TFM del proyecto.
 
-:::image type="content" source="media/upgrade-assistant-wpf-framework/update-tfm.png" alt-text="Conversión del proyecto al estilo SDK en el Asistente para actualización de .NET":::
+:::image type="content" source="media/upgrade-assistant-wpf-framework/update-tfm.png" alt-text="TFM de actualización del Asistente para actualización de .NET":::
 
 A continuación, la herramienta actualiza los paquetes NuGet del proyecto.
 

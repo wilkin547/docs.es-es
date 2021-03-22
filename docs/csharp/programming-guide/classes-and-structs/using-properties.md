@@ -7,16 +7,16 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 51ca0a37022c99bfbd9d61f2cc47f529d535e72a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 16ff0f02db9640ad8cfe41fce9ce954cb75b4e08
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864662"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190338"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizar propiedades (Guía de programación de C#)
 
-Las propiedades combinan aspectos de los campos y los métodos. Para el usuario de un objeto, una propiedad que parece un campo, el acceso a la propiedad necesita la misma sintaxis. Para el implementador de una clase, una propiedad es uno o dos bloques de código que representa un descriptor de acceso [get](../../language-reference/keywords/get.md) o un descriptor de acceso [set](../../language-reference/keywords/set.md). El bloque de código del descriptor de acceso `get` se ejecuta cuando se lee la propiedad; el bloque de código del descriptor de acceso `set` se ejecuta cuando se asigna un nuevo valor a la propiedad. Una propiedad sin un descriptor de acceso `set` se considera de solo lectura. Una propiedad sin un descriptor de acceso `get` se considera de solo escritura. Una propiedad que tiene ambos descriptores de acceso es de lectura y escritura.
+Las propiedades combinan aspectos de los campos y los métodos. Para el usuario de un objeto, una propiedad que parece un campo, el acceso a la propiedad necesita la misma sintaxis. Para el implementador de una clase, una propiedad es uno o dos bloques de código que representa un descriptor de acceso [get](../../language-reference/keywords/get.md) o un descriptor de acceso [set](../../language-reference/keywords/set.md). El bloque de código del descriptor de acceso `get` se ejecuta cuando se lee la propiedad; el bloque de código del descriptor de acceso `set` se ejecuta cuando se asigna un nuevo valor a la propiedad. Una propiedad sin un descriptor de acceso `set` se considera de solo lectura. Una propiedad sin un descriptor de acceso `get` se considera de solo escritura. Una propiedad que tiene ambos descriptores de acceso es de lectura y escritura. En C# 9 y versiones posteriores, puede usar un descriptor de acceso `init` en lugar de `set` para que la propiedad sea de solo lectura.
 
 A diferencia de los campos, las propiedades no se clasifican como variables. Por lo tanto, no puede pasar una propiedad como un parámetro [ref](../../language-reference/keywords/ref.md) u [out](../../language-reference/keywords/out-parameter-modifier.md).
 
@@ -64,9 +64,13 @@ Cuando asigna un valor a la propiedad, el descriptor de acceso `set` se invoca m
 
 Es un error usar el nombre de parámetro implícito, `value`, para una declaración de variable local en el descriptor de acceso `set`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="the-init-accessor"></a>El descriptor de acceso init
 
-Las propiedades pueden marcarse como `public`, `private`, `protected`, `internal`, `protected internal` o `private protected`. Estos modificadores de acceso definen cómo los usuarios de la clase pueden obtener acceso a la propiedad. Los descriptores de acceso `get` y `set` para la misma propiedad pueden tener diferentes modificadores de acceso. Por ejemplo, `get` puede ser `public` para permitir el acceso de solo lectura desde el exterior del tipo, y `set` puede ser `private` o `protected`. Para obtener más información, consulte [Modificadores de acceso](./access-modifiers.md).
+El código para crear un descriptor de acceso `init` es el mismo que para crear uno de tipo `set`, salvo que se usa la palabra clave `init` en lugar de `set`. La diferencia es que el descriptor de acceso `init` solo se puede usar en el constructor o mediante un [inicializador de objeto](object-and-collection-initializers.md).
+
+## <a name="remarks"></a>Observaciones
+
+Las propiedades se pueden marcar como `public`, `private`, `protected`, `internal`, `protected internal` o `private protected`. Estos modificadores de acceso definen cómo los usuarios de la clase pueden obtener acceso a la propiedad. Los descriptores de acceso `get` y `set` para la misma propiedad pueden tener diferentes modificadores de acceso. Por ejemplo, `get` puede ser `public` para permitir el acceso de solo lectura desde el exterior del tipo, y `set` puede ser `private` o `protected`. Para obtener más información, consulte [Modificadores de acceso](./access-modifiers.md).
 
 Una propiedad puede declararse como una propiedad estática mediante la palabra clave `static`. Esto hace que la propiedad esté disponible para los autores de la llamada en cualquier momento, aunque no exista ninguna instancia de la clase. Para más información, vea [Clases estáticas y sus miembros](./static-classes-and-static-class-members.md).
 
@@ -77,13 +81,13 @@ Una propiedad que invalida una propiedad virtual también puede [sellarse](../..
 > [!NOTE]
 > Es un error usar un modificador [virtual](../../language-reference/keywords/virtual.md), [abstract](../../language-reference/keywords/abstract.md) u [override](../../language-reference/keywords/override.md) en un descriptor de acceso de una propiedad [static](../../language-reference/keywords/static.md).
 
-## <a name="example"></a>Ejemplo
+## <a name="examples"></a>Ejemplos
 
 En este ejemplo se muestran las propiedades de solo lectura, estáticas y de instancia. Acepta el nombre del empleado desde el teclado, incrementa `NumberOfEmployees` en 1 y muestra el nombre del empleado y el número.
 
 [!code-csharp[csProgGuideProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#2)]
 
-## <a name="example"></a>Ejemplo
+## <a name="hidden-property-example"></a>Ejemplo de propiedad oculta
 
 En este ejemplo se muestra cómo tener acceso a una propiedad en una clase base que está oculta mediante otra propiedad que tiene el mismo nombre en una clase derivada:
 
@@ -101,7 +105,7 @@ A continuación se muestran puntos importantes del ejemplo anterior:
 
      Para obtener más información sobre cómo ocultar miembros, vea el [Modificador new](../../language-reference/keywords/new-modifier.md).
 
-## <a name="example"></a>Ejemplo
+## <a name="override-property-example"></a>Ejemplo de invalidación de propiedades
 
 En este ejemplo, dos clases, `Cube` y `Square`, implementan una clase abstracta, `Shape`, e invalidan su propiedad `Area` abstracta. Tenga en cuenta el uso del modificador [override](../../language-reference/keywords/override.md) en las propiedades. El programa acepta el lado como una entrada y calcula las áreas del cuadrado y el cubo. También acepta el área como una entrada y calcula el lado correspondiente para el cuadrado y el cubo.
 

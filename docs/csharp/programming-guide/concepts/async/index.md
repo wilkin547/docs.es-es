@@ -2,16 +2,16 @@
 title: Programación asincrónica en C#
 description: Información general sobre la compatibilidad con el lenguaje C# para la programación asincrónica mediante async, await, Task y Task<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 02290e374aa97cb5d5ec6410c917751066949b23
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: ffc2289f3b5abfe3865e1a096ee91e2e649a6427
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438100"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624245"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programación asincrónica con async y await
 
-El [modelo de programación asincrónica de tareas (TAP)](task-asynchronous-programming-model.md) es una abstracción del código asincrónico. El código se escribe como una secuencia de instrucciones, como es habitual. Puede leerlo como si cada instrucción se completase antes de comenzar la siguiente. El compilador realiza una serie de transformaciones, debido a que algunas de estas instrucciones podrían empezar a funcionar y devolver una clase <xref:System.Threading.Tasks.Task> que representa el trabajo en curso.
+El [modelo de programación asincrónica de tareas (TAP)](task-asynchronous-programming-model.md) es una abstracción del código asincrónico. El código se escribe como una secuencia de instrucciones, como es habitual. Puede leerlo como si cada instrucción se completase antes de comenzar la siguiente. El compilador realiza diversas transformaciones porque algunas de estas instrucciones podrían empezar a funcionar y devolver una clase <xref:System.Threading.Tasks.Task> que representase el trabajo en curso.
 
 Este es el objetivo de la sintaxis: habilitar código que se lea como una secuencia de instrucciones, pero que se ejecute siguiendo un orden mucho más complicado, en función de la asignación de recursos externos y del momento en el que se completen las tareas. Es similar a la manera en la que las personas dan instrucciones para los procesos que incluyen las tareas asincrónicas. En este artículo, usará un ejemplo con instrucciones para preparar el desayuno que le ayudará a comprender cómo las palabras clave `async` y `await` facilitan el proceso de razonar sobre el código, que incluye una serie de instrucciones asincrónicas. Para explicar cómo se prepara un desayuno, probablemente escribirá unas instrucciones parecidas a las que se recogen en la lista siguiente:
 
@@ -53,7 +53,7 @@ El código anterior muestra una práctica incorrecta, que consiste en construir 
 
 Empecemos por actualizar este código para que el subproceso no se bloquee mientras se ejecutan las tareas. La palabra clave `await` proporciona un modo sin bloqueo para iniciar una tarea y, después, proseguir la ejecución cuando dicha tarea se complete. Una versión asincrónica sencilla del código para preparar el desayuno tendría un aspecto parecido al del fragmento siguiente:
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" ID="SnippetMain":::
 
 > [!IMPORTANT]
 > El tiempo total transcurrido es aproximadamente el mismo que el de la versión inicial sincrónica. El código todavía tiene que aprovechar algunas de las características clave de la programación asincrónica.
@@ -123,9 +123,9 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-:::image type="content" source="media/asynchronous-breakfast.png" alt-text="Desayuno sincrónico":::
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="Desayuno asincrónico":::
 
-El desayuno preparado de forma asincrónica tardó unos 20 minutos porque algunas tareas pudieron efectuarse simultáneamente.
+La preparación del desayuno de forma asincrónica apenas tomó 20 minutos, lo cual supone un ahorro de tiempo que se debe a que algunas tareas se efectuaron simultáneamente.
 
 El código anterior funciona mejor. Iniciará todas las tareas asincrónicas a la vez y esperará por una tarea solo cuando necesite los resultados. El código anterior se parece al código de una aplicación web que realiza solicitudes a diferentes microservicios y, después, combina los resultados en una sola página. Podrá realizar todas las solicitudes de inmediato y, luego, llevará a cabo una instrucción `await` para esperar por todas esas tareas y componer la página web.
 
@@ -138,13 +138,82 @@ El código anterior funciona mejor. Iniciará todas las tareas asincrónicas a l
 
 En el código anterior se muestra que se puede usar un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> para conservar tareas en ejecución. Lleva a cabo una instrucción `await` para esperar por una tarea a fin de poder usar su resultado. El siguiente paso consiste en crear métodos que representan la combinación de otro trabajo. Antes de servir el desayuno, quiere esperar por la tarea que representa tostar el pan antes de untar la mantequilla y la mermelada. Puede representar este trabajo con el código siguiente:
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetComposeToastTask":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" ID="SnippetComposeToastTask":::
 
 El método anterior tiene el modificador `async` en su firma, lo que indica al compilador que este método incluye una instrucción `await`, es decir, que contiene operaciones asincrónicas. Este método representa la tarea que tuesta el pan y, después, agrega la mantequilla y la mermelada. El método devuelve un objeto <xref:System.Threading.Tasks.Task%601> que representa la composición de estas tres operaciones. El bloque principal de código se convierte en lo siguiente:
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetMain":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" ID="SnippetMain":::
 
 El cambio anterior ilustra una técnica importante para trabajar con código asincrónico. Para componer tareas, las operaciones se separan en un método nuevo que devuelve una tarea. Usted puede elegir cuándo se debe esperar por esta tarea y puede iniciar otras tareas simultáneamente.
+
+## <a name="asynchronous-exceptions"></a>Excepciones asincrónicas
+
+Hasta este momento, ha asumido implícitamente que todas estas tareas se completan correctamente. Los métodos asincrónicos generan excepciones, al igual que sus homólogos sincrónicos. La compatibilidad asincrónica con la administración de excepciones y errores presenta los mismos objetivos en general: escribir código que se lea como una serie de instrucciones sincrónicas. Las tareas, cuando no se pueden completar correctamente, generan excepciones. El código cliente puede capturar dichas excepciones cuando una tarea presenta el elemento `awaited`. Por ejemplo, supongamos que, al hacer una tostada, la tostadora empieza a arder. Para simular esta situación, puede modificar el método `ToastBreadAsync` para que coincida con el código siguiente:
+
+```csharp
+private static async Task<Toast> ToastBreadAsync(int slices)
+{
+    for (int slice = 0; slice < slices; slice++)
+    {
+        Console.WriteLine("Putting a slice of bread in the toaster");
+    }
+    Console.WriteLine("Start toasting...");
+    await Task.Delay(2000);
+    Console.WriteLine("Fire! Toast is ruined!");
+    throw new InvalidOperationException("The toaster is on fire");
+    await Task.Delay(1000);
+    Console.WriteLine("Remove toast from toaster");
+
+    return new Toast();
+}
+```
+
+> [!NOTE]
+> Al compilar el código anterior, recibirá una advertencia referente a código inaccesible. Es algo intencionado, porque, una vez que la tostadora empiece a arder, la actividad no se podrá llevar a cabo con normalidad.
+
+Ejecute la aplicación tras efectuar dichos cambios, con una salida similar al texto siguiente:
+
+```console
+Pouring coffee
+coffee is ready
+Warming the egg pan...
+putting 3 slices of bacon in the pan
+cooking first side of bacon...
+Putting a slice of bread in the toaster
+Putting a slice of bread in the toaster
+Start toasting...
+Fire! Toast is ruined!
+flipping a slice of bacon
+flipping a slice of bacon
+flipping a slice of bacon
+cooking the second side of bacon...
+cracking 2 eggs
+cooking the eggs ...
+Put bacon on plate
+Put eggs on plate
+eggs are ready
+bacon is ready
+Unhandled exception. System.InvalidOperationException: The toaster is on fire
+   at AsyncBreakfast.Program.ToastBreadAsync(Int32 slices) in Program.cs:line 65
+   at AsyncBreakfast.Program.MakeToastWithButterAndJamAsync(Int32 number) in Program.cs:line 36
+   at AsyncBreakfast.Program.Main(String[] args) in Program.cs:line 24
+   at AsyncBreakfast.Program.<Main>(String[] args)
+```
+
+Observe que hay unas cuantas tareas que se completan entre que la tostadora empieza a arder y se genera la excepción. Cuando una tarea que se ejecuta de forma asincrónica genera una excepción, esta tarea pasa a ser ***errónea***. El objeto de la tarea contiene la excepción generada en la propiedad <xref:System.Threading.Tasks.Task.Exception?displayProperty=nameWithType>. Las tareas erróneas, al encontrarse en espera, generan una excepción.
+
+Hay dos mecanismos importantes que es necesario entender: el modo en el que una excepción se almacena en una tarea errónea, y el modo en el que una excepción se desempaqueta y se vuelve a generar cuando el código espera una tarea errónea.
+
+Si el código se ejecuta de forma asincrónica y genera una excepción, dicha excepción se almacena en `Task`. La propiedad <xref:System.Threading.Tasks.Task.Exception?displayProperty=nameWithType> es un elemento <xref:System.AggregateException?displayProperty=nameWithType> porque es posible que se genere más de una excepción durante un trabajo asincrónico. Toda excepción generada se agrega a la colección <xref:System.AggregateException.InnerExceptions?displayProperty=nameWithType>. Si dicha propiedad `Exception` es NULL, se crea `AggregateException` y la excepción generada es el primer elemento de la colección.
+
+En el caso de una tarea errónea, el escenario más habitual es que la propiedad `Exception` contenga exactamente una excepción. Si el código contempla un elemento `awaits` relativo a una tarea errónea, la primera excepción de la colección <xref:System.AggregateException.InnerExceptions?displayProperty=nameWithType> se vuelve a generar. Ese es el motivo por el que la salida de este ejemplo muestra un elemento `InvalidOperationException`, en lugar de `AggregateException`. El hecho de extraer la primera excepción interna hace que trabajar con métodos asincrónicos sea lo más similar posible a trabajar con sus homólogos sincrónicos. Si en su caso se generan varias excepciones, puede examinar la propiedad `Exception` del código.
+
+Antes de continuar, comente estas dos líneas de su método `ToastBreadAsync`. No quiere que arda nada más:
+
+```csharp
+Console.WriteLine("Fire! Toast is ruined!");
+throw new InvalidOperationException("The toaster is on fire");
+```
 
 ## <a name="await-tasks-efficiently"></a>Espera de la finalización de las tareas de forma eficaz
 
@@ -184,13 +253,13 @@ while (breakfastTasks.Count > 0)
 Después de todos estos cambios, la versión final del código tiene un aspecto similar al siguiente: <a id="final-version"></a>.
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="Desayuno sincrónico":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="Cualquier desayuno asincrónico":::
 
-La versión final del desayuno preparado de forma asincrónica tardó aproximadamente 15 minutes porque algunas tareas pudieron efectuarse simultáneamente y el código pudo supervisar varias tareas a la vez, tomando medidas solo en caso necesario.
+La versión final del desayuno preparado de forma asincrónica tardó aproximadamente 15 minutos porque algunas de las tareas se realizaron simultáneamente, y el código supervisó varias tareas a la vez y solo tuvo que actuar cuando fue necesario.
 
 Este código final es asincrónico. Refleja con más precisión la manera en que una persona prepara un desayuno. Compare el código anterior con el primer ejemplo de código del artículo. Las acciones principales siguen siendo claras cuando se lee el código. De hecho, puede leerlo como si se tratara de las instrucciones para preparar el desayuno que se indican al principio del artículo. Las características del lenguaje para `async` y `await` proporcionan la traducción que cualquier persona haría para seguir las instrucciones escritas, a saber: las tareas deben iniciarse a medida que sea posible y debe evitarse el bloqueo por esperar a que se completen las tareas.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 > [!div class="nextstepaction"]
-> [Información sobre el modelo de programación asincrónica de tareas](task-asynchronous-programming-model.md)
+> [Escenarios del mundo real para programas asincrónicos](../../../async.md)

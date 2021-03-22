@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 897729022e45e96d0f54057ef4dad1a4fc0d6799
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678225"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480847"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>Novedades de C# 7.0 hasta C# 7.3
 
@@ -522,17 +522,17 @@ Las nuevas opciones del compilador admiten nuevos escenarios de DevOps y compila
 
 ### <a name="reference-assembly-generation"></a>Generación de ensamblados de referencia
 
-Existen dos nuevas opciones del compilador con las que se generan *ensamblados solo de referencia*: [-refout](../language-reference/compiler-options/refout-compiler-option.md) y [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Hay dos opciones del compilador nuevas que generan *ensamblados de solo referencia*: [**ProduceReferenceAssembly**](../language-reference/compiler-options/output.md#producereferenceassembly) y [**ProduceOnlyReferenceAssembly**](../language-reference/compiler-options/code-generation.md#produceonlyreferenceassembly).
 En los artículos de los vínculos se explican estas opciones y los ensamblados de referencia de manera más pormenorizada.
 
 ### <a name="public-or-open-source-signing"></a>Firma pública o de código abierto
 
-La opción del compilador `-publicsign` indica al compilador que firme el ensamblado con una clave pública. El ensamblado se marca como firmado, pero la firma se toma de la clave pública. Esta opción le permite crear ensamblados firmados a partir de proyectos de código abierto utilizando una clave pública.
+La opción del compilador **PublicSign** indica al compilador que firme el ensamblado con una clave pública. El ensamblado se marca como firmado, pero la firma se toma de la clave pública. Esta opción le permite crear ensamblados firmados a partir de proyectos de código abierto utilizando una clave pública.
 
-Para obtener más información, vea el artículo [-filealign (Opciones del compilador de C#)](../language-reference/compiler-options/publicsign-compiler-option.md).
+Para obtener más información, vea el artículo [Opción del compilador **PublicSign**](../language-reference/compiler-options/security.md#publicsign).
 
 ### <a name="pathmap"></a>pathmap
 
-La opción del compilador `-pathmap` indica al compilador que reemplace las rutas de acceso de origen del entorno de compilación por rutas de acceso de origen asignadas. La opción `-pathmap` controla la ruta de acceso de origen escrita por el compilador en los archivos PDB o para <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>.
+La opción del compilador **PathMap** indica al compilador que reemplace las rutas de acceso de origen del entorno de compilación por rutas de acceso de origen asignadas. La opción **PathMap** controla la ruta de acceso de origen que el compilador escribe en los archivos PDB o para <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>.
 
-Para obtener más información, vea el artículo [-pathmap (opciones del compilador de C#)](../language-reference/compiler-options/pathmap-compiler-option.md).
+Para obtener más información, vea el artículo [Opción del compilador **PathMap**](../language-reference/compiler-options/advanced.md#pathmap).
