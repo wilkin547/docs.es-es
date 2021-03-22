@@ -12,18 +12,18 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 35117642f38885aab08a5c0249d1f65ec76c59f3
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 05b2030133ca83cf87de7110f820eaad38fad756
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190208"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480184"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() y argumentos de la línea de comandos (Guía de programación de C#)
 
 El método `Main` es el punto de entrada de una aplicación de C# (las bibliotecas y los servicios no requieren un método `Main` como punto de entrada). Cuando se inicia la aplicación, el método `Main` es el primero que se invoca.
 
-Solo puede haber un punto de entrada en un programa de C#. Si hay más de una clase que tiene un método `Main`, debe compilar el programa con la opción del compilador `-main` para especificar qué método `Main` desea utilizar como punto de entrada. Para obtener más información, vea [-main (Opciones del compilador de C#)](../../language-reference/compiler-options/main-compiler-option.md).
+Solo puede haber un punto de entrada en un programa de C#. Si hay más de una clase que tenga un método `Main`, deberá compilar el programa con la opción del compilador **StartupObject** para especificar qué método `Main` quiere utilizar como punto de entrada. Para obtener más información, consulte [**StartupObject** (opciones del compilador de C#)](../../language-reference/compiler-options/advanced.md#mainentrypoint-or-startupobject).
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
@@ -64,7 +64,6 @@ Al agregar los tipos de valor devuelto `async`, `Task` y `Task<int>`, se simplif
 
 ## <a name="see-also"></a>Vea también
 
-- [Compilar la línea de comandos con csc.exe](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Guía de programación de C#](../index.md)
 - [Métodos](../classes-and-structs/methods.md)
 - [Dentro de un programa de C#](../inside-a-program/index.md)

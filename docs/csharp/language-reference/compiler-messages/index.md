@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: a7c0290c799a7ae4a371578396d2d2d747d00d28
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ecc040fb0c19ac19b7a4a922702b70ac2d9a426e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126247"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479537"
 ---
 # <a name="c-compiler-errors"></a>Errores del compilador de C#
 
@@ -33,7 +33,6 @@ Algunos errores del compilador de C# tienen temas correspondientes que explican 
 ## <a name="see-also"></a>Vea también
 
 - [Opciones del compilador de C#](../compiler-options/index.md)
-- [Lo sentimos, no tenemos detalles sobre este error de C#](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [Página Compilar (Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [-warn (Opciones del compilador de C#)](../compiler-options/warn-compiler-option.md)
-- [-nowarn (Opciones del compilador de C#)](../compiler-options/nowarn-compiler-option.md)
+- [**WarningLevel** (opciones del compilador de C#)](../compiler-options/errors-warnings.md#warninglevel)
+- [**DisabledWarnings** (opciones del compilador de C#)](../compiler-options/errors-warnings.md#disabledwarnings)

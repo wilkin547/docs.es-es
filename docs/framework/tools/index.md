@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 606ead6010ddfd223e4ed38e0271642d36079bcc
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258782"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654100"
 ---
 # <a name="net-framework-tools"></a>herramientas de .NET Framework
 
@@ -23,7 +23,7 @@ La mayoría de las herramientas de .NET Framework que se describen en esta secci
 
 Puede ejecutar todas las herramientas desde la línea de comandos excepto Visor de la memoria caché de ensamblados (*Shfusion.dll*). Debe obtener acceso a *Shfusion.dll* desde el Explorador de archivos.
   
-La mejor manera de ejecutar las herramientas de línea de comandos es mediante uno de los shells de desarrollador que instala Visual Studio. Estas utilidades permiten ejecutar las herramientas fácilmente, sin tener que desplazarse hasta la carpeta de instalación. Para obtener más información, vea [Shells de línea de comandos para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
+La mejor manera de ejecutar las herramientas de línea de comandos es mediante uno de los shells de desarrollador que instala Visual Studio. Estas utilidades permiten ejecutar las herramientas fácilmente, sin tener que desplazarse hasta la carpeta de instalación. Para más información, consulte [Símbolo del sistema para desarrolladores y PowerShell para desarrolladores](/visualstudio/ide/reference/command-prompt-powershell).
 
 > [!NOTE]
 > Algunas herramientas son específicas de los equipos de 32 bits o de los equipos de 64 bits. Asegúrese de ejecutar la versión adecuada de la herramienta para su equipo.
