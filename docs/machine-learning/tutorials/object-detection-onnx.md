@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 49817f9ad712e50669bab958296946c06d5c19eb
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 305a440634120395dba6881584b2ff46646da211
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679421"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653587"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -39,7 +39,7 @@ En este tutorial aprenderá a:
 
 ## <a name="onnx-object-detection-sample-overview"></a>Información general del ejemplo de detección de objetos de ONNX
 
-En este ejemplo se crea una aplicación de consola de .NET Core que detecta objetos dentro de una imagen mediante un modelo de aprendizaje profundo de ONNX previamente entrenado. El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) en GitHub.
+En este ejemplo se crea una aplicación de consola de .NET Core que detecta objetos dentro de una imagen mediante un modelo de aprendizaje profundo de ONNX previamente entrenado. El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) en GitHub.
 
 ## <a name="what-is-object-detection"></a>¿Qué es la detección de objetos?
 
@@ -100,7 +100,7 @@ Ahora que tiene un conocimiento general de lo que es ONNX y de cómo funciona Ti
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Preparar los datos y el modelo entrenado previamente
 
-1. Descargue el [archivo ZIP del directorio de recursos del proyecto](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/assets.zip) y descomprímalo.
+1. Descargue el [archivo ZIP del directorio de recursos del proyecto](https://github.com/dotnet/machinelearning-samples/raw/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/assets.zip) y descomprímalo.
 
 1. Copie el directorio `assets` en el directorio de proyecto *ObjectDetection*. Este directorio y sus subdirectorios contienen los archivos de imagen (excepto los del modelo de Tiny YOLOv2, que descargará y agregará en el paso siguiente) que se necesitan en este tutorial.
 
@@ -118,7 +118,7 @@ Ahora que tiene un conocimiento general de lo que es ONNX y de cómo funciona Ti
 
 ### <a name="create-classes-and-define-paths"></a>Crear clases y definir rutas de acceso
 
-Abra el archivo*Program.cs* y agregue las instrucciones `using` adicionales siguientes a la parte superior del archivo:
+Abra el archivo *Program.cs* y agregue las instrucciones `using` adicionales siguientes a la parte superior del archivo:
 
 [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
@@ -709,7 +709,7 @@ Para ver las imágenes con rectángulos delimitadores, desplácese hasta el dire
 
 ¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para la detección de objetos al reutilizar un modelo de `ONNX` entrenado previamente en ML.NET.
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx).
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx).
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
@@ -722,4 +722,4 @@ En este tutorial ha aprendido a:
 
 Consulte el repositorio de GitHub con ejemplos de Machine Learning para explorar un ejemplo expandido de detección de objetos.
 > [!div class="nextstepaction"]
-> [Repositorio dotnet/machinelearning-samples de GitHub](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)
+> [Repositorio dotnet/machinelearning-samples de GitHub](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)

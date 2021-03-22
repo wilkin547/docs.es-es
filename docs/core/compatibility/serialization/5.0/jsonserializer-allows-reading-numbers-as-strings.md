@@ -2,12 +2,12 @@
 title: 'Cambio importante: Las aplicaciones ASP.NET Core permiten deserializar los números entrecomillados'
 description: Obtenga información sobre el cambio importante de .NET 5 en las bibliotecas básicas de .NET donde las aplicaciones ASP.NET Core deserializarán correctamente los números representados como cadenas JSON, en lugar de iniciar una excepción.
 ms.date: 10/21/2020
-ms.openlocfilehash: f541af5bf5f0a519fd5205f44d68a9b401569909
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: bc1531bb9b159bfd9e80eafacafb50aa509973cc
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256314"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624154"
 ---
 # <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>Las aplicaciones ASP.NET Core permiten deserializar los números entrecomillados
 
@@ -41,7 +41,7 @@ En el caso de las aplicaciones de MVC de ASP.NET Core y API web, puede configur
 
 ```csharp
 services.AddControllers()
-   .AddJsonOptions(options.NumberHandling = JsonNumberHandling.Strict);
+   .AddJsonOptions(options => options.JsonSerializerOptions.NumberHandling = JsonNumberHandling.Strict);
 ```
 
 ## <a name="affected-apis"></a>API afectadas
