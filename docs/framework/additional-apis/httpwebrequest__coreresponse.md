@@ -1,6 +1,6 @@
 ---
-title: Campo HttpWebRequest. _CoreResponse
-description: Lea sobre el campo HttpWebRequest. _CoreResponse en .NET. Este campo es un objeto CoreResponseData o Exception que contiene el resultado del análisis de respuesta HTTP.
+title: HttpWebRequest._CoreResponse campo
+description: Lea sobre el campo HttpWebRequest._CoreResponse en .NET. Este campo es un objeto CoreResponseData o Exception que contiene el resultado del análisis de respuesta HTTP.
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -11,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 5093ec7ed2c3b94931dcd622ae9ccdb42feffa18
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: f5fb71c21922285c0e18c2d1f28eeaf2353dcaee
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989748"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873840"
 ---
 # <a name="httpwebrequest_coreresponse-field"></a>HttpWebRequest. \_ Campo CoreResponse
 
-`HttpWebRequest._CoreResponse`es un objeto ( [CoreResponseData](coreresponsedata.md) o un <xref:System.Exception> ) que contiene el resultado del análisis de respuesta http.
+`HttpWebRequest._CoreResponse` es un objeto ( [CoreResponseData](coreresponsedata.md) o un <xref:System.Exception> ) que contiene el resultado del análisis de respuesta http.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -29,7 +29,7 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Esta API no está pensada para usarse directamente en el código. En su lugar, debe utilizar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [la guía del usuario de DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Esta API no está pensada para usarse directamente en el código. En su lugar, debe utilizar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [la guía del usuario de DiagnosticSource](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 >
 > Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
 

@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 74ab483a501dd5135ad5d98fd6dce988cf207ef8
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 22020d69c13fbf8317cbf5e871073a290f8967b7
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605456"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876362"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -306,6 +306,17 @@ Los comentarios en línea deben poner en mayúscula la primera letra.
 ```fsharp
 let f x = x + 1 // Increment by one.
 ```
+
+## <a name="formatting-string-literals-and-interpolated-strings"></a>Aplicar formato a literales de cadena y cadenas interpoladas
+
+Los literales de cadena y las cadenas interpoladas se pueden dejar en una sola línea, independientemente del tiempo de la línea.
+
+```fsharp
+let serviceStorageConnection =
+    $"DefaultEndpointsProtocol=https;AccountName=%s{serviceStorageAccount.Name};AccountKey=%s{serviceStorageAccountKey.Value}"
+```
+
+No se recomiendan las expresiones interpoladas de varias líneas. En su lugar, enlace el resultado de la expresión a un valor y úselo en la cadena interpolada.
 
 ## <a name="naming-conventions"></a>Convenciones de nomenclatura
 
@@ -1144,6 +1155,50 @@ Option.traverse(
     create
     >> Result.setError [ invalidHeader "Content-Checksum" ]
 )
+```
+
+## <a name="formatting-generic-type-arguments-and-constraints"></a>Aplicar formato a restricciones y argumentos de tipo genérico
+
+Las instrucciones siguientes se aplican a las funciones, los miembros y las definiciones de tipo.
+
+Mantenga los argumentos de tipo genérico y las restricciones en una sola línea si no es demasiado larga:
+
+```fsharp
+let f<'a, 'b when 'a : equality and 'b : comparison> param =
+    // function body
+```
+
+Si no caben los argumentos de tipo genérico y las restricciones y los parámetros de función, pero los parámetros de tipo y las restricciones solo lo hacen, coloque los parámetros en nuevas líneas:
+
+```fsharp
+let f<'a, 'b when 'a : equality and 'b : comparison>
+    param
+    =
+    // function body
+```
+
+Si los parámetros de tipo o las restricciones son demasiado largos, divídala y alinearlos como se muestra a continuación. Mantenga la lista de parámetros de tipo en la misma línea que la función, independientemente de su longitud. En el caso de las restricciones, coloque `when` en la primera línea y mantenga cada restricción en una sola línea, independientemente de su longitud. Colocar `>` al final de la última línea. Aplicar sangría a las restricciones en un nivel.
+
+```fsharp
+let inline f< ^a, ^b
+    when ^a : (static member Foo1: unit -> ^b)
+    and ^b : (member Foo2: unit -> int)
+    and ^b : (member Foo3: string -> ^a option)>
+    arg1
+    arg2
+    =
+    // function body
+```
+
+Si los parámetros de tipo o las restricciones están divididos, pero no hay parámetros de función normales, coloque `=` en una nueva línea sin tener en consideración:
+
+```f#
+let inline f<^a, ^b
+    when ^a : (static member Foo1: unit -> ^b)
+    and ^b : (member Foo2: unit -> int)
+    and ^b : (member Foo3: string -> ^a option)>
+    =
+    // function body
 ```
 
 ## <a name="formatting-attributes"></a>Aplicar formato a atributos

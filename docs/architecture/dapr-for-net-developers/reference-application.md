@@ -3,12 +3,12 @@ title: Introducción a la aplicación de referencia eShopOnDapr
 description: Información general de la aplicación de referencia de eShopOnDapr y su historial.
 author: amolenk
 ms.date: 02/17/2021
-ms.openlocfilehash: 8fd0ccade45f4f6609046e00d22ffd5693c4a529
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 47d99246eec8e3288738c911cccb23bb9cac8df3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623894"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874568"
 ---
 # <a name="dapr-reference-application"></a>Aplicación de referencia DAPR
 
@@ -119,9 +119,9 @@ En este capítulo, se le presentará la aplicación de referencia eShopOnDapr. E
 
 ### <a name="references"></a>Referencias
 
-- [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr)
+- [eShopOnDapr en GitHub](https://github.com/dotnet-architecture/eShopOnDapr)
 
-- [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+- [eShopOnContainers en GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
 
 - [Microservicios de .NET para aplicaciones .NET en contenedor](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf)
 

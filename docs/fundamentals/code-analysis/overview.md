@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 9fbeee7475b49a5b6514d4983142ae3be5a2f026
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 1a0b31f7aca6415510ed0fcd08e9f9a0f8f39bf5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605300"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876609"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Información general sobre el análisis de código fuente de .NET
 
@@ -53,7 +53,7 @@ Las siguientes reglas están habilitadas de forma predeterminada en .NET 5.0.
 
 Puede cambiar la gravedad de estas reglas para deshabilitarlas o elevarlas a errores. También puede [habilitar más reglas](#enable-additional-rules).
 
-- Para obtener una lista de las reglas que se incluyen con cada versión del SDK de .NET, vea [Versiones del analizador](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md).
+- Para obtener una lista de las reglas que se incluyen con cada versión del SDK de .NET, vea [Versiones del analizador](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md).
 - Para obtener una lista de todas las reglas de calidad del código, vea [Reglas de calidad del código](quality-rules/index.md).
 
 ### <a name="enable-additional-rules"></a>Habilitación de reglas adicionales
@@ -66,7 +66,7 @@ El *modo de análisis* hace referencia a una configuración de análisis de cód
 | `AllEnabledByDefault` | Este es el modo más agresivo. Todas las reglas están habilitadas como advertencias de compilación. Puede [excluir](configuration-options.md) de forma selectiva reglas individuales para deshabilitarlas.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
 | `Default` | El modo predeterminado, en el que una serie de reglas se habilitan como advertencias, otras solo se habilitan como sugerencias del IDE de Visual Studio con las correcciones de código correspondientes y el resto se deshabilitan por completo. Puede [excluir o incluir](configuration-options.md) de forma selectiva reglas individuales para deshabilitarlas.<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-Para buscar la gravedad predeterminada de cada regla disponible y si la regla está habilitada o no en el modo de análisis predeterminado, vea la [lista completa de reglas](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md).
+Para buscar la gravedad predeterminada de cada regla disponible y si la regla está habilitada o no en el modo de análisis predeterminado, vea la [lista completa de reglas](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md).
 
 ### <a name="treat-warnings-as-errors"></a>Tratar advertencias como errores
 

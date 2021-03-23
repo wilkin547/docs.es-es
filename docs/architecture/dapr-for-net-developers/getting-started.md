@@ -3,12 +3,12 @@ title: Introducción a DAPR
 description: Una guía para preparar el entorno de desarrollo local y crear sus primeras aplicaciones .NET con DAPR.
 author: amolenk
 ms.date: 02/25/2021
-ms.openlocfilehash: 1b6ecd2cc2bf077375262155f0866cfef2dab708
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 1c60f731138911d7d22ff871c9a3849704d81dd6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623816"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874386"
 ---
 # <a name="get-started-with-dapr"></a>Introducción a DAPR
 
@@ -244,7 +244,7 @@ Ahora, configurará la comunicación entre los servicios mediante el [bloque de 
     > [!NOTE]
     > Si el destino es una versión de `Dapr.AspNetCore` que se encuentra en versión preliminar, debe especificar la `-Prerelease` marca.
 
-1. En el `DaprFrontEnd` proyecto, abra el archivo *Startup.CS* y reemplace el `ConfigureServices` método por el código siguiente:
+1. En el `DaprFrontEnd` proyecto, abra el archivo *Startup. CS* y reemplace el `ConfigureServices` método por el código siguiente:
 
     ```csharp
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -277,7 +277,7 @@ Ahora, configurará la comunicación entre los servicios mediante el [bloque de 
     }
     ```
 
-1. Abra el archivo *index.cshtml.CS* en la carpeta *pages* y reemplace su contenido por el código siguiente:
+1. Abra el archivo *index. cshtml. CS* en la carpeta *pages* y reemplace su contenido por el código siguiente:
 
     ```csharp
     using System;
@@ -462,7 +462,7 @@ En la parte final de este ejemplo, agregará compatibilidad con contenedores y e
 
     ```yaml
     version: '3.4'
-    
+
     services:
       daprfrontend:
         image: ${DOCKER_REGISTRY-}daprfrontend

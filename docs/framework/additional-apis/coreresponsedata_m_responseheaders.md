@@ -1,6 +1,6 @@
 ---
-title: Campo CoreResponseData. m_ResponseHeaders
-description: Comprenda el campo CoreResponseData. m_ResponseHeaders en .NET. Este campo es un tipo WebHeaderCollection que tiene encabezados asociados a la respuesta del servidor.
+title: CoreResponseData.m_ResponseHeaders campo
+description: Comprenda el CoreResponseData.m_ResponseHeaders campo en .NET. Este campo es un tipo WebHeaderCollection que tiene encabezados asociados a la respuesta del servidor.
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -11,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 7c7b896193cb81e9fc9e3ec28110359003a36728
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 6e0203094376de6ec2870649dd3c025e88639bb8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989791"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875933"
 ---
 # <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData. m \_ ResponseHeaders campo
 
-`CoreResponseData.m_ResponseHeaders`es un <xref:System.Net.WebHeaderCollection> de los encabezados asociados a la respuesta del servidor.
+`CoreResponseData.m_ResponseHeaders` es un <xref:System.Net.WebHeaderCollection> de los encabezados asociados a la respuesta del servidor.
 
 ## <a name="syntax"></a>Sintaxis
   
@@ -29,7 +29,7 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Esta API no está pensada para usarse directamente en el código. En su lugar, debe utilizar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [la guía del usuario de DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Esta API no está pensada para usarse directamente en el código. En su lugar, debe utilizar un <xref:System.Diagnostics.DiagnosticSource> para enlazar el código de red. Consulte [la guía del usuario de DiagnosticSource](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 >
 > Microsoft no admite el uso de esta clase en una aplicación de producción en cualquier circunstancia.
 
