@@ -1,21 +1,23 @@
 ---
 title: Crear un servicio de datos de WCF en Visual Studio
-description: Aprenda a crear un servicio de datos de ejemplo que usa WCF Data Services para exponer una fuente de OData basada en una base de datos de ejemplo.
+description: Aprenda a crear un servicio de datos de ejemplo que usa Servicios de datos de WCF para exponer una fuente de OData basada en una base de datos de ejemplo.
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: f6e95ce58e055f0c745b781c664309e4ef91ffc6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04c91483587c8976e40584474ced2f5474ab89f4
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554018"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805771"
 ---
 # <a name="create-the-data-service"></a>Crear el servicio de datos
 
-En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Services para exponer una fuente Open Data Protocol (OData) basada en la base de datos de ejemplo Northwind. Esta tarea supone la realización de los siguientes pasos básicos:
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+En este tema, creará un servicio de datos de ejemplo que utiliza Servicios de datos de WCF para exponer una fuente Open Data Protocol (OData) basada en la base de datos de ejemplo Northwind. Esta tarea supone la realización de los siguientes pasos básicos:
 
 1. Cree una aplicación web ASP.NET.
 
@@ -49,7 +51,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
 
 3. Como nombre del modelo de datos, escriba `Northwind.edmx` .
 
-4. En el **Asistente para Entity Data Model**, seleccione **EF Designer desde base de datos**y, a continuación, haga clic en **siguiente**.
+4. En el **Asistente para Entity Data Model**, seleccione **EF Designer desde base de datos** y, a continuación, haga clic en **siguiente**.
 
 5. Conecte el modelo de datos a la base de datos mediante uno de los pasos siguientes y, a continuación, haga clic en **siguiente**:
 
@@ -76,7 +78,7 @@ En este tema, creará un servicio de datos de ejemplo que utiliza WCF Data Servi
 
 3. Como nombre del servicio, escriba `Northwind` .
 
-     Visual Studio crea los archivos de código y marcado XML para el nuevo servicio. De forma predeterminada, se abre la ventana del editor de código. En **Explorador de soluciones**, el servicio tiene el nombre Northwind con la extensión *. SVC.CS* o *. SVC. VB*.
+     Visual Studio crea los archivos de código y marcado XML para el nuevo servicio. De forma predeterminada, se abre la ventana del editor de código. En **Explorador de soluciones**, el servicio tiene el nombre Northwind con la extensión *. SVC. CS* o *. SVC. VB*.
 
 4. En el código para el servicio de datos, reemplace el comentario `/* TODO: put your data source class name here */` de la definición de la clase que define el servicio de datos por el tipo que es el contenedor de entidades del modelo de datos, que en este caso es `NorthwindEntities`. La definición de la clase debería ser como la siguiente:
 
@@ -102,6 +104,6 @@ Ha creado correctamente un nuevo servicio de datos que expone una fuente de ODat
 > [!div class="nextstepaction"]
 > [Acceder al servicio desde un explorador Web](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ADO.NET Entity Data Model herramientas](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

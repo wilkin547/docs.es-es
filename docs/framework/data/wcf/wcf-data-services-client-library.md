@@ -1,26 +1,28 @@
 ---
 title: Biblioteca cliente de Data Services de WCF
-description: Obtenga información acerca de cómo usar las bibliotecas de cliente de WCF Data Services para obtener acceso y cambiar los datos de una aplicación cliente de .NET Framework.
+description: Obtenga información acerca de cómo usar las bibliotecas de cliente de Servicios de datos de WCF para obtener acceso y cambiar los datos de una aplicación cliente de .NET Framework.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: d1554dd149e3d447a67cd2ef41aef9042e14fd06
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d8a0f869454ce24d847127c2097239886f3395b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204364"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805667"
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteca cliente de Data Services de WCF
 
-Cualquier aplicación puede interactuar con un servicio de datos basado en Open Data Protocol (OData) si puede enviar una solicitud HTTP y procesar la fuente de OData que devuelve un servicio de datos. Esta interoperabilidad le permite tener acceso a los servicios basados en OData desde una amplia gama de aplicaciones habilitadas para Web. WCF Data Services incluye bibliotecas de cliente que proporcionan una experiencia de programación más enriquecida cuando se usan fuentes de OData desde .NET Framework o aplicaciones basadas en Silverlight.  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Cualquier aplicación puede interactuar con un servicio de datos basado en Open Data Protocol (OData) si puede enviar una solicitud HTTP y procesar la fuente de OData que devuelve un servicio de datos. Esta interoperabilidad le permite tener acceso a los servicios basados en OData desde una amplia gama de aplicaciones habilitadas para Web. Servicios de datos de WCF incluye bibliotecas de cliente que proporcionan una experiencia de programación más enriquecida cuando se usan fuentes de OData desde .NET Framework o aplicaciones basadas en Silverlight.  
   
  Las dos clases principales de la biblioteca cliente son <xref:System.Data.Services.Client.DataServiceContext> y <xref:System.Data.Services.Client.DataServiceQuery%601>. La clase <xref:System.Data.Services.Client.DataServiceContext> encapsula las operaciones admitidas en un servicio de datos determinado. Aunque los servicios de OData no tienen estado, el contexto no es. Por lo tanto, puede utilizar la <xref:System.Data.Services.Client.DataServiceContext> clase para mantener el estado en el cliente entre las interacciones con el servicio de datos con el fin de admitir características como la administración de cambios. Esta clase también administra las identidades y realiza el seguimiento de los cambios. La clase <xref:System.Data.Services.Client.DataServiceQuery%601> representa una consulta en un conjunto de entidades concreto.  
   
- En esta sección se describe cómo usar las bibliotecas de cliente para obtener acceso a los datos de una aplicación cliente de .NET Framework y para cambiarlos. Para obtener más información sobre cómo usar la biblioteca de cliente de WCF Data Services con una aplicación basada en Silverlight, vea [WCF Data Services (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)). Hay disponibles otras bibliotecas de cliente que le permiten consumir una fuente de OData en otros tipos de aplicaciones. Para obtener más información sobre el SDK de OData, vea [el SDK de oData: código de ejemplo](https://www.odata.org/ecosystem/#sdk).
+ En esta sección se describe cómo usar las bibliotecas de cliente para obtener acceso a los datos de una aplicación cliente de .NET Framework y para cambiarlos. Para obtener más información sobre cómo usar la biblioteca de cliente de Servicios de datos de WCF con una aplicación basada en Silverlight, vea [servicios de datos de WCF (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)). Hay disponibles otras bibliotecas de cliente que le permiten consumir una fuente de OData en otros tipos de aplicaciones. Para obtener más información sobre el SDK de OData, vea [el SDK de oData: código de ejemplo](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="in-this-section"></a>En esta sección  
 
