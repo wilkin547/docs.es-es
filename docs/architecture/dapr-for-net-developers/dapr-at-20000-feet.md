@@ -3,12 +3,12 @@ title: Dapr a 20 000 pies
 description: Información general de alto nivel sobre qué es DAPR, qué hace y cómo funciona.
 author: robvet
 ms.date: 02/17/2021
-ms.openlocfilehash: 9f23e9822fd0d4b5eda648d2fc1359cce14cf59d
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 6e5d73f8c49ecb3eec518986e2af60c68195c0ab
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103624050"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881086"
 ---
 # <a name="dapr-at-20000-feet"></a>Dapr a 20 000 pies
 
@@ -210,7 +210,7 @@ gRPC es un marco de trabajo moderno y de alto rendimiento que evoluciona el prot
 - Comunicación dúplex completa bidireccional para enviar solicitudes de cliente y respuestas de servidor simultáneamente.
 - Streaming integrado que habilita las solicitudes y respuestas para transmitir conjuntos de datos grandes de forma asincrónica.
 
-Para obtener más información, consulte la [información general de gRPC](https://docs.microsoft.com/dotnet/architecture/cloud-native/grpc#what-is-grpc) en el libro electrónico de [arquitectura de aplicaciones .net de diseño Cloud-Native](https://docs.microsoft.com/dotnet/architecture/cloud-native/) .  
+Para obtener más información, consulte la [información general de gRPC](../cloud-native/grpc.md#what-is-grpc) en el libro electrónico de [arquitectura de aplicaciones .net de diseño Cloud-Native](../cloud-native/index.md) .  
 
 ## <a name="dapr-and-service-meshes"></a>DAPR y mallas de servicio
 
