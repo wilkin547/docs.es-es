@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: cbe4db51652e8bfd00c555b6ddd230e124a08360
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: e9fc2fccdb48ab8646cdbf02db14b6ec1b9842df
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103478469"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881164"
 ---
 # <a name="c-compiler-options"></a>Opciones del compilador de C#
 
@@ -45,6 +45,6 @@ Puede invocar el compilador de C# escribiendo el nombre de su archivo ejecutable
 
 En el caso de los proyectos de .NET Framework, también puede ejecutar *csc.exe* mediante la línea de comandos. Cada opción del compilador está disponible en dos formatos: **-option** y **/option**. En los proyectos web de .NET Framework, debe especificar las opciones para compilar el código subyacente en el archivo *web.config*. Para obtener más información, consulte [Elemento \<compiler>](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).
 
-Si usa la ventana **Símbolo del sistema para desarrolladores de Visual Studio**, todas las variables de entorno necesarias se establecen automáticamente. Para obtener información sobre cómo acceder a esta herramienta, vea [Símbolo del sistema para desarrolladores de Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
+Si usa la ventana **Símbolo del sistema para desarrolladores de Visual Studio**, todas las variables de entorno necesarias se establecen automáticamente. Para obtener información sobre cómo acceder a esta herramienta, vea [Símbolo del sistema para desarrolladores de Visual Studio](/visualstudio/ide/reference/command-prompt-powershell).
 
 El archivo ejecutable *csc.exe* normalmente se encuentra en la carpeta Microsoft.NET\Framework\\ *\<Version>* , en el directorio *Windows*. Su ubicación puede variar, según la configuración exacta de un equipo concreto. Si se instala más de una versión de .NET Framework en el equipo, encontrará varias versiones de este archivo. Para obtener más información sobre estas instalaciones, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).

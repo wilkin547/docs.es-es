@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: df96ce4cc2348637b262b7380832dde1e2ee3afb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605287"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876348"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 
@@ -51,7 +51,7 @@ Una clase base también puede implementar miembros de interfaz mediante el uso d
 
 Una interfaz tiene las propiedades siguientes:
 
-- Normalmente, una interfaz es como una clase base abstracta con solo miembros abstractos. Cualquier clase o estructura que implementa la interfaz debe implementar todos sus miembros. Opcionalmente, una interfaz puede definir implementaciones predeterminadas para algunos o todos sus miembros. Para obtener más información, vea [Métodos de interfaz predeterminados](../../tutorials/default-interface-methods-versions.md).
+- Normalmente, una interfaz es como una clase base abstracta con solo miembros abstractos. Cualquier clase o estructura que implementa la interfaz debe implementar todos sus miembros. Opcionalmente, una interfaz puede definir implementaciones predeterminadas para algunos o todos sus miembros. Para obtener más información, vea [Métodos de interfaz predeterminados](../../whats-new/tutorials/default-interface-methods-versions.md).
 - No se puede crear una instancia de una interfaz directamente. Sus miembros se implementan por medio de cualquier clase o estructura que implementa la interfaz.
 - Una clase o estructura puede implementar varias interfaces. Una clase puede heredar una clase base y también implementar una o varias interfaces.
 

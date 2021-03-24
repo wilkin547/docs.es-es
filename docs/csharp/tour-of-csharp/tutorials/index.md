@@ -3,12 +3,12 @@ title: 'Introducción a C#: tutoriales interactivos'
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
 ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 3b5da67458d665946b42bf49ceb3799473354567
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ed869271cd6f4ec13f769f46d41aefae9e1dad8d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626018"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872423"
 ---
 # <a name="introduction-to-c"></a>Introducción a C\#
 
@@ -50,6 +50,6 @@ En la lección [Colección de listas](list-collection.yml) se ofrece informació
 
 En este tutorial se asume que ha completado las lecciones que se muestran anteriormente.
 
-## <a name="101-linq-samples"></a>[101 ejemplos de LINQ](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+## <a name="101-linq-samples"></a>[101 ejemplos de LINQ](https://github.com/dotnet/try-samples/tree/main/101-linq-samples)
 
 Este ejemplo requiere la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/main/README.md#setup). Una vez que instale la herramienta y clone el repositorio [try-samples](https://github.com/dotnet/try-samples), puede aprender Language Integrated Query (LINQ) mediante un conjunto de 101 ejemplos que puede ejecutar de forma interactiva. Puede descubrir diferentes maneras de consultar, explorar y transformar secuencias de datos.

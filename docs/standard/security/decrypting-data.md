@@ -1,7 +1,7 @@
 ---
 title: Descifrar datos
 description: Obtenga información acerca de cómo descifrar datos en .NET mediante un algoritmo simétrico o asimétrico.
-ms.date: 07/16/2020
+ms.date: 03/22/2021
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: cf286eeca8a9372c6532c56701e4775d5e09d786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14d8b6185c1c5b3aaee4f2041f98c500f2d3c313
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831109"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027914"
 ---
 # <a name="decrypting-data"></a>Descifrar datos
 
@@ -30,12 +30,14 @@ En el ejemplo siguiente se muestra cómo crear una nueva instancia de la clase d
 
 ```vb
 Dim aes As Aes = Aes.Create()
-Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
+Dim cryptStream As New CryptoStream(
+    myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 ```
 
 ```csharp
 Aes aes = Aes.Create();
-CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
+CryptoStream cryptStream = new CryptoStream(
+    myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
 En el ejemplo siguiente se muestra todo el proceso de crear una secuencia, descifrarla, leer en ella y cerrarla. Se crea un objeto de secuencia de archivos que lee un archivo denominado *TestData.txt*. A continuación, el flujo de archivo se descifra con la clase **CryptoStream** y la clase **AES** . En este ejemplo se especifica el valor de clave que se usa en el ejemplo de cifrado simétrico para [cifrar datos](encrypting-data.md). No se muestra el código necesario para cifrar y transferir estos valores.
@@ -81,7 +83,7 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , RSAEncryptionPadding.Pkcs1);
 
 - [Generar claves para cifrado y descifrado](generating-keys-for-encryption-and-decryption.md)
 - [Cifrar datos](encrypting-data.md)
-- [servicios criptográficos](cryptographic-services.md)
+- [Servicios criptográficos](cryptographic-services.md)
 - [Modelo de criptografía](cryptography-model.md)
 - [Criptografía multiplataforma](cross-platform-cryptography.md)
 - [Vulnerabilidades de temporalización con descifrado simétrico en modo CBC al usar el relleno](vulnerabilities-cbc-mode.md)
