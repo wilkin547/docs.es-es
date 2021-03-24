@@ -2,12 +2,12 @@
 title: Publicación de aplicaciones
 description: Obtenga más información sobre las formas de publicar una aplicación de .NET. .NET puede publicar aplicaciones multiplataforma o específicas de una plataforma. Puede publicar una aplicación como independiente o como dependiente de la plataforma. Cada modo afecta a la forma en la que un usuario ejecuta la aplicación.
 ms.date: 02/05/2021
-ms.openlocfilehash: 3f10aae139626bd2b09f71b32eaf2d680890e100
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca0fa4ff5e17a3fa4c636604ae81b63ffbbc99f6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99699784"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874295"
 ---
 # <a name="net-application-publishing-overview"></a>Información general sobre la publicación de aplicaciones de .NET
 
@@ -129,7 +129,7 @@ Como tiene que publicar la aplicación para cada plataforma, sabe dónde se ejec
 Dado que la aplicación incluye el entorno de ejecución de .NET y todas las dependencias de la aplicación, el tamaño de descarga y el espacio de disco duro necesario es mayor que en el caso de una versión [dependiente de la plataforma](#publish-framework-dependent).
 
   > [!TIP]
-  > Puede reducir el tamaño de la implementación en sistemas Linux en 28 MB aproximadamente con el [*modo invariable global*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) de .NET. Esto obliga a la aplicación a tratar todas las referencias culturales como la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  > Puede reducir el tamaño de la implementación en sistemas Linux en 28 MB aproximadamente con el [*modo invariable global*](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md) de .NET. Esto obliga a la aplicación a tratar todas las referencias culturales como la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
   > [!TIP]
   > Hay una [característica de recorte en versión preliminar](trim-self-contained.md) que puede ayudar a reducir todavía más el tamaño de su desarrollo.
