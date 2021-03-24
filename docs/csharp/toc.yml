@@ -913,7 +913,9 @@ items:
                 displayName: 'value types, simple types'
               - name: Tipos numéricos integrales
                 href: language-reference/builtin-types/integral-numeric-types.md
-                displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
+                displayName: 'sbyte, byte, short, ushort, int, uint, nint, nuint, long, ulong, integer, literal'
+              - name: Tipos de enteros nativos nint y nuint
+                href: language-reference/builtin-types/nint-nuint.md
               - name: Tipos numéricos de punto flotante
                 href: language-reference/builtin-types/floating-point-numeric-types.md
                 displayName: 'float, decimal, double, rational, real, literal'
@@ -944,6 +946,8 @@ items:
               - name: Tipos de referencia integrados
                 displayName: 'object, delegate, dynamic, string'
                 href: language-reference/builtin-types/reference-types.md
+              - name: registro
+                href: language-reference/builtin-types/record.md
               - name: clase
                 href: language-reference/keywords/class.md
               - name: interfaz
@@ -1360,7 +1364,7 @@ items:
             displayName: 'ResponseFiles, @, NoLogo, nologo, NoConfig, noconfig'
             href: language-reference/compiler-options/miscellaneous.md
           - name: Opciones avanzadas
-            displayName: 'MainEntryPoint, StartupObject, main, PdbFile, pdb, PathMap, pathmap, ErrorReport, errorreport, ApplicationConfiguration, appconfig, AdditionalLibPaths, lib, GenerateFullPaths, fullpath, PreferredUILang, preferreduilang, BaseAddress, baseaddress, ChecksumAlgorithm, checksumalgorithm, CodePage, codepage, Utf8Output, utf8output, FileAlignment, filealign, ErrorEndLocation, errorendlocation, NoStandardLib, nostdlib, SubsystemVersion, subsystemversion, ModuleAssemblyName, moduleassemblyname'
+            displayName: 'MainEntryPoint, StartupObject, main, PdbFile, pdb, PathMap, pathmap, ApplicationConfiguration, appconfig, AdditionalLibPaths, lib, GenerateFullPaths, fullpath, PreferredUILang, preferreduilang, BaseAddress, baseaddress, ChecksumAlgorithm, checksumalgorithm, CodePage, codepage, Utf8Output, utf8output, FileAlignment, filealign, ErrorEndLocation, errorendlocation, NoStandardLib, nostdlib, SubsystemVersion, subsystemversion, ModuleAssemblyName, moduleassemblyname'
             href: language-reference/compiler-options/advanced.md
       - name: Errores del compilador
         href: language-reference/compiler-messages/index.md
