@@ -3,12 +3,12 @@ title: Automatizar el entrenamiento del modelo con la CLI de ML.NET
 description: Descubra cómo usar la herramienta de la CLI de ML.NET para entrenar automáticamente el mejor modelo desde la línea de comandos.
 ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0b230e4a517b6493abdb1ec975776fd286b654e3
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589672"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231412"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizar el entrenamiento del modelo con la CLI de ML.NET
 
@@ -27,16 +27,16 @@ La CLI de ML.NET es una [herramienta de .NET Core](../core/tools/global-tools.md
 
 Tal y como se muestra en la siguiente imagen, es fácil generar un modelo de ML.NET de alta calidad (archivo .zip del modelo serializado) además del código de C# de ejemplo para ejecutar o calificar dicho modelo. Además, el código de C# para crear o entrenar dicho modelo también se genera automáticamente para que pueda investigar e iterar en el algoritmo y la configuración que se usan para ese "mejor modelo" generado.
 
-![imagen](media/automate-training-with-cli/cli-high-level-process.png "Motor de AutoML trabajando dentro de la CLI de ML.NET")
+![Motor de AutoML trabajando dentro de la CLI de ML.NET](media/automate-training-with-cli/cli-high-level-process.png)
 
 Puede generar dichos recursos desde sus propios conjuntos de datos sin necesidad de codificarlos usted, lo cual mejora también su productividad incluso si ya conoce ML.NET.
 
 Actualmente, las tareas de Machine Learning compatibles con la CLI de ML.NET son:
 
-- Clasificación (binaria y multiclase)
+- clasificación
 - Regresión
 - recomendación
-- Futuro: otras tareas de aprendizaje automático, como la clasificación de imágenes, la clasificación, la detección de anomalías y la agrupación en clústeres
+- clasificación de imágenes
 
 Ejemplo de uso (escenario de clasificación):
 
@@ -44,7 +44,7 @@ Ejemplo de uso (escenario de clasificación):
 mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![imagen](media/automate-training-with-cli/mlnet-classification-powershell.gif)
+![Clasificación de ML.NET desde la línea de comandos](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 Se puede ejecutar de la misma manera en *Windows PowerShell*, *macOS/Linux bash* o *Windows CMD*. Sin embargo, Autocompletar tabular (sugerencias de parámetro) no funcionará en *Windows CMD*.
 
@@ -70,9 +70,9 @@ Aquí se resumen esas métricas agrupadas por tareas de ML para que pueda compre
 
 ### <a name="metrics-for-classification-models"></a>Métricas para modelos de clasificación
 
-A continuación, se muestra la lista de métricas de clasificación para los cinco principales modelos encontrados por la CLI:
+En la imagen siguiente se muestra la lista de métricas de clasificación para los cinco modelos principales encontrados por la CLI:
 
-![imagen](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![Métricas de clasificación para los cinco modelos principales](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
  La precisión es una métrica popular en los problemas de clasificación, pero no siempre es la mejor métrica para seleccionar el mejor modelo, tal y como se explica en las siguientes referencias. Hay casos donde es necesario evaluar la calidad del modelo con métricas adicionales.
 
@@ -82,9 +82,9 @@ Para explorar y comprender las métricas que son el resultado de la CLI, consult
 
 Un modelo de regresión se ajusta bien a los datos si las diferencias entre los valores observados y los valores de predicción del modelo son pequeñas y no están sesgadas. La regresión se puede evaluar con determinadas métricas.
 
-Verá una lista similar de métricas de los cinco principales modelos de calidad mejor encontrados por la CLI. En este caso concreto relacionado con una tarea de ML de regresión:
+Verá una lista similar de métricas para los cinco modelos de calidad principales encontrados por la CLI, pero en este caso, están relacionados con una tarea de ML de regresión:
 
-![imagen](media/automate-training-with-cli/cli-regression-metrics.png)
+![Métricas de regresión para los cinco modelos principales](media/automate-training-with-cli/cli-regression-metrics.png)
 
 Para explorar y comprender las métricas que son el resultado de la CLI, consulte [Métricas de evaluación de regresión](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
 

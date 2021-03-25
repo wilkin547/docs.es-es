@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 3728778b31a4b4adc51933e8fdc6287f28e03d83
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 2d522e9357fb6da7b8d66a663e99e8858c9dd521
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916707"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480383"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados con el puntero (referencia de C#)
 
@@ -40,7 +40,7 @@ Puede usar los siguientes operadores para trabajar con punteros:
 Para obtener información sobre los tipos de punteros, vea [Tipos de puntero](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 > [!NOTE]
-> Cualquier operación con punteros requiere un contexto [unsafe](../keywords/unsafe.md). El código que contiene bloques no seguros debe compilarse con la opción del compilador [`-unsafe`](../compiler-options/unsafe-compiler-option.md).
+> Cualquier operación con punteros requiere un contexto [unsafe](../keywords/unsafe.md). El código que contenga bloques no seguros se tendrá que compilar con la opción del compilador [**AllowUnsafeBlocks**](../compiler-options/language.md#allowunsafeblocks).
 
 ## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a> Operador Address-of &amp;
 

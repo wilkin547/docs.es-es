@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: eff414411c47ec83177ae6a09de4a96f47af6313
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 11900aa1ce5296f1cf0e9c271c3a7a45ddba5066
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558594"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480327"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 
@@ -35,7 +35,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 
 1. Inicie Visual Studio.
 
-2. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.
+2. En el menú **Archivo** , elija **Nuevo** y haga clic en **Proyecto**.
 
 3. En el panel **Plantillas instaladas**, expanda **Visual Basic** o **Visual C#** , expanda **Office** y, después, haga clic en el año de la versión del producto de Office.
 
@@ -115,7 +115,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Estas adiciones muestran otra característica de C#: el tratamiento de valores `Object` devueltos por hosts COM, como Office, como si tuvieran un tipo [dynamic](../../language-reference/builtin-types/reference-types.md). Esto sucede automáticamente cuando **Incrustar tipos de interoperabilidad** se establece en su valor predeterminado `True` o, de igual modo, cuando la opción del compilador [-link](../../language-reference/compiler-options/link-compiler-option.md) hace referencia al ensamblado. El tipo `dynamic` permite el enlace en tiempo de ejecución, ya disponible en Visual Basic, y evita la conversión explícita que se requiere en C# 3.0 y versiones anteriores del lenguaje.
+     Estas adiciones muestran otra característica de C#: el tratamiento de valores `Object` devueltos por hosts COM, como Office, como si tuvieran un tipo [dynamic](../../language-reference/builtin-types/reference-types.md). Esto sucede automáticamente cuando **Incrustar tipos de interoperabilidad** se establece en su valor predeterminado (`True`), o bien cuando la opción del compilador [**EmbedInteropTypes**](../../language-reference/compiler-options/inputs.md#embedinteroptypes) hace referencia al ensamblado. El tipo `dynamic` permite el enlace en tiempo de ejecución, ya disponible en Visual Basic, y evita la conversión explícita que se requiere en C# 3.0 y versiones anteriores del lenguaje.
 
      Por ejemplo, `excelApp.Columns[1]` devuelve `Object` y `AutoFit` es un método [Range](<xref:Microsoft.Office.Interop.Excel.Range>) de Excel. Sin `dynamic`, debe convertir el objeto devuelto por `excelApp.Columns[1]` como una instancia de `Range` antes de llamar al método `AutoFit`.
 

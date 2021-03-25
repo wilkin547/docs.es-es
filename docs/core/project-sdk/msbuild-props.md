@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9cd387a4a8ad7f5b31a797d4d019a53799d926ff
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432707"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604767"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -409,6 +409,9 @@ De forma predeterminada, el [análisis de calidad del código de .NET](../../fun
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
+
+> [!NOTE]
+> Esta propiedad se aplica específicamente a los analizadores integrados en el SDK de .NET 5+. No se debe usar cuando se instala un paquete NuGet de análisis de código.
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 

@@ -8,23 +8,26 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 4b28ee17f4be2b933373cce0d3670cbfa9a12895
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 1d80cb2391a94c21360117c8217ecc4514fd666e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513047"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190273"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Procedimiento para implementar una clase ligera con propiedades autoimplementadas (Guía de programación de C#)
 
 En este ejemplo se muestra cómo crear una clase ligera inmutable que solo sirve para encapsular un conjunto de propiedades autoimplementadas. Use este tipo de construcción en lugar de un struct cuando deba utilizar una semántica de tipo de referencia.
 
-Puede crear una propiedad inmutable de dos maneras:
+Puede hacer que una propiedad sea inmutable de estas maneras:
 
-- Puede declarar el descriptor de acceso [set](../../language-reference/keywords/set.md) como [private](../../language-reference/keywords/private.md).  La propiedad solo se puede establecer dentro del tipo, pero es inmutable a los consumidores.
+- Declare solo el descriptor de acceso [get](../../language-reference/keywords/get.md), que hace que la propiedad sea inmutable en cualquier lugar excepto en el constructor del tipo.
+
+- Declare un descriptor de acceso [init](../../language-reference/keywords/init.md) en lugar de `set`, que hace que la propiedad se pueda establecer solo en el constructor o mediante un [inicializador de objeto](object-and-collection-initializers.md).
+
+- Declare el descriptor de acceso [set](../../language-reference/keywords/set.md) como [private](../../language-reference/keywords/private.md).  La propiedad solo se puede establecer dentro del tipo, pero es inmutable para los consumidores.
 
   Cuando se declara un descriptor de acceso `set` privado, no se puede usar un inicializador de objeto para inicializar la propiedad. Se debe utilizar un constructor o un método factory.
-- Puede declarar solo el descriptor de acceso [get](../../language-reference/keywords/get.md), que hace que la propiedad sea inmutable en cualquier lugar excepto en el constructor del tipo.
 
 En el ejemplo siguiente se muestra cómo una propiedad con solo el descriptor de acceso get es distinta de una con get y un conjunto privado.
 

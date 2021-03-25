@@ -4,12 +4,12 @@ description: Muestra cómo instalar el SDK o el entorno de ejecución de .NET en
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 741933b5ca6f01d73b388675fe7f8a43c4efb0f9
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 0d91f5049c92df240e2c3e26bc67952abe17fedc
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970937"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190104"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-with-snap"></a>Instalación del SDK y el entorno de ejecución de .NET con un snap
 
@@ -87,6 +87,25 @@ sudo snap alias dotnet-runtime-50.dotnet dotnet
 ```
 
 El comando tiene el formato `sudo snap alias {package}.{command} {alias}`. Puede elegir cualquier nombre de `{alias}` que prefiera. Por ejemplo, puede asignar un nombre al comando después de la versión específica instalada por el snap `sudo snap alias dotnet-runtime-50.dotnet dotnet50`. Cuando use el comando `dotnet50`, invocará una versión específica de .NET. Aun así, elegir un alias diferente no es compatible con la mayoría de los tutoriales y ejemplos, donde se espera que esté disponible un comando `dotnet`.
+
+## <a name="export-the-install-location"></a>Exportación de la ubicación de instalación
+
+Las herramientas suelen usar la variable de entorno `DOTNET_ROOT` para determinar dónde está instalado .NET. Cuando .NET se instala mediante Snap, esta variable de entorno no está configurada. Debe configurar la variable de entorno *DOTNET_ROOT* en el perfil. La ruta a Snap usa el siguiente formato: `/snap/{package}/current`. Por ejemplo, si ha instalado el ajuste `dotnet-sdk`, use el comando siguiente para establecer la variable de entorno en la ubicación de .NET:
+
+```bash
+export DOTNET_ROOT=/snap/dotnet-sdk/current
+```
+
+> [!TIP]
+> El comando `export` anterior solo establece la variable de entorno para la sesión de terminal en la que se ha ejecutado.
+>
+> Puede editar el perfil del shell para agregar los comandos de forma permanente. Hay una serie de shells distintos disponibles para Linux, y cada uno de ellos tiene un perfil diferente. Por ejemplo:
+>
+> - **Shell de Bash**: *~/.bash_profile*, *~/.bashrc*
+> - **Shell de Korn**: *~/.kshrc* or *.profile*
+> - **Shell de Z**: *~/.zshrc* or *.zprofile*
+>
+> Edite el archivo de código fuente adecuado para el shell y agregue `export DOTNET_ROOT=/snap/dotnet-sdk/current`.
 
 ## <a name="tlsssl-certificate-errors"></a>Errores de certificado TLS/SSL
 

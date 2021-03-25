@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 961c20c091a4a6d7da421d94500abd41d2d60a5b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dddc60b99a55762ae26a470fcd6b6a0e9b98bcf8
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160507"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480356"
 ---
 # <a name="define-c-reference"></a>#define (Referencia de C#)
 
@@ -31,7 +31,7 @@ Usa `#define` para definir un símbolo. Si usa el símbolo como expresión que s
   
  Es posible definir un símbolo, pero no asignar un valor a un símbolo. La directiva `#define` debe aparecer en el archivo antes de que use cualquier instrucción que tampoco sea una directiva del preprocesador.  
   
- También se puede definir un símbolo con la opción del compilador [-define](../compiler-options/define-compiler-option.md). La definición de un símbolo se puede anular mediante [#undef](./preprocessor-undef.md).  
+ También se puede definir un símbolo con la opción del compilador [**DefineConstants**](../compiler-options/language.md#defineconstants). La definición de un símbolo se puede anular mediante [#undef](./preprocessor-undef.md).  
   
  Un símbolo definido mediante `-define` o `#define` no debe entrar en conflicto con una variable del mismo nombre. Es decir, no se debería pasar un nombre de variable a una directiva de preprocesador ni evaluar solo un símbolo mediante una directiva de preprocesador.  
   

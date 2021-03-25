@@ -1,20 +1,20 @@
 ---
 title: 'Visualización de argumentos de la línea de comandos: Guía de programación de C#'
 description: Aprenda a mostrar argumentos de la línea de comandos. Vea un ejemplo de código y examine los recursos adicionales disponibles.
-ms.date: 07/20/2015
+ms.date: 03/08/2021
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 717e27c23724e63c03a38b028ef99dc6530b4745
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7c3e8d7f6ad2a599308057e996808509e70b7508
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195485"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480265"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Visualización de argumentos de la línea de comandos (Guía de programación de C#)
 
-El acceso a los argumentos proporcionados para un archivo ejecutable en la línea de comandos se puede realizar a través de un parámetro opcional para `Main`. Los argumentos se proporcionan en forma de una matriz de cadenas. Cada elemento de la matriz contiene un argumento. Se quita el espacio en blanco entre los argumentos. Por ejemplo, considere estas invocaciones de línea de comandos de un ejecutable ficticio:  
+Los argumentos proporcionados para un archivo ejecutable en la línea de comandos son accesibles en [instrucciones de nivel superior](top-level-statements.md) o mediante un parámetro opcional para `Main`. Los argumentos se proporcionan en forma de una matriz de cadenas. Cada elemento de la matriz contiene un argumento. Se quita el espacio en blanco entre los argumentos. Por ejemplo, considere estas invocaciones de línea de comandos de un ejecutable ficticio:  
   
 |Entrada en la línea de comandos|Matriz de cadenas que se pasa a Main|  
 |----------------------------|-------------------------------------|  
@@ -34,6 +34,5 @@ El acceso a los argumentos proporcionados para un archivo ejecutable en la líne
 ## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
-- [Compilar la línea de comandos con csc.exe](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [Main() y argumentos de línea de comandos](./index.md)
+- [Main() y argumentos de la línea de comandos](./index.md)
 - [Valores devueltos de Main()](./main-return-values.md)

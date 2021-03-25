@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: dc3e235db49279691203a0db4d124239fb972c69
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: a3f72719ba4ce722aef33bbd5de338d3d06b2aa0
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065244"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480377"
 ---
 # <a name="if-c-reference"></a>#if (referencia de C#)
 
@@ -34,7 +34,7 @@ Una directiva condicional que empieza con una directiva `#if` debe terminar de f
 
 `#define` permite definir un símbolo. Si luego se usa el símbolo como la expresión pasada a la directiva `#if`, la expresión se evalúa como `true`.
 
-También se puede definir un símbolo con la opción del compilador [-define](../compiler-options/define-compiler-option.md). La definición de un símbolo se puede anular mediante [#undef](preprocessor-undef.md).
+También se puede definir un símbolo con la opción del compilador [**DefineConstants**](../compiler-options/language.md#defineconstants). La definición de un símbolo se puede anular mediante [#undef](preprocessor-undef.md).
 
 Un símbolo definido con `-define` o `#define` no debe entrar en conflicto con una variable del mismo nombre. Es decir, un nombre de variable no debe pasarse a una directiva de preprocesador y un símbolo solo puede ser evaluado por una directiva de preprocesador.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 6c2c49a9fd55c406b69c02586a9b0e4a1d16ccd4
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303028"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479929"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
 
@@ -31,7 +31,7 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
 1. Inicie Visual Studio.
 
-2. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**. Aparecerá el cuadro de diálogo **Nuevo proyecto** .
+2. En el menú **Archivo** , elija **Nuevo** y haga clic en **Proyecto**. Aparecerá el cuadro de diálogo **Nuevo proyecto** .
 
 3. En el panel **Plantillas instaladas**, expanda **Visual C#** y haga clic en **Windows**.
 
@@ -95,7 +95,7 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4, y versiones posteriores, convierte automáticamente el valor `Object` devuelto en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [-link](../../language-reference/compiler-options/link-compiler-option.md) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.
+     En C# 4, y versiones posteriores, el valor devuelto `Object` se convierte automáticamente en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [**EmbedInteropTypes**](../../language-reference/compiler-options/inputs.md#embedinteroptypes) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.
 
 ## <a name="to-run-the-project"></a>Para ejecutar el proyecto
 
@@ -149,7 +149,7 @@ Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y M
 
 3. Si no ve la ventana **Propiedades**, presione **F4**.
 
-4. Busque **Incrustar tipos de interoperabilidad** en la lista de propiedades y cambie su valor a **False**. Del mismo modo, se puede compilar mediante el uso de la opción del compilador [-reference](../../language-reference/compiler-options/reference-compiler-option.md) en lugar de [-link](../../language-reference/compiler-options/link-compiler-option.md) en un símbolo del sistema.
+4. Busque **Incrustar tipos de interoperabilidad** en la lista de propiedades y cambie su valor a **False**. Del mismo modo, se puede compilar mediante la [opción del compilador **References**](../../language-reference/compiler-options/inputs.md#references) en lugar de [**EmbedInteropTypes**](../../language-reference/compiler-options/inputs.md#embedinteroptypes) en un símbolo del sistema.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Para agregar formato adicional a la tabla
 

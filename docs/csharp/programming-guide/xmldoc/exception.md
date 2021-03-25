@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 22a28f3fe6de5a0db9aea0f1fd7963d4e6fcee05
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 37d119e3cde115104d149d8f35b8937efddd70d4
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381741"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479116"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (guía de programación de C#)
 
@@ -40,7 +40,7 @@ ms.locfileid: "87381741"
 
 La etiqueta `<exception>` le permite especificar qué excepciones se pueden producir. Esta etiqueta se puede aplicar a definiciones de métodos, propiedades, eventos e indizadores.
 
-Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
+Realice la compilación con [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) para procesar los comentarios de documentación en un archivo.
 
 Para más información sobre el control de excepciones, vea [Excepciones y control de excepciones](../exceptions/index.md).
 

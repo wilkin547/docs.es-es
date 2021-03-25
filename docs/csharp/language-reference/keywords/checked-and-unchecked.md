@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 0ab30eb238a4db21233da612d132dfcbdb9e8895
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0121090265881bfa8287e2f9e83ad4b886bf17c1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160520"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477488"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked y Unchecked (Referencia de C#)
 
@@ -33,7 +33,7 @@ Las instrucciones de C# se pueden ejecutar en un contexto comprobado o no compro
   
 - Conversiones numéricas explícitas entre tipos integrales o de `float` o `double` a un tipo integral.  
   
- Si no se especifica `checked` ni `unchecked`, el contexto predeterminado para expresiones no constantes (expresiones que se evalúan en tiempo de ejecución) se define por medio del valor de la opción del compilador [/checked](../compiler-options/checked-compiler-option.md). De forma predeterminada, el valor de esa opción se desactiva y se ejecutan operaciones aritméticas en un contexto sin comprobar. 
+ Si no se especifica `checked` ni `unchecked`, el contexto predeterminado para expresiones no constantes (las que se evalúan en tiempo de ejecución) se define por medio del valor de la opción del compilador [**CheckForOverflowUnderflow**](../compiler-options/language.md#checkforoverflowunderflow). De forma predeterminada, el valor de esa opción se desactiva y se ejecutan operaciones aritméticas en un contexto sin comprobar. 
 
  Para expresiones constantes (expresiones que se pueden evaluar completamente en tiempo de compilación), el contexto predeterminado se comprueba siempre. A menos que se coloque de forma explícita una expresión constante en un contexto sin comprobar, los desbordamientos que se producen durante la evaluación de tiempo de compilación de la expresión dan lugar a errores en tiempo de compilación.
   

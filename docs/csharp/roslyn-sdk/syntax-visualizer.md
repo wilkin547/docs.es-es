@@ -3,12 +3,12 @@ title: Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 description: El Visualizador de sintaxis proporciona una herramienta visual para explorar los modelos que genera el SDK de .NET Compiler Platform para el código.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: a911a99e78ad5a5f4c6771b91a3c541b1812d67c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 43c69bce93db490fccc3500784623f5736ed935d
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167579"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605430"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código con el Visualizador de sintaxis Roslyn en Visual Studio
 
@@ -93,7 +93,7 @@ El Visualizador de sintaxis permite realizar una inspección rudimentaria de sí
 
 La cuadrícula de propiedades del visualizador se actualiza tal como se muestra en la figura siguiente: El símbolo de la expresión es un símbolo **SynthesizedIntrinsicOperatorSymbol** con **Kind = Method**.
 
-![Propiedades de símbolo](media/syntax-visualizer/symbol-properties.png)
+![Propiedades de símbolo en Syntax Visualizer](media/syntax-visualizer/symbol-properties.png)
 
 Intente **View TypeSymbol (if any)** [Ver TypeSymbol (si existe)] para el mismo nodo **AddExpression**. La cuadrícula de propiedades del visualizador se actualiza como se muestra en esta imagen, que indica que el tipo de la expresión seleccionada es `Int32`.
 
@@ -123,7 +123,7 @@ End Module
 
 Este código incluye un alias llamado `C` que se asigna al tipo `System.Console` en la parte superior del archivo y usa este alias en `Main()`. Seleccione el uso de este alias, `C` en `C.WriteLine()`, dentro del método `Main()`. El visualizador selecciona el nodo **IdentifierName** correspondiente en el visualizador. Haga clic con el botón derecho en este nodo y elija **View Symbol (if any)** [Ver símbolo (si existe)]. La cuadrícula de propiedades indica que este identificador está enlazado al tipo `System.Console` tal como se muestra en esta imagen:
 
-![Propiedades de símbolo](media/syntax-visualizer/symbol-visual-basic.png)
+![Propiedades del símbolo "C" en Syntax Visualizer](media/syntax-visualizer/symbol-visual-basic.png)
 
 Intente **View AliasSymbol (if any)** [Ver AliasSymbol (si existe)] para el mismo nodo **IdentifierName**. La cuadrícula de propiedades indica que el identificador es un alias con el nombre `C` que está enlazado al destino `System.Console`. En otras palabras, la cuadrícula de propiedades proporciona información sobre el **AliasSymbol** correspondiente al identificador `C`.
 

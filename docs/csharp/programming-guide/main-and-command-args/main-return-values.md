@@ -1,28 +1,40 @@
 ---
 title: 'Valores devueltos de Main(): Guía de programación de C#'
 description: Aprenda sobre los valores devueltos de Main(). Vea ejemplos de código y código generado por compiladores, y examine los recursos adicionales disponibles.
-ms.date: 08/02/2017
+ms.date: 03/11/2021
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 2e1df125d677cd6b845b516173117ef0190a7580
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6f4001ecd490d5627d3a1ec74ecf7d593451e104
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104042"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190364"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores devueltos de Main() (Guía de programación de C#)
 
-El método `Main` puede devolver el valor `void`:
+Puede devolver un objeto `int` desde el método `Main` si lo define de una de las siguientes maneras:
 
- [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+| Código del método `Main`             | Signatura de `Main`                             |
+|--------------------------------|----------------------------------------------|
+| No se usa `args` ni `await`    | `static int Main()`                          |
+| Se usa `args`, no se usa `await` | `static int Main(string[] args)`             |
+| No se usa `args`, se usa `await` | `static async Task<int> Main()`              |
+| Se usan `args` y `await`        | `static async Task<int> Main(string[] args)` |
 
-También puede devolver un valor `int`:
+Si el valor devuelto de `Main` no se usa, la devolución de `void` o `Task` permite que el código sea ligeramente más sencillo.
 
- [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+| Código del método `Main`             | Signatura de `Main`                        |
+|--------------------------------|-----------------------------------------|
+| No se usa `args` ni `await`    | `static void Main()`                    |
+| Se usa `args`, no se usa `await` | `static void Main(string[] args)`       |
+| No se usa `args`, se usa `await` | `static async Task Main()`              |
+| Se usan `args` y `await`        | `static async Task Main(string[] args)` |
 
-Si el valor devuelto de `Main` no se usa, la devolución de `void` permite contar con un código ligeramente más simple. En cambio, devolver un valor entero permite que el programa comunique información de estado a otros programas o scripts que invocan el archivo ejecutable. El valor devuelto de `Main` se trata como el código de salida para el proceso. Si se devuelve `void` de `Main`, el código de salida será implícitamente `0`. En el ejemplo siguiente se muestra cómo se puede acceder al valor devuelto de `Main`.
+Pero, si se devuelve `int` o `Task<int>`, el programa puede comunicar información de estado a otros programas o scripts que invocan el archivo ejecutable.
+
+En el ejemplo siguiente se muestra cómo se puede acceder al código de salida para el proceso.
 
 ## <a name="example"></a>Ejemplo
 

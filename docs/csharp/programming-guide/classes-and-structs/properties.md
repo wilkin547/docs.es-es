@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 6079fc5d2611ed1111d39d3f39e4c91817db528f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863947"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189883"
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 
@@ -23,9 +23,9 @@ Una propiedad es un miembro que proporciona un mecanismo flexible para leer, esc
   
 - Las propiedades permiten que una clase exponga una manera pública de obtener y establecer valores, a la vez que se oculta el código de implementación o verificación.  
   
-- Para devolver el valor de la propiedad se usa un descriptor de acceso de propiedad [get](../../language-reference/keywords/get.md), mientras que para asignar un nuevo valor se emplea un descriptor de acceso de propiedad [set](../../language-reference/keywords/set.md). Estos descriptores de acceso pueden tener diferentes niveles de acceso. Para más información, vea [Restringir la accesibilidad del descriptor de acceso](./restricting-accessor-accessibility.md).  
+- Para devolver el valor de la propiedad se usa un descriptor de acceso de propiedad [get](../../language-reference/keywords/get.md), mientras que para asignar un nuevo valor se emplea un descriptor de acceso de propiedad [set](../../language-reference/keywords/set.md). En C# 9 y versiones posteriores, se usa un descriptor de acceso de propiedad [init](../../language-reference/keywords/init.md) para asignar un nuevo valor solo durante la construcción del objeto. Estos descriptores de acceso pueden tener diferentes niveles de acceso. Para más información, vea [Restringir la accesibilidad del descriptor de acceso](./restricting-accessor-accessibility.md).  
   
-- La palabra clave [value](../../language-reference/keywords/value.md) se usa para definir el valor que va a asignar el descriptor de acceso `set`.  
+- La palabra clave [value](../../language-reference/keywords/value.md) se usa para definir el valor que va a asignar el descriptor de acceso `set` o `init`.  
 - Las propiedades pueden ser *de lectura y escritura* (en ambos casos tienen un descriptor de acceso `get` y `set`), *de solo lectura* (tienen un descriptor de acceso `get`, pero no `set`) o *de solo escritura* (tienen un descriptor de acceso `set`, pero no `get`). Las propiedades de solo escritura son poco frecuentes y se suelen usar para restringir el acceso a datos confidenciales.
 
 - Las propiedades simples que no necesitan ningún código de descriptor de acceso personalizado se pueden implementar como definiciones de cuerpos de expresión o como [propiedades implementadas automáticamente](./auto-implemented-properties.md).
@@ -54,7 +54,7 @@ En el ejemplo siguiente se muestra este patrón. En este ejemplo, la clase `Time
 
 En algunos casos, los descriptores de acceso de propiedad `get` y `set` simplemente asignan un valor a un campo de respaldo o recuperan un valor de él sin incluir ninguna lógica adicional. Mediante las propiedades implementadas automáticamente, puede simplificar el código y conseguir que el compilador de C# le proporcione el campo de respaldo de forma transparente.
 
-Si una propiedad tiene un descriptor de acceso `get` y `set`, ambos deben ser implementados automáticamente. Una propiedad implementada automáticamente se define mediante las palabras clave `get` y `set` sin proporcionar ninguna implementación. El ejemplo siguiente repite el anterior, salvo que `Name` y `Price` son propiedades implementadas automáticamente. Tenga en cuenta que en el ejemplo también se quita el constructor parametrizado, por lo que los objetos `SaleItem` ahora se inicializan con una llamada al constructor sin parámetros y un [inicializador de objeto](object-and-collection-initializers.md).
+Si una propiedad tiene los descriptores de acceso `get` y `set` (o `get` y `init`), ambos se deben implementar de forma automática. Una propiedad implementada automáticamente se define mediante las palabras clave `get` y `set` sin proporcionar ninguna implementación. El ejemplo siguiente repite el anterior, salvo que `Name` y `Price` son propiedades implementadas automáticamente. En el ejemplo también se quita el constructor parametrizado, por lo que los objetos `SaleItem` ahora se inicializan con una llamada al constructor sin parámetros y un [inicializador de objeto](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 

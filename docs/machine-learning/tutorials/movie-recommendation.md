@@ -5,12 +5,12 @@ author: briacht
 ms.date: 06/30/2020
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 39c4aeef0b02a6bf47d78e6bf53cd42b4f592946
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 2df774110d3355bf75a14e211555984a12cf7fa4
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282104"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231399"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Tutorial: Creación de un recomendador de películas mediante factorización matricial con ML.NET
 
@@ -169,20 +169,6 @@ Agregue este código en el método `Main()` para llamar al método `LoadData()` 
 
 ## <a name="build-and-train-your-model"></a>Compilación y entrenamiento del modelo
 
-En ML.NET hay tres conceptos principales: [Data](../resources/glossary.md#data) (datos), [Transformers](../resources/glossary.md#transformer) (transformadores) y [Estimators](../resources/glossary.md#estimator) (estimadores).
-
-Los algoritmos de entrenamiento de Machine Learning requieren datos en un formato determinado. Los `Transformers` se usan para transformar datos tabulares a un formato compatible.
-
-![Diagrama del flujo de datos de Transformer.](./media/movie-recommendation/data-transformer-transformed.png)
-
-Para crear `Transformers` en ML.NET, debe crear `Estimators`. Los `Estimators` toman datos y devuelven `Transformers`.
-
-![Diagrama del flujo de datos de Estimator.](./media/movie-recommendation/data-estimator-transformer.png)
-
-El algoritmo de entrenamiento de recomendación que usará para entrenar el modelo es un ejemplo de un `Estimator`.
-
-Compile un `Estimator` con los pasos siguientes:
-
 Cree el método `BuildAndTrainModel()`, justo después del método `LoadData()`, mediante el código siguiente:
 
 ```csharp
@@ -229,6 +215,8 @@ Ajuste el modelo a los datos `Train` y devuelva el modelo entrenado. Para ello, 
 [!code-csharp[FitModel](./snippets/movie-recommendation/csharp/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
 El método [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) entrena el modelo con el conjunto de datos de entrenamiento proporcionado. Técnicamente, ejecuta las definiciones de `Estimator`, para lo que transforma los datos y aplica el entrenamiento, y devuelve el modelo entrenado, que es un `Transformer`.
+
+Para obtener más información sobre el flujo de trabajo de entrenamiento de modelos en ML.NET, vea [¿Qué es ML.NET y cómo funciona?](../how-does-mldotnet-work.md#code-workflow).
 
 Agregue lo que se indica a continuación como la siguiente líneas de código en el método `Main()` para llamar al método `BuildAndTrainModel()` y devolver el modelo entrenado:
 

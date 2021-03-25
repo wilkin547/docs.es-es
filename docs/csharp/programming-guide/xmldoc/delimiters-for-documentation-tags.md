@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 3191e32b0ff2dbde004abaab0b699cd61fcbb150
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 6135827752cd3f7f43017346103f2043170521b2
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381988"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479164"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitadores de etiquetas de documentación (guía de programación de C#)
 
@@ -87,4 +87,4 @@ El uso de comentarios de documentación XML requiere delimitadores, que le indic
 
 - [Guía de programación de C#](../index.md)
 - [Comentarios de documentación XML](./index.md)
-- [-doc (opciones del compilador de C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [**DocumentationFile** (opciones del compilador de C#)](../../language-reference/compiler-options/output.md#documentationfile)

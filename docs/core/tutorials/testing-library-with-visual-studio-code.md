@@ -2,12 +2,12 @@
 title: Prueba de una biblioteca de clases de .NET con Visual Studio Code
 description: Obtenga información sobre cómo usar Visual Studio Code y la CLI de .NET para crear y ejecutar un proyecto de prueba unitaria para una biblioteca de clases de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: 4528bd203ae03988a1d1d80a7e904e94e68c1d04
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: bc8741e11504f94e54ccc45a5ad93408a3fe9309
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915861"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511819"
 ---
 # <a name="tutorial-test-a-net-class-library-using-visual-studio-code"></a>Tutorial: Prueba de una biblioteca de clases de .NET con Visual Studio Code
 
@@ -90,7 +90,7 @@ También puede usar el método <xref:Microsoft.VisualStudio.TestTools.UnitTestin
 
 Al probar el método `StringLibrary.StartsWithUpper`, quiere proporcionar un número de cadenas que comiencen con un carácter en mayúsculas. Espera que el método devuelva `true` en estos casos, por lo que puede llamar al método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType>. Del mismo modo, quiere proporcionar un número de cadenas que comiencen con algo que no sea un carácter en mayúsculas. Espera que el método devuelva `false` en estos casos, por lo que puede llamar al método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType>.
 
-Dado que el método de biblioteca controla cadenas, también se recomienda asegurarse de que controla correctamente una [cadena vacía (`String.Empty`)](xref:System.String.Empty) y una cadena `null`. Una cadena vacía es aquella que no tiene ningún carácter y cuyo valor de <xref:System.String.Length> es 0. Una cadena `null` es aquella que no se ha inicializado. Se puede llamar a `StartsWithUpper` directamente como un método estático y pasar un argumento <xref:System.String> único. También puede llamar a `StartsWithUpper` como método de extensión en una variable de `string` asignada a `null`.
+Como el método de biblioteca controla cadenas, también se recomienda asegurarse de que controla correctamente una [cadena vacía (`String.Empty`)](xref:System.String.Empty) y una cadena `null`. Una cadena vacía es aquella que no tiene ningún carácter y cuyo valor de <xref:System.String.Length> es 0. Una cadena `null` es aquella que no se ha inicializado. Se puede llamar a `StartsWithUpper` directamente como un método estático y pasar un argumento <xref:System.String> único. También puede llamar a `StartsWithUpper` como método de extensión en una variable de `string` asignada a `null`.
 
 Definirá tres métodos, cada uno de los cuales llama a un método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> para cada elemento de una matriz de cadenas. Llamará a una sobrecarga de método que le permite especificar que se muestre un mensaje de error en caso de error en la prueba. El mensaje identifica la cadena que causó el error.
 

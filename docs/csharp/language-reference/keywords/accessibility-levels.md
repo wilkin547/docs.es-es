@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 6e1a5bddc0d40b0b62c7b07dbc6b4134a3447a95
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 509902e9998af421c0afd31070b1be36d64df0f8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91168795"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604598"
 ---
 # <a name="accessibility-levels-c-reference"></a>Niveles de accesibilidad (Referencia de C#)
 
@@ -40,10 +40,12 @@ Use los modificadores de acceso `public`, `protected`, `internal` o `private` pa
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|Ninguna|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|None|  
+|`interface`|`public`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`\*<br /><br /> `protected internal` <br /><br />`private protected`|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
-  
- La accesibilidad de un tipo anidado depende de su [dominio de accesibilidad](./accessibility-domain.md), que viene determinado por la accesibilidad declarada del miembro y el dominio de accesibilidad del tipo contenedor inmediato. Sin embargo, el dominio de accesibilidad de un tipo anidado no puede superar al del tipo contenedor.  
+
+\* Un miembro `interface` con accesibilidad `private` debe tener una implementación predeterminada.
+
+La accesibilidad de un tipo anidado depende de su [dominio de accesibilidad](./accessibility-domain.md), que viene determinado por la accesibilidad declarada del miembro y el dominio de accesibilidad del tipo contenedor inmediato. Sin embargo, el dominio de accesibilidad de un tipo anidado no puede superar al del tipo contenedor.  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 

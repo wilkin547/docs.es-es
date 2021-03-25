@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1cc4982d1ebe9d6896404218a6d200b10cc6503f
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 154feca5e7e4f4d3f5313c4ae05cd991e69e298f
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381936"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477773"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (guía de programación de C#)
 
@@ -36,7 +36,7 @@ ms.locfileid: "87381936"
 
 La etiqueta `<see>` permite especificar un vínculo desde el texto. Use [\<seealso>](./seealso.md) para indicar que el texto debe colocarse en una sección Vea también. Use el [atributo cref](./cref-attribute.md) para crear hipervínculos internos a las páginas de documentación de los elementos de código. Además, ``href`` es un atributo válido que actúa como un hipervínculo.
 
-Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
+Realice la compilación con [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) para procesar los comentarios de documentación en un archivo.
 
 En el ejemplo siguiente, se muestra una etiqueta `<see>` dentro de una sección de resumen.
 

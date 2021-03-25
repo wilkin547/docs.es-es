@@ -2,12 +2,12 @@
 title: Creación de una aplicación de consola de .NET con Visual Studio Code
 description: Aprenda a crear una aplicación de consola de .NET con Visual Studio Code y la CLI de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 51e5a897985af7576de03659efdd8520cb8e58e6
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915874"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511871"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>Tutorial: Creación de una aplicación de consola de .NET con Visual Studio Code
 
@@ -93,7 +93,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
    Este código muestra un mensaje en la ventana de la consola y espera a que el usuario escriba una cadena y, luego, presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Asimismo, muestra estos valores en la ventana de la consola. Por último, muestra un mensaje en la ventana de la consola y llama al método <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> para esperar a la entrada del usuario.
 
-   El símbolo `\n` representa un carácter de nueva línea.
+   <xref:System.Environment.NewLine> es una manera independiente de la plataforma y del lenguaje de representar un salto de línea. Las alternativas son `\n` en C# y `vbCrLf` en Visual Basic.
 
    El signo de dólar (`$`) delante de una cadena permite colocar expresiones como nombres de variable entre llaves en la cadena. El valor de la expresión se inserta en la cadena en lugar de la expresión. Esta sintaxis se conoce como [cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md).
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: a3a27c1baaab135108ef475d77c35d607c45fa82
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 3986ef4083b964799be33d2876570ac4cf2082b8
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794796"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511858"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>Tutorial: Creación de una aplicación de consola de .NET con Visual Studio
 
@@ -46,7 +46,7 @@ Cree un proyecto de aplicación de consola de .NET denominado "HelloWorld".
    > [!TIP]
    > Si no ve las plantillas de .NET, es probable que falte la carga de trabajo necesaria. En el mensaje **¿No encuentra lo que busca?** , elija el vínculo **Instalar más herramientas y características**. Se abre el Instalador de Visual Studio. Asegúrese de que tiene instalada la carga de trabajo **Desarrollo multiplataforma de .NET Core**.
 
-1. En el cuadro de diálogo **Configurar el nuevo proyecto**, escriba **HelloWorld** en el cuadro **Nombre del proyecto**. Luego, elija **Crear**.
+1. En el cuadro de diálogo **Configurar el nuevo proyecto**, escriba **HelloWorld** en el cuadro **Nombre del proyecto**. Después, haga clic en **Siguiente**.
 
    :::image type="content" source="./media/with-visual-studio/configure-new-project.png" alt-text="Configuración de la ventana de nuevo proyecto con los campos de nombre de proyecto, ubicación y nombre de la solución":::
 
@@ -108,7 +108,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
    Este código muestra un mensaje en la ventana de la consola y espera a que el usuario escriba una cadena y, luego, presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date` (`currentDate` en Visual Basic). Asimismo, muestra estos valores en la ventana de la consola. Por último, muestra un mensaje en la ventana de la consola y llama al método <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> para esperar a la entrada del usuario.
 
-   El código `\n` (o `vbCrLf` en el código Visual Basic) representa un carácter de nueva línea.
+   <xref:System.Environment.NewLine> es una manera independiente de la plataforma y del lenguaje de representar un salto de línea. Las alternativas son `\n` en C# y `vbCrLf` en Visual Basic.
 
    El signo de dólar (`$`) delante de una cadena permite colocar expresiones como nombres de variable entre llaves en la cadena. El valor de la expresión se inserta en la cadena en lugar de la expresión. Esta sintaxis se conoce como [cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md).
 

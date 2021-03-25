@@ -8,12 +8,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: a39e896f1242452c7bcc94faa1e7ef3086ae2149
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1bb9a73f4122f3b9d521565a7172a9b8f75f7a98
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380727"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477670"
 ---
 # <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (guía de programación de C#)
 
@@ -35,7 +35,7 @@ Para obtener más información sobre los parámetros de tipo en métodos y tipos
 
 Use esta etiqueta para permitir que los consumidores del archivo de documentación den formato a la palabra de alguna manera distinta, por ejemplo en cursiva.
 
-Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
+Realice la compilación con [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) para procesar los comentarios de documentación en un archivo.
 
 ## <a name="example"></a>Ejemplo
 

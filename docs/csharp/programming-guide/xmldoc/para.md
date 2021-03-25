@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 146078bcb556b4085724ddcdac561ea868ab0481
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5cb1c22dceae7a45a47fcb8807303d11e1220935
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381858"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478010"
 ---
 # <a name="para-c-programming-guide"></a>\<para> (guía de programación de C#)
 
@@ -34,7 +34,7 @@ ms.locfileid: "87381858"
 
 La etiqueta `<para>` se usa dentro de otra etiqueta, como [\<summary>](./summary.md), [\<remarks>](./remarks.md) o [\<returns>](./returns.md), y permite dar una estructura al texto.
 
-Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
+Realice la compilación con [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) para procesar los comentarios de documentación en un archivo.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,16 +1,16 @@
 ---
 title: 'Plataformas de destino en proyectos de estilo SDK: .NET'
 description: Obtenga información sobre las plataformas de destino para las aplicaciones y bibliotecas de .NET.
-ms.date: 11/06/2020
+ms.date: 03/03/2021
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 9e831726a87493b109578a3546a8f29b7b71cb6c
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765064"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604611"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Plataformas de destino en proyectos de estilo SDK
 
@@ -41,7 +41,7 @@ Normalmente, un TFM hace referencia a una plataforma de destino. En la tabla sig
 
 | Versión de .NET Framework de destino           | TFM |
 | -------------------------- | --- |
-| .NET 5 (y .NET Core)     | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1<br>net5.0* |
+| .NET 5+ (y .NET Core)    | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1<br>net5.0 *<br>net6.0* |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Tienda Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
@@ -50,50 +50,43 @@ Normalmente, un TFM hace referencia a una plataforma de destino. En la tabla sig
 | Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
 | Plataforma universal de Windows | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
-\* Los TFM de.NET 5.0 y versiones posteriores incluyen variaciones específicas del sistema operativo. Para obtener más información, consulte la sección [TFM específicos del sistema operativo de .NET 5](#net-5-os-specific-tfms).
+\* Los TFM de .NET 5 y versiones posteriores incluyen variaciones específicas del sistema operativo. Para obtener más información, vea la sección siguiente [TFM específicos del sistema operativo de .NET 5+](#net-5-os-specific-tfms).
 
 ### <a name="net-5-os-specific-tfms"></a>TFM específicos del sistema operativo de .NET 5
 
-Para cada TFM de.NET 5.0 y versiones posteriores, por ejemplo, `net5.0`, hay variaciones de TFM que incluyen enlaces específicos del sistema operativo. Estas variaciones se muestran en la tabla siguiente:
+Los TFM `net5.0` y `net6.0` incluyen tecnologías que funcionan en distintas plataformas. La especificación de un *TFM específico del sistema operativo* hace que las API concretas de un sistema operativo estén disponibles para la aplicación, por ejemplo, Windows Forms o enlaces de iOS. Los TFM específicos del sistema operativo también heredan todas las API disponibles para el TFM base, por ejemplo, el TFM `net5.0`.
 
-| Formato específico del sistema operativo | Ejemplo        |
-|--------------------|----------------|
-| \<base-tfm>-android | net5.0-android |
-| \<base-tfm>-ios     | net5.0-ios     |
-| \<base-tfm>-macos   | net5.0-macos   |
-| \<base-tfm>-tvos    | net5.0-tvos    |
-| \<base-tfm>-watchos | net5.0-watchos |
-| \<base-tfm>-windows | net5.0-windows |
+En .NET 5 se ha presentado el TFM específico del sistema operativo `net5.0-windows`, que incluye enlaces específicos de Windows para las API de WinForms, WPF y UWP. En .NET 6 se presentan más TFM específicos del sistema operativo.
 
-El TFM `net5.0` solo incluye tecnologías que funcionan entre plataformas. La especificación de un TFM particular del sistema operativo hace que las API concretas de un sistema operativo estén disponibles para la aplicación, por ejemplo, Windows Forms o enlaces de iOS. Los TFM específicos del sistema operativo también heredan todas las API disponibles para el TFM `net5.0`.
+En la tabla siguiente se muestra la compatibilidad de los TFM de .NET 5.
 
-Para que la aplicación sea portable entre distintas plataformas, puede tener como destino varios TFM específicos del sistema operativo y agregar restricciones de plataforma alrededor de llamadas API específicas del sistema operativo mediante directivas de preprocesador `#if`.
+| TFM                | Compatible con                                                                                                         |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| net5.0             | net1.4 (con la advertencia NU1701)<br />netcoreapp1.3.1 (advertencia cuando se hace referencia a WinForms o WPF)<br />netstandard1.2.1 |
+| net5.0-windows     | netcoreapp1.3.1 (más todo lo demás heredado de `net5.0`)                                                         |
+| net6.0             | (versión posterior de `net5.0`)                                                                                        |
+| net6.0-android     | `xamarin.android` (más todo lo demás heredado de `net6.0`)                                                            |
+| net6.0-ios         | `xamarin.ios` (más todo lo demás heredado de `net6.0`)                                                                |
+| net6.0-macos       | `xamarin.mac` (más todo lo demás heredado de `net6.0`)                                                                |
+| net6.0-maccatalyst | `xamarin.ios` (más todo lo demás heredado de `net6.0`)                                                                |
+| net6.0-tvos        | `xamarin.tvos` (más todo lo demás heredado de `net6.0`)                                                               |
+| net6.0-windows     | (versión posterior de `net5.0-windows`)                                                                                |
 
-En la tabla siguiente se muestra la compatibilidad de los TFM de .NET 5 con los de versiones anteriores de .NET.
-
-| TFM             | Compatible con                                            | Notas |
-|-----------------|------------------------------------------------------------|-|
-| net5.0          | net1.4 (con la advertencia NU1701)<br />netcoreapp1.3.1 (advertencia cuando se hace referencia a WinForms o WPF)<br />netstandard1.2.1 | |
-| net5.0-android  | xamarin.android (más todo lo demás heredado de `net5.0`) | |
-| net5.0-ios      | xamarin.ios (más todo lo demás heredado de `net5.0`) | |
-| net5.0-macos    | xamarin.mac (más todo lo demás heredado de `net5.0`) | |
-| net5.0-tvos     | xamarin.tvos (más todo lo demás heredado de `net5.0`) | |
-| net5.0-watchos  | xamarin.watchos (más todo lo demás heredado de `net5.0`) | |
-| net5.0-windows  | netcoreapp1.3.1 (más todo lo demás heredado de `net5.0`) | Incluye las API de WinForms, WPF y UWP.<br />Para obtener información, vea [Llamada a las a API de Windows Runtime en aplicaciones de escritorio](/windows/apps/desktop/modernize/desktop-to-uwp-enhance). |
+Para que la aplicación sea portable entre distintas plataformas pero todavía tenga acceso a API específicas del sistema operativo, puede seleccionar como destino varios TFM específicos del sistema operativo y agregar restricciones de plataforma alrededor de llamadas API específicas del sistema operativo mediante directivas de preprocesador `#if`.
 
 #### <a name="suggested-targets"></a>Destinos sugeridos
 
 Siga estas instrucciones para determinar qué TFM usar en la aplicación:
 
-- Las aplicaciones que se pueden portar a varias plataformas deben tener como destino `net5.0`. Esto incluye la mayoría de las bibliotecas, pero también ASP.NET Core y Entity Framework.
+- Las aplicaciones que se pueden trasladar a varias plataformas deben tener como destino un TFM base, como `net5.0`. Esto incluye la mayoría de las bibliotecas, pero también ASP.NET Core y Entity Framework.
 
-- Las bibliotecas específicas de la plataforma deben tener como destino tipos específicos de la plataforma. Por ejemplo, los proyectos de WinForms y WPF deben tener como destino `net5.0-windows`.
+- Las bibliotecas específicas de la plataforma deben tener como destino tipos específicos de la plataforma. Por ejemplo, los proyectos de WinForms y WPF deben tener como destino `net5.0-windows` o `net6.0-windows`.
 
-- Los modelos de aplicación multiplataforma (Xamarin Forms, ASP.NET Core) y los paquetes puente (Xamarin Essentials) deben tener el destino `net5.0` como mínimo, pero también pueden otros tipos específicos de la plataforma para obtener más API o características.
+- Los modelos de aplicación multiplataforma (Xamarin Forms, ASP.NET Core) y los paquetes puente (Xamarin Essentials) deben tener como destino el TFM base como mínimo (por ejemplo `net6.0`), pero también otros tipos específicos de la plataforma para obtener más API o características.
 
 #### <a name="os-version-in-tfms"></a>Versión del sistema operativo en los TFM
 
-También puede especificar una versión opcional del sistema operativo al final del TFM, por ejemplo, `net5.0-ios13.0`, que indica qué API están disponibles para la aplicación. (El SDK de .NET 5 se actualizará para incluir la compatibilidad con las versiones más recientes del sistema operativo a medida que se publiquen). Para obtener acceso a las API recién publicadas, incremente la versión del sistema operativo en el TFM. Todavía puede hacer que la aplicación sea compatible con versiones anteriores del sistema operativo (y agregar restricciones. en torno a las llamadas a API de versiones posteriores) si agrega el elemento `SupportedOSPlatformVersion` al archivo del proyecto. El elemento `SupportedOSPlatformVersion` indica la versión mínima del sistema operativo necesaria para ejecutar la aplicación.
+También puede especificar una versión opcional del sistema operativo al final del TFM, por ejemplo, `net6.0-ios13.0`, que indica qué API están disponibles para la aplicación. (El SDK de .NET correspondiente se actualizará para incluir compatibilidad con las versiones más recientes del sistema operativo a medida que se publiquen). Para obtener acceso a las API recién publicadas, incremente la versión del sistema operativo en el TFM. Todavía puede hacer que la aplicación sea compatible con versiones anteriores del sistema operativo (y agregar restricciones. en torno a las llamadas a API de versiones posteriores) si agrega el elemento `SupportedOSPlatformVersion` al archivo del proyecto. El elemento `SupportedOSPlatformVersion` indica la versión mínima del sistema operativo necesaria para ejecutar la aplicación.
 
 Por ejemplo, el siguiente extracto de archivo del proyecto especifica que las API de iOS 14 están disponibles para la aplicación, pero se puede ejecutar en equipos con iOS 13 o versiones posteriores.
 
@@ -101,7 +94,7 @@ Por ejemplo, el siguiente extracto de archivo del proyecto especifica que las AP
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0-ios14.0</TargetFramework>
+    <TargetFramework>net6.0-ios14.0</TargetFramework>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion> (minimum os platform version)
   </PropertyGroup>
 
@@ -192,6 +185,7 @@ Las siguientes plataformas de destino están en desuso. Los paquetes que tienen 
 ## <a name="see-also"></a>Vea también
 
 - [Nombres de plataformas de destino en .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
+- [Llamada a las a API de Windows Runtime en aplicaciones de escritorio](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
 - [Desarrollo de bibliotecas con herramientas multiplataforma](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [Control de versiones de .NET Core](../core/versions/index.md)

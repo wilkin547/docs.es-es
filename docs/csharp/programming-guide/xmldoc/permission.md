@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 38c87505b8b2973875e474ffd296dc02b7fb9de6
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 379d3fda06c50e9e988784e671061d604e6e5b36
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381728"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477854"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (guía de programación de C#)
 
@@ -40,7 +40,7 @@ ms.locfileid: "87381728"
 
 La etiqueta `<permission>` le permite documentar el acceso de un miembro. La clase <xref:System.Security.PermissionSet> le permite especificar el acceso a un miembro.
 
-Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.
+Realice la compilación con [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) para procesar los comentarios de documentación en un archivo.
 
 ## <a name="example"></a>Ejemplo
 

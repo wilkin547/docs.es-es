@@ -1,24 +1,36 @@
 ---
 title: 'Argumento de la línea de comandos: Guía de programación de C#'
 description: Aprenda sobre los argumentos de la línea de comandos. Vea un ejemplo en el que se usan argumentos de la línea de comandos en una aplicación de consola.
-ms.date: 07/20/2015
+ms.date: 03/11/2021
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: f495efb3bc2c76a98f74c173d5b777ebe383edcb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381923"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190416"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
 
 Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes maneras:
 
-[!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
+| Código del método `Main`                 | Signatura de `Main`                             |
+|------------------------------------|----------------------------------------------|
+| No hay valores devueltos, no se usa `await` | `static void Main(string[] args)`            |
+| Valor devuelto, no se usa `await`    | `static int Main(string[] args)`             |
+| No hay valores devueltos, se usa `await`      | `static async Task Main(string[] args)`      |
+| Valor devuelto, se usa `await`         | `static async Task<int> Main(string[] args)` |
 
-[!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
+Si no se usan los argumentos, puede omitir `args` de la signatura del método para simplificar ligeramente el código:
+
+| Código del método `Main`                 | Signatura de `Main`                |
+|------------------------------------|---------------------------------|
+| No hay valores devueltos, no se usa `await` | `static void Main()`            |
+| Valor devuelto, no se usa `await`    | `static int Main()`             |
+| No hay valores devueltos, se usa `await`      | `static async Task Main()`      |
+| Valor devuelto, se usa `await`         | `static async Task<int> Main()` |
 
 > [!NOTE]
 > Para habilitar los argumentos de la línea de comandos en el método `Main` de una aplicación Windows Forms, tendrá que modificar manualmente la firma de `Main` en *program.cs*. El código generado por el Diseñador de Windows Forms crea un `Main` sin ningún parámetro de entrada. También puede usar <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> para tener acceso a los argumentos de la línea de comandos desde cualquier punto en una consola o aplicación Windows.

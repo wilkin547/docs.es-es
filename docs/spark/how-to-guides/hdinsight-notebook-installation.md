@@ -4,12 +4,12 @@ description: Aprenda a instalar .NET para Apache Spark en cuadernos de Jupyter d
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: b84d61c29d2b2aa7a9fee20a8af9f3eee23f7e8b
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599660"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605482"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Instalación de .NET para Apache Spark en cuadernos de Jupyter Notebook en clústeres de Azure HDInsight Spark
 
@@ -38,20 +38,20 @@ En Azure Portal, seleccione el **clúster de HDInsight Spark** que creó en el p
 
 1. En el portal, seleccione **Información general** y, luego, la **página de inicio de Ambari**. Cuando se le pida, escriba las credenciales de inicio de sesión del clúster.
 
-   ![Detención del servidor de Livy](./media/hdinsight-notebook-installation/select-ambari.png)
+   ![Seleccione Página principal de Ambari en Paneles de clústeres.](./media/hdinsight-notebook-installation/select-ambari.png)
 
 2. Seleccione **Spark2** en el menú de navegación izquierdo y, luego, **LIVY FOR SPARK2 SERVER** (LIVY PARA EL SERVIDOR SPARK2).
 
-   ![Detención del servidor de Livy](./media/hdinsight-notebook-installation/select-livyserver.png)
+   ![Seleccione Livy para el servidor Spark2.](./media/hdinsight-notebook-installation/select-livyserver.png)
 
 3. Seleccione **hn0... host**.
 
-   ![Detención del servidor de Livy](./media/hdinsight-notebook-installation/select-host.png)
+   ![Hosts en los que se muestra "hno..." seleccionado](./media/hdinsight-notebook-installation/select-host.png)
 
 4. Seleccione los puntos suspensivos junto a **Livy for Spark2 Server** (Livy para el servidor Spark2) y elija **Detener**. Cuando se le solicite, seleccione **Aceptar** para continuar.
 
    Detención de Livy para el servidor Spark2.
-   ![Detención del servidor de Livy](./media/hdinsight-notebook-installation/stop-server.png)
+   ![Seleccione los puntos suspensivos y después Detener](./media/hdinsight-notebook-installation/stop-server.png)
 
 5. Repita los pasos anteriores para **hn1... host**.
 
@@ -87,9 +87,9 @@ Siga las instrucciones de la sección [Detención del servidor de Livy](#stop-th
 
 2. Seleccione **Spark2** y **CONFIGS**. A continuación, seleccione **Custom spark2-defaults** (Valores predeterminados de spark2 personalizados).
 
-   ![Establecimiento de las configuraciones](./media/hdinsight-notebook-installation/spark-configs.png)
+   ![Pestaña Configuraciones de Ambari](./media/hdinsight-notebook-installation/spark-configs.png)
 
-3. Seleccione **Agregar propiedad...** para agregar la configuración predeterminada de Spark.
+3. Seleccione **Agregar propiedad** para agregar la configuración predeterminada de Spark.
 
    ![Agregar propiedad](./media/hdinsight-notebook-installation/add-property.png)
 
@@ -109,7 +109,7 @@ Siga las instrucciones de la sección [Detención del servidor de Livy](#stop-th
 
    Por ejemplo, la siguiente imagen captura el valor para agregar la propiedad 1:
 
-   ![Establecimiento de las configuraciones](./media/hdinsight-notebook-installation/add-sparkconfig.png)
+   ![Adición de una propiedad de texto](./media/hdinsight-notebook-installation/add-sparkconfig.png)
 
    Después de agregar las tres propiedades, seleccione **GUARDAR**. Si ve una pantalla de advertencia de recomendaciones de configuración, seleccione **PROCEED ANYWAY** (CONTINUAR DE TODOS MODOS).
 
@@ -117,7 +117,7 @@ Siga las instrucciones de la sección [Detención del servidor de Livy](#stop-th
 
    Después de agregar las nuevas propiedades, debe reiniciar los componentes afectados por los cambios. En la parte superior, seleccione **REINICIAR** y, luego, **Reinicio de todas las entradas afectadas** en el menú desplegable.
 
-   ![Establecimiento de las configuraciones](./media/hdinsight-notebook-installation/restart-affected.png)
+   ![Pestaña Configuraciones con Reiniciar > Reinicio de todas las entradas afectadas](./media/hdinsight-notebook-installation/restart-affected.png)
 
    Cuando se le solicite, seleccione **CONFIRM RESTART ALL** (CONFIRMAR REINICIAR TODO) y, luego, haga clic en **Aceptar** para finalizar.
 
@@ -142,7 +142,7 @@ Después de finalizar los pasos anteriores, ahora puede enviar sus trabajos de .
    df.Show();
    ```
 
-   ![Envío de los trabajos de Spark](./media/hdinsight-notebook-installation/create-df.png)
+   ![Creación de un elemento DataFrame en la que se muestra la ejecución del comando](./media/hdinsight-notebook-installation/create-df.png)
 
    Use el siguiente fragmento de código para registrar una función definida por el usuario (UDF) y utilizarla con dataframes:
 
@@ -151,7 +151,7 @@ Después de finalizar los pasos anteriores, ahora puede enviar sus trabajos de .
    df.Select(myawesomeudf(df["id"])).Show();
    ```
 
-   ![Envío de los trabajos de Spark](./media/hdinsight-notebook-installation/run-udf.png)
+   ![Registro y uso de una UDF](./media/hdinsight-notebook-installation/run-udf.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -2,12 +2,12 @@
 title: Migración mediante lift-and-shift de aplicaciones de .NET existentes a la IaaS de Azure (listas para la infraestructura en la nube)
 description: Modernización de aplicaciones de .NET existentes con Azure Cloud y contenedores Windows
 ms.date: 12/21/2020
-ms.openlocfilehash: fb875c38cac236826007bba217189238b7c00898
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 69e89702b41cd7388ee6c90e77efafc7cd2bebe8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025399"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605118"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migración mediante lift-and-shift de aplicaciones de .NET existentes a la IaaS de Azure (listas para la infraestructura en la nube)
 
@@ -63,7 +63,7 @@ Con Azure Migrate, tiene la seguridad de que las cargas de trabajo se pueden mig
 
 En la figura 2-2 se muestra la asignación de dependencias integrada para todas las conexiones de servidor y aplicación realizadas por Azure Migrate.
 
-![Posicionamiento de las aplicaciones listas para la infraestructura en la nube](./media/image2-2.png)
+![Dependencias de las conexiones de servidor y aplicación](./media/image2-2.png)
 
 **Figura 2-2.** Posicionamiento de las aplicaciones listas para la infraestructura en la nube
 
@@ -75,7 +75,7 @@ Site Recovery también es adecuado para entornos híbridos que tienen una parte 
 
 En la figura 2-3 se muestra la ejecución de varias migraciones de máquinas virtuales mediante Azure Site Recovery.
 
-![Posicionamiento de las aplicaciones listas para la infraestructura en la nube](./media/image2-3.png)
+![Migraciones de máquina virtual con Azure Site Recovery](./media/image2-3.png)
 
 **Figura 2-3.** Posicionamiento de las aplicaciones listas para la infraestructura en la nube
 

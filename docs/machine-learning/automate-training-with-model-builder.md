@@ -3,12 +3,12 @@ title: ¿Qué es el Generador de modelos y cómo funciona?
 description: Cómo usar el Generador de modelos de ML.NET para entrenar un modelo de Machine Learning de forma automática
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: d7566a03f83eb76999d995a39aaae408405db2e1
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161145"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231425"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -34,6 +34,21 @@ Un escenario es una descripción del tipo de predicción que se quiere realizar 
 - detectar si una transacción bancaria es fraudulenta
 - dirigir problemas de comentarios de clientes al equipo correcto de la empresa
 
+Cada escenario se asigna a una tarea de Machine Learning diferente, entre las que se incluyen las siguientes:
+
+- Clasificación binaria
+- Clasificación multiclase
+- Regresión
+- Agrupación en clústeres
+- Detección de anomalías
+- Clasificación
+- Recomendación
+- Previsión
+
+Por ejemplo, el escenario de clasificación de opiniones como positivas o negativas se correspondería a la tarea de clasificación binaria.
+
+Para obtener más información sobre las distintas tareas de ML admitidas por ML.NET, vea [Tareas de aprendizaje automático en ML.NET](resources/tasks.md).
+
 ### <a name="which-machine-learning-scenario-is-right-for-me"></a>¿Qué escenario de aprendizaje automático es el más adecuado en cada caso?
 
 En el Generador de modelos, debe seleccionar un escenario. El tipo de escenario depende del tipo de predicción que esté intentando realizar.
@@ -48,7 +63,7 @@ La clasificación se utiliza para clasificar los datos en categorías.
 
 #### <a name="value-prediction"></a>Predicción de valores
 
-La regresión se usa para predecir números.
+La predicción de valores, que se corresponde a la tarea de regresión, se usa para predecir números.
 
 ![Diagrama en el que se muestran ejemplos de regresión, como la predicción de precios, la previsión de ventas y el mantenimiento predictivo](media/regression-examples.png)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f9243e598aaf0c12dd48b48045f461b4b307c18f
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: e20970971636f13357c165f3065050fcf5914ada
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380610"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477702"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary> (guía de programación de C#)
 
@@ -36,7 +36,7 @@ La etiqueta `<summary>` debe usarse para describir un tipo o un miembro de tipo.
 
 El texto de la etiqueta `<summary>` es la única fuente de información sobre el tipo en IntelliSense y también se muestra en la ventana Examinador de objetos.
 
-Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo. Para crear la documentación final basada en el archivo generado por el compilador, puede crear una herramienta personalizada o usar una herramienta como [DocFX](https://dotnet.github.io/docfx/) o [Sandcastle](https://github.com/EWSoftware/SHFB).
+Realice la compilación con [**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile) para procesar los comentarios de documentación en un archivo. Para crear la documentación final basada en el archivo generado por el compilador, puede crear una herramienta personalizada o usar una herramienta como [DocFX](https://dotnet.github.io/docfx/) o [Sandcastle](https://github.com/EWSoftware/SHFB).
 
 ## <a name="example"></a>Ejemplo
 
@@ -67,7 +67,7 @@ En el ejemplo anterior se genera el siguiente archivo XML.
 </doc>
 ```
 
-## <a name="example"></a>Ejemplo
+## <a name="cref-example"></a>Ejemplo de cref
 
 En el ejemplo siguiente se muestra cómo hacer una referencia `cref` a un tipo genérico.
 

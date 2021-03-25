@@ -3,12 +3,12 @@ title: Seguimiento de aplicaciones de .NET con PerfCollect.
 description: Tutorial en el que se le guía través de la recopilación de un seguimiento con perfcollect en .NET.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593225"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189935"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>Seguimiento de aplicaciones de .NET con PerfCollect
 
@@ -158,6 +158,9 @@ PerfView mostrará la lista de vistas que se admiten en función de los datos co
 - Si no hay ninguna vista de la información que necesita, puede intentar buscar los eventos en la vista de eventos sin procesar.  Elija **Events** (Eventos).
 
 Para obtener más información sobre cómo interpretar las vistas en PerfView, vea los vínculos de ayuda en la propia vista, o bien elija **Help > Users Guide** (Ayuda > Guía de usuarios) en la ventana principal de PerfView.
+
+> [!NOTE]
+> Los eventos escritos mediante la API <xref:System.Diagnostics.Tracing.EventSource?displayProperty=nameWithType> (incluidos los de Framework) no se mostrarán bajo el nombre de su proveedor. En su lugar, se escriben como eventos `EventSourceEvent` en el proveedor `Microsoft-Windows-DotNETRuntime` y sus cargas se serializan en JSON.
 
 ### <a name="use-tracecompass-to-open-the-trace-file"></a>Uso de TraceCompass para abrir el archivo de seguimiento
 

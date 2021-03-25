@@ -2,12 +2,12 @@
 title: Creación de una aplicación de consola de .NET con Visual Studio para Mac
 description: Aprenda a crear una aplicación de consola de .NET con Visual Studio para Mac.
 ms.date: 11/30/2020
-ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 4add8309338b8618265a66b9e71dab2df38ca8d0
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599491"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511832"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>Tutorial: Creación de una aplicación de consola de .NET con Visual Studio para Mac
 
@@ -84,7 +84,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
    Este código muestra un mensaje en la ventana de la consola y espera a que el usuario escriba una cadena y, luego, presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Asimismo, muestra estos valores en la ventana de la consola. Por último, muestra un mensaje en la ventana de la consola y llama al método <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> para esperar a la entrada del usuario.
 
-   El símbolo `\n` representa un carácter de nueva línea.
+   <xref:System.Environment.NewLine> es una manera independiente de la plataforma y del lenguaje de representar un salto de línea. Las alternativas son `\n` en C# y `vbCrLf` en Visual Basic.
 
    El signo de dólar (`$`) delante de una cadena permite colocar expresiones como nombres de variable entre llaves en la cadena. El valor de la expresión se inserta en la cadena en lugar de la expresión. Esta sintaxis se conoce como [cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md).
 
