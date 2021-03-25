@@ -19,15 +19,14 @@ helpviewer_keywords:
 - PreferredUILang compiler option [C#]
 - SubsystemVersion compiler option [C#]
 - AdditionalLibPaths compiler option [C#]
-- ErrorReport compiler option [C#]
 - ApplicationConfiguration compiler option [C#]
 - ModuleAssemblyName compiler option [C#]
-ms.openlocfilehash: fd65cea6a5524425de5061a2d930181fcd081090
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 47c84968682e056acdb73805807d907c6bb7c7ee
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482508"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652768"
 ---
 # <a name="advanced-c-compiler-options"></a>Opciones avanzadas del compilador de C#
 
@@ -36,7 +35,6 @@ Las opciones siguientes admiten escenarios avanzados. La nueva sintaxis de MSBui
 - **MainEntryPoint**, **StartupObject** / `-main`: se especifica el tipo que contiene el punto de entrada.
 - **PdbFile** / `-pdb`: se especifica el nombre del archivo de información de depuración.
 - **PathMap** / `-pathmap`: se especifica una asignación para los nombres de rutas de acceso de origen generados por el compilador.
-- **ErrorReport** / `-errorreport`: se especifica cómo controlar los errores internos del compilador.
 - **ApplicationConfiguration** / `-appconfig`: se especifica un archivo de configuración de la aplicación que contenga la configuración de enlace de ensamblados.
 - **AdditionalLibPaths** / `-lib`: se especifican los directorios adicionales en los que buscar referencias.
 - **GenerateFullPaths** / `-fullpath`: el compilador genera rutas de acceso completas.
@@ -93,28 +91,6 @@ El compilador escribe la ruta de acceso de origen en la salida por las razones s
 1. La ruta de acceso de origen se sustituye por un argumento cuando se aplica <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> a un parámetro opcional.
 1. La ruta de acceso de origen se inserta en un archivo PDB.
 1. La ruta de acceso del archivo PDB se inserta en un archivo PE (ejecutable portable).
-
-## <a name="errorreport"></a>ErrorReport
-
-Esta opción proporciona una forma cómoda de notificar un error interno del compilador de C# a Microsoft.
-
-> [!NOTE]
-> En Windows Vista y Windows Server 2008, la configuración de informes de errores para Visual Studio no reemplaza la configuración realizada a través de Informe de errores de Windows (WER). La configuración de WER siempre tiene prioridad sobre la configuración de informes de errores de Visual Studio.
-
-```xml
-<ErrorReport>setting</ErrorReport>
-```
-
-El argumento debe ser uno de los siguientes:
-
-- **none**: no se recopilarán informes sobre errores internos del compilador ni se enviarán a Microsoft.
-- **prompt**: pregunta si quiere enviar un informe cuando reciba un error interno del compilador. **prompt** es el valor predeterminado cuando se compila una aplicación en el entorno de desarrollo.
-- **queue**: pone en cola el informe de error. Al iniciar sesión con credenciales administrativas, puede notificar los errores que se han producido desde la última vez que ha iniciado sesión. No se le solicitará que envíe informes de error más de una vez cada tres días. **queue** es el valor predeterminado cuando se compila una aplicación en la línea de comandos.
-- **send**: envía automáticamente informes de errores internos del compilador a Microsoft. Para habilitar esta opción, debe aceptar la directiva de recopilación de datos de Microsoft. La primera vez que especifique `<ErrorReport>send</ErrorReport>` en un equipo, un mensaje del compilador le remitirá a un sitio web que contiene la directiva de recopilación de datos de Microsoft.
-
-Cuando el compilador no puede procesar un archivo de código fuente, se produce un error interno del compilador (ICE). Cuando se produce un ICE, el compilador no genera un archivo de salida ni otro tipo de diagnóstico útil que se pueda usar para corregir el código.
-
-Mediante **ErrorReport**, puede proporcionar información sobre ICE al equipo de C#. Sus informes de error pueden ayudar a mejorar las futuras versiones del compilador. La capacidad de un usuario de enviar informes depende de los permisos de directiva de equipo y de usuario.
 
 ## <a name="applicationconfiguration"></a>ApplicationConfiguration
 
