@@ -8,25 +8,28 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 4b28ee17f4be2b933373cce0d3670cbfa9a12895
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 1d80cb2391a94c21360117c8217ecc4514fd666e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513047"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190273"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="cb95c-104">Procedimiento para implementar una clase ligera con propiedades autoimplementadas (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="cb95c-104">How to implement a lightweight class with auto-implemented properties (C# Programming Guide)</span></span>
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="57f36-104">Procedimiento para implementar una clase ligera con propiedades autoimplementadas (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="57f36-104">How to implement a lightweight class with auto-implemented properties (C# Programming Guide)</span></span>
 
-<span data-ttu-id="cb95c-105">En este ejemplo se muestra cómo crear una clase ligera inmutable que solo sirve para encapsular un conjunto de propiedades autoimplementadas.</span><span class="sxs-lookup"><span data-stu-id="cb95c-105">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="cb95c-106">Use este tipo de construcción en lugar de un struct cuando deba utilizar una semántica de tipo de referencia.</span><span class="sxs-lookup"><span data-stu-id="cb95c-106">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
+<span data-ttu-id="57f36-105">En este ejemplo se muestra cómo crear una clase ligera inmutable que solo sirve para encapsular un conjunto de propiedades autoimplementadas.</span><span class="sxs-lookup"><span data-stu-id="57f36-105">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="57f36-106">Use este tipo de construcción en lugar de un struct cuando deba utilizar una semántica de tipo de referencia.</span><span class="sxs-lookup"><span data-stu-id="57f36-106">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
 
-<span data-ttu-id="cb95c-107">Puede crear una propiedad inmutable de dos maneras:</span><span class="sxs-lookup"><span data-stu-id="cb95c-107">You can make an immutable property in two ways:</span></span>
+<span data-ttu-id="57f36-107">Puede hacer que una propiedad sea inmutable de estas maneras:</span><span class="sxs-lookup"><span data-stu-id="57f36-107">You can make an immutable property in the following ways:</span></span>
 
-- <span data-ttu-id="cb95c-108">Puede declarar el descriptor de acceso [set](../../language-reference/keywords/set.md) como [private](../../language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="cb95c-108">You can declare the [set](../../language-reference/keywords/set.md) accessor to be [private](../../language-reference/keywords/private.md).</span></span>  <span data-ttu-id="cb95c-109">La propiedad solo se puede establecer dentro del tipo, pero es inmutable a los consumidores.</span><span class="sxs-lookup"><span data-stu-id="cb95c-109">The property is only settable within the type, but it is immutable to consumers.</span></span>
+- <span data-ttu-id="57f36-108">Declare solo el descriptor de acceso [get](../../language-reference/keywords/get.md), que hace que la propiedad sea inmutable en cualquier lugar excepto en el constructor del tipo.</span><span class="sxs-lookup"><span data-stu-id="57f36-108">Declare only the [get](../../language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type's constructor.</span></span>
 
-  <span data-ttu-id="cb95c-110">Cuando se declara un descriptor de acceso `set` privado, no se puede usar un inicializador de objeto para inicializar la propiedad.</span><span class="sxs-lookup"><span data-stu-id="cb95c-110">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="cb95c-111">Se debe utilizar un constructor o un método factory.</span><span class="sxs-lookup"><span data-stu-id="cb95c-111">You must use a constructor or a factory method.</span></span>
-- <span data-ttu-id="cb95c-112">Puede declarar solo el descriptor de acceso [get](../../language-reference/keywords/get.md), que hace que la propiedad sea inmutable en cualquier lugar excepto en el constructor del tipo.</span><span class="sxs-lookup"><span data-stu-id="cb95c-112">You can declare only the [get](../../language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type's constructor.</span></span>
+- <span data-ttu-id="57f36-109">Declare un descriptor de acceso [init](../../language-reference/keywords/init.md) en lugar de `set`, que hace que la propiedad se pueda establecer solo en el constructor o mediante un [inicializador de objeto](object-and-collection-initializers.md).</span><span class="sxs-lookup"><span data-stu-id="57f36-109">Declare an [init](../../language-reference/keywords/init.md) accessor instead of a `set` accessor, which makes the property settable only in the constructor or by using an [object initializer](object-and-collection-initializers.md).</span></span>
 
-<span data-ttu-id="cb95c-113">En el ejemplo siguiente se muestra cómo una propiedad con solo el descriptor de acceso get es distinta de una con get y un conjunto privado.</span><span class="sxs-lookup"><span data-stu-id="cb95c-113">The following example shows how a property with only get accessor differs than one with get and private set.</span></span>
+- <span data-ttu-id="57f36-110">Declare el descriptor de acceso [set](../../language-reference/keywords/set.md) como [private](../../language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="57f36-110">Declare the [set](../../language-reference/keywords/set.md) accessor to be [private](../../language-reference/keywords/private.md).</span></span>  <span data-ttu-id="57f36-111">La propiedad solo se puede establecer dentro del tipo, pero es inmutable para los consumidores.</span><span class="sxs-lookup"><span data-stu-id="57f36-111">The property is settable within the type, but it is immutable to consumers.</span></span>
+
+  <span data-ttu-id="57f36-112">Cuando se declara un descriptor de acceso `set` privado, no se puede usar un inicializador de objeto para inicializar la propiedad.</span><span class="sxs-lookup"><span data-stu-id="57f36-112">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="57f36-113">Se debe utilizar un constructor o un método factory.</span><span class="sxs-lookup"><span data-stu-id="57f36-113">You must use a constructor or a factory method.</span></span>
+
+<span data-ttu-id="57f36-114">En el ejemplo siguiente se muestra cómo una propiedad con solo el descriptor de acceso get es distinta de una con get y un conjunto privado.</span><span class="sxs-lookup"><span data-stu-id="57f36-114">The following example shows how a property with only get accessor differs than one with get and private set.</span></span>
 
 ```csharp
 class Contact
@@ -49,9 +52,9 @@ class Contact
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="cb95c-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cb95c-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="57f36-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="57f36-115">Example</span></span>
 
-<span data-ttu-id="cb95c-115">En el siguiente ejemplo se muestran dos maneras de implementar una clase inmutable que tenga propiedades autoimplementadas.</span><span class="sxs-lookup"><span data-stu-id="cb95c-115">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="cb95c-116">Cada forma declara una de las propiedades con un `set` privado y una de las propiedades solamente con un `get`.</span><span class="sxs-lookup"><span data-stu-id="cb95c-116">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="cb95c-117">La primera clase usa un constructor solo para inicializar las propiedades y la segunda clase utiliza un método factory estático que llama a un constructor.</span><span class="sxs-lookup"><span data-stu-id="cb95c-117">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
+<span data-ttu-id="57f36-116">En el siguiente ejemplo se muestran dos maneras de implementar una clase inmutable que tenga propiedades autoimplementadas.</span><span class="sxs-lookup"><span data-stu-id="57f36-116">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="57f36-117">Cada forma declara una de las propiedades con un `set` privado y una de las propiedades solamente con un `get`.</span><span class="sxs-lookup"><span data-stu-id="57f36-117">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="57f36-118">La primera clase usa un constructor solo para inicializar las propiedades y la segunda clase utiliza un método factory estático que llama a un constructor.</span><span class="sxs-lookup"><span data-stu-id="57f36-118">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -146,10 +149,10 @@ public class Program
 */
 ```
 
-<span data-ttu-id="cb95c-118">El compilador crea campos de respaldo para cada propiedad autoimplementada.</span><span class="sxs-lookup"><span data-stu-id="cb95c-118">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="cb95c-119">No se puede acceder a los campos directamente desde el código fuente.</span><span class="sxs-lookup"><span data-stu-id="cb95c-119">The fields are not accessible directly from source code.</span></span>
+<span data-ttu-id="57f36-119">El compilador crea campos de respaldo para cada propiedad autoimplementada.</span><span class="sxs-lookup"><span data-stu-id="57f36-119">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="57f36-120">No se puede acceder a los campos directamente desde el código fuente.</span><span class="sxs-lookup"><span data-stu-id="57f36-120">The fields are not accessible directly from source code.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="cb95c-120">Consulte también</span><span class="sxs-lookup"><span data-stu-id="cb95c-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57f36-121">Consulte también</span><span class="sxs-lookup"><span data-stu-id="57f36-121">See also</span></span>
 
-- [<span data-ttu-id="cb95c-121">Propiedades</span><span class="sxs-lookup"><span data-stu-id="cb95c-121">Properties</span></span>](./properties.md)
-- [<span data-ttu-id="cb95c-122">struct</span><span class="sxs-lookup"><span data-stu-id="cb95c-122">struct</span></span>](../../language-reference/builtin-types/struct.md)
-- [<span data-ttu-id="cb95c-123">Inicializadores de objeto y colección</span><span class="sxs-lookup"><span data-stu-id="cb95c-123">Object and Collection Initializers</span></span>](./object-and-collection-initializers.md)
+- [<span data-ttu-id="57f36-122">Propiedades</span><span class="sxs-lookup"><span data-stu-id="57f36-122">Properties</span></span>](./properties.md)
+- [<span data-ttu-id="57f36-123">struct</span><span class="sxs-lookup"><span data-stu-id="57f36-123">struct</span></span>](../../language-reference/builtin-types/struct.md)
+- [<span data-ttu-id="57f36-124">Inicializadores de objeto y colección</span><span class="sxs-lookup"><span data-stu-id="57f36-124">Object and Collection Initializers</span></span>](./object-and-collection-initializers.md)

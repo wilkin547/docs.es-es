@@ -1,87 +1,99 @@
 ---
 title: 'Argumento de la línea de comandos: Guía de programación de C#'
 description: Aprenda sobre los argumentos de la línea de comandos. Vea un ejemplo en el que se usan argumentos de la línea de comandos en una aplicación de consola.
-ms.date: 07/20/2015
+ms.date: 03/11/2021
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: f495efb3bc2c76a98f74c173d5b777ebe383edcb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381923"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190416"
 ---
-# <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="f5e50-104">Argumentos de la línea de comandos (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="f5e50-104">Command-Line Arguments (C# Programming Guide)</span></span>
+# <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="3c681-104">Argumentos de la línea de comandos (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="3c681-104">Command-Line Arguments (C# Programming Guide)</span></span>
 
-<span data-ttu-id="f5e50-105">Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes maneras:</span><span class="sxs-lookup"><span data-stu-id="f5e50-105">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>
+<span data-ttu-id="3c681-105">Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes maneras:</span><span class="sxs-lookup"><span data-stu-id="3c681-105">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>
 
-[!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
+| <span data-ttu-id="3c681-106">Código del método `Main`</span><span class="sxs-lookup"><span data-stu-id="3c681-106">`Main` method code</span></span>                 | <span data-ttu-id="3c681-107">Signatura de `Main`</span><span class="sxs-lookup"><span data-stu-id="3c681-107">`Main` signature</span></span>                             |
+|------------------------------------|----------------------------------------------|
+| <span data-ttu-id="3c681-108">No hay valores devueltos, no se usa `await`</span><span class="sxs-lookup"><span data-stu-id="3c681-108">No return value, no use of `await`</span></span> | `static void Main(string[] args)`            |
+| <span data-ttu-id="3c681-109">Valor devuelto, no se usa `await`</span><span class="sxs-lookup"><span data-stu-id="3c681-109">Return value, no use of `await`</span></span>    | `static int Main(string[] args)`             |
+| <span data-ttu-id="3c681-110">No hay valores devueltos, se usa `await`</span><span class="sxs-lookup"><span data-stu-id="3c681-110">No return value, uses `await`</span></span>      | `static async Task Main(string[] args)`      |
+| <span data-ttu-id="3c681-111">Valor devuelto, se usa `await`</span><span class="sxs-lookup"><span data-stu-id="3c681-111">Return value, uses `await`</span></span>         | `static async Task<int> Main(string[] args)` |
 
-[!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
+<span data-ttu-id="3c681-112">Si no se usan los argumentos, puede omitir `args` de la signatura del método para simplificar ligeramente el código:</span><span class="sxs-lookup"><span data-stu-id="3c681-112">If the arguments are not used, you can omit `args` from the method signature for slightly simpler code:</span></span>
+
+| <span data-ttu-id="3c681-113">Código del método `Main`</span><span class="sxs-lookup"><span data-stu-id="3c681-113">`Main` method code</span></span>                 | <span data-ttu-id="3c681-114">Signatura de `Main`</span><span class="sxs-lookup"><span data-stu-id="3c681-114">`Main` signature</span></span>                |
+|------------------------------------|---------------------------------|
+| <span data-ttu-id="3c681-115">No hay valores devueltos, no se usa `await`</span><span class="sxs-lookup"><span data-stu-id="3c681-115">No return value, no use of `await`</span></span> | `static void Main()`            |
+| <span data-ttu-id="3c681-116">Valor devuelto, no se usa `await`</span><span class="sxs-lookup"><span data-stu-id="3c681-116">Return value, no use of `await`</span></span>    | `static int Main()`             |
+| <span data-ttu-id="3c681-117">No hay valores devueltos, se usa `await`</span><span class="sxs-lookup"><span data-stu-id="3c681-117">No return value, uses `await`</span></span>      | `static async Task Main()`      |
+| <span data-ttu-id="3c681-118">Valor devuelto, se usa `await`</span><span class="sxs-lookup"><span data-stu-id="3c681-118">Return value, uses `await`</span></span>         | `static async Task<int> Main()` |
 
 > [!NOTE]
-> <span data-ttu-id="f5e50-106">Para habilitar los argumentos de la línea de comandos en el método `Main` de una aplicación Windows Forms, tendrá que modificar manualmente la firma de `Main` en *program.cs*.</span><span class="sxs-lookup"><span data-stu-id="f5e50-106">To enable command-line arguments in the `Main` method in a Windows Forms application, you must manually modify the signature of `Main` in *program.cs*.</span></span> <span data-ttu-id="f5e50-107">El código generado por el Diseñador de Windows Forms crea un `Main` sin ningún parámetro de entrada.</span><span class="sxs-lookup"><span data-stu-id="f5e50-107">The code generated by the Windows Forms designer creates a `Main` without an input parameter.</span></span> <span data-ttu-id="f5e50-108">También puede usar <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> para tener acceso a los argumentos de la línea de comandos desde cualquier punto en una consola o aplicación Windows.</span><span class="sxs-lookup"><span data-stu-id="f5e50-108">You can also use <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> or <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> to access the command-line arguments from any point in a console or Windows application.</span></span>
+> <span data-ttu-id="3c681-119">Para habilitar los argumentos de la línea de comandos en el método `Main` de una aplicación Windows Forms, tendrá que modificar manualmente la firma de `Main` en *program.cs*.</span><span class="sxs-lookup"><span data-stu-id="3c681-119">To enable command-line arguments in the `Main` method in a Windows Forms application, you must manually modify the signature of `Main` in *program.cs*.</span></span> <span data-ttu-id="3c681-120">El código generado por el Diseñador de Windows Forms crea un `Main` sin ningún parámetro de entrada.</span><span class="sxs-lookup"><span data-stu-id="3c681-120">The code generated by the Windows Forms designer creates a `Main` without an input parameter.</span></span> <span data-ttu-id="3c681-121">También puede usar <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> para tener acceso a los argumentos de la línea de comandos desde cualquier punto en una consola o aplicación Windows.</span><span class="sxs-lookup"><span data-stu-id="3c681-121">You can also use <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> or <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> to access the command-line arguments from any point in a console or Windows application.</span></span>
 
-<span data-ttu-id="f5e50-109">El parámetro del método `Main` es una matriz <xref:System.String> que representa los argumentos de la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="f5e50-109">The parameter of the `Main` method is a <xref:System.String> array that represents the command-line arguments.</span></span> <span data-ttu-id="f5e50-110">Normalmente, para determinar si hay argumentos, se prueba la propiedad `Length`; por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="f5e50-110">Usually you determine whether arguments exist by testing the `Length` property, for example:</span></span>
+<span data-ttu-id="3c681-122">El parámetro del método `Main` es una matriz <xref:System.String> que representa los argumentos de la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="3c681-122">The parameter of the `Main` method is a <xref:System.String> array that represents the command-line arguments.</span></span> <span data-ttu-id="3c681-123">Normalmente, para determinar si hay argumentos, se prueba la propiedad `Length`; por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="3c681-123">Usually you determine whether arguments exist by testing the `Length` property, for example:</span></span>
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
 
 > [!TIP]
-> <span data-ttu-id="f5e50-111">La matriz `args` no puede ser NULL,</span><span class="sxs-lookup"><span data-stu-id="f5e50-111">The `args` array cannot be null.</span></span> <span data-ttu-id="f5e50-112">así que es seguro acceder a la propiedad `Length` sin comprobar los valores NULL.</span><span class="sxs-lookup"><span data-stu-id="f5e50-112">So, it's safe to access the `Length` property without null checking.</span></span>
+> <span data-ttu-id="3c681-124">La matriz `args` no puede ser NULL,</span><span class="sxs-lookup"><span data-stu-id="3c681-124">The `args` array cannot be null.</span></span> <span data-ttu-id="3c681-125">así que es seguro acceder a la propiedad `Length` sin comprobar los valores NULL.</span><span class="sxs-lookup"><span data-stu-id="3c681-125">So, it's safe to access the `Length` property without null checking.</span></span>
 
-<span data-ttu-id="f5e50-113">También puede convertir los argumentos de cadena en tipos numéricos mediante la clase <xref:System.Convert> o el método `Parse`.</span><span class="sxs-lookup"><span data-stu-id="f5e50-113">You can also convert the string arguments to numeric types by using the <xref:System.Convert> class or the `Parse` method.</span></span> <span data-ttu-id="f5e50-114">Por ejemplo, la siguiente instrucción convierte la `string` en un número `long` mediante el método <xref:System.Int64.Parse%2A>:</span><span class="sxs-lookup"><span data-stu-id="f5e50-114">For example, the following statement converts the `string` to a `long` number by using the <xref:System.Int64.Parse%2A> method:</span></span>
+<span data-ttu-id="3c681-126">También puede convertir los argumentos de cadena en tipos numéricos mediante la clase <xref:System.Convert> o el método `Parse`.</span><span class="sxs-lookup"><span data-stu-id="3c681-126">You can also convert the string arguments to numeric types by using the <xref:System.Convert> class or the `Parse` method.</span></span> <span data-ttu-id="3c681-127">Por ejemplo, la siguiente instrucción convierte la `string` en un número `long` mediante el método <xref:System.Int64.Parse%2A>:</span><span class="sxs-lookup"><span data-stu-id="3c681-127">For example, the following statement converts the `string` to a `long` number by using the <xref:System.Int64.Parse%2A> method:</span></span>
 
 ```csharp
 long num = Int64.Parse(args[0]);
 ```
 
-<span data-ttu-id="f5e50-115">También se puede usar el tipo de C# `long`, que tiene como alias `Int64`:</span><span class="sxs-lookup"><span data-stu-id="f5e50-115">It is also possible to use the C# type `long`, which aliases `Int64`:</span></span>
+<span data-ttu-id="3c681-128">También se puede usar el tipo de C# `long`, que tiene como alias `Int64`:</span><span class="sxs-lookup"><span data-stu-id="3c681-128">It is also possible to use the C# type `long`, which aliases `Int64`:</span></span>
 
 ```csharp
 long num = long.Parse(args[0]);
 ```
 
-<span data-ttu-id="f5e50-116">También puede usar el método `ToInt64` de la clase `Convert` para hacer lo mismo:</span><span class="sxs-lookup"><span data-stu-id="f5e50-116">You can also use the `Convert` class method `ToInt64` to do the same thing:</span></span>
+<span data-ttu-id="3c681-129">También puede usar el método `ToInt64` de la clase `Convert` para hacer lo mismo:</span><span class="sxs-lookup"><span data-stu-id="3c681-129">You can also use the `Convert` class method `ToInt64` to do the same thing:</span></span>
 
 ```csharp
 long num = Convert.ToInt64(s);
 ```
 
-<span data-ttu-id="f5e50-117">Para obtener más información, vea <xref:System.Int64.Parse%2A> y <xref:System.Convert>.</span><span class="sxs-lookup"><span data-stu-id="f5e50-117">For more information, see <xref:System.Int64.Parse%2A> and <xref:System.Convert>.</span></span>
+<span data-ttu-id="3c681-130">Para obtener más información, vea <xref:System.Int64.Parse%2A> y <xref:System.Convert>.</span><span class="sxs-lookup"><span data-stu-id="3c681-130">For more information, see <xref:System.Int64.Parse%2A> and <xref:System.Convert>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f5e50-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f5e50-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="3c681-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3c681-131">Example</span></span>
 
-<span data-ttu-id="f5e50-119">En el ejemplo siguiente se muestra cómo usar argumentos de la línea de comandos en una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="f5e50-119">The following example shows how to use command-line arguments in a console application.</span></span> <span data-ttu-id="f5e50-120">La aplicación toma un argumento en tiempo de ejecución, lo convierte en un entero y calcula el factorial del número.</span><span class="sxs-lookup"><span data-stu-id="f5e50-120">The application takes one argument at run time, converts the argument to an integer, and calculates the factorial of the number.</span></span> <span data-ttu-id="f5e50-121">Si no se proporciona ningún argumento, la aplicación emite un mensaje en el que se explica el uso correcto del programa.</span><span class="sxs-lookup"><span data-stu-id="f5e50-121">If no arguments are supplied, the application issues a message that explains the correct usage of the program.</span></span>
+<span data-ttu-id="3c681-132">En el ejemplo siguiente se muestra cómo usar argumentos de la línea de comandos en una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="3c681-132">The following example shows how to use command-line arguments in a console application.</span></span> <span data-ttu-id="3c681-133">La aplicación toma un argumento en tiempo de ejecución, lo convierte en un entero y calcula el factorial del número.</span><span class="sxs-lookup"><span data-stu-id="3c681-133">The application takes one argument at run time, converts the argument to an integer, and calculates the factorial of the number.</span></span> <span data-ttu-id="3c681-134">Si no se proporciona ningún argumento, la aplicación emite un mensaje en el que se explica el uso correcto del programa.</span><span class="sxs-lookup"><span data-stu-id="3c681-134">If no arguments are supplied, the application issues a message that explains the correct usage of the program.</span></span>
 
-<span data-ttu-id="f5e50-122">Para compilar y ejecutar la aplicación desde un símbolo del sistema, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="f5e50-122">To compile and run the application from a command prompt, follow these steps:</span></span>
+<span data-ttu-id="3c681-135">Para compilar y ejecutar la aplicación desde un símbolo del sistema, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="3c681-135">To compile and run the application from a command prompt, follow these steps:</span></span>
 
-1. <span data-ttu-id="f5e50-123">Pegue el código siguiente en cualquier editor de texto y, después, guarde el archivo como archivo de texto con el nombre *Factorial.cs*.</span><span class="sxs-lookup"><span data-stu-id="f5e50-123">Paste the following code into any text editor, and then save the file as  a text file with the name *Factorial.cs*.</span></span>
+1. <span data-ttu-id="3c681-136">Pegue el código siguiente en cualquier editor de texto y, después, guarde el archivo como archivo de texto con el nombre *Factorial.cs*.</span><span class="sxs-lookup"><span data-stu-id="3c681-136">Paste the following code into any text editor, and then save the file as  a text file with the name *Factorial.cs*.</span></span>
 
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]
 
-2. <span data-ttu-id="f5e50-124">En la pantalla **Inicio** o en el menú **Inicio**, abra una ventana del **símbolo del sistema para desarrolladores** de Visual Studio y navegue hasta la carpeta que contiene el archivo que acaba de crear.</span><span class="sxs-lookup"><span data-stu-id="f5e50-124">From the **Start** screen or **Start** menu, open a Visual Studio **Developer Command Prompt** window, and then navigate to the folder that contains the file that you just created.</span></span>
+2. <span data-ttu-id="3c681-137">En la pantalla **Inicio** o en el menú **Inicio**, abra una ventana del **símbolo del sistema para desarrolladores** de Visual Studio y navegue hasta la carpeta que contiene el archivo que acaba de crear.</span><span class="sxs-lookup"><span data-stu-id="3c681-137">From the **Start** screen or **Start** menu, open a Visual Studio **Developer Command Prompt** window, and then navigate to the folder that contains the file that you just created.</span></span>
 
-3. <span data-ttu-id="f5e50-125">Escriba el siguiente comando para compilar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="f5e50-125">Enter the following command to compile the application.</span></span>
+3. <span data-ttu-id="3c681-138">Escriba el siguiente comando para compilar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="3c681-138">Enter the following command to compile the application.</span></span>
   
      `csc Factorial.cs`  
   
-     <span data-ttu-id="f5e50-126">Si la aplicación no tiene ningún error de compilación, se creará un archivo ejecutable con el nombre *Factorial.exe*.</span><span class="sxs-lookup"><span data-stu-id="f5e50-126">If your application has no compilation errors, an executable file that's named *Factorial.exe* is created.</span></span>
+     <span data-ttu-id="3c681-139">Si la aplicación no tiene ningún error de compilación, se creará un archivo ejecutable con el nombre *Factorial.exe*.</span><span class="sxs-lookup"><span data-stu-id="3c681-139">If your application has no compilation errors, an executable file that's named *Factorial.exe* is created.</span></span>
   
-4. <span data-ttu-id="f5e50-127">Escriba el siguiente comando para calcular el factorial de 3:</span><span class="sxs-lookup"><span data-stu-id="f5e50-127">Enter the following command to calculate the factorial of 3:</span></span>
+4. <span data-ttu-id="3c681-140">Escriba el siguiente comando para calcular el factorial de 3:</span><span class="sxs-lookup"><span data-stu-id="3c681-140">Enter the following command to calculate the factorial of 3:</span></span>
   
      `Factorial 3`  
   
-5. <span data-ttu-id="f5e50-128">El comando genera este resultado: `The factorial of 3 is 6.`</span><span class="sxs-lookup"><span data-stu-id="f5e50-128">The command produces this output: `The factorial of 3 is 6.`</span></span>
+5. <span data-ttu-id="3c681-141">El comando genera este resultado: `The factorial of 3 is 6.`</span><span class="sxs-lookup"><span data-stu-id="3c681-141">The command produces this output: `The factorial of 3 is 6.`</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f5e50-129">Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).</span><span class="sxs-lookup"><span data-stu-id="f5e50-129">When running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>
+> <span data-ttu-id="3c681-142">Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).</span><span class="sxs-lookup"><span data-stu-id="3c681-142">When running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f5e50-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="f5e50-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c681-143">Vea también</span><span class="sxs-lookup"><span data-stu-id="3c681-143">See also</span></span>
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [<span data-ttu-id="f5e50-131">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="f5e50-131">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="f5e50-132">Main() y argumentos de la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="f5e50-132">Main() and Command-Line Arguments</span></span>](index.md)
-- [<span data-ttu-id="f5e50-133">Procedimiento para mostrar argumentos de la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="f5e50-133">How to display command line arguments</span></span>](how-to-display-command-line-arguments.md)
-- [<span data-ttu-id="f5e50-134">Valores devueltos de Main()</span><span class="sxs-lookup"><span data-stu-id="f5e50-134">Main() Return Values</span></span>](main-return-values.md)
-- [<span data-ttu-id="f5e50-135">Clases</span><span class="sxs-lookup"><span data-stu-id="f5e50-135">Classes</span></span>](../classes-and-structs/classes.md)
+- [<span data-ttu-id="3c681-144">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="3c681-144">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="3c681-145">Main() y argumentos de la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="3c681-145">Main() and Command-Line Arguments</span></span>](index.md)
+- [<span data-ttu-id="3c681-146">Procedimiento para mostrar argumentos de la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="3c681-146">How to display command line arguments</span></span>](how-to-display-command-line-arguments.md)
+- [<span data-ttu-id="3c681-147">Valores devueltos de Main()</span><span class="sxs-lookup"><span data-stu-id="3c681-147">Main() Return Values</span></span>](main-return-values.md)
+- [<span data-ttu-id="3c681-148">Clases</span><span class="sxs-lookup"><span data-stu-id="3c681-148">Classes</span></span>](../classes-and-structs/classes.md)
