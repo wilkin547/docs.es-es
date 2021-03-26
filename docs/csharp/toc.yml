@@ -35,41 +35,55 @@ items:
                 href: tour-of-csharp/tutorials/branches-and-loops-local.md
               - name: Colecciones de listas
                 href: tour-of-csharp/tutorials/arrays-and-collections.md
+  - name: Novedades de C#
+    items:
+      - name: "C#\_9.0"
+        displayName: what's new
+        href: whats-new/csharp-9.md
+      - name: C# 8.0
+        href: whats-new/csharp-8.md
+      - name: "C#\_7.0-7.3"
+        href: whats-new/csharp-7.md
+      - name: Cambios importantes del compilador
+        href: whats-new/breaking-changes.md
+      - name: Historial de versiones de C#
+        href: whats-new/csharp-version-history.md
+      - name: Relaciones con la biblioteca de .NET
+        href: whats-new/relationships-between-language-and-library.md
+      - name: Compatibilidad de versiones
+        href: whats-new/version-update-considerations.md
+      - name: Tutoriales
+        items:
+          - name: Exploración de los tipos de registros
+            href: whats-new/tutorials/records.md
+          - name: Exploración de instrucciones de nivel superior
+            href: whats-new/tutorials/top-level-statements.md
+          - name: Exploración de patrones en objetos
+            href: whats-new/tutorials/patterns-objects.md
+          - name: Actualización segura de la interfaz con métodos de la predeterminada
+            href: whats-new/tutorials/default-interface-methods-versions.md
+          - name: Creación de la funcionalidad Mixin con métodos de interfaz predeterminados
+            href: whats-new/tutorials/mixins-with-default-interface-methods.md
+          - name: Exploración de los índices y rangos
+            href: whats-new/tutorials/ranges-indexes.md
+          - name: Trabajo con tipos de referencias que aceptan valores NULL
+            href: whats-new/tutorials/nullable-reference-types.md
+          - name: Actualización de aplicaciones a tipos de referencias que aceptan valores NULL
+            href: whats-new/tutorials/upgrade-to-nullable-references.md
+          - name: Generación y consumo de flujos asincrónicos
+            href: whats-new/tutorials/generate-consume-asynchronous-stream.md
   - name: Tutoriales
     items:
-      - name: Información general
-        displayName: tutorials
-        href: tutorials/index.md
       - name: Introducción a las clases
         href: tutorials/intro-to-csharp/introduction-to-classes.md
       - name: Programación orientada a objetos
         href: tutorials/intro-to-csharp/object-oriented-programming.md
-      - name: Exploración de los tipos de registros
-        href: tutorials/exploration/records.md
-      - name: Exploración de instrucciones de nivel superior
-        href: tutorials/exploration/top-level-statements.md
-      - name: Exploración de patrones en objetos
-        href: tutorials/exploration/patterns-objects.md
       - name: 'Exploración de la interpolación de cadenas: tutorial interactivo'
         href: tutorials/exploration/interpolated-strings.yml
       - name: 'Exploración de la interpolación de cadenas: tutorial en el entorno'
         href: tutorials/exploration/interpolated-strings-local.md
       - name: Escenarios avanzados de la interpolación de cadenas
         href: tutorials/string-interpolation.md
-      - name: Actualización segura de la interfaz con métodos de la predeterminada
-        href: tutorials/default-interface-methods-versions.md
-      - name: Creación de la funcionalidad Mixin con métodos de interfaz predeterminados
-        href: tutorials/mixins-with-default-interface-methods.md
-      - name: Exploración de los índices y rangos
-        href: tutorials/ranges-indexes.md
-      - name: Trabajo con tipos de referencias que aceptan valores NULL
-        href: tutorials/nullable-reference-types.md
-      - name: Actualización de aplicaciones a tipos de referencias que aceptan valores NULL
-        href: tutorials/upgrade-to-nullable-references.md
-      - name: Generación y consumo de flujos asincrónicos
-        href: tutorials/generate-consume-asynchronous-stream.md
-      - name: Creación de algoritmos controlados por datos con coincidencia de patrones
-        href: tutorials/pattern-matching.md
       - name: Aplicación de consola
         href: tutorials/console-teleprompter.md
       - name: Cliente REST
@@ -80,23 +94,8 @@ items:
         href: tutorials/working-with-linq.md
       - name: Uso de atributos
         href: tutorials/attributes.md
-  - name: Novedades de C#
-    items:
-      - name: "C#\_9.0"
-        displayName: what's new
-        href: whats-new/csharp-9.md
-      - name: C# 8.0
-        href: whats-new/csharp-8.md
-      - name: "C#\_7.0-7.3"
-        href: whats-new/csharp-7.md
-      - name: Cambios importantes en el compilador
-        href: whats-new/breaking-changes.md
-      - name: Historial de versiones de C#
-        href: whats-new/csharp-version-history.md
-      - name: Relaciones entre el lenguaje y el marco
-        href: whats-new/relationships-between-language-and-library.md
-      - name: Consideraciones sobre versiones y actualizaciones
-        href: whats-new/version-update-considerations.md
+      - name: Creación de algoritmos controlados por datos con coincidencia de patrones
+        href: tutorials/pattern-matching.md
   - name: Conceptos de C#
     items:
       - name: Sistema de tipos de C#

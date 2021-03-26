@@ -2,24 +2,24 @@
 title: Diseño de la arquitectura de aplicaciones basadas en contenedores y microservicios
 description: El diseño de la arquitectura de aplicaciones basadas en contenedores y microservicios no es ninguna tontería y no debe tomarse a la ligera. Conozca sobre los conceptos principales en este capítulo.
 ms.date: 01/13/2021
-ms.openlocfilehash: d87633b6c5073a9098c34c1192bcca1abad00e5c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b31c560fefa0928cefef2fdb92d6cfdbac084c57
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189491"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873151"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>Diseño de la arquitectura de aplicaciones basadas en contenedores y microservicios
 
 *Los microservicios ofrecen grandes ventajas, pero también generan nuevos desafíos enormes. Los patrones de arquitectura de microservicios son los pilares fundamentales a la hora de crear una aplicación basada en microservicios.*
 
-Previamente en esta guía, ha aprendido los conceptos básicos sobre los contenedores y Docker. Esta era la información mínima necesaria para empezar a trabajar con contenedores. Aunque los contenedores son habilitadores y se consideran una gran elección para microservicios, no son obligatorios para una arquitectura de microservicios, y muchos conceptos arquitectónicos de esta sección sobre la arquitectura también se podrían aplicar sin contenedores. A pesar de ello, esta guía se centra en la intersección de ambos debido a la importancia actual de los contenedores.
+Previamente en esta guía, ha aprendido los conceptos básicos sobre los contenedores y Docker. Esta era la información mínima necesaria para empezar a trabajar con contenedores. A pesar de que los contenedores posibilitan los microservicios y funcionan muy bien con estos, no son obligatorios para una arquitectura de microservicios. Muchos conceptos arquitectónicos presentes en esta sección se podrían aplicar sin contenedores. A pesar de ello, esta guía se centra en la intersección de ambos debido a la importancia actual de los contenedores.
 
 Las aplicaciones empresariales pueden ser complejas y, a menudo, se componen de varios servicios en lugar de una sola aplicación basada en servicios. En esos casos, debe comprender otros enfoques de arquitectura, como son los microservicios y determinados patrones de diseño guiado por el dominio (DDD), además de conceptos de orquestación de contenedores. Tenga en cuenta que en este capítulo no solo se describen los microservicios en contenedor, sino cualquier aplicación en contenedor.
 
 ## <a name="container-design-principles"></a>Principios de diseño de contenedores
 
-En el modelo de contenedor, una instancia de imagen de contenedor representa un único proceso. Al definir una imagen de contenedor como un límite de proceso, puede crear primitivas que se usen para escalar el proceso o para procesarlo por lotes.
+En el modelo de contenedor, una instancia de imagen de contenedor representa un único proceso. Al definir una imagen de contenedor como un límite de proceso, puede crear primitivas que se usen para escalar o tratar por lotes el proceso.
 
 Al diseñar una imagen de contenedor, verá una definición [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) en el archivo Dockerfile. Esto define el proceso cuya duración controla la duración del contenedor. Cuando se completa el proceso, finaliza el ciclo de vida del contenedor. Los contenedores pueden representar procesos de ejecución prolongada como servidores web, pero también pueden representar procesos de corta duración, como trabajos por lotes, que anteriormente se implementarían como [WebJobs](https://github.com/Azure/azure-webjobs-sdk/wiki) de Azure.
 

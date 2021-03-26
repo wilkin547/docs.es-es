@@ -1372,6 +1372,11 @@ items:
             href: ../core/docker/build-container.md
           - name: Herramientas de contenedor de Visual Studio
             href: /visualstudio/containers/overview
+  - name: DevOps
+    items:
+      - name: Creación de una Acción de GitHub con .NET
+        href: ../devops/create-dotnet-github-action.md
+        displayName: 'continuous integration, continuous deployment, ci, cd, ci/cd, github, github action, github actions, lifecycle'
   - name: Componentes fundamentales de la codificación
     items:
       - name: Información general de los tipos base
