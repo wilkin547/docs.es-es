@@ -426,7 +426,15 @@ items:
               - name: Proveedores de eventos conocidos
                 href: ../core/diagnostics/well-known-event-providers.md
               - name: Seguimiento distribuido
-                href: ../core/diagnostics/distributed-tracing.md
+                items:
+                  - name: Información general
+                    href: ../core/diagnostics/distributed-tracing.md
+                  - name: Conceptos
+                    href: ../core/diagnostics/distributed-tracing-concepts.md
+                  - name: Instrumentación
+                    href: ../core/diagnostics/distributed-tracing-instrumentation-walkthroughs.md
+                  - name: Colección
+                    href: ../core/diagnostics/distributed-tracing-collection-walkthroughs.md
           - name: Símbolos
             href: ../core/diagnostics/symbols.md
           - name: Eventos del entorno de ejecución
