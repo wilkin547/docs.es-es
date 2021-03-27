@@ -3,12 +3,12 @@ title: Estrategias para migrar con la ejecución en producción
 description: Es posible que no se tenable migrar una aplicación grande desde ASP.NET MVC a ASP.NET Core todas a la vez. Aprenda algunas estrategias para migrar una aplicación a ASP.NET Core mientras se mantiene en ejecución y en producción para los usuarios existentes.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 4910984cb281139493aa5424809ba3eedab776e9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: e9dcdb3594cc431f3fd7e71b16e0d806ab8d1ba6
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401692"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637096"
 ---
 # <a name="strategies-for-migrating-while-running-in-production"></a>Estrategias para migrar con la ejecución en producción
 
@@ -42,7 +42,7 @@ Una vez que la fachada está en su lugar, puede redirigirla a una nueva ASP.NET 
 
 ## <a name="multi-targeting-approaches"></a>Enfoques de compatibilidad con múltiples versiones
 
-Las aplicaciones de gran tamaño que tienen como destino .NET Framework se pueden migrar a ASP.NET Core con el tiempo mediante la compatibilidad con múltiples versiones y rutas de acceso de código independientes para cada marco. Por ejemplo, el código que se debe ejecutar en ambos entornos podría modificarse con directivas de [preprocesador `#if` ](../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) para implementar una funcionalidad diferente o usar diferentes dependencias cuando se ejecuten en .NET Framework frente a .net Core. Otra opción consiste en modificar los archivos de proyecto para incluir diferentes conjuntos de archivos en función de la plataforma de destino. Los archivos de proyecto pueden usar diferentes patrones de comodines, como `*.core.cs` , para incluir diferentes conjuntos de archivos de código fuente en función del marco de destino.
+Las aplicaciones de gran tamaño que tienen como destino .NET Framework se pueden migrar a ASP.NET Core con el tiempo mediante la compatibilidad con múltiples versiones y rutas de acceso de código independientes para cada marco. Por ejemplo, el código que se debe ejecutar en ambos entornos podría modificarse con directivas de [preprocesador `#if` ](../../csharp/language-reference/preprocessor-directives.md#conditional-compilation) para implementar una funcionalidad diferente o usar diferentes dependencias cuando se ejecuten en .NET Framework frente a .net Core. Otra opción consiste en modificar los archivos de proyecto para incluir diferentes conjuntos de archivos en función de la plataforma de destino. Los archivos de proyecto pueden usar diferentes patrones de comodines, como `*.core.cs` , para incluir diferentes conjuntos de archivos de código fuente en función del marco de destino.
 
 Estas técnicas permiten que se mantenga un solo código base común mientras se agrega una nueva funcionalidad y (parte de) la aplicación se transporta para usar .NET Core.
 
