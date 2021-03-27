@@ -2,12 +2,12 @@
 title: Sobrecarga de operadores
 description: 'Obtenga información sobre cómo sobrecargar operadores aritméticos en un tipo de clase o registro y en el nivel global en F #.'
 ms.date: 08/15/2020
-ms.openlocfilehash: fb86ceb95101fcc1f157ec9ba17a9d8145b11a91
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 64ff87a8706e6a05754b5328a7d95cd6a2b360c1
+ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557586"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105610855"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operadores
 
@@ -23,7 +23,7 @@ static member (operator-symbols) (parameter-list) =
 let [inline] (operator-symbols) parameter-list = function-body
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En la sintaxis anterior, el *símbolo del operador* es uno de `+` , `-` , `*` , `/` , `=` , etc. La *lista de parámetros* especifica los operandos en el orden en que aparecen en la sintaxis habitual de ese operador. El *cuerpo del método* crea el valor resultante.
 
@@ -39,13 +39,15 @@ En el código siguiente se muestra una clase vectorial que solo tiene dos operad
 
 ## <a name="creating-new-operators"></a>Crear operadores nuevos
 
-Se pueden sobrecargar todos los operadores estándar, pero también se pueden crear otros nuevos mediante secuencias de determinados caracteres. Los caracteres de operador permitidos son,,,,, `!` `%` `&` `*` `+` `-` , `.` , `/` , `<` , `=` , `>` , `?` , `@` ,, `^` `|` y `~` . El carácter `~` tiene el significado especial de convertir en unario un operador y no forma parte de la secuencia de caracteres de operador. No todos los operadores se pueden convertir en unario.
+Se pueden sobrecargar todos los operadores estándar, pero también se pueden crear otros nuevos mediante secuencias de determinados caracteres. Los caracteres de operador permitidos son,,,,,, `!` `$` `%` `&` `*` `+` `-` , `.` , `/` , `<` , `=` , `>` , `?` , `@` ,, `^` `|` y `~` . El carácter `~` tiene el significado especial de convertir en unario un operador y no forma parte de la secuencia de caracteres de operador. No todos los operadores se pueden convertir en unario.
 
 Según la secuencia de caracteres exacta utilizada, el operador tendrá una prioridad y una asociatividad determinadas. La asociatividad puede ser de izquierda a derecha o de derecha a izquierda, y se utiliza siempre que aparecen en secuencia y sin paréntesis operadores que tienen el mismo nivel de prioridad.
 
 El carácter operador `.` no afecta a la prioridad, de modo que, por ejemplo, para definir una versión propia de multiplicación que tenga la misma prioridad y asociatividad que la multiplicación ordinaria, se pueden crear operadores tales como `.*`.
 
 Solo los operadores `?` y `?<-` pueden comenzar por `?` .
+
+El `$` operador debe ser independiente y sin símbolos adicionales.
 
 En la [referencia de símbolos y operadores](./symbol-and-operator-reference/index.md)se puede encontrar una tabla que muestra la prioridad de todos los operadores de F #.
 
@@ -109,6 +111,7 @@ Hay otras combinaciones de caracteres de operador que no se muestran en este tex
 |`/`|`Divide`|
 |`=`|`Equals`|
 |`~`|`Twiddle`|
+|`$`|`Dollar`|
 |`%`|`Percent`|
 |`.`|`Dot`|
 |`&`|`Amp`|
@@ -157,6 +160,6 @@ De esta forma, es posible redefinir los operadores aritméticos normales porque 
 
 La palabra clave `inline` se suele utilizar con los operadores globales, que a menudo son pequeñas funciones que se integran mejor en el código de llamada. Hacer que las funciones de operador sean inline permite que se puedan usar con los parámetros de tipo que se resuelven estáticamente a fin de generar código genérico resuelto estáticamente. Para obtener más información, vea [funciones insertadas](./functions/inline-functions.md) y [parámetros de tipo resueltos estáticamente](./generics/statically-resolved-type-parameters.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Miembros](./members/index.md)
