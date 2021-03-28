@@ -2316,8 +2316,6 @@ items:
       - name: Últimos cambios
         displayName: app compatibility
         href: ../core/compatibility/
-      - name: Asignación de atributos AssemblyInfo de proyecto a propiedades
-        href: ../core/migration/assembly-info.md
       - name: Análisis de las dependencias de terceros
         href: ../core/porting/third-party-deps.md
       - name: Portabilidad de las bibliotecas

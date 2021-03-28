@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: dfbf7a2548f403bce895d388fe2cd1483e092b2e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 1e0dff24bb581a27f55b047d5f6351993ba58cdb
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104068"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637499"
 ---
 # <a name="c-reference"></a>Referencia de C#
 
@@ -34,7 +34,7 @@ En esta sección se proporciona material de referencia sobre palabras clave, ope
  [Caracteres especiales de C#](./tokens/index.md)  
  Proporciona vínculos a información sobre los caracteres especiales contextuales en C# y su uso.  
 
- [Directivas de preprocesador de C#](./preprocessor-directives/index.md)  
+ [Directivas de preprocesador de C#](preprocessor-directives.md)  
  Ofrece vínculos para información sobre los comandos del compilador para incrustar en código fuente de C#.  
   
  [Opciones del compilador de C#](./compiler-options/index.md)  
