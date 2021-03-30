@@ -2,12 +2,12 @@
 title: Cuándo elegir .NET Framework para contenedores de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Cuándo elegir .NET Framework para contenedores de Docker
 ms.date: 01/13/2021
-ms.openlocfilehash: 476f891a70a220172f84d8168c8492416b8e56bd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fa644753c3a39f285052aba7a8524ea96442c842
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188120"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873138"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Cuándo elegir .NET Framework para contenedores de Docker
 
@@ -39,7 +39,7 @@ En la lista siguiente se muestra la mayoría de las tecnologías que no están d
 
 - Servicios relacionados con el flujo de trabajo. Windows Workflow Foundation (WF), Workflow Services (WCF + WF en un único servicio) y WCF Data Services (antes conocido como ADO.NET Data Services) solo están disponibles en .NET Framework. Actualmente no existen planes para incluirlos en .NET 5.
 
-Además de las tecnologías indicadas en la [guía básica de .NET](https://github.com/dotnet/core/blob/master/roadmap.md) oficial, se pueden portar otras características a la nueva [plataforma unificada de .NET](https://devblogs.microsoft.com/dotnet/introducing-net-5/). Puede interesarle participar en las discusiones en GitHub para que su voz pueda ser escuchada. Asimismo, si piensa que falta algo, registre un nuevo problema en el repositorio de GitHub de [dotnet/runtime](https://github.com/dotnet/runtime/issues/new).
+Además de las tecnologías indicadas en la [guía básica de .NET](https://github.com/dotnet/core/blob/main/roadmap.md) oficial, se pueden portar otras características a la nueva [plataforma unificada de .NET](https://devblogs.microsoft.com/dotnet/introducing-net-5/). Puede interesarle participar en las discusiones en GitHub para que su voz pueda ser escuchada. Asimismo, si piensa que falta algo, registre un nuevo problema en el repositorio de GitHub de [dotnet/runtime](https://github.com/dotnet/runtime/issues/new).
 
 ## <a name="using-a-platform-or-api-that-doesnt-support-net-5"></a>Uso de una plataforma o API no compatible con .NET 5
 

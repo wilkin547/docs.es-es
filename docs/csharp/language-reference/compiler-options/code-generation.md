@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Optimize compiler option [C#]
 - Deterministic compiler option [C#]
 - ProduceOnlyReferenceAssembly compiler option [C#]
-ms.openlocfilehash: 6b66c50b408f9615bc3c63ab4dd46dbc4215c62f
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: a846bc515c501ec5a14069dd3b312b5e2df43d25
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482490"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881150"
 ---
 # <a name="c-compiler-options-that-control-code-generation"></a>Opciones del compilador de C# para controlar la generación de código
 
@@ -56,7 +56,7 @@ La opción **Optimización** se establece en la página de propiedades de **comp
 Hace que el compilador genere un ensamblado cuya salida byte a byte es idéntica en todas las compilaciones para las entradas idénticas.
 
 ```xml
-<Deterministic></Deterministic>
+<Deterministic>true</Deterministic>
 ```
 
 De forma predeterminada, la salida del compilador de un conjunto dado de entradas es única, ya que el compilador agrega una marca de tiempo y un MVID que se genera a partir de números aleatorios. Use la opción `<Deterministic>` para generar un *ensamblado determinista*, cuyo contenido binario es idéntico en todas las compilaciones, siempre y cuando la entrada siga siendo la misma. En este tipo de compilación, los campos timestamp y MVID se reemplazarán por los valores derivados de un hash de todas las entradas de la compilación. El compilador tiene en cuenta las siguientes entradas que afectan al determinismo:
@@ -88,7 +88,7 @@ Se puede usar la compilación determinista para establecer si un archivo binario
 La opción **ProduceOnlyReferenceAssembly** indica que un ensamblado de referencia se debe mostrar en lugar de un ensamblado de implementación, como el resultado principal. El parámetro **ProduceOnlyReferenceAssembly** deshabilita de forma automática la generación de archivos PDB, ya que los ensamblados de referencia no se pueden ejecutar.
 
 ```xml
-<ProduceOnlyReferenceAssembly></ProduceOnlyReferenceAssembly>
+<ProduceOnlyReferenceAssembly>true</ProduceOnlyReferenceAssembly>
 ```
 
 Los ensamblados de referencia son un tipo especial de ensamblado. Los ensamblados de referencia solo contienen la cantidad mínima de metadatos necesarios para representar la superficie de API públicas de la biblioteca. Incluyen declaraciones para todos los miembros que son significativos al hacer referencia a un ensamblado en las herramientas de compilación, pero excluyen todas las implementaciones de miembros y las declaraciones de miembros privados que no tienen ningún impacto observable en su contrato de API. Para obtener más información, vea [Ensamblados de referencia](../../../standard/assembly/reference-assemblies.md).

@@ -4,12 +4,12 @@ description: Obtenga información sobre .NET, una plataforma de desarrollo gratu
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7997346c9b248962b36688592d357247ec0ce6aa
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 78713ee08fadd7a947ee26997b8abe6373ab98d8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105094"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875140"
 ---
 # <a name="introduction-to-net"></a>Introducción a .NET
 
@@ -54,13 +54,13 @@ Las arquitecturas de procesador compatibles incluyen las siguientes:
 
 .NET le permite usar funcionalidades específicas de la plataforma, como las API del sistema operativo. Algunos ejemplos son Windows Forms y WPF en Windows, y los enlaces nativos a cada plataforma móvil desde Xamarin.
 
-Para obtener más información, vea [Directiva de ciclo de vida del sistema operativo compatible](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) y [Catálogo de .NET RID](rid-catalog.md).
+Para obtener más información, vea [Directiva de ciclo de vida del sistema operativo compatible](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md) y [Catálogo de .NET RID](rid-catalog.md).
 
 ## <a name="open-source"></a>Código abierto
 
-.NET es de código abierto y usa las licencias de [MIT y Apache 2](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT). .NET es un proyecto de [.NET Foundation](https://dotnetfoundation.org/).
+.NET es de código abierto y usa las licencias de [MIT y Apache 2](https://github.com/dotnet/runtime/blob/main/LICENSE.TXT). .NET es un proyecto de [.NET Foundation](https://dotnetfoundation.org/).
 
-Para obtener más información, vea la [lista de repositorios de proyectos en GitHub.com](https://github.com/dotnet/core/blob/master/Documentation/core-repos.md).
+Para obtener más información, vea la [lista de repositorios de proyectos en GitHub.com](https://github.com/dotnet/core/blob/main/Documentation/core-repos.md).
 
 ## <a name="support"></a>Soporte técnico
 
@@ -283,7 +283,7 @@ Estos son algunos ejemplos de los tipos definidos en las bibliotecas en tiempo d
 * Tipos de utilidad de [serialización](../standard/serialization/index.md), como <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> y <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 * Tipos de alto rendimiento, como <xref:System.Span%601?displayProperty=nameWithType>, <xref:System.Numerics.Vector?displayProperty=nameWithType> y [Canalizaciones](../standard/io/pipelines.md).
 
-Para obtener más información, vea [Introducción a las bibliotecas en tiempo de ejecución](../standard/runtime-libraries-overview.md). El código fuente de las bibliotecas está en [el repositorio dotnet/runtime de GitHub](https://github.com/dotnet/runtime/tree/master/src/libraries).
+Para obtener más información, vea [Introducción a las bibliotecas en tiempo de ejecución](../standard/runtime-libraries-overview.md). El código fuente de las bibliotecas está en [el repositorio dotnet/runtime de GitHub](https://github.com/dotnet/runtime/tree/main/src/libraries).
 
 ### <a name="extensions-to-the-runtime-libraries"></a>Extensiones de las bibliotecas en tiempo de ejecución
 

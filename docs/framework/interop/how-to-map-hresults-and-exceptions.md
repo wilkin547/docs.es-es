@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: ff20dc50e1a5f1ce87a4a40691110d247b52e479
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 13798de1547428d54c10f83c41a5a402e2b3fb53
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794691"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872410"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Procedimiento para asignar resultados HRESULT y excepciones
 
@@ -55,7 +55,7 @@ CMyClass::MethodThatThrows
 }
 ```
 
- En la tabla siguiente se proporcionan las asignaciones comunes de HRESULT a su clase de excepción comparable en .NET. Los valores de HRESULT sin asignaciones explícitas se asignan a `COMException`. La asignación actualizada completa se puede encontrar en el [repositorio de dotnet/runtime](https://github.com/dotnet/runtime/blob/master/src/coreclr/vm/rexcep.h).
+ En la tabla siguiente se proporcionan las asignaciones comunes de HRESULT a su clase de excepción comparable en .NET. Los valores de HRESULT sin asignaciones explícitas se asignan a `COMException`. La asignación actualizada completa se puede encontrar en el [repositorio de dotnet/runtime](https://github.com/dotnet/runtime/blob/main/src/coreclr/vm/rexcep.h).
 
 |HRESULT|Excepción de .NET|
 |-------------|--------------------|

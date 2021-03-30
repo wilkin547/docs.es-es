@@ -2,12 +2,12 @@
 title: 'Cambio importante: Cambio de comportamiento de PublishDepsFilePath'
 description: Obtenga información sobre el cambio importante en .NET 5 en el que la propiedad PublishDepsFilePath de MSBuild está vacía para las aplicaciones de un solo archivo.
 ms.date: 09/17/2020
-ms.openlocfilehash: 3a32f733ceaa2a24eb55d5e89f2eb1791c277f0d
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 845073e73ec6bdf820f28ace487d9ae4d04d0790
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256509"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872930"
 ---
 # <a name="publishdepsfilepath-behavior-change"></a>Cambio de comportamiento de PublishDepsFilePath
 
@@ -27,7 +27,7 @@ A partir de .NET 5, `PublishDepsFilePath` está vacío para las aplicaciones de
 
 Este cambio se ha realizado por dos motivos:
 
-- Debido a la refactorización de la lógica de publicación para admitir [aplicaciones de archivo único mejoradas](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md) en .NET 5.
+- Debido a la refactorización de la lógica de publicación para admitir [aplicaciones de archivo único mejoradas](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md) en .NET 5.
 
 - En las aplicaciones de archivo único, para protegerse de los destinos que intentan volver a escribir el archivo *deps.json* después de que *deps.json* ya se haya agrupado, por lo que no afecta a la aplicación de forma silenciosa. Por este motivo, `PublishDepsFilePath` está vacía para las aplicaciones de archivo único.
 

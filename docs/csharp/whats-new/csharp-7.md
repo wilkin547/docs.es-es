@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 897729022e45e96d0f54057ef4dad1a4fc0d6799
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 973491044808d7abc58920381ffed57549ee58d3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480847"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876063"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>Novedades de C# 7.0 hasta C# 7.3
 
@@ -54,7 +54,7 @@ Por último, el compilador tiene nuevas opciones:
 
 En el resto de este artículo se proporciona información general sobre cada característica. Para cada característica, obtendrá información sobre el razonamiento subyacente y la sintaxis. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
 
-1. Instale la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Instale la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/main/DotNetTryLocal.md).
 1. Clone el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
 1. Establezca el directorio actual en el subdirectorio *csharp7* para el repositorio *try-samples*.
 1. Ejecute `dotnet try`.

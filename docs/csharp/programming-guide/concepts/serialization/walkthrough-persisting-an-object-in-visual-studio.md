@@ -2,12 +2,12 @@
 title: 'Tutorial: Conservar un objeto con C#'
 description: En este ejemplo se crea un objeto Loan básico en C# y se conservan los datos en un archivo; luego, se crea un objeto con datos del archivo.
 ms.date: 04/26/2018
-ms.openlocfilehash: 9f165addc5b9b0d056936458e8529ec1912c417b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0fc733982b7800653a3c8c283bd0af8384d72168
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302768"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876453"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Tutorial: Conservar un objeto con C\#
 
@@ -32,7 +32,7 @@ En este tutorial, creará un objeto `Loan` básico y conservará sus datos en un
 
 - El ejemplo requiere C# 7.3. Consulte [Seleccionar la versión del lenguaje C#](../../../language-reference/configure-language-version.md).
 
-En el [repositorio de GitHub de ejemplos de .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization) puede examinar el código de ejemplo en línea.
+En el [repositorio de GitHub de ejemplos de .NET](https://github.com/dotnet/samples/tree/main/csharp/serialization) puede examinar el código de ejemplo en línea.
 
 ## <a name="creating-the-loan-object"></a>Crear el objeto Loan
 

@@ -4,12 +4,12 @@ description: Obtenga información sobre las versiones de Windows en las que pued
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 7909a94c6384e53569db3ba17047cbcc93e80fe1
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 9b0c5c2ea26546a142029b730dfd38923231bae4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105107"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873749"
 ---
 # <a name="install-net-on-windows"></a>Instalación de .NET en Windows
 
@@ -102,7 +102,7 @@ Las versiones siguientes de Windows son compatibles con .NET 5.0:
 | Windows Server Core | 2012 R2 y posteriores      | x64, x86        |
 | Nano Server         | Versión 1809 y posteriores | x64             |
 
-Para obtener más información sobre los sistemas operativos compatibles con .NET 5.0, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET 5.0](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md).
+Para obtener más información sobre los sistemas operativos compatibles con .NET 5.0, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET 5.0](https://github.com/dotnet/core/blob/main/release-notes/5.0/5.0-supported-os.md).
 
 # <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
@@ -118,7 +118,7 @@ Las versiones siguientes de Windows son compatibles con .NET Core 3.1:
 | Windows Server                | 2012 R2 y posteriores                       | x64, x86        |
 | Nano Server                   | Versión 1803 y posteriores                  | x64, ARM32      |
 
-Para obtener más información sobre los sistemas operativos compatibles con .NET Core 3.1, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 3.1](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
+Para obtener más información sobre los sistemas operativos compatibles con .NET Core 3.1, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 3.1](https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md).
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -136,7 +136,7 @@ Las versiones siguientes de Windows son compatibles con .NET Core 3.0:
 | Windows Server                | 2012 R2 y posteriores                       | x64, x86        |
 | Nano Server                   | Versión 1803 y posteriores                  | x64, ARM32      |
 
-Para obtener más información sobre los sistemas operativos compatibles con .NET Core 3.0, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
+Para obtener más información sobre los sistemas operativos compatibles con .NET Core 3.0, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 3.0](https://github.com/dotnet/core/blob/main/release-notes/3.0/3.0-supported-os.md).
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
@@ -154,7 +154,7 @@ Las versiones siguientes de Windows son compatibles con .NET Core 2.2:
 | Windows Server                | 2008 R2 SP1 y posteriores                   | x64, x86        |
 | Nano Server                   | Versión 1803 y posteriores                   | x64, ARM32      |
 
-Para obtener más información sobre los sistemas operativos compatibles con .NET Core 2.2, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
+Para obtener más información sobre los sistemas operativos compatibles con .NET Core 2.2, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 2.2](https://github.com/dotnet/core/blob/main/release-notes/2.2/2.2-supported-os.md).
 
 # <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -170,7 +170,7 @@ Las versiones siguientes de Windows son compatibles con .NET Core 2.1:
 | Windows Server                | 2008 R2 SP1 y posteriores                   | x64, x86        |
 | Nano Server                   | Versión 1803 y posteriores                  | x64,            |
 
-Para obtener más información sobre los sistemas operativos compatibles con .NET Core 2.1, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
+Para obtener más información sobre los sistemas operativos compatibles con .NET Core 2.1, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 2.1](https://github.com/dotnet/core/blob/main/release-notes/2.1/2.1-supported-os.md).
 
 ### <a name="offline-install-for-windows-7"></a>Instalación sin conexión para Windows 7
 
@@ -329,7 +329,7 @@ Los contenedores proporcionan una manera ligera de aislar la aplicación del res
 
 Microsoft ofrece imágenes que se adaptan a escenarios específicos. Por ejemplo, el [repositorio de ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-aspnet) proporciona imágenes que se compilan para ejecutar aplicaciones de ASP.NET Core en producción.
 
-Para obtener más información sobre el uso de .NET en un contenedor de Docker, vea [Introducción a .NET y Docker](../docker/introduction.md) y [Ejemplos](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
+Para obtener más información sobre el uso de .NET en un contenedor de Docker, vea [Introducción a .NET y Docker](../docker/introduction.md) y [Ejemplos](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1d6d33a36092ba685247f894375888da278b7e6e
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: 7e2e484b4eacf8fdbef61a600409fa561dd34cb3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434798"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876076"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -32,13 +32,13 @@ C# 8.0 agrega las siguientes características y mejoras al lenguaje C#:
 - [Stackalloc en expresiones anidadas](#stackalloc-in-nested-expressions)
 - [Mejora de las cadenas textuales interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
-C# 8.0 se admite en **.NET Core 3.x** y **.NET Standard 2.1** . Para obtener más información, vea [Control de versiones del lenguaje C#](../language-reference/configure-language-version.md).
+C# 8.0 se admite en **.NET Core 3.x** y **.NET Standard 2.1**. Para obtener más información, vea [Control de versiones del lenguaje C#](../language-reference/configure-language-version.md).
 
 En el resto de este artículo se describen brevemente estas características. Cuando hay disponibles artículos detallados, se proporcionan vínculos a esos tutoriales e introducciones. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
 
-1. Instale la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Instale la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/main/DotNetTryLocal.md).
 1. Clone el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
-1. Establezca el directorio actual en el subdirectorio *csharp8* para el repositorio *try-samples* .
+1. Establezca el directorio actual en el subdirectorio *csharp8* para el repositorio *try-samples*.
 1. Ejecute `dotnet try`.
 
 ## <a name="readonly-members"></a>Miembros de solo lectura
@@ -96,7 +96,7 @@ Para obtener más información, vea la sección [Miembros de instancia `readonly
 
 Ahora puede agregar miembros a interfaces y proporcionar una implementación de esos miembros. Esta característica del lenguaje permite que los creadores de API agreguen métodos a una interfaz en versiones posteriores sin interrumpir la compatibilidad binaria o de origen con implementaciones existentes de dicha interfaz. Las implementaciones existentes *heredan* la implementación predeterminada. Esta característica también permite que C# interopere con las API que tienen como destino Android o Swift, que admiten características similares. Los métodos de interfaz predeterminados también permiten escenarios similares a una característica del lenguaje de "rasgos".
 
-Los métodos de interfaz predeterminados afectan a muchos escenarios y elementos del lenguaje. Nuestro primer tutorial abarca la [actualización de una interfaz con implementaciones predeterminadas](../tutorials/default-interface-methods-versions.md). Otros tutoriales y actualizaciones de referencia se incorporarán a tiempo en la versión general.
+Los métodos de interfaz predeterminados afectan a muchos escenarios y elementos del lenguaje. Nuestro primer tutorial abarca la [actualización de una interfaz con implementaciones predeterminadas](./tutorials/default-interface-methods-versions.md).
 
 ## <a name="more-patterns-in-more-places"></a>Más patrones en más lugares
 
@@ -104,7 +104,7 @@ La **coincidencia de patrones** ofrece herramientas que proporcionan funcionalid
 
 C# 8.0 amplía este vocabulario para que pueda usar más expresiones de patrones en más lugares del código. Cuando los datos y la funcionalidad estén separados, tenga en cuenta estas características. Cuando los algoritmos dependan de un hecho distinto del tipo de entorno de ejecución de un objeto, tenga en cuenta la coincidencia de patrones. Estas técnicas ofrecen otra forma de expresar los diseños.
 
-Además de nuevos patrones en nuevos lugares C# 8.0 agrega **patrones recursivos** . El resultado de cualquier expresión de patrón es una expresión. Un patrón recursivo es simplemente una expresión de patrón aplicada a la salida de otra expresión de patrón.
+Además de nuevos patrones en nuevos lugares C# 8.0 agrega **patrones recursivos**. El resultado de cualquier expresión de patrón es una expresión. Un patrón recursivo es simplemente una expresión de patrón aplicada a la salida de otra expresión de patrón.
 
 ### <a name="switch-expressions"></a>Expresiones switch
 
@@ -194,7 +194,7 @@ La coincidencia de patrones crea una sintaxis concisa para expresar este algorit
 
 ### <a name="tuple-patterns"></a>Patrones de tupla
 
-Algunos algoritmos dependen de varias entradas. Los **patrones de tupla** permiten hacer cambios en función de varios valores, expresados como una [tupla](../language-reference/builtin-types/value-tuples.md).  El código siguiente muestra una expresión switch del juego *piedra, papel, tijeras* :
+Algunos algoritmos dependen de varias entradas. Los **patrones de tupla** permiten hacer cambios en función de varios valores, expresados como una [tupla](../language-reference/builtin-types/value-tuples.md).  El código siguiente muestra una expresión switch del juego *piedra, papel, tijeras*:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -353,13 +353,13 @@ Un elemento `struct` declarado con el modificador `ref` no puede implementar nin
 
 ## <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
-Dentro de un contexto de anotación que acepta valores NULL, cualquier variable de un tipo de referencia se considera un **tipo de referencia que no acepta valores NULL** . Si quiere indicar que una variable puede ser NULL, debe anexar `?` al nombre del tipo para declarar la variable como un **tipo de referencia que acepta valores NULL** .
+Dentro de un contexto de anotación que acepta valores NULL, cualquier variable de un tipo de referencia se considera un **tipo de referencia que no acepta valores NULL**. Si quiere indicar que una variable puede ser NULL, debe anexar `?` al nombre del tipo para declarar la variable como un **tipo de referencia que acepta valores NULL**.
 
 En los tipos de referencia que no aceptan valores NULL, el compilador usa el análisis de flujo para garantizar que las variables locales se inicializan en un valor no NULL cuando se declaran. Los campos se deben inicializar durante la construcción. Si la variable no se establece mediante una llamada a alguno de los constructores disponibles o por medio de un inicializador, el compilador genera una advertencia. Además, los tipos de referencia que no aceptan valores NULL no pueden tener asignado un valor que podría ser NULL.
 
 Los tipos de referencia que aceptan valores NULL no se comprueban para garantizar que se asignan o inicializan como NULL. Sin embargo, el compilador usa el análisis de flujo para garantizar que cualquier variable de un tipo de referencia que acepta valores NULL se compara con NULL antes de acceder a ella o de asignarse a un tipo de referencia que no los acepta.
 
-Puede aprender más sobre la característica en la introducción a los [tipos de referencia que aceptan valores NULL](../nullable-references.md). Pruébela por su cuenta en una nueva aplicación en este [tutorial de tipos de referencia que aceptan valores NULL](../tutorials/nullable-reference-types.md). Puede encontrar más información sobre los pasos para migrar una base de código existente para hacer uso de los tipos de referencia que aceptan valores NULL en el [tutorial sobre la migración de una aplicación para usar tipos de referencia que aceptan valores NULL](../tutorials/upgrade-to-nullable-references.md).
+Puede aprender más sobre la característica en la introducción a los [tipos de referencia que aceptan valores NULL](../nullable-references.md). Pruébela por su cuenta en una nueva aplicación en este [tutorial de tipos de referencia que aceptan valores NULL](tutorials/nullable-reference-types.md). Puede encontrar más información sobre los pasos para migrar una base de código existente para hacer uso de los tipos de referencia que aceptan valores NULL en el [tutorial sobre la migración de una aplicación para usar tipos de referencia que aceptan valores NULL](tutorials/upgrade-to-nullable-references.md).
 
 ## <a name="asynchronous-streams"></a>Secuencias asincrónicas
 
@@ -391,7 +391,7 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la [creación y consumo de secuencias asincrónicas](../tutorials/generate-consume-asynchronous-stream.md). Los elementos de secuencia se procesan de forma predeterminada en el contexto capturado. Si quiere deshabilitar la captura del contexto, use el método de extensión <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>. Para obtener más información sobre los contextos de sincronización y la captura del contexto actual, vea el artículo sobre el [consumo del patrón asincrónico basado en tareas](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la [creación y consumo de secuencias asincrónicas](tutorials/generate-consume-asynchronous-stream.md). Los elementos de secuencia se procesan de forma predeterminada en el contexto capturado. Si quiere deshabilitar la captura del contexto, use el método de extensión <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>. Para obtener más información sobre los contextos de sincronización y la captura del contexto actual, vea el artículo sobre el [consumo del patrón asincrónico basado en tareas](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="asynchronous-disposable"></a>Asincrónica descartable
 
@@ -469,9 +469,9 @@ El rango se puede usar luego dentro de los caracteres `[` y `]`:
 var text = words[phrase];
 ```
 
-No solo las matrices admiten índices y rangos. También puede usar índices y rangos con [string](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>. Para más información, consulte [Compatibilidad con tipos para los índices y los rangos](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+No solo las matrices admiten índices y rangos. También puede usar índices y rangos con [string](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> o <xref:System.ReadOnlySpan%601>. Para más información, consulte [Compatibilidad con tipos para los índices y los rangos](tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
-Puede explorar más información acerca de los índices y los intervalos en el tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
+Puede explorar más información acerca de los índices y los intervalos en el tutorial sobre [índices e intervalos](tutorials/ranges-indexes.md).
 
 ## <a name="null-coalescing-assignment"></a>Asignación de uso combinado de NULL
 

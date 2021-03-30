@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-dump: CLI de .NET'
 description: Obtenga información sobre cómo instalar y usar la herramienta dotnet-dump de la CLI para recopilar y analizar volcados de Windows y Linux sin ningún depurador nativo.
 ms.date: 11/17/2020
-ms.openlocfilehash: 84b3796f4ee92880e6d432df606a6addfd2471b0
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 6e9edbc8075691784028f3293750c92fe53d3782
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189809"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874178"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilidad de recopilación y análisis de volcado de memoria (dotnet-dump)
 
@@ -189,7 +189,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>Uso de `dotnet-dump`
 
-El primer paso es recopilar un volcado. Este paso se puede omitir si ya se ha generado un volcado principal. El sistema operativo o la [característica de generación de volcado](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) integrada del runtime de .NET Core pueden crear volcados principales.
+El primer paso es recopilar un volcado. Este paso se puede omitir si ya se ha generado un volcado principal. El sistema operativo o la [característica de generación de volcado](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md) integrada del runtime de .NET Core pueden crear volcados principales.
 
 ```console
 $ dotnet-dump collect --process-id 1902

@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 17f0ff611e68a5dab2032f78ef75912f314d88a5
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: f85ed5585c8daef0ca9a21275b8de71b2eead360
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688272"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875491"
 ---
 # <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a>Invocación de una UDF de Java desde la aplicación .NET para Apache Spark
 
@@ -45,7 +45,7 @@ En este artículo, obtendrá información sobre cómo invocar una función defin
 ## <a name="register-and-call-java-udfs-in-net-for-apache-spark"></a>Registro y llamada a UDF de Java en .NET para Apache Spark
 
 1. Use la API [`RegisterJava`](https://github.com/dotnet/spark/blob/8dcdcdc7c60d5f42cba5a90f1346d854ab5bf7bb/src/csharp/Microsoft.Spark/Sql/UDFRegistration.cs#L424) para registrar la UDF de Java con Spark SQL.
-2. Registre el objeto `DataFrame` en el que quiera llamar a la UDF como una tabla SQL mediante la función [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982).
+2. Registre el objeto `DataFrame` en el que quiera llamar a la UDF como una tabla SQL mediante la función [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982).
 3. Use `SparkSession.Sql` para llamar a la UDF en la vista de tabla con Spark SQL.
 Un ejemplo básico para ilustrar los pasos anteriores:
 

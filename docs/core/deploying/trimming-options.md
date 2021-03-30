@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo controlar el recorte de aplicacion
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: e36aca3aadb6968f73a439ca985dc410d1bc88d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 93fee991cf218a52ad1d9a2597b1c9b2d442110a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704661"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874256"
 ---
 # <a name="trimming-options"></a>Opciones de recorte
 
@@ -162,4 +162,4 @@ Varias áreas de características de las bibliotecas de marco incluyen directiva
 
     Elimina los mensajes de excepción para los ensamblados de `System.*`. Cuando un ensamblado de `System.*` produzca una excepción, el mensaje será un identificador de recurso simplificado en lugar del mensaje completo.
 
- Estas propiedades harán que el código relacionado se recorte y también deshabilitarán las características a través del archivo [runtimeconfig](../run-time-config/index.md). Para obtener más información sobre estas propiedades, incluidas las opciones de runtimeconfig correspondientes, vea la página sobre [modificadores de características](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md). Algunos SDK pueden tener valores predeterminados para estas propiedades.
+ Estas propiedades harán que el código relacionado se recorte y también deshabilitarán las características a través del archivo [runtimeconfig](../run-time-config/index.md). Para obtener más información sobre estas propiedades, incluidas las opciones de runtimeconfig correspondientes, vea la página sobre [modificadores de características](https://github.com/dotnet/runtime/blob/main/docs/workflow/trimming/feature-switches.md). Algunos SDK pueden tener valores predeterminados para estas propiedades.

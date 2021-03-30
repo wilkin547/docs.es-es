@@ -3,12 +3,12 @@ title: Valores de configuración de la compilación
 description: Obtenga información sobre los valores del entorno de ejecución que configuran cómo funciona el compilador JIT para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: e5f9e1245b749864787fb808527d022665197edf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 1badb063ea6fd7504636d431fbdc7927129239d2
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654847"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873593"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opciones de configuración del entorno de ejecución para compilación
 
@@ -19,7 +19,7 @@ ms.locfileid: "91654847"
   - El segundo nivel genera código optimizado en segundo plano ("JIT de optimización").
 - En la versión 3.0 de .NET Core y posteriores, la compilación en niveles está habilitada de forma predeterminada.
 - En las versiones 2.1 y 2.2 de .NET Core, la compilación en niveles está deshabilitada de forma predeterminada.
-- Para obtener más información, vea la [Guía de compilación en niveles](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md).
+- Para obtener más información, vea la [Guía de compilación en niveles](https://github.com/dotnet/runtime/blob/main/docs/design/features/tiered-compilation.md).
 
 | | Nombre de valor | Valores |
 | - | - | - |

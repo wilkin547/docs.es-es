@@ -3,12 +3,12 @@ title: Creación de un cliente de REST con .NET Core
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a8490efbc954ca585a2a0fa9d571191095a4b24c
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 4d36cdafd232de9bbd0fac12e894f905b4808419
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98024982"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876154"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -25,7 +25,7 @@ Creará una aplicación que emitirá solicitudes HTTP a un servicio REST en GitH
 
 Este tutorial incluye muchas características. Vamos a compilarlas una a una.
 
-Si prefiere seguir el [ejemplo final](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) de este artículo, puede descargarlo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
+Si prefiere seguir el [ejemplo final](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient) de este artículo, puede descargarlo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -304,7 +304,7 @@ Finalmente, agregue una instrucción más de salida en la consola y ya estará l
 Console.WriteLine(repo.LastPush);
 ```
 
-La versión debe coincidir ahora con el [ejemplo terminado](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
+La versión debe coincidir ahora con el [ejemplo terminado](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient).
 
 ## <a name="conclusion"></a>Conclusión
 

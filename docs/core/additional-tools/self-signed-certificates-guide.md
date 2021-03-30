@@ -3,18 +3,18 @@ title: Información general sobre la generación de certificados autofirmados
 description: Información general de la herramienta dotnet dev-certs de Microsoft que agrega funcionalidad para proyectos de .NET Core y ASP.NET Core, y otras opciones para usar certificados autofirmados.
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 738af3fc091e415399a53015a40748ad6116a2b4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189146"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873021"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>Generación de certificados autofirmados con la CLI de .NET
 
 Cuando se usan certificados autofirmados, hay diferentes maneras de crearlos y usarlos en escenarios de desarrollo y pruebas.  En esta guía, se describirá el uso de certificados autofirmados con `dotnet dev-certs` y otras opciones, como `PowerShell` y `OpenSSL`.
 
-Después, puede validar que el certificado se cargará mediante un ejemplo como una [aplicación ASP.NET Core](https://github.com/dotnet/dotnet-docker/blob/master/samples/run-aspnetcore-https-development.md) hospedada en un contenedor.
+Después, puede validar que el certificado se cargará mediante un ejemplo como una [aplicación ASP.NET Core](https://github.com/dotnet/dotnet-docker/blob/main/samples/run-aspnetcore-https-development.md) hospedada en un contenedor.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -46,7 +46,7 @@ Navegue al repositorio de forma local y abra el área de trabajo en un editor.
 
 > [!NOTE]
 > Si quiere usar parámetros de dotnet publish para *recortar* la implementación, tendrá que asegurarse de que se incluyan las dependencias adecuadas para admitir los certificados SSL.
-Actualice [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) para asegurarse de que los ensamblados adecuados están incluidos en el contenedor. Como referencia, compruebe cómo actualizar el archivo .csproj para [admitir certificados SSL](../deploying/trim-self-contained.md#support-for-ssl-certificates) al usar el recorte para las implementaciones independientes.
+Actualice [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/aspnetapp/aspnetapp.csproj) para asegurarse de que los ensamblados adecuados están incluidos en el contenedor. Como referencia, compruebe cómo actualizar el archivo .csproj para [admitir certificados SSL](../deploying/trim-self-contained.md#support-for-ssl-certificates) al usar el recorte para las implementaciones independientes.
 
 Asegúrese de que `aspnetapp.csproj` incluye la plataforma de destino adecuada:
 
@@ -101,7 +101,7 @@ docker build -t aspnetapp:my-sample -f Dockerfile .
 
 En esta guía, se debe comprobar .NET 5 en [el archivo aspnetapp de ejemplo](https://hub.docker.com/_/microsoft-dotnet-samples).
 
-Compruebe que en el [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/Dockerfile) de la aplicación de ejemplo se usa .NET 5.
+Compruebe que en el [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/Dockerfile) de la aplicación de ejemplo se usa .NET 5.
 
 En función del sistema operativo del host, es posible que sea necesario actualizar el entorno de ejecución de ASP.NET. Por ejemplo, el cambio de `mcr.microsoft.com/dotnet/aspnet:5.0-nanoservercore-2009 AS runtime` a `mcr.microsoft.com/dotnet/aspnet:5.0-windowsservercore-ltsc2019 AS runtime` en el Dockerfile ayudará a establecer como destino el entorno de ejecución de Windows adecuado.
 
@@ -148,7 +148,7 @@ Asegúrese de que `aspnetapp.csproj` incluye la plataforma de destino adecuada:
 
 > [!NOTE]
 > Si quiere usar parámetros `dotnet publish` para *recortar* la implementación, asegúrese de que se incluyan las dependencias adecuadas para admitir los certificados SSL.
-Actualice [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) para asegurarse de que los ensamblados adecuados están incluidos en el contenedor. Como referencia, compruebe cómo actualizar el archivo .csproj para [admitir certificados SSL](../deploying/trim-self-contained.md#support-for-ssl-certificates) al usar el recorte para las implementaciones independientes.
+Actualice [dotnet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/aspnetapp/aspnetapp.csproj) para asegurarse de que los ensamblados adecuados están incluidos en el contenedor. Como referencia, compruebe cómo actualizar el archivo .csproj para [admitir certificados SSL](../deploying/trim-self-contained.md#support-for-ssl-certificates) al usar el recorte para las implementaciones independientes.
 
 Asegúrese de que apunta a la aplicación de ejemplo.
 

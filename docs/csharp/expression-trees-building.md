@@ -4,12 +4,12 @@ description: Obtenga información sobre técnicas para crear árboles de expresi
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c153ca2c75738571c81057364390f489d2decb05
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: f6752879dc01080e056221b00ca5377a6abc20db
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656155"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875816"
 ---
 # <a name="building-expression-trees"></a>Crear árboles de expresión
 
@@ -164,7 +164,7 @@ BlockExpression body = Expression.Block(
 
 El código para crear el árbol de expresión para la función factorial es bastante más largo, más complicado y está lleno de etiquetas, instrucciones Break y otros elementos que nos gustaría evitar en nuestras tareas de codificación diarias.
 
-En esta sección, también he actualizado el código del visitante para visitar cada nodo de este árbol de expresión y escribir información sobre los nodos que se crean en este ejemplo. Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) en el repositorio dotnet/docs de GitHub. Pruébelo compilando y ejecutando los ejemplos. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#view-and-download-samples).
+En esta sección, también he actualizado el código del visitante para visitar cada nodo de este árbol de expresión y escribir información sobre los nodos que se crean en este ejemplo. Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/samples/tree/main/csharp/expression-trees) en el repositorio dotnet/docs de GitHub. Pruébelo compilando y ejecutando los ejemplos. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="examining-the-apis"></a>Examinar las API
 

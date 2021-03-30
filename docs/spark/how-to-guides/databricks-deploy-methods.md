@@ -4,12 +4,12 @@ description: Aprenda a enviar un trabajo de .NET para Apache Spark a Databricks 
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4d37383ccb3c9b311e0fbd0ada195ac20113e505
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 39be961ad67da3f8593cb98e1bad8df354f28893
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688207"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875582"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Envío de un trabajo de .NET para Apache Spark a Databricks
 
@@ -71,7 +71,7 @@ Como alternativa, puede usar [Set Jar](/azure/databricks/jobs#--create-a-job) en
     databricks fs cp <assembly>.dll dbfs:/apps/dependencies
     ```
 
-    Quite la marca de comentario y modifique la sección de dependencias de la aplicación en [db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) para que apunte a la ruta de acceso de las dependencias de la aplicación. A continuación, cargue el archivo *db-init.sh* actualizado en el clúster:
+    Quite la marca de comentario y modifique la sección de dependencias de la aplicación en [db-init.sh](https://github.com/dotnet/spark/blob/main/deployment/db-init.sh) para que apunte a la ruta de acceso de las dependencias de la aplicación. A continuación, cargue el archivo *db-init.sh* actualizado en el clúster:
 
     ```console
     cd <path-to-db-init-and-install-worker>

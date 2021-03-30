@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - record keyword [C#]
 - record type [C#]
-ms.openlocfilehash: 10fe7bcc1f3239b7a6bde0abcac41b177467cf0a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 57474caf0f1106380e52da7fcb7608b62a0f23e5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102260039"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872657"
 ---
 # <a name="records-c-reference"></a>Registros (referencia de C#)
 
@@ -128,7 +128,7 @@ Los tipos de registros tienen un método <xref:System.Object.ToString%2A> genera
 En el caso de los tipos de referencia, se muestra el nombre del tipo del objeto al que hace referencia la propiedad en lugar del valor de propiedad. En el ejemplo siguiente, la matriz es un tipo de referencia, por lo que se muestra `System.String[]` en lugar de los valores de los elementos de matriz reales:
 
 ```
-Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] } 
+Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] }
 ```
 
 Para implementar esta característica, el compilador sintetiza un método `PrintMembers` virtual y una invalidación <xref:System.Object.ToString%2A>.

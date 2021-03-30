@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: d7d3758c8c5da7859974b5b50b63d2a5ca16b24d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 24b9fdfcef6fe042204217323bb09c047c58296c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702230"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872540"
 ---
 # <a name="with-expression-c-reference"></a>Expresión with (referencia de C#)
 
-Disponible en C# 9.0 y versiones posteriores, se trata de una expresión `with` que genera una copia de su operando [record](../../whats-new/csharp-9.md#record-types) con las propiedades y los campos especificados modificados:
+Disponible en C# 9.0 y versiones posteriores, se trata de una expresión `with` que genera una copia de su operando [record](../builtin-types/record.md) con las propiedades y los campos especificados modificados:
 
 :::code language="csharp" source="snippets/with-expression/BasicExample.cs" :::
 
@@ -45,3 +45,4 @@ Para obtener más información, vea las secciones siguientes de la [nota de prop
 
 - [Referencia de C#](../index.md)
 - [Operadores y expresiones de C#](index.md)
+- [Registros](../builtin-types/record.md)

@@ -4,12 +4,12 @@ description: Aprenda a crear una aplicación de detección de anomalías para lo
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7edb84ae53f1da7903cf4b3f77d215206ffbf1ef
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 52ce0a60c91ef7a82f7ef1a0709701302b9e11d9
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259829"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874776"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>Tutorial: Detección de anomalías en series temporales con ML.NET
 
@@ -22,13 +22,13 @@ En este tutorial aprenderá a:
 > * Detectar el período para una serie temporal
 > * Detectar anomalías para una serie temporal periódica
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection).
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/PhoneCallsAnomalyDetection).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 * [Visual Studio 2019, versión 16.7.8 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
-* [Conjunto de datos phone-calls.csv](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv).
+* [Conjunto de datos phone-calls.csv](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv).
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
@@ -50,7 +50,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 1. Descargue el conjunto de datos y guárdelo en la carpeta *Datos* que creó anteriormente:
 
-    Haga clic con el botón derecho en [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) y seleccione "Guardar vínculo (o destino) como...".
+    Haga clic con el botón derecho en [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) y seleccione "Guardar vínculo (o destino) como...".
 
      Asegúrese de que guarda el archivo \*.csv en la carpeta *Datos* o, después de guardarlo en otro lugar, mueva el archivo \*.csv a la carpeta *Datos*.
 
@@ -249,7 +249,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 
 ¡Enhorabuena! Ya ha creado correctamente los modelos de aprendizaje automático para detectar períodos y anomalías en series periódicas.
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection).
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/PhoneCallsAnomalyDetection).
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
@@ -262,4 +262,4 @@ En este tutorial ha aprendido a:
 
 Consulte el repositorio de GitHub con ejemplos de Machine Learning para explorar un ejemplo de detección de anomalías de consumo de energía.
 > [!div class="nextstepaction"]
-> [Repositorio dotnet/machinelearning-samples de GitHub](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
+> [Repositorio dotnet/machinelearning-samples de GitHub](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

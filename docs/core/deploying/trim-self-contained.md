@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo recortar aplicaciones autocontenid
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: bf38ffe4d47986ae78c6cf2b2e5ecb292411ba6c
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: b5e2650d8240648aa05eaa9026a57b926f63b4de
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925290"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872878"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Recorte de implementaciones autocontenidas y ejecutables
 
@@ -19,7 +19,7 @@ El modelo de implementación trim independiente es una versión especializada de
 
 No obstante, existe el riesgo de que el análisis del tiempo de compilación de la aplicación pueda causar errores en tiempo de ejecución, debido a que no puede analizar de forma confiable diversos patrones de código problemáticos (centrados en gran medida en el uso de la reflexión). Dado que no se puede garantizar la confiabilidad, este modelo de implementación se ofrece como una característica en versión preliminar.
 
-El motor de análisis en tiempo de compilación proporciona advertencias al desarrollador de los patrones de código problemáticos para detectar qué otro código es necesario. El código se puede anotar con atributos para indicar al recortador qué más se debe incluir. Muchos patrones de reflexión se pueden reemplazar por la generación de código en tiempo de compilación mediante [generadores de código fuente](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md).
+El motor de análisis en tiempo de compilación proporciona advertencias al desarrollador de los patrones de código problemáticos para detectar qué otro código es necesario. El código se puede anotar con atributos para indicar al recortador qué más se debe incluir. Muchos patrones de reflexión se pueden reemplazar por la generación de código en tiempo de compilación mediante [generadores de código fuente](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.md).
 
 El modo de recorte de las aplicaciones se configura con `TrimMode`. El valor predeterminado es `copyused` y agrupa los ensamblados a los que se hace referencia con la aplicación. El valor `link` se usa con las aplicaciones WebAssembly de Blazor y recorta el código no usado dentro de los ensamblados. Las advertencias de análisis de recorte proporcionan información sobre patrones de código en los que no es posible realizar análisis de dependencias completas. Estas advertencias se suprimen de forma predeterminada y se pueden activar estableciendo la marca `SuppressTrimAnalysisWarnings` en `false`. Para obtener más información acerca de las opciones de recorte disponibles, vea [Opciones de recorte](trimming-options.md).
 
@@ -104,7 +104,7 @@ Para obtener más información, vea [Publicación de aplicaciones .NET Core con
 
 Visual Studio crea perfiles de publicación reutilizables que controlan cómo se publica la aplicación.
 
-01. En el panel **Explorador de soluciones** , haga clic con el botón derecho en el proyecto que quiera publicar. Seleccione **Publicar...** .
+01. En el panel **Explorador de soluciones**, haga clic con el botón derecho en el proyecto que quiera publicar. Seleccione **Publicar...** .
 
     :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="Explorador de soluciones con un menú contextual en el que se resalta la opción Publicar.":::
 
@@ -114,7 +114,7 @@ Visual Studio crea perfiles de publicación reutilizables que controlan cómo s
 
     :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Perfil de publicación de Visual Studio con el botón Editar.":::
 
-01. En el cuadro de diálogo **Configuración de perfil** , establezca las opciones siguientes:
+01. En el cuadro de diálogo **Configuración de perfil**, establezca las opciones siguientes:
 
     - Establezca **Modo de implementación** en **Independiente**.
     - Establezca **Tiempo de ejecución de destino** en la plataforma en la que quiera publicar.

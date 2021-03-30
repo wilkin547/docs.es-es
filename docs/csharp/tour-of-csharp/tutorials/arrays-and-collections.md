@@ -2,12 +2,12 @@
 title: 'Trabajo con colecciones: tutorial de introducción a C#'
 description: Conozca C# a través de la colección de listas que se presenta en este tutorial.
 ms.date: 02/05/2021
-ms.openlocfilehash: 7a04a983622a6ae36ec5b12d279aa29e52c52a4f
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 0bc2b84964e8fc270fe7e9d635c4c18aa1abb390
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626685"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111145"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Obtenga información sobre cómo administrar colecciones de datos mediante el tipo de lista genérico
 
@@ -207,10 +207,10 @@ Trate de recopilar los conceptos que ha aprendido en esta lección y en las ante
 
 ## <a name="complete-challenge"></a>Desafío completo
 
-Puede ver un ejemplo de solución en el [ejemplo de código terminado en GitHub](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L8-L16).
+Puede ver un ejemplo de solución en el [ejemplo de código terminado en GitHub](https://github.com/dotnet/samples/tree/main/csharp/list-quickstart/Program.cs#L8-L16).
 
 Con cada iteración del bucle, se obtienen los dos últimos enteros de la lista, se suman y se agrega el valor resultante a la lista. El bucle se repite hasta que se hayan agregado veinte elementos a la lista.
 
-Enhorabuena, ha completado el tutorial sobre las listas. Puede seguir estos tutoriales [adicionales](../../tutorials/index.md) en su propio entorno de desarrollo.
+Enhorabuena, ha completado el tutorial sobre las listas. Puede seguir estos tutoriales [adicionales](../../tutorials/intro-to-csharp/introduction-to-classes.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre cómo trabajar con el tipo `List` en el artículo de los aspectos básicos de .NET que trata sobre las [colecciones](../../../standard/collections/index.md). Ahí también podrá conocer muchos otros tipos de colecciones.

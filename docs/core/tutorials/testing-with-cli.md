@@ -3,12 +3,12 @@ title: Organización y prueba de proyectos con la CLI de .NET
 description: En este tutorial se explica cómo organizar y probar proyectos .NET desde la línea de comandos.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: 263eaf15beac008de8bb353a385b8f3588a7fefc
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: c668cff48a2418cc1bc34aef78ea26c863d9de6a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633642"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872683"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-cli"></a>Organización y prueba de proyectos con la CLI de .NET
 
@@ -49,7 +49,7 @@ Es fácil desplazarse por los proyectos que agrupan archivos en carpetas de mane
 
 ### <a name="building-the-sample"></a>Compilar el ejemplo
 
-Para los pasos siguientes, puede seguir con el [ejemplo de NewTypes Pets](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) o crear sus propios archivos y carpetas. Los tipos se organizan de manera lógica en una estructura de carpetas que permite la adición de más tipos posteriormente, y las pruebas también se colocan de manera lógica en carpetas que permiten la adición de más pruebas después.
+Para los pasos siguientes, puede seguir con el [ejemplo de NewTypes Pets](https://github.com/dotnet/samples/tree/main/core/console-apps/NewTypesMsBuild) o crear sus propios archivos y carpetas. Los tipos se organizan de manera lógica en una estructura de carpetas que permite la adición de más tipos posteriormente, y las pruebas también se colocan de manera lógica en carpetas que permiten la adición de más pruebas después.
 
 El ejemplo contiene dos tipos, `Dog` y `Cat`, y tiene implementada una interfaz común, `IPet`. Para el proyecto `NewTypes`, su objetivo es organizar los tipos relacionados con las mascotas en una carpeta *Pets*. Si se agrega después otro conjunto de tipos, *WildAnimals* por ejemplo, se colocan en la carpeta *NewTypes* junto a la carpeta *Pets*. La carpeta *WildAnimals* puede contener tipos de animales que no son mascotas, como los tipos `Squirrel` y `Rabbit`. De la manera en que se agregan los tipos, el proyecto sigue estando bien organizado.
 

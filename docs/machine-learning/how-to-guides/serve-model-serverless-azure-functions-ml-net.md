@@ -5,12 +5,12 @@ ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 74a7a5b941596ba9fffc62ef87a01763937d88c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90b52aa295e224eb3744d2576b9a146e4e90dced
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91608782"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875894"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Implementación de un modelo en Azure Functions
 
@@ -24,11 +24,11 @@ Aprenda cómo implementar un modelo de Machine Learning de ML.NET previamente en
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o posterior, o bien Visual Studio 2017 versión 15.6 o posterior con las cargas de trabajo "Desarrollo multiplataforma de .NET Core" y "Desarrollo de Azure" instaladas.
 - [Herramientas de Azure Functions](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
-- Modelo previamente entrenado. Use el [tutorial de análisis de sentimiento de ML.NET](../tutorials/sentiment-analysis.md) para generar su propio modelo o descargue este [modelo de Machine Learning de análisis de sentimiento entrenado previamente](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip).
+- Modelo previamente entrenado. Use el [tutorial de análisis de sentimiento de ML.NET](../tutorials/sentiment-analysis.md) para generar su propio modelo o descargue este [modelo de Machine Learning de análisis de sentimiento entrenado previamente](https://github.com/dotnet/samples/blob/main/machine-learning/models/sentimentanalysis/sentiment_model.zip).
 
 ## <a name="azure-functions-sample-overview"></a>Introducción a un ejemplo de Azure Functions
 
-Este ejemplo es una **aplicación de desencadenador HTTP de C# de Azure Functions** que utiliza un modelo de clasificación binaria previamente entrenado para clasificar la opinión del texto como positiva o negativa. Azure Functions proporciona una manera sencilla de ejecutar pequeños fragmentos de código a escala en un entorno sin servidor administrado en la nube. El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) en GitHub.
+Este ejemplo es una **aplicación de desencadenador HTTP de C# de Azure Functions** que utiliza un modelo de clasificación binaria previamente entrenado para clasificar la opinión del texto como positiva o negativa. Azure Functions proporciona una manera sencilla de ejecutar pequeños fragmentos de código a escala en un entorno sin servidor administrado en la nube. El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) en GitHub.
 
 ## <a name="create-azure-functions-project"></a>Creación de un proyecto de Azure Functions
 
@@ -161,7 +161,7 @@ El modelo se identifica mediante el parámetro `modelName`, por lo que se puede 
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
+>       uri:"https://github.com/dotnet/samples/raw/main/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 

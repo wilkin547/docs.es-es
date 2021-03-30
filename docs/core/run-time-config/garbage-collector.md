@@ -3,12 +3,12 @@ title: Valores de configuración del recolector de elementos no utilizados
 description: Obtenga información sobre los valores del entorno de ejecución para configurar el modo en el que el recolector de elementos no utilizados administra la memoria de las aplicaciones de .NET Core.
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 91d155b638c7e69b3d2c0216266a7c0c0410db4c
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c4f55124d9f50146ceac1eea52ce60b0dd77ad1d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915997"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875049"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opciones de configuración del entorno de ejecución para la recolección de elementos no utilizados
 
@@ -472,7 +472,7 @@ Ejemplo:
 ## <a name="standalone-gc"></a>GC independiente
 
 - Especifica una ruta de acceso a la biblioteca que contiene el recolector de elementos no utilizados que el entorno de ejecución pretende cargar.
-- Para obtener más información, vea [Diseño del cargador de GC independiente](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md).
+- Para obtener más información, vea [Diseño del cargador de GC independiente](https://github.com/dotnet/runtime/blob/main/docs/design/features/standalone-gc-loading.md).
 
 | | Nombre de valor | Valores | Versión introducida |
 | - | - | - | - |

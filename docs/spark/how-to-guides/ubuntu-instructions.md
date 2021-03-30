@@ -4,12 +4,12 @@ description: Aprenda a compilar una aplicación de .NET para Apache Spark en Ub
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: ae5e0e24ef53b74bd34a2c0100c30a375d8bd71f
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 300c858a76ba31650615bde70c951e383e9e0436
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103925"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875335"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Aprenda a compilar una aplicación de .NET para Apache Spark en Ubuntu.
 
@@ -123,7 +123,7 @@ git clone https://github.com/dotnet/spark.git ~/dotnet.spark
 
 ### <a name="build-net-for-spark-scala-extensions-layer"></a>Creación de la capa de extensiones de Scala de .NET para Spark
 
-Cuando se envía una aplicación de .NET, .NET para Apache Spark tiene escrita en Scala la lógica necesaria que informa a Apache Spark cómo administrar las solicitudes (por ejemplo, solicitud para crear una sesión de Spark nueva, solicitud para transferir datos desde el lado de .NET al lado de JVM, etc.). Esta lógica se puede encontrar en el [código fuente de Scala de .NET para Apache Spark](https://github.com/dotnet/spark/tree/master/src/scala).
+Cuando se envía una aplicación de .NET, .NET para Apache Spark tiene escrita en Scala la lógica necesaria que informa a Apache Spark cómo administrar las solicitudes (por ejemplo, solicitud para crear una sesión de Spark nueva, solicitud para transferir datos desde el lado de .NET al lado de JVM, etc.). Esta lógica se puede encontrar en el [código fuente de Scala de .NET para Apache Spark](https://github.com/dotnet/spark/tree/main/src/scala).
 
 El paso siguiente es crear la capa de extensiones de Scala de .NET para Apache Spark:
 
@@ -140,7 +140,7 @@ Debería ver los archivos JAR creados para las versiones compatibles de Spark:
 
 ### <a name="build-net-sample-applications-using-net-core-cli"></a>Compilación de aplicaciones de .NET de ejemplo mediante la CLI de .NET Core
 
-En esta sección se explica cómo compilar las [aplicaciones de ejemplo](https://github.com/dotnet/spark/tree/master/examples) de .NET para Apache Spark. Estos pasos lo ayudarán a comprender el proceso general de compilación de cualquier aplicación de .NET para Spark.
+En esta sección se explica cómo compilar las [aplicaciones de ejemplo](https://github.com/dotnet/spark/tree/main/examples) de .NET para Apache Spark. Estos pasos lo ayudarán a comprender el proceso general de compilación de cualquier aplicación de .NET para Spark.
 
 1. Compile el trabajo:
 
@@ -213,7 +213,7 @@ Una vez que compile los ejemplos, puede usar `spark-submit` para enviar sus apli
 
    Estos son algunos ejemplos que se pueden ejecutar:
 
-   * **[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
 
       ```bash
       spark-submit \
@@ -223,7 +223,7 @@ Una vez que compile los ejemplos, puede usar `spark-submit` para enviar sus apli
       Microsoft.Spark.CSharp.Examples Sql.Batch.Basic $SPARK_HOME/examples/src/main/resources/people.json
       ```
 
-   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
 
       ```bash
       spark-submit \
@@ -233,7 +233,7 @@ Una vez que compile los ejemplos, puede usar `spark-submit` para enviar sus apli
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredNetworkWordCount localhost 9999
       ```
 
-   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (accesible por Maven)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (accesible por Maven)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
       ```bash
       spark-submit \
@@ -244,7 +244,7 @@ Una vez que compile los ejemplos, puede usar `spark-submit` para enviar sus apli
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
       ```
 
-   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (proporcionado por jars)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (proporcionado por jars)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
       ```bash
       spark-submit \

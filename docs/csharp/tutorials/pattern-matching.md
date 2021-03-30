@@ -4,12 +4,12 @@ description: En este tutorial avanzado se muestra cómo usar técnicas de coinci
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: b0ee4ee905c130876cf201cb3a1a441d54226c52
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: c081e6a75b3ea834641b050bc2450fed1e45c60c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582788"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874516"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos
 
@@ -43,7 +43,7 @@ Desde esa descripción breve, puede haber esbozado rápidamente una jerarquía d
 
 [!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
-Puede descargar el código de inicio del repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) de GitHub. Puede ver que las clases de vehículo provienen de distintos sistemas y que están en distintos espacios de nombres. No se puede aprovechar ninguna clase base común distinta de `System.Object`.
+Puede descargar el código de inicio del repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/main/csharp/tutorials/patterns/start) de GitHub. Puede ver que las clases de vehículo provienen de distintos sistemas y que están en distintos espacios de nombres. No se puede aprovechar ninguna clase base común distinta de `System.Object`.
 
 ## <a name="pattern-matching-designs"></a>Diseños de coincidencia de patrones
 
@@ -390,4 +390,4 @@ La coincidencia de patrones hace que algunos tipos de código sean más legibles
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Puede descargar el código finalizado del repositorio GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/finished). Explore los patrones por su cuenta y agregue esta técnica a sus actividades habituales de codificación. Aprender estas técnicas le permite contar con otra forma de enfocar los problemas y crear una funcionalidad nueva.
+Puede descargar el código finalizado del repositorio GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/main/csharp/tutorials/patterns/finished). Explore los patrones por su cuenta y agregue esta técnica a sus actividades habituales de codificación. Aprender estas técnicas le permite contar con otra forma de enfocar los problemas y crear una funcionalidad nueva.

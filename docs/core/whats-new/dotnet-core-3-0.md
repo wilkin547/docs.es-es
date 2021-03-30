@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bab14ec385ca6e4d71919ddaebd6d49ee8d002e0
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: f401af3ec7f1fc729e6f3af005acbde2ad61f586
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104996"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875842"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -31,8 +31,8 @@ C# 8.0 también forma parte de esta versión, que incluye la característica de
 
 Tutoriales relacionados con las características del lenguaje de C# 8.0:
 
-- [Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL](../../csharp/tutorials/nullable-reference-types.md)
-- [Tutorial: Generación y uso de secuencias asincrónicas con C# 8.0 y .NET Core 3.0](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL](../../csharp/whats-new/tutorials/nullable-reference-types.md)
+- [Tutorial: Generación y uso de secuencias asincrónicas con C# 8.0 y .NET Core 3.0](../../csharp/whats-new/tutorials/generate-consume-asynchronous-stream.md)
 - [Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos](../../csharp/tutorials/pattern-matching.md)
 
 Se han agregado mejoras del lenguaje para admitir las siguientes características de API que se detallan a continuación:
@@ -114,7 +114,7 @@ o bien
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-Para obtener más información sobre la publicación de archivos únicos, vea el [documento de diseño del programa de instalación de conjunto de archivos únicos](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
+Para obtener más información sobre la publicación de archivos únicos, vea el [documento de diseño del programa de instalación de conjunto de archivos únicos](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md).
 
 ### <a name="assembly-linking"></a>Vinculación de ensamblados
 
@@ -146,7 +146,7 @@ Para más información sobre la herramienta Enlazador de IL, vea la [documentaci
 
 ### <a name="tiered-compilation"></a>Compilación en niveles
 
-La [compilación en niveles](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC) está activada de forma predeterminada con .NET Core 3.0. Esta característica permite que el runtime use el compilador Just-In-Time (JIT) de forma más flexible para lograr un mejor rendimiento.
+La [compilación en niveles](https://github.com/dotnet/runtime/blob/main/docs/design/features/tiered-compilation.md) (TC) está activada de forma predeterminada con .NET Core 3.0. Esta característica permite que el runtime use el compilador Just-In-Time (JIT) de forma más flexible para lograr un mejor rendimiento.
 
 La principal ventaja de la compilación en niveles es que ofrece dos maneras de aplicar JIT a los métodos: con un nivel de menor calidad, pero más rápido, o un nivel de mayor calidad, pero más lento. La calidad se refiere al grado de optimización del método. La compilación en niveles contribuye a mejorar el rendimiento de una aplicación a medida que pasa por distintas fases de ejecución, desde el inicio hasta el estado estable. Cuando la compilación en niveles está deshabilitada, todos los métodos se compilan de una manera única que prima el rendimiento de estado estable sobre el rendimiento de inicio.
 
@@ -329,11 +329,11 @@ En Windows, ahora puede crear componentes COM administrados invocables. Esta cap
 
 A diferencia de .NET Framework, donde se utilizó *mscoree.dll* como servidor COM, .NET Core agregará un archivo dll de inicio nativo al directorio *bin* al compilar el componente COM.
 
-Para ver un ejemplo de cómo crear un componente COM y usarlo, consulte la [demostración de COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).
+Para ver un ejemplo de cómo crear un componente COM y usarlo, consulte la [demostración de COM](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo).
 
 ### <a name="windows-native-interop"></a>Interoperabilidad nativa de Windows
 
-Windows ofrece una API nativa enriquecida en forma de API de C sin formato, COM y WinRT. Mientras que .NET Core admite **P/Invoke**, .NET Core 3.0 agrega la capacidad de **API COM CoCreate** y **API WinRT Activate**. Para obtener un ejemplo de código, vea la [demostración de Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
+Windows ofrece una API nativa enriquecida en forma de API de C sin formato, COM y WinRT. Mientras que .NET Core admite **P/Invoke**, .NET Core 3.0 agrega la capacidad de **API COM CoCreate** y **API WinRT Activate**. Para obtener un ejemplo de código, vea la [demostración de Excel](https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo).
 
 ### <a name="msix-deployment"></a>Implementación de MSIX
 
@@ -372,7 +372,7 @@ Se han publicado dos paquetes en NuGet que puede usar para la programación de G
 - [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
 - [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-Los paquetes GPIO incluyen interfaces API para dispositivos *GPIO*, *SPI*, *I2C* y *PWM*. El paquete de enlaces de IoT incluye enlaces de dispositivos. Para obtener más información, vea el [repositorio de GitHub de los dispositivos](https://github.com/dotnet/iot/blob/master/src/devices/).
+Los paquetes GPIO incluyen interfaces API para dispositivos *GPIO*, *SPI*, *I2C* y *PWM*. El paquete de enlaces de IoT incluye enlaces de dispositivos. Para obtener más información, vea el [repositorio de GitHub de los dispositivos](https://github.com/dotnet/iot/blob/main/src/devices/).
 
 ### <a name="arm64-linux-support"></a>Compatibilidad con ARM64 para Linux
 
@@ -455,7 +455,7 @@ Existe también el tipo <xref:System.Range?displayProperty=nameWithType>, que c
 var slice = a[i1..i2]; // { 3, 4, 5 }
 ```
 
-Para obtener más información, vea el [tutorial sobre intervalos e índices](../../csharp/tutorials/ranges-indexes.md).
+Para obtener más información, vea el [tutorial sobre intervalos e índices](../../csharp/whats-new/tutorials/ranges-indexes.md).
 
 ### <a name="async-streams"></a>Flujos asincrónicos
 
@@ -475,7 +475,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 Además de poder ejecutar `await foreach`, también puede crear iteradores asincrónicos, por ejemplo, uno que devuelva un enumerador `IAsyncEnumerable/IAsyncEnumerator` en el que pueda ejecutar `await` y `yield`. Para los objetos que deban eliminarse, puede usar `IAsyncDisposable`, que implementan varios tipos BCL, como `Stream` y `Timer`.
 
-Para obtener más información, vea el [tutorial sobre flujos asincrónicos](../../csharp/tutorials/generate-consume-asynchronous-stream.md).
+Para obtener más información, vea el [tutorial sobre flujos asincrónicos](../../csharp/whats-new/tutorials/generate-consume-asynchronous-stream.md).
 
 ### <a name="ieee-floating-point"></a>Punto flotante de IEEE
 
@@ -516,7 +516,7 @@ Se han agregado API que permiten el acceso a determinadas instrucciones CPU orie
 
 En su caso, las bibliotecas de .NET han comenzado a utilizar estas instrucciones para mejorar el rendimiento.
 
-Para obtener más información, consulte el artículo sobre [elementos intrínsecos dependientes de la plataforma .NET](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md).
+Para obtener más información, consulte el artículo sobre [elementos intrínsecos dependientes de la plataforma .NET](https://github.com/dotnet/designs/blob/main/accepted/2018/platform-intrinsics.md).
 
 ### <a name="improved-net-core-version-apis"></a>API de versión mejoradas de .NET Core
 

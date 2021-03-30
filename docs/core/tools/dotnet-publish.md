@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica un proyecto o una solución de .NET en un directorio.
 ms.date: 02/03/2021
-ms.openlocfilehash: 5391e56a88f782294c3a71c523d0fc27a09e0dd8
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 64f300c415d8810badca99878e4243b37f32d86d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585681"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873424"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -155,7 +155,7 @@ Para obtener más información, vea los siguientes recursos:
 
   Empaqueta la aplicación en un ejecutable de archivo único específico de la plataforma. El archivo ejecutable es autoextraíble y contiene todas las dependencias (incluidas las nativas) necesarias para ejecutar la aplicación. Cuando la aplicación se ejecuta por primera vez, se extrae en un directorio que se basa en el nombre de la aplicación y el identificador de compilación. El inicio es más rápido cuando se vuelve a ejecutar la aplicación. No es necesario extraer la aplicación por segunda vez a menos que se haya usado una versión nueva. Disponible desde el SDK de .NET Core 3.0.
 
-  Para obtener más información sobre la publicación de archivos únicos, vea el [documento de diseño del programa de instalación de conjunto de archivos únicos](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
+  Para obtener más información sobre la publicación de archivos únicos, vea el [documento de diseño del programa de instalación de conjunto de archivos únicos](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md).
 
   Se recomienda especificar esta opción en un perfil de publicación en lugar de hacerlo en la línea de comandos. Para obtener más información, vea [MSBuild](#msbuild).
 

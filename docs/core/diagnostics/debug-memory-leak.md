@@ -3,12 +3,12 @@ title: Tutorial Depuración de una fuga de memoria
 description: Obtenga información sobre cómo depurar una fuga de memoria en .NET Core.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 09777b6c9f80c28e1eec28983d605f2a2e261c92
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255677"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872748"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>Depuración de una fuga de memoria en .NET Core
 
@@ -238,7 +238,7 @@ También puede eliminar el archivo de volcado de memoria que se creó.
 - [dotnet-trace](dotnet-trace.md) para mostrar procesos
 - [dotnet-counters](dotnet-counters.md) para comprobar el uso de memoria administrada
 - [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria
-- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/main/documentation/tutorial)
 - [Uso de Visual Studio para depurar fugas de memoria](/visualstudio/profiling/memory-usage)
 
 ## <a name="next-steps"></a>Pasos siguientes

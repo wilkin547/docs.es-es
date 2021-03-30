@@ -2,12 +2,12 @@
 title: Recopilación de diagnósticos en contenedores
 description: En este artículo, aprenderá cómo se pueden usar las herramientas de diagnóstico de .NET Core en contenedores de Docker.
 ms.date: 09/01/2020
-ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 1d0c9eadca348dad5c4fc0a395c8b371e3821262
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916214"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872761"
 ---
 # <a name="collect-diagnostics-in-containers"></a>Recopilación de diagnósticos en contenedores
 
@@ -68,7 +68,7 @@ Si desea ejecutar `PerfCollect` en un contenedor para generar perfiles de un pro
 
 **Esta herramienta se aplica a: ✔️** .NET Core 2.1 y versiones posteriores
 
-Alternativa a `dotnet-dump`, [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) se puede usar para crear volcados principales en Linux que contienen información nativa y administrada. La herramienta `createdump` se instala con el entorno de ejecución de .NET y se puede encontrar junto a libcoreclr.so (normalmente en "/usr/share/dotnet/shared/Microsoft.NETCore.App/[versión]"). La herramienta funciona de la misma forma en un contenedor que en entornos de Linux no contenedores con la única excepción de que la herramienta requiere la [capacidad `SYS_PTRACE`](https://man7.org/linux/man-pages/man7/capabilities.7.html), por lo que el contenedor de Docker debe [iniciarse con esa capacidad](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
+Alternativa a `dotnet-dump`, [`createdump`](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md) se puede usar para crear volcados principales en Linux que contienen información nativa y administrada. La herramienta `createdump` se instala con el entorno de ejecución de .NET y se puede encontrar junto a libcoreclr.so (normalmente en "/usr/share/dotnet/shared/Microsoft.NETCore.App/[versión]"). La herramienta funciona de la misma forma en un contenedor que en entornos de Linux no contenedores con la única excepción de que la herramienta requiere la [capacidad `SYS_PTRACE`](https://man7.org/linux/man-pages/man7/capabilities.7.html), por lo que el contenedor de Docker debe [iniciarse con esa capacidad](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
 
 ### <a name="using-createdump-in-a-sidecar-container"></a>Uso de `createdump` en un contenedor sidecar
 

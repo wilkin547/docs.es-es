@@ -4,12 +4,12 @@ description: Las mejoras aplicadas recientemente al lenguaje C# permiten escribi
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: b739a4ce1f723798cbe50ef9eae673494996751c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4728ff279d0a14adf239c1e177f7f840ea208e6e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106623"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872488"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escritura de código C# seguro y eficaz
 
@@ -229,7 +229,7 @@ El compilador genera un código más eficaz cuando se llama a los miembros de un
 
 No se debe pasar un tipo de valor que admite un valor NULL como argumento `in`. El tipo <xref:System.Nullable%601> no se declara como una estructura de solo lectura. Eso significa que el compilador debe generar copias defensivas de cualquier argumento de tipo de valor que acepta valores NULL pasado a un método con el modificador `in` en la declaración de parámetros.
 
-Puede ver un programa de ejemplo en el que se muestran las diferencias de rendimiento con [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) en el [repositorio de ejemplos](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) de GitHub. Compara la transmisión de un valor struct mutable por valor y por referencia con la transmisión de un valor struct inmutable por valor y por referencia. El uso de un valor struct inmutable y de la transmisión por referencia es un proceso más rápido.
+Puede ver un programa de ejemplo en el que se muestran las diferencias de rendimiento con [BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/) en el [repositorio de ejemplos](https://github.com/dotnet/samples/tree/main/csharp/safe-efficient-code/benchmark) de GitHub. Compara la transmisión de un valor struct mutable por valor y por referencia con la transmisión de un valor struct inmutable por valor y por referencia. El uso de un valor struct inmutable y de la transmisión por referencia es un proceso más rápido.
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Uso de los tipos `ref struct` para trabajar con bloques o memoria en un solo marco de pila
 

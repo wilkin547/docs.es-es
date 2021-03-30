@@ -4,12 +4,12 @@ description: Sepa cómo implementar una aplicación de .NET para Apache Spark en
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dd1cfdf12266b55d9dbc0210479b89ba68c59a38
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: a0904b5b692e1c32ba12a685f2c3a3f7d86c2c58
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688077"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874061"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Implementación de una aplicación de .NET para Apache Spark en Amazon EMR Spark
 
@@ -32,7 +32,7 @@ En este tutorial, aprenderá a:
 Antes de empezar, haga lo siguiente:
 
 * Descargue la [CLI de AWS](https://aws.amazon.com/cli/).
-* Descargue [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) en el equipo local. Es un script de aplicación auxiliar que usaremos más adelante para copiar archivos dependientes de .NET para Apache Spark en los nodos de trabajo del clúster de Spark.
+* Descargue [install-worker.sh](https://github.com/dotnet/spark/blob/main/deployment/install-worker.sh) en el equipo local. Es un script de aplicación auxiliar que usaremos más adelante para copiar archivos dependientes de .NET para Apache Spark en los nodos de trabajo del clúster de Spark.
 
 ## <a name="prepare-worker-dependencies"></a>Preparación de las dependencias de trabajo
 
@@ -42,7 +42,7 @@ Antes de empezar, haga lo siguiente:
 
    Por ejemplo, si quiere `.NET for Apache Spark v1.0.0` con `netcoreapp3.1`, tendría que descargar [Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz).
 
-2. Cargue `Microsoft.Spark.Worker.<release>.tar.gz` e [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) en un sistema de archivos distribuido (por ejemplo, S3) al que el clúster tenga acceso.
+2. Cargue `Microsoft.Spark.Worker.<release>.tar.gz` e [install-worker.sh](https://github.com/dotnet/spark/blob/main/deployment/install-worker.sh) en un sistema de archivos distribuido (por ejemplo, S3) al que el clúster tenga acceso.
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>Preparación de la aplicación de .NET para Apache Spark
 
@@ -135,4 +135,4 @@ aws emr add-steps \
 En este tutorial ha implementado una aplicación de .NET para Apache Spark en Amazon EMR Spark. Para ver proyectos de ejemplo de .NET para Apache Spark, continúe en GitHub.
 
 > [!div class="nextstepaction"]
-> [Ejemplos de .NET para Apache Spark](https://github.com/dotnet/spark/tree/master/examples)
+> [Ejemplos de .NET para Apache Spark](https://github.com/dotnet/spark/tree/main/examples)

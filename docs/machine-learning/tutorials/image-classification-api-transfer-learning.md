@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 02/09/2021
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8397a12d179569c2836c43ab3946a2edba3bdba8
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 71d44ca3248d497b3f46d1d93c6505adcfc42021
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100469778"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873307"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: Inspección visual automatizada mediante el aprendizaje de transferencia con la API Image Classification de ML.NET
 
@@ -116,7 +116,7 @@ Cada uno de estos subdirectorios contiene a su vez dos subdirectorios adicionale
 
 En este tutorial, solo se usan imágenes de tableros de puente.
 
-1. Descargue el [conjunto de datos](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip) y descomprímalo.
+1. Descargue el [conjunto de datos](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip) y descomprímalo.
 1. Cree un directorio llamado "recursos" en el proyecto para guardar los archivos del conjunto de datos.
 1. Copie los subdirectorios *CD* y *UD* del directorio descomprimido recientemente en el directorio *recursos*.
 

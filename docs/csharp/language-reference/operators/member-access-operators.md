@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3ba56c7485d27d2692a589e2a8e5b330ea0de85
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691245"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873905"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operadores y expresiones de acceso a miembros (referencia de C#)
 
@@ -182,7 +182,7 @@ Disponible en C# 8.0 y versiones posteriores, el operador `^` indica la posici�
 
 Como se muestra en el ejemplo anterior, la expresión `^e` es del tipo <xref:System.Index?displayProperty=nameWithType>. En la expresión `^e`, el resultado de `e` debe poderse convertir implícitamente a `int`.
 
-También puede usar el operador `^` con el [operador de intervalo](#range-operator-) para crear un intervalo de índices. Para más información, consulte [Índices y rangos](../../tutorials/ranges-indexes.md).
+También puede usar el operador `^` con el [operador de intervalo](#range-operator-) para crear un intervalo de índices. Para más información, consulte [Índices y rangos](../../whats-new/tutorials/ranges-indexes.md).
 
 ## <a name="range-operator-"></a>Operador de intervalo .
 
@@ -200,7 +200,7 @@ Puede omitir cualquiera de los operandos del operador `..` para obtener un inter
 
 [!code-csharp[ranges with omitted operands](snippets/shared/MemberAccessOperators.cs#RangesOptional)]
 
-Para más información, consulte [Índices y rangos](../../tutorials/ranges-indexes.md).
+Para más información, consulte [Índices y rangos](../../whats-new/tutorials/ranges-indexes.md).
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 

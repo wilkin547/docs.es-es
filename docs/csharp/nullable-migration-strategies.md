@@ -3,12 +3,12 @@ title: Actualización del código base para usar tipos de referencia que aceptan
 description: Elija la mejor estrategia de actualización de su código base para usar tipos de referencia que aceptan valores NULL.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: ab0970247c7e3f3c20d7fdb40ef035c4ba1d8b01
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: fff9ce4d053cc2543b0148d70435bdc793ecccd7
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "97866827"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637169"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Actualización de las bibliotecas para usar tipos de referencia que aceptan valores NULL y comunicar reglas que aceptan valores NULL a los llamadores
 
@@ -69,7 +69,7 @@ La elección de una estrategia u otra dependerá de la cantidad de desarrollo ac
 > 1. Inicie el nombre de archivo con *TemporaryGeneratedFile_*
 > 1. Finalice el nombre de archivo con *.designer.cs*, *.generated.cs*, *.g.cs* o *.g.i.cs*.
 >
-> Los generadores pueden optar por usar la directiva de preprocesador [`#nullable`](language-reference/preprocessor-directives/preprocessor-nullable.md).
+> Los generadores pueden optar por usar la directiva de preprocesador [`#nullable`](language-reference/preprocessor-directives.md#nullable-context).
 
 ## <a name="should-nullable-warnings-introduce-breaking-changes"></a>¿Deberían introducir cambios importantes las advertencias que aceptan valores NULL?
 
@@ -216,5 +216,5 @@ Nunca observará un valor NULL real en tiempo de ejecución, a menos que se prod
 
 ## <a name="see-also"></a>Consulte también
 
-- [Migración de un código base existente a referencias que aceptan valores NULL](tutorials/upgrade-to-nullable-references.md)
+- [Migración de un código base existente a referencias que aceptan valores NULL](whats-new/tutorials/upgrade-to-nullable-references.md)
 - [Uso de tipos de referencia que aceptan valores NULL en EF Core](/ef/core/miscellaneous/nullable-reference-types)

@@ -4,18 +4,18 @@ description: Obtenga información sobre el cambio importante en ASP.NET Core 6
 author: scottaddie
 ms.author: scaddie
 ms.date: 02/24/2021
-ms.openlocfilehash: d289ee68a10ee6a237e553a9e0ade153add8f608
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: d6a43b4885a7b11669fc0eeb469c740b60d0cd4c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257894"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874347"
 ---
 # <a name="nullable-reference-type-annotations-changed"></a>Las anotaciones en los tipos de referencia que aceptan valores NULL han cambiado.
 
 _**Esta incidencia representa un trabajo en curso. Todos los cambios importantes en las anotaciones de nulabilidad se agregarán a esta incidencia a lo largo de ASP.NET Core 6.0.**_
 
-A partir de ASP.NET Core 5.0, las anotaciones de nulabilidad se han aplicado a partes del código. Desde el principio de este esfuerzo, [se esperaban errores](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) en estas anotaciones y es necesario realizar correcciones. En ASP.NET Core 6.0, se están actualizando algunas anotaciones aplicadas previamente. Algunos de estos cambios se consideran cambios importantes en el origen. Los cambios conducen a que las API sean incompatibles o más restrictivas. Las API actualizadas pueden producir advertencias en tiempo de compilación cuando se usan en proyectos que tienen habilitados los tipos de referencia que aceptan valores NULL.
+A partir de ASP.NET Core 5.0, las anotaciones de nulabilidad se han aplicado a partes del código. Desde el principio de este esfuerzo, [se esperaban errores](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) en estas anotaciones y es necesario realizar correcciones. En ASP.NET Core 6.0, se están actualizando algunas anotaciones aplicadas previamente. Algunos de estos cambios se consideran cambios importantes en el origen. Los cambios conducen a que las API sean incompatibles o más restrictivas. Las API actualizadas pueden producir advertencias en tiempo de compilación cuando se usan en proyectos que tienen habilitados los tipos de referencia que aceptan valores NULL.
 
 Para obtener información, vea la incidencia de GitHub [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564).
 

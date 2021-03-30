@@ -4,12 +4,12 @@ description: Aprenda a implementar binarios de trabajo y función definida por e
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: c777fdb26045c62317b49259fdde974f43ba5c0d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d3e86d22a308c7124812f2c11742c2e18803b13d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293772"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875543"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Implementación de binarios de trabajo y función definida por el usuario de .NET para Apache Spark
 
@@ -27,7 +27,7 @@ Al implementar trabajos y escribir UDF, hay algunas variables de entorno de uso 
 | :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | Ruta de acceso donde se ha generado el binario de <code>Microsoft.Spark.Worker</code>.</br>La usa el controlador de Spark y se pasa a los ejecutores de Spark. Si esta variable no está configurada, los ejecutores de Spark buscan la ruta de acceso especificada en la variable de entorno <code>PATH</code>.</br>_Por ejemplo, "C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | Rutas de acceso separadas por comas donde <code>Microsoft.Spark.Worker</code> va a cargar los ensamblados.</br>Tenga en cuenta que si una ruta de acceso comienza por ".", el directorio de trabajo se antepone. Si está en **modo Yarn**, "." representaría el directorio de trabajo del contenedor.</br>_Por ejemplo, "C:\Users\\&lt;nombre de usuario&gt;\\&lt;miaplicaciónspark&gt;\bin\Debug\\&lt;versión de dotnet&gt;"_
-| DOTNET_WORKER_DEBUG          | Si quiere <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">depurar una UDF</a>, establezca esta variable de entorno en <code>1</code> antes de ejecutar <code>spark-submit</code>.
+| DOTNET_WORKER_DEBUG          | Si quiere <a href="https://github.com/dotnet/spark/blob/main/docs/developer-guide.md#debugging-user-defined-function-udf">depurar una UDF</a>, establezca esta variable de entorno en <code>1</code> antes de ejecutar <code>spark-submit</code>.
 
 ### <a name="parameter-options"></a>Opciones de parámetros
 

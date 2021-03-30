@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Obtenga más información sobre las tecnologías de .NET Framework que no están disponibles en .NET Core y .NET 5.0 y versiones posteriores.
 author: cartermp
 ms.date: 03/08/2021
-ms.openlocfilehash: cd273e95c5c889b900cb8ff744e8c49bb1ce69c4
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: d8eccce7e36552e0d5396779936681227cb1e28a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604936"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875127"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core-and-net-5"></a>Tecnologías de .NET Framework no disponibles en .NET Core y .NET 5+
 
@@ -21,7 +21,7 @@ Para obtener más información sobre la compatibilidad de API, vea [Cambios impo
 
 Los dominios de aplicación aíslan las aplicaciones entre sí. Los dominios de aplicación necesitan la compatibilidad con el entorno de ejecución y consumen muchos recursos. No se admite la creación de dominios de aplicación adicionales y no existen planes para agregar esta funcionalidad en el futuro. En el caso del aislamiento del código, use contenedores o procesos independientes como alternativa. Para cargar ensamblados de forma dinámica, use la clase <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-Para facilitar la migración de código de .NET Framework, .NET 5+ expone parte de la superficie de la API <xref:System.AppDomain>. Algunas de las API funcionan con normalidad (por ejemplo, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), algunos miembros no hacen nada (por ejemplo, <xref:System.AppDomain.SetCachePath%2A>) y algunos de ellos generan <xref:System.PlatformNotSupportedException> (por ejemplo, <xref:System.AppDomain.CreateDomain%2A>). Compruebe los tipos que usa con el [`System.AppDomain` origen de referencia](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) en el [repositorio de GitHub dotnet/runtime](https://github.com/dotnet/runtime). Asegúrese de seleccionar la rama que coincida con su versión implementada.
+Para facilitar la migración de código de .NET Framework, .NET 5+ expone parte de la superficie de la API <xref:System.AppDomain>. Algunas de las API funcionan con normalidad (por ejemplo, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), algunos miembros no hacen nada (por ejemplo, <xref:System.AppDomain.SetCachePath%2A>) y algunos de ellos generan <xref:System.PlatformNotSupportedException> (por ejemplo, <xref:System.AppDomain.CreateDomain%2A>). Compruebe los tipos que usa con el [`System.AppDomain` origen de referencia](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) en el [repositorio de GitHub dotnet/runtime](https://github.com/dotnet/runtime). Asegúrese de seleccionar la rama que coincida con su versión implementada.
 
 ## <a name="remoting"></a>Comunicación remota
 

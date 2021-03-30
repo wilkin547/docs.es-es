@@ -3,12 +3,12 @@ title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8.0. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 36078031eebc1890edf04744475c330c2ba31f96
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: da3b75b28d7501e8436d29c0c325c550f0a44c93
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480100"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637173"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -96,7 +96,7 @@ También puede usar directivas para establecer los mismos contextos en cualquier
 > 1. Inicie el nombre de archivo con *TemporaryGeneratedFile_*
 > 1. Finalice el nombre de archivo con *.designer.cs*, *.generated.cs*, *.g.cs* o *.g.i.cs*.
 >
-> Los generadores pueden optar por usar la directiva de preprocesador [`#nullable`](language-reference/preprocessor-directives/preprocessor-nullable.md).
+> Los generadores pueden optar por usar la directiva de preprocesador [`#nullable`](language-reference/preprocessor-directives.md#nullable-context).
 
 De forma predeterminada, los contextos de advertencias y anotaciones que aceptan valores NULL están **deshabilitados**. Esto implica que el código existente se compila sin cambios y sin generar ninguna advertencia nueva.
 
@@ -216,6 +216,6 @@ En el ejemplo anterior, la declaración de la matriz muestra que contiene cadena
 ## <a name="see-also"></a>Vea también
 
 - [Borrador de especificación de tipos de referencia que aceptan valores NULL](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
-- [Tutorial de introducción a las referencias que no aceptan valores NULL](tutorials/nullable-reference-types.md)
-- [Migración de un código base existente a referencias que aceptan valores NULL](tutorials/upgrade-to-nullable-references.md)
+- [Tutorial de introducción a las referencias que no aceptan valores NULL](whats-new/tutorials/nullable-reference-types.md)
+- [Migración de un código base existente a referencias que aceptan valores NULL](whats-new/tutorials/upgrade-to-nullable-references.md)
 - [**Nullable** (opción del compilador de C#)](language-reference/compiler-options/language.md#nullable)

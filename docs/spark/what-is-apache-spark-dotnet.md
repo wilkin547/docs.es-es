@@ -4,12 +4,12 @@ description: Obtenga información sobre .NET para Apache Spark, un marco de aná
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 1fa3ae16334176f0e3e888087078d5b98de9d869
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688038"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873203"
 ---
 # <a name="what-is-net-for-apache-spark"></a>¿Qué es .NET para Apache Spark?
 
@@ -41,11 +41,11 @@ Puede obtener información sobre la compatibilidad de interoperabilidad con las 
 
 Cuando se comparan con Python y Scala mediante el [banco de pruebas TPC-H](http://www.tpc.org/tpch/), .NET para Apache Spark funciona correctamente en la mayoría de los casos, y es dos veces más rápido que Python cuando el rendimiento de la función definida por el usuario es crítico. Existe un esfuerzo continuo por mejorar y realizar pruebas comparativas del rendimiento.
 
-Para realizar su propio banco de pruebas, consulte los bancos de pruebas disponibles en el [GitHub de .NET para Apache Spark](https://github.com/dotnet/spark/tree/master/benchmark).
+Para realizar su propio banco de pruebas, consulte los bancos de pruebas disponibles en el [GitHub de .NET para Apache Spark](https://github.com/dotnet/spark/tree/main/benchmark).
 
 ## <a name="net-for-apache-spark-roadmap"></a>Guía de .NET para Apache Spark
 
-Obtenga información sobre los planes a corto y a largo plazo en la [Guía de .NET para Apache Spark](https://github.com/dotnet/spark/blob/master/ROADMAP.md).
+Obtenga información sobre los planes a corto y a largo plazo en la [Guía de .NET para Apache Spark](https://github.com/dotnet/spark/blob/main/ROADMAP.md).
 
 ## <a name="net-foundation"></a>.NET Foundation
 

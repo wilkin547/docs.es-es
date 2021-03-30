@@ -5,12 +5,12 @@ ms.date: 03/03/2021
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9e831726a87493b109578a3546a8f29b7b71cb6c
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: f0c8c8a61aec2ee3b527d392e5460b9b77a03f26
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604611"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637201"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Plataformas de destino en proyectos de estilo SDK
 
@@ -143,7 +143,7 @@ El siguiente proyecto de biblioteca tiene como destino las API de .NET Standard 
 </Project>
 ```
 
-Dentro de su aplicación o biblioteca, puede escribir código condicional mediante [directivas de preprocesador](../csharp/language-reference/preprocessor-directives/preprocessor-if.md) para compilar para cada plataforma de destino:
+Dentro de su aplicación o biblioteca, puede escribir código condicional mediante [directivas de preprocesador](../csharp/language-reference/preprocessor-directives.md#conditional-compilation) para compilar para cada plataforma de destino:
 
 ```csharp
 public class MyClass
@@ -184,7 +184,7 @@ Las siguientes plataformas de destino están en desuso. Los paquetes que tienen 
 
 ## <a name="see-also"></a>Vea también
 
-- [Nombres de plataformas de destino en .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
+- [Nombres de plataformas de destino en .NET 5](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md)
 - [Llamada a las a API de Windows Runtime en aplicaciones de escritorio](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
 - [Desarrollo de bibliotecas con herramientas multiplataforma](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)

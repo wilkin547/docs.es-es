@@ -5,12 +5,12 @@ ms.date: 03/08/2021
 helpviewer_keywords:
 - C# language, top-level statements
 - C# language, Main method
-ms.openlocfilehash: 69ff5fd606f5e12f55bd3e6dfc15fc7e64d8352b
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 31a9d3bba302823015058d59ca79da45754b761f
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190450"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881059"
 ---
 # <a name="top-level-statements-c-programming-guide"></a>Instrucciones de nivel superior (Guía de programación de C#)
 
@@ -38,7 +38,7 @@ Puede escribir un método `Main` de forma explícita, pero no puede funcionar co
 
 > CS7022 El punto de entrada del programa es código global: se ignora el punto de entrada "Main()".
 
-En un proyecto con instrucciones de nivel superior, no se puede usar la opción del compilador [-main](../../language-reference/compiler-options/main-compiler-option.md) para seleccionar el punto de entrada, incluso si el proyecto tiene uno o varios métodos `Main`.
+En un proyecto con instrucciones de nivel superior, no se puede usar la opción del compilador [-main](../../language-reference/compiler-options/advanced.md#mainentrypoint-or-startupobject) para seleccionar el punto de entrada, incluso si el proyecto tiene uno o varios métodos `Main`.
 
 ## <a name="using-directives"></a>Directivas `using`
 

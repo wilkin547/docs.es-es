@@ -7,12 +7,12 @@ ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: c0fc92b2dbc25a1a48e0264b64c79fc8631fa8f0
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 494e73bd32ac6793d355b6828408b61bb09ca880
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009669"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873125"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -303,7 +303,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC también usa una convención para localizar vistas. Se puede reemplazar con una convención personalizada para que las vistas se ubiquen en las carpetas de características (mediante el nombre de la característica proporcionado por FeatureConvention, anteriormente). Puede obtener más información sobre este enfoque y descargar un ejemplo funcional en el artículo de MSDN Magazine [Sectores de características para ASP.NET Core MVC](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
-### <a name="apis-and-no-locblazor-applications"></a>API y aplicaciones Blazor
+### <a name="apis-and-blazor-applications"></a>API y aplicaciones Blazor
 
 Si la aplicación incluye un conjunto de API web que se deba proteger, estas API idealmente se deben configurar como un proyecto independiente de la aplicación de vista o de Razor Pages. La separación de las API, sobre todo las API públicas, de la aplicación web del lado servidor tiene una serie de ventajas. Estas aplicaciones a menudo tendrán características de implementación y carga únicas. También es muy probable que adopten diferentes mecanismos de seguridad; las aplicaciones estándar basadas en formularios aprovechan la autenticación basada en cookies y las API probablemente usan la autenticación basada en tokens.
 
@@ -495,7 +495,7 @@ services.AddAuthentication(config =>
 
 Aunque se pueden configurar varios esquemas de autenticación diferentes en un único proyecto, es mucho más sencillo configurar un único esquema predeterminado. Por este motivo, entre otros, la aplicación de referencia eShopOnWeb separa sus API en su propio proyecto, `PublicApi`, que es independiente del proyecto `Web` principal que incluye las vistas y las instancias de Razor Pages de la aplicación.
 
-#### <a name="authentication-in-no-locblazor-apps"></a>Autenticación en aplicaciones Blazor
+#### <a name="authentication-in-blazor-apps"></a>Autenticación en aplicaciones Blazor
 
 Las aplicaciones Blazor Server pueden aprovechar las mismas características de autenticación que cualquier otra aplicación ASP.NET Core. Pero las aplicaciones Blazor WebAssembly no pueden usar los proveedores de identidad de autenticación integrados, ya que se ejecutan en el explorador. Las aplicaciones Blazor WebAssembly pueden almacenar el estado de autenticación de los usuarios localmente y acceder a las notificaciones para determinar qué acciones deberían poder llevar a cabo los usuarios. Todas las comprobaciones de autenticación y autorización deben realizarse en el servidor, independientemente de la lógica implementada dentro de la aplicación BlazorWebAssembly, ya que los usuarios pueden omitir fácilmente la aplicación e interactuar directamente con las API.
 
@@ -654,7 +654,7 @@ Considere las formas en que las aplicaciones se comunican directamente con las a
 > ### <a name="references--client-communication"></a>Referencias: comunicación de cliente
 >
 > - **SignalR de ASP.NET Core**\
->   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/main/src/SignalR>
 > - **Administrador de WebSocket**\
 >   <https://github.com/radu-matei/websocket-manager>
 

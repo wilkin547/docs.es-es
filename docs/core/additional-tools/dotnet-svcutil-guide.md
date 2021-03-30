@@ -3,12 +3,12 @@ title: Introducción a la herramienta svcutil de WCF
 description: Información general sobre la herramienta dotnet-svcutil de WCF de Microsoft que agrega funciones para proyectos de .NET Core y ASP.NET Core, similares a la herramienta svcutil de WCF para proyectos de .NET Framework.
 author: honggit
 ms.date: 02/22/2019
-ms.openlocfilehash: 9468a881fe3850b53d48945340127ac2c2d4c6c8
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 6af04c4fb5e824ffce594b6e21b720246c67bf66
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957928"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873034"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Herramienta dotnet-svcutil de WCF para .NET Core
 
@@ -178,7 +178,7 @@ Si tiene preguntas o comentarios, [abra un problema en GitHub](https://github.co
 
 ## <a name="release-notes"></a>Notas de la versión
 
-- Eche un vistazo a las [notas de la versión](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) para obtener información actualizada sobre la versión, incluidos los problemas conocidos.
+- Eche un vistazo a las [notas de la versión](https://github.com/dotnet/wcf/blob/main/release-notes/dotnet-svcutil-notes.md) para obtener información actualizada sobre la versión, incluidos los problemas conocidos.
 
 ## <a name="information"></a>Información
 

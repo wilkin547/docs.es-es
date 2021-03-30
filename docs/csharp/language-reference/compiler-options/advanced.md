@@ -21,12 +21,12 @@ helpviewer_keywords:
 - AdditionalLibPaths compiler option [C#]
 - ApplicationConfiguration compiler option [C#]
 - ModuleAssemblyName compiler option [C#]
-ms.openlocfilehash: 47c84968682e056acdb73805807d907c6bb7c7ee
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 5c51a4dd950a33fb51c338dbd1d86bb5b03eb694
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652768"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111041"
 ---
 # <a name="advanced-c-compiler-options"></a>Opciones avanzadas del compilador de C#
 
@@ -259,9 +259,9 @@ En la tabla siguiente se enumeran las versiones de subsistema habituales de Wind
 El valor predeterminado de la opción del compilador **SubsystemVersion** depende de las condiciones de la lista siguiente:
 
 - El valor predeterminado es 6.02 si se establece cualquier opción del compilador en la siguiente lista:
-  - [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
-  - [/target:winmdobj](./target-winmdobj-compiler-option.md)
-  - [-platform:arm](./platform-compiler-option.md)
+  - [/target:appcontainerexe](output.md)
+  - [/target:winmdobj](output.md)
+  - [-platform:arm](output.md)
 - El valor predeterminado es 6,00 si usa MSBuild, tiene como destino .NET Framework 4.5 y no ha configurado ninguna de las opciones del compilador que se han especificado anteriormente en esta lista.
 - El valor predeterminado es 4.00 si no se cumple ninguna de las condiciones anteriores.
 

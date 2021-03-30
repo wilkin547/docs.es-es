@@ -2,12 +2,12 @@
 title: comando dotnet
 description: Obtenga información sobre el comando dotnet (el controlador genérico para la CLI de .NET) y su uso.
 ms.date: 11/11/2020
-ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 33c5f9d22166b818f5c860c4f4632d359f686919
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634030"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874542"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
@@ -118,7 +118,7 @@ Las siguientes opciones están disponibles cuando `dotnet` ejecuta una aplicaci�
 
 - **`--additional-deps <PATH>`**
 
-  Ruta de acceso a un archivo *.deps.json* adicional. Un archivo *deps.json* contiene una lista de dependencias, dependencias de compilación e información de versión que se usa para resolver conflictos de ensamblado. Para más información, vea [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) en GitHub.
+  Ruta de acceso a un archivo *.deps.json* adicional. Un archivo *deps.json* contiene una lista de dependencias, dependencias de compilación e información de versión que se usa para resolver conflictos de ensamblado. Para más información, vea [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md) en GitHub.
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
@@ -345,5 +345,5 @@ dotnet myapp.dll
 
 ## <a name="see-also"></a>Vea también
 
-- [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Runtime Configuration Files (Archivos de configuración en tiempo de ejecución)](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md)
 - [Opciones de configuración en tiempo de ejecución de .NET Core](../run-time-config/index.md)

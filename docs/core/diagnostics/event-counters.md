@@ -2,12 +2,12 @@
 title: EventCounters de .NET Core
 description: En este artículo se aprende qué son los EventCounters, cómo se implementan y cómo se usan.
 ms.date: 08/07/2020
-ms.openlocfilehash: 843f1ec645bf7f52fd4f85e30d183e6e21fee5c6
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: 8efa3134e83ba6fdc7563e97ef6422cb5f2099b6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065069"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872787"
 ---
 # <a name="eventcounters-in-net-core"></a>EventCounters de .NET Core
 
@@ -127,7 +127,7 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 > [!NOTE]
 > [dotnet-counters](dotnet-counters.md) _no_ usa <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>, y no es necesario que las escuchas de eventos lo usen.
 
-Hay más implementaciones de contador que se pueden usar como referencia en el repositorio del [entorno de ejecución de .NET](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs).
+Hay más implementaciones de contador que se pueden usar como referencia en el repositorio del [entorno de ejecución de .NET](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs).
 
 ## <a name="concurrency"></a>Simultaneidad
 
@@ -159,7 +159,7 @@ _requestRateCounter = new IncrementingPollingCounter("request-rate", this, () =>
 Hay dos formas principales de usar EventCounters, en proceso o fuera de proceso. El uso de EventCounters se puede clasificar en tres capas de distintas tecnologías de uso.
 
 - Transporte de eventos en una secuencia sin formato a través de ETW o EventPipe:
-  - Las API de ETW están incluidas en el sistema operativo Windows y se puede acceder a EventPipe como una [API de .NET](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console) o el [protocolo IPC](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/ipc-protocol.md) de diagnóstico.
+  - Las API de ETW están incluidas en el sistema operativo Windows y se puede acceder a EventPipe como una [API de .NET](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console) o el [protocolo IPC](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/ipc-protocol.md) de diagnóstico.
 - Descodificación del flujo de eventos binario en eventos:
   - La [biblioteca TraceEvent](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent) controla los formatos de flujo de ETW y EventPipe.
 - Herramientas de línea de comandos y GUI:

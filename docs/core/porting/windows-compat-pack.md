@@ -3,12 +3,12 @@ title: Uso del paquete de compatibilidad de Windows para trasladar código
 description: Obtenga información sobre el paquete de compatibilidad de Windows y cómo puede usarlo para realizar la migración de código existente de .NET Framework a .NET 5 y .NET Core 3.1.
 author: terrajobst
 ms.date: 03/04/2021
-ms.openlocfilehash: c90cc960cd9ff3707877afc023f95e0e03716aab
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 655657e38f564d84ea3e56b5374debc04b405eeb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604819"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873645"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-5"></a>Uso del paquete de compatibilidad de Windows para trasladar código a .NET 5+
 
@@ -40,7 +40,7 @@ Proporciona unas 20 000 API, incluidas API solo de Windows y de varias platafo
 - Memoria caché de tiempo de ejecución de Windows
 - servicios de Windows
 
-Para más información, vea las [especificaciones del paquete de compatibilidad](https://github.com/dotnet/designs/blob/master/accepted/2018/compat-pack/compat-pack.md).
+Para más información, vea las [especificaciones del paquete de compatibilidad](https://github.com/dotnet/designs/blob/main/accepted/2018/compat-pack/compat-pack.md).
 
 ## <a name="get-started"></a>Introducción
 

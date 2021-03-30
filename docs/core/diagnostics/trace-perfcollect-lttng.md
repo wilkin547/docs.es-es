@@ -3,12 +3,12 @@ title: Seguimiento de aplicaciones de .NET con PerfCollect.
 description: Tutorial en el que se le guía través de la recopilación de un seguimiento con perfcollect en .NET.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: d6ee77fea5c419e00e684e8b1472278f752544b0
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103189935"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874191"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>Seguimiento de aplicaciones de .NET con PerfCollect
 
@@ -225,7 +225,7 @@ Con este cambio, debería obtener los símbolos para todo el código de .NET.
 
 En la mayoría de los casos le interesará el código propio, que `perfcollect` resuelve de forma predeterminada. En ocasiones resulta útil ver lo que ocurre dentro de los archivos DLL de .NET (el objetivo de la última sección), pero a veces es interesante lo que sucede en los archivos DLL del entorno de ejecución nativo (normalmente libcoreclr.so).  `perfcollect` resolverá los símbolos para estos archivos DLL al convertir sus datos, pero solo si los símbolos están presentes (y cerca de la biblioteca para la que están destinados).
 
-Hay un comando global denominado [dotnet-symbol](https://github.com/dotnet/symstore/blob/master/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) que se encarga de ello. Para usar dotnet-symbol a fin de obtener símbolos del entorno de ejecución nativo:
+Hay un comando global denominado [dotnet-symbol](https://github.com/dotnet/symstore/blob/main/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) que se encarga de ello. Para usar dotnet-symbol a fin de obtener símbolos del entorno de ejecución nativo:
 
 1. Instale `dotnet-symbol`:
 

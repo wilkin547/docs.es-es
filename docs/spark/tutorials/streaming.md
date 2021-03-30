@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 3a02ac52155971f480c7f0c338d4a2a9a7d1d81c
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 29f90c43ece1f2655a15f759b473f723e712bda8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688025"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873177"
 ---
-# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Structured Streaming con .NET para Apache Spark
+# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Streaming estructurado con .NET para Apache Spark
 
 En este tutorial aprenderá a invocar Spark Structured Streaming mediante .NET para Apache Spark. Spark Structured Streaming es la compatibilidad de Apache Spark con el procesamiento de flujos de datos en tiempo real. El procesamiento de flujos se refiere a la realización de análisis de datos activos a medida que se producen.
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 >
@@ -24,7 +24,7 @@ En este tutorial aprenderá a:
 > * Usar netcat para crear un flujo de datos
 > * Usar funciones definidas por el usuario y SparkSQL para analizar datos de streaming
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Si esta es su primera aplicación de .NET para Apache Spark, comience con el [tutorial de introducción](get-started.md) para familiarizarse con los aspectos básicos.
 
@@ -160,11 +160,11 @@ spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local 
 
 ## <a name="get-the-code"></a>Obtención del código
 
-En este tutorial se usa el ejemplo [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs), pero hay otros tres ejemplos de procesamiento de flujos completo en GitHub:
+En este tutorial se usa el ejemplo [StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs), pero hay otros tres ejemplos de procesamiento de flujos completo en GitHub:
 
-* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs): recuento de palabras en datos de streaming de cualquier origen
-* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs): recuento de palabras en datos con lógica de ventanas
-* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs): recuento de palabras en datos de streaming de Kafka
+* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs): recuento de palabras en datos de streaming de cualquier origen
+* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs): recuento de palabras en datos con lógica de ventanas
+* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs): recuento de palabras en datos de streaming de Kafka
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 13898bdbd9522730c8f0cd19bd13d4e6f3a6a10e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224187"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874074"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Creación de funciones definidas por el usuario (UDF) en .NET para Apache Spark
 
@@ -27,7 +27,7 @@ Func<Column, Column> udf = Udf<string, string>(
     str => $"{s1} {str}");
 ```
 
-La UDF toma un valor `string` como entrada en forma de [columna](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/Column.cs#L14) de un [DataFrame](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L24)) y devuelve un valor `string` con `hello` anexado delante de la entrada.
+La UDF toma un valor `string` como entrada en forma de [columna](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/Column.cs#L14) de un [DataFrame](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L24)) y devuelve un valor `string` con `hello` anexado delante de la entrada.
 
 El siguiente DataFrame `df` contiene una lista de nombres:
 
@@ -59,11 +59,11 @@ El siguiente DataFrame `udfResult` es el resultado de la UDF:
 +-------------+
 ```
 
-Para comprender mejor cómo implementar las UDF, revise las [funciones auxiliares de UDF](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/Functions.cs#L3616) y los [ejemplos](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark.E2ETest/UdfTests/UdfSimpleTypesTests.cs#L49) en GitHub.
+Para comprender mejor cómo implementar las UDF, revise las [funciones auxiliares de UDF](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/Functions.cs#L3616) y los [ejemplos](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark.E2ETest/UdfTests/UdfSimpleTypesTests.cs#L49) en GitHub.
 
 ## <a name="udf-serialization"></a>Serialización de las UDF
 
-Dado que las UDF son funciones que necesitan ejecutarse en los trabajos, deben serializarse y enviarse a los trabajos como parte de la carga del controlador. Así, es necesario serializar tanto el [delegado](../../csharp/programming-guide/delegates/index.md), que es una referencia al método, como su [destino](xref:System.Delegate.Target%2A), que es la instancia de clase en la que el delegado actual invoca al método de instancia. Revise [este ejemplo de código de GitHub](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) para comprender mejor cómo se realiza la serialización de UDF.
+Dado que las UDF son funciones que necesitan ejecutarse en los trabajos, deben serializarse y enviarse a los trabajos como parte de la carga del controlador. Así, es necesario serializar tanto el [delegado](../../csharp/programming-guide/delegates/index.md), que es una referencia al método, como su [destino](xref:System.Delegate.Target%2A), que es la instancia de clase en la que el delegado actual invoca al método de instancia. Revise [este ejemplo de código de GitHub](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) para comprender mejor cómo se realiza la serialización de UDF.
 
 .NET para Apache Spark usa .NET Core, que no admite la serialización de delegados. En su lugar, se usa la reflexión para serializar el destino en el que se define el delegado. Cuando se definen varios delegados en un ámbito común, tienen una clausura compartida que se convierte en el destino de la reflexión de la serialización.
 

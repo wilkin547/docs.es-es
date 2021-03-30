@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 65c9c4929d9ed8ab4005677fbcb0a3745ed14190
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255701"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874308"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>Publicación de aplicaciones de .NET con la CLI de .NET
 
@@ -149,11 +149,11 @@ Siempre que se usa el modificador `-r`, la ruta de acceso de la carpeta de salid
 Si usa la [aplicación de ejemplo](#sample-app), ejecute `dotnet publish -f net5.0 -r win10-x64 --self-contained false`. Este comando crea el archivo ejecutable siguiente: `./bin/Debug/net5.0/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, consulte [Modo de globalización invariable de .NET](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
+> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, consulte [Modo de globalización invariable de .NET](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>Implementación autocontenida
 
-Cuando se publica una implementación autocontenida (SCD), el SDK de .NET crea un archivo ejecutable específico de la plataforma. La publicación de una SCD incluye todos los archivos de .NET necesarios para ejecutar la aplicación, pero no incluye las [dependencias nativas de .NET](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Estas dependencias deben estar presentes en el sistema antes de ejecutar la aplicación.
+Cuando se publica una implementación autocontenida (SCD), el SDK de .NET crea un archivo ejecutable específico de la plataforma. La publicación de una SCD incluye todos los archivos de .NET necesarios para ejecutar la aplicación, pero no incluye las [dependencias nativas de .NET](https://github.com/dotnet/core/blob/main/Documentation/prereqs.md). Estas dependencias deben estar presentes en el sistema antes de ejecutar la aplicación.
 
 Al publicar una SCD, se crea una aplicación que no se pone al día a la revisión de seguridad de .NET más reciente disponible. Para más información sobre el enlace de versión en tiempo de compilación, consulte [Selección de la versión de .NET que se va a usar](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
@@ -170,7 +170,7 @@ Debe usar los modificadores siguientes con el comando `dotnet publish` para publ
 |                                | 5.0         | `dotnet publish -c Release -r <RID> --self-contained true`  |
 
 > [!NOTE]
-> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [Modo de globalización invariable de .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
+> Puede reducir el tamaño total de la implementación si habilita el **modo de globalización invariable**. Este modo es útil para las aplicaciones que no son globales y que pueden usar las convenciones de formato, las de mayúsculas y minúsculas, y el criterio de ordenación y la comparación de cadenas de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture). Para más información sobre el **modo de globalización invariable** y cómo habilitarlo, vea [Modo de globalización invariable de .NET Core](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Vea también
 

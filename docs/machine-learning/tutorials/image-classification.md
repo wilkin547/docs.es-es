@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo transferir el conocimiento de un m
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: a4c671816dce1fe2abdf77f81da0f27236136536
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: b3e5617979d1635248f87db6008d3e234bb3ffc5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282117"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877038"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generación de un modelo de clasificación de imágenes de ML.NET desde un modelo entrenado previamente de TensorFlow
 
@@ -27,7 +27,7 @@ En este tutorial aprenderá a:
 > * Entrenamiento y evaluación del modelo de ML.NET
 > * Clasificación de una imagen de prueba
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF). Tenga en cuenta que, de forma predeterminada, la configuración del proyecto de .NET de este tutorial tiene como destino .NET Core 2.2.
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TransferLearningTF). Tenga en cuenta que, de forma predeterminada, la configuración del proyecto de .NET de este tutorial tiene como destino .NET Core 2.2.
 
 ## <a name="what-is-transfer-learning"></a>¿Qué es el aprendizaje de transferencia?
 
@@ -38,7 +38,7 @@ En este tutorial, usará parte de un modelo de TensorFlow (entrenado para clasif
 ## <a name="prerequisites"></a>Requisitos previos
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o posterior, o bien Visual Studio 2017 versión 15.6 o posterior con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
-* [El archivo ZIP del directorio de recursos del tutorial](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
+* [El archivo ZIP del directorio de recursos del tutorial](https://github.com/dotnet/samples/blob/main/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [El modelo de Machine Learning de InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-right-machine-learning-task"></a>Selección de la tarea de aprendizaje automático adecuada
@@ -133,7 +133,7 @@ Las imágenes de entrenamiento y prueba se encuentran en las carpetas de recurso
 
 ### <a name="download-assets"></a>Descarga de activos
 
-1. Descargue el [archivo ZIP del directorio de recursos del proyecto](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip) y descomprímalo.
+1. Descargue el [archivo ZIP del directorio de recursos del proyecto](https://github.com/dotnet/samples/blob/main/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip) y descomprímalo.
 
 1. Copie el directorio `assets` en el directorio de proyecto *TransferLearningTF*. Este directorio y sus subdirectorios contienen los datos y los archivos auxiliares (excepto los del modelo de inicio, que descargará y agregará en el paso siguiente) que se necesitan en este tutorial.
 
@@ -370,7 +370,7 @@ Una canalización del modelo de ML.NET es una cadena de estimadores. Tenga en cu
 
 ¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para la clasificación de imágenes al aplicar el aprendizaje de transferencia a un modelo de `TensorFlow` en ML.NET.
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF).
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TransferLearningTF).
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]

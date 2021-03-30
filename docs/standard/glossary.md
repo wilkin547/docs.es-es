@@ -2,12 +2,12 @@
 title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 11/16/2020
-ms.openlocfilehash: 77ed506fb1c5bd4018b5fe0c14cc0bf37cb08113
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 009ab0266a4479dfd8a37cb3261ca6fae7c78b8e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438182"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873190"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -92,7 +92,7 @@ Vea [CLR](#clr).
 
 A diferencia de [CLR](#clr), CoreRT no es una máquina virtual, lo que significa que no incluye las funciones para generar y ejecutar código sobre la marcha porque no incluye un compilador [JIT](#jit). En cambio, incluye [GC](#gc), reflexión y capacidad de identificación del tipo en tiempo de ejecución (RTTI). Con todo, su sistema de tipos está diseñado para que no sean necesarios los metadatos para la reflexión. No requerir los metadatos permite tener una cadena de herramientas de [AOT](#aot) que puede vincular metadatos superfluos y (más importante) identificar código que no usa la aplicación. CoreRT está en desarrollo.
 
-Consulte [Introducción a .NET Native u CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
+Consulte [Introducción a .NET Native u CoreRT](https://github.com/dotnet/corert/blob/main/Documentation/intro-to-corert.md).
 
 ## <a name="cross-platform"></a>multiplataforma
 
@@ -219,7 +219,7 @@ La compilación se produce en el equipo del desarrollador, de forma similar a c�
 
 UWP fue el primer marco de trabajo de la aplicación compatible con .NET Native. Ahora, se admite la compilación de aplicaciones de consola nativas para Windows, macOS y Linux.
 
-Vea [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (Introducción a .NET Native y CoreRT).
+Vea [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/main/Documentation/intro-to-corert.md) (Introducción a .NET Native y CoreRT).
 
 ## <a name="net-sdk"></a>.NET SDK
 

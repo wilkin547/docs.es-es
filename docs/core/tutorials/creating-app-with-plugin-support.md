@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: aef91231bd4a32937d6e3cd2cb7204777c6efe96
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187904"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873385"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -272,7 +272,7 @@ Casi todos los complementos son más complejos que un simple ejemplo "Hola mundo
 
 ## <a name="other-examples-in-the-sample"></a>Otros ejemplos en la muestra
 
-Puede encontrar el código fuente completo para este tutorial en el [repositorio dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). El ejemplo completo incluye algunos otros ejemplos de comportamiento `AssemblyDependencyResolver`. Por ejemplo, el objeto `AssemblyDependencyResolver` también puede resolver las bibliotecas nativas, así como los ensamblados satélite localizados en paquetes NuGet. `UVPlugin` y `FrenchPlugin` en el repositorio de ejemplos demuestran estos escenarios.
+Puede encontrar el código fuente completo para este tutorial en el [repositorio dotnet/samples](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin). El ejemplo completo incluye algunos otros ejemplos de comportamiento `AssemblyDependencyResolver`. Por ejemplo, el objeto `AssemblyDependencyResolver` también puede resolver las bibliotecas nativas, así como los ensamblados satélite localizados en paquetes NuGet. `UVPlugin` y `FrenchPlugin` en el repositorio de ejemplos demuestran estos escenarios.
 
 ## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>Referencia a una interfaz de complemento desde un paquete NuGet
 

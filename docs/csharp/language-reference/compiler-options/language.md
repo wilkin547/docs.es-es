@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DefineConstants compiler option [C#]
 - LangVersion compiler option [C#]
 - Nullable compiler option [C#]
-ms.openlocfilehash: 7d1d00a52bd2ca1608d4059d7d217e763defa7b9
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: fe3b7b8c06aa86e406757feb7635a5e9ca1032e9
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482480"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637031"
 ---
 # <a name="c-compiler-options-for-language-feature-rules"></a>Opciones del compilador de C# para las reglas de características del lenguaje
 
@@ -55,7 +55,7 @@ La opción **DefineConstants** define símbolos en todos los archivos de código
 <DefineConstants>name;name2</DefineConstants>
 ```
 
-Esta opción especifica los nombres de uno o más símbolos que quiera definir. La opción **DefineConstants** tiene el mismo efecto que la directiva del preprocesador [#define](../preprocessor-directives/preprocessor-define.md), salvo que la opción del compilador está en vigor para todos los archivos del proyecto. Un símbolo permanece definido en un archivo de origen hasta que una directiva [#undef](../preprocessor-directives/preprocessor-undef.md) en el archivo de origen quita la definición. Cuando usa la opción `-define`, una directiva `#undef` en un archivo no tiene ningún efecto en otros archivos de código fuente del proyecto. Los símbolos creados por esta opción se pueden usar con [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md) y [#endif](../preprocessor-directives/preprocessor-endif.md) para compilar los archivos de origen condicionalmente. El propio compilador de C# no define ningún símbolo o macro que puede usar en su código fuente; todas las definiciones de símbolo deben definirse por el usuario.
+Esta opción especifica los nombres de uno o más símbolos que quiera definir. La opción **DefineConstants** tiene el mismo efecto que la directiva del preprocesador [#define](../preprocessor-directives.md#defining-symbols), salvo que la opción del compilador está en vigor para todos los archivos del proyecto. Un símbolo permanece definido en un archivo de origen hasta que una directiva [#undef](../preprocessor-directives.md#defining-symbols) en el archivo de origen quita la definición. Cuando usa la opción `-define`, una directiva `#undef` en un archivo no tiene ningún efecto en otros archivos de código fuente del proyecto. Los símbolos creados por esta opción se pueden usar con [#if](../preprocessor-directives.md#conditional-compilation), [#else](../preprocessor-directives.md), [#elif](../preprocessor-directives.md#conditional-compilation) y [#endif](../preprocessor-directives.md#conditional-compilation) para compilar los archivos de origen condicionalmente. El propio compilador de C# no define ningún símbolo o macro que puede usar en su código fuente; todas las definiciones de símbolo deben definirse por el usuario.
 
 > [!NOTE]
 > El valor de la directiva `#define` de C# no permite que se le proporcione un valor a un símbolo, como sucede en lenguajes como C++. Por ejemplo, `#define` no puede usarse para crear una macro o para definir una constante. Si necesita definir una constante, use una variable `enum`. Si quiere crear una macro de estilo de C++, considere alternativas como genéricos. Como las macros son notoriamente propensas a errores, C# deshabilita su uso pero proporciona alternativas más seguras.
@@ -88,7 +88,7 @@ Para obtener información sobre cómo establecer esta opción del compilador med
 
 ### <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-| Versión          | Link                       | Descripción                                                             |
+| Versión          | Vínculo                       | Descripción                                                             |
 |------------------|----------------------------|-------------------------------------------------------------------------|
 | C# 7.0 y posterior |                            | No está disponible actualmente                                                 |
 | C# 6.0           | [Vínculo][csharp-6]           | Versión 6 de la especificación del lenguaje C#, borrador no oficial: .NET Foundation |
@@ -152,4 +152,4 @@ La invocación de métodos anotados con los siguientes atributos también afecta
 > 1. Inicie el nombre de archivo con *TemporaryGeneratedFile_*
 > 1. Finalice el nombre de archivo con *.designer.cs*, *.generated.cs*, *.g.cs* o *.g.i.cs*.
 >
-> Los generadores pueden optar por usar la directiva de preprocesador [`#nullable`](../preprocessor-directives/preprocessor-nullable.md).
+> Los generadores pueden optar por usar la directiva de preprocesador [`#nullable`](../preprocessor-directives.md#nullable-context).

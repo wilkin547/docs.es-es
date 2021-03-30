@@ -3,12 +3,12 @@ title: Consultas basadas en el estado del entorno de ejecución (C#)
 description: Se describen diversas técnicas que el código puede usar para realizar consultas de forma dinámica según el estado del entorno de ejecución, mediante la modificación de las llamadas a métodos de LINQ o los árboles de expresión pasados a esos métodos.
 ms.date: 02/11/2021
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 5e015bbc69b61b783abd7eba9cfcf13c29d5c3be
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 1a3bbe8c9ba6752c541d69502b7c4ac020fd9708
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100581944"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876726"
 ---
 # <a name="querying-based-on-runtime-state-c"></a>Consultas basadas en el estado del entorno de ejecución (C#)
 
@@ -48,7 +48,7 @@ El árbol de expresión interno (y, por tanto, la consulta) no se ha modificado;
 
 ## <a name="call-additional-linq-methods"></a>Llamada a métodos de LINQ adicionales
 
-Por lo general, los [métodos de LINQ integrados](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs) en <xref:System.Linq.Queryable> realizan dos pasos:
+Por lo general, los [métodos de LINQ integrados](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs) en <xref:System.Linq.Queryable> realizan dos pasos:
 
 * Encapsulan el árbol de expresión actual en un elemento <xref:System.Linq.Expressions.MethodCallExpression> que representa la llamada de método.
 * Vuelven a pasar el árbol de expresión encapsulado al proveedor, ya sea para devolver un valor mediante el método <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> del proveedor, o bien para devolver un objeto de consulta traducido mediante el método <xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType>.

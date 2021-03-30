@@ -3,12 +3,12 @@ title: 'Depuración del uso elevado de CPU: .NET Core'
 description: Tutorial que le guiará a lo largo del proceso de depuración del uso elevado de CPU en .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 3ba07f0bb40f8128c091fa427b957d824c07bcd5
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: ed22da3d53dfd1197de1f9b3c11ef31389cad690
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105367"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872800"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>Depuración del uso elevado de CPU en .NET Core
 
@@ -171,7 +171,7 @@ Abra `nettrace` con [`PerfView`](https://github.com/microsoft/perfview/blob/mast
 - [dotnet-trace](dotnet-trace.md) para mostrar procesos
 - [dotnet-counters](dotnet-counters.md) para comprobar el uso de memoria administrada
 - [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria
-- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/main/documentation/tutorial)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 06746347910f62a428d4897693a88b5efe78e86f
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e666674f1d52ccb0fe1c9ba2f4c8d743549d5086
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258974"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881147"
 ---
 # <a name="additional-resources"></a>Recursos adicionales
 
@@ -33,13 +33,13 @@ En los siguientes sitios web encontrará orientación y respuestas a algunos pro
 |Resolución|Descripción|
 |----------|----------------|
 |[Ejemplos de documentación de Visual Basic](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic)|Contiene los ejemplos que se usan en la documentación de Visual Basic y de .NET.|
-|[Explorador de ejemplos](https://docs.microsoft.com/samples/browse/?languages=vb)|Contiene ejemplos de código escritos en Visual Basic.|
+|[Explorador de ejemplos](/samples/browse/?languages=vb)|Contiene ejemplos de código escritos en Visual Basic.|
 
 ### <a name="forums"></a>Foros
 
 |Resolución|Descripción|
 |----------|----------------|
-|[Preguntas y respuestas de Microsoft](https://docs.microsoft.com/answers/topics/dotnet-visual-basic.html)|Preguntas técnicas sobre el lenguaje de programación Visual Basic|
+|[Preguntas y respuestas de Microsoft](/answers/topics/dotnet-visual-basic.html)|Preguntas técnicas sobre el lenguaje de programación Visual Basic|
 
 ### <a name="videos-and-webcasts"></a>Vídeos y webcasts
 

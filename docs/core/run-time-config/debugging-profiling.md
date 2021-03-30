@@ -3,12 +3,12 @@ title: Depuración de la configuración de la generación de perfiles
 description: Obtenga información sobre los valores del entorno de ejecución que configuran la depuración y la generación de perfiles para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 5efd0f776da4b7ce6ff7f3bdfda24feec6e00f79
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: dd96862582f13adc19df7572b1865800b18d9954
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761998"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875023"
 ---
 # <a name="run-time-configuration-options-for-debugging-and-profiling"></a>Opciones de configuración del ejecución para la depuración y la generación de perfiles
 
@@ -45,7 +45,7 @@ ms.locfileid: "83761998"
 
 - Especifica la ruta de acceso a la biblioteca de vínculos dinámicos del generador de perfiles que se va a cargar en el proceso que se ejecuta actualmente (proceso de 32 bits o de 64 bits).
 - Si se establece más de una variable, las variables concretas de valor de bits tienen prioridad. Especifican el valor de bits del generador de perfiles que se va a cargar.
-- Para obtener más información, vea [Búsqueda de la biblioteca del generador de perfiles](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/profiling/Profiler%20Loading.md).
+- Para obtener más información, vea [Búsqueda de la biblioteca del generador de perfiles](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/profiling/Profiler%20Loading.md).
 
 | | Nombre de valor | Valores |
 | - | - | - |

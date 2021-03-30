@@ -3,12 +3,12 @@ title: Introducción al análisis de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: 8b9dd909a83877755dc1ebafd58aae892e460b93
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 7fea6145ed927ed197295b08ab35dbf177920061
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756161"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872514"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introducción al análisis de sintaxis
 
@@ -70,7 +70,7 @@ Puede examinar los nodos de un árbol de sintaxis de dos maneras. Puede recorrer
 
 ### <a name="manual-traversal"></a>Recorrido manual
 
-Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
+Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Los tipos de árbol de sintaxis usan la herencia para describir los diferentes elementos de sintaxis que son válidos en diferentes ubicaciones del programa. A menudo, usar estas API significa convertir propiedades o miembros de colección en tipos derivados concretos. En los ejemplos siguientes, la asignación y las conversiones son instrucciones independientes, con variables con tipo explícito. Puede leer el código para ver los tipos de valor devuelto de la API y el tipo de motor de ejecución de los objetos devueltos. En la práctica, es más habitual usar variables con tipo implícito y basarse en nombres de API para describir el tipo de los objetos que se examinan.
@@ -160,7 +160,7 @@ En este ejemplo, se implementa un <xref:Microsoft.CodeAnalysis.CSharp.CSharpSynt
 
 Cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C# y asígnele el nombre “**SyntaxWalker**”.
 
-Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). El ejemplo de GitHub contiene los dos proyectos que se describen en este tutorial.
+Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SyntaxQuickStart). El ejemplo de GitHub contiene los dos proyectos que se describen en este tutorial.
 
 Como en el ejemplo anterior, puede definir una constante de cadena para que contenga el texto del programa que se va a analizar:
 

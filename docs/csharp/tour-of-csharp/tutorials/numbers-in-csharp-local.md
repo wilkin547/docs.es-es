@@ -2,12 +2,12 @@
 title: 'Números en C#: tutorial de introducción a C#'
 description: Aprenda sobre C# mediante la exploración de tipos numéricos, sus usos, propiedades y métodos.
 ms.date: 02/05/2021
-ms.openlocfilehash: 5576827cc92842a2cbd5374a691d9a5c560aec25
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: d6546fc8ac2609066a4f9b829749a4091fce7ce6
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626661"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881112"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números enteros y de punto flotante en C\#
 
@@ -308,7 +308,7 @@ Observe que la expresión matemática con el tipo decimal tiene más dígitos a 
 
 Ahora que ya conoce los diferentes tipos numéricos, escriba código para calcular el área de un círculo cuyo radio sea de 2,50 centímetros. Recuerde que el área de un circulo es igual al valor de su radio elevado al cuadrado multiplicado por Pi. Sugerencia: .NET contiene una constante de Pi, <xref:System.Math.PI?displayProperty=nameWithType>, que puede usar para ese valor. <xref:System.Math.PI?displayProperty=nameWithType>, al igual que todas las constantes declaradas en el espacio de nombres `System.Math`, es un valor `double`. Por ese motivo, debe usar `double` en lugar de valores `decimal` para este desafío.
 
-Debe obtener una respuesta entre 19 y 20. Puede comprobar la respuesta si [consulta el ejemplo de código terminado en GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
+Debe obtener una respuesta entre 19 y 20. Puede comprobar la respuesta si [consulta el ejemplo de código terminado en GitHub](https://github.com/dotnet/samples/tree/main/csharp/numbers-quickstart/Program.cs#L9-L11).
 
 Si lo desea, pruebe con otras fórmulas.
 

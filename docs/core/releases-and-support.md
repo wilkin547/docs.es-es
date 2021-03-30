@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 65c13239f32a0166681d7a731de84a973a627f29
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 7b207811e0dab8c613b0e43a30301a0fb07f632a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104189"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875088"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>Versiones y compatibilidad con .NET Core y .NET 5.
 
@@ -105,7 +105,7 @@ La finalización del soporte técnico se refiere a la fecha a partir de la cual 
 
 Cuando una versión de sistema operativo deja de tener soporte técnico, se deja de probar esa versión y de proporcionar soporte técnico para ella. Los usuarios deben avanzar a una versión del sistema operativo con soporte técnico para obtener asistencia.
 
-Para obtener más información, consulte la [directiva de ciclo de vida del sistema operativo de .NET Core](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
+Para obtener más información, consulte la [directiva de ciclo de vida del sistema operativo de .NET Core](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md).
 
 ## <a name="get-support"></a>Obtener soporte técnico
 

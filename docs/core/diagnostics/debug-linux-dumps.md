@@ -2,12 +2,12 @@
 title: Depuración de volcados de memoria de Linux
 description: En este artículo, aprenderá a recopilar y analizar volcados de memoria desde entornos de Linux.
 ms.date: 08/27/2020
-ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: 42038c685c3ad0043c91df140b0133a9ddecec3b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753606"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874280"
 ---
 # <a name="debug-linux-dumps"></a>Depuración de volcados de memoria de Linux
 
@@ -26,7 +26,7 @@ La herramienta [`dotnet-dump`](dotnet-dump.md) es fácil de usar y no depende de
 
 ### <a name="core-dumps-with-createdump"></a>Volcados de núcleo con `createdump`
 
-Como alternativa a `dotnet-dump`, que crea volcados solo de información administrada, [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) es la herramienta recomendada para crear volcados de núcleo en Linux que contienen tanto información nativa como administrada. También se pueden usar otras herramientas como gdb o gcore para crear volcados de núcleo, pero puede omitir el estado necesario para la depuración administrada, lo que puede dar lugar a nombres de función o de tipo desconocidos durante el análisis.
+Como alternativa a `dotnet-dump`, que crea volcados solo de información administrada, [`createdump`](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md) es la herramienta recomendada para crear volcados de núcleo en Linux que contienen tanto información nativa como administrada. También se pueden usar otras herramientas como gdb o gcore para crear volcados de núcleo, pero puede omitir el estado necesario para la depuración administrada, lo que puede dar lugar a nombres de función o de tipo desconocidos durante el análisis.
 
 La herramienta `createdump` se instala con el entorno de ejecución de .NET y se puede encontrar junto a libcoreclr.so (normalmente en "/usr/share/dotnet/shared/Microsoft.NETCore.App/[versión]"). Esta herramienta toma un identificador de proceso para recopilar un volcado de su argumento principal, y también puede tomar parámetros opcionales que especifican el tipo de volcado que se va a recopilar (el valor predeterminado es un minivolcado con montón). Las opciones son:
 
@@ -66,7 +66,7 @@ La recopilación de volcados de núcleo requiere la capacidad `SYS_PTRACE` o la 
 
 Los volcados de memoria recopilados con `dotnet-dump` y los volcados de núcleo recopilados con `createdump` se pueden analizar con la herramienta `dotnet-dump` mediante el comando `dotnet-dump analyze`. `dotnet dump` requiere que el entorno que analiza el volcado tenga el mismo sistema operativo y la misma arquitectura que el entorno en el que se capturó el volcado.
 
-Como alternativa, se puede usar [LLDB](https://lldb.llvm.org/) para analizar los volcados de núcleo en Linux, ya que permite el análisis de marcos administrados y nativos. LLDB usa la extensión SOS para depurar el código administrado. La herramienta de la CLI [`dotnet-sos`](dotnet-sos.md) se puede usar para instalar SOS, que tiene [muchos comandos útiles](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) para depurar código administrado. Para poder analizar los volcados de .NET Core, LLDB y SOS requieren los siguientes archivos binarios de .NET Core del entorno en el que se creó el volcado:
+Como alternativa, se puede usar [LLDB](https://lldb.llvm.org/) para analizar los volcados de núcleo en Linux, ya que permite el análisis de marcos administrados y nativos. LLDB usa la extensión SOS para depurar el código administrado. La herramienta de la CLI [`dotnet-sos`](dotnet-sos.md) se puede usar para instalar SOS, que tiene [muchos comandos útiles](https://github.com/dotnet/diagnostics/blob/main/documentation/sos-debugging-extension.md) para depurar código administrado. Para poder analizar los volcados de .NET Core, LLDB y SOS requieren los siguientes archivos binarios de .NET Core del entorno en el que se creó el volcado:
 
 1. libmscordaccore.so
 2. libcoreclr.so
@@ -82,11 +82,11 @@ lldb --core <dump-file> <host-program>
 
 En la línea de comandos anterior, `<dump-file>` es la ruta de acceso del volcado que se va a analizar y `<host-program>` es el programa nativo que inició la aplicación .NET Core. Este suele ser el archivo binario `dotnet`, a menos que la aplicación sea independiente, en cuyo caso es el nombre de la aplicación sin la extensión .dll.
 
-Una vez que se inicia LLDB, puede que sea necesario usar el comando `setsymbolserver` para apuntar a la ubicación de los símbolos correcta (`setsymbolserver -ms` para usar el servidor de símbolos de Microsoft o `setsymbolserver -directory <path>` para especificar una ruta de acceso local). Los símbolos nativos se pueden cargar mediante la ejecución de `loadsymbols`. En este punto, se pueden usar [comandos SOS](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) para analizar el volcado de memoria.
+Una vez que se inicia LLDB, puede que sea necesario usar el comando `setsymbolserver` para apuntar a la ubicación de los símbolos correcta (`setsymbolserver -ms` para usar el servidor de símbolos de Microsoft o `setsymbolserver -directory <path>` para especificar una ruta de acceso local). Los símbolos nativos se pueden cargar mediante la ejecución de `loadsymbols`. En este punto, se pueden usar [comandos SOS](https://github.com/dotnet/diagnostics/blob/main/documentation/sos-debugging-extension.md) para analizar el volcado de memoria.
 
 ## <a name="see-also"></a>Consulte también
 
 - [dotnet-sos](dotnet-sos.md) para obtener más información sobre la instalación de la extensión SOS.
 - [dotnet-symbol](dotnet-symbol.md) para obtener más información sobre la instalación y el uso de la herramienta de descarga de símbolos.
-- [Repositorio de diagnósticos de .NET Core](https://github.com/dotnet/diagnostics/blob/master/documentation/) para obtener más información sobre la depuración, incluidas las preguntas más frecuentes.
-- [Instalación de LLDB](https://github.com/dotnet/diagnostics/blob/master/documentation/sos.md#getting-lldb) para obtener instrucciones sobre la instalación de LLDB en Linux o Mac.
+- [Repositorio de diagnósticos de .NET Core](https://github.com/dotnet/diagnostics/blob/main/documentation/) para obtener más información sobre la depuración, incluidas las preguntas más frecuentes.
+- [Instalación de LLDB](https://github.com/dotnet/diagnostics/blob/main/documentation/sos.md#getting-lldb) para obtener instrucciones sobre la instalación de LLDB en Linux o Mac.

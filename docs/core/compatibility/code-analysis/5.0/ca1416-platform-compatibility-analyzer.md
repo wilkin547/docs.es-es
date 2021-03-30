@@ -2,12 +2,12 @@
 title: 'Cambio importante: CA1416: Compatibilidad de plataformas'
 description: Obtenga información sobre el cambio importante en .NET 5 causado por la habilitación de la regla de análisis de código CA1416.
 ms.date: 09/29/2020
-ms.openlocfilehash: fa03e1f0bfa8438b3b2899aaf7c97f42533c7c02
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: b1d8c9115d5ad0bc97b6ba68cc058de195d01584
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103477550"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874360"
 ---
 # <a name="warning-ca1416-platform-compatibility"></a>Advertencia CA1416: Compatibilidad de plataformas
 
@@ -111,7 +111,7 @@ Si no quiere corregir todos los sitios de llamada, puede elegir una de las sigui
 
 Para la plataforma Windows:
 
-- Todas las API que se enumeran en <https://github.com/dotnet/designs/blob/master/accepted/2020/windows-specific-apis/windows-specific-apis.md>.
+- Todas las API que se enumeran en <https://github.com/dotnet/designs/blob/main/accepted/2020/windows-specific-apis/windows-specific-apis.md>.
 - <xref:System.Security.Cryptography.DSAOpenSsl?displayProperty=fullName>
 - <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl?displayProperty=fullName>
 - <xref:System.Security.Cryptography.ECDsaOpenSsl?displayProperty=fullName>

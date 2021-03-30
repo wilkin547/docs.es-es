@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: c29c3a9f6269a342d1051d6d979a4e3adb42da02
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441081"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875556"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>Escritura y llamada a UDF en entornos interactivos de .NET para Apache Spark
 
@@ -69,8 +69,8 @@ Estos son algunos aspectos importantes que tener en cuenta al implementar las UD
 
     ![Error de las variables de difusión](./media/dotnet-interactive/broadcast-fails.png)
 
-    Como se ha recomendado en las secciones anteriores, la UDF y el objeto al que hace referencia (en este caso la variable de difusión) se definen en la misma celda, pero todavía se ve que el error `SerializationException` se queja de que `Microsoft.Spark.Sql.Session` no se marque como serializable. El motivo es que cuando el compilador intenta serializar el objeto de variable de difusión `bv`, encuentra que al nombre se le anexa el objeto `spark` [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20), que se debe marcar como serializable. Esto se puede mostrar con más facilidad al examinar el ensamblado descompilado de este envío de celda:
+    Como se ha recomendado en las secciones anteriores, la UDF y el objeto al que hace referencia (en este caso la variable de difusión) se definen en la misma celda, pero todavía se ve que el error `SerializationException` se queja de que `Microsoft.Spark.Sql.Session` no se marque como serializable. El motivo es que cuando el compilador intenta serializar el objeto de variable de difusión `bv`, encuentra que al nombre se le anexa el objeto `spark` [`SparkSession`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20), que se debe marcar como serializable. Esto se puede mostrar con más facilidad al examinar el ensamblado descompilado de este envío de celda:
 
     ![Código de ensamblado descompilado](./media/dotnet-interactive/decompiledAssembly.png)
 
-    Si la clase [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) se marca como `[Serializable]`, se puede conseguir que funcione, pero no es una solución ideal, ya que no interesa permitir al usuario serializar un objeto SparkSession, lo que podría dar lugar a un comportamiento extraño e indeseable. Este es un [problema conocido](https://github.com/dotnet/spark/issues/619) y se resolverá en versiones futuras.
+    Si la clase [`SparkSession`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) se marca como `[Serializable]`, se puede conseguir que funcione, pero no es una solución ideal, ya que no interesa permitir al usuario serializar un objeto SparkSession, lo que podría dar lugar a un comportamiento extraño e indeseable. Este es un [problema conocido](https://github.com/dotnet/spark/issues/619) y se resolverá en versiones futuras.

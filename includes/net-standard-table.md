@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 15786e6c659a29c5089eee9c8ac365c55b22f7fb
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: c690f2f1dcdee9d34a2a82435c3562fc7dfae04a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99532116"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879705"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
@@ -18,7 +18,7 @@ ms.locfileid: "99532116"
 | Plataforma universal de Windows | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          | TBD |
 | Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              | TBD |
 
-<sup>1 Las versiones que se muestran de .NET Framework se aplican al SDK de .NET Core 2.0 y versiones posteriores de la herramienta. Las versiones anteriores usaban una asignación diferente para .NET Standard 1.5 y versiones posteriores. Puede [descargar herramientas para .NET Core para Visual Studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) si no se puede actualizar a Visual Studio 2017 ni a una versión posterior.</sup>
+<sup>1 Las versiones que se muestran de .NET Framework se aplican al SDK de .NET Core 2.0 y versiones posteriores de la herramienta. Las versiones anteriores usaban una asignación diferente para .NET Standard 1.5 y versiones posteriores. Puede [descargar herramientas para .NET Core para Visual Studio 2015](https://github.com/dotnet/core/blob/main/release-notes/download-archive.md) si no se puede actualizar a Visual Studio 2017 ni a una versión posterior.</sup>
 
 <sup>2 Las versiones siguientes representan las reglas que usa NuGet para determinar si una determinada biblioteca de .NET Standard es aplicable. Aunque NuGet considera a .NET Framework 4.6.1 compatible con .NET Standard (versiones 1.5 a 2.0) hay varios problemas con el consumo de bibliotecas de .NET Standard que se compilaron para esas versiones desde proyectos de .NET Framework 4.6.1. Para los proyectos de .NET Framework que tengan que usar estas bibliotecas, se recomienda actualizar el proyecto para destinarlo a .NET Framework 4.7.2 o una versión posterior.</sup>
 

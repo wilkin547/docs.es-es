@@ -3,12 +3,12 @@ title: Migración de proyectos de C++/CLI a .NET Core
 description: Obtenga información sobre la migración de proyectos de C++/CLI a .NET Core.
 author: mjrousos
 ms.date: 01/10/2020
-ms.openlocfilehash: eb03f2a5ff42e8279fd3ebd6ee6fb6d955f6798d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1194e1ce03e5b86052d7e2584aa5c15acd01874b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75964864"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873697"
 ---
 # <a name="how-to-port-a-ccli-project-to-net-core"></a>Migración de un proyecto de C++/CLI a .NET Core
 
@@ -69,14 +69,14 @@ También es posible compilar proyectos de C++/CLI sin usar MSBuild. Siga estos p
 2. Haga referencia a los ensamblados de referencia de .NET Core necesarios.
 3. Al vincular, proporcione el directorio de host de la aplicación .NET Core como `LibPath` (de modo que se pueda encontrar *ijwhost.lib*).
 4. Copie *ijwhost.dll* (desde el directorio de host de la aplicación .NET Core) en el directorio de salida del proyecto.
-5. Asegúrese de que exista un archivo [runtimeconfig.json](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) para el primer componente de la aplicación que va a ejecutar el código administrado. Si la aplicación tiene un punto de entrada administrado, se crea un archivo `runtime.config` y se copia automáticamente. Pero si la aplicación tiene un punto de entrada nativo, debe crear un archivo `runtimeconfig.json` para que la primera biblioteca de C++/CLI use el runtime de .NET Core.
+5. Asegúrese de que exista un archivo [runtimeconfig.json](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md) para el primer componente de la aplicación que va a ejecutar el código administrado. Si la aplicación tiene un punto de entrada administrado, se crea un archivo `runtime.config` y se copia automáticamente. Pero si la aplicación tiene un punto de entrada nativo, debe crear un archivo `runtimeconfig.json` para que la primera biblioteca de C++/CLI use el runtime de .NET Core.
 
 ## <a name="known-issues"></a>Problemas conocidos
 
 Hay un par de problemas conocidos que se deben tener en cuentan a la hora de trabajar con proyectos de C++/CLI cuyo destino es .NET Core.
 
 * Una referencia de marco de trabajo de WPF en proyectos de C++/CLI de .NET Core actualmente provoca algunas advertencias superfluas sobre la imposibilidad de importar símbolos. Estas advertencias se pueden pasar por alto sin problemas y se deberían corregir en breve.
-* Si la aplicación tiene un punto de entrada nativo, la biblioteca de C++/CLI que primero ejecuta el código administrado necesita un archivo [runtimeconfig.json](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md). Este archivo de configuración se usa cuando se inicia el runtime de .NET Core. Los proyectos de C++/CLI aún no crean archivos `runtimeconfig.json` automáticamente en tiempo de compilación, por lo que el archivo debe generarse manualmente. Si se llama a una biblioteca de C++/CLI desde un punto de entrada administrado, esta no necesita un archivo `runtimeconfig.json` (puesto que el ensamblado del punto de entrada tiene uno que se usa al iniciar el runtime). A continuación se muestra un archivo `runtimeconfig.json` de ejemplo sencillo. Para obtener más información, vea la [especificación en GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+* Si la aplicación tiene un punto de entrada nativo, la biblioteca de C++/CLI que primero ejecuta el código administrado necesita un archivo [runtimeconfig.json](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md). Este archivo de configuración se usa cuando se inicia el runtime de .NET Core. Los proyectos de C++/CLI aún no crean archivos `runtimeconfig.json` automáticamente en tiempo de compilación, por lo que el archivo debe generarse manualmente. Si se llama a una biblioteca de C++/CLI desde un punto de entrada administrado, esta no necesita un archivo `runtimeconfig.json` (puesto que el ensamblado del punto de entrada tiene uno que se usa al iniciar el runtime). A continuación se muestra un archivo `runtimeconfig.json` de ejemplo sencillo. Para obtener más información, vea la [especificación en GitHub](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md).
 
     ```json
     {

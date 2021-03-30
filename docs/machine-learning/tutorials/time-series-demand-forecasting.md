@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 51041f5a9076ad360a84cc39704aedb50b77d40a
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: aea264036ab4766696699980f464cca3d8229499
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679395"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875595"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Previsión de la demanda de servicio de alquiler de bicicletas con análisis de serie temporal y ML.NET
 
@@ -33,7 +33,7 @@ En este tutorial aprenderá a:
 
 ## <a name="time-series-forecasting-sample-overview"></a>Información general de un ejemplo de previsión de serie temporal
 
-Este ejemplo es una **aplicación de consola de .NET Core de C#** que prevé la demanda de alquileres de bicicletas con un algoritmo de análisis de serie temporal de variable única conocido como "análisis de un solo espectro". El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) en GitHub.
+Este ejemplo es una **aplicación de consola de .NET Core de C#** que prevé la demanda de alquileres de bicicletas con un algoritmo de análisis de serie temporal de variable única conocido como "análisis de un solo espectro". El código de este ejemplo se puede encontrar en el [repositorio dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand) en GitHub.
 
 ## <a name="understand-the-problem"></a>Entender el problema
 
@@ -60,7 +60,7 @@ El algoritmo que se usa en este tutorial es el [análisis de un solo espectro (S
 ### <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 
 1. Cree un directorio denominado *Data*.
-1. Descargue el [archivo de base de datos *DailyDemand.mdf*](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) y guárdelo en el directorio *Data*.
+1. Descargue el [archivo de base de datos *DailyDemand.mdf*](https://github.com/dotnet/machinelearning-samples/raw/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) y guárdelo en el directorio *Data*.
 
 > [!NOTE]
 > Los datos que se usan en este tutorial provienen del conjunto de datos [UCI Bike Sharing Dataset](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi, and Gama, Joao, "Event labeling combining ensemble detectors and background knowledge", Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg, [vínculo web](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
@@ -285,7 +285,7 @@ Aunque los valores pronosticados no predicen el número exacto de alquileres, s�
 
 ¡Enhorabuena! Creó correctamente un modelo de Machine Learning de serie temporal para predecir la demanda de alquileres de bicicletas.
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand).
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

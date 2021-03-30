@@ -3,12 +3,12 @@ title: ¿Qué es el Generador de modelos y cómo funciona?
 description: Cómo usar el Generador de modelos de ML.NET para entrenar un modelo de Machine Learning de forma automática
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: d7566a03f83eb76999d995a39aaae408405db2e1
-ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
+ms.openlocfilehash: 1e40b0da2c17db1c981bc9f796b4e3cb0c87f69e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231425"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877025"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -132,11 +132,11 @@ Si aún no tiene datos propios, pruebe uno de estos conjuntos de datos:
 
 |Escenario|Ejemplo|Datos|Etiqueta|Características|
 |-|-|-|-|-|
-|Clasificación|Predicción de anomalías de ventas|[datos de ventas de productos](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ventas de productos|Mes|
-||Predicción de sentimiento de comentarios de sitios web|[datos de comentarios de sitio web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiqueta (0 si la opinión es negativa, 1 si es positiva)|Comentario, año|
-||Predicción de transacciones de tarjetas de crédito fraudulentas|[datos de tarjetas de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Clase (1 si es fraudulenta, en caso contrario, 0)|Cantidad, V1-V28 (características anónimas)|
-||Predecir el tipo de problema en un repositorio de GitHub|[datos de problemas de GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, descripción|
-|Predicción de valores|Predicción del precio de los taxis|[datos de carreras de taxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Carrera|Tiempo de viaje, distancia|
+|Clasificación|Predicción de anomalías de ventas|[datos de ventas de productos](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ventas de productos|Mes|
+||Predicción de sentimiento de comentarios de sitios web|[datos de comentarios de sitio web](https://raw.githubusercontent.com/dotnet/machinelearning/main/test/data/wikipedia-detox-250-line-data.tsv)|Etiqueta (0 si la opinión es negativa, 1 si es positiva)|Comentario, año|
+||Predicción de transacciones de tarjetas de crédito fraudulentas|[datos de tarjetas de crédito](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Clase (1 si es fraudulenta, en caso contrario, 0)|Cantidad, V1-V28 (características anónimas)|
+||Predecir el tipo de problema en un repositorio de GitHub|[datos de problemas de GitHub](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, descripción|
+|Predicción de valores|Predicción del precio de los taxis|[datos de carreras de taxi](https://github.com/dotnet/machinelearning-samples/blob/main/datasets/taxi-fare-train.csv)|Carrera|Tiempo de viaje, distancia|
 |Clasificación de la imagen|Predicción de la categoría de una flor |[imágenes de flores](http://download.tensorflow.org/example_images/flower_photos.tgz)|El tipo de flor: margarita, diente de león, rosas, girasoles o tulipanes|Los propios datos de la imagen|
 |Recomendación|Predicción de películas que le gusten a alguien|[clasificaciones de películas](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Usuarios, películas|Clasificaciones|
 

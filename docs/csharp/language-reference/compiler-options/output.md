@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PlatformTarget compiler option [C#]
 - ProduceReferenceAssembly compiler option [C#]
 - TargetType compiler option [C#]
-ms.openlocfilehash: 2d8b7edbf970875d7300a394ab75756c1316ac9d
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 9caa290a7c9b5fea1b0f896e9443075b4b470f7b
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482476"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636849"
 ---
 # <a name="c-compiler-options-that-control-compiler-output"></a>Opciones del compilador de C# que controlan la salida del compilador
 
@@ -38,7 +38,7 @@ La opción **DocumentationFile** permite insertar comentarios de documentación 
 El archivo de código fuente que contiene instrucciones principales o de nivel superior se genera primero en el XML. A menudo, querrá usar el archivo .xml generado con [IntelliSense](/visualstudio/ide/using-intellisense). El nombre de archivo *.xml* debe ser el mismo que el nombre del ensamblado. El archivo *.xml* debe estar en el mismo directorio que el ensamblado. Cuando se hace referencia al ensamblado en un proyecto de Visual Studio, también se encuentra el archivo *.xml*. Para obtener más información sobre la generación de comentarios de código, vea [Proporcionar comentarios de código](/visualstudio/ide/reference/generate-xml-documentation-comments). A menos que realice la compilación con [`<TargetType:Module>`](#targettype), `file` contendrá etiquetas `<assembly>` y `</assembly>` que especifican el nombre del archivo que incluye el manifiesto del ensamblado para el archivo de salida. Para obtener ejemplos, vea [Procedimiento para usar las características de la documentación XML](../../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md).
 
 > [!NOTE]
-> La opción **DocumentationFile** se aplica a todos los archivos del proyecto. Para deshabilitar las advertencias relacionadas con los comentarios de documentación para un archivo específico o una sección de código, use [#pragma warning](../preprocessor-directives/preprocessor-pragma-warning.md).
+> La opción **DocumentationFile** se aplica a todos los archivos del proyecto. Para deshabilitar las advertencias relacionadas con los comentarios de documentación para un archivo específico o una sección de código, use [#pragma warning](../preprocessor-directives.md#pragma-warning).
 
 ## <a name="outputassembly"></a>OutputAssembly
 
@@ -144,6 +144,6 @@ El valor **winmdobj** indica al compilador que un módulo intermedio es obligato
 
 ### <a name="appcontainerexe"></a>appcontainerexe
 
-Si usa la opción del compilador **appcontainerexe**, este crea un archivo ejecutable de Windows ( *.exe*) que se debe ejecutar en un contenedor de la aplicación. Esta opción equivale a [-target:winexe](./target-winexe-compiler-option.md), pero está diseñada para las aplicaciones de la Tienda Windows 8.x.
+Si usa la opción del compilador **appcontainerexe**, este crea un archivo ejecutable de Windows ( *.exe*) que se debe ejecutar en un contenedor de la aplicación. Esta opción equivale a [-target:winexe](output.md), pero está diseñada para las aplicaciones de la Tienda Windows 8.x.
 
 Para exigir que la aplicación se ejecute en un contenedor de la aplicación, esta opción establece un bit en el archivo [portable ejecutable](/windows/desktop/Debug/pe-format) (PE). Cuando se establece ese bit, se produce un error si el método CreateProcess intenta iniciar el archivo ejecutable fuera de un contenedor de la aplicación. A menos que use la opción [**OutputAssembly**](#outputassembly), el nombre del archivo de salida toma el del archivo de entrada que contiene el método [`Main`](../../programming-guide/main-and-command-args/index.md).

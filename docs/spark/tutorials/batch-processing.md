@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: c161a0420de9e99478768926e5385dcfda1f9ee7
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 28674c583466bb4873581c9d233b9a508019b045
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688233"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876947"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Tutorial: Procesamiento por lotes con .NET para Apache Spark
 
@@ -32,7 +32,7 @@ Si esta es la primera vez que usa .NET para Apache Spark, consulte el tutorial [
 
 ## <a name="download-the-sample-data"></a>Descargar los datos de ejemplo
 
-[GHTorrent](http://ghtorrent.org/) supervisa todos los eventos públicos de GitHub, como información sobre los proyectos, confirmaciones y monitores, y almacena los eventos y su estructura en bases de datos. Los datos recopilados en distintos períodos de tiempo están disponibles como archivos descargables. Dado que los archivos de volcado de memoria son muy grandes, en esta guía se usa una [versión truncada del archivo de volcado](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/projects_smaller.csv) que se puede descargar desde GitHub.
+[GHTorrent](http://ghtorrent.org/) supervisa todos los eventos públicos de GitHub, como información sobre los proyectos, confirmaciones y monitores, y almacena los eventos y su estructura en bases de datos. Los datos recopilados en distintos períodos de tiempo están disponibles como archivos descargables. Dado que los archivos de volcado de memoria son muy grandes, en esta guía se usa una [versión truncada del archivo de volcado](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/projects_smaller.csv) que se puede descargar desde GitHub.
 
 > [!NOTE]
 > El conjunto de datos de GHTorrent se distribuye con un esquema de licencia dual ([Creative Commons +](https://wiki.creativecommons.org/wiki/CCPlus)). En el caso de usos no comerciales (por ejemplo, para educación, investigación o personales), el conjunto de datos se distribuye con la [licencia CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/).
@@ -163,7 +163,7 @@ El objetivo de esta aplicación es obtener información detallada sobre los dato
 
 ## <a name="get-the-code"></a>Obtención del código
 
-Puede ver la [solución completa](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/GitHubProjects.cs) en GitHub.
+Puede ver la [solución completa](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/GitHubProjects.cs) en GitHub.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

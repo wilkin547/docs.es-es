@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 1c2c966a4ff50a9d2f6951e20d909c5c20c75bfb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: a21b92f910d82cbddd2976adeb292cea5f7bc78b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688246"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876869"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Tutorial: Análisis de sentimiento con .NET para Apache Spark y ML.NET
 
@@ -33,11 +33,11 @@ En este tutorial aprenderá a:
 
 * [Descargue e instale](https://marketplace.visualstudio.com/items?itemName=MLNET.07) la herramienta Model Builder de ML.NET (versión preliminar).
 
-* Descargue los conjuntos de datos de reseñas de Yelp [yelptest. csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) y [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv).
+* Descargue los conjuntos de datos de reseñas de Yelp [yelptest. csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) y [yelptrain.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv).
 
 ## <a name="review-the-data"></a>Revisión de los datos
 
-El conjunto de datos de reseñas de Yelp contiene reseñás en línea de Yelp sobre varios servicios. Abra [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) y observe la estructura de los datos. La primera columna contiene el texto de la reseña, y la segunda, puntuaciones de opinión. Si la puntuación de opinión es 1, la reseña es positiva y, si es 0, la reseña es negativa.
+El conjunto de datos de reseñas de Yelp contiene reseñás en línea de Yelp sobre varios servicios. Abra [yelptrain.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) y observe la estructura de los datos. La primera columna contiene el texto de la reseña, y la segunda, puntuaciones de opinión. Si la puntuación de opinión es 1, la reseña es positiva y, si es 0, la reseña es negativa.
 
 La siguiente tabla contiene datos de ejemplo:
 
@@ -203,7 +203,7 @@ Después, vaya a la carpeta de publicación de la aplicación de consola y ejecu
 
 ## <a name="get-the-code"></a>Obtención del código
 
-Este tutorial es similar al código del ejemplo del [análisis de sentimiento con macrodatos](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment).
+Este tutorial es similar al código del ejemplo del [análisis de sentimiento con macrodatos](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

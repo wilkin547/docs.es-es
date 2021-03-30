@@ -3,12 +3,12 @@ title: Introducción al análisis semántico
 description: En este tutorial, se proporciona una introducción sobre cómo trabajar con el análisis semántico mediante el SDK de .NET Compiler.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: a6dcaeeb86acb5c0e1602f01dc5952ffd9d5e3f5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3119363822328c0e5fc67c2a2a4a917a7d37cfd2
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240516"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872566"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introducción al análisis semántico
 
@@ -32,7 +32,7 @@ Como <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xre
 
 En este tutorial, volverá a examinar el programa "Hola mundo". En esta ocasión, consultará los símbolos del programa para comprender qué tipos representan esos símbolos. Consultará los tipos en un espacio de nombres y aprenderá a buscar los métodos disponibles en un tipo.
 
-Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
+Puede ver el código terminado de este ejemplo en [nuestro repositorio de GitHub](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
 > Los tipos de árbol de sintaxis usan la herencia para describir los diferentes elementos de sintaxis que son válidos en diferentes ubicaciones del programa. A menudo, usar estas API significa convertir propiedades o miembros de colección en tipos derivados concretos. En los ejemplos siguientes, la asignación y las conversiones son instrucciones independientes, con variables con tipo explícito. Puede leer el código para ver los tipos de valor devuelto de la API y el tipo de motor de ejecución de los objetos devueltos. En la práctica, es más habitual usar variables con tipo implícito y basarse en nombres de API para describir el tipo de los objetos que se examinan.
@@ -133,7 +133,7 @@ También puede compilar la consulta completa con la sintaxis de consulta LINQ y,
 
 [!code-csharp[build and display the results of this query.](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
-Compile y ejecute el programa. Debería ver los siguientes resultados:
+Compile y ejecute el programa. Debería ver la siguiente salida:
 
 ```output
 Join

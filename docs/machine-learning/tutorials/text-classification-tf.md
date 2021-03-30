@@ -4,12 +4,12 @@ description: En este tutorial se muestra cómo usar un modelo de TensorFlow prev
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9a2e7f72d59e31cfd7db5b89bfad55bccb063cea
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 0c2cfd46375406726913a83d67c45ff922a1085b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281412"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877012"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Análisis de la opinión de reseñas de películas con un modelo de TensorFlow entrenado previamente en ML.NET
 
@@ -24,7 +24,7 @@ En este tutorial aprenderá a:
 > * Transformación del texto de comentario del sitio web en características adecuadas para el modelo
 > * Uso del modelo para realizar una predicción
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TextClassificationTF).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -47,9 +47,9 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 ### <a name="add-the-tensorflow-model-to-the-project"></a>Adición del modelo TensorFlow al proyecto
 
 > [!NOTE]
-> El modelo de este tutorial procede del repositorio de GitHub, [dotnet/machinelearning-testdata](https://github.com/dotnet/machinelearning-testdata/tree/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model). El modelo tiene el formato TensorFlow SavedModel.
+> El modelo de este tutorial procede del repositorio de GitHub, [dotnet/machinelearning-testdata](https://github.com/dotnet/machinelearning-testdata/tree/main/Microsoft.ML.TensorFlow.TestModels/sentiment_model). El modelo tiene el formato TensorFlow SavedModel.
 
-1. Descargue el [archivo zip sentiment_model](https://github.com/dotnet/samples/blob/master/machine-learning/models/textclassificationtf/sentiment_model.zip?raw=true) y descomprímalo.
+1. Descargue el [archivo zip sentiment_model](https://github.com/dotnet/samples/blob/main/machine-learning/models/textclassificationtf/sentiment_model.zip?raw=true) y descomprímalo.
 
     El archivo zip contiene:
 
@@ -251,7 +251,7 @@ Is sentiment/review positive ? Yes
 
 ¡Enhorabuena! Ha creado correctamente un modelo de Machine Learning para clasificar y predecir la opinión de los mensajes reutilizando un modelo de `TensorFlow` entrenado previamente en ML.NET.
 
-Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
+Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TextClassificationTF).
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]

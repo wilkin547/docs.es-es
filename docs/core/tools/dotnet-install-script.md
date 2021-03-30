@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET y el entorno de ejecución compartido.
 ms.date: 09/22/2020
-ms.openlocfilehash: 51482ca70d08d86e02a493f1da49b056fed8d11c
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 45b5a15bdbaa3f3167dd434e2600e33b69dc9b85
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206692"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875166"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -267,4 +267,4 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
 ## <a name="see-also"></a>Vea también
 
 - [Versiones de .NET](https://github.com/dotnet/core/releases)
-- [Archivo de descarga del SDK y el entorno de ejecución de .NET](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [Archivo de descarga del SDK y el entorno de ejecución de .NET](https://github.com/dotnet/core/blob/main/release-notes/download-archive.md)

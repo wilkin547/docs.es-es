@@ -4,12 +4,12 @@ description: Información general sobre la herramienta Microsoft WCF Web Service
 author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f7b1831a956553dbef26f58f4f257c2f3914ede
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fcb7695c904e80d3fcb5ea68cba7ea198b3905f3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400609"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872982"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Uso de la herramienta WCF Web Service Reference Provider
 
@@ -35,17 +35,17 @@ En este artículo se usa la plantilla de proyecto **Aplicación web de ASP.NET C
 
 1. En el Explorador de soluciones, haga doble clic en el nodo **Servicios conectados** del proyecto (para un proyecto de .NET Core o .NET Standard, esta opción está disponible cuando hace clic con el botón derecho en el nodo **Dependencias** del proyecto en el Explorador de soluciones).
 
-    Aparece la página **Servicios conectados** , como se muestra en esta imagen:
+    Aparece la página **Servicios conectados**, como se muestra en esta imagen:
 
     ![Pestaña Servicios conectados de Visual Studio para .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
-2. En la página **Servicios conectados** , haga clic en **Microsoft WCF Web Service Reference Provider**. Se abrirá el asistente para **Configurar referencia de servicio web de WCF** :
+2. En la página **Servicios conectados**, haga clic en **Microsoft WCF Web Service Reference Provider**. Se abrirá el asistente para **Configurar referencia de servicio web de WCF**:
 
     ![Pestaña Punto de conexión de servicio de Visual Studio para .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
 3. Seleccione un servicio.
 
-    3a. Hay varias opciones de búsqueda de servicios disponibles en el asistente para **Configurar referencia de servicio web de WCF** :
+    3a. Hay varias opciones de búsqueda de servicios disponibles en el asistente para **Configurar referencia de servicio web de WCF**:
 
      * Para buscar servicios definidos en la solución actual, haga clic en el botón **Detectar**.
      * Para buscar servicios hospedados en una dirección específica, escriba la dirección URL del servicio en el cuadro **Dirección** y haga clic en el botón **Ir**.
@@ -80,7 +80,7 @@ Cuando se completan estos procesos, puede crear una instancia del tipo de client
 
 - [Introducción a las aplicaciones de Windows Communication Foundation](../../framework/wcf/getting-started-tutorial.md)
 - [Servicios de Windows Communication Foundation y servicios de datos WCF en Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
-- [Características compatibles con WCF en .NET Core](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
+- [Características compatibles con WCF en .NET Core](https://github.com/dotnet/wcf/blob/main/release-notes/SupportedFeatures-v2.1.0.md)
 
 ## <a name="feedback--questions"></a>Preguntas y comentarios
 
@@ -88,4 +88,4 @@ Si tiene algún comentario sobre el producto, notifíquelo en la [Comunidad de d
 
 ## <a name="release-notes"></a>Notas de la versión
 
-- Eche un vistazo a las [notas de la versión](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) para obtener información actualizada sobre la versión, incluidos los problemas conocidos.
+- Eche un vistazo a las [notas de la versión](https://github.com/dotnet/wcf/blob/main/release-notes/WCF-Web-Service-Reference-notes.md) para obtener información actualizada sobre la versión, incluidos los problemas conocidos.

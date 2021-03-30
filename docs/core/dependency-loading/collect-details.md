@@ -4,12 +4,12 @@ description: Descripción de cómo recopilar información de carga de ensamblado
 author: elinor-fung
 ms.author: elfung
 ms.date: 11/17/2020
-ms.openlocfilehash: b121982995b440ade6d72190f44f9b9d237c8af6
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 505fc827021fe4d34675b2ef5a7fc5746ada1af6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506530"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872943"
 ---
 # <a name="collect-detailed-assembly-loading-information"></a>Recopilación de información detallada de carga de ensamblados
 
@@ -36,7 +36,7 @@ El archivo de seguimiento recopilado se puede ver en Windows mediante la vista E
 
 ## <a name="example-on-windows"></a>Ejemplo (en Windows)
 
-En este ejemplo se usa el [ejemplo de puntos de extensión de la carga de ensamblados](https://github.com/dotnet/samples/tree/master/core/extensions/AssemblyLoading). La aplicación intenta cargar un ensamblado `MyLibrary`; un ensamblado al que no hace referencia la aplicación y, por tanto, requiere el control en un punto de extensión de carga de ensamblados para que se cargue correctamente.
+En este ejemplo se usa el [ejemplo de puntos de extensión de la carga de ensamblados](https://docs.microsoft.com/samples/dotnet/samples/assembly-loading-extension-points/). La aplicación intenta cargar un ensamblado `MyLibrary`; un ensamblado al que no hace referencia la aplicación y, por tanto, requiere el control en un punto de extensión de carga de ensamblados para que se cargue correctamente.
 
 ### <a name="collect-the-trace"></a>Recopilación del seguimiento
 

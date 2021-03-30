@@ -4,12 +4,12 @@ description: Aprenda a implementar una aplicación de .NET para Apache Spark en 
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7a3b0c0d972d5cb6dbc6eea818fe794c5060eae
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0c2b7522e0e6790ded418413ef0f128aae1e0884
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687915"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875348"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight
 
@@ -71,7 +71,7 @@ Antes de empezar, haga las tareas siguientes:
 
 4. Seleccione **Siguiente: Almacenamiento>>** para continuar en la página **Almacenamiento**. En **Almacenamiento**, proporcione los valores siguientes:
 
-    |Propiedad.  |Descripción  |
+    |Propiedad  |Descripción  |
     |---------|---------|
     |Tipo de almacenamiento principal|Use el valor predeterminado **Azure Storage**.|
     |Método de selección|Use el valor predeterminado **Seleccionar de la lista**.|
@@ -130,7 +130,7 @@ Después, use el Explorador de Azure Storage para cargar los cinco archivos sig
 
 3. *install-worker.sh* es un script que permite copiar archivos dependientes de .NET para Apache Spark en los nodos del clúster.
 
-   Cree un archivo con el nombre **install-worker.sh** en el equipo local y pegue el [contenido de install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) que se encuentra en GitHub. Después, cargue *install-worker.sh* en el contenedor de blobs.
+   Cree un archivo con el nombre **install-worker.sh** en el equipo local y pegue el [contenido de install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/main/deployment/install-worker.sh) que se encuentra en GitHub. Después, cargue *install-worker.sh* en el contenedor de blobs.
 
 4. El clúster necesita el archivo *publish.zip* que contiene los archivos publicados de la aplicación. Vaya a la carpeta publicada, **mySparkApp/bin/Release/netcoreapp3.1/ubuntu.16.04-x64**, y busque **publish.zip**. Después, cargue *publish.zip* en el contenedor de blobs.
 

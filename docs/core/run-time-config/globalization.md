@@ -3,12 +3,12 @@ title: Valores de configuración de globalización
 description: Obtenga información sobre los valores del entorno de ejecución que configuran aspectos de globalización de una aplicación de .NET Core, por ejemplo, el procedimiento para analizar las fechas japonesas.
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: fc98e965093c28b75b9b66e4f1c9f147abd4680e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e8179a7e1421a3ff0ceacf07a2843c1b77af6143
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721924"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873554"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Opciones de configuración del entorno de ejecución para globalización
 
@@ -16,7 +16,7 @@ ms.locfileid: "95721924"
 
 - Determina si una aplicación de .NET Core se ejecuta en modo invariable de globalización sin tener acceso a los datos y el comportamiento concretos de la referencia cultural.
 - Si se omite esta configuración, la aplicación se ejecuta con acceso a los datos culturales. Esto es equivalente a establecer el valor en `false`.
-- Para obtener más información, vea [Modo invariable de globalización de .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
+- Para obtener más información, vea [Modo invariable de globalización de .NET Core](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md).
 
 | | Nombre de valor | Valores |
 | - | - | - |

@@ -4,12 +4,12 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 7a519f19f708e1f12af1e9715bad4f38a607f9c3
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: d238054a217a7295594db856d5497982572af377
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970816"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873957"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>Instalación del SDK y el entorno de ejecución de .NET en openSUSE
 
@@ -81,7 +81,7 @@ Al realizar la instalación con un administrador de paquetes, estas bibliotecas 
 
 Si la versión de OpenSSL del entorno de tiempo de ejecución de destino es 1.1 o más reciente, deberá instalar **compat-openssl10**.
 
-Para obtener más información sobre las dependencias, vea [Aplicaciones de Linux independientes](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+Para obtener más información sobre las dependencias, vea [Aplicaciones de Linux independientes](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md).
 
 En el caso de las aplicaciones de .NET en las que se usa el ensamblado *System.Drawing.Common*, también se necesitará la dependencia siguiente:
 

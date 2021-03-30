@@ -3,12 +3,12 @@ title: Traslado de bibliotecas a .NET
 description: Obtenga información sobre cómo portar proyectos de .NET Framework a .NET.
 author: cartermp
 ms.date: 03/04/2021
-ms.openlocfilehash: 5fe7b57e583f74c12649746cd9968fde03b94435
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 19ee6ab15597b3c99b39b47ad55ac72a3f9d681a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604949"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873684"
 ---
 # <a name="port-net-framework-libraries-to-net"></a>Traslado de bibliotecas de .NET Framework a .NET
 
@@ -117,7 +117,7 @@ La mejor forma de asegurarse de que todo funciona correctamente cuando se ha tra
 
 - [xUnit](https://xunit.net/)
   - [Introducción](https://xunit.net/docs/getting-started/netcore/cmdline)
-  - [Herramienta para convertir un proyecto MSTest en xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [Herramienta para convertir un proyecto MSTest en xUnit](https://github.com/dotnet/codeformatter/tree/main/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
   - [Introducción](https://github.com/nunit/docs/wiki/Installation)
   - [Entrada de blog sobre la migración de MSTest a NUnit.](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
