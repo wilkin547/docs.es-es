@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: effcb704056f553b2986ee4a61f73c0dc58af599
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604767"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636771"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -19,6 +19,8 @@ Esta página es una referencia de las propiedades y los elementos de MSBuild que
 > Esta página es un trabajo en curso y no muestra todas las propiedades de MSBuild útiles para el SDK de .NET. Para obtener una lista de las propiedades comunes de MSBuild, vea [Propiedades comunes de MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="framework-properties"></a>Propiedades del marco de trabajo
+
+En esta sección se documentan las siguientes propiedades de MSBuild:
 
 - [TargetFramework](#targetframework)
 - [TargetFrameworks](#targetframeworks)
@@ -65,6 +67,174 @@ Use la propiedad `NetStandardImplicitPackageVersion` si quiere especificar una v
 </PropertyGroup>
 ```
 
+## <a name="assembly-info-generation-properties"></a>Propiedades de generación de información de ensamblados
+
+- [GenerateAssemblyCompanyAttribute](#generateassemblycompanyattribute)
+- [GenerateAssemblyConfigurationAttribute](#generateassemblyconfigurationattribute)
+- [GenerateAssemblyCopyrightAttribute](#generateassemblycopyrightattribute)
+- [GenerateAssemblyDescriptionAttribute](#generateassemblydescriptionattribute)
+- [GenerateAssemblyFileVersionAttribute](#generateassemblyfileversionattribute)
+- [GenerateAssemblyInfo](#generateassemblyinfo)
+- [GenerateAssemblyInformationalVersionAttribute](#generateassemblyinformationalversionattribute)
+- [GenerateAssemblyProductAttribute](#generateassemblyproductattribute)
+- [GenerateAssemblyTitleAttribute](#generateassemblytitleattribute)
+- [GenerateAssemblyVersionAttribute](#generateassemblyversionattribute)
+- [GeneratedAssemblyInfoFile](#generatedassemblyinfofile)
+- [GenerateNeutralResourcesLanguageAttribute](#generateneutralresourceslanguageattribute)
+
+### <a name="generateassemblycompanyattribute"></a>GenerateAssemblyCompanyAttribute
+
+Esta propiedad controla si la propiedad `Company` genera o no el elemento <xref:System.Reflection.AssemblyCompanyAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyconfigurationattribute"></a>GenerateAssemblyConfigurationAttribute
+
+Esta propiedad controla si la propiedad `Configuration` genera o no el elemento <xref:System.Reflection.AssemblyConfigurationAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblycopyrightattribute"></a>GenerateAssemblyCopyrightAttribute
+
+Esta propiedad controla si la propiedad `Copyright` genera o no el elemento <xref:System.Reflection.AssemblyCopyrightAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblydescriptionattribute"></a>GenerateAssemblyDescriptionAttribute
+
+Esta propiedad controla si la propiedad `Description` genera o no el elemento <xref:System.Reflection.AssemblyDescriptionAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyfileversionattribute"></a>GenerateAssemblyFileVersionAttribute
+
+Esta propiedad controla si la propiedad `FileVersion` genera o no el elemento <xref:System.Reflection.AssemblyFileVersionAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
+
+Controla la generación del atributo `AssemblyInfo` del proyecto. El valor predeterminado es `true`. Use `false` para deshabilitar la generación del archivo:
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+</PropertyGroup>
+```
+
+El valor de configuración [GeneratedAssemblyInfoFile](#generatedassemblyinfofile) controla el nombre del archivo generado.
+
+Si el valor `GenerateAssemblyInfo` es `true`, las propiedades del proyecto se transforman en atributos `AssemblyInfo`. En la tabla siguiente se enumeran las propiedades del proyecto que generan los atributos y las que pueden deshabilitar la generación:
+
+| Propiedad               | Atributo                                                      | Propiedad que se va a deshabilitar                                                                               |
+|------------------------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `Company`              | <xref:System.Reflection.AssemblyCompanyAttribute>              | [`GenerateAssemblyCompanyAttribute`](#generateassemblycompanyattribute)                           |
+| `Configuration`        | <xref:System.Reflection.AssemblyConfigurationAttribute>        | [`GenerateAssemblyConfigurationAttribute`](#generateassemblyconfigurationattribute)               |
+| `Copyright`            | <xref:System.Reflection.AssemblyCopyrightAttribute>            | [`GenerateAssemblyCopyrightAttribute`](#generateassemblycopyrightattribute)                       |
+| `Description`          | <xref:System.Reflection.AssemblyDescriptionAttribute>          | [`GenerateAssemblyDescriptionAttribute`](#generateassemblydescriptionattribute)                   |
+| `FileVersion`          | <xref:System.Reflection.AssemblyFileVersionAttribute>          | [`GenerateAssemblyFileVersionAttribute`](#generateassemblyfileversionattribute)                   |
+| `InformationalVersion` | <xref:System.Reflection.AssemblyInformationalVersionAttribute> | [`GenerateAssemblyInformationalVersionAttribute`](#generateassemblyinformationalversionattribute) |
+| `Product`              | <xref:System.Reflection.AssemblyProductAttribute>              | [`GenerateAssemblyProductAttribute`](#generateassemblyproductattribute)                           |
+| `AssemblyTitle`        | <xref:System.Reflection.AssemblyTitleAttribute>                | [`GenerateAssemblyTitleAttribute`](#generateassemblytitleattribute)                               |
+| `AssemblyVersion`      | <xref:System.Reflection.AssemblyVersionAttribute>              | [`GenerateAssemblyVersionAttribute`](#generateassemblyversionattribute)                           |
+| `NeutralLanguage`      | <xref:System.Resources.NeutralResourcesLanguageAttribute>      | [`GenerateNeutralResourcesLanguageAttribute`](#generateneutralresourceslanguageattribute)         |
+
+Notas sobre dichos valores de configuración:
+
+- `AssemblyVersion` y `FileVersion` tienen como valor predeterminado el valor de `$(Version)` sin el sufijo. Por ejemplo, si `$(Version)` es `1.2.3-beta.4`, entonces el valor sería `1.2.3`.
+- El valor predeterminado de `InformationalVersion` es el de `$(Version)`.
+- Si la propiedad `$(SourceRevisionId)` está presente, se anexa a `InformationalVersion`. Puede deshabilitar este comportamiento mediante `IncludeSourceRevisionInInformationalVersion`.
+- Las propiedades `Copyright` y `Description` también se utilizan para metadatos de NuGet.
+- `Configuration`, que tiene `Debug` como valor predeterminado, se comparte con todos los destinos de MSBuild. Se puede establecer con la opción `--configuration` de los comandos `dotnet`; por ejemplo, [dotnet pack](../tools/dotnet-pack.md).
+- Algunas de las propiedades se usan al crear un paquete NuGet. Para obtener más información, consulte [Propiedades del paquete](#package-properties).
+
+#### <a name="migrating-from-net-framework"></a>Migración de .NET Framework
+
+Las plantillas de proyectos de .NET Framework crean un archivo de código con estos atributos de información de ensamblado definidos. Normalmente, el archivo se encuentra en *.\Properties\AssemblyInfo.cs* o *.\Properties\AssemblyInfo.vb*. Los proyectos de estilo SDK generan este archivo para el usuario de acuerdo con la configuración del proyecto. **No es posible tener ambas cosas.** Al portar el código de .NET 5 (y .NET Core 3.1) o versiones posteriores, siga uno de estos pasos:
+
+- Deshabilite la generación del archivo de código temporal que contiene los tributos de información de ensamblado. Para ello, establezca `GenerateAssemblyInfo` en `false`. Esto le permite conservar el archivo *AssemblyInfo*.
+- Migre la configuración del archivo `AssemblyInfo` al archivo del proyecto y elimine el archivo `AssemblyInfo`.
+
+### <a name="generateassemblyinformationalversionattribute"></a>GenerateAssemblyInformationalVersionAttribute
+
+Esta propiedad controla si la propiedad `InformationalVersion` genera o no el elemento <xref:System.Reflection.AssemblyInformationalVersionAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyproductattribute"></a>GenerateAssemblyProductAttribute
+
+Esta propiedad controla si la propiedad `Product` genera o no el elemento <xref:System.Reflection.AssemblyProductAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblytitleattribute"></a>GenerateAssemblyTitleAttribute
+
+Esta propiedad controla si la propiedad `AssemblyTitle` genera o no el elemento <xref:System.Reflection.AssemblyTitleAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyversionattribute"></a>GenerateAssemblyVersionAttribute
+
+Esta propiedad controla si la propiedad `AssemblyVersion` genera o no el elemento <xref:System.Reflection.AssemblyVersionAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile
+
+Esta propiedad define la ruta de acceso relativa o completa del archivo de información de ensamblado generado. Tiene un archivo denominado *[nombre-proyecto].AssemblyInfo.[cs|vb]* en el directorio `$(IntermediateOutputPath)` (normalmente, *obj*) como valor predeterminado.
+
+```xml
+<PropertyGroup>
+  <GeneratedAssemblyInfoFile>assemblyinfo.cs</GeneratedAssemblyInfoFile>
+</PropertyGroup>
+```
+
+### <a name="generateneutralresourceslanguageattribute"></a>GenerateNeutralResourcesLanguageAttribute
+
+Esta propiedad controla si la propiedad `NeutralLanguage` genera o no el elemento <xref:System.Resources.NeutralResourcesLanguageAttribute> del ensamblado. El valor predeterminado es `true`.
+
+```xml
+<PropertyGroup>
+  <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
+</PropertyGroup>
+```
+
 ## <a name="package-properties"></a>Propiedades del paquete
 
 Puede especificar propiedades como `PackageId`, `PackageVersion`, `PackageIcon`, `Title` y `Description` para describir el paquete que se crea a partir del proyecto. Para más información sobre estas y otras propiedades, vea [Destino de pack](/nuget/reference/msbuild-targets#pack-target).
@@ -79,45 +249,18 @@ Puede especificar propiedades como `PackageId`, `PackageVersion`, `PackageIcon`,
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-items-and-metadata"></a>Propiedades, elementos y metadatos de publicación
+## <a name="publish-related-properties"></a>Propiedades relacionadas con la publicación
+
+En esta sección se documentan las siguientes propiedades de MSBuild:
 
 - [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
-- [CopyToPublishDirectory](#copytopublishdirectory)
-- [LinkBase](#linkbase)
 - [PreserveCompilationContext](#preservecompilationcontext)
 - [PreserveCompilationReferences](#preservecompilationreferences)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
-- [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
-
-### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
-
-Los metadatos de `CopyToPublishDirectory` relativos a un elemento de MSBuild controlan cuándo se copia el elemento en el directorio de publicación. Los valores permitidos son `PreserveNewest`, que solo copia el elemento si ha cambiado; `Always`, que siempre lo copia; y `Never`, que nunca lo hace. Desde el punto de vista del rendimiento, `PreserveNewest` es preferible porque permite una compilación incremental.
-
-```xml
-<ItemGroup>
-  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
-</ItemGroup>
-```
-
-### <a name="linkbase"></a>LinkBase
-
-En el caso de un elemento situado fuera del directorio del proyecto y sus subdirectorios, el destino de publicación usa los [metadatos de Link](/visualstudio/msbuild/common-msbuild-item-metadata) del elemento para determinar dónde se debe copiar este. `Link` también determina cómo se muestran los elementos situados fuera del árbol del proyecto en la ventana Explorador de soluciones de Visual Studio.
-
-Si no se especifica `Link` para un elemento situado fuera del cono del proyecto, este tiene `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` como valor predeterminado. `LinkBase` permite especificar una carpeta base razonable para los elementos situados fuera del cono del proyecto. La jerarquía de carpetas de la carpeta base se conserva por medio de `RecursiveDir`. Si no se especifica `LinkBase`, se omite de la ruta a `Link`.
-
-```xml
-<ItemGroup>
-  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
-</ItemGroup>
-```
-
-En la imagen siguiente, se ilustra cómo se muestra globalmente un archivo incluido en el elemento anterior `Include` en el Explorador de soluciones.
-
-:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="Elemento con metadatos de LinkBase en el Explorador de soluciones.":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -203,18 +346,6 @@ La propiedad `RuntimeIdentifiers` permite especificar una lista delimitada por p
 </PropertyGroup>
 ```
 
-### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
-
-El elemento `TrimmerRootAssembly` permite excluir del [*recorte*](../deploying/trim-self-contained.md) un ensamblado. El recorte es el proceso de quitar de una aplicación empaquetada las partes que no se han usado del tiempo de ejecución. En algunos casos, el recorte podría quitar de forma incorrecta las referencias necesarias.
-
-El siguiente código XML excluye del recorte el ensamblado `System.Security`.
-
-```xml
-<ItemGroup>
-  <TrimmerRootAssembly Include="System.Security" />
-</ItemGroup>
-```
-
 ### <a name="useapphost"></a>UseAppHost
 
 La propiedad `UseAppHost` controla si se crea o no un archivo ejecutable nativo para una implementación. Un archivo ejecutable nativo es obligatorio para las implementaciones independientes.
@@ -229,7 +360,9 @@ En .NET Core 3.0 y versiones posteriores, se crea de forma predeterminada un e
 
 Para más información sobre la implementación, consulte [Implementación de aplicaciones .NET](../deploying/index.md).
 
-## <a name="compile-properties"></a>Propiedades de compilación
+## <a name="compilation-related-properties"></a>Propiedades relacionadas con la compilación
+
+En esta sección se documentan las siguientes propiedades de MSBuild:
 
 - [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
@@ -262,6 +395,8 @@ La propiedad `LangVersion` permite especificar una versión concreta del lenguaj
 Para obtener más información, vea [Control de versiones del lenguaje C#](../../csharp/language-reference/configure-language-version.md#override-a-default).
 
 ## <a name="default-item-inclusion-properties"></a>Propiedades de inclusión de elementos predeterminados
+
+En esta sección se documentan las siguientes propiedades de MSBuild:
 
 - [DefaultExcludesInProjectFolder](#defaultexcludesinprojectfolder)
 - [DefaultItemExcludes](#defaultitemexcludes)
@@ -335,6 +470,8 @@ La propiedad `EnableDefaultNoneItems` controla si los elementos `None` (archivos
 ```
 
 ## <a name="code-analysis-properties"></a>Propiedades de análisis de código
+
+En esta sección se documentan las siguientes propiedades de MSBuild:
 
 - [AnalysisLevel](#analysislevel)
 - [AnalysisMode](#analysismode)
@@ -532,13 +669,12 @@ La propiedad `TieredCompilationQuickJitForLoops` configura si el compilador JIT 
 </PropertyGroup>
 ```
 
-## <a name="reference-properties-and-items"></a>Referencia de propiedades y elementos
+## <a name="reference-properties"></a>Propiedades de referencia
+
+En esta sección se documentan las siguientes propiedades de MSBuild:
 
 - [AssetTargetFallback](#assettargetfallback)
 - [DisableImplicitFrameworkReferences](#disableimplicitframeworkreferences)
-- [PackageReference](#packagereference)
-- [ProjectReference](#projectreference)
-- [Referencia](#reference)
 - [Propiedades relacionadas con la restauración](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
@@ -565,74 +701,6 @@ Establezca esta propiedad en `true` para deshabilitar los elementos `FrameworkRe
 </PropertyGroup>
 ```
 
-### <a name="packagereference"></a>PackageReference
-
-El elemento `PackageReference` define una referencia a un paquete NuGet.
-
-El atributo `Include` especifica el identificador del paquete. El atributo `Version` especifica la versión o el intervalo de versiones. Para obtener más información sobre cómo especificar una versión mínima, una máxima, un intervalo o una coincidencia exacta, vea [Intervalos de versiones](/nuget/concepts/package-versioning#version-ranges). También puede agregar [atributos de recurso](#asset-attributes) a una referencia de paquete.
-
-El fragmento del archivo del proyecto del ejemplo siguiente hace referencia al paquete [System.Runtime](https://www.nuget.org/packages/System.Runtime/).
-
-```xml
-<ItemGroup>
-  <PackageReference Include="System.Runtime" Version="4.3.0" />
-</ItemGroup>
-```
-
-Para obtener más información, vea [Referencias de paquete en un archivo del proyecto](/nuget/consume-packages/package-references-in-project-files).
-
-#### <a name="asset-attributes"></a>Atributos de recurso
-
-Los metadatos de `IncludeAssets`, `ExcludeAssets` y `PrivateAssets` se pueden agregar a una referencia de paquete.
-
-| Atributo | Descripción |
-| - | - |
-| `IncludeAssets` | Indica qué recursos pertenecientes al paquete especificado por `<PackageReference>` se deben consumir. De forma predeterminada, se incluyen todos los recursos del paquete. |
-| `ExcludeAssets`| Indica qué recursos pertenecientes al paquete especificado por `<PackageReference>` no se deben consumir. |
-| `PrivateAssets` | Indica qué recursos pertenecientes al paquete especificado por `<PackageReference>` se deben consumir, pero no pasar al proyecto siguiente. Cuando este atributo no está presente, los recursos `Analyzers`, `Build` y `ContentFiles` son privados de forma predeterminada. |
-
-Estos atributos pueden contener uno o varios de los siguientes elementos, separados por punto y coma (`;`), si aparece más de uno:
-
-- `Compile`: el contenido de la carpeta *lib* está disponible para compilación.
-- `Runtime`: el contenido de la carpeta *runtime* está distribuido.
-- `ContentFiles`: se usa el contenido de la carpeta *contentfiles*.
-- `Build`: se usan los archivos props/targets de la carpeta *build*.
-- `Native`: el contenido de recursos nativos se copia en la carpeta *output* en runtime.
-- `Analyzers`: se usan los analizadores.
-
-Como alternativa, el atributo puede contener:
-
-- `None`: no se usa ninguno de los recursos.
-- `All`: se usan todos los recursos.
-
-### <a name="projectreference"></a>ProjectReference
-
-El elemento `ProjectReference` define una referencia a otro proyecto. El proyecto al que se hace referencia se agrega como una dependencia del paquete NuGet, es decir, se trata como `PackageReference`.
-
-El atributo `Include` especifica la ruta de acceso al proyecto. También puede agregar los metadatos `IncludeAssets`, `ExcludeAssets` y `PrivateAssets` a una referencia de proyecto.
-
-El fragmento del archivo de proyecto de este ejemplo hace referencia a un proyecto denominado `Project2`.
-
-```xml
-<ItemGroup>
-  <ProjectReference Include="..\Project2.csproj" />
-</ItemGroup>
-```
-
-### <a name="reference"></a>Referencia
-
-El elemento `Reference` define una referencia a un archivo de ensamblado.
-
-El atributo `Include` especifica el nombre del archivo y los metadatos `HintPath` especifican la ruta de acceso al ensamblado.
-
-```xml
-<ItemGroup>
-  <Reference Include="MyAssembly">
-    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
-  </Reference>
-</ItemGroup>
-```
-
 ### <a name="restore-related-properties"></a>Propiedades relacionadas con la restauración
 
 La restauración de un paquete al que se hace referencia instala todas sus dependencias directas y todas las dependencias de esas dependencias. Puede personalizar la restauración de paquetes especificando propiedades como `RestorePackagesPath` y `RestoreIgnoreFailedSources`. Para más información sobre estas y otras propiedades, vea [Destino de restore](/nuget/reference/msbuild-targets#restore-target).
@@ -643,7 +711,7 @@ La restauración de un paquete al que se hace referencia instala todas sus depen
 </PropertyGroup>
 ```
 
-## <a name="run-properties"></a>Propiedades de Run
+## <a name="run-related-properties"></a>Propiedades relacionadas con la ejecución
 
 Las siguientes propiedades se usan para iniciar una aplicación con el comando [`dotnet run`](../tools/dotnet-run.md):
 
@@ -673,7 +741,9 @@ La propiedad `RunWorkingDirectory` define el directorio de trabajo en el que se 
 </PropertyGroup>
 ```
 
-## <a name="hosting-properties"></a>Propiedades de hospedaje
+## <a name="hosting-related-properties"></a>Propiedades relacionadas con el hospedaje
+
+En esta sección se documentan las siguientes propiedades de MSBuild:
 
 - [EnableComHosting](#enablecomhosting)
 - [EnableDynamicLoading](#enabledynamicloading)
@@ -703,6 +773,86 @@ La propiedad `EnableDynamicLoading` indica que un ensamblado es un componente ca
   <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
+
+## <a name="items"></a>Elementos
+
+Los [elementos de MSBuild](/visualstudio/msbuild/msbuild-items) son entradas al sistema de compilación. Los elementos se especifican de acuerdo con su tipo, que es el nombre del elemento. Por ejemplo, `Compile` y `Reference` son dos [tipos de elementos comunes](/visualstudio/msbuild/common-msbuild-project-items). El SDK de .NET pone a disposición los siguientes tipos de elementos adicionales:
+
+- [PackageReference](#packagereference)
+- [TrimmerRootAssembly](#trimmerrootassembly)
+
+Puede usar cualquiera de los [atributos de elementos](/visualstudio/msbuild/item-element-msbuild#attributes-and-elements) estándar, por ejemplo, `Include` y `Update`, en dichos elementos. Use `Include` para agregar un nuevo elemento; y `Update`, para modificar uno existente. Por ejemplo, `Update` se suele usar para modificar un elemento que el SDK de .NET ha agregado de forma implícita.
+
+### <a name="packagereference"></a>PackageReference
+
+El elemento `PackageReference` define una referencia a un paquete NuGet.
+
+El atributo `Include` especifica el identificador del paquete. El atributo `Version` especifica la versión o el intervalo de versiones. Para obtener más información sobre cómo especificar una versión mínima, una máxima, un intervalo o una coincidencia exacta, vea [Intervalos de versiones](/nuget/concepts/package-versioning#version-ranges).
+
+El fragmento del archivo del proyecto del ejemplo siguiente hace referencia al paquete [System.Runtime](https://www.nuget.org/packages/System.Runtime/).
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+También puede [controlar los recursos de las dependencias](/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets) mediante metadatos como `PrivateAssets`.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Contoso.Utility.UsefulStuff" Version="3.6.0">
+    <PrivateAssets>all</PrivateAssets>
+  </PackageReference>
+</ItemGroup>
+```
+
+Para obtener más información, vea [Referencias de paquete en un archivo del proyecto](/nuget/consume-packages/package-references-in-project-files).
+
+### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
+
+El elemento `TrimmerRootAssembly` permite excluir del [*recorte*](../deploying/trim-self-contained.md) un ensamblado. El recorte es el proceso de quitar de una aplicación empaquetada las partes que no se han usado del tiempo de ejecución. En algunos casos, el recorte podría quitar de forma incorrecta las referencias necesarias.
+
+El siguiente código XML excluye del recorte el ensamblado `System.Security`.
+
+```xml
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
+```
+
+## <a name="item-metadata"></a>Metadatos de elementos
+
+Además de los [atributos de los elementos de MSBuild](/visualstudio/msbuild/item-element-msbuild#attributes-and-elements) estándar, el SDK de .NET pone a disposición las siguientes etiquetas de metadatos de los elementos:
+
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [LinkBase](#linkbase)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+Los metadatos de `CopyToPublishDirectory` relativos a un elemento de MSBuild controlan cuándo se copia el elemento en el directorio de publicación. Los valores permitidos son `PreserveNewest`, que solo copia el elemento si ha cambiado; `Always`, que siempre lo copia; y `Never`, que nunca lo hace. Desde el punto de vista del rendimiento, `PreserveNewest` es preferible porque permite una compilación incremental.
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>LinkBase
+
+En el caso de un elemento situado fuera del directorio del proyecto y sus subdirectorios, el destino de publicación usa los [metadatos de Link](/visualstudio/msbuild/common-msbuild-item-metadata) del elemento para determinar dónde se debe copiar este. `Link` también determina cómo se muestran los elementos situados fuera del árbol del proyecto en la ventana Explorador de soluciones de Visual Studio.
+
+Si no se especifica `Link` para un elemento situado fuera del cono del proyecto, este tiene `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` como valor predeterminado. `LinkBase` permite especificar una carpeta base razonable para los elementos situados fuera del cono del proyecto. La jerarquía de carpetas de la carpeta base se conserva por medio de `RecursiveDir`. Si no se especifica `LinkBase`, se omite de la ruta a `Link`.
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+En la imagen siguiente, se ilustra cómo se muestra globalmente un archivo incluido en el elemento anterior `Include` en el Explorador de soluciones.
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="Elemento con metadatos de LinkBase en el Explorador de soluciones.":::
 
 ## <a name="see-also"></a>Vea también
 
