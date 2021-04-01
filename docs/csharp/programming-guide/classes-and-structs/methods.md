@@ -1,21 +1,23 @@
 ---
 title: 'Métodos: Guía de programación de C#'
 description: En C#, un método es un bloque de código que contiene una serie de instrucciones. Un programa ejecuta las instrucciones mediante la llamada al método y la especificación de argumentos.
-ms.date: 07/20/2015
+ms.date: 03/08/2021
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 879e57cfbce82f1aa77f8810e23d6a61a6ea5bc8
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: d503c394e02f6f384e63de4fcd9cc8d2eec43da0
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899456"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653509"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
 
-Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método. El método `Main` es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa.
+Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método.
+
+El método `Main` es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa. En una aplicación que usa [instrucciones de nivel superior](../main-and-command-args/top-level-statements.md), el compilador genera el método `Main` y contiene todas las instrucciones de nivel superior.
 
 > [!NOTE]
 > En este artículo se analizan los métodos denominados. Para obtener información sobre las funciones anónimas, vea [Funciones anónimas](../statements-expressions-operators/anonymous-functions.md).
@@ -125,7 +127,7 @@ Si marca un método con el modificador [async](../../language-reference/keywords
 > [!NOTE]
 > Un método asincrónico vuelve al autor de la llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.
 
-Un método asincrónico puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, o nulo. El tipo de valor devuelto nulo se utiliza principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto nulo. No se puede esperar un método asincrónico que devuelve nulo, y el autor de llamada de un método con tipo de devolución nulo no puede capturar ninguna excepción producida por este.
+Un método asincrónico normalmente tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, <xref:System.Collections.Generic.IAsyncEnumerable%601> o `void`. El tipo de valor devuelto `void` se usa principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto `void`. No se puede esperar un método asincrónico que devuelve `void` y el autor de llamada a un método que no devuelve ningún valor no puede capturar ninguna excepción producida por este. A partir de la versión C# 7.0, el método asincrónico puede tener [cualquier tipo de valor devuelto similar a una tarea ](../../whats-new/csharp-7.md#generalized-async-return-types).
 
 En el ejemplo siguiente, `DelayAsync` es un método asincrónico con un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tiene una instrucción `return` que devuelve un entero. Por lo tanto, la declaración del método de `DelayAsync` debe tener un tipo de valor devuelto de `Task<int>`. Dado que el tipo de valor devuelto es `Task<int>`, la evaluación de la expresión `await` en `DoSomethingAsync` genera un entero, como se demuestra en la siguiente instrucción: `int result = await delayTask`.
 
@@ -166,7 +168,7 @@ Para obtener más información, consulta [Iteradores](../concepts/iterators.md).
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación de C#](../index.md)
 - [Clases y structs](index.md)
