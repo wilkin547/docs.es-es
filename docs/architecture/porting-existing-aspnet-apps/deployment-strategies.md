@@ -3,12 +3,12 @@ title: Estrategias de implementación
 description: ¿Qué estrategias de implementación pueden usar los equipos al migrar de ASP.NET a ASP.NET Core? ¿Una migración incremental permite la implementación en paralelo de .NET Framework y aplicaciones de .NET Core, lo que proporciona una experiencia de usuario final sin problemas?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 6691a4878205d6422cf8b6153353abefd9764d18
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4c69f049611e4995cdb1905c89afe6973994f20d
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401770"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122942"
 ---
 # <a name="deployment-strategies"></a>Estrategias de implementación
 
@@ -21,7 +21,7 @@ Dado que .NET Core se ejecuta en Linux, encontrará algunas opciones de hospedaj
 * Su organización tiene una infraestructura o experiencia.
 * Los proveedores de hospedaje ofrecen características atractivas o precios para el hospedaje basado en Linux.
 
-.NET Core se abre para la puerta de estas opciones.
+.NET Core abre la puerta a estas opciones.
 
 ## <a name="cloud-native-development"></a>Desarrollo nativo en la nube
 

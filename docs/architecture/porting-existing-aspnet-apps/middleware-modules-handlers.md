@@ -3,12 +3,12 @@ title: Comparar middleware con módulos y controladores
 description: En esta sección se analizan las diferencias en la estructura de las aplicaciones de ASP.NET que usan controladores y módulos con ASP.NET Core aplicaciones que definen el middleware para sus canalizaciones de control de solicitudes.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 040ae49d1307ef4dcc9dbf49b20544e9cd2bc913
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3bc3c30a1ee988550cca907d7289583161337cb9
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401734"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122877"
 ---
 # <a name="compare-middleware-to-modules-and-handlers"></a>Comparar middleware con módulos y controladores
 
@@ -25,6 +25,63 @@ Si la aplicación usa módulos http personalizados o controladores HTTP, necesit
 ASP.NET Core define una canalización de solicitudes en cada método de la aplicación `Configure` . Esta canalización de solicitudes define el modo en que la aplicación controla una solicitud de entrada, con cada método de la canalización que llama al método siguiente hasta el momento en que finaliza un método y la cadena de *middleware* finaliza y devuelve la copia de seguridad de la pila. El middleware puede tener como destino todas las solicitudes, o bien se puede configurar para que solo se asigne a determinadas solicitudes en función de la ruta de acceso solicitada u otros factores. Se puede configurar por completo en el `Configure` método de una aplicación o implementarse en una clase independiente.
 
 El comportamiento en una aplicación ASP.NET MVC que usa módulos HTTP probablemente es más adecuado para el [middleware personalizado](/aspnet/core/fundamentals/middleware/?preserve-view=true&view=aspnetcore-3.1). Los controladores HTTP personalizados se pueden reemplazar por rutas o puntos de conexión personalizados que responden a la misma ruta de acceso.
+
+## <a name="accessing-httpcontext"></a>Acceso a HttpContext
+
+Muchas aplicaciones .NET hacen referencia al contexto de la solicitud actual a través de `HttpContext.Current` . Este acceso estático puede ser una fuente común de problemas con las pruebas y otro uso de código fuera de las solicitudes individuales. Al compilar ASP.NET Core aplicaciones, el acceso al HttpContext actual se debe proporcionar como un parámetro de método en middleware, como se muestra en este ejemplo:
+
+```csharp
+public class Middleware
+{
+    private readonly RequestDelegate _next;
+
+    public Middleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
+    public Task Invoke(HttpContext httpContext)
+    {
+        return _next(httpContext);
+    }
+}
+```
+
+Del mismo modo, ASP.NET Core filtros pasan un argumento de contexto a sus métodos, desde los que se puede tener acceso al HttpContext actual:
+
+```csharp
+public class MyActionFilterAttribute : ActionFilterAttribute
+{
+    public override void OnResultExecuting(ResultExecutingContext context)
+    {
+        var headers = context.HttpContext.Request.Headers;
+        // do something based on a header
+
+        base.OnResultExecuting(context);
+    }
+}
+```
+
+Si tiene componentes o servicios que requieren acceso a HttpContext, en lugar de usar una llamada estática como, `HttpContext.Current` debe usar en su lugar la inserción de dependencias del constructor y la interfaz [IHttpContextAccessor](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor) :
+
+```csharp
+public class MyService
+{
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public MyService(IHttpContextAccessor httpContextAccessor)
+    {
+        _httpContextAccessor = httpContextAccessor;
+    }
+
+    public void DoSomething()
+    {
+        var currentContext = _httpContextAccessor.HttpContext;
+    }
+}
+```
+
+Este enfoque elimina el acoplamiento estático del método al contexto actual y proporciona acceso de forma que se pueda probar.
 
 ## <a name="references"></a>Referencias
 

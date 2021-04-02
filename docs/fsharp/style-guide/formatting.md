@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 22020d69c13fbf8317cbf5e871073a290f8967b7
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 5c5ba972bcd91120b129efb944a028889294f048
+ms.sourcegitcommit: 652f62fc8f3ab6a264681b6eb5211ac7539bd115
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876362"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105964837"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -278,6 +278,58 @@ let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the retu
 let expensiveToComputeBad1:int = 1
 let expensiveToComputeBad2 :int = 2
 let myFunBad (a: decimal) b c:decimal = a + b + c
+```
+
+### <a name="formatting-bindings"></a>Aplicar formato a enlaces
+
+En todos los casos, el lado derecho de un enlace se encuentra en una sola línea, o (si es demasiado largo) se mueve en una línea nueva con una sangría de un ámbito.
+
+Por ejemplo, los siguientes elementos no son compatibles:
+
+```fsharp
+let a = """
+foobar, long string
+"""
+
+type File =
+    member this.SaveAsync(path: string) : Async<unit> = async {
+        // IO operation
+        return ()
+    }
+
+let c = {
+    Name = "Bilbo"
+    Age = 111
+    Region = "The Shire"
+}
+
+let d = while f do
+    printfn "%A" x
+```
+
+Los siguientes son compatibles:
+
+```fsharp
+let a =
+    """
+foobar, long string
+"""
+
+type File =
+    member this.SaveAsync(path: string) : Async<unit> =
+        async {
+            // IO operation
+            return ()
+        }
+
+let c =
+    { Name = "Bilbo"
+      Age = 111
+      Region = "The Shire" }
+
+let d =
+    while f do
+        printfn "%A" x
 ```
 
 ## <a name="formatting-blank-lines"></a>Aplicar formato a líneas en blanco
@@ -856,7 +908,8 @@ lambdaList
 La coincidencia de patrones en funciones definidas por `let` o `let rec` debe tener una sangría de cuatro espacios después de iniciarse `let` , incluso si `function` se usa la palabra clave:
 
 ```fsharp
-let rec sizeLambda acc = function
+let rec sizeLambda acc = 
+    function
     | Abs(x, body) -> sizeLambda (succ acc) body
     | App(lam1, lam2) -> sizeLambda (sizeLambda acc lam1) lam2
     | Var v -> succ acc

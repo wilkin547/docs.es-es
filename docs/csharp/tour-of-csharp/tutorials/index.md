@@ -3,12 +3,12 @@ title: 'Introducción a C#: tutoriales interactivos'
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
 ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: ed869271cd6f4ec13f769f46d41aefae9e1dad8d
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 3a215a3a9bb860601d906f6bdb9d7d1e8fec7e46
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872423"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079471"
 ---
 # <a name="introduction-to-c"></a>Introducción a C\#
 
@@ -23,14 +23,14 @@ Puede probar estos tutoriales en entornos diferentes. Los conceptos que aprender
 
 - [En el explorador, en la plataforma de documentos](hello-world.yml): esta experiencia inserta una ventana de código de C# ejecutable en las páginas de documentos. Deberá escribir y ejecutar el código de C# en el explorador.
 - [En la experiencia de Microsoft Learn](/learn/paths/csharp-first-steps/): esta ruta de aprendizaje contiene varios módulos en los que se exponen los conceptos básicos de C#.
-- [En Jupyter desde Binder](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb): puede experimentar con código de C# en un cuaderno de Jupyter en Binder.
+- [En Jupyter desde Binder](https://mybinder.org/v2/gh/dotnet/try-samples/main?filepath=hello-csharp%2Fhello-world.ipynb): puede experimentar con código de C# en un cuaderno de Jupyter en Binder.
 - [En el equipo local](numbers-in-csharp-local.md): una vez que haya explorado en línea, puede [descargar](https://dotnet.microsoft.com/download) el SDK de .NET Core y compilar programas en su equipo.
 
 Todos los tutoriales de introducción posteriores a la lección Hola mundo se encuentran disponibles mediante la experiencia de explorador en línea o [en el entorno de desarrollo local](local-environment.md). Al final de cada tutorial, decida si desea continuar con la siguiente lección en línea o en su propia máquina. Hay vínculos que le ayudarán a configurar el entorno y continuar con el siguiente tutorial en su máquina.
 
 ## <a name="hello-world"></a>[Hola mundo](hello-world.yml)
 
-En el tutorial [Hola mundo](hello-world.yml), creará el programa de C# más básico. Explorará el tipo `string` y cómo trabajar con texto. También puede usar la ruta de acceso en [Microsoft Learn](/learn/paths/csharp-first-steps/) o en [Jupyter desde Binder](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb).
+En el tutorial [Hola mundo](hello-world.yml), creará el programa de C# más básico. Explorará el tipo `string` y cómo trabajar con texto. También puede usar la ruta de acceso en [Microsoft Learn](/learn/paths/csharp-first-steps/) o en [Jupyter desde Binder](https://mybinder.org/v2/gh/dotnet/try-samples/main?filepath=hello-csharp%2Fhello-world.ipynb).
 
 ## <a name="numbers-in-c"></a>[Números en C#](numbers-in-csharp.yml)
 

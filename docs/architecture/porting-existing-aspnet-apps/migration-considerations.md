@@ -1,16 +1,16 @@
 ---
-title: Consideraciones sobre la migración
+title: Consideraciones de migración
 description: ¿Qué necesita saber un equipo para tomar la decisión correcta sobre si y cómo migrar de ASP.NET MVC a .NET Core?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: efa1efc99cbe46ef289cfd6b53ba83b3bc1b56b1
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: c669dc477469c92dfa3acda8209ba7a1fdea5ed5
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401914"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122864"
 ---
-# <a name="migration-considerations"></a>Consideraciones sobre la migración
+# <a name="migration-considerations"></a>Consideraciones de migración
 
 Los equipos de preguntas más fundamentales deben responder cuando se trata de migrar sus aplicaciones a .NET Core, ¿deben migrar? En algunos casos, la mejor ruta de acceso hacia delante es permanecer en .NET Framework mediante ASP.NET MVC y/o API Web. En este capítulo se tienen en cuenta los motivos por los que el cambio a .NET Core tiene sentido. En el capítulo también se consideran escenarios y contrapuntos para permanecer en .NET Framework.
 
@@ -50,13 +50,15 @@ La mayor razón para permanecer en .NET Framework es cuando una aplicación no e
 
 ### <a name="application-domains"></a>Dominios de aplicación
 
-Los dominios de aplicación aíslan las aplicaciones entre sí. Los AppDomains requieren compatibilidad en tiempo de ejecución y pueden ser costosos. No se admite la creación de dominios de aplicación adicionales y no hay planes para agregar esta funcionalidad a .NET Core en el futuro. En el caso del aislamiento del código, use contenedores o procesos independientes como alternativa.
+Los dominios de aplicación aíslan las aplicaciones entre sí. Los AppDomains requieren compatibilidad en tiempo de ejecución y pueden ser costosos. No se admite la creación de dominios de aplicación adicionales y no hay planes para agregar esta funcionalidad a .NET Core en el futuro. En el caso del aislamiento del código, use contenedores o procesos independientes como alternativa. Algunos clientes usan AppDomains como forma de descargar ensamblados. En .NET Core [AssemblyLoadContext](https://docs.microsoft.com/dotnet/standard/assembly/unloadability) proporciona una manera alternativa de descargar los ensamblados.
 
 ### <a name="wcf"></a>WCF
 
 WCF de servidor no se admite en .NET Core. .NET Core es compatible con clientes de WCF, pero no con hosts de WCF. Las aplicaciones que requieren esta funcionalidad deberán actualizarse a una tecnología de comunicación diferente (como gRPC o REST) como parte de una migración.
 
 Hay un [Puerto de cliente de WCF disponible en .net Foundation](../../core/dotnet-five.md#windows-communication-foundation). Es totalmente de código abierto, multiplataforma y es compatible con Microsoft. También hay un [proyecto de CoreWCF](https://github.com/CoreWCF/CoreWCF) compatible con la comunidad que *no* es compatible oficialmente con Microsoft.
+
+Para obtener más información sobre cómo migrar de WCF a gRPC, consulte el libro electrónico [de gRPC para desarrolladores de WCF](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/) .
 
 ### <a name="remoting"></a>Comunicación remota
 

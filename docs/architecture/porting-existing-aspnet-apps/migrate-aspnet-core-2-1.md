@@ -3,16 +3,16 @@ title: Migración a ASP.NET Core 2.1
 description: Como la última versión de .NET Core para admitir .NET Framework destino en tiempo de ejecución, ¿la migración a .NET Core 2,1 tiene sentido como paso intermedio en algunos planes de migración de aplicaciones?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 0c478ae194c6d9118bfbca73f8933d7623246e2c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: e4db85405edc7e7f51ab6f8b422451cf7acc065e
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401731"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122851"
 ---
 # <a name="migrate-to-aspnet-core-21"></a>Migración a ASP.NET Core 2.1
 
-ASP.NET Core 2,1 es una versión interesante porque es la única versión de .NET Core compatible actualmente para admitir los tiempos de ejecución de .NET Core y .NET Framework. Por lo tanto, puede ofrecer una ruta de actualización más sencilla para algunas aplicaciones en comparación con la actualización de todas las partes de la aplicación a .NET Core a la vez. Como versión de LTS, la compatibilidad con .NET Core 2,1 continuará hasta agosto de 2021. La compatibilidad con ASP.NET Core 2,1 que se ejecutan en .NET Framework continuará siempre que se admita su .NET Framework subyacente.
+ASP.NET Core 2,1 es una versión interesante porque es la única versión de ASP.NET Core compatible actualmente para admitir los tiempos de ejecución de .NET Core y .NET Framework. Por lo tanto, puede ofrecer una ruta de actualización más sencilla para algunas aplicaciones en comparación con la actualización de todas las partes de la aplicación a .NET Core a la vez. Como versión de LTS, la compatibilidad con .NET Core 2,1 continuará hasta agosto de 2021. La compatibilidad con ASP.NET Core 2,1 que se ejecutan en .NET Framework continuará siempre que se admita su .NET Framework subyacente.
 
 ## <a name="should-apps-run-on-net-framework-with-aspnet-core-21"></a>¿Las aplicaciones deben ejecutarse en .NET Framework con ASP.NET Core 2,1
 

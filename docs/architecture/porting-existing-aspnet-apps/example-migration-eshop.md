@@ -3,12 +3,12 @@ title: Ejemplo de migración de eShop a ASP.NET Core
 description: Un tutorial de migración de una aplicación de ASP.NET MVC existente a ASP.NET Core, mediante una aplicación de la tienda en línea de ejemplo como referencia.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 498eb3b11c44381ff6d261b37caed15a2698b166
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 119ba64134813fa17848cf9f5fe02cb1a14f8a5d
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605261"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122981"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>Ejemplo de migración de eShop a ASP.NET Core
 
@@ -58,7 +58,7 @@ La mayoría de los tipos incompatibles hacen referencia a `Controller` y varios 
 
 ## <a name="update-project-files-and-nuget-reference-syntax"></a>Actualizar archivos de proyecto y sintaxis de referencia de NuGet
 
-A continuación, migre de la estructura del archivo *. csproj* anterior a la estructura más reciente y más sencilla introducida con .net Core. Al hacerlo, también migrará de mediante un archivo *packages.config* para que las referencias de NuGet usen `<PackageReference>` elementos del archivo de proyecto.
+A continuación, migre de la estructura del archivo *. csproj* anterior a la estructura más reciente y más sencilla introducida con .net Core. Al hacerlo, también migrará de mediante un archivo *packages.config* para que las referencias de NuGet usen `<PackageReference>` elementos del archivo de proyecto. Los archivos de proyecto de estilo antiguo también pueden usar `<PackageReference>` elementos, por lo que normalmente tiene sentido migrar primero todas las referencias de paquetes NuGet a este formato, antes de actualizar al nuevo formato de archivo de proyecto.
 
 El archivo *eShopLegacyMVC. csproj* del proyecto original tiene 418 líneas de longitud. En la figura 4-6 se muestra un ejemplo del archivo de proyecto. Para ofrecer una idea de su tamaño y complejidad generales, el lado derecho de la imagen contiene una vista en miniatura del archivo completo.
 
@@ -74,7 +74,7 @@ Además del archivo de proyecto de C#, las dependencias de NuGet se almacenan en
 
 **Figura 4-7.** El archivo de *packages.config* .
 
-Después de actualizar al nuevo formato de archivo *. csproj* , puede migrar *packages.config* en proyectos de biblioteca de clases con Visual Studio. No obstante, esta funcionalidad no funciona con proyectos de ASP.NET. [Obtenga más información sobre cómo migrar *packages.config* a `<PackageReference>` en Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference). Si tiene un gran número de proyectos que migrar, [esta herramienta de la comunidad puede servir de ayuda](https://github.com/MarkKharitonov/NuGetPCToPRMigrator).
+Puede migrar *packages.config* en proyectos de biblioteca de clases con Visual Studio. No obstante, esta funcionalidad no funciona con proyectos de ASP.NET. [Obtenga más información sobre cómo migrar *packages.config* a `<PackageReference>` en Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference). Si tiene un gran número de proyectos que migrar, [esta herramienta de la comunidad puede servir de ayuda](https://github.com/MarkKharitonov/NuGetPCToPRMigrator). Si usa una herramienta para migrar el archivo de proyecto al nuevo formato, debe hacerlo después de haber terminado de migrar todas las referencias de NuGet para usarlas `<PackageReverence>` .
 
 ## <a name="create-new-aspnet-core-project"></a>Crear nuevo proyecto de ASP.NET Core
 
@@ -135,7 +135,7 @@ Agregue una carpeta *wwwroot* a la raíz del proyecto.
 
 Agregue la versión 2.2.0 del `Microsoft.AspNetCore.StaticFiles` paquete NuGet.
 
-En *Startup.CS*, agregue una llamada a `app.UseStaticFiles()` en el `Configure` método:
+En *Startup. CS*, agregue una llamada a `app.UseStaticFiles()` en el `Configure` método:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -296,7 +296,7 @@ Por último, después del bootstrap `<link>` , agregue `<link>` elementos adicio
 <link rel="stylesheet" href="~/Content/Site.css" />
 ```
 
-Para determinar el orden en el que `<link>` deben aparecer los elementos, mire el HTML representado de la aplicación original. Como alternativa, revise *BundleConfig.CS*, que para el ejemplo de *eShop* incluye este código que indica la secuencia adecuada:
+Para determinar el orden en el que `<link>` deben aparecer los elementos, mire el HTML representado de la aplicación original. Como alternativa, revise *BundleConfig. CS*, que para el ejemplo de *eShop* incluye este código que indica la secuencia adecuada:
 
 ```csharp
 bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -312,20 +312,13 @@ Al volver a compilar, se revela un error más al cargar la validación de jQuery
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" integrity="sha512-O/nUTF5mdFkhEoQHFn9N5wmgYyW323JO6v8kr6ltSRKriZyTr/8417taVWeabVS4iONGk2V444QD0P2cwhuTkg==" crossorigin="anonymous"></script>
 ```
 
-Lo último que hay que corregir en las vistas es la referencia a `Session` para mostrar cuánto tiempo se ha estado ejecutando la aplicación y en qué máquina. Podemos recopilar estos datos en `Startup` como variables estáticas y mostrar las variables en la página de diseño. Agregue las siguientes propiedades a *Startup.CS*:
-
-```csharp
-public static DateTime StartTime { get; } = DateTime.UtcNow;
-public static string MachineName { get; } = Environment.MachineName;
-```
-
-A continuación, reemplace el contenido del pie de página en el diseño por el código siguiente:
+Lo último que hay que corregir en las vistas es la referencia a `Session` para mostrar cuánto tiempo se ha estado ejecutando la aplicación y en qué máquina. Estos datos se pueden mostrar directamente en el *_Layout. cshtml* del sitio mediante `System.Environment.MachineName` y `System.Diagnostics.Process.GetCurrentProcess().StartTime` :
 
 ```razor
 <section class="col-sm-6">
     <img class="esh-app-footer-text hidden-xs" src="~/images/main_footer_text.png" width="335" height="26" alt="footer text image" />
     <br />
-<small>@eShopPorted.Startup.MachineName - @eShopPorted.Startup.StartTime.ToString() UTC</small>
+<small>@Environment.MachineName - @System.Diagnostics.Process.GetCurrentProcess().StartTime.ToString() UTC</small>
 </section>
 ```
 
@@ -333,7 +326,7 @@ Llegados a este punto, la aplicación se compilará correctamente. Sin embargo, 
 
 ## <a name="migrate-app-startup-components"></a>Migrar componentes de inicio de la aplicación
 
-El último paso de migración consiste en realizar las tareas de inicio de la aplicación desde *global. asax* y las clases a las que llama, y migrarlas a sus ASP.net Core equivalentes. Estas tareas incluyen la configuración de MVC, la configuración de la inserción de dependencias y el trabajo con el nuevo sistema de configuración. En ASP.NET Core, estas tareas se administran en el archivo *Startup.CS* .
+El último paso de migración consiste en realizar las tareas de inicio de la aplicación desde *global. asax* y las clases a las que llama, y migrarlas a sus ASP.net Core equivalentes. Estas tareas incluyen la configuración de MVC, la configuración de la inserción de dependencias y el trabajo con el nuevo sistema de configuración. En ASP.NET Core, estas tareas se controlan en el archivo *Startup. CS* .
 
 ### <a name="configure-mvc"></a>Configurar MVC
 
@@ -364,7 +357,7 @@ public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 }
 ```
 
-El único atributo que se agrega a la aplicación es el filtro de MVC de ASP.NET, `HandleErrorAttribute` . Este filtro garantiza que cuando se produce una excepción como parte de una solicitud, se muestran una acción y vista predeterminadas, en lugar de los detalles de la excepción. En ASP.NET Core, el middleware realiza esta misma funcionalidad `UseExceptionHandler` . Los mensajes de error detallados no están habilitados de forma predeterminada. Deben configurarse con el `UseDeveloperExceptionPage` middleware. Para configurar este comportamiento para que coincida con la aplicación original, se debe agregar el código siguiente al inicio del `Configure` método en *Startup.CS*:
+El único atributo que se agrega a la aplicación es el filtro de MVC de ASP.NET, `HandleErrorAttribute` . Este filtro garantiza que cuando se produce una excepción como parte de una solicitud, se muestran una acción y vista predeterminadas, en lugar de los detalles de la excepción. En ASP.NET Core, el middleware realiza esta misma funcionalidad `UseExceptionHandler` . Los mensajes de error detallados no están habilitados de forma predeterminada. Deben configurarse con el `UseDeveloperExceptionPage` middleware. Para configurar este comportamiento para que coincida con la aplicación original, debe agregarse el código siguiente al inicio del `Configure` método en *Startup. CS*:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -401,7 +394,7 @@ public static void RegisterRoutes(RouteCollection routes)
 
 Tomando este código línea a línea, la primera línea configura la compatibilidad con las rutas de atributo. Esto está integrado en ASP.NET Core, por lo que no es necesario configurarlo por separado. Del mismo modo, los archivos *{Resource}. axd* no se usan con ASP.net Core, por lo que no es necesario pasar por alto dichas rutas. El `MapRoute` método configura el predeterminado para MVC, que utiliza la `{controller}/{action}/{id}` plantilla de ruta típica. También especifica los valores predeterminados para esta plantilla, de modo que `CatalogController` es el controlador predeterminado que se usa y el `Index` método es la acción predeterminada. Las aplicaciones más grandes suelen incluir más llamadas a `MapRoute` para configurar rutas adicionales.
 
-ASP.NET Core MVC admite [enrutamiento convencional y enrutamiento de atributos](/aspnet/core/mvc/controllers/routing?preserve-view=true&view=aspnetcore-2.2). El enrutamiento convencional es análogo al modo en que se configura la tabla de rutas en el `RegisterRoutes` método mencionado anteriormente. Para configurar el enrutamiento convencional con una ruta predeterminada como la usada en la aplicación de *eShop* , agregue el código siguiente a la parte inferior del `Configure` método en *Startup.CS*:
+ASP.NET Core MVC admite [enrutamiento convencional y enrutamiento de atributos](/aspnet/core/mvc/controllers/routing?preserve-view=true&view=aspnetcore-2.2). El enrutamiento convencional es análogo al modo en que se configura la tabla de rutas en el `RegisterRoutes` método mencionado anteriormente. Para configurar el enrutamiento convencional con una ruta predeterminada como la usada en la aplicación de *eShop* , agregue el código siguiente a la parte inferior del `Configure` método en *Startup. CS*:
 
 ```csharp
 app.UseMvc(routes =>
@@ -447,7 +440,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-El código anterior es la configuración mínima necesaria para poder trabajar con las características de MVC. Hay muchas características adicionales que se pueden configurar desde esta llamada, pero por ahora basta con compilar la aplicación. Al ejecutarlo, se enruta correctamente la solicitud predeterminada, pero como todavía no se ha configurado DI, se produce un error durante la activación porque todavía no se ha `CatalogController` proporcionado ninguna implementación de tipo `ICatalogService` . Volveremos a configurar MVC más en un momento. Por ahora, vamos a migrar la inserción de dependencias de la aplicación.
+El código anterior es la configuración mínima necesaria para poder trabajar con las características de MVC. Hay muchas características adicionales que se pueden configurar desde esta llamada (algunas de las cuales se detallan más adelante en este capítulo), pero por ahora basta con compilar la aplicación. Al ejecutarlo, se enruta correctamente la solicitud predeterminada, pero como todavía no se ha configurado DI, se produce un error durante la activación porque todavía no se ha `CatalogController` proporcionado ninguna implementación de tipo `ICatalogService` . Volveremos a configurar MVC más en un momento. Por ahora, vamos a migrar la inserción de dependencias de la aplicación.
 
 #### <a name="migrate-dependency-injection-configuration"></a>Migrar la configuración de inserción de dependencias
 
@@ -505,7 +498,7 @@ Por ahora, el valor de `useMockData` se establece en `true` . Esta configuració
 
 #### <a name="migrate-app-settings"></a>Migrar la configuración de la aplicación
 
-ASP.NET Core usa un nuevo [sistema de configuración](/aspnet/core/fundamentals/configuration/?preserve-view=true&view=aspnetcore-2.2), que de forma predeterminada aprovecha una *appsettings.jsen* el archivo. Mediante `CreateDefaultBuilder` el uso de en *Program.CS*, la configuración predeterminada ya está configurada en la aplicación. Para tener acceso a la configuración, las clases solo deben solicitarla en su constructor. La `Startup` clase no es ninguna excepción. Para iniciar el acceso a la configuración en `Startup` y el resto de la aplicación, solicite una instancia de `IConfiguration` a partir de su constructor:
+ASP.NET Core usa un nuevo [sistema de configuración](/aspnet/core/fundamentals/configuration/?preserve-view=true&view=aspnetcore-2.2), que de forma predeterminada aprovecha una *appsettings.jsen* el archivo. Con `CreateDefaultBuilder` en *Program. CS*, la configuración predeterminada ya está configurada en la aplicación. Para tener acceso a la configuración, las clases solo deben solicitarla en su constructor. La `Startup` clase no es ninguna excepción. Para iniciar el acceso a la configuración en `Startup` y el resto de la aplicación, solicite una instancia de `IConfiguration` a partir de su constructor:
 
 ```csharp
 public Startup(IConfiguration configuration)

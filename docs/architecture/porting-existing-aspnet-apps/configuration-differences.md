@@ -3,12 +3,12 @@ title: Diferencias de configuración entre ASP.NET MVC y ASP.NET Core
 description: La forma en que los valores de configuración se almacenan y cambian drásticamente entre ASP.NET y ASP.NET Core. En esta sección se examinan los detalles y cómo migrar la configuración de ASP.NET a ASP.NET Core.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 1e8e4d4ac408862f0216a5744476047186222304
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3d721c028b1e760a6227855451e2194d9e471a58
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401788"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122955"
 ---
 # <a name="configuration-differences-between-aspnet-mvc-and-aspnet-core"></a>Diferencias de configuración entre ASP.NET MVC y ASP.NET Core
 
@@ -59,7 +59,7 @@ public class TestModel : PageModel
 
 **Figura 2-2.** Obtener acceso a los valores de configuración con `IConfiguration` .
 
-Con el patrón de opciones, el acceso a la configuración es similar, pero está fuertemente tipado y es más específico para las configuraciones que necesita la clase de consumo, como muestra la figura 2-3.
+Con el [patrón de opciones](/dotnet/core/extensions/options), el acceso a la configuración es similar, pero está fuertemente tipado y es más específico para las configuraciones que necesita la clase de consumo, como muestra la figura 2-3.
 
 ```csharp
 public class PositionOptions
@@ -97,7 +97,7 @@ services.Configure<PositionOptions>(Configuration.GetSection(PositionOptions.Pos
 
 ## <a name="migrate-configuration"></a>Migración de la configuración
 
-Al considerar cómo trasladar la configuración de una aplicación de .NET Framework a .NET Core, el primer paso es identificar todas las opciones de configuración que se están usando. La mayoría de ellas estarán en el archivo *web.config* en la carpeta raíz de la aplicación, pero algunas aplicaciones esperan que la configuración se encuentre también en el archivo de *machine.config* compartido.
+Al considerar cómo trasladar la configuración de una aplicación de .NET Framework a .NET Core, el primer paso es identificar todas las opciones de configuración que se están usando. La mayoría de ellas estarán en el archivo *web.config* en la carpeta raíz de la aplicación, pero algunas aplicaciones esperan que la configuración se encuentre también en el archivo de *machine.config* compartido. Esta configuración incluirá también los elementos del `appSettings` elemento, el `connectionStrings` elemento y los elementos de configuración personalizados. En .NET Core, todas estas opciones de configuración se almacenan normalmente en el *appsettings.jsen* el archivo.
 
 Una vez que se han catalogado todos los valores de configuración de los archivos de configuración, el paso siguiente debe ser identificar dónde y cómo se utiliza la configuración en la propia aplicación. Si no se usan algunos valores, probablemente se omitan de la migración. Para cada configuración, tenga en cuenta todos los lugares en los que se está usando, por lo que puede estar seguro de que no se pierde nada al migrar el código.
 

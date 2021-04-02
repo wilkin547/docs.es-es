@@ -3,12 +3,12 @@ title: Descripción y actualización de dependencias
 description: Para migrar un proyecto de .NET Framework a .NET Core, sus dependencias deben actualizarse para que funcionen con .NET Core. En esta sección se examinan las herramientas y los enfoques que se pueden usar para planear las migraciones de aplicaciones de gran tamaño.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: afad77860099e4737b5270dc32fc20c2025e63dd
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 484691496d3691151fd3ca83ec776dbb31327c09
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401686"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122760"
 ---
 # <a name="understand-and-update-dependencies"></a>Descripción y actualización de dependencias
 
@@ -46,7 +46,7 @@ Analice el uso de paquetes de NuGet de terceros y determine si alguno de ellos t
 
 Si existe compatibilidad con la versión del paquete que usa la aplicación actualmente, ¡ genial! Si no es así, consulte si hay una versión más reciente del paquete que tenga soporte técnico e investigue lo que sería necesario para la actualización. Puede haber cambios importantes en el paquete, especialmente si la versión principal del paquete cambia entre la versión usada actualmente y la que está actualizando.
 
-En algunos casos, ninguna versión de un paquete determinado funciona con .NET Core. En ese caso, los equipos tienen un par de opciones. Pueden continuar dependiendo de la versión de .NET Framework, pero esto tiene limitaciones. La aplicación solo se ejecutará en Windows y es posible que el equipo desee ejecutar el analizador de portabilidad en los archivos binarios del paquete para ver si hay algún problema que pueda encontrar. Ciertamente, el equipo querrá probar exhaustivamente. La otra opción es buscar un paquete diferente o, si el paquete necesario es de código abierto, actualizarlo a .NET Standard o .NET Core.
+En algunos casos, ninguna versión de un paquete determinado funciona con .NET Core. En ese caso, los equipos tienen un par de opciones. Pueden continuar dependiendo de la versión de .NET Framework, pero esto tiene limitaciones. La aplicación solo se puede ejecutar en Windows y es posible que el equipo desee ejecutar el analizador de portabilidad en los archivos binarios del paquete para ver si hay algún problema que pueda encontrar. Ciertamente, el equipo querrá realizar pruebas exhaustivas, ya que si se usan .NET Framework paquetes que hacen referencia a las API que no están disponibles en .NET Core, se producirá una excepción en tiempo de ejecución. La otra opción es buscar un paquete diferente o, si el paquete necesario es de código abierto, actualizarlo a .NET Standard o .NET Core.
 
 ## <a name="migrate-aspnet-mvc-projects"></a>Migración de proyectos de ASP.NET MVC
 
