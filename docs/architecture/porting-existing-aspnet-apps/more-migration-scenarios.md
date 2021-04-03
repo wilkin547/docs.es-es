@@ -3,12 +3,12 @@ title: Más escenarios de migración
 description: En esta sección se describen escenarios y técnicas de migración adicionales para actualizar .NET Framework aplicaciones a .NET Core/.NET 5.
 author: ardalis
 ms.date: 02/11/2021
-ms.openlocfilehash: 672ad1da4611197e7af63d1408836c4c1a26567a
-ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
+ms.openlocfilehash: c819fd42cd02da9b643873cda5f2ecf8bc21e559
+ms.sourcegitcommit: 44af69720863bd09bd7a4509bf1ec119466ba6e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "106122786"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106231172"
 ---
 # <a name="more-migration-scenarios"></a>Más escenarios de migración
 
@@ -179,7 +179,7 @@ Para crear un formateador personalizado en Web API 2, se ha heredado de una clas
 ```csharp
 public static void ConfigureApis(HttpConfiguration config)
 {
-    config.Formatters.Add(new ProductCsvFormatter()); 
+    config.Formatters.Add(new ProductCsvFormatter());
 }
 ```
 
@@ -283,7 +283,7 @@ public class RouteConfig
     public static void RegisterRoutes(RouteCollection routes)
     {
         routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
- 
+
         var constraintsResolver = new DefaultInlineConstraintResolver();
         constraintsResolver.ConstraintMap.Add("values", typeof(ValuesConstraint));
         routes.MapMvcAttributeRoutes(constraintsResolver);
@@ -301,7 +301,7 @@ Otra característica bastante avanzada de ASP.NET MVC 5 son los controladores de
 public static void RegisterRoutes(RouteCollection routes)
 {
     routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
- 
+
     routes.Add(new Route("custom", new CustomRouteHandler()));
 }
 ```
