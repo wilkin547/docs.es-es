@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 5c5ba972bcd91120b129efb944a028889294f048
-ms.sourcegitcommit: 652f62fc8f3ab6a264681b6eb5211ac7539bd115
+ms.openlocfilehash: 36e8ddaf360604777ce193c69dcb5cba7168c023
+ms.sourcegitcommit: 44af69720863bd09bd7a4509bf1ec119466ba6e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105964837"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106231145"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -908,7 +908,7 @@ lambdaList
 La coincidencia de patrones en funciones definidas por `let` o `let rec` debe tener una sangría de cuatro espacios después de iniciarse `let` , incluso si `function` se usa la palabra clave:
 
 ```fsharp
-let rec sizeLambda acc = 
+let rec sizeLambda acc =
     function
     | Abs(x, body) -> sizeLambda (succ acc) body
     | App(lam1, lam2) -> sizeLambda (sizeLambda acc lam1) lam2
