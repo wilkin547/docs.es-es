@@ -44,7 +44,23 @@ También puede definir un constructor estático con una definición de cuerpo de
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
-Para obtener más información y ejemplos, vea [Constructores estáticos](./static-constructors.md).  
+Para obtener más información y ejemplos, vea [Constructores estáticos](./static-constructors.md). 
+## <a name ="note"></a>note "how to inherit a contructor "
+when you inherit a class with a constructor with parameters, you have to declare a new constructor of your new class and its parametes got have to be the same 
+that the FatherClass and after to add " :base (parameters of the Fatherclasse) example :
+
+class fatherClass{
+
+public fatherClass (string name){} 
+
+}
+
+class SonClass : fatherClass {
+
+public SonClass (string name) :base(name){}
+
+}
+
   
 ## <a name="in-this-section"></a>En esta sección  
 
